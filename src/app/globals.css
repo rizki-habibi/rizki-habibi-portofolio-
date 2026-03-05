@@ -209,3 +209,65 @@ body {
 .bnsp-card-back {
   will-change: transform;
 }
+
+/* Mouse Sparkle Pop Animation */
+@keyframes sparkle-pop {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+.animate-sparkle-pop {
+  animation: sparkle-pop 0.6s ease-out forwards;
+}
+
+/* Glow effect for cards */
+.glow-card {
+  position: relative;
+}
+
+.glow-card::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(139, 92, 246, 0.3));
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.glow-card:hover::after {
+  opacity: 1;
+}
+
+/* Terminal styles */
+.terminal-text {
+  font-family: 'Courier New', 'Consolas', monospace;
+}
+
+/* Shimmer loading */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.05) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}

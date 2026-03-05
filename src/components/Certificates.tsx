@@ -579,6 +579,12 @@ export default function Certificates() {
   const [visibleCount, setVisibleCount] = useState(12)
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [bnspFlipped, setBnspFlipped] = useState(false)
+  const [bnspGallery, setBnspGallery] = useState<string | null>(null)
+
+  const bnspImages = [
+    { src: '/sertifikat/bnsp-sertifikat.jpg', label: 'Sertifikat Kompetensi BNSP' },
+    { src: '/sertifikat/bnsp-kompetensi.jpg', label: 'Surat Keterangan Kompetensi' },
+  ]
 
   const filteredCerts = activeCategory === 'Semua' 
     ? certificates 
@@ -791,6 +797,98 @@ export default function Certificates() {
           </div>
         </motion.div>
         {/* === END BNSP === */}
+
+        {/* BNSP Scanned Certificate Images */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: false, amount: 0.2 }}
+          className="mb-16"
+        >
+          <h4 className="text-center text-sm font-semibold text-amber-400/80 uppercase tracking-wider mb-6">
+            📄 Scan Dokumen Asli
+          </h4>
+          <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {bnspImages.map((img, i) => (
+              <motion.div
+                key={img.src}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: i * 0.15 }}
+                viewport={{ once: false }}
+                whileHover={{ scale: 1.03 }}
+                onClick={() => setBnspGallery(img.src)}
+                className="group cursor-pointer rounded-2xl overflow-hidden border-2 border-amber-500/20 hover:border-amber-500/50 transition-all shadow-lg hover:shadow-amber-500/10"
+              >
+                <div className="relative aspect-[3/4] bg-charcoal-900">
+                  <img
+                    src={img.src}
+                    alt={img.label}
+                    className="w-full h-full object-cover group-hover:brightness-110 transition-all"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all flex items-end justify-center pb-4">
+                    <span className="flex items-center gap-2 text-white text-sm font-medium px-4 py-2 bg-amber-500/30 backdrop-blur-sm rounded-full">
+                      <FiEye className="w-4 h-4" />
+                      Lihat Full
+                    </span>
+                  </div>
+                </div>
+                <div className="p-3 bg-charcoal-900 text-center">
+                  <span className="text-xs text-soft-gray-400">{img.label}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* BNSP Image Lightbox */}
+        <AnimatePresence>
+          {bnspGallery && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md"
+              onClick={() => setBnspGallery(null)}
+            >
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.8, opacity: 0 }}
+                className="relative max-w-4xl max-h-[90vh] w-full"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button
+                  onClick={() => setBnspGallery(null)}
+                  className="absolute -top-12 right-0 p-2 rounded-lg bg-charcoal-800 hover:bg-red-600 transition-colors text-white"
+                >
+                  <FiX className="w-5 h-5" />
+                </button>
+                <img
+                  src={bnspGallery}
+                  alt="BNSP Certificate"
+                  className="w-full h-auto max-h-[85vh] object-contain rounded-xl shadow-2xl"
+                />
+                {/* Navigation thumbnails */}
+                <div className="flex justify-center gap-3 mt-4">
+                  {bnspImages.map((img) => (
+                    <button
+                      key={img.src}
+                      onClick={() => setBnspGallery(img.src)}
+                      className={`w-16 h-20 rounded-lg overflow-hidden border-2 transition-all ${
+                        bnspGallery === img.src ? 'border-amber-400 shadow-lg shadow-amber-500/20' : 'border-charcoal-700 opacity-50 hover:opacity-80'
+                      }`}
+                    >
+                      <img src={img.src} alt={img.label} className="w-full h-full object-cover" />
+                    </button>
+                  ))}
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Category Filter */}
         <motion.div

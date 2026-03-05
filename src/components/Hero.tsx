@@ -1,12 +1,55 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { FiArrowDown, FiDownload, FiFolder, FiMail, FiPhone, FiCode, FiGithub } from 'react-icons/fi'
 import { SiLaravel, SiNextdotjs, SiTailwindcss, SiPhp, SiMysql, SiFigma } from 'react-icons/si'
 import { VscCode } from 'react-icons/vsc'
 import { HiSparkles, HiLightningBolt } from 'react-icons/hi'
 import { BiRocket } from 'react-icons/bi'
+
+const typingTexts = [
+  'Web Developer',
+  'Laravel Enthusiast',
+  'Next.js Developer',
+  'UI/UX Explorer',
+  'BNSP Certified',
+]
+
+function TypingText() {
+  const [textIndex, setTextIndex] = useState(0)
+  const [charIndex, setCharIndex] = useState(0)
+  const [isDeleting, setIsDeleting] = useState(false)
+
+  useEffect(() => {
+    const currentText = typingTexts[textIndex]
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        if (charIndex < currentText.length) {
+          setCharIndex(charIndex + 1)
+        } else {
+          setTimeout(() => setIsDeleting(true), 1500)
+        }
+      } else {
+        if (charIndex > 0) {
+          setCharIndex(charIndex - 1)
+        } else {
+          setIsDeleting(false)
+          setTextIndex((textIndex + 1) % typingTexts.length)
+        }
+      }
+    }, isDeleting ? 40 : 80)
+    return () => clearTimeout(timeout)
+  }, [charIndex, isDeleting, textIndex])
+
+  return (
+    <span className="text-navy-300">
+      {typingTexts[textIndex].slice(0, charIndex)}
+      <span className="typing-cursor">|</span>
+    </span>
+  )
+}
 
 export default function Hero() {
   return (
@@ -18,6 +61,29 @@ export default function Hero() {
       <div className="absolute inset-0 bg-hero-gradient opacity-50" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-navy-500/20 rounded-full blur-3xl animate-pulse-slow" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-navy-700/20 rounded-full blur-3xl animate-pulse-slow delay-1000" />
+
+      {/* Floating Particles */}
+      {[...Array(6)].map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute w-1 h-1 bg-navy-400/40 rounded-full"
+          style={{
+            top: `${15 + i * 15}%`,
+            left: `${10 + i * 16}%`,
+          }}
+          animate={{
+            y: [0, -30, 0],
+            opacity: [0.2, 0.8, 0.2],
+            scale: [1, 1.5, 1],
+          }}
+          transition={{
+            duration: 3 + i,
+            repeat: Infinity,
+            delay: i * 0.5,
+            ease: 'easeInOut',
+          }}
+        />
+      ))}
 
       <div className="relative z-10 px-4 max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -51,7 +117,7 @@ export default function Hero() {
               <span className="gradient-text">Rizki Habibi</span>
             </motion.h1>
 
-            {/* Subtitle */}
+            {/* Subtitle with Typing Animation */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -59,7 +125,7 @@ export default function Hero() {
               className="text-xl md:text-2xl text-soft-gray-300 mb-4"
             >
               <span className="text-navy-400">Mahasiswa STI Semester 6</span> |{' '}
-              <span className="text-navy-300">Web Developer</span>
+              <TypingText />
             </motion.p>
 
             {/* Institution */}

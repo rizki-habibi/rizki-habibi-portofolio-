@@ -537,6 +537,28 @@ const certificates = [
   },
 ]
 
+// BNSP Professional Certificate Data
+const bnspCertificate = {
+  title: 'Sertifikat Kompetensi - Pengembang Web Pratama',
+  subtitle: 'Junior Web Developer',
+  certNumber: '62090 2513 3 0156814 2025',
+  regNumber: 'TIK 1565 41503 2025',
+  issuer: 'Badan Nasional Sertifikasi Profesi (BNSP)',
+  lsp: 'Lembaga Sertifikasi Profesi Teknologi Digital',
+  area: 'Pengembangan Website / Web Development',
+  validFor: '3 Tahun',
+  date: '03 November 2025',
+  location: 'Yogyakarta',
+  competencyUnits: [
+    { code: 'J.620100.005.02', title: 'Mengimplementasikan User Interface' },
+    { code: 'J.620100.010.01', title: 'Menerapkan Perintah Eksekusi Bahasa Pemrograman Berbasis Text, Grafik, dan Multimedia' },
+    { code: 'J.620100.015.01', title: 'Menyusun Fungsi, File atau Sumber Daya Pemrograman dalam Organisasi yang Rapih' },
+    { code: 'J.620100.016.01', title: 'Menulis Kode dengan Prinsip Sesuai Guidelines dan Best Practices' },
+    { code: 'J.620100.017.02', title: 'Mengimplementasikan Pemrograman Terstruktur' },
+    { code: 'J.620100.019.02', title: 'Menggunakan Library atau Komponen Pre-Existing' },
+  ],
+}
+
 const categories = ['Semua', 'AI & Data', 'Web Development', 'Cyber Security', 'Cloud', 'Digital Marketing', 'Programming', 'IoT', 'Soft Skills']
 
 // Warna kategori
@@ -556,6 +578,7 @@ export default function Certificates() {
   const [activeCategory, setActiveCategory] = useState('Semua')
   const [visibleCount, setVisibleCount] = useState(12)
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
+  const [bnspFlipped, setBnspFlipped] = useState(false)
 
   const filteredCerts = activeCategory === 'Semua' 
     ? certificates 
@@ -590,9 +613,184 @@ export default function Certificates() {
           </p>
           <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-navy-600/20 rounded-full">
             <FiAward className="text-navy-400" />
-            <span className="text-navy-300 font-medium">{certificates.length} Sertifikat</span>
+            <span className="text-navy-300 font-medium">{certificates.length}+ Sertifikat</span>
           </div>
         </motion.div>
+
+        {/* === BNSP FEATURED CERTIFICATE === */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+          viewport={{ once: false, amount: 0.2 }}
+          className="mb-16"
+        >
+          <div className="flex items-center gap-3 mb-6">
+            <div className="h-px flex-1 bg-gradient-to-r from-transparent via-amber-500/50 to-transparent" />
+            <h3 className="text-lg font-bold text-amber-400 flex items-center gap-2 whitespace-nowrap">
+              <HiSparkles className="w-5 h-5" />
+              Sertifikat Profesional
+              <HiSparkles className="w-5 h-5" />
+            </h3>
+            <div className="h-px flex-1 bg-gradient-to-r from-transparent via-amber-500/50 to-transparent" />
+          </div>
+
+          {/* 3D Flip Card */}
+          <div
+            className="bnsp-card-container mx-auto max-w-4xl cursor-pointer"
+            style={{ perspective: '1200px' }}
+            onClick={() => setBnspFlipped(!bnspFlipped)}
+          >
+            <motion.div
+              className="relative w-full"
+              animate={{ rotateY: bnspFlipped ? 180 : 0 }}
+              transition={{ duration: 0.7, type: 'spring', stiffness: 80, damping: 15 }}
+              style={{ transformStyle: 'preserve-3d' }}
+            >
+              {/* FRONT SIDE */}
+              <div
+                className="bnsp-card-front rounded-3xl overflow-hidden"
+                style={{ backfaceVisibility: 'hidden' }}
+              >
+                <div className="relative p-1 rounded-3xl bg-gradient-to-br from-amber-400 via-yellow-500 to-amber-600">
+                  <div className="relative bg-gradient-to-br from-charcoal-900 via-charcoal-950 to-navy-950 rounded-[22px] p-6 md:p-10 overflow-hidden">
+                    {/* Holographic shimmer overlay */}
+                    <div className="absolute inset-0 bnsp-holographic opacity-30 pointer-events-none" />
+                    
+                    {/* Corner decorations */}
+                    <div className="absolute top-0 left-0 w-24 h-24 border-t-2 border-l-2 border-amber-500/40 rounded-tl-[22px]" />
+                    <div className="absolute top-0 right-0 w-24 h-24 border-t-2 border-r-2 border-amber-500/40 rounded-tr-[22px]" />
+                    <div className="absolute bottom-0 left-0 w-24 h-24 border-b-2 border-l-2 border-amber-500/40 rounded-bl-[22px]" />
+                    <div className="absolute bottom-0 right-0 w-24 h-24 border-b-2 border-r-2 border-amber-500/40 rounded-br-[22px]" />
+
+                    {/* Top badge row */}
+                    <div className="relative flex items-center justify-between mb-6">
+                      <div className="flex items-center gap-2">
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/30">
+                          <FiShield className="w-5 h-5 text-charcoal-950" />
+                        </div>
+                        <div>
+                          <div className="text-[10px] uppercase tracking-widest text-amber-400/80 font-semibold">Indonesian Professional</div>
+                          <div className="text-[10px] uppercase tracking-widest text-amber-400/60">Certification Authority</div>
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-[10px] uppercase tracking-widest text-amber-400/80 font-semibold">BNSP</div>
+                        <div className="text-[10px] text-soft-gray-500">No. {bnspCertificate.certNumber}</div>
+                      </div>
+                    </div>
+
+                    {/* Main Title */}
+                    <div className="relative text-center mb-8">
+                      <motion.div
+                        initial={{ scale: 0.9 }}
+                        whileInView={{ scale: 1 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                      >
+                        <div className="text-xs uppercase tracking-[0.3em] text-amber-400/60 mb-2">Sertifikat Kompetensi</div>
+                        <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-300 bg-clip-text text-transparent mb-1">
+                          Certificate of Competence
+                        </h3>
+                      </motion.div>
+                    </div>
+
+                    {/* Certificate holder */}
+                    <div className="relative text-center mb-8">
+                      <div className="text-sm text-soft-gray-400 mb-2">Dengan ini menyatakan bahwa / <span className="italic">This is to certify that</span></div>
+                      <h4 className="text-3xl md:text-4xl font-bold text-white mb-2 tracking-wide">Rizki Habibi</h4>
+                      <div className="text-xs text-soft-gray-500">No. Reg. {bnspCertificate.regNumber}</div>
+                    </div>
+
+                    {/* Competency Info */}
+                    <div className="relative grid md:grid-cols-2 gap-6 mb-8">
+                      <div className="bg-charcoal-800/50 rounded-xl p-4 border border-amber-500/10">
+                        <div className="text-xs text-amber-400/70 uppercase tracking-wider mb-1">Bidang Kompetensi</div>
+                        <div className="text-white font-semibold">{bnspCertificate.area}</div>
+                      </div>
+                      <div className="bg-charcoal-800/50 rounded-xl p-4 border border-amber-500/10">
+                        <div className="text-xs text-amber-400/70 uppercase tracking-wider mb-1">Kualifikasi</div>
+                        <div className="text-white font-semibold">{bnspCertificate.subtitle}</div>
+                      </div>
+                    </div>
+
+                    {/* Bottom details */}
+                    <div className="relative flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-amber-500/20">
+                      <div className="flex items-center gap-2 text-soft-gray-400 text-sm">
+                        <FiCalendar className="w-4 h-4 text-amber-400/70" />
+                        <span>{bnspCertificate.location}, {bnspCertificate.date}</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-soft-gray-400 text-sm">
+                        <FiFileText className="w-4 h-4 text-amber-400/70" />
+                        <span>Berlaku {bnspCertificate.validFor}</span>
+                      </div>
+                      <div className="flex items-center gap-2 px-3 py-1.5 bg-amber-500/20 rounded-full">
+                        <HiBadgeCheck className="w-4 h-4 text-amber-400" />
+                        <span className="text-amber-300 text-xs font-semibold uppercase tracking-wider">Verified</span>
+                      </div>
+                    </div>
+
+                    {/* Click hint */}
+                    <div className="mt-4 text-center">
+                      <span className="text-[11px] text-soft-gray-600 animate-pulse">Klik untuk melihat unit kompetensi →</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* BACK SIDE */}
+              <div
+                className="bnsp-card-back absolute inset-0 rounded-3xl overflow-hidden"
+                style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+              >
+                <div className="relative p-1 rounded-3xl bg-gradient-to-br from-amber-400 via-yellow-500 to-amber-600 h-full">
+                  <div className="relative bg-gradient-to-br from-charcoal-900 via-charcoal-950 to-navy-950 rounded-[22px] p-6 md:p-10 h-full overflow-hidden">
+                    {/* Holographic shimmer overlay */}
+                    <div className="absolute inset-0 bnsp-holographic opacity-20 pointer-events-none" />
+
+                    <div className="relative">
+                      <div className="text-center mb-6">
+                        <div className="text-xs uppercase tracking-[0.3em] text-amber-400/60 mb-1">Daftar Unit Kompetensi</div>
+                        <h3 className="text-xl font-bold bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-300 bg-clip-text text-transparent">
+                          List of Competency Units
+                        </h3>
+                      </div>
+
+                      <div className="space-y-3">
+                        {bnspCertificate.competencyUnits.map((unit, i) => (
+                          <motion.div
+                            key={unit.code}
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ delay: i * 0.1 }}
+                            className="flex gap-4 p-3 bg-charcoal-800/50 rounded-xl border border-amber-500/10 hover:border-amber-500/30 transition-colors"
+                          >
+                            <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center">
+                              <span className="text-amber-400 text-sm font-bold">{i + 1}</span>
+                            </div>
+                            <div>
+                              <div className="text-[10px] text-amber-400/60 font-mono">{unit.code}</div>
+                              <div className="text-sm text-white">{unit.title}</div>
+                            </div>
+                          </motion.div>
+                        ))}
+                      </div>
+
+                      <div className="mt-6 text-center flex items-center justify-center gap-4">
+                        <div className="text-xs text-soft-gray-500">{bnspCertificate.lsp}</div>
+                      </div>
+
+                      {/* Click hint */}
+                      <div className="mt-4 text-center">
+                        <span className="text-[11px] text-soft-gray-600 animate-pulse">← Klik untuk kembali</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+        {/* === END BNSP === */}
 
         {/* Category Filter */}
         <motion.div

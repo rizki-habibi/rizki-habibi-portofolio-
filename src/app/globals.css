@@ -167,3 +167,45 @@ body {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 }
+
+/* Typing Cursor */
+.typing-cursor {
+  color: #60a5fa;
+  font-weight: 300;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* BNSP Certificate Holographic Effect */
+.bnsp-holographic {
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    rgba(255, 215, 0, 0.05) 20%,
+    transparent 40%,
+    rgba(255, 215, 0, 0.08) 60%,
+    transparent 80%,
+    rgba(255, 215, 0, 0.05) 100%
+  );
+  background-size: 400% 400%;
+  animation: holographic-shimmer 6s ease infinite;
+}
+
+@keyframes holographic-shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.bnsp-card-container {
+  cursor: pointer;
+}
+
+.bnsp-card-front,
+.bnsp-card-back {
+  will-change: transform;
+}

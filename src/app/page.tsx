@@ -1,12 +1,15 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
+import CeritaPerjalanan from '@/components/CeritaPerjalanan'
 import Skills from '@/components/Skills'
 import Projects from '@/components/Projects'
 import ExperienceTimeline from '@/components/ExperienceTimeline'
-import CeritaPerjalanan from '@/components/CeritaPerjalanan'
+import Certificates from '@/components/Certificates'
 import VisiKVT from '@/components/VisiKVT'
 import Innovation from '@/components/Innovation'
-import Certificates from '@/components/Certificates'
+import StatsComic from '@/components/StatsComic'
+import ToolsComic from '@/components/ToolsComic'
+import AchievementsComic from '@/components/AchievementsComic'
 import CV from '@/components/CV'
 import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
@@ -16,67 +19,76 @@ import LoadingScreen from '@/components/LoadingScreen'
 
 export default function Home() {
   return (
-    <main style={{ background: '#fafaf7' }}>
-      {/* UI Utils */}
+    <main style={{ background: '#fafaf7', color: '#0a0a0a' }}>
       <LoadingScreen />
       <ScrollProgress />
       <BackToTop />
-
-      {/* Navigation */}
       <Navbar />
 
-      {/* CHAPTER 00: HERO — The Origin */}
+      {/* CHAPTER 00 — THE ORIGIN */}
       <Hero />
 
-      {/* CHAPTER 01: MY STORY — Cerita Perjalanan */}
+      <div className="comic-divider" />
+
+      {/* CHAPTER 01 — MY STORY */}
       <CeritaPerjalanan />
 
-      {/* Comic divider */}
       <div className="comic-divider" />
 
-      {/* CHAPTER 02: MY POWERS — Skills */}
+      {/* CHAPTER 02 — MY POWERS */}
       <Skills />
 
-      {/* Comic divider */}
       <div className="comic-divider" />
 
-      {/* CHAPTER 03: THE MISSIONS — Projects */}
+      {/* CHAPTER 03 — THE MISSIONS */}
       <Projects />
 
-      {/* Comic divider */}
       <div className="comic-divider" />
 
-      {/* CHAPTER 04: MY JOURNEY — Timeline */}
+      {/* CHAPTER 04 — MY JOURNEY */}
       <ExperienceTimeline />
 
-      {/* Comic divider */}
       <div className="comic-divider" />
 
-      {/* CHAPTER 05: POWER CARDS — Certificates */}
+      {/* CHAPTER 05 — POWER CARDS */}
       <Certificates />
 
-      {/* Comic divider */}
       <div className="comic-divider" />
 
-      {/* CHAPTER 06: THE BIG DREAM — Visi KVT */}
+      {/* CHAPTER 06 — THE BIG DREAM */}
       <VisiKVT />
 
-      {/* Comic divider */}
       <div className="comic-divider" />
 
-      {/* CHAPTER 07: INNOVATION — Rekayasa & Inovasi */}
+      {/* CHAPTER 07 — REKAYASA & INOVASI */}
       <Innovation />
 
-      {/* Comic divider */}
       <div className="comic-divider" />
 
-      {/* CV Download */}
+      {/* CHAPTER 08 — BY THE NUMBERS */}
+      <StatsComic />
+
+      <div className="comic-divider" />
+
+      {/* CHAPTER 09 — MY ARSENAL */}
+      <ToolsComic />
+
+      <div className="comic-divider" />
+
+      {/* CHAPTER 10 — ACHIEVEMENT UNLOCKED */}
+      <AchievementsComic />
+
+      <div className="comic-divider" />
+
+      {/* MY PROFILE — CV */}
       <CV />
 
-      {/* FINAL CHAPTER: Contact */}
+      <div className="comic-divider" />
+
+      {/* FINAL CHAPTER — CONTACT */}
       <ContactSection />
 
-      {/* Footer */}
+      {/* END */}
       <Footer />
     </main>
   )

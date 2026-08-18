@@ -5,55 +5,55 @@ import { motion } from 'framer-motion'
 
 const sections = [
   { id: 'home', label: 'Beranda' },
-  { id: 'skills', label: 'Keahlian' },
-  { id: 'projects', label: 'Proyek' },
-  { id: 'timeline', label: 'Timeline' },
+  { id: 'cerita', label: 'Story' },
+  { id: 'skills', label: 'Powers' },
+  { id: 'projects', label: 'Missions' },
+  { id: 'timeline', label: 'Journey' },
+  { id: 'certificates', label: 'Cards' },
+  { id: 'visi-kvt', label: 'KVT' },
   { id: 'inovasi', label: 'Inovasi' },
-  { id: 'certificates', label: 'Sertifikat' },
-  { id: 'cv', label: 'CV' },
-  { id: 'contact', label: 'Kontak' },
+  { id: 'stats', label: 'Stats' },
+  { id: 'tools', label: 'Arsenal' },
+  { id: 'achievements', label: 'Awards' },
+  { id: 'cv', label: 'Profile' },
+  { id: 'contact', label: 'Contact' },
 ]
 
 export default function SideNavDots() {
-  const [activeSection, setActiveSection] = useState('home')
+  const [active, setActive] = useState('home')
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id)
-          }
-        })
-      },
+    const obs = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id) }),
       { threshold: 0.3 }
     )
-
-    sections.forEach(({ id }) => {
-      const el = document.getElementById(id)
-      if (el) observer.observe(el)
-    })
-
-    return () => observer.disconnect()
+    sections.forEach(({ id }) => { const el = document.getElementById(id); if (el) obs.observe(el) })
+    return () => obs.disconnect()
   }, [])
 
   return (
-    <div className="fixed right-4 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col items-end gap-3">
-      {sections.map((section) => (
+    <div className="fixed right-3 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col items-end gap-2">
+      {sections.map(section => (
         <motion.a
           key={section.id}
           href={`#${section.id}`}
-          whileHover={{ scale: 1.2 }}
+          whileHover={{ scale: 1.15 }}
           className="group flex items-center gap-2"
+          title={section.label}
         >
-          <span className="text-[10px] text-soft-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+          <span className="text-[9px] font-bold text-comic-black opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap px-1.5 py-0.5 bg-white"
+            style={{ border: '1px solid #0a0a0a', boxShadow: '1px 1px 0 #0a0a0a' }}>
             {section.label}
           </span>
           <div
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${activeSection === section.id
-                ? 'bg-navy-400 w-6 rounded-full shadow-md shadow-navy-400/50'
-                : 'bg-charcoal-600 hover:bg-soft-gray-400'
-              }`}
+            className="transition-all duration-300"
+            style={{
+              width: active === section.id ? 20 : 8,
+              height: 8,
+              background: active === section.id ? '#1a5cff' : '#0a0a0a',
+              border: '1.5px solid #0a0a0a',
+              boxShadow: active === section.id ? '2px 2px 0 #1a5cff40' : 'none',
+            }}
           />
         </motion.a>
       ))}

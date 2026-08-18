@@ -29,10 +29,10 @@ function AnimatedCounter({ target, duration = 2 }: { target: number; duration?: 
 const stats = [
   {
     icon: FiAward,
-    value: 65,
+    value: 75,
     suffix: '+',
-    label: 'Sertifikat',
-    description: 'Pelatihan & Kursus',
+    label: 'Sertifikat & Seminar',
+    description: 'Pelatihan, Kursus & Kegiatan',
     color: 'from-amber-400 to-orange-500',
     iconColor: 'text-amber-400',
     bgGlow: 'bg-amber-500/20',

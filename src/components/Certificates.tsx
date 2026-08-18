@@ -5,8 +5,91 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { FiAward, FiDownload, FiX, FiEye, FiFileText, FiExternalLink, FiCalendar, FiUser, FiShield, FiCloud, FiGlobe, FiCpu, FiDatabase, FiCode, FiTrendingUp, FiHeart } from 'react-icons/fi'
 import { HiSparkles, HiLightningBolt, HiBadgeCheck, HiChip } from 'react-icons/hi'
 
-// Sertifikat data dari folder yang ada - LENGKAP 65+ sertifikat
+// Sertifikat data dari folder yang ada - LENGKAP 75+ sertifikat
 const certificates = [
+  // ===== SERTIFIKAT GAMBAR / SEMINAR / WORKSHOP =====
+  {
+    id: 101,
+    title: 'Sertifikat Seminar / Pelatihan 1',
+    issuer: 'Penyelenggara Seminar',
+    year: '2025',
+    category: 'Seminar',
+    file: '/sertifikat/image1.png',
+    isImage: true,
+  },
+  {
+    id: 102,
+    title: 'Sertifikat Seminar / Pelatihan 2',
+    issuer: 'Penyelenggara Seminar',
+    year: '2025',
+    category: 'Seminar',
+    file: '/sertifikat/image2.png',
+    isImage: true,
+  },
+  {
+    id: 103,
+    title: 'Sertifikat Seminar / Pelatihan 3',
+    issuer: 'Penyelenggara Seminar',
+    year: '2025',
+    category: 'Seminar',
+    file: '/sertifikat/image3.png',
+    isImage: true,
+  },
+  {
+    id: 104,
+    title: 'Sertifikat Seminar / Pelatihan 4',
+    issuer: 'Penyelenggara Seminar',
+    year: '2025',
+    category: 'Seminar',
+    file: '/sertifikat/image4.png',
+    isImage: true,
+  },
+  {
+    id: 105,
+    title: 'Sertifikat Seminar / Pelatihan 5',
+    issuer: 'Penyelenggara Seminar',
+    year: '2025',
+    category: 'Seminar',
+    file: '/sertifikat/image5.png',
+    isImage: true,
+  },
+  {
+    id: 106,
+    title: 'Sertifikat Seminar / Pelatihan 6',
+    issuer: 'Penyelenggara Seminar',
+    year: '2025',
+    category: 'Seminar',
+    file: '/sertifikat/image6.png',
+    isImage: true,
+  },
+  {
+    id: 107,
+    title: 'Sertifikat Seminar / Pelatihan 7',
+    issuer: 'Penyelenggara Seminar',
+    year: '2025',
+    category: 'Seminar',
+    file: '/sertifikat/image7.png',
+    isImage: true,
+  },
+  {
+    id: 108,
+    title: 'Sertifikat Kegiatan / Workshop (6 Nov 2025) - Halaman 1',
+    issuer: 'Penyelenggara Kegiatan',
+    year: '2025',
+    category: 'Seminar',
+    file: '/sertifikat/img20251106_12115057.jpg',
+    isImage: true,
+  },
+  {
+    id: 109,
+    title: 'Sertifikat Kegiatan / Workshop (6 Nov 2025) - Halaman 2',
+    issuer: 'Penyelenggara Kegiatan',
+    year: '2025',
+    category: 'Seminar',
+    file: '/sertifikat/img20251106_12115057_0001.jpg',
+    isImage: true,
+  },
+  // ===== SERTIFIKAT PDF DIGITAL TALENT & LAINNYA =====
   {
     id: 1,
     title: 'AI Engineer For Milenial',
@@ -559,10 +642,11 @@ const bnspCertificate = {
   ],
 }
 
-const categories = ['Semua', 'AI & Data', 'Web Development', 'Cyber Security', 'Cloud', 'Digital Marketing', 'Programming', 'IoT', 'Soft Skills']
+const categories = ['Semua', 'Seminar', 'AI & Data', 'Web Development', 'Cyber Security', 'Cloud', 'Digital Marketing', 'Programming', 'IoT', 'Soft Skills']
 
 // Warna kategori
 const categoryColors: Record<string, string> = {
+  'Seminar': 'from-fuchsia-500 to-purple-600',
   'AI & Data': 'from-purple-500 to-blue-500',
   'Web Development': 'from-green-500 to-teal-500',
   'Cyber Security': 'from-red-500 to-orange-500',
@@ -586,8 +670,8 @@ export default function Certificates() {
     { src: '/sertifikat/bnsp-kompetensi.jpg', label: 'Surat Keterangan Kompetensi' },
   ]
 
-  const filteredCerts = activeCategory === 'Semua' 
-    ? certificates 
+  const filteredCerts = activeCategory === 'Semua'
+    ? certificates
     : certificates.filter(cert => cert.category === activeCategory)
 
   const visibleCerts = filteredCerts.slice(0, visibleCount)
@@ -619,7 +703,7 @@ export default function Certificates() {
           </p>
           <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-navy-600/20 rounded-full">
             <FiAward className="text-navy-400" />
-            <span className="text-navy-300 font-medium">{certificates.length}+ Sertifikat</span>
+            <span className="text-navy-300 font-medium">{certificates.length}+ Sertifikat & Seminar</span>
           </div>
         </motion.div>
 
@@ -662,7 +746,7 @@ export default function Certificates() {
                   <div className="relative bg-gradient-to-br from-charcoal-900 via-charcoal-950 to-navy-950 rounded-[22px] p-6 md:p-10 overflow-hidden">
                     {/* Holographic shimmer overlay */}
                     <div className="absolute inset-0 bnsp-holographic opacity-30 pointer-events-none" />
-                    
+
                     {/* Corner decorations */}
                     <div className="absolute top-0 left-0 w-24 h-24 border-t-2 border-l-2 border-amber-500/40 rounded-tl-[22px]" />
                     <div className="absolute top-0 right-0 w-24 h-24 border-t-2 border-r-2 border-amber-500/40 rounded-tr-[22px]" />
@@ -877,9 +961,8 @@ export default function Certificates() {
                     <button
                       key={img.src}
                       onClick={() => setBnspGallery(img.src)}
-                      className={`w-16 h-20 rounded-lg overflow-hidden border-2 transition-all ${
-                        bnspGallery === img.src ? 'border-amber-400 shadow-lg shadow-amber-500/20' : 'border-charcoal-700 opacity-50 hover:opacity-80'
-                      }`}
+                      className={`w-16 h-20 rounded-lg overflow-hidden border-2 transition-all ${bnspGallery === img.src ? 'border-amber-400 shadow-lg shadow-amber-500/20' : 'border-charcoal-700 opacity-50 hover:opacity-80'
+                        }`}
                     >
                       <img src={img.src} alt={img.label} className="w-full h-full object-cover" />
                     </button>
@@ -905,18 +988,16 @@ export default function Certificates() {
                 setActiveCategory(category)
                 setVisibleCount(12)
               }}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
-                activeCategory === category
-                  ? 'bg-navy-600 text-white'
-                  : 'bg-charcoal-800 text-soft-gray-400 hover:bg-charcoal-700 hover:text-white'
-              }`}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 ${activeCategory === category
+                ? 'bg-navy-600 text-white'
+                : 'bg-charcoal-800 text-soft-gray-400 hover:bg-charcoal-700 hover:text-white'
+                }`}
             >
               {category}
-              <span className={`text-xs px-1.5 py-0.5 rounded-full ${
-                activeCategory === category
-                  ? 'bg-navy-500'
-                  : 'bg-charcoal-700'
-              }`}>
+              <span className={`text-xs px-1.5 py-0.5 rounded-full ${activeCategory === category
+                ? 'bg-navy-500'
+                : 'bg-charcoal-700'
+                }`}>
                 {categoryCounts[category]}
               </span>
             </button>
@@ -943,13 +1024,14 @@ export default function Certificates() {
                   <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
                   <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2" />
                 </div>
-                
+
                 {/* Category Icon */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <motion.div 
+                  <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     className="w-20 h-20 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-lg"
                   >
+                    {cert.category === 'Seminar' && <FiAward className="w-10 h-10 text-white" />}
                     {cert.category === 'AI & Data' && <HiChip className="w-10 h-10 text-white" />}
                     {cert.category === 'Web Development' && <FiCode className="w-10 h-10 text-white" />}
                     {cert.category === 'Cyber Security' && <FiShield className="w-10 h-10 text-white" />}
@@ -976,7 +1058,7 @@ export default function Certificates() {
                   <FiCalendar className="w-3 h-3" />
                   {cert.year}
                 </div>
-                
+
                 {/* Verified Badge */}
                 <div className="absolute top-3 left-3">
                   <HiBadgeCheck className="w-6 h-6 text-white drop-shadow-lg" />
@@ -992,13 +1074,13 @@ export default function Certificates() {
                   <FiUser className="w-3 h-3 flex-shrink-0" />
                   <span className="truncate">{cert.issuer}</span>
                 </div>
-                
+
                 {/* Category Badge */}
                 <div className="flex items-center justify-between">
                   <span className={`text-xs px-3 py-1.5 rounded-full bg-gradient-to-r ${categoryColors[cert.category] || 'from-navy-500 to-navy-700'} text-white font-medium shadow-sm`}>
                     {cert.category}
                   </span>
-                  <motion.div 
+                  <motion.div
                     whileHover={{ scale: 1.2 }}
                     className="w-8 h-8 rounded-full bg-charcoal-700/50 flex items-center justify-center text-soft-gray-400 group-hover:text-navy-400 group-hover:bg-navy-600/20 transition-all"
                   >
@@ -1006,7 +1088,7 @@ export default function Certificates() {
                   </motion.div>
                 </div>
               </div>
-              
+
               {/* Bottom Gradient Line */}
               <div className={`h-1 bg-gradient-to-r ${categoryColors[cert.category] || 'from-navy-500 to-navy-700'}`} />
             </motion.div>
@@ -1089,19 +1171,29 @@ export default function Certificates() {
                   </div>
                 </div>
 
-                {/* PDF Preview - Full Height tanpa scroll internal */}
+                {/* PDF / Image Preview - Full Height */}
                 <div className="h-[calc(90vh-80px)] bg-charcoal-950">
-                  <object
-                    data={`${selectedCert.file}#toolbar=1&navpanes=0&scrollbar=0&view=FitH`}
-                    type="application/pdf"
-                    className="w-full h-full"
-                  >
-                    <iframe
-                      src={`${selectedCert.file}#toolbar=1&navpanes=0&scrollbar=0&view=FitH`}
-                      className="w-full h-full border-0"
-                      title={selectedCert.title}
-                    />
-                  </object>
+                  {(selectedCert as any).isImage ? (
+                    <div className="w-full h-full flex items-center justify-center p-4 overflow-auto">
+                      <img
+                        src={selectedCert.file}
+                        alt={selectedCert.title}
+                        className="max-w-full max-h-full object-contain rounded-xl shadow-2xl"
+                      />
+                    </div>
+                  ) : (
+                    <object
+                      data={`${selectedCert.file}#toolbar=1&navpanes=0&scrollbar=0&view=FitH`}
+                      type="application/pdf"
+                      className="w-full h-full"
+                    >
+                      <iframe
+                        src={`${selectedCert.file}#toolbar=1&navpanes=0&scrollbar=0&view=FitH`}
+                        className="w-full h-full border-0"
+                        title={selectedCert.title}
+                      />
+                    </object>
+                  )}
                 </div>
               </motion.div>
             </motion.div>

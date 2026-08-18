@@ -18,7 +18,7 @@ const timelineItems = [
     year: '2023',
     title: 'Proyek Laravel Pertama',
     subtitle: 'Inventory System & REST API',
-    description: 'Membangun sistem inventaris dan RESTful API sebagai proyek awal.',
+    description: 'Membangun sistem inventaris dan RESTful API sebagai proyek awal pengembangan web.',
     icon: FiCode,
     color: 'from-green-500 to-teal-500',
     type: 'project',
@@ -27,7 +27,7 @@ const timelineItems = [
     year: '2024',
     title: 'Sistem Integrasi KVT',
     subtitle: 'Tim Developer',
-    description: 'Mengerjakan sistem integrasi manajemen KVT yang komprehensif.',
+    description: 'Mengerjakan sistem integrasi manajemen KVT yang komprehensif sebagai anggota tim.',
     icon: FiBriefcase,
     color: 'from-purple-500 to-pink-500',
     type: 'project',
@@ -36,34 +36,43 @@ const timelineItems = [
     year: '2024',
     title: 'Sistem K-Amu All in One',
     subtitle: 'Full Stack Developer',
-    description: 'Membangun sistem sekolah berbasis Laravel dengan fitur lengkap.',
+    description: 'Membangun sistem informasi sekolah berbasis Laravel dengan fitur lengkap.',
     icon: FiCode,
     color: 'from-orange-500 to-red-500',
     type: 'project',
   },
   {
     year: '2025',
-    title: '65+ Sertifikat Digital',
-    subtitle: 'Digital Talent Scholarship & lainnya',
-    description: 'Menyelesaikan berbagai pelatihan AI, Web Dev, Cyber Security, dan Cloud.',
+    title: 'Seminar & Workshop Nasional',
+    subtitle: 'Berbagai Penyelenggara',
+    description: 'Aktif mengikuti seminar, workshop, dan pelatihan bertema teknologi, AI, keamanan siber, dan pengembangan diri.',
+    icon: FiAward,
+    color: 'from-fuchsia-500 to-purple-600',
+    type: 'seminar',
+  },
+  {
+    year: '2025',
+    title: '75+ Sertifikat Digital',
+    subtitle: 'Digital Talent Scholarship, Microsoft, & lainnya',
+    description: 'Menyelesaikan berbagai pelatihan AI, Web Dev, Cyber Security, Cloud, Digital Marketing, dan Soft Skills.',
     icon: FiAward,
     color: 'from-amber-400 to-yellow-500',
     type: 'achievement',
   },
   {
     year: '2025',
-    title: 'Sertifikasi BNSP',
-    subtitle: 'Junior Web Developer - Pengembang Web Pratama',
-    description: 'Mendapatkan sertifikat kompetensi nasional dari BNSP melalui LSP Teknologi Digital.',
+    title: 'Sertifikasi BNSP - LSP Teknologi Digital',
+    subtitle: 'Junior Web Developer (Pengembang Web Pratama)',
+    description: 'Lulus uji kompetensi dan mendapatkan sertifikat profesi nasional dari BNSP melalui LSP Teknologi Digital, Yogyakarta. No. 62090 2513 3 0156814 2025.',
     icon: FiAward,
     color: 'from-amber-500 to-amber-700',
     type: 'certification',
   },
   {
     year: '2025-Sekarang',
-    title: 'Semester 6 - Mahasiswa Aktif',
+    title: 'Semester 6 - Penelitian Skripsi',
     subtitle: 'Institut Teknologi dan Sains Mandala',
-    description: 'Terus mengembangkan skill web development dan siap memasuki dunia profesional.',
+    description: 'Menjalankan penelitian skripsi di bidang teknologi informasi, sekaligus terus mengembangkan skill web development untuk siap memasuki dunia profesional.',
     icon: FiBookOpen,
     color: 'from-navy-400 to-navy-600',
     type: 'education',
@@ -100,9 +109,8 @@ export default function ExperienceTimeline() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 viewport={{ once: false, amount: 0.2 }}
-                className={`relative flex items-start gap-6 md:gap-0 ${
-                  i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
+                className={`relative flex items-start gap-6 md:gap-0 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                  }`}
               >
                 {/* Content */}
                 <div className={`flex-1 ${i % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>

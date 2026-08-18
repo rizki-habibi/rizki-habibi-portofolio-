@@ -8,6 +8,7 @@ const sections = [
   { id: 'skills', label: 'Keahlian' },
   { id: 'projects', label: 'Proyek' },
   { id: 'timeline', label: 'Timeline' },
+  { id: 'inovasi', label: 'Inovasi' },
   { id: 'certificates', label: 'Sertifikat' },
   { id: 'cv', label: 'CV' },
   { id: 'contact', label: 'Kontak' },
@@ -49,11 +50,10 @@ export default function SideNavDots() {
             {section.label}
           </span>
           <div
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              activeSection === section.id
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${activeSection === section.id
                 ? 'bg-navy-400 w-6 rounded-full shadow-md shadow-navy-400/50'
                 : 'bg-charcoal-600 hover:bg-soft-gray-400'
-            }`}
+              }`}
           />
         </motion.a>
       ))}

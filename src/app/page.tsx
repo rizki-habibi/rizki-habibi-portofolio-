@@ -1,65 +1,82 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
-import StatsCounter from '@/components/StatsCounter'
-import GitHubEnhanced from '@/components/GitHubEnhanced'
+import Skills from '@/components/Skills'
 import Projects from '@/components/Projects'
+import ExperienceTimeline from '@/components/ExperienceTimeline'
+import CeritaPerjalanan from '@/components/CeritaPerjalanan'
+import VisiKVT from '@/components/VisiKVT'
+import Innovation from '@/components/Innovation'
 import Certificates from '@/components/Certificates'
 import CV from '@/components/CV'
+import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
 import ScrollProgress from '@/components/ScrollProgress'
-import SpotlightCursor from '@/components/SpotlightCursor'
-import CommandPalette from '@/components/CommandPalette'
-import LoadingScreen from '@/components/LoadingScreen'
-import Skills from '@/components/Skills'
-import SecretMode from '@/components/SecretMode'
-import ExperienceTimeline from '@/components/ExperienceTimeline'
-import TechMarquee from '@/components/TechMarquee'
 import BackToTop from '@/components/BackToTop'
-import SideNavDots from '@/components/SideNavDots'
-import MouseSparkle from '@/components/MouseSparkle'
-import InteractiveTerminal from '@/components/InteractiveTerminal'
-import AchievementBadges from '@/components/AchievementBadges'
-import QuoteSection from '@/components/QuoteSection'
-import ContactSection from '@/components/ContactSection'
-import VisitorCounter from '@/components/VisitorCounter'
-import SocialFloat from '@/components/SocialFloat'
-import ToolsUsed from '@/components/ToolsUsed'
-import WaveDivider from '@/components/WaveDivider'
-import WelcomeToast from '@/components/WelcomeToast'
+import LoadingScreen from '@/components/LoadingScreen'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-charcoal-950">
+    <main style={{ background: '#fafaf7' }}>
+      {/* UI Utils */}
       <LoadingScreen />
       <ScrollProgress />
-      <SpotlightCursor />
-      <CommandPalette />
-      <SecretMode />
-      <MouseSparkle />
-      <SideNavDots />
-      <SocialFloat />
       <BackToTop />
-      <InteractiveTerminal />
-      <WelcomeToast />
-      
+
+      {/* Navigation */}
       <Navbar />
+
+      {/* CHAPTER 00: HERO — The Origin */}
       <Hero />
-      <TechMarquee />
-      <StatsCounter />
-      <WaveDivider color="#0d0d0d" />
+
+      {/* CHAPTER 01: MY STORY — Cerita Perjalanan */}
+      <CeritaPerjalanan />
+
+      {/* Comic divider */}
+      <div className="comic-divider" />
+
+      {/* CHAPTER 02: MY POWERS — Skills */}
       <Skills />
-      <ToolsUsed />
-      <WaveDivider color="#0d0d0d" flip />
-      <GitHubEnhanced />
+
+      {/* Comic divider */}
+      <div className="comic-divider" />
+
+      {/* CHAPTER 03: THE MISSIONS — Projects */}
       <Projects />
+
+      {/* Comic divider */}
+      <div className="comic-divider" />
+
+      {/* CHAPTER 04: MY JOURNEY — Timeline */}
       <ExperienceTimeline />
-      <WaveDivider color="#0d0d0d" />
+
+      {/* Comic divider */}
+      <div className="comic-divider" />
+
+      {/* CHAPTER 05: POWER CARDS — Certificates */}
       <Certificates />
-      <AchievementBadges />
-      <QuoteSection />
-      <VisitorCounter />
-      <ContactSection />
+
+      {/* Comic divider */}
+      <div className="comic-divider" />
+
+      {/* CHAPTER 06: THE BIG DREAM — Visi KVT */}
+      <VisiKVT />
+
+      {/* Comic divider */}
+      <div className="comic-divider" />
+
+      {/* CHAPTER 07: INNOVATION — Rekayasa & Inovasi */}
+      <Innovation />
+
+      {/* Comic divider */}
+      <div className="comic-divider" />
+
+      {/* CV Download */}
       <CV />
+
+      {/* FINAL CHAPTER: Contact */}
+      <ContactSection />
+
+      {/* Footer */}
       <Footer />
     </main>
   )

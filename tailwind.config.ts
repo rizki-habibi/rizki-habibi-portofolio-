@@ -8,7 +8,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        comic: ['Bangers', 'Impact', 'Arial Black', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+      },
       colors: {
+        'comic-black': '#0a0a0a',
+        'comic-white': '#fafaf7',
+        'comic-yellow': '#ffd700',
+        'comic-blue': '#1a5cff',
+        'comic-blue-light': '#4d88ff',
+        'comic-red': '#e63329',
+        'comic-panel': '#f0f0eb',
         'charcoal': {
           50: '#f6f6f6',
           100: '#e7e7e7',

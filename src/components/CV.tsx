@@ -26,7 +26,8 @@ const techSkills = ['Laravel', 'PHP', 'MySQL', 'Next.js', 'HTML', 'CSS', 'Tailwi
 
 export default function CV() {
   return (
-    <section id="cv" className="py-20 px-4">
+    <section id="cv" className="py-20 px-4 relative" style={{ background: '#fafaf7' }}>
+      <div className="halftone-bg" />
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -36,10 +37,11 @@ export default function CV() {
           viewport={{ once: false, amount: 0.3 }}
           className="text-center mb-12"
         >
-          <h2 className="section-title">Curriculum Vitae</h2>
-          <p className="text-soft-gray-400 max-w-2xl mx-auto">
-            Informasi lengkap tentang profil, keahlian, dan tools yang saya kuasai.
-          </p>
+          <div className="chapter-label mb-3">CURRICULUM VITAE</div>
+          <h2 className="section-title">MY PROFILE</h2>
+          <div className="speech-bubble inline-block text-sm mt-4">
+            📄 Unduh CV lengkap saya di sini!
+          </div>
         </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-8">
@@ -122,7 +124,7 @@ export default function CV() {
             className="lg:col-span-2 space-y-6"
           >
             {/* Profil Singkat */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -139,7 +141,7 @@ export default function CV() {
             </motion.div>
 
             {/* Tech Skills */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.15 }}
@@ -160,7 +162,7 @@ export default function CV() {
             </motion.div>
 
             {/* Tools Section */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -171,7 +173,7 @@ export default function CV() {
                 <FiTool className="text-navy-400" />
                 Tools & Software
               </h4>
-              
+
               <div className="space-y-4">
                 {/* Tools Dipakai */}
                 <div>
@@ -224,7 +226,7 @@ export default function CV() {
             </motion.div>
 
             {/* Education */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.25 }}
@@ -235,7 +237,7 @@ export default function CV() {
                 <FiCalendar className="text-navy-400" />
                 Riwayat Pendidikan
               </h4>
-              
+
               <div className="space-y-4">
                 {[
                   {
@@ -292,7 +294,7 @@ export default function CV() {
             </motion.div>
 
             {/* Experience Timeline */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
@@ -303,7 +305,7 @@ export default function CV() {
                 <FiMonitor className="text-navy-400" />
                 Pengalaman & Pencapaian
               </h4>
-              
+
               <div className="space-y-6">
                 {[
                   {

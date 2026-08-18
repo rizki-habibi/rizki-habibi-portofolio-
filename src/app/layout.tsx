@@ -2,33 +2,24 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  title: 'Rizki Habibi | Portofolio',
-  description: 'Portofolio Rizki Habibi - Mahasiswa STI & Web Developer',
-  keywords: ['Rizki Habibi', 'Portfolio', 'Web Developer', 'Laravel', 'Next.js'],
-  authors: [{ name: 'Rizki Habibi' }],
-  icons: {
-    icon: '/favicon.svg',
-  },
-  openGraph: {
-    title: 'Rizki Habibi | Portofolio',
-    description: 'Portofolio Rizki Habibi - Mahasiswa STI & Web Developer',
-    type: 'website',
-  },
+  title: 'Rizki Habibi | Portfolio',
+  description: 'Web Developer · Creator · Problem Solver',
+  icons: { icon: '/favicon.svg' },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="id" className="scroll-smooth">
-      <body className={`${inter.className} bg-charcoal-950 text-white`}>
-        {children}
-      </body>
+    <html lang="id" className={inter.variable}>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>{children}</body>
     </html>
   )
 }

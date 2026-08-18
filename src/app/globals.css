@@ -2,10 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================
+   COMIC BOOK DESIGN SYSTEM
+   ============================================ */
+
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 13, 13, 13;
-  --background-end-rgb: 15, 23, 42;
+  --comic-black: #0a0a0a;
+  --comic-white: #fafaf7;
+  --comic-yellow: #ffd700;
+  --comic-blue: #1a5cff;
+  --comic-blue-light: #4d88ff;
+  --comic-red: #e63329;
+  --comic-outline: 3px solid #0a0a0a;
+  --halftone-size: 4px;
 }
 
 * {
@@ -19,177 +28,498 @@ html {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-    135deg,
-    rgb(var(--background-start-rgb)),
-    rgb(var(--background-end-rgb))
-  );
-  min-height: 100vh;
+  background-color: var(--comic-white);
+  color: var(--comic-black);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #f0f0eb; border-left: 2px solid #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #1a5cff; border: 2px solid #0a0a0a; }
+::-webkit-scrollbar-thumb:hover { background: #ffd700; }
+
+/* ============================================
+   COMIC TYPOGRAPHY
+   ============================================ */
+.comic-title {
+  font-family: 'Bangers', 'Impact', 'Arial Black', sans-serif;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--comic-black);
+  -webkit-text-stroke: 2px var(--comic-black);
+  paint-order: stroke fill;
 }
 
-::-webkit-scrollbar-track {
-  background: #1a1a1a;
+.comic-heading {
+  font-family: 'Bangers', 'Impact', 'Arial Black', sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #3b82f6;
-  border-radius: 4px;
+.manga-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #2563eb;
+/* ============================================
+   COMIC PANEL BORDERS
+   ============================================ */
+.comic-panel {
+  border: 3px solid var(--comic-black);
+  background: var(--comic-white);
+  box-shadow: 5px 5px 0 var(--comic-black);
+  position: relative;
+  overflow: hidden;
 }
 
-/* Animated Gradient Text */
-.gradient-text {
-  background: linear-gradient(
-    90deg,
-    #60a5fa,
-    #3b82f6,
-    #8b5cf6,
-    #ec4899,
-    #60a5fa
-  );
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradient 3s linear infinite;
+.comic-panel-dark {
+  border: 3px solid var(--comic-black);
+  background: var(--comic-black);
+  box-shadow: 5px 5px 0 var(--comic-yellow);
+  position: relative;
+  overflow: hidden;
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
+.comic-panel-blue {
+  border: 3px solid var(--comic-black);
+  background: #e8f0ff;
+  box-shadow: 5px 5px 0 var(--comic-black);
+  position: relative;
+  overflow: hidden;
 }
 
-/* Glassmorphism Card */
-.glass-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
+.comic-panel-yellow {
+  border: 3px solid var(--comic-black);
+  background: #fff8cc;
+  box-shadow: 5px 5px 0 var(--comic-black);
+  position: relative;
+  overflow: hidden;
 }
 
-.glass-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(59, 130, 246, 0.3);
+/* ============================================
+   SPEECH BUBBLE
+   ============================================ */
+.speech-bubble {
+  background: white;
+  border: 3px solid var(--comic-black);
+  border-radius: 20px;
+  padding: 12px 20px;
+  position: relative;
+  box-shadow: 4px 4px 0 var(--comic-black);
+  font-weight: 700;
+  color: var(--comic-black);
+  display: inline-block;
 }
 
-/* GitHub Contribution Colors */
-.contribution-0 {
-  background-color: #161b22;
-}
-.contribution-1 {
-  background-color: #0e4429;
-}
-.contribution-2 {
-  background-color: #006d32;
-}
-.contribution-3 {
-  background-color: #26a641;
-}
-.contribution-4 {
-  background-color: #39d353;
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -18px;
+  left: 30px;
+  border-left: 14px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 18px solid var(--comic-black);
 }
 
-/* Tech Badge */
-.tech-badge {
-  @apply px-3 py-1 text-xs font-medium rounded-full;
-  background: rgba(59, 130, 246, 0.2);
-  color: #60a5fa;
-  border: 1px solid rgba(59, 130, 246, 0.3);
+.speech-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 33px;
+  border-left: 11px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 14px solid white;
+  z-index: 1;
 }
 
-/* Button Styles */
-.btn-primary {
-  @apply px-6 py-3 font-semibold rounded-lg transition-all duration-300;
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+.speech-bubble-right {
+  background: white;
+  border: 3px solid var(--comic-black);
+  border-radius: 20px;
+  padding: 12px 20px;
+  position: relative;
+  box-shadow: 4px 4px 0 var(--comic-black);
+  font-weight: 700;
+  color: var(--comic-black);
+  display: inline-block;
+}
+
+.speech-bubble-right::after {
+  content: '';
+  position: absolute;
+  bottom: -18px;
+  right: 30px;
+  border-left: 8px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 18px solid var(--comic-black);
+}
+
+.speech-bubble-right::before {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  right: 33px;
+  border-left: 6px solid transparent;
+  border-right: 11px solid transparent;
+  border-top: 14px solid white;
+  z-index: 1;
+}
+
+.thought-bubble {
+  background: white;
+  border: 3px solid var(--comic-black);
+  border-radius: 50px;
+  padding: 10px 18px;
+  position: relative;
+  box-shadow: 4px 4px 0 var(--comic-black);
+  font-weight: 700;
+  color: var(--comic-black);
+  display: inline-block;
+}
+
+/* ============================================
+   COMIC BUTTONS
+   ============================================ */
+.btn-comic {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: var(--comic-yellow);
+  color: var(--comic-black);
+  border: 3px solid var(--comic-black);
+  box-shadow: 4px 4px 0 var(--comic-black);
+  font-family: 'Bangers', 'Impact', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.btn-comic:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--comic-black);
+}
+
+.btn-comic:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--comic-black);
+}
+
+.btn-comic-blue {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: var(--comic-blue);
   color: white;
-  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  border: 3px solid var(--comic-black);
+  box-shadow: 4px 4px 0 var(--comic-black);
+  font-family: 'Bangers', 'Impact', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none;
 }
 
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+.btn-comic-blue:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--comic-black);
 }
 
-.btn-secondary {
-  @apply px-6 py-3 font-semibold rounded-lg transition-all duration-300;
-  background: transparent;
-  color: #60a5fa;
-  border: 2px solid #3b82f6;
+.btn-comic-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: white;
+  color: var(--comic-black);
+  border: 3px solid var(--comic-black);
+  box-shadow: 4px 4px 0 var(--comic-black);
+  font-family: 'Bangers', 'Impact', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none;
 }
 
-.btn-secondary:hover {
-  background: rgba(59, 130, 246, 0.1);
-  transform: translateY(-2px);
+.btn-comic-outline:hover {
+  background: var(--comic-black);
+  color: white;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 rgba(0,0,0,0.3);
 }
 
-/* Section Title */
+/* ============================================
+   HALFTONE EFFECTS
+   ============================================ */
+.halftone-bg {
+  background-image: radial-gradient(circle, #0a0a0a 1.5px, transparent 1.5px);
+  background-size: 14px 14px;
+  opacity: 0.06;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.halftone-yellow {
+  background-image: radial-gradient(circle, var(--comic-yellow) 2px, transparent 2px);
+  background-size: 12px 12px;
+  opacity: 0.3;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.halftone-blue {
+  background-image: radial-gradient(circle, var(--comic-blue) 1.5px, transparent 1.5px);
+  background-size: 12px 12px;
+  opacity: 0.12;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* ============================================
+   SPEED LINES
+   ============================================ */
+.speed-lines {
+  background: repeating-conic-gradient(
+    from 0deg at 50% 100%,
+    rgba(0,0,0,0.04) 0deg,
+    transparent 1deg,
+    transparent 4deg
+  );
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* ============================================
+   COMIC EFFECTS (BOOM, POW, etc.)
+   ============================================ */
+.comic-burst {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.comic-burst-shape {
+  background: var(--comic-yellow);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  border: 2px solid var(--comic-black);
+}
+
+/* Chapter label */
+.chapter-label {
+  font-family: 'Bangers', 'Impact', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--comic-blue);
+  border: 2px solid var(--comic-blue);
+  padding: 4px 16px;
+  display: inline-block;
+}
+
+/* ============================================
+   COMIC SECTION TITLE
+   ============================================ */
 .section-title {
-  @apply text-3xl md:text-4xl font-bold mb-4;
-  background: linear-gradient(90deg, #ffffff, #93c5fd);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-family: 'Bangers', 'Impact', 'Arial Black', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--comic-black);
+  line-height: 1;
+  margin-bottom: 1rem;
 }
 
-/* PDF Viewer */
-.pdf-container {
-  @apply w-full rounded-lg overflow-hidden;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.section-title-white {
+  font-family: 'Bangers', 'Impact', 'Arial Black', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: white;
+  -webkit-text-stroke: 2px white;
+  line-height: 1;
+  margin-bottom: 1rem;
 }
 
-/* Certificate Card Hover Effect */
-.cert-card {
-  transition: all 0.3s ease;
+/* ============================================
+   SKILL CARD / ABILITY CARD
+   ============================================ */
+.skill-card {
+  border: 3px solid var(--comic-black);
+  background: white;
+  box-shadow: 5px 5px 0 var(--comic-black);
+  transition: all 0.15s ease;
+  position: relative;
 }
 
-.cert-card:hover {
-  transform: translateY(-5px) scale(1.02);
+.skill-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0 var(--comic-black);
 }
 
-/* Navbar Blur */
+/* ============================================
+   MANGA ACCENT TEXT
+   ============================================ */
+.accent-yellow {
+  color: var(--comic-yellow);
+  -webkit-text-stroke: 1.5px var(--comic-black);
+  paint-order: stroke fill;
+}
+
+.accent-blue {
+  color: var(--comic-blue);
+}
+
+.text-outline-white {
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+}
+
+.text-outline-black {
+  -webkit-text-stroke: 2px var(--comic-black);
+  color: var(--comic-yellow);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes comicFloat {
+  0%, 100% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-12px) rotate(1deg); }
+}
+
+@keyframes bubblePop {
+  0% { transform: scale(0) rotate(-5deg); opacity: 0; }
+  60% { transform: scale(1.1) rotate(2deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+@keyframes speedSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes comicShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px) rotate(-1deg); }
+  75% { transform: translateX(3px) rotate(1deg); }
+}
+
+@keyframes starPulse {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  50% { transform: scale(1.3) rotate(15deg); opacity: 0.8; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-60px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(60px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes panelReveal {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0% 0 0); }
+}
+
+.animate-comic-float { animation: comicFloat 4s ease-in-out infinite; }
+.animate-bubble-pop { animation: bubblePop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+.animate-star-pulse { animation: starPulse 2s ease-in-out infinite; }
+.animate-comic-shake { animation: comicShake 0.4s ease-in-out; }
+
+/* ============================================
+   GRADIENT TEXT (for compatibility)
+   ============================================ */
+.gradient-text {
+  color: var(--comic-blue);
+  font-family: 'Bangers', 'Impact', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+/* ============================================
+   LEGACY CLASSES (agar komponen lama tidak error)
+   ============================================ */
+.glass-card {
+  border: 3px solid var(--comic-black);
+  background: white;
+  box-shadow: 4px 4px 0 var(--comic-black);
+}
+
+.btn-primary { @apply btn-comic-blue; }
+.btn-secondary { @apply btn-comic-outline; }
+
+.tech-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border: 2px solid var(--comic-black);
+  background: #e8f0ff;
+  color: var(--comic-black);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 2px 2px 0 var(--comic-black);
+}
+
 .navbar-blur {
-  background: rgba(13, 13, 13, 0.8);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: var(--comic-white);
+  border-bottom: 3px solid var(--comic-black);
 }
 
-/* Typing Cursor */
-.typing-cursor {
-  color: #60a5fa;
-  font-weight: 300;
-  animation: blink 1s step-end infinite;
+/* Progress bar comic style */
+.comic-progress {
+  height: 16px;
+  border: 2px solid var(--comic-black);
+  background: #f0f0eb;
+  position: relative;
+  overflow: hidden;
 }
 
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+.comic-progress-bar {
+  height: 100%;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--comic-blue) 0px,
+    var(--comic-blue) 8px,
+    #4d88ff 8px,
+    #4d88ff 16px
+  );
+  transition: width 1s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* BNSP Certificate Holographic Effect */
+/* ============================================
+   HOLOGRAPHIC (BNSP)
+   ============================================ */
 .bnsp-holographic {
   background: linear-gradient(
     135deg,
     transparent 0%,
-    rgba(255, 215, 0, 0.05) 20%,
+    rgba(255, 215, 0, 0.08) 20%,
     transparent 40%,
-    rgba(255, 215, 0, 0.08) 60%,
-    transparent 80%,
-    rgba(255, 215, 0, 0.05) 100%
+    rgba(255, 215, 0, 0.1) 60%,
+    transparent 80%
   );
   background-size: 400% 400%;
   animation: holographic-shimmer 6s ease infinite;
@@ -201,73 +531,69 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-.bnsp-card-container {
-  cursor: pointer;
-}
+.bnsp-card-container { cursor: pointer; }
+.bnsp-card-front, .bnsp-card-back { will-change: transform; }
 
-.bnsp-card-front,
-.bnsp-card-back {
-  will-change: transform;
-}
-
-/* Mouse Sparkle Pop Animation */
+/* Sparkle */
 @keyframes sparkle-pop {
-  0% {
-    transform: scale(0) rotate(0deg);
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale(1) rotate(180deg);
-    opacity: 0;
-  }
+  0% { transform: scale(0) rotate(0deg); opacity: 1; }
+  50% { opacity: 0.8; }
+  100% { transform: scale(1) rotate(180deg); opacity: 0; }
+}
+.animate-sparkle-pop { animation: sparkle-pop 0.6s ease-out forwards; }
+
+/* Terminal */
+.terminal-text { font-family: 'Courier New', Consolas, monospace; }
+
+.typing-cursor {
+  color: var(--comic-blue);
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
-.animate-sparkle-pop {
-  animation: sparkle-pop 0.6s ease-out forwards;
-}
-
-/* Glow effect for cards */
-.glow-card {
-  position: relative;
-}
-
-.glow-card::after {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(139, 92, 246, 0.3));
-  opacity: 0;
-  transition: opacity 0.3s;
-  z-index: -1;
-  filter: blur(8px);
-}
-
-.glow-card:hover::after {
-  opacity: 1;
-}
-
-/* Terminal styles */
-.terminal-text {
-  font-family: 'Courier New', 'Consolas', monospace;
-}
-
-/* Shimmer loading */
+/* Shimmer */
 .shimmer {
-  background: linear-gradient(
-    90deg,
-    rgba(255,255,255,0) 0%,
-    rgba(255,255,255,0.05) 50%,
-    rgba(255,255,255,0) 100%
-  );
+  background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.04) 50%, transparent 100%);
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
 }
-
 @keyframes shimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
+}
+
+/* Contribution colors */
+.contribution-0 { background-color: #f0f0eb; }
+.contribution-1 { background-color: #b8d4ff; }
+.contribution-2 { background-color: #6ba3ff; }
+.contribution-3 { background-color: #2563eb; }
+.contribution-4 { background-color: #1a5cff; }
+
+/* Comic divider */
+.comic-divider {
+  height: 4px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--comic-black) 0px,
+    var(--comic-black) 20px,
+    var(--comic-yellow) 20px,
+    var(--comic-yellow) 40px,
+    var(--comic-blue) 40px,
+    var(--comic-blue) 60px
+  );
+}
+
+/* Noise texture overlay */
+.comic-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .comic-panel { box-shadow: 3px 3px 0 var(--comic-black); }
+  .speech-bubble, .speech-bubble-right { padding: 8px 14px; }
+  .btn-comic, .btn-comic-blue, .btn-comic-outline { font-size: 0.95rem; padding: 10px 20px; }
 }

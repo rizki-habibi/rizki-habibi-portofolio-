@@ -3,44 +3,36 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import { FiArrowDown } from 'react-icons/fi'
+import { FiArrowDown, FiAward, FiCode, FiZap, FiStar, FiGlobe } from 'react-icons/fi'
 
-const typingTexts = ['Web Developer', 'Laravel Engineer', 'Next.js Creator', 'UI/UX Explorer', 'BNSP Certified']
+const typingTexts = ['Web Developer', 'Laravel Engineer', 'Next.js Creator', 'UI/UX Explorer', 'BNSP Certified', 'IoT Innovator']
 
 function TypingText() {
-  const [textIndex, setTextIndex] = useState(0)
-  const [charIndex, setCharIndex] = useState(0)
-  const [isDeleting, setIsDeleting] = useState(false)
+  const [ti, setTi] = useState(0)
+  const [ci, setCi] = useState(0)
+  const [del, setDel] = useState(false)
   useEffect(() => {
-    const cur = typingTexts[textIndex]
+    const cur = typingTexts[ti]
     const t = setTimeout(() => {
-      if (!isDeleting) {
-        if (charIndex < cur.length) setCharIndex(c => c + 1)
-        else setTimeout(() => setIsDeleting(true), 1500)
-      } else {
-        if (charIndex > 0) setCharIndex(c => c - 1)
-        else { setIsDeleting(false); setTextIndex(i => (i + 1) % typingTexts.length) }
-      }
-    }, isDeleting ? 40 : 80)
+      if (!del) { if (ci < cur.length) setCi(c => c + 1); else setTimeout(() => setDel(true), 1500) }
+      else { if (ci > 0) setCi(c => c - 1); else { setDel(false); setTi(i => (i + 1) % typingTexts.length) } }
+    }, del ? 40 : 80)
     return () => clearTimeout(t)
-  }, [charIndex, isDeleting, textIndex])
-  return <span className="text-comic-blue">{typingTexts[textIndex].slice(0, charIndex)}<span className="typing-cursor">|</span></span>
+  }, [ci, del, ti])
+  return <span className="text-comic-blue">{typingTexts[ti].slice(0, ci)}<span className="typing-cursor">|</span></span>
 }
 
 const stars = [
-  { top: '12%', left: '5%', size: 24, delay: 0 },
-  { top: '25%', left: '92%', size: 20, delay: 0.3 },
-  { top: '65%', left: '3%', size: 18, delay: 0.6 },
-  { top: '80%', left: '88%', size: 22, delay: 0.9 },
-  { top: '45%', left: '96%', size: 16, delay: 1.2 },
-  { top: '10%', left: '60%', size: 14, delay: 0.4 },
+  { top: '8%', left: '4%', size: 28, delay: 0 }, { top: '22%', left: '91%', size: 22, delay: 0.3 },
+  { top: '60%', left: '2%', size: 20, delay: 0.6 }, { top: '78%', left: '87%', size: 24, delay: 0.9 },
+  { top: '42%', left: '95%', size: 16, delay: 1.2 }, { top: '88%', left: '40%', size: 18, delay: 0.5 },
+  { top: '15%', left: '55%', size: 14, delay: 0.8 }, { top: '50%', left: '48%', size: 12, delay: 1.4 },
 ]
 
-function Star({ top, left, size, delay }: { top: string; left: string; size: number; delay: number }) {
+function Star({ top, left, size, delay }: { top: string, left: string, size: number, delay: number }) {
   return (
     <motion.div style={{ position: 'absolute', top, left, width: size, height: size, pointerEvents: 'none', zIndex: 1 }}
-      animate={{ scale: [1, 1.4, 1], rotate: [0, 20, -20, 0] }}
-      transition={{ duration: 2.5, repeat: Infinity, delay, ease: 'easeInOut' }}>
+      animate={{ scale: [1, 1.5, 1], rotate: [0, 20, -20, 0] }} transition={{ duration: 2.5, repeat: Infinity, delay }}>
       <svg viewBox="0 0 24 24" fill="#ffd700" stroke="#0a0a0a" strokeWidth="1.5">
         <polygon points="12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9" />
       </svg>
@@ -48,8 +40,25 @@ function Star({ top, left, size, delay }: { top: string; left: string; size: num
   )
 }
 
-// Efek komik: ZAP / POW / BOOM muncul saat klik toggle
-const comicEffects = ['ZAP!', 'POW!', 'WOW!', 'NICE!', 'COOL!']
+const comicEffects = ['ZAP!', 'POW!', 'WOW!', 'NICE!', 'COOL!', 'EPIC!']
+
+// Mini stat panels untuk landing
+const miniStats = [
+  { icon: '🏆', label: 'BNSP', sub: 'Certified', color: '#f59e0b' },
+  { icon: '🌐', label: 'KVT.kom', sub: 'In Progress', color: '#8b5cf6' },
+  { icon: '♻️', label: 'IoT', sub: 'Inovator', color: '#22c55e' },
+]
+
+// Tech chips landing
+const techChips = ['Laravel', 'Next.js', 'PHP', 'MySQL', 'Tailwind', 'IoT', 'AI/ML']
+
+// Achievement unlocks landing
+const quickAchievements = [
+  { emoji: '🏅', text: '75+ Sertifikat' },
+  { emoji: '💻', text: '5+ Proyek' },
+  { emoji: '🎓', text: '3+ Tahun' },
+  { emoji: '🔧', text: 'Inovator IoT' },
+]
 
 export default function Hero() {
   const [isKomik, setIsKomik] = useState(true)
@@ -57,33 +66,37 @@ export default function Hero() {
   const [effectKey, setEffectKey] = useState(0)
 
   const handleToggle = () => {
-    const effect = comicEffects[Math.floor(Math.random() * comicEffects.length)]
-    setShowEffect(effect)
-    setEffectKey(k => k + 1)
-    setIsKomik(v => !v)
-    setTimeout(() => setShowEffect(''), 800)
+    const fx = comicEffects[Math.floor(Math.random() * comicEffects.length)]
+    setShowEffect(fx); setEffectKey(k => k + 1); setIsKomik(v => !v)
+    setTimeout(() => setShowEffect(''), 900)
   }
 
   return (
     <section id="home" className="min-h-screen relative overflow-hidden pt-16 flex flex-col" style={{ background: '#fafaf7' }}>
       <div className="halftone-bg" />
-      {/* Speed lines kiri */}
+      {/* Speed lines */}
       <div className="absolute left-0 top-0 w-1/3 h-full pointer-events-none opacity-[0.04]"
         style={{ background: 'repeating-conic-gradient(from 0deg at 0% 50%,#0a0a0a 0deg,transparent 1deg,transparent 5deg)' }} />
+      {/* Speed lines kanan */}
+      <div className="absolute right-0 top-0 w-1/4 h-full pointer-events-none opacity-[0.03]"
+        style={{ background: 'repeating-conic-gradient(from 180deg at 100% 50%,#1a5cff 0deg,transparent 1deg,transparent 6deg)' }} />
 
       {stars.map((s, i) => <Star key={i} {...s} />)}
       <div className="comic-divider" />
 
       <div className="flex-1 flex items-center px-4 max-w-7xl mx-auto w-full py-8 relative z-10">
-        <div className="grid lg:grid-cols-5 gap-6 w-full items-center">
+        <div className="grid lg:grid-cols-5 gap-6 w-full items-start">
 
-          {/* KIRI */}
-          <div className="lg:col-span-3 order-2 lg:order-1 space-y-5">
+          {/* ===== KIRI ===== */}
+          <div className="lg:col-span-3 order-2 lg:order-1 space-y-4">
+
+            {/* Speech bubble atas */}
             <motion.div initial={{ opacity: 0, scale: 0, rotate: -5 }} animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ delay: 0.1, type: 'spring', stiffness: 200 }} className="speech-bubble text-sm inline-block">
               🙌 Selamat datang di cerita perjalanan saya!
             </motion.div>
 
+            {/* Judul besar */}
             <motion.div initial={{ opacity: 0, x: -60 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2, duration: 0.5 }}>
               <div className="font-comic text-5xl md:text-6xl leading-none mb-1" style={{ color: '#0a0a0a', WebkitTextStroke: '2px #0a0a0a' }}>HALO!</div>
               <div className="font-comic leading-none">
@@ -92,43 +105,81 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }}
-              className="comic-panel inline-block px-4 py-2">
-              <p className="font-comic text-base md:text-lg text-comic-black tracking-wide">PENGEMBANG WEB • KREATOR • PEMECAH MASALAH</p>
+            {/* Subtitle panel */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="comic-panel inline-block px-4 py-2">
+              <p className="font-comic text-sm md:text-base text-comic-black tracking-wide">PENGEMBANG WEB • KREATOR • PEMECAH MASALAH • INOVATOR</p>
             </motion.div>
 
+            {/* Typing */}
             <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="font-bold text-lg text-comic-black">
               <TypingText />
             </motion.p>
 
+            {/* Deskripsi */}
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45 }} className="comic-panel-blue p-4 max-w-lg">
               <p className="text-comic-black text-sm leading-relaxed font-medium">
-                Mahasiswa Program Studi <strong>Sistem &amp; Teknologi Informasi</strong> di Institut Teknologi dan Sains Mandala.
-                Memiliki minat di web programming, analisis sistem, dan inovasi teknologi. Saat ini sedang menjalani penelitian skripsi.
+                Mahasiswa <strong>Sistem &amp; Teknologi Informasi</strong> di Institut Teknologi dan Sains Mandala.
+                Passion di web programming, inovasi IoT, dan membangun ekosistem digital.
+                Sedang menjalani penelitian skripsi sambil mengembangkan platform <strong>KVT.kom</strong>.
               </p>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="flex flex-wrap gap-3 text-xs font-bold text-comic-black">
+            {/* === ELEMEN BARU 1: Quote mini panel === */}
+            <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5 }}
+              className="comic-panel-yellow p-3 max-w-lg"
+            >
+              <p className="font-comic text-sm text-comic-black italic">
+                &ldquo;Setiap baris kode adalah langkah menuju solusi.&rdquo;
+              </p>
+            </motion.div>
+
+            {/* === ELEMEN BARU 2: Tech chips === */}
+            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.52 }} className="flex flex-wrap gap-2">
+              {techChips.map((t, i) => (
+                <motion.span key={t} initial={{ opacity: 0, scale: 0.7 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.55 + i * 0.06 }}
+                  whileHover={{ y: -3, scale: 1.08 }}
+                  className="font-bold text-xs px-3 py-1 text-comic-black bg-white"
+                  style={{ border: '2px solid #0a0a0a', boxShadow: '2px 2px 0 #0a0a0a' }}>
+                  {t}
+                </motion.span>
+              ))}
+            </motion.div>
+
+            {/* Kontak */}
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.54 }} className="flex flex-wrap gap-3 text-xs font-bold text-comic-black">
               <a href="tel:+62882009725053" className="flex items-center gap-1 hover:text-comic-blue transition-colors">📞 +62 882-009-725-053</a>
               <span className="text-comic-black/30">|</span>
               <a href="mailto:rizkihabibi2432@gmail.com" className="flex items-center gap-1 hover:text-comic-blue transition-colors">✉️ rizkihabibi2432@gmail.com</a>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.55 }} className="flex flex-wrap gap-3">
-              <a href="#projects" className="btn-comic-blue">MULAI MEMBACA →</a>
-              <a href="#projects" className="btn-comic-outline">LIHAT PROYEK</a>
+            {/* === ELEMEN BARU 3: Achievement quick unlocks === */}
+            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.56 }} className="flex flex-wrap gap-2">
+              {quickAchievements.map((a, i) => (
+                <motion.div key={a.text} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.6 + i * 0.07 }}
+                  whileHover={{ y: -2 }} className="flex items-center gap-1.5 px-3 py-1.5 bg-white font-bold text-xs text-comic-black"
+                  style={{ border: '2px solid #1a5cff', boxShadow: '3px 3px 0 #1a5cff' }}>
+                  <span>{a.emoji}</span><span>{a.text}</span>
+                </motion.div>
+              ))}
             </motion.div>
 
-            {/* Stats */}
+            {/* CTA Buttons */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="flex flex-wrap gap-3">
+              <a href="#projects" className="btn-comic-blue">MULAI MEMBACA →</a>
+              <a href="#projects" className="btn-comic-outline">LIHAT PROYEK</a>
+              <a href="#cv" className="btn-comic" style={{ fontSize: '0.85rem', padding: '10px 20px' }}>📄 CV</a>
+            </motion.div>
+
+            {/* === ELEMEN BARU 4: Stats bar === */}
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.65 }} className="flex flex-wrap gap-3 mt-2">
               {[
-                { icon: '📁', num: '5+', label: 'PROYEK SELESAI' },
+                { icon: '📁', num: '5+', label: 'PROYEK' },
                 { icon: '</>', num: '10+', label: 'TEKNOLOGI' },
-                { icon: '📅', num: '3+', label: 'TAHUN CODING' },
+                { icon: '📅', num: '3+', label: 'TAHUN' },
+                { icon: '🏆', num: '75+', label: 'SERTIFIKAT' },
                 { icon: '🚀', num: '100%', label: 'SEMANGAT' },
               ].map((stat, i) => (
-                <motion.div key={stat.label} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.7 + i * 0.08 }}
+                <motion.div key={stat.label} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.7 + i * 0.07 }}
                   className="flex items-center gap-2 px-3 py-2 bg-white"
                   style={{ border: '2px solid #0a0a0a', boxShadow: '3px 3px 0 #0a0a0a' }}>
                   <span className="text-base">{stat.icon}</span>
@@ -139,10 +190,36 @@ export default function Hero() {
                 </motion.div>
               ))}
             </motion.div>
+
+            {/* === ELEMEN BARU 5: Mini KVT badge === */}
+            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.75 }}
+              className="inline-flex items-center gap-3 p-3 max-w-sm"
+              style={{ background: '#f5f0ff', border: '2px solid #8b5cf6', boxShadow: '4px 4px 0 #8b5cf6' }}>
+              <span className="text-2xl">🌐</span>
+              <div>
+                <div className="font-comic text-sm text-comic-black">KVT.KOM — <span style={{ color: '#8b5cf6' }}>IN PROGRESS</span></div>
+                <div className="text-[10px] font-bold text-comic-black/50">Kampus Digital Vtuber Pertama</div>
+              </div>
+            </motion.div>
+
+            {/* === ELEMEN BARU 6: Mini social links === */}
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.78 }} className="flex gap-2">
+              {[
+                { label: 'GitHub', href: 'https://github.com/rizki-habibi', color: '#0a0a0a', bg: '#f0f0eb' },
+                { label: 'LinkedIn', href: 'https://linkedin.com/in/rizki-habibi', color: '#0a66c2', bg: '#e8f2ff' },
+                { label: 'WhatsApp', href: 'https://wa.me/62882009725053', color: '#25d366', bg: '#f0fff4' },
+              ].map(s => (
+                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
+                  className="font-bold text-[10px] px-3 py-1.5"
+                  style={{ background: s.bg, border: `2px solid ${s.color}`, boxShadow: `2px 2px 0 ${s.color}`, color: s.color }}>
+                  {s.label}
+                </a>
+              ))}
+            </motion.div>
           </div>
 
-          {/* KANAN — Foto dengan toggle komik/asli */}
-          <div className="lg:col-span-2 order-1 lg:order-2 flex flex-col items-center gap-4">
+          {/* ===== KANAN ===== */}
+          <div className="lg:col-span-2 order-1 lg:order-2 flex flex-col items-center gap-3">
 
             {/* Speech bubble kanan */}
             <motion.div initial={{ opacity: 0, scale: 0, x: 40 }} animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -150,26 +227,30 @@ export default function Hero() {
               💻 Kode adalah senjata,<br />logika adalah kekuatan!
             </motion.div>
 
-            {/* Frame foto */}
+            {/* === ELEMEN BARU 7: Panel Veteran Komik kecil di atas === */}
+            <motion.div initial={{ opacity: 0, y: -20, rotate: -5 }} animate={{ opacity: 1, y: 0, rotate: -3 }}
+              transition={{ delay: 0.8, type: 'spring' }}
+              className="self-end relative overflow-hidden"
+              style={{ width: 90, height: 110, border: '3px solid #0a0a0a', boxShadow: '4px 4px 0 #f59e0b', background: '#fffbeb' }}>
+              <Image src="/foto/komik-veteran.png" alt="Veteran" fill className="object-cover object-top" />
+              <div className="absolute bottom-0 left-0 right-0 py-0.5 text-center font-comic text-[9px] text-white"
+                style={{ background: '#f59e0b', borderTop: '2px solid #0a0a0a' }}>VETERAN</div>
+            </motion.div>
+
+            {/* Frame foto utama */}
             <motion.div initial={{ opacity: 0, scale: 0.85, rotate: 2 }} animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ delay: 0.3, duration: 0.6, type: 'spring' }} className="relative" whileHover={{ rotate: -1, scale: 1.02 }}>
 
-              {/* Comic effect pop */}
+              {/* Comic effect ZAP/POW */}
               <AnimatePresence>
                 {showEffect && (
                   <motion.div key={effectKey}
-                    initial={{ scale: 0, rotate: -20, opacity: 1 }}
-                    animate={{ scale: 1.3, rotate: 10, opacity: 1 }}
-                    exit={{ scale: 0, opacity: 0 }}
+                    initial={{ scale: 0, rotate: -20, opacity: 1 }} animate={{ scale: 1.3, rotate: 10, opacity: 1 }} exit={{ scale: 0, opacity: 0 }}
                     transition={{ duration: 0.4, type: 'spring', stiffness: 300 }}
-                    className="absolute -top-8 -right-8 z-20 font-comic text-2xl text-comic-black px-3 py-1"
+                    className="absolute -top-10 -right-10 z-20 font-comic text-xl text-comic-black flex items-center justify-center"
                     style={{
-                      background: '#ffd700',
-                      border: '3px solid #0a0a0a',
-                      boxShadow: '4px 4px 0 #0a0a0a',
-                      clipPath: 'polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)',
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      width: 80, height: 80,
+                      background: '#ffd700', border: '3px solid #0a0a0a', boxShadow: '4px 4px 0 #0a0a0a',
+                      width: 72, height: 72, clipPath: 'polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)'
                     }}>
                     {showEffect}
                   </motion.div>
@@ -177,68 +258,78 @@ export default function Hero() {
               </AnimatePresence>
 
               {/* Panel foto */}
-              <div className="relative overflow-hidden" style={{ width: 280, height: 360, border: '4px solid #0a0a0a', boxShadow: '8px 8px 0 #0a0a0a', background: '#e8f0ff' }}>
+              <div className="relative overflow-hidden"
+                style={{ width: 260, height: 340, border: '4px solid #0a0a0a', boxShadow: '8px 8px 0 #0a0a0a', background: '#e8f0ff' }}>
                 <AnimatePresence mode="wait">
                   {isKomik ? (
                     <motion.div key="komik" initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -40 }} transition={{ duration: 0.3 }} className="absolute inset-0">
-                      <Image src="/foto/komik-profil.png" alt="Rizki Habibi Komik" fill className="object-cover object-top" priority />
-                      {/* Label KOMIK */}
-                      <div className="absolute top-2 left-2 font-comic text-[10px] text-white px-2 py-0.5" style={{ background: '#1a5cff', border: '2px solid #0a0a0a' }}>
-                        🎨 KOMIK
-                      </div>
+                      <Image src="/foto/komik-profil.png" alt="Rizki Komik" fill className="object-cover object-top" priority />
+                      <div className="absolute top-2 left-2 font-comic text-[10px] text-white px-2 py-0.5" style={{ background: '#1a5cff', border: '2px solid #0a0a0a' }}>🎨 KOMIK</div>
                     </motion.div>
                   ) : (
                     <motion.div key="asli" initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -40 }} transition={{ duration: 0.3 }} className="absolute inset-0">
                       <Image src="/foto/profil.jpeg" alt="Rizki Habibi" fill className="object-cover object-top" priority />
-                      {/* Label ASLI */}
-                      <div className="absolute top-2 left-2 font-comic text-[10px] text-white px-2 py-0.5" style={{ background: '#e63329', border: '2px solid #0a0a0a' }}>
-                        📷 ASLI
-                      </div>
+                      <div className="absolute top-2 left-2 font-comic text-[10px] text-white px-2 py-0.5" style={{ background: '#e63329', border: '2px solid #0a0a0a' }}>📷 ASLI</div>
                     </motion.div>
                   )}
                 </AnimatePresence>
-                {/* Overlay gradient */}
-                <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent 60%, rgba(26,92,255,0.15) 100%)' }} />
+                <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to bottom,transparent 60%,rgba(26,92,255,0.15) 100%)' }} />
               </div>
 
-              {/* TOMBOL TOGGLE */}
-              <motion.button
-                onClick={handleToggle}
-                whileHover={{ y: -3, scale: 1.05 }}
-                whileTap={{ scale: 0.92 }}
+              {/* Tombol toggle */}
+              <motion.button onClick={handleToggle} whileHover={{ y: -3, scale: 1.05 }} whileTap={{ scale: 0.92 }}
                 className="absolute -bottom-5 left-1/2 -translate-x-1/2 font-comic text-xs text-comic-black px-4 py-2 flex items-center gap-2 whitespace-nowrap z-10"
-                style={{ background: '#ffd700', border: '3px solid #0a0a0a', boxShadow: '4px 4px 0 #0a0a0a' }}
-              >
+                style={{ background: '#ffd700', border: '3px solid #0a0a0a', boxShadow: '4px 4px 0 #0a0a0a' }}>
                 {isKomik ? '📷 LIHAT FOTO ASLI' : '🎨 LIHAT VERSI KOMIK'}
               </motion.button>
 
-              {/* AVAILABLE badge */}
+              {/* Available badge */}
               <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }}
                 className="absolute -bottom-14 left-1/2 -translate-x-1/2 px-4 py-1.5 font-comic text-comic-black text-xs whitespace-nowrap"
                 style={{ background: '#22c55e', border: '2px solid #0a0a0a', boxShadow: '3px 3px 0 #0a0a0a' }}>
                 ✅ AVAILABLE FOR WORK
               </motion.div>
 
-              {/* Bintang burst pojok kanan */}
-              <motion.div initial={{ opacity: 0, scale: 0, rotate: 15 }} animate={{ opacity: 1, scale: 1, rotate: 12 }}
-                transition={{ delay: 1, type: 'spring' }}
+              {/* Burst bintang pojok */}
+              <motion.div initial={{ opacity: 0, scale: 0, rotate: 15 }} animate={{ opacity: 1, scale: 1, rotate: 12 }} transition={{ delay: 1, type: 'spring' }}
                 className="absolute -top-4 -right-4 w-16 h-16 flex items-center justify-center font-comic text-xs text-center text-comic-black leading-tight"
                 style={{ background: '#ffd700', border: '2px solid #0a0a0a', boxShadow: '2px 2px 0 #0a0a0a', clipPath: 'polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)' }}>
                 LET&apos;S<br />BUILD!
               </motion.div>
             </motion.div>
 
-            {/* Thought bubble bawah */}
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.2 }}
-              className="thought-bubble text-xs text-center mt-16 self-start ml-4">
+            {/* === ELEMEN BARU 8: Mini stat panels kanan === */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.0 }} className="flex gap-2 mt-16">
+              {miniStats.map((s, i) => (
+                <motion.div key={s.label} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.1 + i * 0.1 }}
+                  whileHover={{ y: -3 }}
+                  className="flex flex-col items-center p-2 bg-white text-center"
+                  style={{ border: `2px solid ${s.color}`, boxShadow: `3px 3px 0 ${s.color}`, minWidth: 70 }}>
+                  <span className="text-xl mb-0.5">{s.icon}</span>
+                  <div className="font-comic text-[10px] font-bold text-comic-black" style={{ color: s.color }}>{s.label}</div>
+                  <div className="text-[9px] text-comic-black/50 font-bold">{s.sub}</div>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* === ELEMEN BARU 9: Thought bubble bawah === */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.2 }} className="thought-bubble text-xs text-center self-start ml-2">
               📖 Siap melihat cerita<br />selengkapnya?
+            </motion.div>
+
+            {/* === ELEMEN BARU 10: Kuro mascot kecil === */}
+            <motion.div initial={{ opacity: 0, scale: 0, rotate: -10 }} animate={{ opacity: 1, scale: 1, rotate: 5 }}
+              transition={{ delay: 1.4, type: 'spring', stiffness: 150 }}
+              className="self-end relative overflow-hidden"
+              style={{ width: 70, height: 80, border: '2px solid #0a0a0a', boxShadow: '3px 3px 0 #1a5cff', background: '#e8f0ff' }}>
+              <Image src="/foto/kuro.png" alt="Kuro Mascot" fill className="object-cover" />
             </motion.div>
           </div>
         </div>
       </div>
 
       <div className="comic-divider" />
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.3 }} className="flex flex-col items-center py-4 gap-1 relative z-10">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }} className="flex flex-col items-center py-4 gap-1 relative z-10">
         <span className="font-comic text-xs text-comic-black/50 tracking-widest">GULIR KE BAWAH</span>
         <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 1.2, repeat: Infinity }}>
           <FiArrowDown className="w-5 h-5 text-comic-black/40" />

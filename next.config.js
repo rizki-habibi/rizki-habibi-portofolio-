@@ -4,6 +4,8 @@ const nextConfig = {
     unoptimized: true,
   },
   output: "export",
+  // Matikan dev indicator/toolbar (N icon & Issues popup)
+  devIndicators: false,
 };
 
 module.exports = nextConfig;

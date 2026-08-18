@@ -19,7 +19,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body className="__next_dev_indicator__" suppressHydrationWarning>
+        {children}
+      </body>
     </html>
   )
 }

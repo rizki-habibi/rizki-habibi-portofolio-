@@ -3,9 +3,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  output: "export",
-  // Matikan dev indicator/toolbar (N icon & Issues popup)
+  // Matikan dev indicator toolbar (N icon & Issues popup)
   devIndicators: false,
+  // Hapus output: "export" agar Vercel bisa deploy normal
 };
 
 module.exports = nextConfig;

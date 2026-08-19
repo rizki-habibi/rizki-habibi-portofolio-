@@ -60,7 +60,7 @@ export default function ComicNowPlaying() {
           animate={{ opacity: 1, x: 0, scale: 1 }}
           exit={{ opacity: 0, x: 100 }}
           transition={{ type: 'spring', stiffness: 120, damping: 16 }}
-          className="fixed bottom-24 right-4 z-40"
+          className="fixed bottom-20 right-20 z-40"
         >
           {minimized ? (
             // Mode minimized — hanya tombol

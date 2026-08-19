@@ -38,6 +38,8 @@ import GitHubHeatmap from '@/components/GitHubHeatmap'
 import CursorTrail from '@/components/CursorTrail'
 import ComicNowPlaying from '@/components/ComicNowPlaying'
 import AgeCounter from '@/components/AgeCounter'
+import SkillRadar from '@/components/SkillRadar'
+import TechTimeline from '@/components/TechTimeline'
 
 export default function Home() {
   return (
@@ -72,12 +74,20 @@ export default function Home() {
       <Skills />
       <div className="comic-divider" />
 
+      {/* SKILL RADAR CHART — analisis visual kemampuan */}
+      <SkillRadar />
+      <div className="comic-divider" />
+
       {/* CHAPTER 03 — THE MISSIONS */}
       <Projects />
       <div className="comic-divider" />
 
       {/* CHAPTER 04 — MY JOURNEY */}
       <ExperienceTimeline />
+      <div className="comic-divider" />
+
+      {/* TECH TIMELINE — perjalanan adopsi teknologi 2020-2026 */}
+      <TechTimeline />
       <div className="comic-divider" />
 
       {/* CHAPTER 05 — POWER CARDS */}

@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FiGithub, FiMenu, FiX } from 'react-icons/fi'
+import { FiGithub, FiMenu, FiX, FiBookOpen } from 'react-icons/fi'
+import StoryBook from '@/components/StoryBook'
 
 const navLinks = [
   { name: 'BERANDA', href: '#home' },
@@ -16,6 +17,7 @@ const navLinks = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [storyBukaBuka, setStoryBukaBuka] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 40)
@@ -29,8 +31,8 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.4, type: 'spring', stiffness: 120 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? 'bg-comic-white border-b-4 border-comic-black shadow-[0_4px_0_#0a0a0a]'
-          : 'bg-comic-white/95 border-b-2 border-comic-black/30'
+        ? 'bg-comic-white border-b-4 border-comic-black shadow-[0_4px_0_#0a0a0a]'
+        : 'bg-comic-white/95 border-b-2 border-comic-black/30'
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,7 +61,19 @@ export default function Navbar() {
           </motion.a>
 
           {/* Desktop Navigation — comic strip style */}
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center gap-2">
+            {/* Tombol Story Book */}
+            <motion.button
+              onClick={() => setStoryBukaBuka(true)}
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center gap-1.5 font-comic text-xs px-3 py-2 text-[#0a0a0a]"
+              style={{ background: '#ffd700', border: '2px solid #0a0a0a', boxShadow: '3px 3px 0 #0a0a0a' }}
+            >
+              <FiBookOpen className="w-3.5 h-3.5" />
+              MY STORY
+            </motion.button>
+
             <div className="flex items-center border-2 border-comic-black" style={{ boxShadow: '3px 3px 0 #0a0a0a' }}>
               {navLinks.map((link, i) => (
                 <motion.a
@@ -117,6 +131,18 @@ export default function Navbar() {
                   {link.name}
                 </a>
               ))}
+
+              {/* Tombol Story Book mobile */}
+              <motion.button
+                onClick={() => { setIsMobileMenuOpen(false); setStoryBukaBuka(true) }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full flex items-center justify-center gap-2 py-2 px-3 font-comic text-sm text-[#0a0a0a] mb-1"
+                style={{ background: '#ffd700', border: '2px solid #0a0a0a', boxShadow: '3px 3px 0 #0a0a0a' }}
+              >
+                <FiBookOpen className="w-4 h-4" />
+                MY STORY — BACA SEKARANG
+              </motion.button>
+
               <a
                 href="https://github.com/rizki-habibi"
                 target="_blank"
@@ -128,6 +154,13 @@ export default function Navbar() {
               </a>
             </div>
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Story Book Popup */}
+      <AnimatePresence>
+        {storyBukaBuka && (
+          <StoryBook onTutup={() => setStoryBukaBuka(false)} />
         )}
       </AnimatePresence>
     </motion.nav>

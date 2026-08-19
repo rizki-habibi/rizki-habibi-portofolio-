@@ -25,6 +25,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -32,24 +34,52 @@ body {
   color: var(--comic-black);
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 /* Pastikan semua teks default terbaca */
-p, span, div, li, a, label, input, textarea, button {
+p,
+span,
+div,
+li,
+a,
+label,
+input,
+textarea,
+button {
   color: inherit;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--comic-black);
 }
 
 /* ============================================
    SCROLLBAR
    ============================================ */
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: #f0f0eb; border-left: 2px solid #0a0a0a; }
-::-webkit-scrollbar-thumb { background: #1a5cff; border: 2px solid #0a0a0a; }
-::-webkit-scrollbar-thumb:hover { background: #ffd700; }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0eb;
+  border-left: 2px solid #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a5cff;
+  border: 2px solid #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffd700;
+}
 
 /* ============================================
    COMIC TYPOGRAPHY
@@ -269,7 +299,7 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--comic-black);
   color: white;
   transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 rgba(0,0,0,0.3);
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.3);
 }
 
 /* ============================================
@@ -306,12 +336,10 @@ h1, h2, h3, h4, h5, h6 {
    SPEED LINES
    ============================================ */
 .speed-lines {
-  background: repeating-conic-gradient(
-    from 0deg at 50% 100%,
-    rgba(0,0,0,0.04) 0deg,
-    transparent 1deg,
-    transparent 4deg
-  );
+  background: repeating-conic-gradient(from 0deg at 50% 100%,
+      rgba(0, 0, 0, 0.04) 0deg,
+      transparent 1deg,
+      transparent 4deg);
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -412,51 +440,123 @@ h1, h2, h3, h4, h5, h6 {
    ANIMATIONS
    ============================================ */
 @keyframes comicFloat {
-  0%, 100% { transform: translateY(0px) rotate(-1deg); }
-  50% { transform: translateY(-12px) rotate(1deg); }
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(1deg);
+  }
 }
 
 @keyframes bubblePop {
-  0% { transform: scale(0) rotate(-5deg); opacity: 0; }
-  60% { transform: scale(1.1) rotate(2deg); opacity: 1; }
-  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  0% {
+    transform: scale(0) rotate(-5deg);
+    opacity: 0;
+  }
+
+  60% {
+    transform: scale(1.1) rotate(2deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
 }
 
 @keyframes speedSpin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes comicShake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-3px) rotate(-1deg); }
-  75% { transform: translateX(3px) rotate(1deg); }
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-3px) rotate(-1deg);
+  }
+
+  75% {
+    transform: translateX(3px) rotate(1deg);
+  }
 }
 
 @keyframes starPulse {
-  0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
-  50% { transform: scale(1.3) rotate(15deg); opacity: 0.8; }
+
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.3) rotate(15deg);
+    opacity: 0.8;
+  }
 }
 
 @keyframes slideInLeft {
-  from { transform: translateX(-60px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+  from {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slideInRight {
-  from { transform: translateX(60px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+  from {
+    transform: translateX(60px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes panelReveal {
-  from { clip-path: inset(0 100% 0 0); }
-  to { clip-path: inset(0 0% 0 0); }
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0% 0 0);
+  }
 }
 
-.animate-comic-float { animation: comicFloat 4s ease-in-out infinite; }
-.animate-bubble-pop { animation: bubblePop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
-.animate-star-pulse { animation: starPulse 2s ease-in-out infinite; }
-.animate-comic-shake { animation: comicShake 0.4s ease-in-out; }
+.animate-comic-float {
+  animation: comicFloat 4s ease-in-out infinite;
+}
+
+.animate-bubble-pop {
+  animation: bubblePop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-star-pulse {
+  animation: starPulse 2s ease-in-out infinite;
+}
+
+.animate-comic-shake {
+  animation: comicShake 0.4s ease-in-out;
+}
 
 /* ============================================
    GRADIENT TEXT (for compatibility)
@@ -476,8 +576,13 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 4px 4px 0 var(--comic-black);
 }
 
-.btn-primary { @apply btn-comic-blue; }
-.btn-secondary { @apply btn-comic-outline; }
+.btn-primary {
+  @apply btn-comic-blue;
+}
+
+.btn-secondary {
+  @apply btn-comic-outline;
+}
 
 .tech-badge {
   display: inline-block;
@@ -508,13 +613,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .comic-progress-bar {
   height: 100%;
-  background: repeating-linear-gradient(
-    -45deg,
-    var(--comic-blue) 0px,
-    var(--comic-blue) 8px,
-    #4d88ff 8px,
-    #4d88ff 16px
-  );
+  background: repeating-linear-gradient(-45deg,
+      var(--comic-blue) 0px,
+      var(--comic-blue) 8px,
+      #4d88ff 8px,
+      #4d88ff 16px);
   transition: width 1s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -522,77 +625,130 @@ h1, h2, h3, h4, h5, h6 {
    HOLOGRAPHIC (BNSP)
    ============================================ */
 .bnsp-holographic {
-  background: linear-gradient(
-    135deg,
-    transparent 0%,
-    rgba(255, 215, 0, 0.08) 20%,
-    transparent 40%,
-    rgba(255, 215, 0, 0.1) 60%,
-    transparent 80%
-  );
+  background: linear-gradient(135deg,
+      transparent 0%,
+      rgba(255, 215, 0, 0.08) 20%,
+      transparent 40%,
+      rgba(255, 215, 0, 0.1) 60%,
+      transparent 80%);
   background-size: 400% 400%;
   animation: holographic-shimmer 6s ease infinite;
 }
 
 @keyframes holographic-shimmer {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-.bnsp-card-container { cursor: pointer; }
-.bnsp-card-front, .bnsp-card-back { will-change: transform; }
+.bnsp-card-container {
+  cursor: pointer;
+}
+
+.bnsp-card-front,
+.bnsp-card-back {
+  will-change: transform;
+}
 
 /* Sparkle */
 @keyframes sparkle-pop {
-  0% { transform: scale(0) rotate(0deg); opacity: 1; }
-  50% { opacity: 0.8; }
-  100% { transform: scale(1) rotate(180deg); opacity: 0; }
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1) rotate(180deg);
+    opacity: 0;
+  }
 }
-.animate-sparkle-pop { animation: sparkle-pop 0.6s ease-out forwards; }
+
+.animate-sparkle-pop {
+  animation: sparkle-pop 0.6s ease-out forwards;
+}
 
 /* Terminal */
-.terminal-text { font-family: 'Courier New', Consolas, monospace; }
+.terminal-text {
+  font-family: 'Courier New', Consolas, monospace;
+}
 
 .typing-cursor {
   color: var(--comic-blue);
   animation: blink 1s step-end infinite;
 }
+
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 /* Shimmer */
 .shimmer {
-  background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.04) 50%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.04) 50%, transparent 100%);
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
 }
+
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 /* Contribution colors */
-.contribution-0 { background-color: #f0f0eb; }
-.contribution-1 { background-color: #b8d4ff; }
-.contribution-2 { background-color: #6ba3ff; }
-.contribution-3 { background-color: #2563eb; }
-.contribution-4 { background-color: #1a5cff; }
+.contribution-0 {
+  background-color: #f0f0eb;
+}
+
+.contribution-1 {
+  background-color: #b8d4ff;
+}
+
+.contribution-2 {
+  background-color: #6ba3ff;
+}
+
+.contribution-3 {
+  background-color: #2563eb;
+}
+
+.contribution-4 {
+  background-color: #1a5cff;
+}
 
 /* Comic divider */
 .comic-divider {
   height: 4px;
-  background: repeating-linear-gradient(
-    90deg,
-    var(--comic-black) 0px,
-    var(--comic-black) 20px,
-    var(--comic-yellow) 20px,
-    var(--comic-yellow) 40px,
-    var(--comic-blue) 40px,
-    var(--comic-blue) 60px
-  );
+  background: repeating-linear-gradient(90deg,
+      var(--comic-black) 0px,
+      var(--comic-black) 20px,
+      var(--comic-yellow) 20px,
+      var(--comic-yellow) 40px,
+      var(--comic-blue) 40px,
+      var(--comic-blue) 60px);
 }
 
 /* Noise texture overlay */
@@ -602,7 +758,40 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Responsive */
 @media (max-width: 640px) {
-  .comic-panel { box-shadow: 3px 3px 0 var(--comic-black); }
-  .speech-bubble, .speech-bubble-right { padding: 8px 14px; }
-  .btn-comic, .btn-comic-blue, .btn-comic-outline { font-size: 0.95rem; padding: 10px 20px; }
+  .comic-panel {
+    box-shadow: 3px 3px 0 var(--comic-black);
+  }
+
+  .speech-bubble,
+  .speech-bubble-right {
+    padding: 8px 14px;
+  }
+
+  .btn-comic,
+  .btn-comic-blue,
+  .btn-comic-outline {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+
+  /* Pastikan semua section tidak overflow ke kiri */
+  section {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  /* Elemen dengan box-shadow tidak overflow */
+  .skill-card,
+  .comic-panel,
+  .comic-panel-dark,
+  .comic-panel-blue,
+  .comic-panel-yellow {
+    box-shadow: 3px 3px 0 var(--comic-black);
+    max-width: 100%;
+  }
+
+  /* Grid tidak overflow */
+  .grid {
+    overflow: hidden;
+  }
 }

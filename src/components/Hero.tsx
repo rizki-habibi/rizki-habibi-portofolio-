@@ -72,7 +72,7 @@ export default function Hero() {
   }
 
   return (
-    <section id="home" className="min-h-screen relative overflow-hidden pt-16 flex flex-col" style={{ background: '#fafaf7' }}>
+    <section id="home" className="min-h-screen relative overflow-hidden pt-16 flex flex-col w-full" style={{ background: '#fafaf7', maxWidth: '100vw' }}>
       <div className="halftone-bg" />
       {/* Speed lines */}
       <div className="absolute left-0 top-0 w-1/3 h-full pointer-events-none opacity-[0.04]"
@@ -84,8 +84,8 @@ export default function Hero() {
       {stars.map((s, i) => <Star key={i} {...s} />)}
       <div className="comic-divider" />
 
-      <div className="flex-1 flex items-center px-4 max-w-7xl mx-auto w-full py-8 relative z-10">
-        <div className="grid lg:grid-cols-5 gap-6 w-full items-start">
+      <div className="flex-1 flex items-center px-4 max-w-7xl mx-auto w-full py-8 relative z-10 overflow-x-hidden">
+        <div className="grid lg:grid-cols-5 gap-6 w-full items-start overflow-x-hidden">
 
           {/* ===== KIRI ===== */}
           <div className="lg:col-span-3 order-2 lg:order-1 space-y-4">
@@ -219,7 +219,7 @@ export default function Hero() {
           </div>
 
           {/* ===== KANAN ===== */}
-          <div className="lg:col-span-2 order-1 lg:order-2 flex flex-col items-center gap-3">
+          <div className="lg:col-span-2 order-1 lg:order-2 flex flex-col items-center gap-3 w-full overflow-hidden">
 
             {/* Speech bubble kanan */}
             <motion.div initial={{ opacity: 0, scale: 0, x: 40 }} animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -259,7 +259,7 @@ export default function Hero() {
 
               {/* Panel foto */}
               <div className="relative overflow-hidden"
-                style={{ width: 260, height: 340, border: '4px solid #0a0a0a', boxShadow: '8px 8px 0 #0a0a0a', background: '#e8f0ff' }}>
+                style={{ width: 'min(260px, 72vw)', height: 'min(340px, 94vw)', border: '4px solid #0a0a0a', boxShadow: '8px 8px 0 #0a0a0a', background: '#e8f0ff' }}>
                 <AnimatePresence mode="wait">
                   {isKomik ? (
                     <motion.div key="komik" initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -40 }} transition={{ duration: 0.3 }} className="absolute inset-0">

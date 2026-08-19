@@ -26,10 +26,32 @@ import Footer from '@/components/Footer'
 import ScrollProgress from '@/components/ScrollProgress'
 import BackToTop from '@/components/BackToTop'
 import LoadingScreen from '@/components/LoadingScreen'
+import SecretMode from '@/components/SecretMode'
+import MouseSparkle from '@/components/MouseSparkle'
+import CommandPalette from '@/components/CommandPalette'
+import WelcomeToast from '@/components/WelcomeToast'
+import SocialFloat from '@/components/SocialFloat'
+import TechMarquee from '@/components/TechMarquee'
+import SideNavDots from '@/components/SideNavDots'
+import VisitorCounter from '@/components/VisitorCounter'
+import GitHubHeatmap from '@/components/GitHubHeatmap'
+import CursorTrail from '@/components/CursorTrail'
+import ComicNowPlaying from '@/components/ComicNowPlaying'
+import AgeCounter from '@/components/AgeCounter'
 
 export default function Home() {
   return (
     <main style={{ background: '#fafaf7', color: '#0a0a0a' }}>
+      {/* ── LAYER GLOBAL (tidak tampak di layout scroll) ── */}
+      <SecretMode />
+      <MouseSparkle />
+      <CommandPalette />
+      <WelcomeToast />
+      <SocialFloat />
+      <SideNavDots />
+      <CursorTrail />
+      <ComicNowPlaying />
+
       <LoadingScreen />
       <ScrollProgress />
       <BackToTop />
@@ -38,6 +60,9 @@ export default function Home() {
       {/* CHAPTER 00 — THE ORIGIN */}
       <Hero />
       <div className="comic-divider" />
+
+      {/* TECH MARQUEE — scrolling ticker teknologi */}
+      <TechMarquee />
 
       {/* CHAPTER 01 — MY STORY */}
       <CeritaPerjalanan />
@@ -69,6 +94,10 @@ export default function Home() {
 
       {/* CHAPTER 08 — BY THE NUMBERS */}
       <StatsComic />
+      <div className="comic-divider" />
+
+      {/* AGE COUNTER — umur real-time */}
+      <AgeCounter />
       <div className="comic-divider" />
 
       {/* CHAPTER 09 — MY ARSENAL */}
@@ -117,6 +146,14 @@ export default function Home() {
 
       {/* MY PROFILE — CV */}
       <CV />
+      <div className="comic-divider" />
+
+      {/* GITHUB ACTIVITY */}
+      <GitHubHeatmap />
+      <div className="comic-divider" />
+
+      {/* VISITOR STATS */}
+      <VisitorCounter />
       <div className="comic-divider" />
 
       {/* CONTACT */}

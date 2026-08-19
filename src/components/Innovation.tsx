@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { FiTool, FiCpu, FiWifi, FiBox, FiArrowRight } from 'react-icons/fi'
+import ChapterHeader from '@/components/ChapterHeader'
 
 const inovasiItems = [
   {
@@ -82,19 +83,7 @@ export default function Innovation() {
       <div className="max-w-6xl mx-auto relative z-10">
 
         {/* Chapter Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="text-center mb-14"
-        >
-          <div className="chapter-label mb-3">CHAPTER 07 — INOVASI</div>
-          <h2 className="section-title">REKAYASA & INOVASI</h2>
-          <div className="speech-bubble inline-block text-sm mt-4">
-            🔧 Di luar coding, saya juga bisa merakit alat dari bahan bekas!
-          </div>
-        </motion.div>
+        <ChapterHeader nomor="07" judul="REKAYASA &amp; INOVASI" warna="#22c55e" subtitle="♻️ Inovasi dari keterbatasan, solusi dari kreativitas" />
 
         {/* Keunggulan pills */}
         <motion.div

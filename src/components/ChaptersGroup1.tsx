@@ -2,21 +2,23 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import ChapterHeader from '@/components/ChapterHeader'
+
+// Ekstrak nomor dari string "CHAPTER 16" → "16"
+function ambilNomor(chNum: string): string {
+  const m = chNum.match(/\d+/)
+  return m ? m[0] : chNum
+}
 
 // Reusable comic panel wrapper
 function ComicPanel({ id, chNum, title, color, bgColor, children }: {
   id: string; chNum: string; title: string; color: string; bgColor: string; children: React.ReactNode
 }) {
   return (
-    <section id={id} className="py-20 px-4 relative overflow-hidden" style={{ background: bgColor }}>
+    <section id={id} className="py-16 sm:py-20 px-3 sm:px-4 relative overflow-hidden" style={{ background: bgColor }}>
       <div className="halftone-bg" />
       <div className="max-w-6xl mx-auto relative z-10">
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }} viewport={{ once: false, amount: 0.25 }}
-          className="text-center mb-12">
-          <div className="chapter-label mb-3 inline-block" style={{ color, borderColor: color }}>{chNum}</div>
-          <h2 className="section-title" style={{ color: '#0a0a0a' }}>{title}</h2>
-        </motion.div>
+        <ChapterHeader nomor={ambilNomor(chNum)} judul={title} warna={color} />
         {children}
       </div>
     </section>
@@ -75,8 +77,8 @@ function Ch16() {
               <div className="grid grid-cols-2 gap-2">
                 {['📊 Data Kependudukan', '💰 Transparansi Anggaran', '🗺️ Peta Wilayah Digital', '📢 Pengumuman Resmi',
                   '🤝 UMKM Lokal', '📸 Galeri Kegiatan', '📝 Layanan Administrasi', '🌐 Potensi Wisata'].map((f, i) => (
-                  <div key={i} className="text-xs font-bold text-comic-black p-2 bg-white" style={{ border: '1px solid #22c55e' }}>{f}</div>
-                ))}
+                    <div key={i} className="text-xs font-bold text-comic-black p-2 bg-white" style={{ border: '1px solid #22c55e' }}>{f}</div>
+                  ))}
               </div>
             </div>
           </motion.div>

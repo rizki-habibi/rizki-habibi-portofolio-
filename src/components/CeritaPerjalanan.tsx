@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import ChapterHeader from '@/components/ChapterHeader'
 
 const panels = [
   {
@@ -72,19 +73,7 @@ export default function CeritaPerjalanan() {
       <div className="max-w-6xl mx-auto relative z-10">
 
         {/* Chapter Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="text-center mb-14"
-        >
-          <div className="chapter-label mb-3">CHAPTER 07 — MY STORY</div>
-          <h2 className="section-title">ORIGIN STORY</h2>
-          <div className="speech-bubble-right inline-block text-sm mt-4">
-            📖 Ini bukan sekadar CV — ini cerita nyata di balik perjalanan saya.
-          </div>
-        </motion.div>
+        <ChapterHeader nomor="01" judul="ORIGIN STORY" warna="#1a5cff" subtitle="📖 Dari nol hingga di sini — ini cerita saya!" />
 
         {/* Story panels grid */}
         <div className="grid md:grid-cols-2 gap-6 mb-16">

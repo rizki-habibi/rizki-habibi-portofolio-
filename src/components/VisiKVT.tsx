@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { FiExternalLink, FiGlobe, FiAward, FiUsers, FiTv } from 'react-icons/fi'
+import ChapterHeader from '@/components/ChapterHeader'
 
 // Domain & gelar sistem KVT
 const domainKVT = [
@@ -80,19 +81,7 @@ export default function VisiKVT() {
       <div className="max-w-6xl mx-auto relative z-10">
 
         {/* Chapter Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="text-center mb-14"
-        >
-          <div className="chapter-label mb-3">CHAPTER 06 — VISI MASA DEPAN</div>
-          <h2 className="section-title">THE BIG DREAM</h2>
-          <div className="speech-bubble inline-block text-sm mt-4">
-            🏫 Saya punya visi untuk menciptakan ekosistem pendidikan digital sendiri!
-          </div>
-        </motion.div>
+        <ChapterHeader nomor="06" judul="THE BIG DREAM" warna="#8b5cf6" subtitle="🌐 Membangun ekosistem digital masa depan" />
 
         {/* Panel utama: Kampus Vtuber */}
         <motion.div

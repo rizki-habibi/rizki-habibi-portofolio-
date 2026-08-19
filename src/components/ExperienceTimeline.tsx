@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import ChapterHeader from '@/components/ChapterHeader'
 
 const arcs = [
   {
@@ -110,35 +111,7 @@ export default function ExperienceTimeline() {
 
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Chapter Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="text-center mb-16"
-        >
-          <div
-            className="chapter-label mb-3 inline-block"
-            style={{ color: '#ffd700', borderColor: '#ffd700' }}
-          >
-            CHAPTER 04
-          </div>
-          <h2 className="section-title-white">MY JOURNEY</h2>
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3, type: 'spring' }}
-            viewport={{ once: false }}
-            className="inline-block mt-4 px-5 py-2 font-bold text-sm text-comic-black"
-            style={{
-              background: '#ffd700',
-              border: '3px solid #ffd700',
-              boxShadow: '4px 4px 0 #ffd700',
-            }}
-          >
-            📖 Setiap tahun adalah chapter baru dalam cerita ini
-          </motion.div>
-        </motion.div>
+        <ChapterHeader nomor="04" judul="MY JOURNEY" warna="#ffd700" dark={true} />
 
         {/* Timeline arcs */}
         <div className="relative">

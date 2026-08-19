@@ -81,64 +81,68 @@ export default function Hero() {
       <div className="absolute right-0 top-0 w-1/4 h-full pointer-events-none opacity-[0.03]"
         style={{ background: 'repeating-conic-gradient(from 180deg at 100% 50%,#1a5cff 0deg,transparent 1deg,transparent 6deg)' }} />
 
-      {stars.map((s, i) => <Star key={i} {...s} />)}
+      {/* Sembunyikan bintang di mobile agar tidak overflow */}
+      <div className="hidden sm:block">
+        {stars.map((s, i) => <Star key={i} {...s} />)}
+      </div>
       <div className="comic-divider" />
 
-      <div className="flex-1 flex items-center px-4 max-w-7xl mx-auto w-full py-8 relative z-10 overflow-x-hidden">
-        <div className="grid lg:grid-cols-5 gap-6 w-full items-start overflow-x-hidden">
+      <div className="flex-1 flex items-center px-3 sm:px-4 max-w-7xl mx-auto w-full py-6 sm:py-8 relative z-10 overflow-x-hidden">
+        <div className="grid lg:grid-cols-5 gap-4 sm:gap-6 w-full items-start overflow-x-hidden">
 
           {/* ===== KIRI ===== */}
-          <div className="lg:col-span-3 order-2 lg:order-1 space-y-4">
+          <div className="lg:col-span-3 order-2 lg:order-1 space-y-3 sm:space-y-4 w-full min-w-0">
 
             {/* Speech bubble atas */}
             <motion.div initial={{ opacity: 0, scale: 0, rotate: -5 }} animate={{ opacity: 1, scale: 1, rotate: 0 }}
-              transition={{ delay: 0.1, type: 'spring', stiffness: 200 }} className="speech-bubble text-sm inline-block">
+              transition={{ delay: 0.1, type: 'spring', stiffness: 200 }} className="speech-bubble text-xs sm:text-sm inline-block max-w-full">
               🙌 Selamat datang di cerita perjalanan saya!
             </motion.div>
 
             {/* Judul besar */}
             <motion.div initial={{ opacity: 0, x: -60 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2, duration: 0.5 }}>
-              <div className="font-comic text-5xl md:text-6xl leading-none mb-1" style={{ color: '#0a0a0a', WebkitTextStroke: '2px #0a0a0a' }}>HALO!</div>
+              <div className="font-comic text-4xl sm:text-5xl md:text-6xl leading-none mb-1" style={{ color: '#0a0a0a', WebkitTextStroke: '2px #0a0a0a' }}>HALO!</div>
               <div className="font-comic leading-none">
-                <span className="block text-5xl md:text-7xl" style={{ color: '#0a0a0a' }}>SAYA</span>
-                <span className="block text-5xl md:text-7xl" style={{ color: '#1a5cff', WebkitTextStroke: '2px #0a0a0a', textShadow: '4px 4px 0 #0a0a0a' }}>RIZKI HABIBI</span>
+                <span className="block text-4xl sm:text-5xl md:text-7xl" style={{ color: '#0a0a0a' }}>SAYA</span>
+                <span className="block text-4xl sm:text-5xl md:text-7xl" style={{ color: '#1a5cff', WebkitTextStroke: '2px #0a0a0a', textShadow: '4px 4px 0 #0a0a0a' }}>RIZKI HABIBI</span>
               </div>
             </motion.div>
 
             {/* Subtitle panel */}
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="comic-panel inline-block px-4 py-2">
-              <p className="font-comic text-sm md:text-base text-comic-black tracking-wide">PENGEMBANG WEB • KREATOR • PEMECAH MASALAH • INOVATOR</p>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="comic-panel inline-block px-3 sm:px-4 py-2 max-w-full">
+              <p className="font-comic text-[10px] sm:text-xs md:text-sm text-comic-black tracking-wide leading-relaxed">
+                PENGEMBANG WEB • KREATOR • PEMECAH MASALAH • INOVATOR
+              </p>
             </motion.div>
 
             {/* Typing */}
-            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="font-bold text-lg text-comic-black">
+            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="font-bold text-base sm:text-lg text-comic-black">
               <TypingText />
             </motion.p>
 
             {/* Deskripsi */}
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45 }} className="comic-panel-blue p-4 max-w-lg">
-              <p className="text-comic-black text-sm leading-relaxed font-medium">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45 }} className="comic-panel-blue p-3 sm:p-4 w-full max-w-lg">
+              <p className="text-comic-black text-xs sm:text-sm leading-relaxed font-medium">
                 Mahasiswa <strong>Sistem &amp; Teknologi Informasi</strong> di Institut Teknologi dan Sains Mandala.
                 Passion di web programming, inovasi IoT, dan membangun ekosistem digital.
                 Sedang menjalani penelitian skripsi sambil mengembangkan platform <strong>KVT.kom</strong>.
               </p>
             </motion.div>
 
-            {/* === ELEMEN BARU 1: Quote mini panel === */}
+            {/* Quote mini panel */}
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5 }}
-              className="comic-panel-yellow p-3 max-w-lg"
-            >
-              <p className="font-comic text-sm text-comic-black italic">
+              className="comic-panel-yellow p-3 w-full max-w-lg">
+              <p className="font-comic text-xs sm:text-sm text-comic-black italic">
                 &ldquo;Setiap baris kode adalah langkah menuju solusi.&rdquo;
               </p>
             </motion.div>
 
-            {/* === ELEMEN BARU 2: Tech chips === */}
-            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.52 }} className="flex flex-wrap gap-2">
+            {/* Tech chips */}
+            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.52 }} className="flex flex-wrap gap-1.5 sm:gap-2">
               {techChips.map((t, i) => (
                 <motion.span key={t} initial={{ opacity: 0, scale: 0.7 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.55 + i * 0.06 }}
                   whileHover={{ y: -3, scale: 1.08 }}
-                  className="font-bold text-xs px-3 py-1 text-comic-black bg-white"
+                  className="font-bold text-[10px] sm:text-xs px-2 sm:px-3 py-1 text-comic-black bg-white"
                   style={{ border: '2px solid #0a0a0a', boxShadow: '2px 2px 0 #0a0a0a' }}>
                   {t}
                 </motion.span>
@@ -146,32 +150,32 @@ export default function Hero() {
             </motion.div>
 
             {/* Kontak */}
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.54 }} className="flex flex-wrap gap-3 text-xs font-bold text-comic-black">
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.54 }} className="flex flex-col xs:flex-row flex-wrap gap-1.5 sm:gap-3 text-[10px] sm:text-xs font-bold text-comic-black">
               <a href="tel:+62882009725053" className="flex items-center gap-1 hover:text-comic-blue transition-colors">📞 +62 882-009-725-053</a>
-              <span className="text-comic-black/30">|</span>
-              <a href="mailto:rizkihabibi2432@gmail.com" className="flex items-center gap-1 hover:text-comic-blue transition-colors">✉️ rizkihabibi2432@gmail.com</a>
+              <span className="text-comic-black/30 hidden xs:block">|</span>
+              <a href="mailto:rizkihabibi2432@gmail.com" className="flex items-center gap-1 hover:text-comic-blue transition-colors truncate-responsive">✉️ rizkihabibi2432@gmail.com</a>
             </motion.div>
 
-            {/* === ELEMEN BARU 3: Achievement quick unlocks === */}
-            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.56 }} className="flex flex-wrap gap-2">
+            {/* Achievement quick unlocks */}
+            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.56 }} className="flex flex-wrap gap-1.5 sm:gap-2">
               {quickAchievements.map((a, i) => (
                 <motion.div key={a.text} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.6 + i * 0.07 }}
-                  whileHover={{ y: -2 }} className="flex items-center gap-1.5 px-3 py-1.5 bg-white font-bold text-xs text-comic-black"
-                  style={{ border: '2px solid #1a5cff', boxShadow: '3px 3px 0 #1a5cff' }}>
+                  whileHover={{ y: -2 }} className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1 sm:py-1.5 bg-white font-bold text-[10px] sm:text-xs text-comic-black"
+                  style={{ border: '2px solid #1a5cff', boxShadow: '2px 2px 0 #1a5cff' }}>
                   <span>{a.emoji}</span><span>{a.text}</span>
                 </motion.div>
               ))}
             </motion.div>
 
             {/* CTA Buttons */}
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="flex flex-wrap gap-3">
-              <a href="#projects" className="btn-comic-blue">MULAI MEMBACA →</a>
-              <a href="#projects" className="btn-comic-outline">LIHAT PROYEK</a>
-              <a href="#cv" className="btn-comic" style={{ fontSize: '0.85rem', padding: '10px 20px' }}>📄 CV</a>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="flex flex-wrap gap-2 sm:gap-3">
+              <a href="#projects" className="btn-comic-blue text-sm sm:text-base py-2 sm:py-3 px-4 sm:px-6">MULAI MEMBACA →</a>
+              <a href="#projects" className="btn-comic-outline text-sm sm:text-base py-2 sm:py-3 px-4 sm:px-6">LIHAT PROYEK</a>
+              <a href="#cv" className="btn-comic text-xs sm:text-sm py-2 px-3 sm:px-5">📄 CV</a>
             </motion.div>
 
-            {/* === ELEMEN BARU 4: Stats bar === */}
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.65 }} className="flex flex-wrap gap-3 mt-2">
+            {/* Stats bar — responsif wrap di mobile */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.65 }} className="flex flex-wrap gap-2 sm:gap-3 mt-1">
               {[
                 { icon: '📁', num: '5+', label: 'PROYEK' },
                 { icon: '</>', num: '10+', label: 'TEKNOLOGI' },
@@ -180,37 +184,37 @@ export default function Hero() {
                 { icon: '🚀', num: '100%', label: 'SEMANGAT' },
               ].map((stat, i) => (
                 <motion.div key={stat.label} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.7 + i * 0.07 }}
-                  className="flex items-center gap-2 px-3 py-2 bg-white"
+                  className="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 bg-white"
                   style={{ border: '2px solid #0a0a0a', boxShadow: '3px 3px 0 #0a0a0a' }}>
-                  <span className="text-base">{stat.icon}</span>
+                  <span className="text-sm sm:text-base">{stat.icon}</span>
                   <div>
-                    <div className="font-comic text-xl leading-none text-comic-blue">{stat.num}</div>
-                    <div className="text-[9px] font-bold text-comic-black/60 tracking-wider">{stat.label}</div>
+                    <div className="font-comic text-base sm:text-xl leading-none text-comic-blue">{stat.num}</div>
+                    <div className="text-[8px] sm:text-[9px] font-bold text-comic-black/60 tracking-wider">{stat.label}</div>
                   </div>
                 </motion.div>
               ))}
             </motion.div>
 
-            {/* === ELEMEN BARU 5: Mini KVT badge === */}
+            {/* Mini KVT badge */}
             <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.75 }}
-              className="inline-flex items-center gap-3 p-3 max-w-sm"
+              className="inline-flex items-center gap-2 sm:gap-3 p-2 sm:p-3 max-w-full sm:max-w-sm"
               style={{ background: '#f5f0ff', border: '2px solid #8b5cf6', boxShadow: '4px 4px 0 #8b5cf6' }}>
-              <span className="text-2xl">🌐</span>
-              <div>
-                <div className="font-comic text-sm text-comic-black">KVT.KOM — <span style={{ color: '#8b5cf6' }}>IN PROGRESS</span></div>
-                <div className="text-[10px] font-bold text-comic-black/50">Kampus Digital Vtuber Pertama</div>
+              <span className="text-xl sm:text-2xl flex-shrink-0">🌐</span>
+              <div className="min-w-0">
+                <div className="font-comic text-xs sm:text-sm text-comic-black">KVT.KOM — <span style={{ color: '#8b5cf6' }}>IN PROGRESS</span></div>
+                <div className="text-[9px] sm:text-[10px] font-bold text-comic-black/50">Kampus Digital Vtuber Pertama</div>
               </div>
             </motion.div>
 
-            {/* === ELEMEN BARU 6: Mini social links === */}
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.78 }} className="flex gap-2">
+            {/* Mini social links */}
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.78 }} className="flex flex-wrap gap-2">
               {[
                 { label: 'GitHub', href: 'https://github.com/rizki-habibi', color: '#0a0a0a', bg: '#f0f0eb' },
                 { label: 'LinkedIn', href: 'https://linkedin.com/in/rizki-habibi', color: '#0a66c2', bg: '#e8f2ff' },
                 { label: 'WhatsApp', href: 'https://wa.me/62882009725053', color: '#25d366', bg: '#f0fff4' },
               ].map(s => (
                 <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-                  className="font-bold text-[10px] px-3 py-1.5"
+                  className="font-bold text-[10px] sm:text-xs px-2 sm:px-3 py-1.5"
                   style={{ background: s.bg, border: `2px solid ${s.color}`, boxShadow: `2px 2px 0 ${s.color}`, color: s.color }}>
                   {s.label}
                 </a>
@@ -219,21 +223,21 @@ export default function Hero() {
           </div>
 
           {/* ===== KANAN ===== */}
-          <div className="lg:col-span-2 order-1 lg:order-2 flex flex-col items-center gap-3 w-full overflow-hidden">
+          <div className="lg:col-span-2 order-1 lg:order-2 flex flex-col items-center gap-2 sm:gap-3 w-full overflow-hidden">
 
-            {/* Speech bubble kanan */}
+            {/* Speech bubble kanan — sembunyikan di mobile kecil */}
             <motion.div initial={{ opacity: 0, scale: 0, x: 40 }} animate={{ opacity: 1, scale: 1, x: 0 }}
-              transition={{ delay: 0.5, type: 'spring', stiffness: 180 }} className="speech-bubble-right text-xs self-end mr-4">
+              transition={{ delay: 0.5, type: 'spring', stiffness: 180 }} className="speech-bubble-right text-[10px] sm:text-xs self-end mr-2 sm:mr-4 hidden sm:inline-block">
               💻 Kode adalah senjata,<br />logika adalah kekuatan!
             </motion.div>
 
-            {/* === ELEMEN BARU 7: Panel Veteran Komik kecil di atas === */}
+            {/* Panel Veteran Komik kecil di atas — sembunyikan di mobile */}
             <motion.div initial={{ opacity: 0, y: -20, rotate: -5 }} animate={{ opacity: 1, y: 0, rotate: -3 }}
               transition={{ delay: 0.8, type: 'spring' }}
-              className="self-end relative overflow-hidden"
-              style={{ width: 90, height: 110, border: '3px solid #0a0a0a', boxShadow: '4px 4px 0 #f59e0b', background: '#fffbeb' }}>
+              className="self-end relative overflow-hidden hidden sm:block"
+              style={{ width: 80, height: 100, border: '3px solid #0a0a0a', boxShadow: '4px 4px 0 #f59e0b', background: '#fffbeb' }}>
               <Image src="/foto/komik-veteran.png" alt="Veteran" fill className="object-cover object-top" />
-              <div className="absolute bottom-0 left-0 right-0 py-0.5 text-center font-comic text-[9px] text-white"
+              <div className="absolute bottom-0 left-0 right-0 py-0.5 text-center font-comic text-[8px] text-white"
                 style={{ background: '#f59e0b', borderTop: '2px solid #0a0a0a' }}>VETERAN</div>
             </motion.div>
 
@@ -247,29 +251,29 @@ export default function Hero() {
                   <motion.div key={effectKey}
                     initial={{ scale: 0, rotate: -20, opacity: 1 }} animate={{ scale: 1.3, rotate: 10, opacity: 1 }} exit={{ scale: 0, opacity: 0 }}
                     transition={{ duration: 0.4, type: 'spring', stiffness: 300 }}
-                    className="absolute -top-10 -right-10 z-20 font-comic text-xl text-comic-black flex items-center justify-center"
+                    className="absolute -top-8 sm:-top-10 -right-8 sm:-right-10 z-20 font-comic text-base sm:text-xl text-comic-black flex items-center justify-center"
                     style={{
                       background: '#ffd700', border: '3px solid #0a0a0a', boxShadow: '4px 4px 0 #0a0a0a',
-                      width: 72, height: 72, clipPath: 'polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)'
+                      width: 60, height: 60, clipPath: 'polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)'
                     }}>
                     {showEffect}
                   </motion.div>
                 )}
               </AnimatePresence>
 
-              {/* Panel foto */}
+              {/* Panel foto — ukuran responsif */}
               <div className="relative overflow-hidden"
-                style={{ width: 'min(260px, 72vw)', height: 'min(340px, 94vw)', border: '4px solid #0a0a0a', boxShadow: '8px 8px 0 #0a0a0a', background: '#e8f0ff' }}>
+                style={{ width: 'min(220px, 65vw)', height: 'min(290px, 85vw)', border: '4px solid #0a0a0a', boxShadow: '8px 8px 0 #0a0a0a', background: '#e8f0ff' }}>
                 <AnimatePresence mode="wait">
                   {isKomik ? (
                     <motion.div key="komik" initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -40 }} transition={{ duration: 0.3 }} className="absolute inset-0">
                       <Image src="/foto/komik-profil.png" alt="Rizki Komik" fill className="object-cover object-top" priority />
-                      <div className="absolute top-2 left-2 font-comic text-[10px] text-white px-2 py-0.5" style={{ background: '#1a5cff', border: '2px solid #0a0a0a' }}>🎨 KOMIK</div>
+                      <div className="absolute top-2 left-2 font-comic text-[9px] sm:text-[10px] text-white px-1.5 sm:px-2 py-0.5" style={{ background: '#1a5cff', border: '2px solid #0a0a0a' }}>🎨 KOMIK</div>
                     </motion.div>
                   ) : (
                     <motion.div key="asli" initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -40 }} transition={{ duration: 0.3 }} className="absolute inset-0">
                       <Image src="/foto/profil.jpeg" alt="Rizki Habibi" fill className="object-cover object-top" priority />
-                      <div className="absolute top-2 left-2 font-comic text-[10px] text-white px-2 py-0.5" style={{ background: '#e63329', border: '2px solid #0a0a0a' }}>📷 ASLI</div>
+                      <div className="absolute top-2 left-2 font-comic text-[9px] sm:text-[10px] text-white px-1.5 sm:px-2 py-0.5" style={{ background: '#e63329', border: '2px solid #0a0a0a' }}>📷 ASLI</div>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -278,50 +282,50 @@ export default function Hero() {
 
               {/* Tombol toggle */}
               <motion.button onClick={handleToggle} whileHover={{ y: -3, scale: 1.05 }} whileTap={{ scale: 0.92 }}
-                className="absolute -bottom-5 left-1/2 -translate-x-1/2 font-comic text-xs text-comic-black px-4 py-2 flex items-center gap-2 whitespace-nowrap z-10"
+                className="absolute -bottom-5 left-1/2 -translate-x-1/2 font-comic text-[10px] sm:text-xs text-comic-black px-3 sm:px-4 py-1.5 sm:py-2 flex items-center gap-1.5 sm:gap-2 whitespace-nowrap z-10"
                 style={{ background: '#ffd700', border: '3px solid #0a0a0a', boxShadow: '4px 4px 0 #0a0a0a' }}>
-                {isKomik ? '📷 LIHAT FOTO ASLI' : '🎨 LIHAT VERSI KOMIK'}
+                {isKomik ? '📷 FOTO ASLI' : '🎨 VERSI KOMIK'}
               </motion.button>
 
               {/* Available badge */}
               <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }}
-                className="absolute -bottom-14 left-1/2 -translate-x-1/2 px-4 py-1.5 font-comic text-comic-black text-xs whitespace-nowrap"
+                className="absolute -bottom-14 left-1/2 -translate-x-1/2 px-3 sm:px-4 py-1 sm:py-1.5 font-comic text-comic-black text-[10px] sm:text-xs whitespace-nowrap"
                 style={{ background: '#22c55e', border: '2px solid #0a0a0a', boxShadow: '3px 3px 0 #0a0a0a' }}>
                 ✅ AVAILABLE FOR WORK
               </motion.div>
 
               {/* Burst bintang pojok */}
               <motion.div initial={{ opacity: 0, scale: 0, rotate: 15 }} animate={{ opacity: 1, scale: 1, rotate: 12 }} transition={{ delay: 1, type: 'spring' }}
-                className="absolute -top-4 -right-4 w-16 h-16 flex items-center justify-center font-comic text-xs text-center text-comic-black leading-tight"
+                className="absolute -top-3 sm:-top-4 -right-3 sm:-right-4 w-12 sm:w-16 h-12 sm:h-16 flex items-center justify-center font-comic text-[9px] sm:text-xs text-center text-comic-black leading-tight"
                 style={{ background: '#ffd700', border: '2px solid #0a0a0a', boxShadow: '2px 2px 0 #0a0a0a', clipPath: 'polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)' }}>
                 LET&apos;S<br />BUILD!
               </motion.div>
             </motion.div>
 
-            {/* === ELEMEN BARU 8: Mini stat panels kanan === */}
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.0 }} className="flex gap-2 mt-16">
+            {/* Mini stat panels kanan — tampil di semua ukuran */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.0 }} className="flex gap-1.5 sm:gap-2 mt-14 sm:mt-16">
               {miniStats.map((s, i) => (
                 <motion.div key={s.label} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.1 + i * 0.1 }}
                   whileHover={{ y: -3 }}
-                  className="flex flex-col items-center p-2 bg-white text-center"
-                  style={{ border: `2px solid ${s.color}`, boxShadow: `3px 3px 0 ${s.color}`, minWidth: 70 }}>
-                  <span className="text-xl mb-0.5">{s.icon}</span>
-                  <div className="font-comic text-[10px] font-bold text-comic-black" style={{ color: s.color }}>{s.label}</div>
-                  <div className="text-[9px] text-comic-black/50 font-bold">{s.sub}</div>
+                  className="flex flex-col items-center p-1.5 sm:p-2 bg-white text-center"
+                  style={{ border: `2px solid ${s.color}`, boxShadow: `2px 2px 0 ${s.color}`, minWidth: 58 }}>
+                  <span className="text-lg sm:text-xl mb-0.5">{s.icon}</span>
+                  <div className="font-comic text-[9px] sm:text-[10px] font-bold text-comic-black" style={{ color: s.color }}>{s.label}</div>
+                  <div className="text-[8px] sm:text-[9px] text-comic-black/50 font-bold">{s.sub}</div>
                 </motion.div>
               ))}
             </motion.div>
 
-            {/* === ELEMEN BARU 9: Thought bubble bawah === */}
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.2 }} className="thought-bubble text-xs text-center self-start ml-2">
+            {/* Thought bubble bawah */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.2 }} className="thought-bubble text-[10px] sm:text-xs text-center self-start ml-2">
               📖 Siap melihat cerita<br />selengkapnya?
             </motion.div>
 
-            {/* === ELEMEN BARU 10: Kuro mascot kecil === */}
+            {/* Kuro mascot kecil — sembunyikan di mobile kecil */}
             <motion.div initial={{ opacity: 0, scale: 0, rotate: -10 }} animate={{ opacity: 1, scale: 1, rotate: 5 }}
               transition={{ delay: 1.4, type: 'spring', stiffness: 150 }}
-              className="self-end relative overflow-hidden"
-              style={{ width: 70, height: 80, border: '2px solid #0a0a0a', boxShadow: '3px 3px 0 #1a5cff', background: '#e8f0ff' }}>
+              className="self-end relative overflow-hidden hidden sm:block"
+              style={{ width: 60, height: 70, border: '2px solid #0a0a0a', boxShadow: '3px 3px 0 #1a5cff', background: '#e8f0ff' }}>
               <Image src="/foto/kuro.png" alt="Kuro Mascot" fill className="object-cover" />
             </motion.div>
           </div>

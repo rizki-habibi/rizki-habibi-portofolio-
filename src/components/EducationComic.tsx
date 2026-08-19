@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import ChapterHeader from '@/components/ChapterHeader'
 
 const trainings = [
   {
@@ -50,19 +51,7 @@ export default function EducationComic() {
       <div className="max-w-6xl mx-auto relative z-10">
 
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="text-center mb-14"
-        >
-          <div className="chapter-label mb-3">CHAPTER 12</div>
-          <h2 className="section-title">TRAINING ARC</h2>
-          <div className="speech-bubble-right inline-block text-sm mt-4">
-            🎓 Setiap sekolah adalah arena latihan menuju level berikutnya!
-          </div>
-        </motion.div>
+        <ChapterHeader nomor="12" judul="TRAINING ARC" warna="#1a5cff" subtitle="🎓 Setiap ilmu adalah senjata yang tak bisa dicuri" />
 
         {/* Pendidikan formal — comic panels vertikal */}
         <div className="relative mb-16">

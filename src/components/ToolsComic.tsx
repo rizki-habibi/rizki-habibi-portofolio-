@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import ChapterHeader from '@/components/ChapterHeader'
 
 const toolCategories = [
   {
@@ -9,12 +10,12 @@ const toolCategories = [
     color: '#1a5cff',
     bg: '#e8f0ff',
     tools: [
-      { name: 'VS Code',     icon: '🆚', level: 'DAILY' },
-      { name: 'Laragon',     icon: '🐘', level: 'DAILY' },
-      { name: 'PG Admin 4',  icon: '🗄️', level: 'DAILY' },
+      { name: 'VS Code', icon: '🆚', level: 'DAILY' },
+      { name: 'Laragon', icon: '🐘', level: 'DAILY' },
+      { name: 'PG Admin 4', icon: '🗄️', level: 'DAILY' },
       { name: 'Project IDX', icon: '☁️', level: 'EXPLORE' },
-      { name: 'Acode',       icon: '📱', level: 'MOBILE' },
-      { name: 'GitHub',      icon: '🐙', level: 'DAILY' },
+      { name: 'Acode', icon: '📱', level: 'MOBILE' },
+      { name: 'GitHub', icon: '🐙', level: 'DAILY' },
     ],
   },
   {
@@ -23,13 +24,13 @@ const toolCategories = [
     color: '#e63329',
     bg: '#fef2f2',
     tools: [
-      { name: 'Canva',      icon: '🎨', level: 'DAILY' },
-      { name: 'Figma',      icon: '✏️', level: 'DAILY' },
-      { name: 'CorelDraw',  icon: '🖊️', level: 'SKILLED' },
-      { name: 'Photoshop',  icon: '🖼️', level: 'SKILLED' },
-      { name: 'Affinity',   icon: '📐', level: 'EXPLORE' },
-      { name: 'CapCut',     icon: '🎬', level: 'DAILY' },
-      { name: 'Vegas Pro',  icon: '🎞️', level: 'SKILLED' },
+      { name: 'Canva', icon: '🎨', level: 'DAILY' },
+      { name: 'Figma', icon: '✏️', level: 'DAILY' },
+      { name: 'CorelDraw', icon: '🖊️', level: 'SKILLED' },
+      { name: 'Photoshop', icon: '🖼️', level: 'SKILLED' },
+      { name: 'Affinity', icon: '📐', level: 'EXPLORE' },
+      { name: 'CapCut', icon: '🎬', level: 'DAILY' },
+      { name: 'Vegas Pro', icon: '🎞️', level: 'SKILLED' },
       { name: 'Premier Pro', icon: '🎥', level: 'FAMILIAR' },
     ],
   },
@@ -39,10 +40,10 @@ const toolCategories = [
     color: '#8b5cf6',
     bg: '#f5f0ff',
     tools: [
-      { name: 'ChatGPT',   icon: '🤖', level: 'DAILY' },
+      { name: 'ChatGPT', icon: '🤖', level: 'DAILY' },
       { name: 'Gemini AI', icon: '♊', level: 'DAILY' },
-      { name: 'DeepSeek',  icon: '🔍', level: 'EXPLORE' },
-      { name: 'Codedex',   icon: '🎮', level: 'LEARN' },
+      { name: 'DeepSeek', icon: '🔍', level: 'EXPLORE' },
+      { name: 'Codedex', icon: '🎮', level: 'LEARN' },
     ],
   },
   {
@@ -52,20 +53,20 @@ const toolCategories = [
     bg: '#f0fdf4',
     tools: [
       { name: 'Visual Paradigm', icon: '📊', level: 'SKILLED' },
-      { name: 'Draw.io',         icon: '📋', level: 'SKILLED' },
+      { name: 'Draw.io', icon: '📋', level: 'SKILLED' },
       { name: 'Microsoft Excel', icon: '📈', level: 'FAMILIAR' },
-      { name: 'Firebase',        icon: '🔥', level: 'EXPLORE' },
+      { name: 'Firebase', icon: '🔥', level: 'EXPLORE' },
     ],
   },
 ]
 
 const levelColor: Record<string, string> = {
-  DAILY:   '#22c55e',
+  DAILY: '#22c55e',
   SKILLED: '#1a5cff',
   EXPLORE: '#f59e0b',
-  MOBILE:  '#8b5cf6',
-  LEARN:   '#e63329',
-  FAMILIAR:'#0a0a0a',
+  MOBILE: '#8b5cf6',
+  LEARN: '#e63329',
+  FAMILIAR: '#0a0a0a',
 }
 
 export default function ToolsComic() {
@@ -75,19 +76,7 @@ export default function ToolsComic() {
       <div className="max-w-6xl mx-auto relative z-10">
 
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="text-center mb-14"
-        >
-          <div className="chapter-label mb-3">CHAPTER 09</div>
-          <h2 className="section-title">MY ARSENAL</h2>
-          <div className="speech-bubble-right inline-block text-sm mt-4">
-            🛠️ Senjata-senjata yang saya gunakan setiap hari!
-          </div>
-        </motion.div>
+        <ChapterHeader nomor="09" judul="MY ARSENAL" warna="#f59e0b" subtitle="🛠️ Senjata-senjata dalam arsenalku!" />
 
         {/* Legend */}
         <motion.div

@@ -2,14 +2,15 @@
 
 import { motion, useInView, useMotionValue, useSpring } from 'framer-motion'
 import { useEffect, useRef } from 'react'
+import ChapterHeader from '@/components/ChapterHeader'
 
 const stats = [
-  { num: 75,   suffix: '+', label: 'SERTIFIKAT',       desc: 'Pelatihan & Seminar',       icon: '🏅', color: '#f59e0b', bg: '#fffbeb' },
-  { num: 5,    suffix: '+', label: 'PROYEK',            desc: 'Sistem & Aplikasi Web',     icon: '💻', color: '#1a5cff', bg: '#e8f0ff' },
-  { num: 14,   suffix: '+', label: 'TEKNOLOGI',         desc: 'Languages & Frameworks',    icon: '⚙️', color: '#22c55e', bg: '#f0fdf4' },
-  { num: 3,    suffix: '+', label: 'TAHUN CODING',      desc: 'Pengalaman Aktif',          icon: '📅', color: '#e63329', bg: '#fef2f2' },
-  { num: 1,    suffix: '',  label: 'SERTIFIKASI BNSP',  desc: 'Junior Web Developer',      icon: '🏆', color: '#8b5cf6', bg: '#f5f0ff' },
-  { num: 100,  suffix: '%', label: 'SEMANGAT',          desc: 'Tanpa Batas!',              icon: '🚀', color: '#0a0a0a', bg: '#ffd700' },
+  { num: 75, suffix: '+', label: 'SERTIFIKAT', desc: 'Pelatihan & Seminar', icon: '🏅', color: '#f59e0b', bg: '#fffbeb' },
+  { num: 5, suffix: '+', label: 'PROYEK', desc: 'Sistem & Aplikasi Web', icon: '💻', color: '#1a5cff', bg: '#e8f0ff' },
+  { num: 14, suffix: '+', label: 'TEKNOLOGI', desc: 'Languages & Frameworks', icon: '⚙️', color: '#22c55e', bg: '#f0fdf4' },
+  { num: 3, suffix: '+', label: 'TAHUN CODING', desc: 'Pengalaman Aktif', icon: '📅', color: '#e63329', bg: '#fef2f2' },
+  { num: 1, suffix: '', label: 'SERTIFIKASI BNSP', desc: 'Junior Web Developer', icon: '🏆', color: '#8b5cf6', bg: '#f5f0ff' },
+  { num: 100, suffix: '%', label: 'SEMANGAT', desc: 'Tanpa Batas!', icon: '🚀', color: '#0a0a0a', bg: '#ffd700' },
 ]
 
 function CountUp({ target, suffix }: { target: number; suffix: string }) {
@@ -40,27 +41,7 @@ export default function StatsComic() {
       <div className="max-w-6xl mx-auto relative z-10">
 
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="text-center mb-14"
-        >
-          <div className="chapter-label mb-3 inline-block" style={{ color: '#ffd700', borderColor: '#ffd700' }}>
-            CHAPTER 08
-          </div>
-          <h2 className="section-title-white">BY THE NUMBERS</h2>
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3, type: 'spring' }}
-            viewport={{ once: false }}
-            className="speech-bubble inline-block text-sm mt-4 text-comic-black"
-          >
-            📊 Angka-angka yang berbicara sendiri!
-          </motion.div>
-        </motion.div>
+        <ChapterHeader nomor="08" judul="BY THE NUMBERS" warna="#ffd700" dark={true} />
 
         {/* Stats grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-5">

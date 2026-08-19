@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FiX, FiDownload, FiExternalLink, FiEye, FiAward } from 'react-icons/fi'
+import ChapterHeader from '@/components/ChapterHeader'
 
 // ===== DATA SERTIFIKAT =====
 const certificates = [
@@ -149,20 +150,7 @@ export default function Certificates() {
       <div className="max-w-6xl mx-auto relative z-10">
 
         {/* Chapter Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="text-center mb-12"
-        >
-          <div className="chapter-label mb-3">CHAPTER 05</div>
-          <h2 className="section-title">POWER CARDS</h2>
-          <p className="text-sm font-bold text-comic-black/60 mb-4">Sertifikat &amp; Pelatihan</p>
-          <div className="speech-bubble inline-block text-sm">
-            🏅 {certificates.length}+ Sertifikat &amp; Seminar terkumpul!
-          </div>
-        </motion.div>
+        <ChapterHeader nomor="05" judul="POWER CARDS" warna="#f59e0b" subtitle="Sertifikat &amp; Pelatihan" />
 
         {/* BNSP Featured Panel */}
         <motion.div

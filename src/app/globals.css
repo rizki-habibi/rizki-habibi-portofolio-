@@ -361,8 +361,47 @@ h6 {
   border: 2px solid var(--comic-black);
 }
 
-/* Chapter label */
+/* Chapter label — kotak bernomor solid komik */
 .chapter-label {
+  font-family: 'Bangers', 'Impact', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+}
+
+/* Kotak nomor di kiri */
+.chapter-label-num {
+  font-family: 'Bangers', 'Impact', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  background: var(--comic-black);
+  color: var(--comic-yellow);
+  padding: 3px 10px;
+  border: 2px solid var(--comic-black);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+}
+
+/* Teks judul chapter di kanan */
+.chapter-label-text {
+  font-family: 'Bangers', 'Impact', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  color: var(--comic-blue);
+  border: 2px solid var(--comic-blue);
+  border-left: none;
+  padding: 3px 14px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Versi standalone (backward compat) — masih bisa dipakai sendiri */
+.chapter-label-solo {
   font-family: 'Bangers', 'Impact', sans-serif;
   font-size: 0.75rem;
   letter-spacing: 0.3em;
@@ -756,42 +795,212 @@ h6 {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
 }
 
-/* Responsive */
+/* ============================================
+   DARK MODE — Comic Dark Theme
+   ============================================ */
+.dark-mode {
+  --comic-black: #fafaf7;
+  --comic-white: #111111;
+  background-color: #111111;
+  color: #fafaf7;
+}
+
+.dark-mode body {
+  background-color: #111111;
+  color: #fafaf7;
+}
+
+.dark-mode .comic-panel {
+  background: #1a1a1a;
+  border-color: #fafaf7;
+  box-shadow: 5px 5px 0 #fafaf7;
+}
+
+.dark-mode .comic-panel-blue {
+  background: #0d1a33;
+  border-color: #4d88ff;
+  box-shadow: 5px 5px 0 #4d88ff;
+}
+
+.dark-mode .comic-panel-yellow {
+  background: #2a2200;
+  border-color: #ffd700;
+  box-shadow: 5px 5px 0 #ffd700;
+}
+
+.dark-mode .skill-card {
+  background: #1a1a1a;
+  border-color: #fafaf7;
+}
+
+.dark-mode .speech-bubble,
+.dark-mode .speech-bubble-right {
+  background: #222;
+  border-color: #fafaf7;
+  color: #fafaf7;
+}
+
+.dark-mode .speech-bubble::before,
+.dark-mode .speech-bubble-right::before {
+  border-top-color: #222;
+}
+
+.dark-mode .thought-bubble {
+  background: #222;
+  border-color: #fafaf7;
+  color: #fafaf7;
+}
+
+.dark-mode .section-title {
+  color: #fafaf7;
+}
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4 {
+  color: #fafaf7;
+}
+
+.dark-mode .chapter-label {
+  color: #4d88ff;
+  border-color: #4d88ff;
+}
+
+.dark-mode .btn-comic-outline {
+  background: #1a1a1a;
+  color: #fafaf7;
+  border-color: #fafaf7;
+  box-shadow: 4px 4px 0 #fafaf7;
+}
+
+.dark-mode .btn-comic-outline:hover {
+  background: #fafaf7;
+  color: #111111;
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 80px;
+  right: 16px;
+  z-index: 40;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffd700;
+  border: 3px solid #0a0a0a;
+  box-shadow: 4px 4px 0 #0a0a0a;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.15s ease;
+}
+
+.dark-mode-toggle:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #0a0a0a;
+}
+
+/* ============================================
+   RESPONSIVE — perbaikan menyeluruh
+   ============================================ */
+
+/* Mencegah semua overflow horizontal */
+*, *::before, *::after {
+  min-width: 0;
+}
+
+/* Teks yang terlalu panjang tidak overflow */
+.truncate-responsive {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+/* Gambar tidak keluar container */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ─── Mobile (≤ 640px) ─── */
 @media (max-width: 640px) {
-  .comic-panel {
-    box-shadow: 3px 3px 0 var(--comic-black);
-  }
-
-  .speech-bubble,
-  .speech-bubble-right {
-    padding: 8px 14px;
-  }
-
-  .btn-comic,
-  .btn-comic-blue,
-  .btn-comic-outline {
-    font-size: 0.95rem;
-    padding: 10px 20px;
-  }
-
-  /* Pastikan semua section tidak overflow ke kiri */
-  section {
-    overflow-x: hidden;
-    max-width: 100vw;
-  }
-
-  /* Elemen dengan box-shadow tidak overflow */
-  .skill-card,
   .comic-panel,
   .comic-panel-dark,
   .comic-panel-blue,
   .comic-panel-yellow {
     box-shadow: 3px 3px 0 var(--comic-black);
     max-width: 100%;
+    word-break: break-word;
+  }
+
+  .skill-card {
+    box-shadow: 3px 3px 0 var(--comic-black);
+    max-width: 100%;
+  }
+
+  .speech-bubble,
+  .speech-bubble-right,
+  .thought-bubble {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+    max-width: calc(100vw - 2rem);
+  }
+
+  .btn-comic,
+  .btn-comic-blue,
+  .btn-comic-outline {
+    font-size: 0.85rem;
+    padding: 10px 18px;
+  }
+
+  .section-title {
+    font-size: clamp(1.6rem, 7vw, 2.5rem);
+  }
+
+  /* Semua section tidak overflow */
+  section {
+    overflow-x: hidden;
+    max-width: 100vw;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   /* Grid tidak overflow */
   .grid {
     overflow: hidden;
   }
+
+  /* Box shadow pada elemen yang dekat tepi tidak overflow */
+  [style*="box-shadow"] {
+    overflow: visible;
+  }
+
+  /* Padding section lebih kecil di mobile */
+  .py-20 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  /* Font comic lebih kecil di mobile */
+  .font-comic {
+    letter-spacing: 0.03em;
+  }
+}
+
+/* ─── Tablet (641px – 1024px) ─── */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .section-title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+  }
+
+  section {
+    overflow-x: hidden;
+  }
+}
+
+/* Pastikan modal tidak overflow */
+.fixed.inset-0 {
+  overflow-y: auto;
+  overflow-x: hidden;
 }

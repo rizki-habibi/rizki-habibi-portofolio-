@@ -1,18 +1,21 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import ChapterHeader from '@/components/ChapterHeader'
+
+function ambilNomor(chNum: string): string {
+  const m = chNum.match(/\d+/)
+  return m ? m[0] : chNum
+}
 
 function CP({ id, chNum, title, color, bg, dark, children }: {
   id: string; chNum: string; title: string; color: string; bg: string; dark?: boolean; children: React.ReactNode
 }) {
   return (
-    <section id={id} className="py-20 px-4 relative overflow-hidden" style={{ background: dark ? '#0a0a0a' : bg }}>
+    <section id={id} className="py-16 sm:py-20 px-3 sm:px-4 relative overflow-hidden" style={{ background: dark ? '#0a0a0a' : bg }}>
       {dark ? <div className="halftone-yellow" /> : <div className="halftone-bg" />}
       <div className="max-w-6xl mx-auto relative z-10">
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: false, amount: 0.2 }} className="text-center mb-12">
-          <div className="chapter-label mb-3 inline-block" style={{ color: dark ? '#ffd700' : color, borderColor: dark ? '#ffd700' : color }}>{chNum}</div>
-          <h2 className={dark ? 'section-title-white' : 'section-title'}>{title}</h2>
-        </motion.div>
+        <ChapterHeader nomor={ambilNomor(chNum)} judul={title} warna={dark ? '#ffd700' : color} dark={dark} />
         {children}
       </div>
     </section>

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import ChapterHeader from '@/components/ChapterHeader'
 
 const quotes = [
   {
@@ -68,27 +69,7 @@ export default function QuoteComic() {
       <div className="max-w-6xl mx-auto relative z-10">
 
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="text-center mb-14"
-        >
-          <div className="chapter-label mb-3 inline-block" style={{ color: '#ffd700', borderColor: '#ffd700' }}>
-            CHAPTER 11
-          </div>
-          <h2 className="section-title-white">WORDS OF POWER</h2>
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3, type: 'spring' }}
-            viewport={{ once: false }}
-            className="speech-bubble inline-block text-sm mt-4 text-comic-black"
-          >
-            💬 Kata-kata yang memandu perjalanan saya!
-          </motion.div>
-        </motion.div>
+        <ChapterHeader nomor="11" judul="WORDS OF POWER" warna="#ffd700" dark={true} />
 
         {/* Quote cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-14">

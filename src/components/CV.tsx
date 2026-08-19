@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { FiDownload, FiMail, FiPhone, FiMapPin, FiCode, FiTool, FiUsers, FiTarget, FiBook, FiBookOpen, FiCalendar, FiMonitor } from 'react-icons/fi'
 import { HiAcademicCap, HiLibrary } from 'react-icons/hi'
+import ChapterHeader from '@/components/ChapterHeader'
 
 const toolsUsed = ['VS Code', 'Laragon', 'PG Admin 4', 'Canva', 'Affinity', 'CapCut', 'CorelDraw', 'Photoshop', 'Vegas Pro']
 const toolsUnderstood = ['Premier Pro', 'Microsoft Excel', 'CorelDRAW', 'Project IDX', 'Firebase', 'Acode (Mobile)']
@@ -41,17 +42,7 @@ export default function CV() {
       <div className="max-w-6xl mx-auto relative z-10">
 
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="text-center mb-12"
-        >
-          <div className="chapter-label mb-3">CURRICULUM VITAE</div>
-          <h2 className="section-title">MY PROFILE</h2>
-          <div className="speech-bubble inline-block text-sm mt-4">📄 Unduh CV lengkap saya di sini!</div>
-        </motion.div>
+        <ChapterHeader nomor="CV" judul="MY PROFILE" warna="#1a5cff" subtitle="📄 Unduh CV lengkap saya di sini!" />
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Sidebar */}

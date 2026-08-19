@@ -40,6 +40,11 @@ import ComicNowPlaying from '@/components/ComicNowPlaying'
 import AgeCounter from '@/components/AgeCounter'
 import SkillRadar from '@/components/SkillRadar'
 import TechTimeline from '@/components/TechTimeline'
+// ── KOMPONEN BARU ──
+import TestimonialsComic from '@/components/TestimonialsComic'
+import FaqComic from '@/components/FaqComic'
+import DarkModeToggle from '@/components/DarkModeToggle'
+import ProgressSkillsComic from '@/components/ProgressSkillsComic'
 
 export default function Home() {
   return (
@@ -53,6 +58,7 @@ export default function Home() {
       <SideNavDots />
       <CursorTrail />
       <ComicNowPlaying />
+      <DarkModeToggle />
 
       <LoadingScreen />
       <ScrollProgress />
@@ -72,6 +78,10 @@ export default function Home() {
 
       {/* CHAPTER 02 — MY POWERS */}
       <Skills />
+      <div className="comic-divider" />
+
+      {/* SKILL PROGRESS BARS — detail per kategori */}
+      <ProgressSkillsComic />
       <div className="comic-divider" />
 
       {/* SKILL RADAR CHART — analisis visual kemampuan */}
@@ -116,6 +126,10 @@ export default function Home() {
 
       {/* CHAPTER 10 — ACHIEVEMENT UNLOCKED */}
       <AchievementsComic />
+      <div className="comic-divider" />
+
+      {/* KATA MEREKA — Testimoni */}
+      <TestimonialsComic />
       <div className="comic-divider" />
 
       {/* CHAPTER 11 — WORDS OF POWER */}
@@ -164,6 +178,10 @@ export default function Home() {
 
       {/* VISITOR STATS */}
       <VisitorCounter />
+      <div className="comic-divider" />
+
+      {/* FAQ — PERTANYAAN UMUM */}
+      <FaqComic />
       <div className="comic-divider" />
 
       {/* CONTACT */}

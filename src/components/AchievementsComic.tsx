@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import ChapterHeader from '@/components/ChapterHeader'
 
 const badges = [
   {
@@ -95,19 +96,19 @@ const badges = [
 
 const rarityColor: Record<string, { bg: string; text: string; label: string }> = {
   LEGENDARY: { bg: '#ffd700', text: '#0a0a0a', label: '⭐ LEGENDARY' },
-  EPIC:      { bg: '#8b5cf6', text: 'white',   label: '💜 EPIC' },
-  RARE:      { bg: '#1a5cff', text: 'white',   label: '💙 RARE' },
-  COMMON:    { bg: '#22c55e', text: 'white',   label: '💚 COMMON' },
+  EPIC: { bg: '#8b5cf6', text: 'white', label: '💜 EPIC' },
+  RARE: { bg: '#1a5cff', text: 'white', label: '💙 RARE' },
+  COMMON: { bg: '#22c55e', text: 'white', label: '💚 COMMON' },
 }
 
 // Milestone list
 const milestones = [
-  { year: '2023', event: 'Mulai kuliah STI & belajar Laravel',       icon: '🎓' },
-  { year: '2024', event: 'Bangun Sistem KVT & K-Amu All in One',     icon: '⚙️' },
+  { year: '2023', event: 'Mulai kuliah STI & belajar Laravel', icon: '🎓' },
+  { year: '2024', event: 'Bangun Sistem KVT & K-Amu All in One', icon: '⚙️' },
   { year: '2025', event: 'Sertifikasi BNSP + 75 sertifikat digital', icon: '🏆' },
-  { year: '2025', event: 'Inovasi alat monitoring IoT daur ulang',   icon: '🔧' },
-  { year: '2026', event: 'Penelitian Skripsi + Kembangkan KVT.kom',  icon: '🚀' },
-  { year: 'SOON', event: 'Publish KVT.kom & Buka Lapangan Kerja',    icon: '🌟' },
+  { year: '2025', event: 'Inovasi alat monitoring IoT daur ulang', icon: '🔧' },
+  { year: '2026', event: 'Penelitian Skripsi + Kembangkan KVT.kom', icon: '🚀' },
+  { year: 'SOON', event: 'Publish KVT.kom & Buka Lapangan Kerja', icon: '🌟' },
 ]
 
 export default function AchievementsComic() {
@@ -117,19 +118,7 @@ export default function AchievementsComic() {
       <div className="max-w-6xl mx-auto relative z-10">
 
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="text-center mb-14"
-        >
-          <div className="chapter-label mb-3">CHAPTER 10</div>
-          <h2 className="section-title">ACHIEVEMENT UNLOCKED</h2>
-          <div className="speech-bubble inline-block text-sm mt-4">
-            🎖️ Setiap pencapaian adalah unlock baru dalam perjalanan ini!
-          </div>
-        </motion.div>
+        <ChapterHeader nomor="10" judul="ACHIEVEMENT UNLOCKED" warna="#ffd700" subtitle="🎖️ Setiap pencapaian adalah unlock baru!" />
 
         {/* Badge grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">

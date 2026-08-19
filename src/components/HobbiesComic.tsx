@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import ChapterHeader from '@/components/ChapterHeader'
 
 const hobbies = [
   {
@@ -50,19 +51,7 @@ export default function HobbiesComic() {
       <div className="max-w-6xl mx-auto relative z-10">
 
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="text-center mb-14"
-        >
-          <div className="chapter-label mb-3">CHAPTER 13</div>
-          <h2 className="section-title">OFF-DUTY LIFE</h2>
-          <div className="speech-bubble inline-block text-sm mt-4">
-            🎮 Di luar dunia kerja, ini yang bikin saya tetap bersemangat!
-          </div>
-        </motion.div>
+        <ChapterHeader nomor="13" judul="OFF-DUTY LIFE" warna="#22c55e" subtitle="🎮 Di luar kode, kehidupan tetap penuh warna!" />
 
         {/* Hobi grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-14">
@@ -122,7 +111,7 @@ export default function HobbiesComic() {
               </div>
             </div>
             <div className="speech-bubble mt-6 text-sm text-comic-black text-center">
-              🎯 &ldquo;Hobi adalah cara saya<br/>mengisi ulang energi!&rdquo;
+              🎯 &ldquo;Hobi adalah cara saya<br />mengisi ulang energi!&rdquo;
             </div>
           </motion.div>
 

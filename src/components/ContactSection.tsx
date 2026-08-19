@@ -92,7 +92,7 @@ export default function ContactSection() {
         </motion.div>
 
         {/* Contact cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           {socials.map((s, i) => (
             <motion.a
               key={s.label}
@@ -104,24 +104,24 @@ export default function ContactSection() {
               transition={{ duration: 0.4, delay: i * 0.08 }}
               viewport={{ once: false }}
               whileHover={{ y: -6, rotate: i % 2 === 0 ? -1 : 1 }}
-              className="flex items-center gap-4 p-4 relative overflow-hidden"
+              className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 relative overflow-hidden"
               style={{
                 background: s.bg,
                 border: `3px solid ${s.color}`,
-                boxShadow: `5px 5px 0 ${s.color}`,
+                boxShadow: `4px 4px 0 ${s.color}`,
                 textDecoration: 'none',
               }}
             >
               {/* Icon */}
               <div
-                className="w-12 h-12 flex items-center justify-center flex-shrink-0"
+                className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center flex-shrink-0"
                 style={{ background: s.color, border: '2px solid #0a0a0a' }}
               >
-                <s.icon className="w-6 h-6 text-white" />
+                <s.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
-              <div>
+              <div className="min-w-0 flex-1">
                 <div className="font-comic text-sm" style={{ color: s.color }}>{s.label}</div>
-                <div className="font-bold text-xs text-comic-black/70 truncate max-w-[160px]">{s.value}</div>
+                <div className="font-bold text-xs text-comic-black/70 truncate max-w-full">{s.value}</div>
               </div>
             </motion.a>
           ))}

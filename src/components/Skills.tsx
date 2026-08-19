@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { SiLaravel, SiPhp, SiNextdotjs, SiTailwindcss, SiMysql, SiJavascript, SiTypescript, SiHtml5, SiCss3, SiGit, SiBootstrap, SiFigma, SiLinux } from 'react-icons/si'
 import { VscCode } from 'react-icons/vsc'
+import ChapterHeader from '@/components/ChapterHeader'
 
 const skills = [
   { name: 'Laravel', icon: SiLaravel, level: 90, color: '#FF2D20', label: 'MASTER' },
@@ -42,22 +43,10 @@ export default function Skills() {
       <div className="max-w-6xl mx-auto">
 
         {/* Chapter Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="text-center mb-14"
-        >
-          <div className="chapter-label mb-3">CHAPTER 02</div>
-          <h2 className="section-title">MY POWERS</h2>
-          <div className="speech-bubble inline-block text-sm mt-4">
-            ⚡ Setiap skill adalah kekuatan unik yang saya kuasai!
-          </div>
-        </motion.div>
+        <ChapterHeader nomor="02" judul="MY POWERS" warna="#1a5cff" subtitle="⚡ Setiap skill adalah kekuatan unik yang saya kuasai!" />
 
         {/* Tech Skills — Ability Cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-4 mb-14">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-3 sm:gap-4 mb-14">
           {skills.map((skill, i) => (
             <motion.div
               key={skill.name}
@@ -66,7 +55,7 @@ export default function Skills() {
               transition={{ duration: 0.35, delay: i * 0.04 }}
               viewport={{ once: false, amount: 0.1 }}
               whileHover={{ y: -6, rotate: -1 }}
-              className="skill-card bg-white p-3 flex flex-col items-center gap-2 cursor-default"
+              className="skill-card bg-white p-2 sm:p-3 flex flex-col items-center gap-1.5 sm:gap-2 cursor-default"
             >
               {/* Level badge */}
               <div

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import ChapterHeader from '@/components/ChapterHeader'
 
 const nextChapters = [
   { icon: '📝', title: 'Selesaikan Skripsi', desc: 'Penelitian akademik yang sedang berjalan — fondasi ilmiah untuk proyek nyata.', color: '#1a5cff', status: 'IN PROGRESS' },
@@ -27,19 +28,7 @@ export default function EpilogComic() {
       <div className="max-w-6xl mx-auto relative z-10">
 
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="text-center mb-14"
-        >
-          <div className="chapter-label mb-3">CHAPTER 15 — EPILOG</div>
-          <h2 className="section-title">WHAT COMES NEXT?</h2>
-          <div className="speech-bubble inline-block text-sm mt-4">
-            🔮 Cerita ini belum selesai — ini baru babak pertama!
-          </div>
-        </motion.div>
+        <ChapterHeader nomor="15" judul="WHAT COMES NEXT?" warna="#e63329" subtitle="🚀 Cerita belum berakhir — ini baru awal!" />
 
         {/* Next chapters */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-14">

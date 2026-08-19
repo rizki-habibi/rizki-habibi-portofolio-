@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { FiGithub, FiMail, FiPhone } from 'react-icons/fi'
 import { SiInstagram, SiLinkedin, SiWhatsapp } from 'react-icons/si'
+import ChapterHeader from '@/components/ChapterHeader'
 
 const networkNodes = [
   {
@@ -35,11 +36,11 @@ const collaborationValues = [
 ]
 
 const socialLinks = [
-  { icon: FiGithub,    label: 'GitHub',    val: '@rizki-habibi',           href: 'https://github.com/rizki-habibi',        color: '#0a0a0a' },
-  { icon: SiLinkedin,  label: 'LinkedIn',  val: 'Rizki Habibi',            href: 'https://linkedin.com/in/rizki-habibi',   color: '#0a66c2' },
-  { icon: SiInstagram, label: 'Instagram', val: '@rizkihabibi',            href: 'https://instagram.com/rizkihabibi',      color: '#e1306c' },
-  { icon: SiWhatsapp,  label: 'WhatsApp',  val: '+62 882-009-725-053',      href: 'https://wa.me/62882009725053',           color: '#25d366' },
-  { icon: FiMail,      label: 'Email',     val: 'rizkihabibi2432@gmail.com',href: 'mailto:rizkihabibi2432@gmail.com',       color: '#1a5cff' },
+  { icon: FiGithub, label: 'GitHub', val: '@rizki-habibi', href: 'https://github.com/rizki-habibi', color: '#0a0a0a' },
+  { icon: SiLinkedin, label: 'LinkedIn', val: 'Rizki Habibi', href: 'https://linkedin.com/in/rizki-habibi', color: '#0a66c2' },
+  { icon: SiInstagram, label: 'Instagram', val: '@rizkihabibi', href: 'https://instagram.com/rizkihabibi', color: '#e1306c' },
+  { icon: SiWhatsapp, label: 'WhatsApp', val: '+62 882-009-725-053', href: 'https://wa.me/62882009725053', color: '#25d366' },
+  { icon: FiMail, label: 'Email', val: 'rizkihabibi2432@gmail.com', href: 'mailto:rizkihabibi2432@gmail.com', color: '#1a5cff' },
 ]
 
 export default function KomunikasiComic() {
@@ -49,19 +50,7 @@ export default function KomunikasiComic() {
       <div className="max-w-6xl mx-auto relative z-10">
 
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="text-center mb-14"
-        >
-          <div className="chapter-label mb-3">CHAPTER 14</div>
-          <h2 className="section-title">NETWORK & COMMUNITY</h2>
-          <div className="speech-bubble-right inline-block text-sm mt-4">
-            🤝 Kita lebih kuat bersama daripada sendiri!
-          </div>
-        </motion.div>
+        <ChapterHeader nomor="14" judul="NETWORK &amp; COMMUNITY" warna="#8b5cf6" subtitle="👥 Bersama kita lebih kuat!" />
 
         {/* Network cards */}
         <div className="grid sm:grid-cols-2 gap-5 mb-14">

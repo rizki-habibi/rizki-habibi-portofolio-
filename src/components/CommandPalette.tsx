@@ -83,7 +83,7 @@ export default function CommandPalette() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 2.5 }}
         onClick={() => { setIsOpen(true); setSearch('') }}
-        className="fixed bottom-6 right-6 z-40 flex items-center gap-2 font-comic text-[#0a0a0a] text-xs px-3 py-2"
+        className="fixed bottom-4 right-4 z-40 flex items-center gap-2 font-comic text-[#0a0a0a] text-xs px-3 py-2"
         style={{ background: '#fff', border: '2px solid #0a0a0a', boxShadow: '3px 3px 0 #0a0a0a' }}
         title="Command Palette (Ctrl+K)"
       >

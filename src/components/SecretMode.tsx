@@ -113,9 +113,12 @@ export default function SecretMode() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 20 }}
-            className="fixed bottom-20 right-6 z-40"
+            className="fixed bottom-36 right-4 z-40"
           >
-            <div className="px-3 py-2 bg-charcoal-900/90 backdrop-blur-sm border border-charcoal-700 rounded-lg text-[10px] text-soft-gray-600 font-mono">
+            <div
+              className="px-3 py-2 font-comic text-[10px] text-[#0a0a0a]/60"
+              style={{ background: '#fafaf7', border: '2px solid #0a0a0a', boxShadow: '2px 2px 0 #0a0a0a' }}
+            >
               ↑↑↓↓←→←→BA
             </div>
           </motion.div>
@@ -139,10 +142,12 @@ export default function SecretMode() {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}
                 transition={{ type: 'spring', stiffness: 100, damping: 15 }}
-                className="w-full max-w-2xl bg-charcoal-950/95 backdrop-blur-xl border border-green-500/30 rounded-2xl shadow-2xl shadow-green-500/10 overflow-hidden"
+                className="w-full max-w-2xl overflow-hidden"
+                style={{ background: '#0d0d0d', border: '3px solid rgba(0,220,80,0.4)', boxShadow: '0 0 40px rgba(0,220,80,0.1)' }}
               >
                 {/* Header */}
-                <div className="flex items-center justify-between px-6 py-4 border-b border-green-500/20 bg-charcoal-900/50">
+                <div className="flex items-center justify-between px-6 py-4"
+                  style={{ borderBottom: '1px solid rgba(0,220,80,0.2)', background: 'rgba(0,220,80,0.05)' }}>
                   <div className="flex items-center gap-3">
                     <FiTerminal className="w-5 h-5 text-green-400" />
                     <div>
@@ -152,7 +157,7 @@ export default function SecretMode() {
                   </div>
                   <button
                     onClick={() => setIsActive(false)}
-                    className="p-2 rounded-lg hover:bg-charcoal-800 transition-colors text-green-400/60 hover:text-green-400"
+                    className="p-2 text-green-400/60 hover:text-green-400 transition-colors"
                   >
                     <FiX className="w-5 h-5" />
                   </button>
@@ -162,7 +167,7 @@ export default function SecretMode() {
                 <div className="p-6">
                   {/* Secret ASCII */}
                   <pre className="text-green-500/60 text-[8px] md:text-[10px] font-mono text-center mb-6 leading-tight">
-{`
+                    {`
   ██████╗ ██╗  ██╗    ███████╗███████╗ ██████╗██████╗ ███████╗████████╗
   ██╔══██╗██║  ██║    ██╔════╝██╔════╝██╔════╝██╔══██╗██╔════╝╚══██╔══╝
   ██████╔╝███████║    ███████╗█████╗  ██║     ██████╔╝█████╗     ██║
@@ -187,7 +192,8 @@ export default function SecretMode() {
                       >
                         <button
                           onClick={() => revealFact(i)}
-                          className="w-full text-left p-3 rounded-lg bg-charcoal-800/50 border border-green-500/10 hover:border-green-500/30 transition-all group"
+                          className="w-full text-left p-3 transition-all"
+                          style={{ background: 'rgba(0,220,80,0.03)', border: '1px solid rgba(0,220,80,0.12)', marginBottom: 4 }}
                         >
                           <div className="flex items-center gap-3">
                             <span className="text-green-500/40 font-mono text-xs">[{String(i + 1).padStart(2, '0')}]</span>

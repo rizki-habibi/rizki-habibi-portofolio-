@@ -149,6 +149,61 @@ const semuaChapter = [
   { num: '118', judul: 'Roadmap 2026-2030', href: '#ch118', warna: '#1a5cff' },
   { num: '119', judul: 'Epilog Agung', href: '#ch119', warna: '#ffd700' },
   { num: '120', judul: '🎌 BERSAMBUNG...', href: '#ch120', warna: '#ffd700' },
+  // ── GROUP 12: 121-130 INOVASI TEKNOLOGI ──
+  { num: '121', judul: 'Smart Home', href: '#ch121', warna: '#0891b2' },
+  { num: '122', judul: 'Robotik & Arduino', href: '#ch122', warna: '#1a5cff' },
+  { num: '123', judul: 'AR & VR', href: '#ch123', warna: '#8b5cf6' },
+  { num: '124', judul: 'Quantum Computing', href: '#ch124', warna: '#e63329' },
+  { num: '125', judul: 'Kendaraan Otonom', href: '#ch125', warna: '#0891b2' },
+  { num: '126', judul: 'Bioinformatika', href: '#ch126', warna: '#22c55e' },
+  { num: '127', judul: 'Energi Terbarukan', href: '#ch127', warna: '#22c55e' },
+  { num: '128', judul: 'Fintech Inovatif', href: '#ch128', warna: '#1a5cff' },
+  { num: '129', judul: 'Space Tech', href: '#ch129', warna: '#8b5cf6' },
+  { num: '130', judul: 'Neurotech & BCI', href: '#ch130', warna: '#e63329' },
+  // ── GROUP 13: 131-140 WIRAUSAHA & SOSIAL ──
+  { num: '131', judul: 'Wirausaha Sosial', href: '#ch131', warna: '#22c55e' },
+  { num: '132', judul: 'Kolaborasi Global', href: '#ch132', warna: '#0891b2' },
+  { num: '133', judul: 'Teknologi & Lingkungan', href: '#ch133', warna: '#22c55e' },
+  { num: '134', judul: 'Healthtech Inovatif', href: '#ch134', warna: '#e63329' },
+  { num: '135', judul: 'Agritech', href: '#ch135', warna: '#22c55e' },
+  { num: '136', judul: 'Edtech Inovatif', href: '#ch136', warna: '#8b5cf6' },
+  { num: '137', judul: 'Ekonomi Kreatif', href: '#ch137', warna: '#f59e0b' },
+  { num: '138', judul: 'Smart City', href: '#ch138', warna: '#1a5cff' },
+  { num: '139', judul: 'Supply Chain Tech', href: '#ch139', warna: '#f59e0b' },
+  { num: '140', judul: 'Mental Health Tech', href: '#ch140', warna: '#8b5cf6' },
+  // ── GROUP 14: 141-150 SENI & KREATOR ──
+  { num: '141', judul: 'Seni Digital', href: '#ch141', warna: '#8b5cf6' },
+  { num: '142', judul: 'Musik & Teknologi', href: '#ch142', warna: '#1a5cff' },
+  { num: '143', judul: 'Content Creator Tech', href: '#ch143', warna: '#e63329' },
+  { num: '144', judul: 'Sosmed & Algoritma', href: '#ch144', warna: '#0a66c2' },
+  { num: '145', judul: 'Podcast & Audio', href: '#ch145', warna: '#f59e0b' },
+  { num: '146', judul: 'Fashion Tech', href: '#ch146', warna: '#e1306c' },
+  { num: '147', judul: 'Sport Tech', href: '#ch147', warna: '#22c55e' },
+  { num: '148', judul: 'Kuliner Tech', href: '#ch148', warna: '#f59e0b' },
+  { num: '149', judul: 'Transportasi Digital', href: '#ch149', warna: '#0891b2' },
+  { num: '150', judul: 'Masa Depan Pekerjaan', href: '#ch150', warna: '#ffd700' },
+  // ── GROUP 15: 151-160 KEPEMIMPINAN & FILOSOFI ──
+  { num: '151', judul: 'Kepemimpinan Tech', href: '#ch151', warna: '#1a5cff' },
+  { num: '152', judul: 'Generasi Bangsa', href: '#ch152', warna: '#e63329' },
+  { num: '153', judul: 'Filosofi Developer', href: '#ch153', warna: '#8b5cf6' },
+  { num: '154', judul: 'Diversity & Inclusion', href: '#ch154', warna: '#e1306c' },
+  { num: '155', judul: 'Digital Citizenship', href: '#ch155', warna: '#1a5cff' },
+  { num: '156', judul: 'Inovasi Lokal', href: '#ch156', warna: '#e63329' },
+  { num: '157', judul: 'Generasi Alpha & AI', href: '#ch157', warna: '#f59e0b' },
+  { num: '158', judul: 'Teknologi & Spiritualitas', href: '#ch158', warna: '#22c55e' },
+  { num: '159', judul: 'Kearifan Lokal Digital', href: '#ch159', warna: '#8b5cf6' },
+  { num: '160', judul: 'Sejarah Computing', href: '#ch160', warna: '#1a5cff' },
+  // ── GROUP 16: 161-170 GRAND FINALE ──
+  { num: '161', judul: '100 Hari Produktif', href: '#ch161', warna: '#1a5cff' },
+  { num: '162', judul: 'Proyek Impian 2027', href: '#ch162', warna: '#8b5cf6' },
+  { num: '163', judul: 'Satu Tahun KVT.kom', href: '#ch163', warna: '#22c55e' },
+  { num: '164', judul: 'Pesan Generasi Berikut', href: '#ch164', warna: '#ffd700' },
+  { num: '165', judul: 'Syukur & Gratitude', href: '#ch165', warna: '#f59e0b' },
+  { num: '166', judul: '8 Pelajaran Terbesar', href: '#ch166', warna: '#e63329' },
+  { num: '167', judul: 'Salam dari Jember', href: '#ch167', warna: '#22c55e' },
+  { num: '168', judul: 'Kata-Kata Pamungkas', href: '#ch168', warna: '#ffd700' },
+  { num: '169', judul: 'Apresiasi Mendalam', href: '#ch169', warna: '#f59e0b' },
+  { num: '170', judul: '🎭 THE GRAND FINALE', href: '#ch170', warna: '#ffd700' },
   // ── SPECIAL ──
   { num: '★', judul: 'Level Progress Skills', href: '#progress-skills', warna: '#8b5cf6' },
   { num: '◆', judul: 'Testimoni', href: '#testimonials', warna: '#22c55e' },
@@ -261,8 +316,8 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.4, type: 'spring', stiffness: 120 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-            ? 'bg-white border-b-4 border-[#0a0a0a] shadow-[0_4px_0_#0a0a0a]'
-            : 'bg-white/95 border-b-2 border-[#0a0a0a]/30'
+          ? 'bg-white border-b-4 border-[#0a0a0a] shadow-[0_4px_0_#0a0a0a]'
+          : 'bg-white/95 border-b-2 border-[#0a0a0a]/30'
           }`}
         style={{ background: darkMode ? '#111' : undefined }}
       >

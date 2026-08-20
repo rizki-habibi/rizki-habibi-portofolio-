@@ -26,6 +26,11 @@ import ChaptersGroup8 from '@/components/ChaptersGroup8'
 import ChaptersGroup9 from '@/components/ChaptersGroup9'
 import ChaptersGroup10 from '@/components/ChaptersGroup10'
 import ChaptersGroup11 from '@/components/ChaptersGroup11'
+import ChaptersGroup12 from '@/components/ChaptersGroup12'
+import ChaptersGroup13 from '@/components/ChaptersGroup13'
+import ChaptersGroup14 from '@/components/ChaptersGroup14'
+import ChaptersGroup15 from '@/components/ChaptersGroup15'
+import ChaptersGroup16 from '@/components/ChaptersGroup16'
 import CV from '@/components/CV'
 import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
@@ -185,6 +190,21 @@ export default function Home() {
 
       {/* CHAPTERS 111–120 — WARISAN, NILAI, FINAL CHAPTER */}
       <ChaptersGroup11 />
+
+      {/* CHAPTERS 121–130 — SMART HOME, ROBOTIK, AR/VR, QUANTUM, SPACE */}
+      <ChaptersGroup12 />
+
+      {/* CHAPTERS 131–140 — WIRAUSAHA SOSIAL, KOLABORASI GLOBAL, HEALTHTECH */}
+      <ChaptersGroup13 />
+
+      {/* CHAPTERS 141–150 — SENI DIGITAL, MUSIK, CONTENT CREATOR, PEKERJAAN */}
+      <ChaptersGroup14 />
+
+      {/* CHAPTERS 151–160 — KEPEMIMPINAN, GENERASI, FILOSOFI, SEJARAH */}
+      <ChaptersGroup15 />
+
+      {/* CHAPTERS 161–170 — GRAND FINALE, PROYEK IMPIAN, SALAM PERPISAHAN */}
+      <ChaptersGroup16 />
 
       <div className="comic-divider" />
 

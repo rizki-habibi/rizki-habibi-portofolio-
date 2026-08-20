@@ -20,6 +20,8 @@ import ChaptersGroup2 from '@/components/ChaptersGroup2'
 import ChaptersGroup3 from '@/components/ChaptersGroup3'
 import ChaptersGroup4 from '@/components/ChaptersGroup4'
 import ChaptersGroup5 from '@/components/ChaptersGroup5'
+import ChaptersGroup6 from '@/components/ChaptersGroup6'
+import ChaptersGroup7 from '@/components/ChaptersGroup7'
 import CV from '@/components/CV'
 import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
@@ -32,7 +34,6 @@ import CommandPalette from '@/components/CommandPalette'
 import WelcomeToast from '@/components/WelcomeToast'
 import SocialFloat from '@/components/SocialFloat'
 import TechMarquee from '@/components/TechMarquee'
-import SideNavDots from '@/components/SideNavDots'
 import VisitorCounter from '@/components/VisitorCounter'
 import GitHubHeatmap from '@/components/GitHubHeatmap'
 import CursorTrail from '@/components/CursorTrail'
@@ -40,25 +41,22 @@ import ComicNowPlaying from '@/components/ComicNowPlaying'
 import AgeCounter from '@/components/AgeCounter'
 import SkillRadar from '@/components/SkillRadar'
 import TechTimeline from '@/components/TechTimeline'
-// ── KOMPONEN BARU ──
 import TestimonialsComic from '@/components/TestimonialsComic'
 import FaqComic from '@/components/FaqComic'
-import DarkModeToggle from '@/components/DarkModeToggle'
 import ProgressSkillsComic from '@/components/ProgressSkillsComic'
 
 export default function Home() {
   return (
     <main style={{ background: '#fafaf7', color: '#0a0a0a' }}>
-      {/* ── LAYER GLOBAL (tidak tampak di layout scroll) ── */}
+      {/* ── LAYER GLOBAL — tidak tampak di layout scroll ── */}
       <SecretMode />
       <MouseSparkle />
       <CommandPalette />
       <WelcomeToast />
       <SocialFloat />
-      <SideNavDots />
       <CursorTrail />
       <ComicNowPlaying />
-      <DarkModeToggle />
+      {/* SideNavDots dan DarkModeToggle floating dihapus — sudah ada di Navbar */}
 
       <LoadingScreen />
       <ScrollProgress />
@@ -69,7 +67,7 @@ export default function Home() {
       <Hero />
       <div className="comic-divider" />
 
-      {/* TECH MARQUEE — scrolling ticker teknologi */}
+      {/* TECH MARQUEE */}
       <TechMarquee />
 
       {/* CHAPTER 01 — MY STORY */}
@@ -80,11 +78,11 @@ export default function Home() {
       <Skills />
       <div className="comic-divider" />
 
-      {/* SKILL PROGRESS BARS — detail per kategori */}
+      {/* SKILL PROGRESS BARS */}
       <ProgressSkillsComic />
       <div className="comic-divider" />
 
-      {/* SKILL RADAR CHART — analisis visual kemampuan */}
+      {/* SKILL RADAR CHART */}
       <SkillRadar />
       <div className="comic-divider" />
 
@@ -96,7 +94,7 @@ export default function Home() {
       <ExperienceTimeline />
       <div className="comic-divider" />
 
-      {/* TECH TIMELINE — perjalanan adopsi teknologi 2020-2026 */}
+      {/* TECH TIMELINE */}
       <TechTimeline />
       <div className="comic-divider" />
 
@@ -116,7 +114,7 @@ export default function Home() {
       <StatsComic />
       <div className="comic-divider" />
 
-      {/* AGE COUNTER — umur real-time */}
+      {/* AGE COUNTER */}
       <AgeCounter />
       <div className="comic-divider" />
 
@@ -128,7 +126,7 @@ export default function Home() {
       <AchievementsComic />
       <div className="comic-divider" />
 
-      {/* KATA MEREKA — Testimoni */}
+      {/* TESTIMONI */}
       <TestimonialsComic />
       <div className="comic-divider" />
 
@@ -151,24 +149,30 @@ export default function Home() {
       {/* CHAPTER 15 — WHAT COMES NEXT */}
       <EpilogComic />
 
-      {/* CHAPTERS 16–25: Website Desa, QRIS, Global Map, Karir, Komersial, Gov, Edukasi, Startup, Sosial, Kolaborasi */}
+      {/* CHAPTERS 16–25 */}
       <ChaptersGroup1 />
 
-      {/* CHAPTERS 26–35: AI Journey, Tech Stack, Open Source, CyberSec, Cloud, Database, UI/UX, AI Deep, IoT, Marketing */}
+      {/* CHAPTERS 26–35 */}
       <ChaptersGroup2 />
 
-      {/* CHAPTERS 36–45: Kesehatan, Lingkungan, Dampak Sosial, Growth, Leadership, Problem Solving, Soft Skills, Logika, Kreativitas, Dream Big */}
+      {/* CHAPTERS 36–45 */}
       <ChaptersGroup3 />
 
-      {/* CHAPTERS 46–55: Motivasi, Kegagalan, Global, Future Tech, Milestone 50, Syukur, UMKM, Smart City, Keluarga, Identitas */}
+      {/* CHAPTERS 46–55 */}
       <ChaptersGroup4 />
 
-      {/* CHAPTERS 56–61 + FINAL CHAPTER */}
+      {/* CHAPTERS 56–61 + FINAL */}
       <ChaptersGroup5 />
+
+      {/* CHAPTERS 62–70 — GAME LIFE */}
+      <ChaptersGroup6 />
+
+      {/* CHAPTERS 71–80 — INOVASI, KOMUNITAS, MASA DEPAN */}
+      <ChaptersGroup7 />
 
       <div className="comic-divider" />
 
-      {/* MY PROFILE — CV */}
+      {/* CV */}
       <CV />
       <div className="comic-divider" />
 
@@ -180,7 +184,7 @@ export default function Home() {
       <VisitorCounter />
       <div className="comic-divider" />
 
-      {/* FAQ — PERTANYAAN UMUM */}
+      {/* FAQ */}
       <FaqComic />
       <div className="comic-divider" />
 

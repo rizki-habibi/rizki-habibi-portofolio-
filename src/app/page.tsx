@@ -22,6 +22,10 @@ import ChaptersGroup4 from '@/components/ChaptersGroup4'
 import ChaptersGroup5 from '@/components/ChaptersGroup5'
 import ChaptersGroup6 from '@/components/ChaptersGroup6'
 import ChaptersGroup7 from '@/components/ChaptersGroup7'
+import ChaptersGroup8 from '@/components/ChaptersGroup8'
+import ChaptersGroup9 from '@/components/ChaptersGroup9'
+import ChaptersGroup10 from '@/components/ChaptersGroup10'
+import ChaptersGroup11 from '@/components/ChaptersGroup11'
 import CV from '@/components/CV'
 import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
@@ -169,6 +173,18 @@ export default function Home() {
 
       {/* CHAPTERS 71–80 — INOVASI, KOMUNITAS, MASA DEPAN */}
       <ChaptersGroup7 />
+
+      {/* CHAPTERS 81–90 — SKRIPSI, KVT, PENELITIAN, AKADEMIK */}
+      <ChaptersGroup8 />
+
+      {/* CHAPTERS 91–100 — KEHIDUPAN, BUDAYA, MILESTONE */}
+      <ChaptersGroup9 />
+
+      {/* CHAPTERS 101–110 — AI, ML, CLOUD, SECURITY, TEKNOLOGI */}
+      <ChaptersGroup10 />
+
+      {/* CHAPTERS 111–120 — WARISAN, NILAI, FINAL CHAPTER */}
+      <ChaptersGroup11 />
 
       <div className="comic-divider" />
 

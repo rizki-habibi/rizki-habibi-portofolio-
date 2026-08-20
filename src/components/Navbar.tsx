@@ -14,8 +14,9 @@ const navLinks = [
   { name: 'KONTAK', href: '#contact' },
 ]
 
-// Semua chapter untuk dropdown navigasi
+// Semua chapter untuk dropdown navigasi (00 – 120)
 const semuaChapter = [
+  // ── CHAPTER UTAMA 00-15 ──
   { num: '00', judul: 'The Origin', href: '#home', warna: '#1a5cff' },
   { num: '01', judul: 'Origin Story', href: '#cerita', warna: '#22c55e' },
   { num: '02', judul: 'My Powers', href: '#skills', warna: '#1a5cff' },
@@ -32,6 +33,7 @@ const semuaChapter = [
   { num: '13', judul: 'Off-Duty Life', href: '#hobbies', warna: '#22c55e' },
   { num: '14', judul: 'Network & Community', href: '#komunitas', warna: '#8b5cf6' },
   { num: '15', judul: 'What Comes Next', href: '#epilog', warna: '#e63329' },
+  // ── GROUP 1: 16-25 ──
   { num: '16', judul: 'Website Desa Digital', href: '#ch16', warna: '#22c55e' },
   { num: '17', judul: 'QRIS Donasi', href: '#ch17', warna: '#1a5cff' },
   { num: '18', judul: 'Website Global Map', href: '#ch18', warna: '#0891b2' },
@@ -42,17 +44,114 @@ const semuaChapter = [
   { num: '23', judul: 'Membangun Startup', href: '#ch23', warna: '#f59e0b' },
   { num: '24', judul: 'Teknologi Sosial', href: '#ch24', warna: '#22c55e' },
   { num: '25', judul: 'Kolaborasi Lintas Bidang', href: '#ch25', warna: '#1a5cff' },
+  // ── GROUP 2: 26-35 ──
   { num: '26', judul: 'AI Journey', href: '#ch26', warna: '#8b5cf6' },
   { num: '27', judul: 'Tech Stack Masa Depan', href: '#ch27', warna: '#0891b2' },
   { num: '28', judul: 'Open Source', href: '#ch28', warna: '#22c55e' },
   { num: '29', judul: 'Cyber Security', href: '#ch29', warna: '#e63329' },
   { num: '30', judul: 'Cloud & DevOps', href: '#ch30', warna: '#1a5cff' },
+  { num: '31', judul: 'Database Mastery', href: '#ch31', warna: '#4479A1' },
+  { num: '32', judul: 'UI/UX Design Deep', href: '#ch32', warna: '#e1306c' },
+  { num: '33', judul: 'AI Deep Dive', href: '#ch33', warna: '#10a37f' },
+  { num: '34', judul: 'IoT Advanced', href: '#ch34', warna: '#f59e0b' },
+  { num: '35', judul: 'Digital Marketing', href: '#ch35', warna: '#8b5cf6' },
+  // ── GROUP 3: 36-45 ──
+  { num: '36', judul: 'Kesehatan Digital', href: '#ch36', warna: '#22c55e' },
+  { num: '37', judul: 'Lingkungan Hidup', href: '#ch37', warna: '#0891b2' },
+  { num: '38', judul: 'Dampak Sosial', href: '#ch38', warna: '#1a5cff' },
+  { num: '39', judul: 'Growth Mindset', href: '#ch39', warna: '#f59e0b' },
+  { num: '40', judul: 'Leadership', href: '#ch40', warna: '#e63329' },
+  { num: '41', judul: 'Problem Solving', href: '#ch41', warna: '#8b5cf6' },
+  { num: '42', judul: 'Soft Skills', href: '#ch42', warna: '#22c55e' },
+  { num: '43', judul: 'Logika & Algoritma', href: '#ch43', warna: '#1a5cff' },
+  { num: '44', judul: 'Kreativitas', href: '#ch44', warna: '#f59e0b' },
+  { num: '45', judul: 'Dream Big', href: '#ch45', warna: '#ffd700' },
+  // ── GROUP 4: 46-55 ──
+  { num: '46', judul: 'Motivasi & Semangat', href: '#ch46', warna: '#e63329' },
+  { num: '47', judul: 'Belajar dari Kegagalan', href: '#ch47', warna: '#8b5cf6' },
+  { num: '48', judul: 'Global Perspective', href: '#ch48', warna: '#0891b2' },
+  { num: '49', judul: 'Future Technology', href: '#ch49', warna: '#1a5cff' },
+  { num: '50', judul: 'Milestone 50', href: '#ch50', warna: '#ffd700' },
+  { num: '51', judul: 'Rasa Syukur', href: '#ch51', warna: '#22c55e' },
+  { num: '52', judul: 'UMKM Digital', href: '#ch52', warna: '#f59e0b' },
+  { num: '53', judul: 'Smart City', href: '#ch53', warna: '#0891b2' },
+  { num: '54', judul: 'Keluarga & Prioritas', href: '#ch54', warna: '#e63329' },
+  { num: '55', judul: 'Identitas Developer', href: '#ch55', warna: '#8b5cf6' },
+  // ── GROUP 5: 56-61 + FINAL ──
+  { num: '56', judul: 'Warisan Digital', href: '#ch56', warna: '#1a5cff' },
+  { num: '57', judul: 'Jejak Kode', href: '#ch57', warna: '#22c55e' },
+  { num: '58', judul: 'Komunitas Masa Depan', href: '#ch58', warna: '#8b5cf6' },
+  { num: '59', judul: 'Indonesia 2030', href: '#ch59', warna: '#e63329' },
+  { num: '60', judul: 'Developer Ideal', href: '#ch60', warna: '#f59e0b' },
+  { num: '61', judul: 'The Final Arc', href: '#ch61', warna: '#ffd700' },
+  // ── GROUP 6: 62-70 GAME ──
   { num: '62', judul: 'Game Life: Pokemon GO', href: '#ch62', warna: '#22c55e' },
   { num: '63', judul: 'Dunia Kartu: Yugioh', href: '#ch63', warna: '#f59e0b' },
   { num: '64', judul: 'Strategi & Taktik', href: '#ch64', warna: '#e63329' },
   { num: '65', judul: 'Kingdom Builder', href: '#ch65', warna: '#8b5cf6' },
   { num: '66', judul: 'Dragon & Petualangan', href: '#ch66', warna: '#e63329' },
-  { num: '70', judul: 'Inovasi Tanpa Batas', href: '#ch70', warna: '#1a5cff' },
+  { num: '67', judul: 'Minecraft & Creative', href: '#ch67', warna: '#22c55e' },
+  { num: '68', judul: 'Offline Adventures', href: '#ch68', warna: '#8b5cf6' },
+  { num: '69', judul: 'Game = Sekolah Coding', href: '#ch69', warna: '#1a5cff' },
+  { num: '70', judul: 'Game Wishlist & Impian', href: '#ch70', warna: '#f59e0b' },
+  // ── GROUP 7: 71-80 INOVASI ──
+  { num: '71', judul: 'Developer Sehat', href: '#ch71', warna: '#22c55e' },
+  { num: '72', judul: 'Coding with Music', href: '#ch72', warna: '#1a5cff' },
+  { num: '73', judul: 'Perpustakaan Digital', href: '#ch73', warna: '#f59e0b' },
+  { num: '74', judul: 'Kreativitas & Desain', href: '#ch74', warna: '#8b5cf6' },
+  { num: '75', judul: 'Komunitas & Mentor', href: '#ch75', warna: '#22c55e' },
+  { num: '76', judul: 'Impian Besar 2030', href: '#ch76', warna: '#ffd700' },
+  { num: '77', judul: 'Surat Developer Muda', href: '#ch77', warna: '#1a5cff' },
+  { num: '78', judul: 'IoT Inovasi Lanjutan', href: '#ch78', warna: '#22c55e' },
+  { num: '79', judul: 'Masa Depan Web', href: '#ch79', warna: '#8b5cf6' },
+  { num: '80', judul: 'Terima Kasih!', href: '#ch80', warna: '#ffd700' },
+  // ── GROUP 8: 81-90 AKADEMIK ──
+  { num: '81', judul: 'Skripsi Fighter', href: '#ch81', warna: '#e63329' },
+  { num: '82', judul: 'KVT.kom Platform', href: '#ch82', warna: '#8b5cf6' },
+  { num: '83', judul: 'Visi Pendidikan Digital', href: '#ch83', warna: '#1a5cff' },
+  { num: '84', judul: 'Penelitian & Jurnal', href: '#ch84', warna: '#0891b2' },
+  { num: '85', judul: 'Keuangan Mahasiswa', href: '#ch85', warna: '#22c55e' },
+  { num: '86', judul: 'Workflow Developer', href: '#ch86', warna: '#f59e0b' },
+  { num: '87', judul: 'Organisasi & Pengalaman', href: '#ch87', warna: '#8b5cf6' },
+  { num: '88', judul: 'Awal Mula Coding', href: '#ch88', warna: '#e63329' },
+  { num: '89', judul: 'Mentor & Inspirasi', href: '#ch89', warna: '#1a5cff' },
+  { num: '90', judul: 'Keluarga & Dukungan', href: '#ch90', warna: '#ffd700' },
+  // ── GROUP 9: 91-100 KEHIDUPAN ──
+  { num: '91', judul: 'Kehidupan Kampus', href: '#ch91', warna: '#22c55e' },
+  { num: '92', judul: 'Jember & Kota Perjalanan', href: '#ch92', warna: '#22c55e' },
+  { num: '93', judul: 'Budaya Digital Gen Z', href: '#ch93', warna: '#1a5cff' },
+  { num: '94', judul: 'Burnout & Bangkit', href: '#ch94', warna: '#e63329' },
+  { num: '95', judul: 'Kuliner Mahasiswa', href: '#ch95', warna: '#f59e0b' },
+  { num: '96', judul: 'Personal Branding', href: '#ch96', warna: '#0a66c2' },
+  { num: '97', judul: 'Film & Series Favorit', href: '#ch97', warna: '#8b5cf6' },
+  { num: '98', judul: 'Anime & Inspirasi', href: '#ch98', warna: '#e63329' },
+  { num: '99', judul: 'Lessons Hard Learned', href: '#ch99', warna: '#e63329' },
+  { num: '100', judul: '🎉 Milestone 100!', href: '#ch100', warna: '#ffd700' },
+  // ── GROUP 10: 101-110 TEKNOLOGI ──
+  { num: '101', judul: 'AI Tools Developer', href: '#ch101', warna: '#10a37f' },
+  { num: '102', judul: 'Machine Learning', href: '#ch102', warna: '#8b5cf6' },
+  { num: '103', judul: 'Cloud Computing', href: '#ch103', warna: '#0891b2' },
+  { num: '104', judul: 'Cyber Security', href: '#ch104', warna: '#e63329' },
+  { num: '105', judul: 'Database Mastery', href: '#ch105', warna: '#4479A1' },
+  { num: '106', judul: 'Clean Code', href: '#ch106', warna: '#22c55e' },
+  { num: '107', judul: 'API Design', href: '#ch107', warna: '#f59e0b' },
+  { num: '108', judul: 'Open Source', href: '#ch108', warna: '#22c55e' },
+  { num: '109', judul: 'UI/UX Desain', href: '#ch109', warna: '#e1306c' },
+  { num: '110', judul: 'Web3 & Blockchain', href: '#ch110', warna: '#f59e0b' },
+  // ── GROUP 11: 111-120 WARISAN & FINAL ──
+  { num: '111', judul: 'Warisan Digital', href: '#ch111', warna: '#8b5cf6' },
+  { num: '112', judul: 'Sosial & Dampak', href: '#ch112', warna: '#22c55e' },
+  { num: '113', judul: 'Nilai & Prinsip Hidup', href: '#ch113', warna: '#1a5cff' },
+  { num: '114', judul: 'Surat untuk Mereka', href: '#ch114', warna: '#8b5cf6' },
+  { num: '115', judul: 'Bucket List Developer', href: '#ch115', warna: '#f59e0b' },
+  { num: '116', judul: 'Refleksi Perjalanan', href: '#ch116', warna: '#0891b2' },
+  { num: '117', judul: 'Indonesia Digital', href: '#ch117', warna: '#e63329' },
+  { num: '118', judul: 'Roadmap 2026-2030', href: '#ch118', warna: '#1a5cff' },
+  { num: '119', judul: 'Epilog Agung', href: '#ch119', warna: '#ffd700' },
+  { num: '120', judul: '🎌 BERSAMBUNG...', href: '#ch120', warna: '#ffd700' },
+  // ── SPECIAL ──
+  { num: '★', judul: 'Level Progress Skills', href: '#progress-skills', warna: '#8b5cf6' },
+  { num: '◆', judul: 'Testimoni', href: '#testimonials', warna: '#22c55e' },
   { num: 'CV', judul: 'Curriculum Vitae', href: '#cv', warna: '#1a5cff' },
   { num: '?', judul: 'FAQ', href: '#faq', warna: '#f59e0b' },
   { num: '✉', judul: 'Kontak', href: '#contact', warna: '#22c55e' },
@@ -161,11 +260,10 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.4, type: 'spring', stiffness: 120 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
             ? 'bg-white border-b-4 border-[#0a0a0a] shadow-[0_4px_0_#0a0a0a]'
             : 'bg-white/95 border-b-2 border-[#0a0a0a]/30'
-        }`}
+          }`}
         style={{ background: darkMode ? '#111' : undefined }}
       >
         <div className="max-w-7xl mx-auto px-3 sm:px-4">
@@ -200,9 +298,8 @@ export default function Navbar() {
                     href={link.href}
                     whileHover={{ backgroundColor: '#ffd700', y: -2 }}
                     transition={{ duration: 0.1 }}
-                    className={`font-comic text-[11px] px-3 py-2 text-[#0a0a0a] hover:text-[#0a0a0a] transition-colors whitespace-nowrap ${
-                      i < navLinks.length - 1 ? 'border-r-2 border-[#0a0a0a]' : ''
-                    }`}
+                    className={`font-comic text-[11px] px-3 py-2 text-[#0a0a0a] hover:text-[#0a0a0a] transition-colors whitespace-nowrap ${i < navLinks.length - 1 ? 'border-r-2 border-[#0a0a0a]' : ''
+                      }`}
                   >
                     {link.name}
                   </motion.a>

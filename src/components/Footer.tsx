@@ -12,7 +12,7 @@ const links = [
   { icon: FiMail, href: 'mailto:rizkihabibi2432@gmail.com', label: 'Email' },
 ]
 
-const navLinks = [
+const tautanNav = [
   { label: 'BERANDA', href: '#home' },
   { label: 'KEAHLIAN', href: '#skills' },
   { label: 'PROYEK', href: '#projects' },
@@ -85,14 +85,14 @@ export default function Footer() {
             viewport={{ once: false }}
             className="flex flex-wrap justify-center gap-1 mb-8"
           >
-            {navLinks.map((n, i) => (
+            {tautanNav.map((n, i) => (
               <a
                 key={n.label}
                 href={n.href}
                 className="font-comic text-xs px-3 py-1 text-white/60 hover:text-comic-yellow transition-colors"
               >
                 {n.label}
-                {i < navLinks.length - 1 && <span className="ml-1 text-white/20">•</span>}
+                {i < tautanNav.length - 1 && <span className="ml-1 text-white/20">•</span>}
               </a>
             ))}
           </motion.div>

@@ -3,9 +3,9 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FiGithub, FiMenu, FiX, FiBookOpen, FiSearch, FiMusic, FiList, FiChevronDown, FiMoon, FiSun, FiCommand } from 'react-icons/fi'
-import StoryBook from '@/components/StoryBook'
+import BukuCerita from '@/components/BukuCerita'
 
-const navLinks = [
+const tautanNav = [
   { name: 'BERANDA', href: '#home' },
   { name: 'TENTANG', href: '#cerita' },
   { name: 'KEAHLIAN', href: '#skills' },
@@ -669,7 +669,7 @@ export default function Navbar() {
 
       {/* Story Book Popup */}
       <AnimatePresence>
-        {storyOpen && <StoryBook onTutup={() => setStoryOpen(false)} />}
+        {storyOpen && <BukuCerita onTutup={() => setStoryOpen(false)} />}
       </AnimatePresence>
 
       {/* Widget musik mini (muncul saat musik aktif) */}

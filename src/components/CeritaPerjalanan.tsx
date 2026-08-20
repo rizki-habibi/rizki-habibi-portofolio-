@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import ChapterHeader from '@/components/ChapterHeader'
+import HeaderBab from '@/components/HeaderBab'
 
 const panels = [
   {
@@ -73,7 +73,7 @@ export default function CeritaPerjalanan() {
       <div className="max-w-6xl mx-auto relative z-10">
 
         {/* Chapter Header */}
-        <ChapterHeader nomor="01" judul="ORIGIN STORY" warna="#1a5cff" subtitle="📖 Dari nol hingga di sini — ini cerita saya!" />
+        <HeaderBab nomor="01" judul="ORIGIN STORY" warna="#1a5cff" subtitle="📖 Dari nol hingga di sini — ini cerita saya!" />
 
         {/* Story panels grid */}
         <div className="grid md:grid-cols-2 gap-6 mb-16">

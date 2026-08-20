@@ -1,11 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    unoptimized: true,
+    unoptimized: false,
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 60,
   },
-  // Matikan dev indicator toolbar (N icon & Issues popup)
+  compress: true,
   devIndicators: false,
-  // Hapus output: "export" agar Vercel bisa deploy normal
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production'
+      ? { exclude: ['error', 'warn'] }
+      : false,
+  },
 };
 
 module.exports = nextConfig;

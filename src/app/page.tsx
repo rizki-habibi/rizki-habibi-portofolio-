@@ -1,5 +1,7 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
+import PanelKomik from '@/components/PanelKomik'
+import KuesionerKerjasama from '@/components/KuesionerKerjasama'
 import CeritaPerjalanan from '@/components/CeritaPerjalanan'
 import Keahlian from '@/components/Keahlian'
 import Proyek from '@/components/Proyek'
@@ -70,6 +72,7 @@ export default function Home() {
       <LayarMemuat />
       <ProgressScroll />
       <KembaliKeAtas />
+      <KuesionerKerjasama />
       <Navbar />
 
       {/* CHAPTER 00 — THE ORIGIN */}
@@ -97,6 +100,10 @@ export default function Home() {
 
       {/* CHAPTER 03 — THE MISSIONS */}
       <Proyek />
+      <div className="comic-divider" />
+
+      {/* PANEL KOMIK GALLERY */}
+      <PanelKomik />
       <div className="comic-divider" />
 
       {/* CHAPTER 04 — MY JOURNEY */}

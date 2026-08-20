@@ -288,7 +288,7 @@ export default function Certificates() {
 
       {/* Modal sertifikat */}
       <AnimatePresence>
-        {selected && (
+        {dipilih && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -307,16 +307,16 @@ export default function Certificates() {
               onClick={e => e.stopPropagation()}
             >
               {/* Modal header */}
-              <div className="flex items-center justify-between px-5 py-3" style={{ background: col(selected.category).border, borderBottom: '3px solid #0a0a0a' }}>
+              <div className="flex items-center justify-between px-5 py-3" style={{ background: col(dipilih.category).border, borderBottom: '3px solid #0a0a0a' }}>
                 <div>
-                  <div className="font-comic text-white text-lg leading-tight">{selected.title}</div>
-                  <div className="text-white/70 text-xs font-bold">{selected.issuer} • {selected.year}</div>
+                  <div className="font-comic text-white text-lg leading-tight">{dipilih.title}</div>
+                  <div className="text-white/70 text-xs font-bold">{dipilih.issuer} • {dipilih.year}</div>
                 </div>
                 <div className="flex items-center gap-2">
-                  <a href={selected.file} download className="p-1.5 bg-white/20 hover:bg-white/30 transition-colors" title="Download">
+                  <a href={dipilih.file} download className="p-1.5 bg-white/20 hover:bg-white/30 transition-colors" title="Download">
                     <FiDownload className="w-4 h-4 text-white" />
                   </a>
-                  <a href={selected.file} target="_blank" rel="noopener noreferrer" className="p-1.5 bg-white/20 hover:bg-white/30 transition-colors">
+                  <a href={dipilih.file} target="_blank" rel="noopener noreferrer" className="p-1.5 bg-white/20 hover:bg-white/30 transition-colors">
                     <FiExternalLink className="w-4 h-4 text-white" />
                   </a>
                   <button onClick={() => setDipilih(null)} className="p-1.5 bg-red-600 hover:bg-red-700 transition-colors">
@@ -326,13 +326,13 @@ export default function Certificates() {
               </div>
               {/* Preview */}
               <div className="flex-1 overflow-auto" style={{ minHeight: 300 }}>
-                {(selected as any).isImage ? (
+                {(dipilih as any).isImage ? (
                   <div className="flex items-center justify-center p-4 bg-gray-50 min-h-full">
-                    <img src={selected.file} alt={selected.title} className="max-w-full max-h-[70vh] object-contain" style={{ border: '2px solid #0a0a0a' }} />
+                    <img src={dipilih.file} alt={dipilih.title} className="max-w-full max-h-[70vh] object-contain" style={{ border: '2px solid #0a0a0a' }} />
                   </div>
                 ) : (
-                  <object data={`${selected.file}#toolbar=1&view=FitH`} type="application/pdf" className="w-full" style={{ height: '70vh' }}>
-                    <iframe src={`${selected.file}#toolbar=1&view=FitH`} className="w-full border-0" style={{ height: '70vh' }} title={selected.title} />
+                  <object data={`${dipilih.file}#toolbar=1&view=FitH`} type="application/pdf" className="w-full" style={{ height: '70vh' }}>
+                    <iframe src={`${dipilih.file}#toolbar=1&view=FitH`} className="w-full border-0" style={{ height: '70vh' }} title={dipilih.title} />
                   </object>
                 )}
               </div>

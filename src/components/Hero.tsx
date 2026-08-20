@@ -11,12 +11,17 @@ function TeksAnimasi() {
   const [indeksTeks, setIndeksTeks] = useState(0)
   const [indeksKarakter, setIndeksKarakter] = useState(0)
   const [sedangHapus, setSedangHapus] = useState(false)
+  const [glitching, setGlitching] = useState(false)
+
   useEffect(() => {
     const teksSaatIni = teksRotasi[indeksTeks]
     const pewaktu = setTimeout(() => {
       if (!sedangHapus) {
         if (indeksKarakter < teksSaatIni.length) setIndeksKarakter(c => c + 1)
-        else setTimeout(() => setSedangHapus(true), 1500)
+        else {
+          // glitch effect sebelum hapus
+          setTimeout(() => { setGlitching(true); setTimeout(() => { setGlitching(false); setSedangHapus(true) }, 400) }, 1200)
+        }
       } else {
         if (indeksKarakter > 0) setIndeksKarakter(c => c - 1)
         else { setSedangHapus(false); setIndeksTeks(i => (i + 1) % teksRotasi.length) }
@@ -24,8 +29,16 @@ function TeksAnimasi() {
     }, sedangHapus ? 40 : 80)
     return () => clearTimeout(pewaktu)
   }, [indeksKarakter, sedangHapus, indeksTeks])
+
   return (
-    <span className="text-comic-blue">
+    <span
+      className="text-comic-blue relative inline-block"
+      style={glitching ? {
+        animation: 'glitchTeks 0.4s steps(2) infinite',
+        textShadow: '2px 0 #e63329, -2px 0 #1a5cff',
+        filter: 'blur(0.5px)',
+      } : undefined}
+    >
       {teksRotasi[indeksTeks].slice(0, indeksKarakter)}
       <span className="typing-cursor">|</span>
     </span>
@@ -110,13 +123,44 @@ export default function Hero() {
               🙌 Selamat datang di cerita perjalanan saya!
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, x: -60 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2, duration: 0.5 }}>
-              <div className="font-comic text-4xl sm:text-5xl md:text-6xl leading-none mb-1" style={{ color: '#0a0a0a', WebkitTextStroke: '2px #0a0a0a' }}>HALO!</div>
+            <div>
+              {/* HALO! — stamp reveal */}
+              <motion.div
+                initial={{ scale: 3, opacity: 0, rotate: -8 }}
+                animate={{ scale: 1, opacity: 1, rotate: 0 }}
+                transition={{ delay: 0.2, duration: 0.5, type: 'spring', stiffness: 220, damping: 14 }}
+                className="font-comic text-4xl sm:text-5xl md:text-6xl leading-none mb-1"
+                style={{ color: '#0a0a0a', WebkitTextStroke: '2px #0a0a0a', display: 'inline-block' }}
+              >
+                HALO!
+              </motion.div>
               <div className="font-comic leading-none">
-                <span className="block text-4xl sm:text-5xl md:text-7xl" style={{ color: '#0a0a0a' }}>SAYA</span>
-                <span className="block text-4xl sm:text-5xl md:text-7xl" style={{ color: '#1a5cff', WebkitTextStroke: '2px #0a0a0a', textShadow: '4px 4px 0 #0a0a0a' }}>RIZKI HABIBI</span>
+                {/* SAYA — slide in dari kiri */}
+                <motion.span
+                  className="block text-4xl sm:text-5xl md:text-7xl"
+                  style={{ color: '#0a0a0a' }}
+                  initial={{ x: -80, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 0.32, duration: 0.45, type: 'spring', stiffness: 180 }}
+                >
+                  SAYA
+                </motion.span>
+                {/* RIZKI HABIBI — per karakter muncul satu per satu dengan efek glitch warna */}
+                <span className="block text-4xl sm:text-5xl md:text-7xl" style={{ color: '#1a5cff', WebkitTextStroke: '2px #0a0a0a', textShadow: '4px 4px 0 #0a0a0a' }}>
+                  {'RIZKI HABIBI'.split('').map((huruf, i) => (
+                    <motion.span
+                      key={i}
+                      initial={{ opacity: 0, y: -30, rotate: -15 }}
+                      animate={{ opacity: 1, y: 0, rotate: 0 }}
+                      transition={{ delay: 0.42 + i * 0.04, type: 'spring', stiffness: 300, damping: 15 }}
+                      style={{ display: 'inline-block', whiteSpace: huruf === ' ' ? 'pre' : undefined }}
+                    >
+                      {huruf}
+                    </motion.span>
+                  ))}
+                </span>
               </div>
-            </motion.div>
+            </div>
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="comic-panel inline-block px-3 sm:px-4 py-2 max-w-full">
               <p className="font-comic text-[10px] sm:text-xs md:text-sm text-comic-black tracking-wide leading-relaxed">

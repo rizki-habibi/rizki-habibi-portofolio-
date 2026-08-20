@@ -32,7 +32,7 @@ function Box({ icon, title, text, color, bg, wide }: { icon: string; title: stri
       viewport={{ once: false, amount: 0.1 }}
       whileHover={{ y: -5, scale: 1.03 }}
       className={`overflow-hidden ${wide ? 'col-span-2' : ''}`}
-      style={{ border: `3px solid ${color}`, boxShadow: `5px 5px 0 ${color}`, background: latarBelakang }}
+      style={{ border: `3px solid ${color}`, boxShadow: `5px 5px 0 ${color}`, background: bg }}
     >
       <div className="p-4">
         <div className="text-3xl mb-2">{icon}</div>

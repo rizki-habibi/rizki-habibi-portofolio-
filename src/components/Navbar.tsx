@@ -347,13 +347,13 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-1.5 flex-1 justify-center">
               {/* Nav links utama */}
               <div className="flex items-center border-2 border-[#0a0a0a]" style={{ boxShadow: '2px 2px 0 #0a0a0a' }}>
-                {navLinks.map((link, i) => (
+                {tautanNav.map((link, i) => (
                   <motion.a
                     key={link.name}
                     href={link.href}
                     whileHover={{ backgroundColor: '#ffd700', y: -2 }}
                     transition={{ duration: 0.1 }}
-                    className={`font-comic text-[11px] px-3 py-2 text-[#0a0a0a] hover:text-[#0a0a0a] transition-colors whitespace-nowrap ${i < navLinks.length - 1 ? 'border-r-2 border-[#0a0a0a]' : ''
+                    className={`font-comic text-[11px] px-3 py-2 text-[#0a0a0a] hover:text-[#0a0a0a] transition-colors whitespace-nowrap ${i < tautanNav.length - 1 ? 'border-r-2 border-[#0a0a0a]' : ''
                       }`}
                   >
                     {link.name}
@@ -572,7 +572,7 @@ export default function Navbar() {
             >
               <div className="px-4 py-3 space-y-1.5">
                 {/* Nav links */}
-                {navLinks.map(link => (
+                {tautanNav.map(link => (
                   <a
                     key={link.name}
                     href={link.href}

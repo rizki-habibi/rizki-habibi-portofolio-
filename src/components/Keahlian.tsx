@@ -101,7 +101,7 @@ export default function Skills() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {keahlianLunak.map((keahlian, i) => (
               <motion.div
-                key={skill.name}
+                key={keahlian.name}
                 initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}

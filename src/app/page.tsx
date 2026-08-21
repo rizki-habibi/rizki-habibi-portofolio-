@@ -33,6 +33,15 @@ import GrupBab13 from '@/components/GrupBab13'
 import GrupBab14 from '@/components/GrupBab14'
 import GrupBab15 from '@/components/GrupBab15'
 import GrupBab16 from '@/components/GrupBab16'
+import GrupBab17 from '@/components/GrupBab17'
+import GrupBab18 from '@/components/GrupBab18'
+import GrupBab19 from '@/components/GrupBab19'
+import GrupBab20 from '@/components/GrupBab20'
+import GrupBab21 from '@/components/GrupBab21'
+import GrupBab22 from '@/components/GrupBab22'
+import GrupBab23 from '@/components/GrupBab23'
+import GrupBab24 from '@/components/GrupBab24'
+import GrupBab25 from '@/components/GrupBab25'
 import CV from '@/components/CV'
 import SeksiKontak from '@/components/SeksiKontak'
 import Footer from '@/components/Footer'
@@ -212,6 +221,33 @@ export default function Home() {
 
       {/* CHAPTERS 161–170 — GRAND FINALE, PROYEK IMPIAN, SALAM PERPISAHAN */}
       <GrupBab16 />
+
+      {/* CHAPTERS 171–180 — ANIMASI, MICRO-INTERACTION, PERFORMA, KEAMANAN, KARIR */}
+      <GrupBab17 />
+
+      {/* 200 INOVASI — BAB 1: EDUKASI DIGITAL (inovasi 1-25) */}
+      <GrupBab18 />
+
+      {/* 200 INOVASI — BAB 2: PLATFORM & PRODUK (inovasi 26-50) */}
+      <GrupBab19 />
+
+      {/* 200 INOVASI — BAB 3: IoT (51-75) + BAB 4: AI/ML (76-100) */}
+      <GrupBab20 />
+
+      {/* 200 INOVASI — BAB 5: FINTECH (101-125) + BAB 6: KESEHATAN/LINGKUNGAN (126-150) */}
+      <GrupBab21 />
+
+      {/* 200 INOVASI — BAB 7: DEVELOPER TOOLS (151-175) + BAB 8: KREATIF/SENI (176-200) */}
+      <GrupBab22 />
+
+      {/* 200 INOVASI — REKAP STATISTIK + DAMPAK */}
+      <GrupBab23 />
+
+      {/* 200 INOVASI — ROADMAP EKSEKUSI + KOLABORASI */}
+      <GrupBab24 />
+
+      {/* 200 INOVASI — FILOSOFI + TANTANGAN + GRAND FINALE */}
+      <GrupBab25 />
 
       <div className="comic-divider" />
 

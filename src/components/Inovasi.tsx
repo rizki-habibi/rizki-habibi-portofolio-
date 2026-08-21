@@ -135,7 +135,15 @@ export default function Innovation() {
               <div className="p-5" style={{ background: item.bg }}>
                 <div className="flex items-start gap-3 mb-4">
                   <span className="text-3xl flex-shrink-0">{item.emoji}</span>
-                  <p className="text-sm text-comic-black leading-relaxed">{item.deskripsi}</p>
+                  <motion.p
+                    initial={{ opacity: 0, x: -15 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 + index * 0.05 }}
+                    viewport={{ once: false }}
+                    className="text-sm text-comic-black leading-relaxed"
+                  >
+                    {item.deskripsi}
+                  </motion.p>
                 </div>
 
                 <ul className="space-y-2 pl-2" style={{ borderLeft: `3px solid ${item.color}` }}>
@@ -166,23 +174,52 @@ export default function Innovation() {
           viewport={{ once: false, amount: 0.3 }}
           className="comic-panel-dark p-8 md:p-10 text-center"
         >
-          <div className="text-4xl mb-4">♻️</div>
-          <blockquote className="font-bold text-white text-base md:text-lg max-w-3xl mx-auto leading-relaxed mb-4">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.05 }}
+            viewport={{ once: false }}
+            className="text-4xl mb-4"
+          >
+            ♻️
+          </motion.div>
+          <motion.blockquote
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            viewport={{ once: false }}
+            className="font-bold text-white text-base md:text-lg max-w-3xl mx-auto leading-relaxed mb-4"
+          >
             &quot;Inovasi sejati bukan hanya soal menulis kode — tapi tentang{' '}
             <span className="text-comic-yellow">melihat potensi di balik bahan yang dianggap tidak berguna</span>{' '}
             dan mengubahnya menjadi solusi nyata yang berdampak.&quot;
-          </blockquote>
-          <p className="text-white/50 text-sm font-bold">— Rizki Habibi, Web Developer &amp; Innovator</p>
+          </motion.blockquote>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            viewport={{ once: false }}
+            className="text-white/50 text-sm font-bold"
+          >
+            — Rizki Habibi, Web Developer &amp; Innovator
+          </motion.p>
           <div className="flex justify-center gap-8 mt-6">
             {[
               { num: '3+', label: 'Alat Dibuat', color: '#22c55e' },
               { num: 'IoT', label: 'Integrasi', color: '#1a5cff' },
               { num: '♻️', label: 'Daur Ulang', color: '#f59e0b' },
-            ].map((s) => (
-              <div key={s.label} className="flex flex-col items-center gap-1">
+            ].map((s, i) => (
+              <motion.div
+                key={s.label}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.25 + i * 0.07, type: 'spring', stiffness: 150 }}
+                viewport={{ once: false }}
+                className="flex flex-col items-center gap-1"
+              >
                 <span className="font-comic text-2xl" style={{ color: s.color }}>{s.num}</span>
                 <span className="text-xs text-white/40 font-bold uppercase tracking-wide">{s.label}</span>
-              </div>
+              </motion.div>
             ))}
           </div>
         </motion.div>

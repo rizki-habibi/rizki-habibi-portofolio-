@@ -175,9 +175,15 @@ export default function AchievementsComic() {
           viewport={{ once: false, amount: 0.2 }}
           className="comic-panel-dark p-8"
         >
-          <div className="font-comic text-2xl text-white text-center mb-8">
+          <motion.div
+            initial={{ opacity: 0, y: -15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.05 }}
+            viewport={{ once: false }}
+            className="font-comic text-2xl text-white text-center mb-8"
+          >
             🗺️ PETA PERJALANAN
-          </div>
+          </motion.div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {milestones.map((m, i) => (
               <motion.div

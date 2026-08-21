@@ -123,7 +123,15 @@ export default function HobbiesComic() {
             viewport={{ once: false, amount: 0.3 }}
             className="space-y-4"
           >
-            <div className="font-comic text-2xl text-comic-black mb-4">🧠 CHARACTER TRAITS</div>
+            <motion.div
+              initial={{ opacity: 0, y: -15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.05 }}
+              viewport={{ once: false }}
+              className="font-comic text-2xl text-comic-black mb-4"
+            >
+              🧠 CHARACTER TRAITS
+            </motion.div>
             {personality.map((p, i) => (
               <motion.div
                 key={p.trait}
@@ -153,7 +161,15 @@ export default function HobbiesComic() {
           viewport={{ once: false, amount: 0.3 }}
           className="comic-panel-yellow p-6"
         >
-          <div className="font-comic text-xl text-comic-black text-center mb-4">⚡ FUN FACTS</div>
+          <motion.div
+            initial={{ opacity: 0, y: -15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.05 }}
+            viewport={{ once: false }}
+            className="font-comic text-xl text-comic-black text-center mb-4"
+          >
+            ⚡ FUN FACTS
+          </motion.div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
             {[
               '🌙 Produktif paling tinggi saat malam hari',
@@ -165,10 +181,11 @@ export default function HobbiesComic() {
             ].map((fact, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: i * 0.07 }}
+                initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: i * 0.07, type: 'spring', stiffness: 120 }}
                 viewport={{ once: false }}
+                whileHover={{ scale: 1.03 }}
                 className="flex items-start gap-2 text-xs font-bold text-comic-black p-2 bg-white"
                 style={{ border: '2px solid #f59e0b' }}
               >

@@ -75,8 +75,24 @@ export default function StatsComic() {
                 </div>
 
                 {/* Label */}
-                <div className="font-comic text-sm text-comic-black tracking-wide">{stat.label}</div>
-                <div className="text-[11px] font-bold text-comic-black/50 mt-1">{stat.desc}</div>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 + i * 0.05 }}
+                  viewport={{ once: false }}
+                  className="font-comic text-sm text-comic-black tracking-wide"
+                >
+                  {stat.label}
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.25 + i * 0.05 }}
+                  viewport={{ once: false }}
+                  className="text-[11px] font-bold text-comic-black/50 mt-1"
+                >
+                  {stat.desc}
+                </motion.div>
               </div>
 
               {/* Corner accent */}

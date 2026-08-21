@@ -14,6 +14,8 @@ import ToolsKomik from '@/components/ToolsKomik'
 import PencapaianKomik from '@/components/PencapaianKomik'
 import KutipanKomik from '@/components/KutipanKomik'
 import PendidikanKomik from '@/components/PendidikanKomik'
+import AkademikKomik from '@/components/AkademikKomik'
+import InfoKarirKomik from '@/components/InfoKarirKomik'
 import HobiKomik from '@/components/HobiKomik'
 import KomunikasiKomik from '@/components/KomunikasiKomik'
 import EpilogKomik from '@/components/EpilogKomik'
@@ -42,6 +44,11 @@ import GrupBab22 from '@/components/GrupBab22'
 import GrupBab23 from '@/components/GrupBab23'
 import GrupBab24 from '@/components/GrupBab24'
 import GrupBab25 from '@/components/GrupBab25'
+import GrupBab26 from '@/components/GrupBab26'
+import GrupBab27 from '@/components/GrupBab27'
+import GrupBab28 from '@/components/GrupBab28'
+import GrupBab29 from '@/components/GrupBab29'
+import GrupBab30 from '@/components/GrupBab30'
 import CV from '@/components/CV'
 import SeksiKontak from '@/components/SeksiKontak'
 import Footer from '@/components/Footer'
@@ -163,6 +170,14 @@ export default function Home() {
       <PendidikanKomik />
       <div className="comic-divider" />
 
+      {/* REKAP AKADEMIK S1-7 + SKRIPSI */}
+      <AkademikKomik />
+      <div className="comic-divider" />
+
+      {/* INFO KARIR & LOWONGAN KERJA */}
+      <InfoKarirKomik />
+      <div className="comic-divider" />
+
       {/* CHAPTER 13 — OFF-DUTY LIFE */}
       <HobiKomik />
       <div className="comic-divider" />
@@ -248,6 +263,21 @@ export default function Home() {
 
       {/* 200 INOVASI — FILOSOFI + TANTANGAN + GRAND FINALE */}
       <GrupBab25 />
+
+      {/* CHAPTERS 261–270 — PRODUKTIVITAS & KEHIDUPAN DEVELOPER */}
+      <GrupBab26 />
+
+      {/* CHAPTERS 271–280 — OPEN SOURCE, KOMUNITAS, NETWORKING */}
+      <GrupBab27 />
+
+      {/* CHAPTERS 281–290 — STARTUP, BISNIS, REVENUE MODEL */}
+      <GrupBab28 />
+
+      {/* CHAPTERS 291–300 — WEB3, AR/VR, QUANTUM, AGI, PREDIKSI */}
+      <GrupBab29 />
+
+      {/* CHAPTERS 301–310 — PERSONAL BRANDING, KARIR, IMPIAN BESAR */}
+      <GrupBab30 />
 
       <div className="comic-divider" />
 

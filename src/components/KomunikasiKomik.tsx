@@ -88,7 +88,15 @@ export default function KomunikasiComic() {
           viewport={{ once: false, amount: 0.2 }}
           className="mb-12 comic-panel-dark p-8"
         >
-          <div className="font-comic text-2xl text-white text-center mb-8">💫 NILAI KOLABORASI</div>
+          <motion.div
+            initial={{ opacity: 0, y: -15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.05 }}
+            viewport={{ once: false }}
+            className="font-comic text-2xl text-white text-center mb-8"
+          >
+            💫 NILAI KOLABORASI
+          </motion.div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {collaborationValues.map((v, i) => (
               <motion.div
@@ -116,7 +124,15 @@ export default function KomunikasiComic() {
           transition={{ duration: 0.5 }}
           viewport={{ once: false, amount: 0.3 }}
         >
-          <div className="font-comic text-2xl text-comic-black text-center mb-6">📡 TEMUKAN SAYA DI</div>
+          <motion.div
+            initial={{ opacity: 0, y: -15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.05 }}
+            viewport={{ once: false }}
+            className="font-comic text-2xl text-comic-black text-center mb-6"
+          >
+            📡 TEMUKAN SAYA DI
+          </motion.div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
             {socialLinks.map((s, i) => (
               <motion.a

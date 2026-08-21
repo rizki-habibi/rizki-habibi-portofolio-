@@ -217,6 +217,10 @@ export default function TestimonialsComic() {
             <motion.button
               key={i}
               onClick={() => setAktif(i)}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.05, type: 'spring', stiffness: 200 }}
+              viewport={{ once: false }}
               whileHover={{ scale: 1.3 }}
               className="w-3 h-3 transition-all"
               style={{

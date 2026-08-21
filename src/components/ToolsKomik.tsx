@@ -145,7 +145,15 @@ export default function ToolsComic() {
           viewport={{ once: false, amount: 0.3 }}
           className="mt-8 comic-panel-yellow p-6"
         >
-          <div className="font-comic text-xl text-comic-black mb-4 text-center">📖 MEDIA BELAJAR</div>
+          <motion.div
+            initial={{ opacity: 0, y: -15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.05 }}
+            viewport={{ once: false }}
+            className="font-comic text-xl text-comic-black mb-4 text-center"
+          >
+            📖 MEDIA BELAJAR
+          </motion.div>
           <div className="flex flex-wrap justify-center gap-3">
             {['YouTube (Otodidak)', 'Mesin Pencarian', 'Jurnal & Artikel Ilmiah', 'Dokumentasi Resmi', 'Forum Developer'].map((m, i) => (
               <motion.div

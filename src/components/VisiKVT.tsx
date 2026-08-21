@@ -92,10 +92,17 @@ export default function VisiKVT() {
           className="mb-12 comic-panel overflow-hidden"
         >
           {/* Header panel */}
-          <div className="px-6 py-3 flex items-center gap-3" style={{ background: '#1a5cff', borderBottom: '3px solid #0a0a0a' }}>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4 }}
+            viewport={{ once: false }}
+            className="px-6 py-3 flex items-center gap-3"
+            style={{ background: '#1a5cff', borderBottom: '3px solid #0a0a0a' }}
+          >
             <FiTv className="w-5 h-5 text-white" />
             <span className="font-comic text-xl text-white tracking-wide">KAMPUS KULIAH VTUBER — ORIGIN STORY</span>
-          </div>
+          </motion.div>
 
           <div className="p-6 md:p-8 grid md:grid-cols-2 gap-8 items-start">
             {/* Narasi utama */}
@@ -110,14 +117,28 @@ export default function VisiKVT() {
                 💡 &quot;Ketika lulus nanti, saya sudah punya gambaran...&quot;
               </motion.div>
 
-              <p className="text-sm text-comic-black leading-relaxed font-medium">
+              <motion.p
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.15 }}
+                viewport={{ once: false }}
+                className="text-sm text-comic-black leading-relaxed font-medium"
+              >
                 Saya bermimpi untuk membangun <strong>kampus digital pertama berbasis Vtuber</strong> di Indonesia —
                 sebuah platform pendidikan yang menggabungkan teknologi virtual, konten kreatif, dan komunitas digital
                 dalam satu ekosistem pembelajaran yang menarik dan inovatif.
-              </p>
+              </motion.p>
 
               <div className="comic-panel-blue p-4 space-y-2">
-                <div className="font-comic text-comic-blue text-lg mb-2">🎯 KONSEP UTAMA</div>
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 }}
+                  viewport={{ once: false }}
+                  className="font-comic text-comic-blue text-lg mb-2"
+                >
+                  🎯 KONSEP UTAMA
+                </motion.div>
                 {[
                   '🎓 Program studi berbasis Vtuber & teknologi virtual',
                   '💻 Kurikulum web development + creative digital',
@@ -138,17 +159,29 @@ export default function VisiKVT() {
                 ))}
               </div>
 
-              <div
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                viewport={{ once: false }}
                 className="p-3 font-bold text-xs text-comic-black"
                 style={{ background: '#fff8cc', border: '2px solid #f59e0b', boxShadow: '3px 3px 0 #f59e0b' }}
               >
                 📌 Status: Website sudah ada di <strong>kvt.kom</strong> — belum dipublish, sedang dalam pengembangan
-              </div>
+              </motion.div>
             </div>
 
             {/* Domain cards */}
             <div className="space-y-3">
-              <div className="font-comic text-lg text-comic-black mb-4">🌐 EKOSISTEM DOMAIN KVT</div>
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                viewport={{ once: false }}
+                className="font-comic text-lg text-comic-black mb-4"
+              >
+                🌐 EKOSISTEM DOMAIN KVT
+              </motion.div>
               {domainKVT.map((d, i) => (
                 <motion.div
                   key={d.domain}
@@ -197,10 +230,24 @@ export default function VisiKVT() {
           className="mb-12"
         >
           <div className="text-center mb-6">
-            <div className="font-comic text-2xl text-comic-black">🎓 SISTEM GELAR — MANDALA INSTITUTE × KVT</div>
-            <p className="text-xs text-comic-black/60 font-bold mt-1">
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              viewport={{ once: false, amount: 0.3 }}
+              className="font-comic text-2xl text-comic-black"
+            >
+              🎓 SISTEM GELAR — MANDALA INSTITUTE × KVT
+            </motion.div>
+            <motion.p
+              initial={{ opacity: 0, x: -15 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.15 }}
+              viewport={{ once: false }}
+              className="text-xs text-comic-black/60 font-bold mt-1"
+            >
               Gelar ID unik yang saya ciptakan sendiri sebagai identitas pendidikan digital
-            </p>
+            </motion.p>
           </div>
           <div className="grid md:grid-cols-3 gap-5">
             {mandalaGelar.map((g, i) => (
@@ -242,12 +289,35 @@ export default function VisiKVT() {
           viewport={{ once: false, amount: 0.3 }}
           className="comic-panel-dark p-8 text-center"
         >
-          <div className="font-comic text-4xl text-comic-yellow mb-4">🚀</div>
-          <blockquote className="font-comic text-white text-xl md:text-2xl leading-snug mb-4" style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.5)' }}>
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.05 }}
+            viewport={{ once: false }}
+            className="font-comic text-4xl text-comic-yellow mb-4"
+          >
+            🚀
+          </motion.div>
+          <motion.blockquote
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            viewport={{ once: false }}
+            className="font-comic text-white text-xl md:text-2xl leading-snug mb-4"
+            style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.5)' }}
+          >
             &quot;Saya tidak hanya ingin lulus — saya ingin menciptakan tempat belajar yang
             <span className="text-comic-yellow"> belum pernah ada sebelumnya</span> di Indonesia.&quot;
-          </blockquote>
-          <p className="text-white/50 font-bold text-sm">— Rizki Habibi, Pendiri KVT.kom (In Progress)</p>
+          </motion.blockquote>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            viewport={{ once: false }}
+            className="text-white/50 font-bold text-sm"
+          >
+            — Rizki Habibi, Pendiri KVT.kom (In Progress)
+          </motion.p>
         </motion.div>
       </div>
     </section>

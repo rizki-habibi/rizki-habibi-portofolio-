@@ -443,21 +443,31 @@ function Ch89() {
   ]
   return (
     <PanelBab id="ch89" chNum="CHAPTER 89" judul="MENTOR & INSPIRASI — YANG MEMBENTUK SAYA" warna="#1a5cff" latarBelakang="#e8f0ff">
-      <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
+      <motion.div
+        className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]"
+        initial={{ opacity: 0, x: 40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ type: 'spring', stiffness: 150 }}
+        viewport={{ once: false, amount: 0.3 }}>
         🌟 Tidak harus kenal langsung untuk terinspirasi — karya mereka adalah guru terbaik!
-      </div>
+      </motion.div>
       <div className="space-y-4">
         {mentors.map((m, i) => (
           <motion.div key={m.nama}
-            initial={{ opacity: 0, scale: 0.95, rotate: i % 2 === 0 ? -1 : 1 }}
-            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-            transition={{ delay: i * 0.1, type: 'spring' }}
-            viewport={{ once: false }}
-            whileHover={{ x: 6 }}
+            initial={{ opacity: 0, x: i % 2 === 0 ? -60 : 60, y: 20 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
+            transition={{ delay: i * 0.12, type: 'spring', stiffness: 120, damping: 14 }}
+            viewport={{ once: false, amount: 0.2 }}
+            whileHover={{ x: 8, scale: 1.02 }}
             className="flex gap-4 p-4"
             style={{ border: `3px solid ${m.warna}`, boxShadow: `5px 5px 0 ${m.warna}`, background: 'white' }}>
-            <div className="w-12 h-12 flex items-center justify-center text-2xl font-comic text-white flex-shrink-0"
-              style={{ background: m.warna, border: '2px solid #0a0a0a' }}>{m.icon}</div>
+            <motion.div
+              className="w-12 h-12 flex items-center justify-center text-2xl font-comic text-white flex-shrink-0"
+              style={{ background: m.warna, border: '2px solid #0a0a0a' }}
+              animate={{ rotate: [0, 5, -5, 0] }}
+              transition={{ duration: 3, repeat: Infinity, delay: i * 0.5 }}>
+              {m.icon}
+            </motion.div>
             <div>
               <div className="font-comic text-base text-[#0a0a0a]">{m.nama}</div>
               <div className="text-[10px] font-bold text-[#0a0a0a]/50 mb-1">{m.peran}</div>

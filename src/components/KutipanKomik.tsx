@@ -112,7 +112,15 @@ export default function QuoteComic() {
           viewport={{ once: false, amount: 0.2 }}
           className="mb-12"
         >
-          <div className="font-comic text-2xl text-white text-center mb-6">🧭 4 PILAR FILOSOFI HIDUP</div>
+          <motion.div
+            initial={{ opacity: 0, y: -15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.05 }}
+            viewport={{ once: false }}
+            className="font-comic text-2xl text-white text-center mb-6"
+          >
+            🧭 4 PILAR FILOSOFI HIDUP
+          </motion.div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {filosopi.map((f, i) => (
               <motion.div
@@ -157,13 +165,27 @@ export default function QuoteComic() {
             </div>
           </div>
           <div className="flex-1">
-            <div className="font-comic text-2xl text-comic-black mb-4">💭 PESAN VETERAN</div>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.05 }}
+              viewport={{ once: false }}
+              className="font-comic text-2xl text-comic-black mb-4"
+            >
+              💭 PESAN VETERAN
+            </motion.div>
             <div className="speech-bubble inline-block text-sm mb-4 text-comic-black">
               &ldquo;Pengalaman bukan tentang lamanya waktu — tapi seberapa dalam kamu menyelami setiap prosesnya.&rdquo;
             </div>
-            <p className="text-sm text-comic-black/70 leading-relaxed font-bold">
+            <motion.p
+              initial={{ opacity: 0, x: -15 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2 }}
+              viewport={{ once: false }}
+              className="text-sm text-comic-black/70 leading-relaxed font-bold"
+            >
               Karakter veteran ini melambangkan semangat untuk terus belajar dan berkembang, tidak peduli seberapa jauh perjalanan yang sudah ditempuh. Setiap tantangan adalah pelajaran baru.
-            </p>
+            </motion.p>
           </div>
         </motion.div>
       </div>

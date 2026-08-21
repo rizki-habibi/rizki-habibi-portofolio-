@@ -50,7 +50,7 @@ function Ch161() {
   ]
   return (
     <PanelBab id="ch161" num="161" judul="100 HARI PRODUKTIF — CHALLENGE HIDUP" warna="#1a5cff" latarBelakang="#e8f0ff">
-      <div className="speech-bubble inline-block text-sm mb-6">?? 100 hari adalah waktu yang cukup untuk mengubah hidup secara signifikan — jika dijalani dengan intention!</div>
+      <div className="speech-bubble inline-block text-sm mb-6">⚡ 100 hari adalah waktu yang cukup untuk mengubah hidup secara signifikan — jika dijalani dengan intention!</div>
       <div className="space-y-3">
         {target.map((t, i) => (
           <motion.div key={t.hari}
@@ -75,16 +75,16 @@ function Ch161() {
 // -- Ch162: PROYEK IMPIAN 2027 -------------------------------------------------
 function Ch162() {
   const proyek = [
-    { nama: 'KVT.kom v2.0', desc: 'Platform edukasi full-featured: live coding, AI tutor, job board, dan komunitas aktif 10.000+ member', status: 'AKTIF DEVELOP', icon: '??', warna: '#8b5cf6' },
-    { nama: 'Sistem Donasi Transparan', desc: 'QRIS-based donation platform dengan blockchain transparency. Setiap rupiah bisa dilacak penggunaannya', status: 'PLANNING', icon: '??', warna: '#e63329' },
-    { nama: 'Website Desa Platform', desc: 'SaaS khusus untuk website desa: template, CMS mudah, hosting murah, training untuk operator desa', status: 'PLANNING', icon: '???', warna: '#22c55e' },
-    { nama: 'Developer Portfolio AI', desc: 'AI yang membantu developer junior membuat portfolio yang menarik dan ATS-friendly secara otomatis', status: 'IDEA', icon: '??', warna: '#1a5cff' },
-    { nama: 'Smart Farming App', desc: 'App untuk petani lokal: harga pasar, cuaca, tips budidaya, dan marketplace langsung ke konsumen', status: 'IDEA', icon: '??', warna: '#f59e0b' },
+    { nama: 'KVT.kom v2.0', desc: 'Platform edukasi full-featured: live coding, AI tutor, job board, dan komunitas aktif 10.000+ member', status: 'AKTIF DEVELOP', icon: '🚀', warna: '#8b5cf6' },
+    { nama: 'Sistem Donasi Transparan', desc: 'QRIS-based donation platform dengan blockchain transparency. Setiap rupiah bisa dilacak penggunaannya', status: 'PLANNING', icon: '💰', warna: '#e63329' },
+    { nama: 'Website Desa Platform', desc: 'SaaS khusus untuk website desa: template, CMS mudah, hosting murah, training untuk operator desa', status: 'PLANNING', icon: '🏘️', warna: '#22c55e' },
+    { nama: 'Developer Portfolio AI', desc: 'AI yang membantu developer junior membuat portfolio yang menarik dan ATS-friendly secara otomatis', status: 'IDEA', icon: '🤖', warna: '#1a5cff' },
+    { nama: 'Smart Farming App', desc: 'App untuk petani lokal: harga pasar, cuaca, tips budidaya, dan marketplace langsung ke konsumen', status: 'IDEA', icon: '🌾', warna: '#f59e0b' },
   ]
   return (
     <PanelBab id="ch162" num="162" judul="PROYEK IMPIAN 2027 — VISI YANG MENANTI" warna="#8b5cf6" latarBelakang="#f5f0ff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        ?? Setiap proyek besar bermula dari satu baris kode dan satu keyakinan: &ldquo;ini bisa dilakukan!&rdquo;
+        💡 Setiap proyek besar bermula dari satu baris kode dan satu keyakinan: &ldquo;ini bisa dilakukan!&rdquo;
       </div>
       <div className="space-y-4">
         {proyek.map((p, i) => (
@@ -114,16 +114,16 @@ function Ch162() {
 function Ch163() {
   return (
     <PanelBab id="ch163" num="163" judul="SATU TAHUN KVT.KOM — PROYEKSI & HARAPAN" warna="#22c55e" latarBelakang="#f0fdf4">
-      <div className="speech-bubble inline-block text-sm mb-6">?? Apa yang diharapkan setelah satu tahun KVT.kom berjalan?</div>
+      <div className="speech-bubble inline-block text-sm mb-6">🎯 Apa yang diharapkan setelah satu tahun KVT.kom berjalan?</div>
       <div className="grid lg:grid-cols-2 gap-8">
         <div className="space-y-4">
           {[
-            { metric: 'Pengguna Terdaftar', target: '5.000+', icon: '??', warna: '#22c55e' },
-            { metric: 'Kursus Tersedia', target: '20+ kursus', icon: '??', warna: '#1a5cff' },
-            { metric: 'Mentor Aktif', target: '15 mentor', icon: '??', warna: '#8b5cf6' },
-            { metric: 'Developer Dapat Kerja', target: '200+ alumni', icon: '??', warna: '#f59e0b' },
-            { metric: 'Kota Terjangkau', target: '5 kota', icon: '???', warna: '#e63329' },
-            { metric: 'Revenue Bulanan', target: 'Rp 50JT+', icon: '??', warna: '#0891b2' },
+            { metric: 'Pengguna Terdaftar', target: '5.000+', icon: '👥', warna: '#22c55e' },
+            { metric: 'Kursus Tersedia', target: '20+ kursus', icon: '📚', warna: '#1a5cff' },
+            { metric: 'Mentor Aktif', target: '15 mentor', icon: '🧙‍♂️', warna: '#8b5cf6' },
+            { metric: 'Developer Dapat Kerja', target: '200+ alumni', icon: '💼', warna: '#f59e0b' },
+            { metric: 'Kota Terjangkau', target: '5 kota', icon: '🏙️', warna: '#e63329' },
+            { metric: 'Revenue Bulanan', target: 'Rp 50JT+', icon: '💰', warna: '#0891b2' },
           ].map(m => (
             <div key={m.metric} className="flex items-center justify-between p-3"
               style={{ border: `2px solid ${m.warna}`, boxShadow: `2px 2px 0 ${m.warna}`, background: 'white' }}>
@@ -136,7 +136,7 @@ function Ch163() {
           ))}
         </div>
         <div className="comic-panel-dark p-5">
-          <div className="font-comic text-xl text-white mb-3">?? HARAPAN TERBESAR</div>
+          <div className="font-comic text-xl text-white mb-3">❤️ HARAPAN TERBESAR</div>
           <p className="text-sm text-white/70 font-bold leading-relaxed mb-4">
             Bukan tentang angka revenue atau jumlah user. Harapan terbesarnya sederhana:
           </p>
@@ -148,7 +148,7 @@ function Ch163() {
               'Satu desa yang punya website berkat program website desa KVT.kom',
             ].map((h, i) => (
               <div key={i} className="flex items-start gap-2">
-                <span className="text-yellow-400 flex-shrink-0">??</span>
+                <span className="text-yellow-400 flex-shrink-0">⭐</span>
                 <p className="text-xs text-white/70 font-bold italic">&ldquo;{h}&rdquo;</p>
               </div>
             ))}
@@ -162,16 +162,16 @@ function Ch163() {
 // -- Ch164: PESAN UNTUK GENERASI BERIKUTNYA ------------------------------------
 function Ch164() {
   const pesan = [
-    { kepada: 'Developer 2030', teks: 'Teknologi yang kalian pakai sekarang dibangun oleh developer seperti kami yang percaya bahwa kode bisa mengubah dunia. Jaga kepercayaan itu!', icon: '??', warna: '#1a5cff' },
-    { kepada: 'Pengusaha Tech Muda', teks: 'Bangun bisnis yang benar-benar memecahkan masalah manusia. Valuasi tinggi tidak ada artinya jika tidak ada dampak nyata di masyarakat', icon: '??', warna: '#22c55e' },
-    { kepada: 'Peneliti & Akademisi', teks: 'Jembatani gap antara penelitian di jurnal dan implementasi nyata. Temukan cara membawa risetmu keluar dari paper ke dunia', icon: '??', warna: '#8b5cf6' },
-    { kepada: 'Pendidik Digital', teks: 'Cara terbaik belajar berubah setiap dekade. Jadilah pendidik yang terus belajar dan beradaptasi bersama siswamu', icon: '??', warna: '#f59e0b' },
-    { kepada: 'Pembuat Kebijakan', teks: 'Regulasi teknologi yang bijak butuh pemahaman teknis. Dengarkan developer, libatkan mereka dalam proses pembuatan kebijakan digital', icon: '???', warna: '#e63329' },
+    { kepada: 'Developer 2030', teks: 'Teknologi yang kalian pakai sekarang dibangun oleh developer seperti kami yang percaya bahwa kode bisa mengubah dunia. Jaga kepercayaan itu!', icon: '💻', warna: '#1a5cff' },
+    { kepada: 'Pengusaha Tech Muda', teks: 'Bangun bisnis yang benar-benar memecahkan masalah manusia. Valuasi tinggi tidak ada artinya jika tidak ada dampak nyata di masyarakat', icon: '🚀', warna: '#22c55e' },
+    { kepada: 'Peneliti & Akademisi', teks: 'Jembatani gap antara penelitian di jurnal dan implementasi nyata. Temukan cara membawa risetmu keluar dari paper ke dunia', icon: '🔬', warna: '#8b5cf6' },
+    { kepada: 'Pendidik Digital', teks: 'Cara terbaik belajar berubah setiap dekade. Jadilah pendidik yang terus belajar dan beradaptasi bersama siswamu', icon: '🎓', warna: '#f59e0b' },
+    { kepada: 'Pembuat Kebijakan', teks: 'Regulasi teknologi yang bijak butuh pemahaman teknis. Dengarkan developer, libatkan mereka dalam proses pembuatan kebijakan digital', icon: '🏛️', warna: '#e63329' },
   ]
   return (
     <PanelBab id="ch164" num="164" judul="PESAN UNTUK GENERASI BERIKUTNYA" warna="#ffd700" latarBelakang="#fffbeb" gelap>
       <div className="speech-bubble inline-block text-sm mb-6 text-[#0a0a0a]">
-        ?? Surat terbuka untuk mereka yang akan meneruskan perjalanan ini...
+        ✉️ Surat terbuka untuk mereka yang akan meneruskan perjalanan ini...
       </div>
       <div className="space-y-4">
         {pesan.map((p, i) => (
@@ -200,15 +200,15 @@ function Ch165() {
   return (
     <PanelBab id="ch165" num="165" judul="SYUKUR — BERSYUKUR ATAS SETIAP PERJALANAN" warna="#f59e0b" latarBelakang="#fffbeb">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        ?? Gratitude is the foundation of abundance — mulai setiap hari dengan syukur!
+        🙏 Gratitude is the foundation of abundance — mulai setiap hari dengan syukur!
       </div>
       <GridTiga items={[
-        { icon: '??', judul: 'Syukur: Internet Gratis', teks: 'Bisa belajar coding dari YouTube, dokumentasi, dan blog gratis. Generasi sebelumnya tidak punya privilege ini!', warna: '#1a5cff', bg: '#e8f0ff' },
-        { icon: '??', judul: 'Syukur: Komunitas', teks: 'Open source developer yang berbagi kode gratis. Tanpa mereka, tidak ada Laravel, Next.js, atau tools yang kita pakai', warna: '#22c55e', bg: '#f0fdf4' },
-        { icon: '??', judul: 'Syukur: Kesempatan Belajar', teks: 'Digital Talent Scholarship dan program beasiswa lainnya yang membuka akses pendidikan berkualitas secara luas', warna: '#8b5cf6', bg: '#f5f0ff' },
-        { icon: '??', judul: 'Syukur: Keluarga', teks: 'Orang tua yang mendukung tanpa bertanya "kapan kerja" saat kita masih belajar dan membangun sesuatu', warna: '#f59e0b', bg: '#fffbeb' },
-        { icon: '??', judul: 'Syukur: Sertifikasi', teks: 'BNSP dan 75+ pelatihan yang membuka mata tentang luasnya dunia teknologi dan betapa banyak yang masih bisa dipelajari', warna: '#e63329', bg: '#fef2f2' },
-        { icon: '??', judul: 'Syukur: Setiap Error', teks: 'Setiap bug yang bikin frustasi, setiap error yang tidak ketemu solusinya berjam-jam — itulah yang membuat kita tumbuh!', warna: '#0891b2', bg: '#ecfeff' },
+        { icon: '🌐', judul: 'Syukur: Internet Gratis', teks: 'Bisa belajar coding dari YouTube, dokumentasi, dan blog gratis. Generasi sebelumnya tidak punya privilege ini!', warna: '#1a5cff', bg: '#e8f0ff' },
+        { icon: '🤝', judul: 'Syukur: Komunitas', teks: 'Open source developer yang berbagi kode gratis. Tanpa mereka, tidak ada Laravel, Next.js, atau tools yang kita pakai', warna: '#22c55e', bg: '#f0fdf4' },
+        { icon: '📖', judul: 'Syukur: Kesempatan Belajar', teks: 'Digital Talent Scholarship dan program beasiswa lainnya yang membuka akses pendidikan berkualitas secara luas', warna: '#8b5cf6', bg: '#f5f0ff' },
+        { icon: '❤️', judul: 'Syukur: Keluarga', teks: 'Orang tua yang mendukung tanpa bertanya "kapan kerja" saat kita masih belajar dan membangun sesuatu', warna: '#f59e0b', bg: '#fffbeb' },
+        { icon: '🏆', judul: 'Syukur: Sertifikasi', teks: 'BNSP dan 75+ pelatihan yang membuka mata tentang luasnya dunia teknologi dan betapa banyak yang masih bisa dipelajari', warna: '#e63329', bg: '#fef2f2' },
+        { icon: '🐛', judul: 'Syukur: Setiap Error', teks: 'Setiap bug yang bikin frustasi, setiap error yang tidak ketemu solusinya berjam-jam — itulah yang membuat kita tumbuh!', warna: '#0891b2', bg: '#ecfeff' },
       ]} />
     </PanelBab>
   )
@@ -228,7 +228,7 @@ function Ch166() {
   ]
   return (
     <PanelBab id="ch166" num="166" judul="8 PELAJARAN TERBESAR HIDUP" warna="#e63329" latarBelakang="#fef2f2">
-      <div className="speech-bubble inline-block text-sm mb-6">?? Tidak perlu bayar mahal untuk dapat wisdom ini — biarkan pengalaman orang lain jadi pelajaran gratis kamu!</div>
+      <div className="speech-bubble inline-block text-sm mb-6">💡 Tidak perlu bayar mahal untuk dapat wisdom ini — biarkan pengalaman orang lain jadi pelajaran gratis kamu!</div>
       <div className="grid sm:grid-cols-2 gap-4">
         {pelajaran.map((p, i) => (
           <motion.div key={p.no}
@@ -253,12 +253,12 @@ function Ch167() {
   return (
     <PanelBab id="ch167" num="167" judul="SALAM DARI JEMBER — KOTA YANG MEMBESARKAN" warna="#22c55e" latarBelakang="#f0fdf4">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        ??? Jember bukan kota besar, tapi melahirkan mimpi-mimpi yang tidak kalah besar!
+        🌴 Jember bukan kota besar, tapi melahirkan mimpi-mimpi yang tidak kalah besar!
       </div>
       <div className="grid lg:grid-cols-2 gap-8">
         <div className="space-y-4">
           <div className="comic-panel p-5">
-            <div className="font-comic text-lg text-[#0a0a0a] mb-3">?? JEMBER YANG KAMI KENAL</div>
+            <div className="font-comic text-lg text-[#0a0a0a] mb-3">🗺️ JEMBER YANG KAMI KENAL</div>
             {[
               { aspek: 'Kota Tembakau', desc: 'Jember terkenal sebagai produsen tembakau berkualitas tinggi dan sentra industri kreatif Jember Fashion Carnival' },
               { aspek: 'Kampus Berkualitas', desc: 'UNEJ, ITSM, STIKI — ekosistem akademik yang semakin berkembang dengan mahasiswa dari berbagai daerah' },
@@ -273,7 +273,7 @@ function Ch167() {
           </div>
         </div>
         <div className="comic-panel-dark p-5">
-          <div className="font-comic text-xl text-white mb-3">?? KENAPA BANGGA DARI JEMBER</div>
+          <div className="font-comic text-xl text-white mb-3">🏆 KENAPA BANGGA DARI JEMBER</div>
           <div className="space-y-3">
             {[
               'Membuktikan bahwa developer hebat tidak harus dari Jakarta atau Bandung',
@@ -283,7 +283,7 @@ function Ch167() {
               'Dari Jember untuk Indonesia — dan suatu hari, untuk dunia',
             ].map((alasan, i) => (
               <div key={i} className="flex items-start gap-2">
-                <span className="text-green-400 flex-shrink-0">??</span>
+                <span className="text-green-400 flex-shrink-0">✅</span>
                 <p className="text-xs text-white/70 font-bold">{alasan}</p>
               </div>
             ))}
@@ -306,7 +306,7 @@ function Ch168() {
   return (
     <PanelBab id="ch168" num="168" judul="KATA-KATA PAMUNGKAS — SEBELUM EPILOG" warna="#ffd700" latarBelakang="#fffbeb" gelap>
       <div className="speech-bubble inline-block text-sm mb-6 text-[#0a0a0a]">
-        ? Kata-kata yang menemani perjalanan ini dari awal hingga akhir...
+        ✨ Kata-kata yang menemani perjalanan ini dari awal hingga akhir...
       </div>
       <div className="space-y-4">
         {quotes.map((q, i) => (
@@ -331,14 +331,14 @@ function Ch169() {
   return (
     <PanelBab id="ch169" num="169" judul="APRESIASI — TERIMA KASIH YANG TULUS" warna="#f59e0b" latarBelakang="#fffbeb">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        ?? Ada banyak sekali yang harus disyukuri dan banyak orang yang harus diapresiasi dalam perjalanan ini!
+        🙏 Ada banyak sekali yang harus disyukuri dan banyak orang yang harus diapresiasi dalam perjalanan ini!
       </div>
       <div className="grid sm:grid-cols-2 gap-4 mb-6">
         {[
-          { kepada: 'Orang Tua', isi: 'Yang tidak pernah berhenti percaya, mendoakan, dan berkorban tanpa pamrih. Semua ini untuk kalian.', icon: '??', warna: '#f59e0b' },
-          { kepada: 'Dosen & Pembimbing', isi: 'Yang mengarahkan penelitian dengan sabar dan memberi ruang untuk bereksperimen dan berkembang.', icon: '??', warna: '#1a5cff' },
-          { kepada: 'Komunitas Developer', isi: 'Ribuan developer yang berbagi ilmu gratis di blog, YouTube, forum. Kalian adalah guru tanpa jabatan.', icon: '??', warna: '#22c55e' },
-          { kepada: 'Kamu yang Membaca', isi: 'Yang sudah meluangkan waktu membaca 170 chapter ini. Kesabaran dan antusiasmu adalah motivasi terbesar!', icon: '??', warna: '#8b5cf6' },
+          { kepada: 'Orang Tua', isi: 'Yang tidak pernah berhenti percaya, mendoakan, dan berkorban tanpa pamrih. Semua ini untuk kalian.', icon: '❤️', warna: '#f59e0b' },
+          { kepada: 'Dosen & Pembimbing', isi: 'Yang mengarahkan penelitian dengan sabar dan memberi ruang untuk bereksperimen dan berkembang.', icon: '🎓', warna: '#1a5cff' },
+          { kepada: 'Komunitas Developer', isi: 'Ribuan developer yang berbagi ilmu gratis di blog, YouTube, forum. Kalian adalah guru tanpa jabatan.', icon: '💻', warna: '#22c55e' },
+          { kepada: 'Kamu yang Membaca', isi: 'Yang sudah meluangkan waktu membaca 170 chapter ini. Kesabaran dan antusiasmu adalah motivasi terbesar!', icon: '📖', warna: '#8b5cf6' },
         ].map((a, i) => (
           <motion.div key={a.kepada}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -370,7 +370,7 @@ function Ch170() {
           transition={{ type: 'spring', stiffness: 100 }}
           viewport={{ once: false }}
           className="mb-8">
-          <div className="text-7xl sm:text-9xl mb-4">??</div>
+          <div className="text-7xl sm:text-9xl mb-4">🚀</div>
           <div className="font-comic text-5xl sm:text-7xl text-yellow-400 mb-2" style={{ textShadow: '5px 5px 0 rgba(255,215,0,0.3)' }}>
             THE END...?
           </div>
@@ -379,9 +379,9 @@ function Ch170() {
 
         <div className="grid sm:grid-cols-3 gap-4 mb-8">
           {[
-            { angka: '170', label: 'Chapter Epik', icon: '??', warna: '#ffd700' },
-            { angka: '8', label: 'Kisah Tersisa', icon: '?', warna: '#e63329' },
-            { angka: '??', label: 'Menuju Bintang', icon: '??', warna: '#1a5cff' },
+            { angka: '170', label: 'Chapter Epik', icon: '📖', warna: '#ffd700' },
+            { angka: '8+', label: 'Kisah Tersisa', icon: '✨', warna: '#e63329' },
+            { angka: '∞', label: 'Menuju Bintang', icon: '🌟', warna: '#1a5cff' },
           ].map(s => (
             <motion.div key={s.label}
               initial={{ opacity: 0, y: 20 }}
@@ -404,7 +404,7 @@ function Ch170() {
           viewport={{ once: false }}
           className="p-6 mb-8"
           style={{ border: '4px solid #ffd700', boxShadow: '8px 8px 0 #ffd700', background: '#111', borderRadius: 20 }}>
-          <div className="font-comic text-2xl text-yellow-400 mb-3">?? TENTANG PORTFOLIO INI</div>
+          <div className="font-comic text-2xl text-yellow-400 mb-3">📖 TENTANG PORTFOLIO INI</div>
           <p className="text-sm font-bold text-white/80 leading-relaxed">
             Portfolio ini lahir dari keyakinan bahwa perjalanan seorang developer bukan hanya soal skill teknis —
             tapi tentang karakter, filosofi, passion, dan dampak yang ditinggalkan.
@@ -426,9 +426,9 @@ function Ch170() {
             viewport={{ once: false }}
             className="p-4 text-center"
             style={{ border: '3px solid #22c55e', boxShadow: '4px 4px 0 #22c55e', background: '#111' }}>
-            <div className="font-comic text-base text-green-400 mb-2">?? KERJA SAMA?</div>
+            <div className="font-comic text-base text-green-400 mb-2">🤝 KERJA SAMA?</div>
             <p className="text-xs text-white/60 font-bold mb-3">Punya proyek menarik? Mari ciptakan sesuatu yang bermakna!</p>
-            <a href="#contact" className="btn-comic text-sm">HUBUNGI SAYA ?</a>
+            <a href="#contact" className="btn-comic text-sm">HUBUNGI SAYA →</a>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -436,9 +436,9 @@ function Ch170() {
             viewport={{ once: false }}
             className="p-4 text-center"
             style={{ border: '3px solid #1a5cff', boxShadow: '4px 4px 0 #1a5cff', background: '#111' }}>
-            <div className="font-comic text-base text-blue-400 mb-2">?? LIHAT CV LENGKAP</div>
+            <div className="font-comic text-base text-blue-400 mb-2">📄 LIHAT CV LENGKAP</div>
             <p className="text-xs text-white/60 font-bold mb-3">Semua detail pengalaman tersedia di sini</p>
-            <a href="#cv" className="btn-comic-blue text-sm">LIHAT CV ?</a>
+            <a href="#cv" className="btn-comic-blue text-sm">LIHAT CV →</a>
           </motion.div>
         </div>
 
@@ -447,12 +447,12 @@ function Ch170() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5 }}
           viewport={{ once: false }}>
-          <div className="font-comic text-2xl text-yellow-400 mb-2">? SAMPAI BERJUMPA DI CHAPTER 171!</div>
+          <div className="font-comic text-2xl text-yellow-400 mb-2">⚡ SAMPAI BERJUMPA DI CHAPTER 171!</div>
           <div className="font-comic text-sm text-white/30 tracking-widest">
             --- RIZKI HABIBI PORTFOLIO · JEMBER · 2026 ---
           </div>
           <div className="font-comic text-xs text-white/20 mt-1 tracking-wider">
-            Made with ? using Next.js · Tailwind CSS · Framer Motion
+            Made with ❤️ using Next.js · Tailwind CSS · Framer Motion
           </div>
         </motion.div>
       </div>

@@ -1,8 +1,20 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
 import { SiLaravel, SiPhp, SiNextdotjs, SiTailwindcss, SiMysql, SiJavascript, SiTypescript, SiHtml5, SiCss3, SiGit, SiBootstrap, SiFigma, SiLinux, SiPython, SiReact, SiNodedotjs } from 'react-icons/si'
 import { VscCode } from 'react-icons/vsc'
+
+// Pause marquee saat tab di-background — hemat GPU/RAM
+function usePausedWhenHidden() {
+  const [paused, setPaused] = useState(false)
+  useEffect(() => {
+    const handler = () => setPaused(document.hidden)
+    document.addEventListener('visibilitychange', handler)
+    return () => document.removeEventListener('visibilitychange', handler)
+  }, [])
+  return paused
+}
 
 const techItems = [
   { icon: SiLaravel, name: 'Laravel', color: '#FF2D20' },
@@ -26,8 +38,10 @@ const techItems = [
 
 // Duplicate for seamless loop
 const doubledItems = [...techItems, ...techItems]
+const doubledItemsRev = [...techItems].reverse().concat([...techItems].reverse())
 
 export default function TechMarquee() {
+  const paused = usePausedWhenHidden()
   return (
     <section className="py-6 sm:py-10 overflow-hidden relative" style={{ background: '#0a0a0a' }}>
       {/* Fade edges */}
@@ -40,7 +54,8 @@ export default function TechMarquee() {
       <motion.div
         className="flex gap-3 sm:gap-6 mb-3 sm:mb-4"
         animate={{ x: ['0%', '-50%'] }}
-        transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
+        transition={{ duration: 30, repeat: Infinity, ease: 'linear', repeatType: 'loop' }}
+        style={{ animationPlayState: paused ? 'paused' : 'running' }}
       >
         {doubledItems.map((tech, i) => (
           <div
@@ -58,9 +73,10 @@ export default function TechMarquee() {
       <motion.div
         className="flex gap-3 sm:gap-6"
         animate={{ x: ['-50%', '0%'] }}
-        transition={{ duration: 35, repeat: Infinity, ease: 'linear' }}
+        transition={{ duration: 35, repeat: Infinity, ease: 'linear', repeatType: 'loop' }}
+        style={{ animationPlayState: paused ? 'paused' : 'running' }}
       >
-        {doubledItems.reverse().map((tech, i) => (
+        {doubledItemsRev.map((tech, i) => (
           <div
             key={`row2-${i}`}
             className="flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-2.5 whitespace-nowrap flex-shrink-0 transition-colors"

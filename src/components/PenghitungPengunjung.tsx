@@ -129,9 +129,11 @@ export default function PenghitungPengunjung() {
     ambilData(true)
   }, [ambilData])
 
-  // Auto-refresh setiap 30 detik
+  // Auto-refresh setiap 5 menit, pause saat tab di-background
   useEffect(() => {
-    const interval = setInterval(() => ambilData(false), 30_000)
+    const interval = setInterval(() => {
+      if (!document.hidden) ambilData(false)
+    }, 300_000) // 5 menit
     return () => clearInterval(interval)
   }, [ambilData])
 

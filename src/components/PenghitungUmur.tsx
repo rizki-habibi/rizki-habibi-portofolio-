@@ -71,20 +71,18 @@ function DigitFlip({ nilai, label, warna, bg }: { nilai: number; label: string; 
 
 export default function AgeCounter() {
   const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: true })
+  // once:false — interval pause saat keluar viewport, aktif lagi saat masuk
+  const inView = useInView(ref, { once: false, margin: '0px 0px -100px 0px' })
   const [umur, setUmur] = useState(hitungUmur)
-  const [aktif, setAktif] = useState(false)
 
-  // Mulai hitung detik saat section terlihat
+  // Interval hanya berjalan saat section terlihat DAN tab aktif
   useEffect(() => {
-    if (inView) setAktif(true)
-  }, [inView])
-
-  useEffect(() => {
-    if (!aktif) return
-    const id = setInterval(() => setUmur(hitungUmur()), 1000)
+    if (!inView) return
+    const id = setInterval(() => {
+      if (!document.hidden) setUmur(hitungUmur())
+    }, 1000)
     return () => clearInterval(id)
-  }, [aktif])
+  }, [inView])
 
   const unitUtama = [
     { nilai: umur.tahun, label: 'TAHUN', warna: '#1a5cff', bg: '#e8f0ff', maks: 100 },

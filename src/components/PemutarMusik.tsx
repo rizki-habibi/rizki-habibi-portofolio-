@@ -25,7 +25,9 @@ function Bar({ aktif }: { aktif: boolean }) {
           animate={aktif
             ? { height: [`${h * 12}px`, `${(1 - h) * 9 + 2}px`, `${h * 12}px`] }
             : { height: '2px' }}
-          transition={{ duration: 0.45 + i * 0.08, repeat: Infinity, ease: 'easeInOut', delay: i * 0.06 }}
+          transition={aktif
+            ? { duration: 0.45 + i * 0.08, repeat: Infinity, ease: 'easeInOut', delay: i * 0.06 }
+            : { duration: 0.2 }}
         />
       ))}
     </div>

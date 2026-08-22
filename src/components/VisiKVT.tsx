@@ -9,7 +9,7 @@ const domainKVT = [
   {
     domain: 'kvt.kom',
     level: 'Portal Utama',
-    desc: 'Domain induk ekosistem KVT — pusat seluruh platform digital KVT.',
+    desc: 'Domain induk ekosistem KVT -- pusat seluruh platform digital KVT.',
     color: '#1a5cff',
     bg: '#e8f0ff',
     icon: '🌐',
@@ -17,7 +17,7 @@ const domainKVT = [
   },
   {
     domain: 'kvt1.kom',
-    level: 'S1 — Sarjana KVT',
+    level: 'S1 -- Sarjana KVT',
     desc: 'Program Studi S1 Teknologi & Inovasi Digital KVT. Gelar: S.KVT (Sarjana KVT).',
     color: '#22c55e',
     bg: '#f0fdf4',
@@ -27,7 +27,7 @@ const domainKVT = [
   },
   {
     domain: 'kvt2.kom',
-    level: 'S2 — Magister KVT',
+    level: 'S2 -- Magister KVT',
     desc: 'Program Magister bidang Teknologi Digital & Inovasi KVT. Gelar: M.KVT (Magister KVT).',
     color: '#f59e0b',
     bg: '#fffbeb',
@@ -37,7 +37,7 @@ const domainKVT = [
   },
   {
     domain: 'kvt3.kom',
-    level: 'S3 — Doktor KVT',
+    level: 'S3 -- Doktor KVT',
     desc: 'Program Doktoral riset & pengembangan teknologi KVT. Gelar: Dr.KVT (Doktor KVT).',
     color: '#e63329',
     bg: '#fef2f2',
@@ -101,7 +101,7 @@ export default function VisiKVT() {
             style={{ background: '#1a5cff', borderBottom: '3px solid #0a0a0a' }}
           >
             <FiTv className="w-5 h-5 text-white" />
-            <span className="font-comic text-xl text-white tracking-wide">KAMPUS KULIAH VTUBER — ORIGIN STORY</span>
+            <span className="font-comic text-xl text-white tracking-wide">KAMPUS KULIAH VTUBER -- ORIGIN STORY</span>
           </motion.div>
 
           <div className="p-6 md:p-8 grid md:grid-cols-2 gap-8 items-start">
@@ -124,7 +124,7 @@ export default function VisiKVT() {
                 viewport={{ once: true }}
                 className="text-sm text-comic-black leading-relaxed font-medium"
               >
-                Saya bermimpi untuk membangun <strong>kampus digital pertama berbasis Vtuber</strong> di Indonesia —
+                Saya bermimpi untuk membangun <strong>kampus digital pertama berbasis Vtuber</strong> di Indonesia --
                 sebuah platform pendidikan yang menggabungkan teknologi virtual, konten kreatif, dan komunitas digital
                 dalam satu ekosistem pembelajaran yang menarik dan inovatif.
               </motion.p>
@@ -167,7 +167,7 @@ export default function VisiKVT() {
                 className="p-3 font-bold text-xs text-comic-black"
                 style={{ background: '#fff8cc', border: '2px solid #f59e0b', boxShadow: '3px 3px 0 #f59e0b' }}
               >
-                📌 Status: Website sudah ada di <strong>kvt.kom</strong> — belum dipublish, sedang dalam pengembangan
+                📌 Status: Website sudah ada di <strong>kvt.kom</strong> -- belum dipublish, sedang dalam pengembangan
               </motion.div>
             </div>
 
@@ -237,7 +237,7 @@ export default function VisiKVT() {
               viewport={{ once: true, amount: 0.3 }}
               className="font-comic text-2xl text-comic-black"
             >
-              🎓 SISTEM GELAR — MANDALA INSTITUTE × KVT
+              🎓 SISTEM GELAR -- MANDALA INSTITUTE  KVT
             </motion.div>
             <motion.p
               initial={{ opacity: 0, x: -15 }}
@@ -306,7 +306,7 @@ export default function VisiKVT() {
             className="font-comic text-white text-xl md:text-2xl leading-snug mb-4"
             style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.5)' }}
           >
-            &quot;Saya tidak hanya ingin lulus — saya ingin menciptakan tempat belajar yang
+            &quot;Saya tidak hanya ingin lulus -- saya ingin menciptakan tempat belajar yang
             <span className="text-comic-yellow"> belum pernah ada sebelumnya</span> di Indonesia.&quot;
           </motion.blockquote>
           <motion.p
@@ -316,7 +316,7 @@ export default function VisiKVT() {
             viewport={{ once: true }}
             className="text-white/50 font-bold text-sm"
           >
-            — Rizki Habibi, Pendiri KVT.kom (In Progress)
+            -- Rizki Habibi, Pendiri KVT.kom (In Progress)
           </motion.p>
         </motion.div>
       </div>

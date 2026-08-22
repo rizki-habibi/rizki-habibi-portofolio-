@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import { SiLaravel, SiPhp, SiNextdotjs, SiTailwindcss, SiMysql, SiJavascript, SiTypescript, SiHtml5, SiCss3, SiGit, SiBootstrap, SiFigma, SiLinux, SiPython, SiReact, SiNodedotjs } from 'react-icons/si'
 import { VscCode } from 'react-icons/vsc'
 
-// Pause marquee saat tab di-background — hemat GPU/RAM
+// Pause marquee saat tab di-background -- hemat GPU/RAM
 function usePausedWhenHidden() {
   const [paused, setPaused] = useState(false)
   useEffect(() => {

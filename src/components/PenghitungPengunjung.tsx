@@ -5,7 +5,7 @@ import { useRef, useState, useEffect, useCallback } from 'react'
 import { FiEye, FiClock, FiUsers, FiHeart, FiTrendingUp, FiRefreshCw, FiWifi, FiWifiOff } from 'react-icons/fi'
 
 // ============================================================
-// HELPER — buat atau ambil ID sesi pengunjung
+// HELPER -- buat atau ambil ID sesi pengunjung
 // ============================================================
 function ambilIdPengunjung(): string {
   if (typeof window === 'undefined') return ''
@@ -18,7 +18,7 @@ function ambilIdPengunjung(): string {
 }
 
 // ============================================================
-// HELPER — simpan & ambil cache localStorage
+// HELPER -- simpan & ambil cache localStorage
 // ============================================================
 interface DataPengunjung {
   pageViews: number
@@ -88,7 +88,7 @@ export default function PenghitungPengunjung() {
   const [memuatLike, setMemuatLike] = useState(false)
   const [sudahLike, setSudahLike] = useState(false)
   const [sedangRefresh, setSedangRefresh] = useState(false)
-  const [avgTime] = useState(() => 40 + Math.floor(Math.random() * 20)) // 40–60 detik
+  const [avgTime] = useState(() => 40 + Math.floor(Math.random() * 20)) // 40-60 detik
 
   // Cek apakah sudah pernah like
   useEffect(() => {
@@ -122,7 +122,7 @@ export default function PenghitungPengunjung() {
     }
   }, [])
 
-  // Saat komponen mount — catat kunjungan
+  // Saat komponen mount -- catat kunjungan
   useEffect(() => {
     const cache = ambilCache()
     if (cache) setData(cache) // tampilkan cache dulu agar tidak blank
@@ -184,7 +184,7 @@ export default function PenghitungPengunjung() {
             BY THE NUMBERS
           </h2>
           <div className="mt-3 font-comic text-white/40 text-xs tracking-widest">
-            — DATA REAL-TIME SEJAK PORTOFOLIO DILUNCURKAN —
+            -- DATA REAL-TIME SEJAK PORTOFOLIO DILUNCURKAN --
           </div>
 
           {/* Indikator status koneksi */}
@@ -310,7 +310,7 @@ export default function PenghitungPengunjung() {
                 </motion.div>
               )}
             </AnimatePresence>
-            {sudahLike ? `TERIMA KASIH! (${data.likes.toLocaleString('id-ID')})` : `KASIH LIKE — ${data.likes.toLocaleString('id-ID')}`}
+            {sudahLike ? `TERIMA KASIH! (${data.likes.toLocaleString('id-ID')})` : `KASIH LIKE -- ${data.likes.toLocaleString('id-ID')}`}
           </motion.button>
           {sudahLike && (
             <motion.p

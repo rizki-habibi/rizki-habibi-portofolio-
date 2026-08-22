@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import HeaderBab from '@/components/HeaderBab'
 
-/* ─── Wrapper panel ─── */
+/* --- Wrapper panel --- */
 function PanelBab({ id, num, judul, warna, bg, gelap = false, children }: {
   id: string; num: string; judul: string; warna: string; bg: string; gelap?: boolean; children: React.ReactNode
 }) {
@@ -20,7 +20,7 @@ function PanelBab({ id, num, judul, warna, bg, gelap = false, children }: {
   )
 }
 
-/* ─── Kartu inovasi ─── */
+/* --- Kartu inovasi --- */
 function KartuInovasi({ no, judul, tag, deskripsi, status, warna, icon }: {
   no: number; judul: string; tag: string; deskripsi: string; status: string; warna: string; icon: string
 }) {
@@ -61,37 +61,37 @@ function KartuInovasi({ no, judul, tag, deskripsi, status, warna, icon }: {
   )
 }
 
-/* ─── Ch181: INOVASI EDUKASI (1-25) ─── */
+/* --- Ch181: INOVASI EDUKASI (1-25) --- */
 function Ch181() {
   const inovasi = [
-    { no:1,  judul:'KVT.kom AI Tutor',       tag:'EdTech · AI',      status:'AKTIF',    warna:'#1a5cff', icon:'🤖', deskripsi:'AI tutor personal yang bisa menjawab pertanyaan coding kapan saja, adaptif terhadap level pemahaman siswa, dan memberikan feedback real-time saat latihan kode.' },
-    { no:2,  judul:'Kelas Coding Offline-First', tag:'EdTech · PWA', status:'PROTOTYPE', warna:'#22c55e', icon:'📡', deskripsi:'Platform belajar coding yang bisa diakses tanpa internet sepenuhnya. Materi ter-cache di device, progress sync saat koneksi tersedia. Untuk daerah 3T.' },
-    { no:3,  judul:'Gamifikasi Belajar Coding', tag:'EdTech · Game',  status:'RISET',    warna:'#f59e0b', icon:'🎮', deskripsi:'Sistem XP, level, badge, dan leaderboard untuk belajar coding. Setiap modul selesai = item unlock. Quest harian yang memaksa konsistensi belajar.' },
-    { no:4,  judul:'Peer Code Review Platform',tag:'EdTech · Social', status:'KONSEP',   warna:'#8b5cf6', icon:'👥', deskripsi:'Siswa saling review kode satu sama lain dengan panduan terstruktur. Membangun kemampuan critical thinking dan komunikasi teknis sejak dini.' },
-    { no:5,  judul:'Visualisasi Algoritma 3D', tag:'EdTech · Visualisasi', status:'RISET', warna:'#e63329', icon:'🧊', deskripsi:'Render algoritma sorting, searching, dan struktur data dalam 3D interaktif menggunakan WebGL. Siswa bisa rotate, zoom, dan step-by-step eksekusi.' },
-    { no:6,  judul:'Kurikulum Adaptif AI',    tag:'EdTech · AI',      status:'KONSEP',   warna:'#0891b2', icon:'🎯', deskripsi:'Kurikulum yang menyesuaikan urutan materi berdasarkan pola kesalahan siswa. Jika sering salah di array, sistem otomatis memperpanjang modul terkait.' },
-    { no:7,  judul:'Coding Bareng Mentor Live',tag:'EdTech · Live',   status:'ROADMAP',  warna:'#22c55e', icon:'🎙️', deskripsi:'Sesi live coding 1-on-1 dengan mentor via video call terintegrasi dengan shared editor. Mentor bisa nulis langsung di kode siswa real-time.' },
-    { no:8,  judul:'Sertifikat NFT Belajar',  tag:'EdTech · Web3',    status:'KONSEP',   warna:'#8b5cf6', icon:'🏆', deskripsi:'Sertifikat kelulusan kursus diterbitkan sebagai NFT on-chain yang bisa diverifikasi employer langsung, tidak bisa dipalsukan.' },
-    { no:9,  judul:'Microlearning 5 Menit',   tag:'EdTech · Mobile',  status:'PROTOTYPE',warna:'#f59e0b', icon:'⏱️', deskripsi:'Modul pelajaran max 5 menit yang dioptimalkan untuk dikonsumsi di perjalanan. Format: video pendek + mini quiz + satu contoh kode nyata.' },
-    { no:10, judul:'Coding Competition Platform',tag:'EdTech · Kompetisi', status:'AKTIF', warna:'#1a5cff', icon:'🏅', deskripsi:'Platform kompetisi coding lokal Indonesia dengan sistem bracket otomatis, live leaderboard, dan integrasi judge online untuk scoring otomatis.' },
-    { no:11, judul:'Kelas Bahasa Pemrograman Daerah', tag:'EdTech · Lokal', status:'MIMPI', warna:'#e63329', icon:'🌴', deskripsi:'Materi coding yang seluruhnya menggunakan contoh kontekstual lokal: kode untuk menghitung panen sawah, sistem absensi masjid, atau manajemen warung.' },
-    { no:12, judul:'AI Koreksi Skripsi Kode', tag:'EdTech · Riset',   status:'RISET',    warna:'#0891b2', icon:'📝', deskripsi:'AI yang menganalisis kode skripsi mahasiswa, mendeteksi anti-pattern, memberikan saran refactoring, dan menghasilkan laporan kualitas kode otomatis.' },
-    { no:13, judul:'Hackathon Virtual Mingguan',tag:'EdTech · Event',  status:'ROADMAP',  warna:'#22c55e', icon:'⚡', deskripsi:'Hackathon 24 jam setiap minggu dengan tema berbeda. Hadiah berupa credit belajar, mentoring gratis, dan kesempatan present ke perusahaan sponsor.' },
-    { no:14, judul:'Portfolio Generator AI',  tag:'EdTech · AI',      status:'KONSEP',   warna:'#8b5cf6', icon:'✨', deskripsi:'AI yang menganalisis semua proyek dan skill siswa, lalu otomatis generate portfolio website personal yang menarik dan ATS-friendly.' },
-    { no:15, judul:'Blind Code Review',       tag:'EdTech · Fairness',status:'KONSEP',   warna:'#f59e0b', icon:'👁️', deskripsi:'Sistem review kode anonim di mana reviewer tidak tahu siapa penulisnya. Menghilangkan bias dan membangun evaluasi murni berbasis kualitas kode.' },
-    { no:16, judul:'Coding untuk SD-SMA',     tag:'EdTech · K12',     status:'AKTIF',    warna:'#1a5cff', icon:'🎒', deskripsi:'Kurikulum bertahap: Scratch untuk SD, Python visual untuk SMP, web dev untuk SMA. Semua dengan konteks pembelajaran yang menyenangkan dan relevan.' },
-    { no:17, judul:'Bootcamp Intensif 3 Bulan',tag:'EdTech · Bootcamp',status:'ROADMAP', warna:'#e63329', icon:'🔥', deskripsi:'Program intensif full-stack dengan jaminan magang. Kurikulum berbasis project nyata dari perusahaan partner. Bayar setelah dapat kerja model ISA.' },
-    { no:18, judul:'Forum Tanya Jawab Terstruktur',tag:'EdTech · Community',status:'AKTIF',warna:'#0891b2',icon:'💬',deskripsi:'Forum Q&A khusus coding dengan fitur: tag pertanyaan, search pintar, upvote jawaban, dan sistem reputasi untuk memotivasi anggota aktif membantu.' },
-    { no:19, judul:'Simulator Debugging Interaktif',tag:'EdTech · Tools',status:'PROTOTYPE',warna:'#22c55e',icon:'🐛',deskripsi:'Latihan debugging kode yang sengaja diisi bug. Siswa harus menemukan dan perbaiki bug dalam waktu terbatas. Score berdasarkan kecepatan dan ketepatan.' },
-    { no:20, judul:'Mentor Matching Algorithm',tag:'EdTech · Matching',status:'RISET',   warna:'#8b5cf6', icon:'🧩', deskripsi:'Algoritma yang mencocokkan siswa dengan mentor berdasarkan: tujuan karir, stack teknologi, ketersediaan waktu, gaya belajar, dan kepribadian.' },
-    { no:21, judul:'Code Debt Tracker',       tag:'EdTech · Quality', status:'KONSEP',   warna:'#f59e0b', icon:'📊', deskripsi:'Visualisasi teknikal debt dari proyek siswa dari waktu ke waktu. Membantu memahami konsekuensi jangka panjang dari shortcuts dalam coding.' },
-    { no:22, judul:'Live Pair Programming',   tag:'EdTech · Kolaborasi',status:'ROADMAP',warna:'#1a5cff', icon:'👨‍💻', deskripsi:'Fitur pair programming real-time di mana dua siswa bisa coding bareng dari device berbeda dengan cursor bersama, voice chat, dan session recording.' },
-    { no:23, judul:'English for Developers',  tag:'EdTech · Bahasa',  status:'KONSEP',   warna:'#e63329', icon:'🌍', deskripsi:'Kursus bahasa Inggris teknis khusus developer: cara baca dokumentasi, nulis issue di GitHub, presentasi teknis, dan wawancara kerja.' },
-    { no:24, judul:'Open Source Contribution Guide',tag:'EdTech · OSS',status:'AKTIF',  warna:'#0891b2', icon:'🔓', deskripsi:'Panduan step-by-step berkontribusi ke open source: dari fork, branch, PR, sampai review. Dengan daftar repo ramah beginner yang dikurasi tiap bulan.' },
-    { no:25, judul:'Tech Talk Recording Library',tag:'EdTech · Konten',status:'ROADMAP', warna:'#22c55e', icon:'🎬', deskripsi:'Library rekaman tech talk dari developer Indonesia. Topik dari: best practices, cerita gagal, insight industri, sampai review teknologi terbaru.' },
+    { no:1,  judul:'KVT.kom AI Tutor',       tag:'EdTech  AI',      status:'AKTIF',    warna:'#1a5cff', icon:'🤖', deskripsi:'AI tutor personal yang bisa menjawab pertanyaan coding kapan saja, adaptif terhadap level pemahaman siswa, dan memberikan feedback real-time saat latihan kode.' },
+    { no:2,  judul:'Kelas Coding Offline-First', tag:'EdTech  PWA', status:'PROTOTYPE', warna:'#22c55e', icon:'📡', deskripsi:'Platform belajar coding yang bisa diakses tanpa internet sepenuhnya. Materi ter-cache di device, progress sync saat koneksi tersedia. Untuk daerah 3T.' },
+    { no:3,  judul:'Gamifikasi Belajar Coding', tag:'EdTech  Game',  status:'RISET',    warna:'#f59e0b', icon:'🎮', deskripsi:'Sistem XP, level, badge, dan leaderboard untuk belajar coding. Setiap modul selesai = item unlock. Quest harian yang memaksa konsistensi belajar.' },
+    { no:4,  judul:'Peer Code Review Platform',tag:'EdTech  Social', status:'KONSEP',   warna:'#8b5cf6', icon:'👥', deskripsi:'Siswa saling review kode satu sama lain dengan panduan terstruktur. Membangun kemampuan critical thinking dan komunikasi teknis sejak dini.' },
+    { no:5,  judul:'Visualisasi Algoritma 3D', tag:'EdTech  Visualisasi', status:'RISET', warna:'#e63329', icon:'🧊', deskripsi:'Render algoritma sorting, searching, dan struktur data dalam 3D interaktif menggunakan WebGL. Siswa bisa rotate, zoom, dan step-by-step eksekusi.' },
+    { no:6,  judul:'Kurikulum Adaptif AI',    tag:'EdTech  AI',      status:'KONSEP',   warna:'#0891b2', icon:'🎯', deskripsi:'Kurikulum yang menyesuaikan urutan materi berdasarkan pola kesalahan siswa. Jika sering salah di array, sistem otomatis memperpanjang modul terkait.' },
+    { no:7,  judul:'Coding Bareng Mentor Live',tag:'EdTech  Live',   status:'ROADMAP',  warna:'#22c55e', icon:'🎙️', deskripsi:'Sesi live coding 1-on-1 dengan mentor via video call terintegrasi dengan shared editor. Mentor bisa nulis langsung di kode siswa real-time.' },
+    { no:8,  judul:'Sertifikat NFT Belajar',  tag:'EdTech  Web3',    status:'KONSEP',   warna:'#8b5cf6', icon:'🏆', deskripsi:'Sertifikat kelulusan kursus diterbitkan sebagai NFT on-chain yang bisa diverifikasi employer langsung, tidak bisa dipalsukan.' },
+    { no:9,  judul:'Microlearning 5 Menit',   tag:'EdTech  Mobile',  status:'PROTOTYPE',warna:'#f59e0b', icon:'⏱️', deskripsi:'Modul pelajaran max 5 menit yang dioptimalkan untuk dikonsumsi di perjalanan. Format: video pendek + mini quiz + satu contoh kode nyata.' },
+    { no:10, judul:'Coding Competition Platform',tag:'EdTech  Kompetisi', status:'AKTIF', warna:'#1a5cff', icon:'🏅', deskripsi:'Platform kompetisi coding lokal Indonesia dengan sistem bracket otomatis, live leaderboard, dan integrasi judge online untuk scoring otomatis.' },
+    { no:11, judul:'Kelas Bahasa Pemrograman Daerah', tag:'EdTech  Lokal', status:'MIMPI', warna:'#e63329', icon:'🌴', deskripsi:'Materi coding yang seluruhnya menggunakan contoh kontekstual lokal: kode untuk menghitung panen sawah, sistem absensi masjid, atau manajemen warung.' },
+    { no:12, judul:'AI Koreksi Skripsi Kode', tag:'EdTech  Riset',   status:'RISET',    warna:'#0891b2', icon:'📝', deskripsi:'AI yang menganalisis kode skripsi mahasiswa, mendeteksi anti-pattern, memberikan saran refactoring, dan menghasilkan laporan kualitas kode otomatis.' },
+    { no:13, judul:'Hackathon Virtual Mingguan',tag:'EdTech  Event',  status:'ROADMAP',  warna:'#22c55e', icon:'⚡', deskripsi:'Hackathon 24 jam setiap minggu dengan tema berbeda. Hadiah berupa credit belajar, mentoring gratis, dan kesempatan present ke perusahaan sponsor.' },
+    { no:14, judul:'Portfolio Generator AI',  tag:'EdTech  AI',      status:'KONSEP',   warna:'#8b5cf6', icon:'✨', deskripsi:'AI yang menganalisis semua proyek dan skill siswa, lalu otomatis generate portfolio website personal yang menarik dan ATS-friendly.' },
+    { no:15, judul:'Blind Code Review',       tag:'EdTech  Fairness',status:'KONSEP',   warna:'#f59e0b', icon:'👁️', deskripsi:'Sistem review kode anonim di mana reviewer tidak tahu siapa penulisnya. Menghilangkan bias dan membangun evaluasi murni berbasis kualitas kode.' },
+    { no:16, judul:'Coding untuk SD-SMA',     tag:'EdTech  K12',     status:'AKTIF',    warna:'#1a5cff', icon:'🎒', deskripsi:'Kurikulum bertahap: Scratch untuk SD, Python visual untuk SMP, web dev untuk SMA. Semua dengan konteks pembelajaran yang menyenangkan dan relevan.' },
+    { no:17, judul:'Bootcamp Intensif 3 Bulan',tag:'EdTech  Bootcamp',status:'ROADMAP', warna:'#e63329', icon:'🔥', deskripsi:'Program intensif full-stack dengan jaminan magang. Kurikulum berbasis project nyata dari perusahaan partner. Bayar setelah dapat kerja model ISA.' },
+    { no:18, judul:'Forum Tanya Jawab Terstruktur',tag:'EdTech  Community',status:'AKTIF',warna:'#0891b2',icon:'💬',deskripsi:'Forum Q&A khusus coding dengan fitur: tag pertanyaan, search pintar, upvote jawaban, dan sistem reputasi untuk memotivasi anggota aktif membantu.' },
+    { no:19, judul:'Simulator Debugging Interaktif',tag:'EdTech  Tools',status:'PROTOTYPE',warna:'#22c55e',icon:'🐛',deskripsi:'Latihan debugging kode yang sengaja diisi bug. Siswa harus menemukan dan perbaiki bug dalam waktu terbatas. Score berdasarkan kecepatan dan ketepatan.' },
+    { no:20, judul:'Mentor Matching Algorithm',tag:'EdTech  Matching',status:'RISET',   warna:'#8b5cf6', icon:'🧩', deskripsi:'Algoritma yang mencocokkan siswa dengan mentor berdasarkan: tujuan karir, stack teknologi, ketersediaan waktu, gaya belajar, dan kepribadian.' },
+    { no:21, judul:'Code Debt Tracker',       tag:'EdTech  Quality', status:'KONSEP',   warna:'#f59e0b', icon:'📊', deskripsi:'Visualisasi teknikal debt dari proyek siswa dari waktu ke waktu. Membantu memahami konsekuensi jangka panjang dari shortcuts dalam coding.' },
+    { no:22, judul:'Live Pair Programming',   tag:'EdTech  Kolaborasi',status:'ROADMAP',warna:'#1a5cff', icon:'👨💻', deskripsi:'Fitur pair programming real-time di mana dua siswa bisa coding bareng dari device berbeda dengan cursor bersama, voice chat, dan session recording.' },
+    { no:23, judul:'English for Developers',  tag:'EdTech  Bahasa',  status:'KONSEP',   warna:'#e63329', icon:'🌍', deskripsi:'Kursus bahasa Inggris teknis khusus developer: cara baca dokumentasi, nulis issue di GitHub, presentasi teknis, dan wawancara kerja.' },
+    { no:24, judul:'Open Source Contribution Guide',tag:'EdTech  OSS',status:'AKTIF',  warna:'#0891b2', icon:'🔓', deskripsi:'Panduan step-by-step berkontribusi ke open source: dari fork, branch, PR, sampai review. Dengan daftar repo ramah beginner yang dikurasi tiap bulan.' },
+    { no:25, judul:'Tech Talk Recording Library',tag:'EdTech  Konten',status:'ROADMAP', warna:'#22c55e', icon:'🎬', deskripsi:'Library rekaman tech talk dari developer Indonesia. Topik dari: best practices, cerita gagal, insight industri, sampai review teknologi terbaru.' },
   ]
   return (
-    <PanelBab id="ch181" num="181" judul="200 INOVASI — BAB 1: REVOLUSI EDUKASI DIGITAL" warna="#1a5cff" bg="#e8f0ff">
+    <PanelBab id="ch181" num="181" judul="200 INOVASI -- BAB 1: REVOLUSI EDUKASI DIGITAL" warna="#1a5cff" bg="#e8f0ff">
       <div className="speech-bubble inline-block text-sm mb-6">
         💡 25 inovasi di bidang edukasi teknologi yang sedang atau akan dibangun. Klik setiap kartu untuk baca detail!
       </div>

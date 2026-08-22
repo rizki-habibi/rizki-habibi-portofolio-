@@ -5,22 +5,22 @@ import HeaderBab from '@/components/HeaderBab'
 
 const trainings = [
   {
-    level: 'SD', name: 'SDN Sumbersari 3 Jember', year: '2008–2014',
+    level: 'SD', name: 'SDN Sumbersari 3 Jember', year: '2008-2014',
     desc: 'Fondasi dasar belajar dan rasa ingin tahu yang tinggi mulai terbentuk.',
     icon: '📖', color: '#f59e0b', bg: '#fffbeb', badge: 'ORIGIN',
   },
   {
-    level: 'SMP', name: 'SMP Al-Baitul Amien', year: '2014–2017',
+    level: 'SMP', name: 'SMP Al-Baitul Amien', year: '2014-2017',
     desc: 'Mulai mengenal komputer dan internet. Rasa penasaran dengan teknologi semakin kuat.',
     icon: '💡', color: '#22c55e', bg: '#f0fdf4', badge: 'AWAKENING',
   },
   {
-    level: 'SMA', name: 'SMA Negeri 2 Jember', year: '2017–2020',
+    level: 'SMA', name: 'SMA Negeri 2 Jember', year: '2017-2020',
     desc: 'Mengenal pemrograman pertama kali. Mulai otodidak belajar HTML dan CSS dari YouTube.',
     icon: '⚡', color: '#1a5cff', bg: '#e8f0ff', badge: 'TRAINING',
   },
   {
-    level: 'S1', name: 'Institut Teknologi dan Sains Mandala', year: '2023–Sekarang',
+    level: 'S1', name: 'Institut Teknologi dan Sains Mandala', year: '2023-Sekarang',
     desc: 'Program Studi Sistem & Teknologi Informasi. Membangun proyek nyata, mengikuti 75+ pelatihan, sertifikasi BNSP, dan penelitian skripsi.',
     icon: '🚀', color: '#8b5cf6', bg: '#f5f0ff', badge: 'MASTERY ARC',
   },
@@ -53,7 +53,7 @@ export default function EducationComic() {
         {/* Header */}
         <HeaderBab nomor="12" judul="TRAINING ARC" warna="#1a5cff" subtitle="🎓 Setiap ilmu adalah senjata yang tak bisa dicuri" />
 
-        {/* Pendidikan formal — comic panels vertikal */}
+        {/* Pendidikan formal -- comic panels vertikal */}
         <div className="relative mb-16">
           {/* Garis vertikal */}
           <div className="absolute left-6 top-0 bottom-0 w-1 hidden md:block"
@@ -147,7 +147,7 @@ export default function EducationComic() {
                 <span className="text-xl flex-shrink-0">{c.star ? '⭐' : '🏅'}</span>
                 <div>
                   <div className={`font-bold text-sm ${c.star ? 'text-comic-yellow' : 'text-white'}`}>{c.title}</div>
-                  <div className="text-white/50 text-xs">{c.org} • {c.year}</div>
+                  <div className="text-white/50 text-xs">{c.org}  {c.year}</div>
                 </div>
               </motion.div>
             ))}

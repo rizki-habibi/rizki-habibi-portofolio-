@@ -14,7 +14,7 @@ const secretFacts = [
   '🎵 Selalu coding dengan musik lofi hip hop',
   '🐛 Bug terpanjang yang pernah saya debug: 12 jam untuk 1 titik koma',
   '📚 Membaca dokumentasi adalah hobi tersembunyi saya',
-  '🌙 Night owl — productivity peak jam 11 malam - 3 pagi',
+  '🌙 Night owl -- productivity peak jam 11 malam - 3 pagi',
   '🎯 Target: menjadi Full Stack Developer sebelum lulus',
   '💡 Proyek pertama: website HTML sederhana di Notepad',
   '🚀 Sudah menulis 10,000+ baris kode Laravel',
@@ -168,12 +168,12 @@ export default function SecretMode() {
                   {/* Secret ASCII */}
                   <pre className="text-green-500/60 text-[8px] md:text-[10px] font-mono text-center mb-6 leading-tight">
                     {`
-  ██████╗ ██╗  ██╗    ███████╗███████╗ ██████╗██████╗ ███████╗████████╗
-  ██╔══██╗██║  ██║    ██╔════╝██╔════╝██╔════╝██╔══██╗██╔════╝╚══██╔══╝
-  ██████╔╝███████║    ███████╗█████╗  ██║     ██████╔╝█████╗     ██║
-  ██╔══██╗██╔══██║    ╚════██║██╔══╝  ██║     ██╔══██╗██╔══╝     ██║
-  ██║  ██║██║  ██║    ███████║███████╗╚██████╗██║  ██║███████╗   ██║
-  ╚═╝  ╚═╝╚═╝  ╚═╝    ╚══════╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝   ╚═╝
+  ██████- ██-  ██-    ███████-███████- ██████-██████- ███████-████████-
+  ██---██-██-  ██-    ██------██------██------██---██-██---------██----
+  ██████--███████-    ███████-█████-  ██-     ██████--█████-     ██-
+  ██---██-██---██-    -----██-██----  ██-     ██---██-██----     ██-
+  ██-  ██-██-  ██-    ███████-███████--██████-██-  ██-███████-   ██-
+  ---  ------  ---    ---------------- ----------  -----------   ---
 `}
                   </pre>
 

@@ -15,9 +15,9 @@ const tautanNav = [
   { name: 'KONTAK', href: '#contact' },
 ]
 
-// Semua chapter untuk dropdown navigasi (00 – 120)
+// Semua chapter untuk dropdown navigasi (00 - 120)
 const semuaChapter = [
-  // ── CHAPTER UTAMA 00-15 ──
+  // -- CHAPTER UTAMA 00-15 --
   { num: '00', judul: 'The Origin', href: '#home', warna: '#1a5cff' },
   { num: '01', judul: 'Origin Story', href: '#cerita', warna: '#22c55e' },
   { num: '02', judul: 'My Powers', href: '#skills', warna: '#1a5cff' },
@@ -34,7 +34,7 @@ const semuaChapter = [
   { num: '13', judul: 'Off-Duty Life', href: '#hobbies', warna: '#22c55e' },
   { num: '14', judul: 'Network & Community', href: '#komunitas', warna: '#8b5cf6' },
   { num: '15', judul: 'What Comes Next', href: '#epilog', warna: '#e63329' },
-  // ── GROUP 1: 16-25 ──
+  // -- GROUP 1: 16-25 --
   { num: '16', judul: 'Website Desa Digital', href: '#ch16', warna: '#22c55e' },
   { num: '17', judul: 'QRIS Donasi', href: '#ch17', warna: '#1a5cff' },
   { num: '18', judul: 'Website Global Map', href: '#ch18', warna: '#0891b2' },
@@ -45,7 +45,7 @@ const semuaChapter = [
   { num: '23', judul: 'Membangun Startup', href: '#ch23', warna: '#f59e0b' },
   { num: '24', judul: 'Teknologi Sosial', href: '#ch24', warna: '#22c55e' },
   { num: '25', judul: 'Kolaborasi Lintas Bidang', href: '#ch25', warna: '#1a5cff' },
-  // ── GROUP 2: 26-35 ──
+  // -- GROUP 2: 26-35 --
   { num: '26', judul: 'AI Journey', href: '#ch26', warna: '#8b5cf6' },
   { num: '27', judul: 'Tech Stack Masa Depan', href: '#ch27', warna: '#0891b2' },
   { num: '28', judul: 'Open Source', href: '#ch28', warna: '#22c55e' },
@@ -56,7 +56,7 @@ const semuaChapter = [
   { num: '33', judul: 'AI Deep Dive', href: '#ch33', warna: '#10a37f' },
   { num: '34', judul: 'IoT Advanced', href: '#ch34', warna: '#f59e0b' },
   { num: '35', judul: 'Digital Marketing', href: '#ch35', warna: '#8b5cf6' },
-  // ── GROUP 3: 36-45 ──
+  // -- GROUP 3: 36-45 --
   { num: '36', judul: 'Kesehatan Digital', href: '#ch36', warna: '#22c55e' },
   { num: '37', judul: 'Lingkungan Hidup', href: '#ch37', warna: '#0891b2' },
   { num: '38', judul: 'Dampak Sosial', href: '#ch38', warna: '#1a5cff' },
@@ -67,7 +67,7 @@ const semuaChapter = [
   { num: '43', judul: 'Logika & Algoritma', href: '#ch43', warna: '#1a5cff' },
   { num: '44', judul: 'Kreativitas', href: '#ch44', warna: '#f59e0b' },
   { num: '45', judul: 'Dream Big', href: '#ch45', warna: '#ffd700' },
-  // ── GROUP 4: 46-55 ──
+  // -- GROUP 4: 46-55 --
   { num: '46', judul: 'Motivasi & Semangat', href: '#ch46', warna: '#e63329' },
   { num: '47', judul: 'Belajar dari Kegagalan', href: '#ch47', warna: '#8b5cf6' },
   { num: '48', judul: 'Global Perspective', href: '#ch48', warna: '#0891b2' },
@@ -78,14 +78,14 @@ const semuaChapter = [
   { num: '53', judul: 'Smart City', href: '#ch53', warna: '#0891b2' },
   { num: '54', judul: 'Keluarga & Prioritas', href: '#ch54', warna: '#e63329' },
   { num: '55', judul: 'Identitas Developer', href: '#ch55', warna: '#8b5cf6' },
-  // ── GROUP 5: 56-61 + FINAL ──
+  // -- GROUP 5: 56-61 + FINAL --
   { num: '56', judul: 'Warisan Digital', href: '#ch56', warna: '#1a5cff' },
   { num: '57', judul: 'Jejak Kode', href: '#ch57', warna: '#22c55e' },
   { num: '58', judul: 'Komunitas Masa Depan', href: '#ch58', warna: '#8b5cf6' },
   { num: '59', judul: 'Indonesia 2030', href: '#ch59', warna: '#e63329' },
   { num: '60', judul: 'Developer Ideal', href: '#ch60', warna: '#f59e0b' },
   { num: '61', judul: 'The Final Arc', href: '#ch61', warna: '#ffd700' },
-  // ── GROUP 6: 62-70 GAME ──
+  // -- GROUP 6: 62-70 GAME --
   { num: '62', judul: 'Game Life: Pokemon GO', href: '#ch62', warna: '#22c55e' },
   { num: '63', judul: 'Dunia Kartu: Yugioh', href: '#ch63', warna: '#f59e0b' },
   { num: '64', judul: 'Strategi & Taktik', href: '#ch64', warna: '#e63329' },
@@ -95,7 +95,7 @@ const semuaChapter = [
   { num: '68', judul: 'Offline Adventures', href: '#ch68', warna: '#8b5cf6' },
   { num: '69', judul: 'Game = Sekolah Coding', href: '#ch69', warna: '#1a5cff' },
   { num: '70', judul: 'Game Wishlist & Impian', href: '#ch70', warna: '#f59e0b' },
-  // ── GROUP 7: 71-80 INOVASI ──
+  // -- GROUP 7: 71-80 INOVASI --
   { num: '71', judul: 'Developer Sehat', href: '#ch71', warna: '#22c55e' },
   { num: '72', judul: 'Coding with Music', href: '#ch72', warna: '#1a5cff' },
   { num: '73', judul: 'Perpustakaan Digital', href: '#ch73', warna: '#f59e0b' },
@@ -106,7 +106,7 @@ const semuaChapter = [
   { num: '78', judul: 'IoT Inovasi Lanjutan', href: '#ch78', warna: '#22c55e' },
   { num: '79', judul: 'Masa Depan Web', href: '#ch79', warna: '#8b5cf6' },
   { num: '80', judul: 'Terima Kasih!', href: '#ch80', warna: '#ffd700' },
-  // ── GROUP 8: 81-90 AKADEMIK ──
+  // -- GROUP 8: 81-90 AKADEMIK --
   { num: '81', judul: 'Skripsi Fighter', href: '#ch81', warna: '#e63329' },
   { num: '82', judul: 'KVT.kom Platform', href: '#ch82', warna: '#8b5cf6' },
   { num: '83', judul: 'Visi Pendidikan Digital', href: '#ch83', warna: '#1a5cff' },
@@ -117,7 +117,7 @@ const semuaChapter = [
   { num: '88', judul: 'Awal Mula Coding', href: '#ch88', warna: '#e63329' },
   { num: '89', judul: 'Mentor & Inspirasi', href: '#ch89', warna: '#1a5cff' },
   { num: '90', judul: 'Keluarga & Dukungan', href: '#ch90', warna: '#ffd700' },
-  // ── GROUP 9: 91-100 KEHIDUPAN ──
+  // -- GROUP 9: 91-100 KEHIDUPAN --
   { num: '91', judul: 'Kehidupan Kampus', href: '#ch91', warna: '#22c55e' },
   { num: '92', judul: 'Jember & Kota Perjalanan', href: '#ch92', warna: '#22c55e' },
   { num: '93', judul: 'Budaya Digital Gen Z', href: '#ch93', warna: '#1a5cff' },
@@ -128,7 +128,7 @@ const semuaChapter = [
   { num: '98', judul: 'Anime & Inspirasi', href: '#ch98', warna: '#e63329' },
   { num: '99', judul: 'Lessons Hard Learned', href: '#ch99', warna: '#e63329' },
   { num: '100', judul: '🎉 Milestone 100!', href: '#ch100', warna: '#ffd700' },
-  // ── GROUP 10: 101-110 TEKNOLOGI ──
+  // -- GROUP 10: 101-110 TEKNOLOGI --
   { num: '101', judul: 'AI Tools Developer', href: '#ch101', warna: '#10a37f' },
   { num: '102', judul: 'Machine Learning', href: '#ch102', warna: '#8b5cf6' },
   { num: '103', judul: 'Cloud Computing', href: '#ch103', warna: '#0891b2' },
@@ -139,7 +139,7 @@ const semuaChapter = [
   { num: '108', judul: 'Open Source', href: '#ch108', warna: '#22c55e' },
   { num: '109', judul: 'UI/UX Desain', href: '#ch109', warna: '#e1306c' },
   { num: '110', judul: 'Web3 & Blockchain', href: '#ch110', warna: '#f59e0b' },
-  // ── GROUP 11: 111-120 WARISAN & FINAL ──
+  // -- GROUP 11: 111-120 WARISAN & FINAL --
   { num: '111', judul: 'Warisan Digital', href: '#ch111', warna: '#8b5cf6' },
   { num: '112', judul: 'Sosial & Dampak', href: '#ch112', warna: '#22c55e' },
   { num: '113', judul: 'Nilai & Prinsip Hidup', href: '#ch113', warna: '#1a5cff' },
@@ -150,7 +150,7 @@ const semuaChapter = [
   { num: '118', judul: 'Roadmap 2026-2030', href: '#ch118', warna: '#1a5cff' },
   { num: '119', judul: 'Epilog Agung', href: '#ch119', warna: '#ffd700' },
   { num: '120', judul: '🎌 BERSAMBUNG...', href: '#ch120', warna: '#ffd700' },
-  // ── GROUP 12: 121-130 INOVASI TEKNOLOGI ──
+  // -- GROUP 12: 121-130 INOVASI TEKNOLOGI --
   { num: '121', judul: 'Smart Home', href: '#ch121', warna: '#0891b2' },
   { num: '122', judul: 'Robotik & Arduino', href: '#ch122', warna: '#1a5cff' },
   { num: '123', judul: 'AR & VR', href: '#ch123', warna: '#8b5cf6' },
@@ -161,7 +161,7 @@ const semuaChapter = [
   { num: '128', judul: 'Fintech Inovatif', href: '#ch128', warna: '#1a5cff' },
   { num: '129', judul: 'Space Tech', href: '#ch129', warna: '#8b5cf6' },
   { num: '130', judul: 'Neurotech & BCI', href: '#ch130', warna: '#e63329' },
-  // ── GROUP 13: 131-140 WIRAUSAHA & SOSIAL ──
+  // -- GROUP 13: 131-140 WIRAUSAHA & SOSIAL --
   { num: '131', judul: 'Wirausaha Sosial', href: '#ch131', warna: '#22c55e' },
   { num: '132', judul: 'Kolaborasi Global', href: '#ch132', warna: '#0891b2' },
   { num: '133', judul: 'Teknologi & Lingkungan', href: '#ch133', warna: '#22c55e' },
@@ -172,7 +172,7 @@ const semuaChapter = [
   { num: '138', judul: 'Smart City', href: '#ch138', warna: '#1a5cff' },
   { num: '139', judul: 'Supply Chain Tech', href: '#ch139', warna: '#f59e0b' },
   { num: '140', judul: 'Mental Health Tech', href: '#ch140', warna: '#8b5cf6' },
-  // ── GROUP 14: 141-150 SENI & KREATOR ──
+  // -- GROUP 14: 141-150 SENI & KREATOR --
   { num: '141', judul: 'Seni Digital', href: '#ch141', warna: '#8b5cf6' },
   { num: '142', judul: 'Musik & Teknologi', href: '#ch142', warna: '#1a5cff' },
   { num: '143', judul: 'Content Creator Tech', href: '#ch143', warna: '#e63329' },
@@ -183,7 +183,7 @@ const semuaChapter = [
   { num: '148', judul: 'Kuliner Tech', href: '#ch148', warna: '#f59e0b' },
   { num: '149', judul: 'Transportasi Digital', href: '#ch149', warna: '#0891b2' },
   { num: '150', judul: 'Masa Depan Pekerjaan', href: '#ch150', warna: '#ffd700' },
-  // ── GROUP 15: 151-160 KEPEMIMPINAN & FILOSOFI ──
+  // -- GROUP 15: 151-160 KEPEMIMPINAN & FILOSOFI --
   { num: '151', judul: 'Kepemimpinan Tech', href: '#ch151', warna: '#1a5cff' },
   { num: '152', judul: 'Generasi Bangsa', href: '#ch152', warna: '#e63329' },
   { num: '153', judul: 'Filosofi Developer', href: '#ch153', warna: '#8b5cf6' },
@@ -194,7 +194,7 @@ const semuaChapter = [
   { num: '158', judul: 'Teknologi & Spiritualitas', href: '#ch158', warna: '#22c55e' },
   { num: '159', judul: 'Kearifan Lokal Digital', href: '#ch159', warna: '#8b5cf6' },
   { num: '160', judul: 'Sejarah Computing', href: '#ch160', warna: '#1a5cff' },
-  // ── GROUP 16: 161-170 GRAND FINALE ──
+  // -- GROUP 16: 161-170 GRAND FINALE --
   { num: '161', judul: '100 Hari Produktif', href: '#ch161', warna: '#1a5cff' },
   { num: '162', judul: 'Proyek Impian 2027', href: '#ch162', warna: '#8b5cf6' },
   { num: '163', judul: 'Satu Tahun KVT.kom', href: '#ch163', warna: '#22c55e' },
@@ -205,7 +205,7 @@ const semuaChapter = [
   { num: '168', judul: 'Kata-Kata Pamungkas', href: '#ch168', warna: '#ffd700' },
   { num: '169', judul: 'Apresiasi Mendalam', href: '#ch169', warna: '#f59e0b' },
   { num: '170', judul: '🎭 THE GRAND FINALE', href: '#ch170', warna: '#ffd700' },
-  // ── SPECIAL ──
+  // -- SPECIAL --
   { num: '★', judul: 'Level Progress Skills', href: '#progress-skills', warna: '#8b5cf6' },
   { num: '◆', judul: 'Testimoni', href: '#testimonials', warna: '#22c55e' },
   { num: 'CV', judul: 'Curriculum Vitae', href: '#cv', warna: '#1a5cff' },
@@ -325,7 +325,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-3 sm:px-4">
           <div className="flex items-center h-14 gap-2">
 
-            {/* ── LOGO ── */}
+            {/* -- LOGO -- */}
             <motion.a
               href="#home"
               whileHover={{ scale: 1.05, rotate: -1 }}
@@ -344,7 +344,7 @@ export default function Navbar() {
               </div>
             </motion.a>
 
-            {/* ── DESKTOP NAV ── */}
+            {/* -- DESKTOP NAV -- */}
             <div className="hidden lg:flex items-center gap-1.5 flex-1 justify-center">
               {/* Nav links utama */}
               <div className="flex items-center border-2 border-[#0a0a0a]" style={{ boxShadow: '2px 2px 0 #0a0a0a' }}>
@@ -363,7 +363,7 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* ── AKSI KANAN ── */}
+            {/* -- AKSI KANAN -- */}
             <div className="flex items-center gap-1.5 ml-auto">
 
               {/* 1. CHAPTER DROPDOWN */}
@@ -485,7 +485,7 @@ export default function Navbar() {
                 )}
               </motion.button>
 
-              {/* 4. CTRL+K — Pencarian */}
+              {/* 4. CTRL+K -- Pencarian */}
               <motion.button
                 onClick={bukaCommandPalette}
                 whileHover={{ y: -2 }}
@@ -561,7 +561,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* ── MOBILE MENU ── */}
+        {/* -- MOBILE MENU -- */}
         <AnimatePresence>
           {isMobileOpen && (
             <motion.div
@@ -585,7 +585,7 @@ export default function Navbar() {
                   </a>
                 ))}
 
-                {/* Baris 2 — aksi */}
+                {/* Baris 2 -- aksi */}
                 <div className="grid grid-cols-2 gap-2 pt-1">
                   <button
                     onClick={() => { setIsMobileOpen(false); setStoryOpen(true) }}

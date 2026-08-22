@@ -5,9 +5,9 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { FiX } from 'react-icons/fi'
 
-/* ─────────────────────────────────────────────
+/* ---------------------------------------------
    TIPE DATA
-───────────────────────────────────────────── */
+--------------------------------------------- */
 interface DataPanel {
   num: string
   judul: string
@@ -17,9 +17,9 @@ interface DataPanel {
   cerita: { judul: string; subjudul: string; isi: string[] }
 }
 
-/* ─────────────────────────────────────────────
+/* ---------------------------------------------
    DEKORASI STATIK (CSS murni, tanpa animasi JS)
-───────────────────────────────────────────── */
+--------------------------------------------- */
 function SpeedLines() {
   return (
     <div
@@ -41,9 +41,9 @@ function Halftone() {
   )
 }
 
-/* ─────────────────────────────────────────────
-   PANEL 01 — HERO PROFILE (satu-satunya panel)
-───────────────────────────────────────────── */
+/* ---------------------------------------------
+   PANEL 01 -- HERO PROFILE (satu-satunya panel)
+--------------------------------------------- */
 const KontenP01 = () => (
   <div className="absolute inset-0 flex overflow-hidden" style={{ background: '#1769ff' }}>
     <SpeedLines />
@@ -66,7 +66,7 @@ const KontenP01 = () => (
         RIZKI<br />HABIBI
       </div>
       <div className="text-white/70 text-[7px] font-bold mb-1.5 leading-tight relative z-10">
-        Full-Stack Dev · IoT · AI/ML<br />
+        Full-Stack Dev  IoT  AI/ML<br />
         <span className="text-yellow-300">BNSP Certified ✓</span>
       </div>
       <div className="flex flex-wrap gap-1 mb-1.5 relative z-10">
@@ -84,9 +84,9 @@ const KontenP01 = () => (
   </div>
 )
 
-/* ─────────────────────────────────────────────
-   DATA — hanya panel 01
-───────────────────────────────────────────── */
+/* ---------------------------------------------
+   DATA -- hanya panel 01
+--------------------------------------------- */
 const dataPanels: DataPanel[] = [
   {
     num: '01',
@@ -97,14 +97,14 @@ const dataPanels: DataPanel[] = [
     cerita: {
       judul: 'RIZKI HABIBI',
       subjudul: 'Full-Stack Developer',
-      isi: ['BNSP Certified', 'Laravel · Next.js · IoT · AI/ML', 'Based in Jember, Indonesia', 'Available for Work 🟢'],
+      isi: ['BNSP Certified', 'Laravel  Next.js  IoT  AI/ML', 'Based in Jember, Indonesia', 'Available for Work 🟢'],
     },
   },
 ]
 
-/* ─────────────────────────────────────────────
+/* ---------------------------------------------
    MODAL CERITA
-───────────────────────────────────────────── */
+--------------------------------------------- */
 function ModalCerita({ panel, tutup }: { panel: DataPanel; tutup: () => void }) {
   return (
     <AnimatePresence>
@@ -183,9 +183,9 @@ function ModalCerita({ panel, tutup }: { panel: DataPanel; tutup: () => void }) 
   )
 }
 
-/* ─────────────────────────────────────────────
+/* ---------------------------------------------
    PANEL TUNGGAL
-───────────────────────────────────────────── */
+--------------------------------------------- */
 function PanelTunggal({ panel, onKlik }: { panel: DataPanel; onKlik: () => void }) {
   const [hover, setHover] = useState(false)
   return (
@@ -249,9 +249,9 @@ function PanelTunggal({ panel, onKlik }: { panel: DataPanel; onKlik: () => void 
   )
 }
 
-/* ─────────────────────────────────────────────
+/* ---------------------------------------------
    KOMPONEN UTAMA
-───────────────────────────────────────────── */
+--------------------------------------------- */
 export default function PanelKomik() {
   const [panelAktif, setPanelAktif] = useState<DataPanel | null>(null)
 

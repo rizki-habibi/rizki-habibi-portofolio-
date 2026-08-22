@@ -50,10 +50,10 @@ function PanelGrid({ items, cols = 3 }: { items: { icon: string; title: string; 
 // Ch26
 function Ch26() {
   return (
-    <PanelKomik id="ch26" chNum="CHAPTER 26" judul="AI JOURNEY — PERJALANAN DENGAN AI" warna="#8b5cf6" latarBelakang="#f5f0ff">
+    <PanelKomik id="ch26" chNum="CHAPTER 26" judul="AI JOURNEY -- PERJALANAN DENGAN AI" warna="#8b5cf6" latarBelakang="#f5f0ff">
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
-          <div className="speech-bubble inline-block text-sm mb-4">🤖 AI bukan ancaman — AI adalah teman kerja terbaik!</div>
+          <div className="speech-bubble inline-block text-sm mb-4">🤖 AI bukan ancaman -- AI adalah teman kerja terbaik!</div>
           <div className="comic-panel p-5 mb-4">
             <div className="font-comic text-lg text-comic-black mb-3">🧠 BAGAIMANA SAYA MENGGUNAKAN AI</div>
             <div className="space-y-3">
@@ -83,7 +83,7 @@ function Ch26() {
             { icon: '💡', title: 'Ide Produk', text: 'Brainstorming fitur dan solusi dengan AI sebagai sparring partner.', color: '#f59e0b', bg: '#fffbeb' },
           ]} cols={2} />
           <div className="comic-panel-dark p-4 mt-4 text-center">
-            <div className="font-comic text-xl text-comic-yellow">&ldquo;AI tidak menggantikan developer — AI membuat developer yang mau belajar menjadi lebih kuat.&rdquo;</div>
+            <div className="font-comic text-xl text-comic-yellow">&ldquo;AI tidak menggantikan developer -- AI membuat developer yang mau belajar menjadi lebih kuat.&rdquo;</div>
           </div>
         </div>
       </div>
@@ -107,12 +107,12 @@ function Ch27() {
     <PanelKomik id="ch27" chNum="CHAPTER 27" judul="TECH STACK DEEP DIVE" warna="#1a5cff" latarBelakang="#e8f0ff">
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
-          <div className="speech-bubble-right inline-block text-sm mb-4">💻 Setiap teknologi adalah tool — pilih yang tepat!</div>
+          <div className="speech-bubble-right inline-block text-sm mb-4">💻 Setiap teknologi adalah tool -- pilih yang tepat!</div>
           <div className="space-y-3">
             {techStack.map((t, i) => (
               <motion.div key={t.name} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.07 }} viewport={{ once: true }}>
                 <div className="flex justify-between text-xs font-bold text-comic-black mb-1">
-                  <span>{t.name} <span className="text-comic-black/40">— {t.role}</span></span>
+                  <span>{t.name} <span className="text-comic-black/40">-- {t.role}</span></span>
                   <span style={{ color: t.color }}>{t.pct}%</span>
                 </div>
                 <div className="comic-progress">
@@ -154,7 +154,7 @@ function Ch28() {
           <div className="comic-panel p-5 mb-4">
             <div className="font-comic text-lg text-comic-black mb-3">🌟 MENGAPA OPEN SOURCE?</div>
             <p className="text-sm text-comic-black leading-relaxed mb-3">
-              Open source bukan tentang memberikan kode secara gratis — ini tentang membangun ekosistem
+              Open source bukan tentang memberikan kode secara gratis -- ini tentang membangun ekosistem
               di mana semua orang bisa belajar, berkontribusi, dan menciptakan sesuatu yang lebih besar dari kemampuan satu orang.
             </p>
             <div className="space-y-2">
@@ -213,7 +213,7 @@ function Ch28() {
 // Ch29
 function Ch29() {
   return (
-    <PanelKomik id="ch29" chNum="CHAPTER 29" judul="KEAMANAN SIBER — BELAJAR ETIKA & PERTAHANAN" warna="#e63329" latarBelakang="#fef2f2">
+    <PanelKomik id="ch29" chNum="CHAPTER 29" judul="KEAMANAN SIBER -- BELAJAR ETIKA & PERTAHANAN" warna="#e63329" latarBelakang="#fef2f2">
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
           <div className="speech-bubble inline-block text-sm mb-4">🛡️ Keamanan digital adalah hak setiap orang!</div>
@@ -285,7 +285,7 @@ function Ch30() {
           <PanelGrid items={[
             { icon: '🚀', title: 'Fast Deploy', text: 'Deploy aplikasi dalam hitungan menit, bukan jam.', color: '#0078d4', bg: '#e8f2ff' },
             { icon: '📊', title: 'Auto Scaling', text: 'Infrastruktur yang menyesuaikan beban secara otomatis.', color: '#22c55e', bg: '#f0fdf4' },
-            { icon: '💰', title: 'Cost Efficient', text: 'Bayar sesuai pemakaian — tidak perlu server fisik mahal.', color: '#f59e0b', bg: '#fffbeb' },
+            { icon: '💰', title: 'Cost Efficient', text: 'Bayar sesuai pemakaian -- tidak perlu server fisik mahal.', color: '#f59e0b', bg: '#fffbeb' },
             { icon: '🔄', title: 'CI/CD Pipeline', text: 'Otomasi testing dan deployment untuk kualitas kode terjaga.', color: '#e63329', bg: '#fef2f2' },
           ]} cols={2} />
           <div className="comic-panel-dark p-4 mt-4">
@@ -313,7 +313,7 @@ function Ch30() {
 // Ch31
 function Ch31() {
   return (
-    <PanelKomik id="ch31" chNum="CHAPTER 31" judul="DATABASE — SKILL & TOOLS YANG SAYA KUASAI" warna="#4479a1" latarBelakang="#eff6ff">
+    <PanelKomik id="ch31" chNum="CHAPTER 31" judul="DATABASE -- SKILL & TOOLS YANG SAYA KUASAI" warna="#4479a1" latarBelakang="#eff6ff">
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
           <div className="speech-bubble inline-block text-sm mb-4">🗄️ Data adalah aset terbesar era digital!</div>
@@ -368,13 +368,13 @@ function Ch32() {
     <PanelKomik id="ch32" chNum="CHAPTER 32" judul="UI/UX DESIGN THINKING" warna="#ec4899" latarBelakang="#fdf2f8">
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
-          <div className="speech-bubble inline-block text-sm mb-4">🎨 Desain bukan tentang cantik — tentang fungsi!</div>
+          <div className="speech-bubble inline-block text-sm mb-4">🎨 Desain bukan tentang cantik -- tentang fungsi!</div>
           <div className="space-y-4">
             {[
               { principle: 'User-Centered', desc: 'Setiap keputusan desain selalu dimulai dari kebutuhan pengguna nyata.', icon: '👤', color: '#ec4899' },
               { principle: 'Clarity First', desc: 'Antarmuka yang jelas mengalahkan antarmuka yang mewah tapi membingungkan.', icon: '✨', color: '#8b5cf6' },
               { principle: 'Accessibility', desc: 'Desain harus bisa digunakan oleh semua orang, termasuk penyandang disabilitas.', icon: '♿', color: '#22c55e' },
-              { principle: 'Responsive Design', desc: 'Tampilan sempurna di semua ukuran layar — dari HP hingga monitor besar.', icon: '📱', color: '#1a5cff' },
+              { principle: 'Responsive Design', desc: 'Tampilan sempurna di semua ukuran layar -- dari HP hingga monitor besar.', icon: '📱', color: '#1a5cff' },
               { principle: 'Consistent System', desc: 'Design system yang konsisten mempercepat pengembangan dan meningkatkan UX.', icon: '🔗', color: '#f59e0b' },
             ].map((p, i) => (
               <motion.div key={p.principle} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.09 }} viewport={{ once: true }}
@@ -408,7 +408,7 @@ function Ch32() {
 // Ch33
 function Ch33() {
   const topics = [
-    { title: 'Large Language Models', desc: 'GPT, Gemini, Claude — cara kerjanya dan cara mengintegrasikannya ke aplikasi.', icon: '🧠', color: '#8b5cf6' },
+    { title: 'Large Language Models', desc: 'GPT, Gemini, Claude -- cara kerjanya dan cara mengintegrasikannya ke aplikasi.', icon: '🧠', color: '#8b5cf6' },
     { title: 'Machine Learning Basics', desc: 'Supervised vs unsupervised learning, training data, dan evaluasi model.', icon: '📊', color: '#1a5cff' },
     { title: 'Computer Vision', desc: 'Image recognition, object detection untuk aplikasi monitoring dan keamanan.', icon: '👁️', color: '#22c55e' },
     { title: 'NLP (Natural Language)', desc: 'Pemrosesan bahasa alami untuk chatbot dan analisis sentimen.', icon: '💬', color: '#f59e0b' },
@@ -419,7 +419,7 @@ function Ch33() {
     <PanelKomik id="ch33" chNum="CHAPTER 33" judul="MENDALAMI ARTIFICIAL INTELLIGENCE" warna="#8b5cf6" latarBelakang="#f5f0ff">
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
-          <div className="speech-bubble inline-block text-sm mb-4">🤖 AI adalah alat, bukan sihir — pelajari cara kerjanya!</div>
+          <div className="speech-bubble inline-block text-sm mb-4">🤖 AI adalah alat, bukan sihir -- pelajari cara kerjanya!</div>
           <PanelGrid items={topics.map(t => ({ icon: t.icon, title: t.title, text: t.desc, color: t.color, bg: 'white' }))} cols={2} />
         </div>
         <div>
@@ -427,13 +427,13 @@ function Ch33() {
             <div className="font-comic text-xl text-white mb-4">📚 SERTIFIKAT AI YANG DIRAIH</div>
             <div className="space-y-2">
               {[
-                'AI Engineer For Milenial — DTS 2025',
-                'Generative AI untuk Pendidikan — DTS 2025',
-                'Dasar-Dasar Implementasi AI — DTS 2025',
-                'Azure OpenAI Prompt Engineering — Microsoft',
-                'Dasar-dasar Keamanan AI — DTS 2025',
+                'AI Engineer For Milenial -- DTS 2025',
+                'Generative AI untuk Pendidikan -- DTS 2025',
+                'Dasar-Dasar Implementasi AI -- DTS 2025',
+                'Azure OpenAI Prompt Engineering -- Microsoft',
+                'Dasar-dasar Keamanan AI -- DTS 2025',
                 'Memahami Aspek Pengembangan Produk AI',
-                'Menskalakan AI di Organisasi — DTS 2025',
+                'Menskalakan AI di Organisasi -- DTS 2025',
                 'Image Recognition & Speech Recognition',
               ].map((cert, i) => (
                 <div key={cert} className="flex items-start gap-2 text-xs text-white font-bold">
@@ -455,7 +455,7 @@ function Ch33() {
 // Ch34
 function Ch34() {
   return (
-    <PanelKomik id="ch34" chNum="CHAPTER 34" judul="INTERNET OF THINGS — DUNIA FISIK DIGITAL" warna="#00979D" latarBelakang="#f0fffe">
+    <PanelKomik id="ch34" chNum="CHAPTER 34" judul="INTERNET OF THINGS -- DUNIA FISIK DIGITAL" warna="#00979D" latarBelakang="#f0fffe">
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
           <div className="speech-bubble inline-block text-sm mb-4">📡 Ketika dunia fisik dan digital menyatu!</div>
@@ -489,7 +489,7 @@ function Ch34() {
           ]} cols={2} />
           <div className="comic-panel-yellow p-4 mt-4 text-center">
             <div className="font-comic text-base text-comic-black">🏆 PROYEK IOT TERBAIK</div>
-            <p className="text-xs text-comic-black/70 mt-1">Alat monitoring suhu ruangan dari komponen bekas ESP8266 + DHT22 + dashboard web Laravel — hemat 80% dari produk komersial!</p>
+            <p className="text-xs text-comic-black/70 mt-1">Alat monitoring suhu ruangan dari komponen bekas ESP8266 + DHT22 + dashboard web Laravel -- hemat 80% dari produk komersial!</p>
           </div>
         </div>
       </div>
@@ -532,7 +532,7 @@ function Ch35() {
           ]} cols={2} />
           <div className="comic-panel-dark p-4 mt-4 text-center">
             <div className="font-comic text-xl text-comic-yellow mb-2">📈 SERTIFIKAT MARKETING</div>
-            <div className="text-xs text-white/70">15+ Sertifikat Digital Marketing dari Digital Talent Scholarship — Social Media, SEO, Content Strategy, CRM, dan lainnya.</div>
+            <div className="text-xs text-white/70">15+ Sertifikat Digital Marketing dari Digital Talent Scholarship -- Social Media, SEO, Content Strategy, CRM, dan lainnya.</div>
           </div>
         </div>
       </div>

@@ -29,9 +29,9 @@ const education = [
 
 const experiences = [
   { year: '2026', title: 'Penelitian Skripsi', desc: 'Menjalankan penelitian skripsi bidang Teknologi Informasi sambil mengembangkan platform KVT.kom.' },
-  { year: '2024–2025', title: 'Web Developer & System Analyst', desc: 'Mengembangkan sistem informasi dengan Laravel dan Next.js. Analisis kebutuhan client dan modifikasi fitur.' },
+  { year: '2024-2025', title: 'Web Developer & System Analyst', desc: 'Mengembangkan sistem informasi dengan Laravel dan Next.js. Analisis kebutuhan client dan modifikasi fitur.' },
   { year: '2025', title: 'Digital Talent Scholarship', desc: 'Menyelesaikan 75+ program pelatihan: AI, Web Dev, Cyber Security, Cloud, Digital Marketing.' },
-  { year: '2025', title: 'Sertifikasi BNSP', desc: 'Junior Web Developer — Lembaga Sertifikasi Profesi Teknologi Digital, Yogyakarta.' },
+  { year: '2025', title: 'Sertifikasi BNSP', desc: 'Junior Web Developer -- Lembaga Sertifikasi Profesi Teknologi Digital, Yogyakarta.' },
   { year: '2023', title: 'Mahasiswa STI', desc: 'Memulai perjalanan di Institut Teknologi dan Sains Mandala, jurusan Sistem & Teknologi Informasi.' },
 ]
 

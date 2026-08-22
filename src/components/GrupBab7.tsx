@@ -19,7 +19,7 @@ function PanelBab({ id, chNum, judul, warna, latarBelakang, gelap, children }: {
   )
 }
 
-// ─── CHAPTER 71: KESEHATAN DIGITAL ───────────────────────────────────────────
+// --- CHAPTER 71: KESEHATAN DIGITAL -------------------------------------------
 function Ch71() {
   const tips = [
     { icon: '👀', judul: '20-20-20 Rule', teks: 'Setiap 20 menit, lihat benda 20 kaki jauhnya selama 20 detik. Coding marathon butuh jeda mata!', warna: '#22c55e' },
@@ -30,7 +30,7 @@ function Ch71() {
     { icon: '🏃', judul: 'Move It!', teks: 'Berdiri dan jalan setiap jam. Duduk terlalu lama = bahaya kesehatan. Pokemon GO membantu!', warna: '#e63329' },
   ]
   return (
-    <PanelBab id="ch71" chNum="CHAPTER 71" judul="DEVELOPER SEHAT — BODY & MIND" warna="#22c55e" latarBelakang="#f0fdf4">
+    <PanelBab id="ch71" chNum="CHAPTER 71" judul="DEVELOPER SEHAT -- BODY & MIND" warna="#22c55e" latarBelakang="#f0fdf4">
       <div className="speech-bubble inline-block text-sm mb-6">
         💚 Kode terbaik lahir dari developer yang sehat jasmani dan rohani!
       </div>
@@ -54,17 +54,17 @@ function Ch71() {
   )
 }
 
-// ─── CHAPTER 72: MUSIK & CODING ──────────────────────────────────────────────
+// --- CHAPTER 72: MUSIK & CODING ----------------------------------------------
 function Ch72() {
   const daftarGenre = [
     { nama: 'Lofi Hip-Hop', emoji: '🎵', deskripsi: 'Ritme pelan + noise putih = zona fokus sempurna untuk coding panjang', power: 95, warna: '#1a5cff' },
     { nama: 'Instrumental Jazz', emoji: '🎷', deskripsi: 'Kompleksitas jazz melatih otak multi-task. Cocok untuk arsitektur sistem', power: 88, warna: '#8b5cf6' },
-    { nama: 'Game OST', emoji: '🎮', deskripsi: 'Soundtrack game dirancang untuk fokus panjang — Circle of Life, Zelda Theme', power: 92, warna: '#22c55e' },
-    { nama: 'Anime OST', emoji: '🎌', deskripsi: 'Attack on Titan, One Piece, Naruto — boost semangat untuk debug maraton!', power: 90, warna: '#e63329' },
-    { nama: 'Classical Piano', emoji: '🎹', deskripsi: 'Mozart, Chopin, Beethoven — coding dengan klasik terasa seperti membuat karya seni', power: 85, warna: '#f59e0b' },
+    { nama: 'Game OST', emoji: '🎮', deskripsi: 'Soundtrack game dirancang untuk fokus panjang -- Circle of Life, Zelda Theme', power: 92, warna: '#22c55e' },
+    { nama: 'Anime OST', emoji: '🎌', deskripsi: 'Attack on Titan, One Piece, Naruto -- boost semangat untuk debug maraton!', power: 90, warna: '#e63329' },
+    { nama: 'Classical Piano', emoji: '🎹', deskripsi: 'Mozart, Chopin, Beethoven -- coding dengan klasik terasa seperti membuat karya seni', power: 85, warna: '#f59e0b' },
   ]
   return (
-    <PanelBab id="ch72" chNum="CHAPTER 72" judul="CODING WITH MUSIC — SOUNDTRACK HIDUP" warna="#1a5cff" latarBelakang="#e8f0ff">
+    <PanelBab id="ch72" chNum="CHAPTER 72" judul="CODING WITH MUSIC -- SOUNDTRACK HIDUP" warna="#1a5cff" latarBelakang="#e8f0ff">
       <div className="grid lg:grid-cols-2 gap-8">
         <div>
           <div className="speech-bubble-right inline-block text-sm mb-4 text-[#0a0a0a]">
@@ -108,7 +108,7 @@ function Ch72() {
               { label: 'Headphone', val: 'Over-ear dengan noise cancelling', icon: '🎧' },
               { label: 'Platform', val: 'Spotify + YouTube Music', icon: '📱' },
               { label: 'Playlist Favorit', val: '"Lofi Rizki" + "Anime OST Mix"', icon: '🎵' },
-              { label: 'Volume Ideal', val: '40-60% — cukup fokus, tidak merusak telinga', icon: '🔊' },
+              { label: 'Volume Ideal', val: '40-60% -- cukup fokus, tidak merusak telinga', icon: '🔊' },
               { label: 'Waktu Terbaik', val: 'Malam hari: 10pm - 2am coding session', icon: '🌙' },
             ].map(s => (
               <div key={s.label} className="flex items-start gap-3">
@@ -126,18 +126,18 @@ function Ch72() {
   )
 }
 
-// ─── CHAPTER 73: BACAAN & RISET ───────────────────────────────────────────────
+// --- CHAPTER 73: BACAAN & RISET -----------------------------------------------
 function Ch73() {
   const daftarBacaan = [
-    { kategori: 'Teknologi', items: ['Clean Code — Robert Martin', 'The Pragmatic Programmer', 'You Don\'t Know JS', 'Laravel Documentation'], warna: '#1a5cff', icon: '💻' },
-    { kategori: 'Bisnis & Startup', items: ['Zero to One — Peter Thiel', 'The Lean Startup', 'Atomic Habits', 'Deep Work'], warna: '#22c55e', icon: '🚀' },
+    { kategori: 'Teknologi', items: ['Clean Code -- Robert Martin', 'The Pragmatic Programmer', 'You Don\'t Know JS', 'Laravel Documentation'], warna: '#1a5cff', icon: '💻' },
+    { kategori: 'Bisnis & Startup', items: ['Zero to One -- Peter Thiel', 'The Lean Startup', 'Atomic Habits', 'Deep Work'], warna: '#22c55e', icon: '🚀' },
     { kategori: 'Artikel & Blog', items: ['Dev.to Daily', 'CSS-Tricks', 'Smashing Magazine', 'Laracasts'], warna: '#f59e0b', icon: '📰' },
     { kategori: 'YouTube Channel', items: ['Traversy Media', 'Fireship', 'The Coding Train', 'Laracasts YouTube'], warna: '#e63329', icon: '▶️' },
   ]
   return (
-    <PanelBab id="ch73" chNum="CHAPTER 73" judul="PERPUSTAKAAN DIGITAL — SUMBER ILMU" warna="#f59e0b" latarBelakang="#fffbeb">
+    <PanelBab id="ch73" chNum="CHAPTER 73" judul="PERPUSTAKAAN DIGITAL -- SUMBER ILMU" warna="#f59e0b" latarBelakang="#fffbeb">
       <div className="speech-bubble inline-block text-sm mb-6">
-        📚 Belajar tidak pernah berhenti — setiap hari adalah chapter baru!
+        📚 Belajar tidak pernah berhenti -- setiap hari adalah chapter baru!
       </div>
       <div className="grid sm:grid-cols-2 gap-4">
         {daftarBacaan.map((buku, i) => (
@@ -167,7 +167,7 @@ function Ch73() {
   )
 }
 
-// ─── CHAPTER 74: KREATIVITAS & DESAIN ────────────────────────────────────────
+// --- CHAPTER 74: KREATIVITAS & DESAIN ----------------------------------------
 function Ch74() {
   const karya = [
     { tipe: 'Desain Logo', tool: 'Canva + CorelDraw', hasil: '20+ logo untuk komunitas dan event', icon: '🎨', warna: '#8b5cf6' },
@@ -178,7 +178,7 @@ function Ch74() {
     { tipe: 'Ilustrasi Digital', tool: 'Medibang + Canva', hasil: 'Karakter mascot dan sticker komunitas', icon: '✏️', warna: '#0891b2' },
   ]
   return (
-    <PanelBab id="ch74" chNum="CHAPTER 74" judul="KREATIVITAS — SISI LAIN SANG DEVELOPER" warna="#8b5cf6" latarBelakang="#f5f0ff">
+    <PanelBab id="ch74" chNum="CHAPTER 74" judul="KREATIVITAS -- SISI LAIN SANG DEVELOPER" warna="#8b5cf6" latarBelakang="#f5f0ff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
         🎨 Developer yang bisa desain = unicorn yang dicari semua startup!
       </div>
@@ -203,7 +203,7 @@ function Ch74() {
   )
 }
 
-// ─── CHAPTER 75: KOMUNITAS & MENTOR ──────────────────────────────────────────
+// --- CHAPTER 75: KOMUNITAS & MENTOR ------------------------------------------
 function Ch75() {
   const peran = [
     { peran: 'Member Aktif', komunitas: 'Discord Developer Indonesia', kontribusi: 'Bantu jawab pertanyaan Laravel & PHP', icon: '💬', warna: '#1a5cff' },
@@ -212,7 +212,7 @@ function Ch75() {
     { peran: 'Open Source Contributor', komunitas: 'GitHub Community', kontribusi: 'Kontribusi kecil ke beberapa project', icon: '🐙', warna: '#0a0a0a' },
   ]
   return (
-    <PanelBab id="ch75" chNum="CHAPTER 75" judul="KOMUNITAS — KEKUATAN BERSAMA" warna="#22c55e" latarBelakang="#f0fdf4">
+    <PanelBab id="ch75" chNum="CHAPTER 75" judul="KOMUNITAS -- KEKUATAN BERSAMA" warna="#22c55e" latarBelakang="#f0fdf4">
       <div className="grid lg:grid-cols-2 gap-8">
         <div>
           <div className="speech-bubble inline-block text-sm mb-4">
@@ -248,7 +248,7 @@ function Ch75() {
               { val: 'BERBAGI', desc: 'Ilmu yang dibagikan justru makin berkembang, bukan berkurang', icon: '🎁', warna: '#22c55e' },
               { val: 'BELAJAR', desc: 'Dari pertanyaan orang lain, kamu sering menemukan solusi baru', icon: '📚', warna: '#1a5cff' },
               { val: 'BERTUMBUH', desc: 'Komunitas yang baik mendorong satu sama lain naik level', icon: '📈', warna: '#f59e0b' },
-              { val: 'BERKOLABORASI', desc: 'Dua kepala lebih baik — apalagi ratusan developer bersatu', icon: '🤝', warna: '#8b5cf6' },
+              { val: 'BERKOLABORASI', desc: 'Dua kepala lebih baik -- apalagi ratusan developer bersatu', icon: '🤝', warna: '#8b5cf6' },
             ].map(v => (
               <div key={v.val} className="flex items-start gap-3">
                 <div className="w-8 h-8 flex items-center justify-center text-lg flex-shrink-0"
@@ -266,7 +266,7 @@ function Ch75() {
   )
 }
 
-// ─── CHAPTER 76: IMPIAN BESAR ─────────────────────────────────────────────────
+// --- CHAPTER 76: IMPIAN BESAR -------------------------------------------------
 function Ch76() {
   const milestones = [
     { tahun: '2026', target: 'Lulus Skripsi + Launch KVT.kom Beta', status: 'IN PROGRESS', warna: '#1a5cff', icon: '🎓' },
@@ -277,7 +277,7 @@ function Ch76() {
     { tahun: '2030', target: 'KVT.kom jangkau 10 kota di Indonesia', status: 'DREAM', warna: '#0891b2', icon: '🌏' },
   ]
   return (
-    <PanelBab id="ch76" chNum="CHAPTER 76" judul="IMPIAN BESAR — BEYOND THE HORIZON" warna="#ffd700" latarBelakang="#fffbeb" gelap>
+    <PanelBab id="ch76" chNum="CHAPTER 76" judul="IMPIAN BESAR -- BEYOND THE HORIZON" warna="#ffd700" latarBelakang="#fffbeb" gelap>
       <div className="speech-bubble inline-block text-sm mb-6 text-[#0a0a0a]">
         🌟 Mimpi besar dimulai dari langkah kecil yang konsisten setiap hari!
       </div>
@@ -315,20 +315,20 @@ function Ch76() {
   )
 }
 
-// ─── CHAPTER 77: PESAN UNTUK DEVELOPER MUDA ──────────────────────────────────
+// --- CHAPTER 77: PESAN UNTUK DEVELOPER MUDA ----------------------------------
 function Ch77() {
   const pesan = [
     { no: '01', pesan: 'Mulai dari yang kamu tahu sekarang, bukan dari yang sempurna besok.', icon: '🚀', warna: '#1a5cff' },
-    { no: '02', pesan: 'Google dan Stack Overflow bukan curang — itu alat profesional.', icon: '🔍', warna: '#22c55e' },
+    { no: '02', pesan: 'Google dan Stack Overflow bukan curang -- itu alat profesional.', icon: '🔍', warna: '#22c55e' },
     { no: '03', pesan: 'Sertifikat bagus, tapi portfolio nyata lebih bicara banyak.', icon: '💼', warna: '#f59e0b' },
     { no: '04', pesan: 'Belajar dari error lebih berharga dari tutorial yang berjalan mulus.', icon: '🐛', warna: '#e63329' },
-    { no: '05', pesan: 'Komunitas developer itu ramah — jangan takut bertanya!', icon: '🤝', warna: '#8b5cf6' },
-    { no: '06', pesan: 'Tidak perlu hafal semua syntax — pahami logikanya.', icon: '🧠', warna: '#0891b2' },
+    { no: '05', pesan: 'Komunitas developer itu ramah -- jangan takut bertanya!', icon: '🤝', warna: '#8b5cf6' },
+    { no: '06', pesan: 'Tidak perlu hafal semua syntax -- pahami logikanya.', icon: '🧠', warna: '#0891b2' },
   ]
   return (
     <PanelBab id="ch77" chNum="CHAPTER 77" judul="SURAT UNTUK DEVELOPER MUDA" warna="#1a5cff" latarBelakang="#e8f0ff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        ✉️ Dari saya yang pernah ada di posisi itu — pesan ini untuk kamu!
+        ✉️ Dari saya yang pernah ada di posisi itu -- pesan ini untuk kamu!
       </div>
       <div className="grid sm:grid-cols-2 gap-4 mb-8">
         {pesan.map((p, i) => (
@@ -366,7 +366,7 @@ function Ch77() {
   )
 }
 
-// ─── CHAPTER 78: INOVASI IOT LANJUTAN ────────────────────────────────────────
+// --- CHAPTER 78: INOVASI IOT LANJUTAN ----------------------------------------
 function Ch78() {
   const proyek = [
     { nama: 'Smart Pot', deskripsi: 'Pot tanaman otomatis dengan sensor kelembaban tanah, penyiram otomatis berbasis ESP32, dan notifikasi ke HP.', komponen: ['ESP32', 'Soil Sensor', 'Water Pump', 'Relay'], warna: '#22c55e', icon: '🌱' },
@@ -375,7 +375,7 @@ function Ch78() {
     { nama: 'Energy Monitor', deskripsi: 'Monitor konsumsi listrik rumah real-time, alert jika melebihi batas, integrasi dengan dashboard web.', komponen: ['Arduino', 'ACS712', 'LCD', 'Node.js API'], warna: '#f59e0b', icon: '⚡' },
   ]
   return (
-    <PanelBab id="ch78" chNum="CHAPTER 78" judul="IOT INOVASI — DARI BARANG BEKAS JADI KARYA" warna="#22c55e" latarBelakang="#f0fdf4">
+    <PanelBab id="ch78" chNum="CHAPTER 78" judul="IOT INOVASI -- DARI BARANG BEKAS JADI KARYA" warna="#22c55e" latarBelakang="#f0fdf4">
       <div className="speech-bubble inline-block text-sm mb-6">
         🔧 Komponen bekas + kreativitas = inovasi nyata yang bermanfaat!
       </div>
@@ -408,18 +408,18 @@ function Ch78() {
   )
 }
 
-// ─── CHAPTER 79: MASA DEPAN AI & WEB ─────────────────────────────────────────
+// --- CHAPTER 79: MASA DEPAN AI & WEB -----------------------------------------
 function Ch79() {
   const tren = [
-    { nama: 'AI-Powered Development', deskripsi: 'GitHub Copilot, ChatGPT Code — AI sebagai pair programmer yang selalu siap membantu.', status: 'SEKARANG', warna: '#8b5cf6', icon: '🤖' },
-    { nama: 'Edge Computing', deskripsi: 'Proses data lebih dekat ke pengguna — latensi ultra-rendah untuk aplikasi real-time.', status: 'BERKEMBANG', warna: '#1a5cff', icon: '⚡' },
-    { nama: 'Web3 & Blockchain', deskripsi: 'Desentralisasi data dan aset digital — masa depan kepemilikan dan transaksi online.', status: 'EKSPLORASI', warna: '#f59e0b', icon: '🔗' },
+    { nama: 'AI-Powered Development', deskripsi: 'GitHub Copilot, ChatGPT Code -- AI sebagai pair programmer yang selalu siap membantu.', status: 'SEKARANG', warna: '#8b5cf6', icon: '🤖' },
+    { nama: 'Edge Computing', deskripsi: 'Proses data lebih dekat ke pengguna -- latensi ultra-rendah untuk aplikasi real-time.', status: 'BERKEMBANG', warna: '#1a5cff', icon: '⚡' },
+    { nama: 'Web3 & Blockchain', deskripsi: 'Desentralisasi data dan aset digital -- masa depan kepemilikan dan transaksi online.', status: 'EKSPLORASI', warna: '#f59e0b', icon: '🔗' },
     { nama: 'PWA & Offline-First', deskripsi: 'Website yang berfungsi seperti app native, bahkan tanpa internet. Masa depan web mobile.', status: 'ADOPSI', warna: '#22c55e', icon: '📱' },
-    { nama: 'Green Computing', deskripsi: 'Optimasi konsumsi energi server dan kode — developer bertanggung jawab pada lingkungan.', status: 'PENTING', warna: '#0891b2', icon: '🌱' },
-    { nama: 'AR/VR Web', deskripsi: 'WebXR dan spatial computing — internet yang bisa kamu masuki secara fisik. KVT.kom mungkin di sini?', status: 'MASA DEPAN', warna: '#e63329', icon: '🥽' },
+    { nama: 'Green Computing', deskripsi: 'Optimasi konsumsi energi server dan kode -- developer bertanggung jawab pada lingkungan.', status: 'PENTING', warna: '#0891b2', icon: '🌱' },
+    { nama: 'AR/VR Web', deskripsi: 'WebXR dan spatial computing -- internet yang bisa kamu masuki secara fisik. KVT.kom mungkin di sini?', status: 'MASA DEPAN', warna: '#e63329', icon: '🥽' },
   ]
   return (
-    <PanelBab id="ch79" chNum="CHAPTER 79" judul="MASA DEPAN WEB — TREN TEKNOLOGI" warna="#8b5cf6" latarBelakang="#f5f0ff">
+    <PanelBab id="ch79" chNum="CHAPTER 79" judul="MASA DEPAN WEB -- TREN TEKNOLOGI" warna="#8b5cf6" latarBelakang="#f5f0ff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
         🚀 Developer yang tidak update tren = kode yang tidak di-update!
       </div>
@@ -449,7 +449,7 @@ function Ch79() {
   )
 }
 
-// ─── CHAPTER 80: THANK YOU ────────────────────────────────────────────────────
+// --- CHAPTER 80: THANK YOU ----------------------------------------------------
 function Ch80() {
   return (
     <PanelBab id="ch80" chNum="CHAPTER 80" judul="TERIMA KASIH TELAH MEMBACA!" warna="#ffd700" latarBelakang="#fffbeb" gelap>
@@ -496,7 +496,7 @@ function Ch80() {
           className="p-6"
           style={{ border: '3px solid #ffd700', boxShadow: '5px 5px 0 #ffd700', background: '#111' }}>
           <p className="text-sm text-white/80 font-bold leading-relaxed">
-            Portfolio ini masih terus berkembang — sama seperti saya yang terus belajar.
+            Portfolio ini masih terus berkembang -- sama seperti saya yang terus belajar.
             Setiap chapter baru adalah bukti bahwa <span className="text-yellow-400">perjalanan tidak pernah berhenti.</span>
             <br /><br />
             Jika kamu sampai di sini, berarti kamu luar biasa sabar 😄
@@ -521,7 +521,7 @@ function Ch80() {
   )
 }
 
-// ─── EXPORT UTAMA ─────────────────────────────────────────────────────────────
+// --- EXPORT UTAMA -------------------------------------------------------------
 export default function ChaptersGroup7() {
   return (
     <>

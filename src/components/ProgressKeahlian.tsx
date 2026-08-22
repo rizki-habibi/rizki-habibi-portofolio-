@@ -214,7 +214,7 @@ export default function ProgressSkillsComic() {
               <div>
                 <div className="font-comic text-lg sm:text-xl text-comic-black">{aktifKat.toUpperCase()} SKILLS</div>
                 <div className="text-[10px] sm:text-xs font-bold text-comic-black/50">
-                  {skillData[aktifKat].length} kemampuan tercatat · Rata-rata{' '}
+                  {skillData[aktifKat].length} kemampuan tercatat  Rata-rata{' '}
                   {Math.round(skillData[aktifKat].reduce((a, s) => a + s.level, 0) / skillData[aktifKat].length)}%
                 </div>
               </div>

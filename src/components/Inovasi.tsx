@@ -9,7 +9,7 @@ const inovasiItems = [
     id: 1,
     emoji: '🔧',
     judul: 'Alat Monitoring Berbahan Daur Ulang',
-    deskripsi: 'Merancang dan membangun alat monitoring fungsional dari komponen bekas — mengubah bahan tidak terpakai menjadi perangkat berguna dengan sentuhan teknologi.',
+    deskripsi: 'Merancang dan membangun alat monitoring fungsional dari komponen bekas -- mengubah bahan tidak terpakai menjadi perangkat berguna dengan sentuhan teknologi.',
     detail: [
       'Merakit sirkuit monitoring dari komponen elektronik bekas',
       'Membuat casing alat dari bahan limbah yang dimodifikasi',
@@ -54,7 +54,7 @@ const inovasiItems = [
     id: 4,
     emoji: '🌐',
     judul: 'Integrasi Perangkat Fisik + Software',
-    deskripsi: 'Menggabungkan dunia hardware dengan software — membangun solusi end-to-end dari sensor fisik hingga visualisasi data di web.',
+    deskripsi: 'Menggabungkan dunia hardware dengan software -- membangun solusi end-to-end dari sensor fisik hingga visualisasi data di web.',
     detail: [
       'Komunikasi serial/wireless antara hardware dan server',
       'API backend untuk menerima dan menyimpan data sensor',
@@ -190,7 +190,7 @@ export default function Innovation() {
             viewport={{ once: true }}
             className="font-bold text-white text-base md:text-lg max-w-3xl mx-auto leading-relaxed mb-4"
           >
-            &quot;Inovasi sejati bukan hanya soal menulis kode — tapi tentang{' '}
+            &quot;Inovasi sejati bukan hanya soal menulis kode -- tapi tentang{' '}
             <span className="text-comic-yellow">melihat potensi di balik bahan yang dianggap tidak berguna</span>{' '}
             dan mengubahnya menjadi solusi nyata yang berdampak.&quot;
           </motion.blockquote>
@@ -201,7 +201,7 @@ export default function Innovation() {
             viewport={{ once: true }}
             className="text-white/50 text-sm font-bold"
           >
-            — Rizki Habibi, Web Developer &amp; Innovator
+            -- Rizki Habibi, Web Developer &amp; Innovator
           </motion.p>
           <div className="flex justify-center gap-8 mt-6">
             {[

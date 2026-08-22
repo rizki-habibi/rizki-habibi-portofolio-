@@ -42,14 +42,14 @@ function GridTiga({ items }: { items: { icon: string; judul: string; teks: strin
 // -- Ch141: SENI DIGITAL -------------------------------------------------------
 function Ch141() {
   const karya = [
-    { jenis: 'Generative Art', desc: 'Karya seni yang dibuat dengan algoritma — setiap run menghasilkan output unik yang tidak pernah sama persis', tech: 'p5.js, Processing, TouchDesigner', icon: '🎨', warna: '#8b5cf6' },
-    { jenis: 'Pixel Art', desc: 'Seni piksel yang lahir dari keterbatasan hardware lawas — kini jadi estetika nostalgia yang sangat populer', tech: 'Aseprite, Pixaki, GraphicsGale', icon: '🖼️', warna: '#1a5cff' },
-    { jenis: 'AI Art', desc: 'Midjourney, DALL-E, Stable Diffusion — AI sebagai alat kreatif baru. Kontroversial tapi powerful!', tech: 'Midjourney, ComfyUI, Automatic1111', icon: '🤖', warna: '#e63329' },
+    { jenis: 'Generative Art', desc: 'Karya seni yang dibuat dengan algoritma -- setiap run menghasilkan output unik yang tidak pernah sama persis', tech: 'p5.js, Processing, TouchDesigner', icon: '🎨', warna: '#8b5cf6' },
+    { jenis: 'Pixel Art', desc: 'Seni piksel yang lahir dari keterbatasan hardware lawas -- kini jadi estetika nostalgia yang sangat populer', tech: 'Aseprite, Pixaki, GraphicsGale', icon: '🖼️', warna: '#1a5cff' },
+    { jenis: 'AI Art', desc: 'Midjourney, DALL-E, Stable Diffusion -- AI sebagai alat kreatif baru. Kontroversial tapi powerful!', tech: 'Midjourney, ComfyUI, Automatic1111', icon: '🤖', warna: '#e63329' },
     { jenis: 'Interactive Installation', desc: 'Seni yang merespons gerakan pengunjung menggunakan sensor, kamera, dan proyektor interaktif', tech: 'openFrameworks, Arduino, Max/MSP', icon: '✨', warna: '#22c55e' },
   ]
   return (
-    <PanelBab id="ch141" num="141" judul="SENI DIGITAL — KREATIVITAS TANPA BATAS" warna="#8b5cf6" latarBelakang="#f5f0ff">
-      <div className="speech-bubble inline-block text-sm mb-6">🎨 Code bukan hanya alat — code bisa jadi medium ekspresi artistik yang paling unik!</div>
+    <PanelBab id="ch141" num="141" judul="SENI DIGITAL -- KREATIVITAS TANPA BATAS" warna="#8b5cf6" latarBelakang="#f5f0ff">
+      <div className="speech-bubble inline-block text-sm mb-6">🎨 Code bukan hanya alat -- code bisa jadi medium ekspresi artistik yang paling unik!</div>
       <div className="space-y-4 mb-6">
         {karya.map((k, i) => (
           <motion.div key={k.jenis}
@@ -84,17 +84,17 @@ function Ch141() {
 // -- Ch142: MUSIK & TEKNOLOGI --------------------------------------------------
 function Ch142() {
   return (
-    <PanelBab id="ch142" num="142" judul="MUSIK & TEKNOLOGI — HARMONI DIGITAL" warna="#1a5cff" latarBelakang="#e8f0ff">
+    <PanelBab id="ch142" num="142" judul="MUSIK & TEKNOLOGI -- HARMONI DIGITAL" warna="#1a5cff" latarBelakang="#e8f0ff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        🎵 Dari DAW sampai AI composer — teknologi merevolusi cara musik dibuat dan dinikmati!
+        🎵 Dari DAW sampai AI composer -- teknologi merevolusi cara musik dibuat dan dinikmati!
       </div>
       <GridTiga items={[
-        { icon: '🎹', judul: 'DAW & Music Production', teks: 'FL Studio, Ableton, Logic Pro — producer musik profesional bisa kerja dari kamar kos dengan laptop biasa', warna: '#1a5cff', bg: '#e8f0ff' },
-        { icon: '🤖', judul: 'AI Music Generation', teks: 'Suno AI, Udio — generate lagu lengkap dari teks deskripsi dalam hitungan detik. Era baru musik!', warna: '#8b5cf6', bg: '#f5f0ff' },
-        { icon: '🎧', judul: 'Spatial Audio', teks: 'Dolby Atmos dan Apple Spatial Audio — musik yang terasa 3D. Developer bisa build pengalaman audio imersif', warna: '#22c55e', bg: '#f0fdf4' },
-        { icon: '🎙️', judul: 'Voice Cloning', teks: 'Eleven Labs dan ElevenVoices — replikasi suara dengan AI. Disruptif untuk dubbing dan aksesibilitas', warna: '#f59e0b', bg: '#fffbeb' },
-        { icon: '🎵', judul: 'Music Recommendation', teks: 'Spotify Discover Weekly adalah salah satu ML sistem terbaik di dunia — collaborative filtering yang genius', warna: '#e63329', bg: '#fef2f2' },
-        { icon: '💻', judul: 'Live Coding Music', teks: 'SuperCollider, TidalCycles — programmer membuat musik secara live dengan kode di depan penonton!', warna: '#0891b2', bg: '#ecfeff' },
+        { icon: '🎹', judul: 'DAW & Music Production', teks: 'FL Studio, Ableton, Logic Pro -- producer musik profesional bisa kerja dari kamar kos dengan laptop biasa', warna: '#1a5cff', bg: '#e8f0ff' },
+        { icon: '🤖', judul: 'AI Music Generation', teks: 'Suno AI, Udio -- generate lagu lengkap dari teks deskripsi dalam hitungan detik. Era baru musik!', warna: '#8b5cf6', bg: '#f5f0ff' },
+        { icon: '🎧', judul: 'Spatial Audio', teks: 'Dolby Atmos dan Apple Spatial Audio -- musik yang terasa 3D. Developer bisa build pengalaman audio imersif', warna: '#22c55e', bg: '#f0fdf4' },
+        { icon: '🎙️', judul: 'Voice Cloning', teks: 'Eleven Labs dan ElevenVoices -- replikasi suara dengan AI. Disruptif untuk dubbing dan aksesibilitas', warna: '#f59e0b', bg: '#fffbeb' },
+        { icon: '🎵', judul: 'Music Recommendation', teks: 'Spotify Discover Weekly adalah salah satu ML sistem terbaik di dunia -- collaborative filtering yang genius', warna: '#e63329', bg: '#fef2f2' },
+        { icon: '💻', judul: 'Live Coding Music', teks: 'SuperCollider, TidalCycles -- programmer membuat musik secara live dengan kode di depan penonton!', warna: '#0891b2', bg: '#ecfeff' },
       ]} />
     </PanelBab>
   )
@@ -107,11 +107,11 @@ function Ch143() {
     { alat: 'CapCut', fungsi: 'Edit video cepat di HP maupun PC. Auto-caption, AI features, template viral', icon: '📱', warna: '#0a0a0a' },
     { alat: 'Notion', fungsi: 'Content calendar, research database, script writing, dan idea dump semua dalam satu tempat', icon: '📝', warna: '#1a1a1a' },
     { alat: 'OBS Studio', fungsi: 'Live streaming dan screen recording gratis. Standard industry untuk YouTuber dan streamer', icon: '🎬', warna: '#e63329' },
-    { alat: 'Descript', fungsi: 'Edit video dengan mengedit teks transkrip — revolusi editing podcast dan video interview', icon: '✂️', warna: '#8b5cf6' },
+    { alat: 'Descript', fungsi: 'Edit video dengan mengedit teks transkrip -- revolusi editing podcast dan video interview', icon: '✂️', warna: '#8b5cf6' },
     { alat: 'Buffer/Later', fungsi: 'Jadwal posting otomatis ke semua platform sosmed dari satu dashboard. Konsistensi tanpa ribet!', icon: '📅', warna: '#1a5cff' },
   ]
   return (
-    <PanelBab id="ch143" num="143" judul="CONTENT CREATOR TECH — SENJATA KREATOR" warna="#e63329" latarBelakang="#fef2f2">
+    <PanelBab id="ch143" num="143" judul="CONTENT CREATOR TECH -- SENJATA KREATOR" warna="#e63329" latarBelakang="#fef2f2">
       <div className="speech-bubble inline-block text-sm mb-6">💡 Developer yang jadi content creator punya superpower: bisa build tool sendiri yang orang lain harus bayar!</div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-6">
         {stack.map((s, i) => (
@@ -154,9 +154,9 @@ function Ch143() {
 // -- Ch144: SOSIAL MEDIA & ALGORITMA ------------------------------------------
 function Ch144() {
   return (
-    <PanelBab id="ch144" num="144" judul="SOSIAL MEDIA — MEMAHAMI ALGORITMANYA" warna="#0a66c2" latarBelakang="#e8f2ff">
+    <PanelBab id="ch144" num="144" judul="SOSIAL MEDIA -- MEMAHAMI ALGORITMANYA" warna="#0a66c2" latarBelakang="#e8f2ff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        📊 Semua platform sosmed punya algoritma — developer yang paham kode, bisa paham algoritmanya!
+        📊 Semua platform sosmed punya algoritma -- developer yang paham kode, bisa paham algoritmanya!
       </div>
       <GridTiga items={[
         { icon: '🎵', judul: 'TikTok Algorithm', teks: 'Engagement rate pertama 30 menit menentukan distribusi. Rewatch, share, dan completion rate > like', warna: '#0a0a0a', bg: '#f0f0eb' },
@@ -173,16 +173,16 @@ function Ch144() {
 // -- Ch145: PODCAST & AUDIO TECH -----------------------------------------------
 function Ch145() {
   return (
-    <PanelBab id="ch145" num="145" judul="PODCAST & AUDIO — KONTEN YANG DIDENGAR" warna="#f59e0b" latarBelakang="#fffbeb">
-      <div className="speech-bubble inline-block text-sm mb-6">🎙️ Podcast tech Indonesia sedang booming — dan developer punya perspektif unik yang dibutuhkan pendengar!</div>
+    <PanelBab id="ch145" num="145" judul="PODCAST & AUDIO -- KONTEN YANG DIDENGAR" warna="#f59e0b" latarBelakang="#fffbeb">
+      <div className="speech-bubble inline-block text-sm mb-6">🎙️ Podcast tech Indonesia sedang booming -- dan developer punya perspektif unik yang dibutuhkan pendengar!</div>
       <div className="grid lg:grid-cols-2 gap-8">
         <div className="space-y-3">
           <div className="comic-panel p-4">
             <div className="font-comic text-base text-[#0a0a0a] mb-3">🎙️ SETUP PODCAST MINIMAL</div>
             {[
-              { item: 'Mikrofon USB', rekomendasi: 'Blue Snowball iCE atau Rode NT-USB Mini', harga: 'Rp 400K–2JT' },
+              { item: 'Mikrofon USB', rekomendasi: 'Blue Snowball iCE atau Rode NT-USB Mini', harga: 'Rp 400K-2JT' },
               { item: 'DAW (Digital Audio Workstation)', rekomendasi: 'Audacity (free) atau GarageBand (Mac)', harga: 'Gratis!' },
-              { item: 'Hosting Platform', rekomendasi: 'Anchor (gratis), Buzzsprout, atau Spotify for Podcasters', harga: 'Gratis–berbayar' },
+              { item: 'Hosting Platform', rekomendasi: 'Anchor (gratis), Buzzsprout, atau Spotify for Podcasters', harga: 'Gratis-berbayar' },
               { item: 'Editing AI', rekomendasi: 'Descript atau Adobe Podcast untuk remove filler words otomatis', harga: 'Free tier tersedia' },
             ].map(s => (
               <div key={s.item} className="flex items-start gap-2 mb-2.5">
@@ -197,9 +197,9 @@ function Ch145() {
           </div>
         </div>
         <GridTiga items={[
-          { icon: '💡', judul: 'Tech Podcast Ideas', teks: '"Ngoding Santai" — cerita developer Indonesia. Perspektif lokal yang unik dan segar!', warna: '#f59e0b', bg: '#fffbeb' },
-          { icon: '🤖', judul: 'AI Transcript', teks: 'Whisper (OpenAI) auto-transcribe podcast jadi teks — buat blog post gratis dari setiap episode!', warna: '#1a5cff', bg: '#e8f0ff' },
-          { icon: '📊', judul: 'Analytics', teks: 'Spotify for Podcasters kasih data listeners, drop-off rate, dan geography — optimize konten berbasis data', warna: '#22c55e', bg: '#f0fdf4' },
+          { icon: '💡', judul: 'Tech Podcast Ideas', teks: '"Ngoding Santai" -- cerita developer Indonesia. Perspektif lokal yang unik dan segar!', warna: '#f59e0b', bg: '#fffbeb' },
+          { icon: '🤖', judul: 'AI Transcript', teks: 'Whisper (OpenAI) auto-transcribe podcast jadi teks -- buat blog post gratis dari setiap episode!', warna: '#1a5cff', bg: '#e8f0ff' },
+          { icon: '📊', judul: 'Analytics', teks: 'Spotify for Podcasters kasih data listeners, drop-off rate, dan geography -- optimize konten berbasis data', warna: '#22c55e', bg: '#f0fdf4' },
         ]} />
       </div>
     </PanelBab>
@@ -209,15 +209,15 @@ function Ch145() {
 // -- Ch146: FASHION TECH -------------------------------------------------------
 function Ch146() {
   return (
-    <PanelBab id="ch146" num="146" judul="FASHION TECH — INDUSTRI YANG BERTRANSFORMASI" warna="#e1306c" latarBelakang="#fff0f5">
+    <PanelBab id="ch146" num="146" judul="FASHION TECH -- INDUSTRI YANG BERTRANSFORMASI" warna="#e1306c" latarBelakang="#fff0f5">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        👗 Fashion dan teknologi bertemu — dari virtual try-on sampai sustainable fashion!
+        👗 Fashion dan teknologi bertemu -- dari virtual try-on sampai sustainable fashion!
       </div>
       <GridTiga items={[
         { icon: '🥽', judul: 'Virtual Try-On', teks: 'AR yang memungkinkan coba baju, sepatu, atau aksesoris secara virtual via kamera HP sebelum beli', warna: '#e1306c', bg: '#fff0f5' },
         { icon: '🤖', judul: 'AI Stylist', teks: 'Personal stylist AI yang merekomendasikan outfit berdasar cuaca, agenda, dan preferensi gaya pribadi', warna: '#8b5cf6', bg: '#f5f0ff' },
         { icon: '♻️', judul: 'Sustainable Fashion', teks: 'Platform resale fashion (Carousell, ThriftedID) yang diperkuat AI untuk valuation dan authenticity check', warna: '#22c55e', bg: '#f0fdf4' },
-        { icon: '⛓️', judul: 'Supply Chain Fashion', teks: 'Blockchain untuk transparansi dari bahan baku ke tangan konsumen — counter greenwashing brand besar', warna: '#1a5cff', bg: '#e8f0ff' },
+        { icon: '⛓️', judul: 'Supply Chain Fashion', teks: 'Blockchain untuk transparansi dari bahan baku ke tangan konsumen -- counter greenwashing brand besar', warna: '#1a5cff', bg: '#e8f0ff' },
         { icon: '📏', judul: 'Custom Sizing AI', teks: 'Scan tubuh dengan HP → dapat rekomendasi ukuran yang akurat → kurangi return rate 80%', warna: '#f59e0b', bg: '#fffbeb' },
         { icon: '🎨', judul: 'AI Design', teks: 'AI generates fashion design berdasar tren, preferensi konsumen, dan sustainable materials yang tersedia', warna: '#0891b2', bg: '#ecfeff' },
       ]} />
@@ -228,15 +228,15 @@ function Ch146() {
 // -- Ch147: OLAHRAGA & SPORT TECH ---------------------------------------------
 function Ch147() {
   return (
-    <PanelBab id="ch147" num="147" judul="SPORT TECH — TEKNOLOGI DI DUNIA OLAHRAGA" warna="#22c55e" latarBelakang="#f0fdf4">
+    <PanelBab id="ch147" num="147" judul="SPORT TECH -- TEKNOLOGI DI DUNIA OLAHRAGA" warna="#22c55e" latarBelakang="#f0fdf4">
       <div className="speech-bubble inline-block text-sm mb-6">⚡ Data dan AI sudah mengubah cara tim olahraga berlatih, bermain, dan menang!</div>
       <GridTiga items={[
-        { icon: '⚽', judul: 'Football Analytics', teks: 'GPS tracker setiap pemain, heatmap posisi, dan expected goals (xG) model — Moneyball era sudah di sepak bola', warna: '#22c55e', bg: '#f0fdf4' },
+        { icon: '⚽', judul: 'Football Analytics', teks: 'GPS tracker setiap pemain, heatmap posisi, dan expected goals (xG) model -- Moneyball era sudah di sepak bola', warna: '#22c55e', bg: '#f0fdf4' },
         { icon: '🏃', judul: 'Biomechanics AI', teks: 'Computer vision menganalisis gerakan atlet dan mengidentifikasi inefficiency atau risiko cedera', warna: '#1a5cff', bg: '#e8f0ff' },
         { icon: '🎮', judul: 'E-Sports Platform', teks: 'E-Sports Indonesia sedang booming. Platform turnamen, broadcasting, dan monetisasi perlu developer lokal!', warna: '#8b5cf6', bg: '#f5f0ff' },
         { icon: '⚖️', judul: 'Referee AI', teks: 'VAR di sepak bola adalah awal. AI hakim bulu tangkis, tinju, dan senam sudah dalam pengembangan', warna: '#f59e0b', bg: '#fffbeb' },
-        { icon: '💪', judul: 'Personal Trainer AI', teks: 'Camera pose estimation + AI memberikan real-time feedback form latihan — personal trainer digital gratis', warna: '#e63329', bg: '#fef2f2' },
-        { icon: '🏆', judul: 'Fantasy Sports', teks: 'Platform fantasy football, basketball, dll. — gabungkan data analytics, gamification, dan komunitas', warna: '#0891b2', bg: '#ecfeff' },
+        { icon: '💪', judul: 'Personal Trainer AI', teks: 'Camera pose estimation + AI memberikan real-time feedback form latihan -- personal trainer digital gratis', warna: '#e63329', bg: '#fef2f2' },
+        { icon: '🏆', judul: 'Fantasy Sports', teks: 'Platform fantasy football, basketball, dll. -- gabungkan data analytics, gamification, dan komunitas', warna: '#0891b2', bg: '#ecfeff' },
       ]} />
     </PanelBab>
   )
@@ -245,15 +245,15 @@ function Ch147() {
 // -- Ch148: KULINER TECH -------------------------------------------------------
 function Ch148() {
   return (
-    <PanelBab id="ch148" num="148" judul="KULINER TECH — INOVASI DI INDUSTRI MAKANAN" warna="#f59e0b" latarBelakang="#fffbeb">
+    <PanelBab id="ch148" num="148" judul="KULINER TECH -- INOVASI DI INDUSTRI MAKANAN" warna="#f59e0b" latarBelakang="#fffbeb">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
         🍜 Kuliner Indonesia = kekayaan terbesar yang belum sepenuhnya terdigitalisasi!
       </div>
       <GridTiga items={[
         { icon: '🛵', judul: 'Food Delivery Tech', teks: 'GoFood, GrabFood pakai ML untuk routing optimal, demand forecasting, dan surge pricing yang fair', warna: '#e63329', bg: '#fef2f2' },
-        { icon: '🤖', judul: 'Kitchen Automation', teks: 'Robot sous chef yang presisi untuk restoran cepat saji — konsistensi rasa dan efisiensi biaya produksi', warna: '#1a5cff', bg: '#e8f0ff' },
+        { icon: '🤖', judul: 'Kitchen Automation', teks: 'Robot sous chef yang presisi untuk restoran cepat saji -- konsistensi rasa dan efisiensi biaya produksi', warna: '#1a5cff', bg: '#e8f0ff' },
         { icon: '🌱', judul: 'Food Waste AI', teks: 'Prediksi demand makanan restoran untuk minimalisir pembuangan bahan baku. Problem besar di Indonesia!', warna: '#22c55e', bg: '#f0fdf4' },
-        { icon: '🔬', judul: 'Food Safety Sensor', teks: 'Sensor IoT yang deteksi kontaminasi bakteri dalam makanan sebelum dipasarkan — save nyawa!', warna: '#8b5cf6', bg: '#f5f0ff' },
+        { icon: '🔬', judul: 'Food Safety Sensor', teks: 'Sensor IoT yang deteksi kontaminasi bakteri dalam makanan sebelum dipasarkan -- save nyawa!', warna: '#8b5cf6', bg: '#f5f0ff' },
         { icon: '🌿', judul: 'Plant-Based Tech', teks: 'Food science + ML untuk ciptakan produk plant-based yang rasanya mirip daging tapi lebih sustainable', warna: '#0891b2', bg: '#ecfeff' },
         { icon: '📊', judul: 'Menu Analytics', teks: 'Data analitik menu restoran: item mana paling profitable, paling disukai, dan paling sering dikembalikan', warna: '#f59e0b', bg: '#fffbeb' },
       ]} />
@@ -264,15 +264,15 @@ function Ch148() {
 // -- Ch149: TRANSPORTASI & LOGISTIK --------------------------------------------
 function Ch149() {
   return (
-    <PanelBab id="ch149" num="149" judul="TRANSPORTASI — MOBILITAS MASA DEPAN" warna="#0891b2" latarBelakang="#ecfeff">
-      <div className="speech-bubble inline-block text-sm mb-6">🚀 Dari ojek online sampai kereta cepat — transportasi Indonesia sedang berevolusi cepat!</div>
+    <PanelBab id="ch149" num="149" judul="TRANSPORTASI -- MOBILITAS MASA DEPAN" warna="#0891b2" latarBelakang="#ecfeff">
+      <div className="speech-bubble inline-block text-sm mb-6">🚀 Dari ojek online sampai kereta cepat -- transportasi Indonesia sedang berevolusi cepat!</div>
       <GridTiga items={[
         { icon: '🚗', judul: 'Ride-Hailing AI', teks: 'Gojek/Grab pakai ML untuk matching driver-rider optimal, ETA prediction, dan dynamic pricing', warna: '#22c55e', bg: '#f0fdf4' },
-        { icon: '🚌', judul: 'Public Transport App', teks: 'Real-time bus tracking, jadwal KRL, dan integrasi multi-moda — TransJakarta sudah mulai, butuh lebih!', warna: '#1a5cff', bg: '#e8f0ff' },
-        { icon: '📦', judul: 'Last-Mile Delivery', teks: 'Rute optimal untuk kurir dengan 50+ paket — routing algorithm yang efisien menghemat waktu dan BBM', warna: '#f59e0b', bg: '#fffbeb' },
-        { icon: '⚡', judul: 'EV Charging Network', teks: 'App cari SPKLU terdekat, booking slot, dan bayar terintegrasi — infrastruktur EV Indonesia butuh developer!', warna: '#8b5cf6', bg: '#f5f0ff' },
-        { icon: '🚢', judul: 'Maritime Tech', teks: 'Indonesia negara kepulauan — sistem navigasi kapal cerdas dan port management digital sangat krusial', warna: '#0891b2', bg: '#ecfeff' },
-        { icon: '✈️', judul: 'Aviation Analytics', teks: 'Predictive maintenance pesawat berbasis sensor dan ML — cegah kerusakan sebelum terjadi mid-flight', warna: '#e63329', bg: '#fef2f2' },
+        { icon: '🚌', judul: 'Public Transport App', teks: 'Real-time bus tracking, jadwal KRL, dan integrasi multi-moda -- TransJakarta sudah mulai, butuh lebih!', warna: '#1a5cff', bg: '#e8f0ff' },
+        { icon: '📦', judul: 'Last-Mile Delivery', teks: 'Rute optimal untuk kurir dengan 50+ paket -- routing algorithm yang efisien menghemat waktu dan BBM', warna: '#f59e0b', bg: '#fffbeb' },
+        { icon: '⚡', judul: 'EV Charging Network', teks: 'App cari SPKLU terdekat, booking slot, dan bayar terintegrasi -- infrastruktur EV Indonesia butuh developer!', warna: '#8b5cf6', bg: '#f5f0ff' },
+        { icon: '🚢', judul: 'Maritime Tech', teks: 'Indonesia negara kepulauan -- sistem navigasi kapal cerdas dan port management digital sangat krusial', warna: '#0891b2', bg: '#ecfeff' },
+        { icon: '✈️', judul: 'Aviation Analytics', teks: 'Predictive maintenance pesawat berbasis sensor dan ML -- cegah kerusakan sebelum terjadi mid-flight', warna: '#e63329', bg: '#fef2f2' },
       ]} />
     </PanelBab>
   )
@@ -281,16 +281,16 @@ function Ch149() {
 // -- Ch150: MASA DEPAN PEKERJAAN -----------------------------------------------
 function Ch150() {
   return (
-    <PanelBab id="ch150" num="150" judul="MASA DEPAN PEKERJAAN — PEKERJAAN 2030" warna="#ffd700" latarBelakang="#fffbeb" gelap>
+    <PanelBab id="ch150" num="150" judul="MASA DEPAN PEKERJAAN -- PEKERJAAN 2030" warna="#ffd700" latarBelakang="#fffbeb" gelap>
       <div className="speech-bubble inline-block text-sm mb-6 text-[#0a0a0a]">
-        🔮 Banyak pekerjaan 2030 belum ada namanya sekarang — developer adalah profesi paling tahan masa depan!
+        🔮 Banyak pekerjaan 2030 belum ada namanya sekarang -- developer adalah profesi paling tahan masa depan!
       </div>
       <div className="grid sm:grid-cols-2 gap-4 mb-8">
         {[
           { pekerjaan: 'AI Trainer & Prompt Engineer', desc: 'Melatih dan mengoptimalkan model AI untuk use case spesifik. Skill baru yang sangat dicari saat ini', warna: '#8b5cf6', ada: true },
           { pekerjaan: 'Metaverse Developer', desc: 'Builder dunia virtual 3D yang bisa dikunjungi, bekerja, dan bertransaksi di dalamnya', warna: '#1a5cff', ada: false },
-          { pekerjaan: 'Quantum Programmer', desc: 'Developer yang bisa menulis algoritma untuk quantum computer — sangat langka, sangat mahal!', warna: '#e63329', ada: false },
-          { pekerjaan: 'Neuro Interface Developer', desc: 'Membangun software untuk BCI — antarmuka antara otak manusia dan komputer', warna: '#22c55e', ada: false },
+          { pekerjaan: 'Quantum Programmer', desc: 'Developer yang bisa menulis algoritma untuk quantum computer -- sangat langka, sangat mahal!', warna: '#e63329', ada: false },
+          { pekerjaan: 'Neuro Interface Developer', desc: 'Membangun software untuk BCI -- antarmuka antara otak manusia dan komputer', warna: '#22c55e', ada: false },
           { pekerjaan: 'Space Software Engineer', desc: 'Developer untuk sistem navigasi, life support, dan komunikasi misi luar angkasa komersial', warna: '#f59e0b', ada: false },
           { pekerjaan: 'Digital Ethics Officer', desc: 'Memastikan produk digital adil, transparan, dan tidak merugikan kelompok yang rentan', warna: '#0891b2', ada: true },
         ].map((p, i) => (

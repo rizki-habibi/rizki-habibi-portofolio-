@@ -5,21 +5,21 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import { FiArrowLeft, FiTerminal, FiLock, FiUnlock, FiStar, FiZap, FiCode } from 'react-icons/fi'
 import Link from 'next/link'
 
-// ─── Easter Egg Facts ─────────────────────────────
+// --- Easter Egg Facts -----------------------------
 const faktaRahasia = [
-  { id: '01', emoji: '🌙', teks: 'Jam produktif terbaik: 11 malam – 3 pagi. Dunia sunyi, kode mengalir.' },
-  { id: '02', emoji: '☕', teks: 'Minum kopi hitam tanpa gula — setiap sesi debugging berat selalu ditemani kopi.' },
+  { id: '01', emoji: '🌙', teks: 'Jam produktif terbaik: 11 malam - 3 pagi. Dunia sunyi, kode mengalir.' },
+  { id: '02', emoji: '☕', teks: 'Minum kopi hitam tanpa gula -- setiap sesi debugging berat selalu ditemani kopi.' },
   { id: '03', emoji: '🐛', teks: 'Bug terpanjang yang pernah di-debug: 12 jam hanya karena 1 titik koma yang hilang.' },
   { id: '04', emoji: '🎮', teks: 'Di balik semua kode serius, masih suka main game strategi untuk melatih logika.' },
   { id: '05', emoji: '💡', teks: 'Proyek pertama: website HTML + CSS di Notepad tanpa VS Code, tanpa framework.' },
-  { id: '06', emoji: '🚀', teks: 'Sudah menulis lebih dari 10.000 baris kode Laravel — dan masih terus bertambah.' },
+  { id: '06', emoji: '🚀', teks: 'Sudah menulis lebih dari 10.000 baris kode Laravel -- dan masih terus bertambah.' },
   { id: '07', emoji: '📚', teks: 'Membaca dokumentasi resmi adalah hobi tersembunyi. Serius.' },
   { id: '08', emoji: '🎵', teks: 'Playlist lofi hip-hop sudah diputar ratusan jam selama coding marathon.' },
-  { id: '09', emoji: '🌐', teks: 'KVT.kom bukan cuma proyek — ini adalah mimpi besar yang dibangun satu commit demi satu commit.' },
+  { id: '09', emoji: '🌐', teks: 'KVT.kom bukan cuma proyek -- ini adalah mimpi besar yang dibangun satu commit demi satu commit.' },
   { id: '10', emoji: '🏆', teks: 'Kamu sudah menemukan halaman ini. Achievement unlocked: Penjelajah Rahasia!' },
 ]
 
-// ─── Matrix Rain Canvas ───────────────────────────
+// --- Matrix Rain Canvas ---------------------------
 function MatrixRain() {
   const ref = useRef<HTMLCanvasElement>(null)
 
@@ -62,7 +62,7 @@ function MatrixRain() {
   return <canvas ref={ref} className="fixed inset-0 z-0 pointer-events-none opacity-60" />
 }
 
-// ─── Partikel Bintang ─────────────────────────────
+// --- Partikel Bintang -----------------------------
 const bintangList = Array.from({ length: 20 }, (_, i) => ({
   x: `${(i * 37 + 11) % 95}%`,
   y: `${(i * 53 + 7) % 90}%`,
@@ -70,7 +70,7 @@ const bintangList = Array.from({ length: 20 }, (_, i) => ({
   size: 10 + (i % 4) * 4,
 }))
 
-// ─── Typing Effect Hook ───────────────────────────
+// --- Typing Effect Hook ---------------------------
 function useTyping(teks: string, speed = 30) {
   const [idx, setIdx] = useState(0)
   useEffect(() => {
@@ -84,7 +84,7 @@ function useTyping(teks: string, speed = 30) {
   return teks.slice(0, idx)
 }
 
-// ─── Komponen Kartu Fakta ─────────────────────────
+// --- Komponen Kartu Fakta -------------------------
 function KartuFakta({ fakta, terbuka, onClick }: {
   fakta: typeof faktaRahasia[0]
   terbuka: boolean
@@ -118,7 +118,7 @@ function KartuFakta({ fakta, terbuka, onClick }: {
           ) : (
             <p className="text-green-500/30 text-sm font-mono flex items-center gap-2">
               <FiLock className="w-3 h-3 shrink-0" />
-              <span>[ TERENKRIPSI — klik untuk membuka ]</span>
+              <span>[ TERENKRIPSI -- klik untuk membuka ]</span>
             </p>
           )}
         </div>
@@ -136,19 +136,19 @@ function KartuFakta({ fakta, terbuka, onClick }: {
   )
 }
 
-// ─── ASCII Art ────────────────────────────────────
+// --- ASCII Art ------------------------------------
 const asciiArt = `
- ██████╗  ██╗  ██╗
- ██╔══██╗ ██║  ██║
- ██████╔╝ ███████║
- ██╔══██╗ ██╔══██║
- ██║  ██║ ██║  ██║
- ╚═╝  ╚═╝ ╚═╝  ╚═╝
+ ██████-  ██-  ██-
+ ██---██- ██-  ██-
+ ██████-- ███████-
+ ██---██- ██---██-
+ ██-  ██- ██-  ██-
+ ---  --- ---  ---
   RIZKI  HABIBI
   SECRET ARCHIVE
 `.trim()
 
-// ─── Halaman Utama ────────────────────────────────
+// --- Halaman Utama --------------------------------
 export default function HalamanRahasia() {
   const [terbuka, setTerbuka] = useState<number[]>([])
   const [tampilSemua, setTampilSemua] = useState(false)
@@ -183,7 +183,7 @@ export default function HalamanRahasia() {
     }
   }
 
-  // ─── Fase Loading ──────────────────────────────
+  // --- Fase Loading ------------------------------
   if (fase === 'loading') {
     return (
       <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center p-4 overflow-hidden">
@@ -212,7 +212,7 @@ export default function HalamanRahasia() {
     )
   }
 
-  // ─── Fase Unlock (password) ────────────────────
+  // --- Fase Unlock (password) --------------------
   if (fase === 'unlock') {
     return (
       <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center p-4 overflow-hidden">
@@ -291,7 +291,7 @@ export default function HalamanRahasia() {
     )
   }
 
-  // ─── Fase Inside (isi halaman rahasia) ──────────
+  // --- Fase Inside (isi halaman rahasia) ----------
   const semuaTerbuka = terbuka.length === faktaRahasia.length
 
   return (
@@ -334,7 +334,7 @@ export default function HalamanRahasia() {
         >
           <div className="flex items-center gap-3 mb-4">
             <FiTerminal className="w-5 h-5 text-green-400" />
-            <div className="font-mono text-green-400 text-xs tracking-widest">ARSIP RAHASIA — RIZKI HABIBI</div>
+            <div className="font-mono text-green-400 text-xs tracking-widest">ARSIP RAHASIA -- RIZKI HABIBI</div>
           </div>
 
           <pre className="text-green-500/40 text-[8px] sm:text-[9px] font-mono leading-tight mb-4 overflow-x-hidden">
@@ -378,7 +378,7 @@ export default function HalamanRahasia() {
               animate={{ opacity: 1, y: 0 }}
               className="font-mono text-green-400 text-xs mt-2 text-center"
             >
-              🎉 SEMUA RAHASIA TERBUKA — ACHIEVEMENT UNLOCKED!
+              🎉 SEMUA RAHASIA TERBUKA -- ACHIEVEMENT UNLOCKED!
             </motion.div>
           )}
         </motion.div>
@@ -421,7 +421,7 @@ export default function HalamanRahasia() {
           </motion.div>
         )}
 
-        {/* Easter egg final — muncul kalau semua terbuka */}
+        {/* Easter egg final -- muncul kalau semua terbuka */}
         <AnimatePresence>
           {semuaTerbuka && (
             <motion.div
@@ -464,7 +464,7 @@ export default function HalamanRahasia() {
 
         {/* Footer mini */}
         <div className="border-t border-green-900/30 pt-6 flex items-center justify-between">
-          <span className="font-mono text-green-900/50 text-[10px]">© 2026 RIZKI HABIBI</span>
+          <span className="font-mono text-green-900/50 text-[10px]"> 2026 RIZKI HABIBI</span>
           <div className="flex items-center gap-1.5">
             <FiCode className="w-3 h-3 text-green-900/40" />
             <span className="font-mono text-green-900/40 text-[10px]">SECRET ARCHIVE v1.0</span>

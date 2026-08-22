@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 
-/* ─── Tipe data ─── */
+/* --- Tipe data --- */
 interface MataKuliah {
   kode: string
   nama: string
@@ -21,7 +21,7 @@ interface Semester {
   mataKuliah: MataKuliah[]
 }
 
-/* ─── Data lengkap Semester 1–7 + Skripsi ─── */
+/* --- Data lengkap Semester 1-7 + Skripsi --- */
 const dataSemester: Semester[] = [
   {
     nomor: 1, kode: '20231', label: 'Semester 1', ips: 3.75, sks: 20,
@@ -126,7 +126,7 @@ const warnaNilai: Record<string, string> = {
   'B': '#fb923c', 'B-': '#f97316', 'C': '#e63329',
 }
 
-/* ─── Baris mata kuliah ─── */
+/* --- Baris mata kuliah --- */
 function BarisMK({ mk, i }: { mk: MataKuliah; i: number }) {
   const wHuruf = mk.huruf ? (warnaNilai[mk.huruf] ?? '#6b7280') : '#6b7280'
   return (
@@ -143,7 +143,7 @@ function BarisMK({ mk, i }: { mk: MataKuliah; i: number }) {
         {mk.nilai !== null ? (
           <span className="font-comic text-sm" style={{ color: wHuruf }}>{mk.nilai.toFixed(2)}</span>
         ) : (
-          <span className="text-xs text-[#0a0a0a]/30 font-bold">—</span>
+          <span className="text-xs text-[#0a0a0a]/30 font-bold">--</span>
         )}
       </td>
       <td className="py-1.5 px-2 text-center">
@@ -152,14 +152,14 @@ function BarisMK({ mk, i }: { mk: MataKuliah; i: number }) {
             {mk.huruf}
           </span>
         ) : (
-          <span className="text-xs text-[#0a0a0a]/20 font-bold">—</span>
+          <span className="text-xs text-[#0a0a0a]/20 font-bold">--</span>
         )}
       </td>
     </motion.tr>
   )
 }
 
-/* ─── Panel satu semester ─── */
+/* --- Panel satu semester --- */
 function PanelSemester({ sem, aktif, onToggle }: { sem: Semester; aktif: boolean; onToggle: () => void }) {
   const badgeIPS = sem.ips !== null ? sem.ips.toFixed(2) : 'Proses'
   const ipsBg = sem.ips === null ? '#6b7280'
@@ -197,7 +197,7 @@ function PanelSemester({ sem, aktif, onToggle }: { sem: Semester; aktif: boolean
         <div className="flex gap-4 px-4 py-1.5 text-[9px] font-bold text-[#0a0a0a]/50">
           <span>📚 {sem.mataKuliah.length} mata kuliah</span>
           <span>✅ {selesai} selesai</span>
-          {jumlahA > 0 && <span style={{ color: '#22c55e' }}>🏆 {jumlahA}× nilai A</span>}
+          {jumlahA > 0 && <span style={{ color: '#22c55e' }}>🏆 {jumlahA} nilai A</span>}
           {sem.nomor === 7 && <span style={{ color: '#ffd700' }}>🎓 Termasuk Skripsi</span>}
         </div>
       </motion.button>
@@ -234,7 +234,7 @@ function PanelSemester({ sem, aktif, onToggle }: { sem: Semester; aktif: boolean
   )
 }
 
-/* ─── Komponen utama ─── */
+/* --- Komponen utama --- */
 export default function AkademikKomik() {
   const [aktif, setAktif] = useState<number | null>(null)
   const toggle = (n: number) => setAktif(p => p === n ? null : n)
@@ -260,7 +260,7 @@ export default function AkademikKomik() {
             📚 REKAP AKADEMIK
           </div>
           <div className="speech-bubble inline-block text-sm">
-            S1 Sistem & Teknologi Informasi — STIKI Malang / ITSM Jember
+            S1 Sistem & Teknologi Informasi -- STIKI Malang / ITSM Jember
           </div>
         </motion.div>
 
@@ -312,7 +312,7 @@ export default function AkademikKomik() {
                     transition={{ delay: i * 0.1, duration: 0.6, ease: 'easeOut' }}
                     viewport={{ once: true }}>
                     <div className="absolute -top-5 left-1/2 -translate-x-1/2 font-comic text-[9px] whitespace-nowrap" style={{ color: s.warna }}>
-                      {s.ips?.toFixed(2) ?? '—'}
+                      {s.ips?.toFixed(2) ?? '--'}
                     </div>
                   </motion.div>
                   <div className="font-bold text-[8px] text-[#0a0a0a]/50">S{s.nomor}</div>
@@ -321,7 +321,7 @@ export default function AkademikKomik() {
             })}
           </div>
           <div className="mt-2 text-[9px] font-bold text-[#0a0a0a]/40 text-center">
-            IPK Kumulatif: <span className="text-[#22c55e] font-comic text-sm">3.81</span> / 4.00 — Sangat Memuaskan ⭐
+            IPK Kumulatif: <span className="text-[#22c55e] font-comic text-sm">3.81</span> / 4.00 -- Sangat Memuaskan ⭐
           </div>
         </motion.div>
 
@@ -334,7 +334,7 @@ export default function AkademikKomik() {
           style={{ border: '4px solid #ffd700', boxShadow: '6px 6px 0 #ffd700', background: '#0a0a0a' }}>
           <div className="px-4 py-2 flex items-center gap-2" style={{ background: '#ffd700', borderBottom: '2px solid #0a0a0a' }}>
             <span className="text-2xl">🎓</span>
-            <span className="font-comic text-base text-[#0a0a0a]">SKRIPSI — TUGAS AKHIR S1</span>
+            <span className="font-comic text-base text-[#0a0a0a]">SKRIPSI -- TUGAS AKHIR S1</span>
             <span className="ml-auto font-bold text-[9px] bg-black/20 text-[#0a0a0a] px-2 py-0.5">6 SKS</span>
           </div>
           <div className="p-5 grid sm:grid-cols-2 gap-4">
@@ -342,8 +342,8 @@ export default function AkademikKomik() {
               {[
                 { label: 'Judul', val: 'Sistem Informasi Kepegawaian Berbasis Web dengan Metode Hybrid', icon: '📝' },
                 { label: 'Framework', val: 'Laravel (PHP) + MySQL + Bootstrap / Tailwind CSS', icon: '⚡' },
-                { label: 'Metode', val: 'Hybrid Method — kombinasi waterfall + agile iteratif', icon: '🔄' },
-                { label: 'Status', val: 'Aktif dikerjakan — Semester 7 (2026)', icon: '🟡' },
+                { label: 'Metode', val: 'Hybrid Method -- kombinasi waterfall + agile iteratif', icon: '🔄' },
+                { label: 'Status', val: 'Aktif dikerjakan -- Semester 7 (2026)', icon: '🟡' },
               ].map((item, i) => (
                 <motion.div key={item.label}
                   initial={{ opacity: 0, x: -20 }}
@@ -399,7 +399,7 @@ export default function AkademikKomik() {
             {[
               {
                 judul: '🏆 Kekuatan Akademik',
-                poin: ['IPK 3.81 — konsisten di atas 3.75 setiap semester', 'Semester 3 terbaik: IPS 3.93 (7 dari 8 mata kuliah nilai A)', 'Tidak ada nilai di bawah B+ dalam 6 semester', 'Penguasaan teknis kuat: Web, DB, OOP, Keamanan TI'],
+                poin: ['IPK 3.81 -- konsisten di atas 3.75 setiap semester', 'Semester 3 terbaik: IPS 3.93 (7 dari 8 mata kuliah nilai A)', 'Tidak ada nilai di bawah B+ dalam 6 semester', 'Penguasaan teknis kuat: Web, DB, OOP, Keamanan TI'],
                 w: '#22c55e',
               },
               {
@@ -409,7 +409,7 @@ export default function AkademikKomik() {
               },
               {
                 judul: '⚡ Saran untuk Skripsi',
-                poin: ['Dokumentasikan setiap sprint/iterasi hybrid method dengan baik', 'Buat demo video fitur untuk presentasi sidang yang impresif', 'Deploy ke server nyata — nilai tambah besar di mata penguji', 'Link GitHub skripsi ke portfolio sebagai bukti kompetensi'],
+                poin: ['Dokumentasikan setiap sprint/iterasi hybrid method dengan baik', 'Buat demo video fitur untuk presentasi sidang yang impresif', 'Deploy ke server nyata -- nilai tambah besar di mata penguji', 'Link GitHub skripsi ke portfolio sebagai bukti kompetensi'],
                 w: '#8b5cf6',
               },
               {

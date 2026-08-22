@@ -57,7 +57,7 @@ export default function SocialFloat() {
                 style={{ color: isHover ? 'white' : '#aaa' }}
               />
             </div>
-            {/* Label — slide in */}
+            {/* Label -- slide in */}
             <AnimatePresence>
               {isHover && (
                 <motion.span

@@ -39,7 +39,7 @@ const pilihanKetertarikan = [
 ]
 
 // ============================================================
-// TOMBOL PEMICU — tombol mengambang
+// TOMBOL PEMICU -- tombol mengambang
 // ============================================================
 function TombolKuesioner({ onClick }: { onClick: () => void }) {
   return (
@@ -202,7 +202,7 @@ export default function KuesionerKerjasama() {
               <div className="p-5 overflow-y-auto" style={{ maxHeight: '60vh' }}>
                 {!terkirim ? (
                   <AnimatePresence mode="wait">
-                    {/* ── LANGKAH 1: INFO DIRI ── */}
+                    {/* -- LANGKAH 1: INFO DIRI -- */}
                     {langkah === 1 && (
                       <motion.div
                         key="langkah1"
@@ -240,7 +240,7 @@ export default function KuesionerKerjasama() {
                       </motion.div>
                     )}
 
-                    {/* ── LANGKAH 2: BIDANG KERJASAMA ── */}
+                    {/* -- LANGKAH 2: BIDANG KERJASAMA -- */}
                     {langkah === 2 && (
                       <motion.div
                         key="langkah2"
@@ -316,7 +316,7 @@ export default function KuesionerKerjasama() {
                       </motion.div>
                     )}
 
-                    {/* ── LANGKAH 3: PESAN ── */}
+                    {/* -- LANGKAH 3: PESAN -- */}
                     {langkah === 3 && (
                       <motion.div
                         key="langkah3"
@@ -354,7 +354,7 @@ export default function KuesionerKerjasama() {
                         {/* Ringkasan */}
                         <div className="p-3 text-xs space-y-1" style={{ background: '#f0f0eb', border: '2px solid #0a0a0a' }}>
                           <div className="font-comic text-[10px] text-[#0a0a0a]/50 mb-2 tracking-wider">RINGKASAN KUESIONER</div>
-                          <div className="font-bold text-[#0a0a0a]">👤 {form.nama} — {form.email}</div>
+                          <div className="font-bold text-[#0a0a0a]">👤 {form.nama} -- {form.email}</div>
                           {form.instansi && <div className="text-[#0a0a0a]/60">🏢 {form.instansi}</div>}
                           <div className="text-[#8d55e8] font-bold">🤝 {form.jenisKerjasama}</div>
                           {form.ketertarikan.length > 0 && (
@@ -371,7 +371,7 @@ export default function KuesionerKerjasama() {
                     )}
                   </AnimatePresence>
                 ) : (
-                  // ── SUKSES ──
+                  // -- SUKSES --
                   <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
@@ -386,7 +386,7 @@ export default function KuesionerKerjasama() {
                     <div className="font-comic text-xl text-[#0a0a0a]">TERKIRIM! 🎉</div>
                     <p className="text-sm font-medium text-[#0a0a0a]/70 leading-relaxed">
                       Terima kasih, <strong>{form.nama}</strong>!<br />
-                      Saya akan menghubungi kamu di <strong>{form.email}</strong> dalam 1–2 hari kerja.
+                      Saya akan menghubungi kamu di <strong>{form.email}</strong> dalam 1-2 hari kerja.
                     </p>
                     <div
                       className="speech-bubble text-xs inline-block"
@@ -476,7 +476,7 @@ export default function KuesionerKerjasama() {
   )
 }
 
-// ── Helper komponen input ──
+// -- Helper komponen input --
 function BidangInput({
   icon,
   label,

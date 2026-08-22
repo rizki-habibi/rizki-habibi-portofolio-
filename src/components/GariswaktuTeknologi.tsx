@@ -8,7 +8,7 @@ const perjalanan = [
     tahun: '2020',
     judul: 'Mulai Coding',
     teks: 'HTML & CSS pertama kali di Notepad. Website statis sederhana tanpa framework.',
-    badge: 'HTML · CSS',
+    badge: 'HTML  CSS',
     warna: '#e63329',
     bg: '#fef2f2',
     emoji: '🌱',
@@ -18,7 +18,7 @@ const perjalanan = [
     tahun: '2021',
     judul: 'Masuk JavaScript',
     teks: 'Belajar JavaScript vanilla, DOM manipulation, dan logika pemrograman dasar.',
-    badge: 'JavaScript · DOM',
+    badge: 'JavaScript  DOM',
     warna: '#f59e0b',
     bg: '#fffbeb',
     emoji: '⚡',
@@ -28,7 +28,7 @@ const perjalanan = [
     tahun: '2021',
     judul: 'PHP & MySQL',
     teks: 'Backend pertama dengan PHP murni + MySQL. CRUD manual tanpa ORM.',
-    badge: 'PHP · MySQL',
+    badge: 'PHP  MySQL',
     warna: '#8b5cf6',
     bg: '#f5f0ff',
     emoji: '🗄️',
@@ -37,8 +37,8 @@ const perjalanan = [
   {
     tahun: '2022',
     judul: 'Laravel Framework',
-    teks: 'Beralih ke Laravel — MVC, Eloquent ORM, Blade, Artisan. Game changer.',
-    badge: 'Laravel · Blade',
+    teks: 'Beralih ke Laravel -- MVC, Eloquent ORM, Blade, Artisan. Game changer.',
+    badge: 'Laravel  Blade',
     warna: '#FF2D20',
     bg: '#fff5f5',
     emoji: '🔥',
@@ -58,7 +58,7 @@ const perjalanan = [
     tahun: '2023',
     judul: 'IoT & Arduino',
     teks: 'Eksperimen ESP32, sensor DHT, dan integrasi hardware-software untuk proyek monitoring.',
-    badge: 'ESP32 · IoT',
+    badge: 'ESP32  IoT',
     warna: '#22c55e',
     bg: '#f0fdf4',
     emoji: '🔧',
@@ -67,7 +67,7 @@ const perjalanan = [
   {
     tahun: '2023',
     judul: 'Sertifikasi BNSP',
-    teks: 'Lulus uji kompetensi Junior Web Developer BNSP — pengakuan kompetensi nasional.',
+    teks: 'Lulus uji kompetensi Junior Web Developer BNSP -- pengakuan kompetensi nasional.',
     badge: 'BNSP Certified',
     warna: '#f59e0b',
     bg: '#fffbeb',
@@ -78,7 +78,7 @@ const perjalanan = [
     tahun: '2024',
     judul: 'React & Next.js',
     teks: 'Beralih ke ekosistem modern: React, TypeScript, Next.js App Router, Framer Motion.',
-    badge: 'Next.js · TypeScript',
+    badge: 'Next.js  TypeScript',
     warna: '#0a0a0a',
     bg: '#f5f5f0',
     emoji: '⚛️',
@@ -88,7 +88,7 @@ const perjalanan = [
     tahun: '2024',
     judul: 'AI & Prompt Engineering',
     teks: 'Eksplorasi ChatGPT, Gemini, Azure OpenAI. 8+ sertifikat di bidang AI dan ML.',
-    badge: 'AI · ML · LLM',
+    badge: 'AI  ML  LLM',
     warna: '#8b5cf6',
     bg: '#f5f0ff',
     emoji: '🤖',
@@ -96,9 +96,9 @@ const perjalanan = [
   },
   {
     tahun: '2025',
-    judul: 'KVT.kom — Dimulai',
+    judul: 'KVT.kom -- Dimulai',
     teks: 'Mulai membangun ekosistem Kampus Virtual Teknologi. Satu commit demi satu commit.',
-    badge: 'KVT · Full Stack',
+    badge: 'KVT  Full Stack',
     warna: '#1a5cff',
     bg: '#e8f0ff',
     emoji: '🚀',
@@ -108,7 +108,7 @@ const perjalanan = [
     tahun: '2026',
     judul: 'Portofolio Komik',
     teks: 'Portofolio bergaya komik dengan 60+ chapter, 100 fitur interaktif, dan Framer Motion.',
-    badge: 'Next.js · Framer',
+    badge: 'Next.js  Framer',
     warna: '#ffd700',
     bg: '#fffbeb',
     emoji: '🦸',
@@ -199,7 +199,7 @@ export default function TechTimeline() {
           <div className="chapter-label mb-3">TECH JOURNEY</div>
           <h2 className="section-title">PERJALANAN TEKNOLOGI</h2>
           <div className="speech-bubble inline-block text-sm mt-4">
-            🕰️ Dari Notepad ke Next.js — 6 tahun perjalanan yang tidak pernah berhenti!
+            🕰️ Dari Notepad ke Next.js -- 6 tahun perjalanan yang tidak pernah berhenti!
           </div>
         </motion.div>
 

@@ -48,7 +48,7 @@ const daftarProyek = [
     num: '03',
     title: 'Alat Monitoring IoT',
     tagline: 'Inovasi sensor dari bahan daur ulang',
-    description: 'Merancang alat monitoring fungsional dari komponen bekas — mengintegrasikan sensor dengan microcontroller ESP32 dan dashboard web real-time.',
+    description: 'Merancang alat monitoring fungsional dari komponen bekas -- mengintegrasikan sensor dengan microcontroller ESP32 dan dashboard web real-time.',
     image: null,
     tech: ['IoT', 'ESP32', 'Arduino', 'Sensor', 'Web Dashboard'],
     github: '#',
@@ -277,7 +277,7 @@ export default function Projects() {
                 className="flex items-center justify-between px-4 sm:px-6 py-3 border-b-3 border-comic-black sticky top-0 z-10"
                 style={{ background: dipilih.color, borderBottom: '3px solid #0a0a0a' }}
               >
-                <span className="font-comic text-white text-base sm:text-xl">PROJECT #{dipilih.num} — CASE FILE</span>
+                <span className="font-comic text-white text-base sm:text-xl">PROJECT #{dipilih.num} -- CASE FILE</span>
                 <button onClick={() => setDipilih(null)} className="text-white hover:text-comic-yellow transition-colors p-1">
                   <FiX className="w-5 h-5 sm:w-6 sm:h-6" />
                 </button>

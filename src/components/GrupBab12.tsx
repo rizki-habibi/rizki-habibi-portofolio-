@@ -47,10 +47,10 @@ function PanelGrid({ items, cols = 3 }: {
   )
 }
 
-// ── Ch121: SMART HOME ─────────────────────────────────────────────────────────
+// -- Ch121: SMART HOME ---------------------------------------------------------
 function Ch121() {
   return (
-    <PanelBab id="ch121" num="121" judul="SMART HOME — RUMAH MASA DEPAN" warna="#0891b2" latarBelakang="#ecfeff">
+    <PanelBab id="ch121" num="121" judul="SMART HOME -- RUMAH MASA DEPAN" warna="#0891b2" latarBelakang="#ecfeff">
       <div className="speech-bubble inline-block text-sm mb-6">🏠 Rumah yang &ldquo;hidup&rdquo; dan merespons kebutuhan penghuninya!</div>
       <PanelGrid items={[
         { icon: '💡', judul: 'Smart Lighting', teks: 'Lampu otomatis menyala/mati berdasarkan sensor gerak dan jadwal. Hemat listrik 40%!', warna: '#f59e0b', bg: '#fffbeb' },
@@ -80,7 +80,7 @@ function Ch121() {
   )
 }
 
-// ── Ch122: ROBOTIK & ARDUINO ──────────────────────────────────────────────────
+// -- Ch122: ROBOTIK & ARDUINO --------------------------------------------------
 function Ch122() {
   const proyek = [
     { nama: 'Line Following Robot', desc: 'Robot mengikuti garis hitam di lantai menggunakan sensor IR. Proyek belajar PID controller dasar', icon: '🤖', warna: '#1a5cff' },
@@ -89,9 +89,9 @@ function Ch122() {
     { nama: 'Drone DIY Frame', desc: 'Merakit frame drone dari pipa PVC, motor brushless, dan ESC bekas. Belajar aerodinamika!', icon: '🚁', warna: '#e63329' },
   ]
   return (
-    <PanelBab id="ch122" num="122" judul="ROBOTIK — MEMBUAT YANG TIDAK MUNGKIN" warna="#1a5cff" latarBelakang="#e8f0ff">
+    <PanelBab id="ch122" num="122" judul="ROBOTIK -- MEMBUAT YANG TIDAK MUNGKIN" warna="#1a5cff" latarBelakang="#e8f0ff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        🤖 Robot dari bahan bekas dengan kode sederhana — inovasi tidak butuh anggaran besar!
+        🤖 Robot dari bahan bekas dengan kode sederhana -- inovasi tidak butuh anggaran besar!
       </div>
       <div className="grid sm:grid-cols-2 gap-4 mb-6">
         {proyek.map((p, i) => (
@@ -119,19 +119,19 @@ function Ch122() {
   )
 }
 
-// ── Ch123: AR & VR ────────────────────────────────────────────────────────────
+// -- Ch123: AR & VR ------------------------------------------------------------
 function Ch123() {
   return (
-    <PanelBab id="ch123" num="123" judul="AR & VR — DUNIA YANG DIPERLUAS" warna="#8b5cf6" latarBelakang="#f5f0ff">
-      <div className="speech-bubble inline-block text-sm mb-6">🥽 Batas antara dunia nyata dan digital makin tipis — dan itu menarik!</div>
+    <PanelBab id="ch123" num="123" judul="AR & VR -- DUNIA YANG DIPERLUAS" warna="#8b5cf6" latarBelakang="#f5f0ff">
+      <div className="speech-bubble inline-block text-sm mb-6">🥽 Batas antara dunia nyata dan digital makin tipis -- dan itu menarik!</div>
       <div className="grid lg:grid-cols-2 gap-8">
         <PanelGrid items={[
           { icon: '📱', judul: 'WebAR', teks: 'Augmented Reality langsung di browser tanpa install app. Pakai A-Frame.js atau AR.js', warna: '#8b5cf6', bg: '#f5f0ff' },
           { icon: '🥽', judul: 'WebVR/WebXR', teks: 'Virtual Reality di browser dengan Three.js dan WebGL. Tidak perlu headset mahal untuk mulai belajar!', warna: '#1a5cff', bg: '#e8f0ff' },
-          { icon: '🏫', judul: 'AR Edukasi', teks: 'Buku teks dengan AR overlay — bayangkan buku sains yang menampilkan 3D model molekul!', warna: '#22c55e', bg: '#f0fdf4', badge: 'KVT.KOM' },
-          { icon: '🛍️', judul: 'AR Commerce', teks: 'Coba produk sebelum beli — furniture di ruanganmu, kacamata di wajahmu, semua via kamera HP', warna: '#f59e0b', bg: '#fffbeb' },
+          { icon: '🏫', judul: 'AR Edukasi', teks: 'Buku teks dengan AR overlay -- bayangkan buku sains yang menampilkan 3D model molekul!', warna: '#22c55e', bg: '#f0fdf4', badge: 'KVT.KOM' },
+          { icon: '🛍️', judul: 'AR Commerce', teks: 'Coba produk sebelum beli -- furniture di ruanganmu, kacamata di wajahmu, semua via kamera HP', warna: '#f59e0b', bg: '#fffbeb' },
           { icon: '🏗️', judul: 'AR Konstruksi', teks: 'Overlay blueprint di lokasi konstruksi nyata. Arsitek dan developer bisa kolaborasi real-time', warna: '#e63329', bg: '#fef2f2' },
-          { icon: '🎮', judul: 'VR Gaming', teks: 'Game VR lokal Indonesia masih sangat jarang — peluang besar untuk developer yang berani masuk duluan', warna: '#0891b2', bg: '#ecfeff' },
+          { icon: '🎮', judul: 'VR Gaming', teks: 'Game VR lokal Indonesia masih sangat jarang -- peluang besar untuk developer yang berani masuk duluan', warna: '#0891b2', bg: '#ecfeff' },
         ]} />
         <div className="comic-panel-dark p-6">
           <div className="font-comic text-xl text-white mb-4">🚀 VISI AR DI KVT.KOM</div>
@@ -143,7 +143,7 @@ function Ch123() {
             {[
               { fitur: 'AR Code Visualizer', desc: 'Lihat alur eksekusi kode dalam 3D ruang nyata' },
               { fitur: 'Virtual Lab', desc: 'Eksperimen hardware IoT di lab virtual sebelum beli komponen nyata' },
-              { fitur: 'Holographic Mentor', desc: 'Mentor hadir secara holografik di ruanganmu — future of remote learning!' },
+              { fitur: 'Holographic Mentor', desc: 'Mentor hadir secara holografik di ruanganmu -- future of remote learning!' },
             ].map(f => (
               <div key={f.fitur} className="p-2 bg-white/10 border border-white/20">
                 <div className="font-comic text-xs text-yellow-400">{f.fitur}</div>
@@ -157,19 +157,19 @@ function Ch123() {
   )
 }
 
-// ── Ch124: QUANTUM COMPUTING ──────────────────────────────────────────────────
+// -- Ch124: QUANTUM COMPUTING --------------------------------------------------
 function Ch124() {
   return (
-    <PanelBab id="ch124" num="124" judul="QUANTUM COMPUTING — BATAS KOMPUTASI BARU" warna="#e63329" latarBelakang="#fef2f2">
+    <PanelBab id="ch124" num="124" judul="QUANTUM COMPUTING -- BATAS KOMPUTASI BARU" warna="#e63329" latarBelakang="#fef2f2">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
         ⚛️ Komputer klasik: bit 0 atau 1. Komputer kuantum: qubit bisa 0, 1, atau keduanya sekaligus!
       </div>
       <div className="grid lg:grid-cols-2 gap-8">
         <div className="space-y-3">
           {[
-            { konsep: 'Superposisi', desc: 'Qubit bisa berada di state 0 dan 1 secara bersamaan — seperti koin yang berputar, belum jatuh ke sisi manapun', icon: '🌀', warna: '#8b5cf6' },
-            { konsep: 'Entanglement', desc: 'Dua qubit yang saling terhubung — ubah satu, yang lain langsung terpengaruh meski terpisah jarak tak terbatas', icon: '🔗', warna: '#1a5cff' },
-            { konsep: 'Quantum Speedup', desc: 'Algoritma Shor bisa memfaktorkan bilangan besar dalam menit — yang butuh ribuan tahun untuk komputer klasik', icon: '⚡', warna: '#e63329' },
+            { konsep: 'Superposisi', desc: 'Qubit bisa berada di state 0 dan 1 secara bersamaan -- seperti koin yang berputar, belum jatuh ke sisi manapun', icon: '🌀', warna: '#8b5cf6' },
+            { konsep: 'Entanglement', desc: 'Dua qubit yang saling terhubung -- ubah satu, yang lain langsung terpengaruh meski terpisah jarak tak terbatas', icon: '🔗', warna: '#1a5cff' },
+            { konsep: 'Quantum Speedup', desc: 'Algoritma Shor bisa memfaktorkan bilangan besar dalam menit -- yang butuh ribuan tahun untuk komputer klasik', icon: '⚡', warna: '#e63329' },
             { konsep: 'Quantum Cryptography', desc: 'Enkripsi berbasis hukum fisika kuantum yang secara teoritis tidak bisa dibobol oleh siapapun', icon: '🔐', warna: '#22c55e' },
           ].map((k, i) => (
             <motion.div key={k.konsep}
@@ -192,10 +192,10 @@ function Ch124() {
           <div className="font-comic text-xl text-white mb-3">🌐 DAMPAK KE DEVELOPER</div>
           <div className="space-y-3">
             {[
-              { dampak: 'Post-Quantum Cryptography', ket: 'Semua enkripsi RSA/ECC yang ada sekarang bisa dibobol komputer kuantum — migrasi ke PQC sudah dimulai', warna: '#e63329' },
+              { dampak: 'Post-Quantum Cryptography', ket: 'Semua enkripsi RSA/ECC yang ada sekarang bisa dibobol komputer kuantum -- migrasi ke PQC sudah dimulai', warna: '#e63329' },
               { dampak: 'Drug Discovery', ket: 'Simulasi molekul kuantum untuk temukan obat baru jauh lebih cepat dari superkomputer terbaik', warna: '#22c55e' },
               { dampak: 'ML Optimization', ket: 'Quantum machine learning bisa mempercepat training model AI yang sekarang butuh minggu', warna: '#1a5cff' },
-              { dampak: 'Quantum Internet', ket: 'Jaringan kuantum dengan keamanan absolut — tidak ada eavesdropping yang mungkin secara fisika', warna: '#8b5cf6' },
+              { dampak: 'Quantum Internet', ket: 'Jaringan kuantum dengan keamanan absolut -- tidak ada eavesdropping yang mungkin secara fisika', warna: '#8b5cf6' },
             ].map(d => (
               <div key={d.dampak} className="p-2 bg-white/10 border border-white/20">
                 <div className="font-comic text-xs" style={{ color: d.warna }}>{d.dampak}</div>
@@ -209,35 +209,35 @@ function Ch124() {
   )
 }
 
-// ── Ch125: AUTONOMOUS VEHICLES ────────────────────────────────────────────────
+// -- Ch125: AUTONOMOUS VEHICLES ------------------------------------------------
 function Ch125() {
   return (
-    <PanelBab id="ch125" num="125" judul="KENDARAAN OTONOM — MASA DEPAN TRANSPORTASI" warna="#0891b2" latarBelakang="#ecfeff">
-      <div className="speech-bubble inline-block text-sm mb-6">🚗 Mobil tanpa pengemudi bukan fiksi sains lagi — ini sedang dibangun sekarang!</div>
+    <PanelBab id="ch125" num="125" judul="KENDARAAN OTONOM -- MASA DEPAN TRANSPORTASI" warna="#0891b2" latarBelakang="#ecfeff">
+      <div className="speech-bubble inline-block text-sm mb-6">🚗 Mobil tanpa pengemudi bukan fiksi sains lagi -- ini sedang dibangun sekarang!</div>
       <PanelGrid items={[
         { icon: '👁️', judul: 'Computer Vision', teks: 'Kamera + AI mengenali rambu, pejalan kaki, dan kendaraan lain secara real-time dengan akurasi >99%', warna: '#1a5cff', bg: '#e8f0ff' },
         { icon: '📡', judul: 'LiDAR Mapping', teks: 'Sensor laser membuat peta 3D lingkungan sekitar dengan presisi milimeter untuk navigasi aman', warna: '#22c55e', bg: '#f0fdf4' },
         { icon: '🧠', judul: 'Decision AI', teks: 'Neural network memproses semua input sensor dan mengambil keputusan mengemudi dalam milisekon', warna: '#8b5cf6', bg: '#f5f0ff' },
         { icon: '🛰️', judul: 'V2X Communication', teks: 'Kendaraan berkomunikasi dengan kendaraan lain dan infrastruktur jalan untuk koordinasi lalu lintas', warna: '#f59e0b', bg: '#fffbeb' },
         { icon: '🔐', judul: 'Cybersecurity', teks: 'Kendaraan terhubung = target hacker. Keamanan siber jadi komponen kritis, bukan opsional', warna: '#e63329', bg: '#fef2f2' },
-        { icon: '🇮🇩', judul: 'Konteks Indonesia', teks: 'Kondisi jalan Indonesia unik — butuh AI yang ditraining dengan data lokal: becak, ojek, pasar tumpah!', warna: '#0891b2', bg: '#ecfeff', badge: 'LOKAL' },
+        { icon: '🇮🇩', judul: 'Konteks Indonesia', teks: 'Kondisi jalan Indonesia unik -- butuh AI yang ditraining dengan data lokal: becak, ojek, pasar tumpah!', warna: '#0891b2', bg: '#ecfeff', badge: 'LOKAL' },
       ]} />
     </PanelBab>
   )
 }
 
-// ── Ch126: BIOINFORMATIKA ─────────────────────────────────────────────────────
+// -- Ch126: BIOINFORMATIKA -----------------------------------------------------
 function Ch126() {
   return (
-    <PanelBab id="ch126" num="126" judul="BIOINFORMATIKA — KODE DNA KEHIDUPAN" warna="#22c55e" latarBelakang="#f0fdf4">
+    <PanelBab id="ch126" num="126" judul="BIOINFORMATIKA -- KODE DNA KEHIDUPAN" warna="#22c55e" latarBelakang="#f0fdf4">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        🧬 DNA adalah kode biner tertua di alam — dan programmer bisa membantu menguraikannya!
+        🧬 DNA adalah kode biner tertua di alam -- dan programmer bisa membantu menguraikannya!
       </div>
       <PanelGrid items={[
-        { icon: '🧬', judul: 'Genome Sequencing', teks: 'Algoritma untuk mengurai urutan DNA manusia — 3 miliar pasang basa yang berisi rahasia kehidupan', warna: '#22c55e', bg: '#f0fdf4' },
-        { icon: '💊', judul: 'Drug Discovery AI', teks: 'ML memprediksi interaksi molekul obat dengan protein target tubuh — mempercepat penemuan obat 10x', warna: '#1a5cff', bg: '#e8f0ff' },
-        { icon: '🔬', judul: 'Protein Folding', teks: 'AlphaFold DeepMind memecahkan masalah 50 tahun dalam biologi — protein structure prediction', warna: '#8b5cf6', bg: '#f5f0ff' },
-        { icon: '🦠', judul: 'Epidemiology Modeling', teks: 'Model matematika dan simulasi penyebaran penyakit — sangat kritis di era post-pandemi', warna: '#e63329', bg: '#fef2f2' },
+        { icon: '🧬', judul: 'Genome Sequencing', teks: 'Algoritma untuk mengurai urutan DNA manusia -- 3 miliar pasang basa yang berisi rahasia kehidupan', warna: '#22c55e', bg: '#f0fdf4' },
+        { icon: '💊', judul: 'Drug Discovery AI', teks: 'ML memprediksi interaksi molekul obat dengan protein target tubuh -- mempercepat penemuan obat 10x', warna: '#1a5cff', bg: '#e8f0ff' },
+        { icon: '🔬', judul: 'Protein Folding', teks: 'AlphaFold DeepMind memecahkan masalah 50 tahun dalam biologi -- protein structure prediction', warna: '#8b5cf6', bg: '#f5f0ff' },
+        { icon: '🦠', judul: 'Epidemiology Modeling', teks: 'Model matematika dan simulasi penyebaran penyakit -- sangat kritis di era post-pandemi', warna: '#e63329', bg: '#fef2f2' },
         { icon: '🌾', judul: 'Agritech Genomics', teks: 'Modifikasi genetik tanaman untuk tahan hama, kekeringan, dan hasil panen lebih tinggi', warna: '#f59e0b', bg: '#fffbeb' },
         { icon: '🤝', judul: 'Peluang Developer', teks: 'Indonesia butuh developer bioinformatika lokal untuk penelitian tropis dan penyakit endemik nasional', warna: '#0891b2', bg: '#ecfeff', badge: 'PELUANG' },
       ]} />
@@ -245,17 +245,17 @@ function Ch126() {
   )
 }
 
-// ── Ch127: ENERGI TERBARUKAN & TECH ───────────────────────────────────────────
+// -- Ch127: ENERGI TERBARUKAN & TECH -------------------------------------------
 function Ch127() {
   return (
-    <PanelBab id="ch127" num="127" judul="ENERGI HIJAU — TEKNOLOGI RAMAH BUMI" warna="#22c55e" latarBelakang="#f0fdf4">
+    <PanelBab id="ch127" num="127" judul="ENERGI HIJAU -- TEKNOLOGI RAMAH BUMI" warna="#22c55e" latarBelakang="#f0fdf4">
       <div className="speech-bubble inline-block text-sm mb-6">☀️ Developer bisa berkontribusi pada masa depan energi bersih lewat software!</div>
       <div className="grid lg:grid-cols-2 gap-8">
         <PanelGrid items={[
           { icon: '☀️', judul: 'Solar Smart Grid', teks: 'Software manajemen panel surya yang memprediksi produksi dan distribusi energi secara optimal', warna: '#f59e0b', bg: '#fffbeb' },
           { icon: '🌊', judul: 'Hydro Monitoring', teks: 'IoT monitoring bendungan dan PLTA kecil untuk maksimalkan efisiensi produksi listrik', warna: '#0891b2', bg: '#ecfeff' },
           { icon: '🔋', judul: 'Battery Management', teks: 'BMS cerdas yang memaksimalkan umur baterai mobil listrik dan penyimpanan energi surya', warna: '#22c55e', bg: '#f0fdf4' },
-          { icon: '📊', judul: 'Carbon Footprint', teks: 'Platform kalkulasi dan tracking emisi karbon untuk perusahaan dan individu — compliance ESG', warna: '#1a5cff', bg: '#e8f0ff' },
+          { icon: '📊', judul: 'Carbon Footprint', teks: 'Platform kalkulasi dan tracking emisi karbon untuk perusahaan dan individu -- compliance ESG', warna: '#1a5cff', bg: '#e8f0ff' },
         ]} />
         <div className="comic-panel-dark p-5">
           <div className="font-comic text-xl text-white mb-3">🌍 DEVELOPER & PERUBAHAN IKLIM</div>
@@ -282,7 +282,7 @@ function Ch127() {
   )
 }
 
-// ── Ch128: FINTECH INOVATIF ───────────────────────────────────────────────────
+// -- Ch128: FINTECH INOVATIF ---------------------------------------------------
 function Ch128() {
   const inovasi = [
     { nama: 'Buy Now Pay Later', tech: 'AI Credit Scoring', dampak: 'Akses kredit untuk yang unbankable', icon: '💳', warna: '#1a5cff' },
@@ -293,9 +293,9 @@ function Ch128() {
     { nama: 'QRIS Ecosystem', tech: 'Open Banking API', dampak: 'Satu QR untuk semua pembayaran Indonesia', icon: '📱', warna: '#e63329', },
   ]
   return (
-    <PanelBab id="ch128" num="128" judul="FINTECH — REVOLUSI KEUANGAN DIGITAL" warna="#1a5cff" latarBelakang="#e8f0ff">
+    <PanelBab id="ch128" num="128" judul="FINTECH -- REVOLUSI KEUANGAN DIGITAL" warna="#1a5cff" latarBelakang="#e8f0ff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        💰 Fintech bukan sekadar bayar-bayar — ini demokratisasi akses keuangan untuk semua!
+        💰 Fintech bukan sekadar bayar-bayar -- ini demokratisasi akses keuangan untuk semua!
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {inovasi.map((inn, i) => (
@@ -323,17 +323,17 @@ function Ch128() {
   )
 }
 
-// ── Ch129: SPACE TECH ─────────────────────────────────────────────────────────
+// -- Ch129: SPACE TECH ---------------------------------------------------------
 function Ch129() {
   return (
-    <PanelBab id="ch129" num="129" judul="SPACE TECH — KODE YANG MENJANGKAU LUAR ANGKASA" warna="#8b5cf6" latarBelakang="#f5f0ff" gelap>
+    <PanelBab id="ch129" num="129" judul="SPACE TECH -- KODE YANG MENJANGKAU LUAR ANGKASA" warna="#8b5cf6" latarBelakang="#f5f0ff" gelap>
       <div className="speech-bubble inline-block text-sm mb-6 text-[#0a0a0a]">
         🚀 Kode yang kamu tulis hari ini mungkin mengendalikan satelit besok!
       </div>
       <PanelGrid items={[
-        { icon: '🛰️', judul: 'Satellite Software', teks: 'Ribuan satelit LEO (SpaceX Starlink, dll) semuanya dikendalikan oleh software — buka internet ke pelosok bumi', warna: '#8b5cf6', bg: '#f5f0ff' },
+        { icon: '🛰️', judul: 'Satellite Software', teks: 'Ribuan satelit LEO (SpaceX Starlink, dll) semuanya dikendalikan oleh software -- buka internet ke pelosok bumi', warna: '#8b5cf6', bg: '#f5f0ff' },
         { icon: '🌍', judul: 'Earth Observation', teks: 'Satellite imagery untuk monitor deforestasi, bencana alam, dan perubahan cuaca dari luar angkasa', warna: '#22c55e', bg: '#f0fdf4' },
-        { icon: '📡', judul: 'GPS & Navigation', teks: 'Semua aplikasi maps bergantung pada GPS — infrastruktur luar angkasa yang sudah jadi utilitas sehari-hari', warna: '#1a5cff', bg: '#e8f0ff' },
+        { icon: '📡', judul: 'GPS & Navigation', teks: 'Semua aplikasi maps bergantung pada GPS -- infrastruktur luar angkasa yang sudah jadi utilitas sehari-hari', warna: '#1a5cff', bg: '#e8f0ff' },
         { icon: '🔭', judul: 'Space Telescope AI', teks: 'AI menganalisis terabytes data teleskop James Webb untuk temukan exoplanet dan galaksi baru', warna: '#f59e0b', bg: '#fffbeb' },
         { icon: '🏗️', judul: 'Space Station Software', teks: 'ISS menjalankan software campuran Linux dan Windows. NASA open-source banyak software mereka!', warna: '#0891b2', bg: '#ecfeff' },
         { icon: '🇮🇩', judul: 'LAPAN Indonesia', teks: 'Indonesia punya LAPAN dengan satelit LAPAN-A2/A3. Developer lokal bisa berkontribusi di sini!', warna: '#e63329', bg: '#fef2f2', badge: 'LOKAL' },
@@ -342,20 +342,20 @@ function Ch129() {
   )
 }
 
-// ── Ch130: NEUROTECH & BCI ────────────────────────────────────────────────────
+// -- Ch130: NEUROTECH & BCI ----------------------------------------------------
 function Ch130() {
   return (
-    <PanelBab id="ch130" num="130" judul="NEUROTECH — INTERFACE OTAK KOMPUTER" warna="#e63329" latarBelakang="#fef2f2">
+    <PanelBab id="ch130" num="130" judul="NEUROTECH -- INTERFACE OTAK KOMPUTER" warna="#e63329" latarBelakang="#fef2f2">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        🧠 BCI (Brain-Computer Interface) bukan fiksi ilmiah — Neuralink sudah di manusia sungguhan!
+        🧠 BCI (Brain-Computer Interface) bukan fiksi ilmiah -- Neuralink sudah di manusia sungguhan!
       </div>
       <div className="grid lg:grid-cols-2 gap-8">
         <div className="space-y-3">
           {[
             { app: 'Paralysis Recovery', desc: 'BCI memungkinkan penderita lumpuh menggerakkan anggota tubuh prostetik hanya dengan pikiran', icon: '🦾', warna: '#22c55e' },
             { app: 'Communication Aid', desc: 'ALS patients dan locked-in syndrome bisa berkomunikasi via sinyal otak yang diterjemahkan ke teks', icon: '💬', warna: '#1a5cff' },
-            { app: 'Neural Gaming', desc: 'Game yang dikontrol langsung oleh pikiran — tanpa controller, tanpa keyboard, pure thought control', icon: '🎮', warna: '#8b5cf6' },
-            { app: 'Memory Enhancement', desc: 'Hippocampal prosthesis yang memperkuat memori jangka pendek — awal dari memory upload?', icon: '🧬', warna: '#f59e0b' },
+            { app: 'Neural Gaming', desc: 'Game yang dikontrol langsung oleh pikiran -- tanpa controller, tanpa keyboard, pure thought control', icon: '🎮', warna: '#8b5cf6' },
+            { app: 'Memory Enhancement', desc: 'Hippocampal prosthesis yang memperkuat memori jangka pendek -- awal dari memory upload?', icon: '🧬', warna: '#f59e0b' },
             { app: 'Emotion Detection', desc: 'EEG ringan yang bisa mendeteksi stress, focus, dan mood untuk personalisasi pengalaman digital', icon: '😊', warna: '#e63329' },
           ].map((a, i) => (
             <motion.div key={a.app}

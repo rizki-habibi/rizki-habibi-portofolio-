@@ -44,9 +44,9 @@ function Box({ icon, title, text, color, bg, wide }: { icon: string; title: stri
   )
 }
 
-/* ═══════════════════════════════════════════════
-   CHAPTER 56 — WARISAN DIGITAL
-═══════════════════════════════════════════════ */
+/* -----------------------------------------------
+   CHAPTER 56 -- WARISAN DIGITAL
+----------------------------------------------- */
 function Ch56() {
   const legacies = [
     { title: 'KVT.kom', desc: 'Platform kampus digital Vtuber pertama yang membuka akses pendidikan kreatif untuk semua.', icon: '🌐', color: '#8b5cf6', year: '2026+' },
@@ -61,7 +61,7 @@ function Ch56() {
       <div className="grid md:grid-cols-2 gap-8 mb-10">
         <div>
           <div className="speech-bubble inline-block text-sm mb-6">
-            🏛️ Bukan soal seberapa lama kita hidup — tapi apa yang kita tinggalkan!
+            🏛️ Bukan soal seberapa lama kita hidup -- tapi apa yang kita tinggalkan!
           </div>
           <div className="space-y-4">
             {legacies.map((l, i) => (
@@ -130,9 +130,9 @@ function Ch56() {
   )
 }
 
-/* ═══════════════════════════════════════════════
-   CHAPTER 57 — INOVASI TANPA HENTI
-═══════════════════════════════════════════════ */
+/* -----------------------------------------------
+   CHAPTER 57 -- INOVASI TANPA HENTI
+----------------------------------------------- */
 function Ch57() {
   const innovations = [
     { title: 'QRIS Multi-Tujuan', desc: 'Satu QR code yang bisa diarahkan ke berbagai tujuan donasi tergantung waktu atau event.', icon: '🎯', color: '#1a5cff', status: 'IDEASI' },
@@ -140,10 +140,10 @@ function Ch57() {
     { title: 'Blockchain Transparansi', desc: 'Setiap transaksi donasi tercatat di blockchain sehingga tidak bisa dipalsukan.', icon: '⛓️', color: '#22c55e', status: 'RISET' },
     { title: 'IoT Desa Monitor', desc: 'Jaringan sensor di desa yang memantau kondisi jalan, air bersih, dan sinyal internet.', icon: '📡', color: '#f59e0b', status: 'PROTOTYPE' },
     { title: 'AR Village Tour', desc: 'Tur virtual desa berbasis Augmented Reality untuk promosi wisata dan investasi lokal.', icon: '🥽', color: '#e63329', status: 'IDEASI' },
-    { title: 'Micro-Learning Mobile', desc: 'App belajar coding 5 menit sehari — untuk pelajar yang sibuk tapi ingin terus berkembang.', icon: '📱', color: '#0891b2', status: 'PLANNING' },
+    { title: 'Micro-Learning Mobile', desc: 'App belajar coding 5 menit sehari -- untuk pelajar yang sibuk tapi ingin terus berkembang.', icon: '📱', color: '#0891b2', status: 'PLANNING' },
   ]
   return (
-    <PanelBab id="ch57" chNum="CHAPTER 57" judul="INOVASI TANPA HENTI — THE NEXT BIG THINGS" warna="#1a5cff" latarBelakang="#e8f0ff">
+    <PanelBab id="ch57" chNum="CHAPTER 57" judul="INOVASI TANPA HENTI -- THE NEXT BIG THINGS" warna="#1a5cff" latarBelakang="#e8f0ff">
       <div className="grid md:grid-cols-3 gap-5 mb-10">
         {innovations.map((inv, i) => (
           <motion.div key={inv.title}
@@ -170,8 +170,8 @@ function Ch57() {
         <div className="font-comic text-2xl text-comic-yellow mb-4">💡 FILOSOFI INOVASI</div>
         <div className="grid md:grid-cols-3 gap-6 text-left">
           {[
-            { principle: 'Start Small', desc: 'Mulai dengan MVP yang bisa diuji — jangan tunggu sempurna untuk launch.', icon: '🌱' },
-            { principle: 'Fail Fast', desc: 'Kegagalan cepat lebih baik dari keberhasilan lambat — learn and pivot.', icon: '⚡' },
+            { principle: 'Start Small', desc: 'Mulai dengan MVP yang bisa diuji -- jangan tunggu sempurna untuk launch.', icon: '🌱' },
+            { principle: 'Fail Fast', desc: 'Kegagalan cepat lebih baik dari keberhasilan lambat -- learn and pivot.', icon: '⚡' },
             { principle: 'Think Big', desc: 'Solusi lokal harus dirancang agar bisa menjadi solusi global.', icon: '🌍' },
           ].map((p, i) => (
             <div key={p.principle} className="text-center">
@@ -186,9 +186,9 @@ function Ch57() {
   )
 }
 
-/* ═══════════════════════════════════════════════
-   CHAPTER 58 — SEMUA KARAKTER BERKUMPUL
-═══════════════════════════════════════════════ */
+/* -----------------------------------------------
+   CHAPTER 58 -- SEMUA KARAKTER BERKUMPUL
+----------------------------------------------- */
 function Ch58() {
   return (
     <PanelBab id="ch58" chNum="CHAPTER 58" judul="SEMUA KARAKTER BERKUMPUL" warna="#f59e0b" latarBelakang="#fffbeb">
@@ -231,7 +231,7 @@ function Ch58() {
                 <Image src="/foto/kuro.png" alt="Kuro Mascot" fill className="object-cover" />
               </div>
               <div>
-                <div className="font-comic text-base" style={{ color: '#e63329' }}>Kuro — The Mascot</div>
+                <div className="font-comic text-base" style={{ color: '#e63329' }}>Kuro -- The Mascot</div>
                 <div className="text-xs text-comic-black/70 leading-snug mt-1">Spirit animal yang setia menemani setiap proses coding dan inovasi.</div>
               </div>
             </motion.div>
@@ -264,7 +264,7 @@ function Ch58() {
             <div className="font-comic text-xl text-comic-black mb-3">✉️ BERGABUNG?</div>
             <p className="text-sm text-comic-black/70 leading-relaxed">
               Jika kamu memiliki passion di bidang teknologi, desain, atau konten kreatif dan ingin berkontribusi
-              pada ekosistem KVT — pintu selalu terbuka!
+              pada ekosistem KVT -- pintu selalu terbuka!
             </p>
             <a href="mailto:rizkihub7@gmail.com" className="btn-comic-blue inline-block mt-3 text-sm">HUBUNGI SAYA</a>
           </div>
@@ -274,20 +274,20 @@ function Ch58() {
   )
 }
 
-/* ═══════════════════════════════════════════════
-   CHAPTER 59 — PESAN UNTUK DEVELOPER MUDA
-═══════════════════════════════════════════════ */
+/* -----------------------------------------------
+   CHAPTER 59 -- PESAN UNTUK DEVELOPER MUDA
+----------------------------------------------- */
 function Ch59() {
   return (
     <PanelBab id="ch59" chNum="CHAPTER 59" judul="PESAN UNTUK DEVELOPER MUDA INDONESIA" warna="#22c55e" latarBelakang="#f0fdf4">
       <div className="grid md:grid-cols-2 gap-8 mb-10">
         <div>
           <div className="speech-bubble inline-block text-sm mb-6">
-            💌 Untuk kamu yang baru memulai — ini dari saya yang pernah di posisimu!
+            💌 Untuk kamu yang baru memulai -- ini dari saya yang pernah di posisimu!
           </div>
           <div className="space-y-4">
             {[
-              { no: '01', msg: 'Mulai dari yang kamu tahu hari ini', detail: 'Jangan tunggu "siap" — siap itu datang seiring proses, bukan sebelumnya.', color: '#22c55e' },
+              { no: '01', msg: 'Mulai dari yang kamu tahu hari ini', detail: 'Jangan tunggu "siap" -- siap itu datang seiring proses, bukan sebelumnya.', color: '#22c55e' },
               { no: '02', msg: 'Google dan dokumentasi adalah guru terbaik', detail: 'Tidak ada yang tahu segalanya. Yang membedakan developer baik adalah kemampuan mencari solusi.', color: '#1a5cff' },
               { no: '03', msg: 'Build proyek nyata dari awal', detail: 'Tutorial itu penting, tapi proyek nyata mengajarkan hal yang tutorial tidak bisa.', color: '#f59e0b' },
               { no: '04', msg: 'Bergabung ke komunitas developer', detail: 'Sendirian kamu bisa maju. Bersama komunitas, kamu bisa terbang.', color: '#8b5cf6' },
@@ -351,9 +351,9 @@ function Ch59() {
   )
 }
 
-/* ═══════════════════════════════════════════════
-   CHAPTER 60 — INDONESIA DIGITAL FUTURE
-═══════════════════════════════════════════════ */
+/* -----------------------------------------------
+   CHAPTER 60 -- INDONESIA DIGITAL FUTURE
+----------------------------------------------- */
 function Ch60() {
   return (
     <PanelBab id="ch60" chNum="CHAPTER 60" judul="INDONESIA DIGITAL FUTURE" warna="#e63329" latarBelakang="#fef2f2" gelap>
@@ -427,7 +427,7 @@ function Ch60() {
             <div className="text-5xl mb-3">🇮🇩</div>
             <div className="font-comic text-2xl text-comic-black mb-2">BANGGA BUATAN INDONESIA</div>
             <p className="text-sm text-comic-black/70">
-              Semua yang saya bangun — dari KVT.kom hingga alat monitoring IoT — adalah kontribusi nyata
+              Semua yang saya bangun -- dari KVT.kom hingga alat monitoring IoT -- adalah kontribusi nyata
               untuk Indonesia yang lebih maju secara digital.
             </p>
           </motion.div>
@@ -437,12 +437,12 @@ function Ch60() {
   )
 }
 
-/* ═══════════════════════════════════════════════
-   CHAPTER 61 — THE PENULTIMATE CHAPTER
-═══════════════════════════════════════════════ */
+/* -----------------------------------------------
+   CHAPTER 61 -- THE PENULTIMATE CHAPTER
+----------------------------------------------- */
 function Ch61() {
   return (
-    <PanelBab id="ch61" chNum="CHAPTER 61 — THE PENULTIMATE CHAPTER" judul="SATU LANGKAH SEBELUM FINAL" warna="#ffd700" latarBelakang="#fffbeb" gelap>
+    <PanelBab id="ch61" chNum="CHAPTER 61 -- THE PENULTIMATE CHAPTER" judul="SATU LANGKAH SEBELUM FINAL" warna="#ffd700" latarBelakang="#fffbeb" gelap>
       <div className="max-w-4xl mx-auto">
         {/* Big dramatic panel */}
         <motion.div
@@ -460,7 +460,7 @@ function Ch61() {
             </motion.div>
             <div className="font-comic text-2xl text-comic-black mb-4">CHAPTER YANG TELAH DILALUI</div>
             <p className="text-base text-comic-black/70 leading-relaxed max-w-2xl mx-auto mb-6">
-              Dari Chapter 00 — The Origin, hingga Chapter 61 ini — ini adalah perjalanan luar biasa seorang developer
+              Dari Chapter 00 -- The Origin, hingga Chapter 61 ini -- ini adalah perjalanan luar biasa seorang developer
               muda dari Jember yang bermimpi membangun ekosistem digital Indonesia yang inklusif dan berdampak.
             </p>
             <div className="grid grid-cols-4 gap-4">
@@ -484,8 +484,8 @@ function Ch61() {
         <div className="grid md:grid-cols-3 gap-5 mb-10">
           {[
             { icon: '🎓', title: 'Ilmu yang Diraih', text: '61 chapter ini mewakili ribuan jam belajar, coding, trial & error yang membentuk siapa saya.', color: '#1a5cff', bg: '#e8f0ff' },
-            { icon: '❤️', title: 'Passion yang Terjaga', text: 'Dari hari pertama coding sampai hari ini — api semangat tidak pernah padam, malah semakin besar.', color: '#e63329', bg: '#fef2f2' },
-            { icon: '🌟', title: 'Visi yang Semakin Jelas', text: 'KVT.kom, QRIS Donasi, Website Desa — bukan sekadar ide, ini adalah blueprint masa depan yang nyata.', color: '#f59e0b', bg: '#fffbeb' },
+            { icon: '❤️', title: 'Passion yang Terjaga', text: 'Dari hari pertama coding sampai hari ini -- api semangat tidak pernah padam, malah semakin besar.', color: '#e63329', bg: '#fef2f2' },
+            { icon: '🌟', title: 'Visi yang Semakin Jelas', text: 'KVT.kom, QRIS Donasi, Website Desa -- bukan sekadar ide, ini adalah blueprint masa depan yang nyata.', color: '#f59e0b', bg: '#fffbeb' },
           ].map((p, i) => (
             <motion.div key={p.title}
               initial={{ opacity: 0, y: 30, rotate: i % 2 === 0 ? -2 : 2 }}
@@ -573,9 +573,9 @@ function Ch61() {
   )
 }
 
-/* ═══════════════════════════════════════════════
-   FINAL CHAPTER — THE GRAND FINALE
-═══════════════════════════════════════════════ */
+/* -----------------------------------------------
+   FINAL CHAPTER -- THE GRAND FINALE
+----------------------------------------------- */
 function FinalChapter() {
   return (
     <section id="final-chapter" className="py-24 px-4 relative overflow-hidden" style={{ background: '#0a0a0a' }}>
@@ -612,7 +612,7 @@ function FinalChapter() {
           className="inline-block mb-10">
           <div className="font-bold text-comic-black text-sm px-8 py-4"
             style={{ background: 'white', border: '4px solid #ffd700', boxShadow: '6px 6px 0 #ffd700', borderRadius: 20, maxWidth: 500 }}>
-            &ldquo;Ini bukan akhir dari cerita — ini adalah undangan untuk kamu bergabung dan menulis chapter berikutnya bersama saya.&rdquo;
+            &ldquo;Ini bukan akhir dari cerita -- ini adalah undangan untuk kamu bergabung dan menulis chapter berikutnya bersama saya.&rdquo;
           </div>
         </motion.div>
 
@@ -656,13 +656,13 @@ function FinalChapter() {
         >
           <div className="font-comic text-5xl text-comic-black/10 select-none leading-none mb-0">&ldquo;</div>
           <p className="font-bold text-lg md:text-xl text-comic-black leading-relaxed mb-6 max-w-3xl mx-auto">
-            Terima kasih sudah membaca 61 chapter cerita saya. Ini bukan sekadar portofolio —
+            Terima kasih sudah membaca 61 chapter cerita saya. Ini bukan sekadar portofolio --
             ini adalah <span className="text-comic-blue">bukti bahwa mimpi yang dikerjakan</span> bisa menjadi kenyataan,
             satu baris kode, satu proyek, dan satu hari pada satu waktu.
             <br /><br />
-            Jika kamu adalah developer muda yang baru mulai — mulailah hari ini.
-            Jika kamu adalah klien yang mencari partner — mari berkolaborasi.
-            Jika kamu adalah siapapun yang membutuhkan sistem digital — saya siap membantu.
+            Jika kamu adalah developer muda yang baru mulai -- mulailah hari ini.
+            Jika kamu adalah klien yang mencari partner -- mari berkolaborasi.
+            Jika kamu adalah siapapun yang membutuhkan sistem digital -- saya siap membantu.
             <br /><br />
             <span className="text-comic-blue">Cerita terbaik selalu ditulis bersama.</span>
           </p>
@@ -672,7 +672,7 @@ function FinalChapter() {
             </div>
             <div className="text-left">
               <div className="font-comic text-xl text-comic-black">Rizki Habibi</div>
-              <div className="text-xs font-bold text-comic-black/50">Web Developer • Innovator • Founder KVT.kom</div>
+              <div className="text-xs font-bold text-comic-black/50">Web Developer  Innovator  Founder KVT.kom</div>
               <div className="text-xs font-bold text-comic-blue mt-0.5">Jember, 2026</div>
             </div>
           </div>

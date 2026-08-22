@@ -14,7 +14,7 @@ const quotes = [
     icon: '💻',
   },
   {
-    text: 'Keterbatasan bukan hambatan — justru keterbatasan melahirkan kreativitas terbesar.',
+    text: 'Keterbatasan bukan hambatan -- justru keterbatasan melahirkan kreativitas terbesar.',
     author: 'Rizki Habibi',
     context: 'Tentang Inovasi',
     color: '#22c55e',
@@ -22,7 +22,7 @@ const quotes = [
     icon: '🔧',
   },
   {
-    text: 'Saya tidak hanya ingin lulus — saya ingin menciptakan tempat belajar yang belum pernah ada di Indonesia.',
+    text: 'Saya tidak hanya ingin lulus -- saya ingin menciptakan tempat belajar yang belum pernah ada di Indonesia.',
     author: 'Rizki Habibi',
     context: 'Tentang KVT.kom',
     color: '#8b5cf6',
@@ -46,7 +46,7 @@ const quotes = [
     icon: '🎓',
   },
   {
-    text: 'Satu website bisa mengubah hidup banyak orang — asal dibangun dengan niat yang benar.',
+    text: 'Satu website bisa mengubah hidup banyak orang -- asal dibangun dengan niat yang benar.',
     author: 'Rizki Habibi',
     context: 'Tentang Dampak',
     color: '#0891b2',
@@ -97,7 +97,7 @@ export default function QuoteComic() {
                 </p>
                 <div className="flex items-center gap-2 pt-3" style={{ borderTop: `2px solid ${q.color}` }}>
                   <div className="w-6 h-6 flex items-center justify-center text-xs font-comic text-white" style={{ background: q.color }}>RH</div>
-                  <span className="font-comic text-xs" style={{ color: q.color }}>— {q.author}</span>
+                  <span className="font-comic text-xs" style={{ color: q.color }}>-- {q.author}</span>
                 </div>
               </div>
             </motion.div>
@@ -175,7 +175,7 @@ export default function QuoteComic() {
               💭 PESAN VETERAN
             </motion.div>
             <div className="speech-bubble inline-block text-sm mb-4 text-comic-black">
-              &ldquo;Pengalaman bukan tentang lamanya waktu — tapi seberapa dalam kamu menyelami setiap prosesnya.&rdquo;
+              &ldquo;Pengalaman bukan tentang lamanya waktu -- tapi seberapa dalam kamu menyelami setiap prosesnya.&rdquo;
             </div>
             <motion.p
               initial={{ opacity: 0, x: -15 }}

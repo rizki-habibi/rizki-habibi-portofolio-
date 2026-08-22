@@ -4,20 +4,20 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 
 const lowongan = [
-  { no:1,  perusahaan:'SEVIMA',                 posisi:'Junior Software Engineer',          gaji:'Rp 5–8 jt',  tipe:'Onsite',  kota:'Surabaya',   platform:'Glints/Indeed',    link:'https://id.indeed.com/cmp/Sevima/jobs',         warna:'#1a5cff', cocok:5 },
-  { no:2,  perusahaan:'Vascomm',                posisi:'Web / IoT Developer',               gaji:'Rp 5–7 jt',  tipe:'Onsite',  kota:'Surabaya',   platform:'Indeed',           link:'https://id.indeed.com/q-vascomm-lowongan.html', warna:'#22c55e', cocok:5 },
-  { no:3,  perusahaan:'PT Hydrax Teknologi',    posisi:'Web Engineer',                      gaji:'Rp 5–7 jt',  tipe:'Remote',  kota:'Remote',     platform:'Glints',           link:'https://glints.com/id/explore/laravel-dev/remote', warna:'#8b5cf6', cocok:5 },
-  { no:4,  perusahaan:'Hosho Digital Pte.',     posisi:'Fullstack Laravel Developer',       gaji:'Rp 5–8 jt',  tipe:'Remote',  kota:'Remote',     platform:'Glints',           link:'https://glints.com/id/explore/fullstack-laravel-developer/remote', warna:'#e63329', cocok:5 },
-  { no:5,  perusahaan:'GoTo Group',             posisi:'Junior Software Engineer',          gaji:'Rp 8–15 jt', tipe:'Hybrid',  kota:'Jakarta',    platform:'LinkedIn',         link:'https://careers.goto.com',                     warna:'#f59e0b', cocok:4 },
-  { no:6,  perusahaan:'eFishery',               posisi:'Junior Full Stack Developer',       gaji:'Rp 7–11 jt', tipe:'Hybrid',  kota:'Bandung',    platform:'Glints/LinkedIn',  link:'https://efishery.com/careers',                  warna:'#22c55e', cocok:5 },
-  { no:7,  perusahaan:'Kata.ai',                posisi:'Junior AI/Backend Engineer',        gaji:'Rp 7–12 jt', tipe:'Hybrid',  kota:'Jakarta',    platform:'LinkedIn/Glints',  link:'https://kata.ai/careers',                       warna:'#8b5cf6', cocok:4 },
-  { no:8,  perusahaan:'Telkom Indonesia',       posisi:'Junior Developer / IT Engineer',   gaji:'Rp 6–10 jt', tipe:'Onsite',  kota:'Nasional',   platform:'LinkedIn/Indeed',  link:'https://recruitment.telkom.co.id',               warna:'#e63329', cocok:4 },
-  { no:9,  perusahaan:'Traveloka',              posisi:'Software Engineer (Fresh Grad)',    gaji:'Rp 8–14 jt', tipe:'Onsite',  kota:'Jakarta',    platform:'LinkedIn',         link:'https://jobs.traveloka.com',                    warna:'#0891b2', cocok:4 },
+  { no:1,  perusahaan:'SEVIMA',                 posisi:'Junior Software Engineer',          gaji:'Rp 5-8 jt',  tipe:'Onsite',  kota:'Surabaya',   platform:'Glints/Indeed',    link:'https://id.indeed.com/cmp/Sevima/jobs',         warna:'#1a5cff', cocok:5 },
+  { no:2,  perusahaan:'Vascomm',                posisi:'Web / IoT Developer',               gaji:'Rp 5-7 jt',  tipe:'Onsite',  kota:'Surabaya',   platform:'Indeed',           link:'https://id.indeed.com/q-vascomm-lowongan.html', warna:'#22c55e', cocok:5 },
+  { no:3,  perusahaan:'PT Hydrax Teknologi',    posisi:'Web Engineer',                      gaji:'Rp 5-7 jt',  tipe:'Remote',  kota:'Remote',     platform:'Glints',           link:'https://glints.com/id/explore/laravel-dev/remote', warna:'#8b5cf6', cocok:5 },
+  { no:4,  perusahaan:'Hosho Digital Pte.',     posisi:'Fullstack Laravel Developer',       gaji:'Rp 5-8 jt',  tipe:'Remote',  kota:'Remote',     platform:'Glints',           link:'https://glints.com/id/explore/fullstack-laravel-developer/remote', warna:'#e63329', cocok:5 },
+  { no:5,  perusahaan:'GoTo Group',             posisi:'Junior Software Engineer',          gaji:'Rp 8-15 jt', tipe:'Hybrid',  kota:'Jakarta',    platform:'LinkedIn',         link:'https://careers.goto.com',                     warna:'#f59e0b', cocok:4 },
+  { no:6,  perusahaan:'eFishery',               posisi:'Junior Full Stack Developer',       gaji:'Rp 7-11 jt', tipe:'Hybrid',  kota:'Bandung',    platform:'Glints/LinkedIn',  link:'https://efishery.com/careers',                  warna:'#22c55e', cocok:5 },
+  { no:7,  perusahaan:'Kata.ai',                posisi:'Junior AI/Backend Engineer',        gaji:'Rp 7-12 jt', tipe:'Hybrid',  kota:'Jakarta',    platform:'LinkedIn/Glints',  link:'https://kata.ai/careers',                       warna:'#8b5cf6', cocok:4 },
+  { no:8,  perusahaan:'Telkom Indonesia',       posisi:'Junior Developer / IT Engineer',   gaji:'Rp 6-10 jt', tipe:'Onsite',  kota:'Nasional',   platform:'LinkedIn/Indeed',  link:'https://recruitment.telkom.co.id',               warna:'#e63329', cocok:4 },
+  { no:9,  perusahaan:'Traveloka',              posisi:'Software Engineer (Fresh Grad)',    gaji:'Rp 8-14 jt', tipe:'Onsite',  kota:'Jakarta',    platform:'LinkedIn',         link:'https://jobs.traveloka.com',                    warna:'#0891b2', cocok:4 },
   { no:10, perusahaan:'PT Javadwipa',           posisi:'IoT Engineer',                      gaji:'Negosiasi',  tipe:'Onsite',  kota:'Surabaya',   platform:'Glints',           link:'https://glints.com/id/explore/internet-of-things/in-surabaya', warna:'#22c55e', cocok:5 },
-  { no:11, perusahaan:'Kuryo Technology',       posisi:'Frontend / Backend Programmer',     gaji:'Rp 4–6 jt',  tipe:'Onsite',  kota:'Surabaya',   platform:'Indeed',           link:'https://id.indeed.com',                         warna:'#1a5cff', cocok:4 },
-  { no:12, perusahaan:'PT Reka Cipta Solusi',   posisi:'Freelance Full Stack Developer',    gaji:'Rp 5–8 jt',  tipe:'Freelance',kota:'Bandung',   platform:'Glints',           link:'https://glints.com/id',                         warna:'#f59e0b', cocok:4 },
-  { no:13, perusahaan:'REVIFY SDN BHD',         posisi:'Laravel Programmer',                gaji:'Rp 6–10 jt', tipe:'Remote',  kota:'Remote',     platform:'Indeed',           link:'https://id.indeed.com',                         warna:'#8b5cf6', cocok:5 },
-  { no:14, perusahaan:'Magnus Digital',         posisi:'Full Stack Engineer',               gaji:'Rp 5–7 jt',  tipe:'Hybrid',  kota:'Nasional',   platform:'Glints',           link:'https://glints.com/id',                         warna:'#0891b2', cocok:4 },
+  { no:11, perusahaan:'Kuryo Technology',       posisi:'Frontend / Backend Programmer',     gaji:'Rp 4-6 jt',  tipe:'Onsite',  kota:'Surabaya',   platform:'Indeed',           link:'https://id.indeed.com',                         warna:'#1a5cff', cocok:4 },
+  { no:12, perusahaan:'PT Reka Cipta Solusi',   posisi:'Freelance Full Stack Developer',    gaji:'Rp 5-8 jt',  tipe:'Freelance',kota:'Bandung',   platform:'Glints',           link:'https://glints.com/id',                         warna:'#f59e0b', cocok:4 },
+  { no:13, perusahaan:'REVIFY SDN BHD',         posisi:'Laravel Programmer',                gaji:'Rp 6-10 jt', tipe:'Remote',  kota:'Remote',     platform:'Indeed',           link:'https://id.indeed.com',                         warna:'#8b5cf6', cocok:5 },
+  { no:14, perusahaan:'Magnus Digital',         posisi:'Full Stack Engineer',               gaji:'Rp 5-7 jt',  tipe:'Hybrid',  kota:'Nasional',   platform:'Glints',           link:'https://glints.com/id',                         warna:'#0891b2', cocok:4 },
   { no:15, perusahaan:'KVT.kom (Self)',         posisi:'Founder / CTO',                     gaji:'Equity',     tipe:'Remote',  kota:'Jember',     platform:'Self',             link:'#ch82',                                         warna:'#ffd700', cocok:5 },
 ]
 
@@ -36,7 +36,7 @@ const skillDicari = [
   { skill:'TypeScript', level:88, ket:'Makin wajib di perusahaan tech berkualitas', w:'#3178c6' },
   { skill:'Docker + CI/CD', level:85, ket:'DevOps dasar sudah jadi requirement mid-level', w:'#2496ed' },
   { skill:'AI/LLM Integration', level:90, ket:'Demand naik 148% 2023-2025. Sangat diferensiasi.', w:'#22c55e' },
-  { skill:'IoT + Web Dashboard', level:80, ket:'Langka di market — kombinasimu sangat bernilai!', w:'#f59e0b' },
+  { skill:'IoT + Web Dashboard', level:80, ket:'Langka di market -- kombinasimu sangat bernilai!', w:'#f59e0b' },
   { skill:'PostgreSQL/MySQL', level:88, ket:'Wajib, pastikan kuasai query optimization', w:'#336791' },
   { skill:'Cloud Basics (AWS/GCP)', level:75, ket:'Satu cloud platform sudah cukup untuk entry-level', w:'#f59e0b' },
 ]
@@ -44,7 +44,7 @@ const skillDicari = [
 const tipsCocok = [
   { ikon:'🏆', judul:'Tonjolkan Trifecta Langka', detail:'Laravel + Next.js + IoT adalah kombinasi yang sangat jarang dimiliki fresh grad. Posisikan dirimu sebagai "Full-Stack + IoT Developer", bukan sekadar web developer biasa.' },
   { ikon:'🎖️', judul:'BNSP + IPK 3.81 = Bukti Ganda', detail:'Sertifikasi BNSP memberikan validasi kompetensi dari pemerintah RI. Cantumkan di paling atas CV. IPK 3.81 melampaui threshold kebanyakan perusahaan (min 3.5).' },
-  { ikon:'📦', judul:'3 Proyek Live = Portofolio Kuat', detail:'Deploy minimal 3 proyek ke URL nyata (Vercel/Railway). Satu IoT dashboard, satu full-stack Laravel+Next.js, satu dengan AI integration — README profesional di tiap repo.' },
+  { ikon:'📦', judul:'3 Proyek Live = Portofolio Kuat', detail:'Deploy minimal 3 proyek ke URL nyata (Vercel/Railway). Satu IoT dashboard, satu full-stack Laravel+Next.js, satu dengan AI integration -- README profesional di tiap repo.' },
   { ikon:'🎯', judul:'Target Perusahaan Agritech Jatim', detail:'Jember adalah kota pertanian terbesar Jawa Timur. Skill IoT + Laravel sangat relevan untuk perusahaan agritech lokal yang butuh sistem monitoring lahan/ternak.' },
   { ikon:'🌐', judul:'Remote = Gaji Setara Kota Besar', detail:'Dengan koneksi internet yang ada di Jember, kamu bisa bekerja remote untuk perusahaan Jakarta atau Singapura dengan gaji 2-3x lebih tinggi dari pasar lokal.' },
   { ikon:'✍️', judul:'Cover Letter yang Spesifik', detail:'Jangan pakai template. Tulis: "Saya membangun sistem IoT monitoring menggunakan Arduino + Laravel yang relevan langsung dengan kebutuhan [perusahaan X] dalam hal [Y]."' },
@@ -133,7 +133,7 @@ export default function InfoKarirKomik() {
             🚀 INFO KARIR & PELUANG KERJA
           </div>
           <div className="speech-bubble inline-block text-sm text-[#0a0a0a]">
-            Berdasarkan profil skill dan IPK 3.81 — rekomendasi nyata dari pasar kerja Indonesia 2025–2026!
+            Berdasarkan profil skill dan IPK 3.81 -- rekomendasi nyata dari pasar kerja Indonesia 2025-2026!
           </div>
         </motion.div>
 
@@ -167,7 +167,7 @@ export default function InfoKarirKomik() {
             {tabAktif === 'lowongan' && (
               <div>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="font-comic text-yellow-400">💼 15 Lowongan Relevan (2025–2026)</div>
+                  <div className="font-comic text-yellow-400">💼 15 Lowongan Relevan (2025-2026)</div>
                   <span className="font-bold text-[9px] text-white/40">klik kartu untuk buka link</span>
                 </div>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -179,9 +179,9 @@ export default function InfoKarirKomik() {
                   <div className="font-comic text-sm text-yellow-400 mb-2">💡 INSIGHT GAJI FRESH GRAD IT 2025</div>
                   <div className="grid sm:grid-cols-3 gap-3">
                     {[
-                      { zona:'Jawa Timur (non-Sby)', range:'Rp 4–6 jt/bln', icon:'🏘️', w:'#f59e0b' },
-                      { zona:'Surabaya / Jawa Besar', range:'Rp 5–9 jt/bln', icon:'🏙️', w:'#1a5cff' },
-                      { zona:'Jakarta / Remote', range:'Rp 7–15 jt/bln', icon:'🚀', w:'#22c55e' },
+                      { zona:'Jawa Timur (non-Sby)', range:'Rp 4-6 jt/bln', icon:'🏘️', w:'#f59e0b' },
+                      { zona:'Surabaya / Jawa Besar', range:'Rp 5-9 jt/bln', icon:'🏙️', w:'#1a5cff' },
+                      { zona:'Jakarta / Remote', range:'Rp 7-15 jt/bln', icon:'🚀', w:'#22c55e' },
                     ].map((z, i) => (
                       <motion.div key={z.zona}
                         initial={{ opacity:0, y:10 }} whileInView={{ opacity:1, y:0 }}
@@ -201,7 +201,7 @@ export default function InfoKarirKomik() {
             {/* Tab: Skill Dicari */}
             {tabAktif === 'skill' && (
               <div className="space-y-3">
-                <div className="font-comic text-yellow-400 mb-4">⚡ Skill Paling Dicari Developer Indonesia 2025–2026</div>
+                <div className="font-comic text-yellow-400 mb-4">⚡ Skill Paling Dicari Developer Indonesia 2025-2026</div>
                 {skillDicari.map((s, i) => (
                   <motion.div key={s.skill}
                     initial={{ opacity:0, x:-30 }}

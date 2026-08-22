@@ -39,13 +39,13 @@ import TesimoniKomik from '@/components/TesimoniKomik'
 import FaqKomik from '@/components/FaqKomik'
 import ProgressKeahlian from '@/components/ProgressKeahlian'
 
-// ── Komponen floating client-only — dimuat setelah halaman selesai render ──
+// -- Komponen floating client-only -- dimuat setelah halaman selesai render --
 const ModeRahasia = dynamic(() => import('@/components/ModeRahasia'), { ssr: false })
 const PaletPerintah = dynamic(() => import('@/components/PaletPerintah'), { ssr: false })
 const PesanSelamatDatang = dynamic(() => import('@/components/PesanSelamatDatang'), { ssr: false })
 const PemutarMusik = dynamic(() => import('@/components/PemutarMusik'), { ssr: false })
 
-// ── GrupBab: dimuat lazy saat mendekati viewport (di bawah fold jauh) ──
+// -- GrupBab: dimuat lazy saat mendekati viewport (di bawah fold jauh) --
 const GrupBab1 = dynamic(() => import('@/components/GrupBab1'), { ssr: false })
 const GrupBab2 = dynamic(() => import('@/components/GrupBab2'), { ssr: false })
 const GrupBab3 = dynamic(() => import('@/components/GrupBab3'), { ssr: false })
@@ -80,7 +80,7 @@ const GrupBab30 = dynamic(() => import('@/components/GrupBab30'), { ssr: false }
 export default function Home() {
   return (
     <main style={{ background: '#fafaf7', color: '#0a0a0a' }}>
-      {/* ── LAYER GLOBAL — tidak tampak di layout scroll ── */}
+      {/* -- LAYER GLOBAL -- tidak tampak di layout scroll -- */}
       <ModeRahasia />
       <EfekKlikMouse />
       <PaletPerintah />
@@ -95,18 +95,18 @@ export default function Home() {
       <KuesionerKerjasama />
       <Navbar />
 
-      {/* CHAPTER 00 — THE ORIGIN */}
+      {/* CHAPTER 00 -- THE ORIGIN */}
       <Hero />
       <div className="comic-divider" />
 
       {/* TECH MARQUEE */}
       <MarqueTeknologi />
 
-      {/* CHAPTER 01 — MY STORY */}
+      {/* CHAPTER 01 -- MY STORY */}
       <CeritaPerjalanan />
       <div className="comic-divider" />
 
-      {/* CHAPTER 02 — MY POWERS */}
+      {/* CHAPTER 02 -- MY POWERS */}
       <Keahlian />
       <div className="comic-divider" />
 
@@ -118,7 +118,7 @@ export default function Home() {
       <RadarKeahlian />
       <div className="comic-divider" />
 
-      {/* CHAPTER 03 — THE MISSIONS */}
+      {/* CHAPTER 03 -- THE MISSIONS */}
       <Proyek />
       <div className="comic-divider" />
 
@@ -126,7 +126,7 @@ export default function Home() {
       <PanelKomik />
       <div className="comic-divider" />
 
-      {/* CHAPTER 04 — MY JOURNEY */}
+      {/* CHAPTER 04 -- MY JOURNEY */}
       <GariswaktuPengalaman />
       <div className="comic-divider" />
 
@@ -134,19 +134,19 @@ export default function Home() {
       <GariswaktuTeknologi />
       <div className="comic-divider" />
 
-      {/* CHAPTER 05 — POWER CARDS */}
+      {/* CHAPTER 05 -- POWER CARDS */}
       <Sertifikat />
       <div className="comic-divider" />
 
-      {/* CHAPTER 06 — THE BIG DREAM */}
+      {/* CHAPTER 06 -- THE BIG DREAM */}
       <VisiKVT />
       <div className="comic-divider" />
 
-      {/* CHAPTER 07 — REKAYASA & INOVASI */}
+      {/* CHAPTER 07 -- REKAYASA & INOVASI */}
       <Inovasi />
       <div className="comic-divider" />
 
-      {/* CHAPTER 08 — BY THE NUMBERS */}
+      {/* CHAPTER 08 -- BY THE NUMBERS */}
       <StatistikKomik />
       <div className="comic-divider" />
 
@@ -154,11 +154,11 @@ export default function Home() {
       <PenghitungUmur />
       <div className="comic-divider" />
 
-      {/* CHAPTER 09 — MY ARSENAL */}
+      {/* CHAPTER 09 -- MY ARSENAL */}
       <ToolsKomik />
       <div className="comic-divider" />
 
-      {/* CHAPTER 10 — ACHIEVEMENT UNLOCKED */}
+      {/* CHAPTER 10 -- ACHIEVEMENT UNLOCKED */}
       <PencapaianKomik />
       <div className="comic-divider" />
 
@@ -166,11 +166,11 @@ export default function Home() {
       <TesimoniKomik />
       <div className="comic-divider" />
 
-      {/* CHAPTER 11 — WORDS OF POWER */}
+      {/* CHAPTER 11 -- WORDS OF POWER */}
       <KutipanKomik />
       <div className="comic-divider" />
 
-      {/* CHAPTER 12 — TRAINING ARC */}
+      {/* CHAPTER 12 -- TRAINING ARC */}
       <PendidikanKomik />
       <div className="comic-divider" />
 
@@ -182,105 +182,105 @@ export default function Home() {
       <InfoKarirKomik />
       <div className="comic-divider" />
 
-      {/* CHAPTER 13 — OFF-DUTY LIFE */}
+      {/* CHAPTER 13 -- OFF-DUTY LIFE */}
       <HobiKomik />
       <div className="comic-divider" />
 
-      {/* CHAPTER 14 — NETWORK & COMMUNITY */}
+      {/* CHAPTER 14 -- NETWORK & COMMUNITY */}
       <KomunikasiKomik />
       <div className="comic-divider" />
 
-      {/* CHAPTER 15 — WHAT COMES NEXT */}
+      {/* CHAPTER 15 -- WHAT COMES NEXT */}
       <EpilogKomik />
 
-      {/* CHAPTERS 16–25 */}
+      {/* CHAPTERS 16-25 */}
       <GrupBab1 />
 
-      {/* CHAPTERS 26–35 */}
+      {/* CHAPTERS 26-35 */}
       <GrupBab2 />
 
-      {/* CHAPTERS 36–45 */}
+      {/* CHAPTERS 36-45 */}
       <GrupBab3 />
 
-      {/* CHAPTERS 46–55 */}
+      {/* CHAPTERS 46-55 */}
       <GrupBab4 />
 
-      {/* CHAPTERS 56–61 + FINAL */}
+      {/* CHAPTERS 56-61 + FINAL */}
       <GrupBab5 />
 
-      {/* CHAPTERS 62–70 — GAME LIFE */}
+      {/* CHAPTERS 62-70 -- GAME LIFE */}
       <GrupBab6 />
 
-      {/* CHAPTERS 71–80 — INOVASI, KOMUNITAS, MASA DEPAN */}
+      {/* CHAPTERS 71-80 -- INOVASI, KOMUNITAS, MASA DEPAN */}
       <GrupBab7 />
 
-      {/* CHAPTERS 81–90 — SKRIPSI, KVT, PENELITIAN, AKADEMIK */}
+      {/* CHAPTERS 81-90 -- SKRIPSI, KVT, PENELITIAN, AKADEMIK */}
       <GrupBab8 />
 
-      {/* CHAPTERS 91–100 — KEHIDUPAN, BUDAYA, MILESTONE */}
+      {/* CHAPTERS 91-100 -- KEHIDUPAN, BUDAYA, MILESTONE */}
       <GrupBab9 />
 
-      {/* CHAPTERS 101–110 — AI, ML, CLOUD, SECURITY, TEKNOLOGI */}
+      {/* CHAPTERS 101-110 -- AI, ML, CLOUD, SECURITY, TEKNOLOGI */}
       <GrupBab10 />
 
-      {/* CHAPTERS 111–120 — WARISAN, NILAI, FINAL CHAPTER */}
+      {/* CHAPTERS 111-120 -- WARISAN, NILAI, FINAL CHAPTER */}
       <GrupBab11 />
 
-      {/* CHAPTERS 121–130 — SMART HOME, ROBOTIK, AR/VR, QUANTUM, SPACE */}
+      {/* CHAPTERS 121-130 -- SMART HOME, ROBOTIK, AR/VR, QUANTUM, SPACE */}
       <GrupBab12 />
 
-      {/* CHAPTERS 131–140 — WIRAUSAHA SOSIAL, KOLABORASI GLOBAL, HEALTHTECH */}
+      {/* CHAPTERS 131-140 -- WIRAUSAHA SOSIAL, KOLABORASI GLOBAL, HEALTHTECH */}
       <GrupBab13 />
 
-      {/* CHAPTERS 141–150 — SENI DIGITAL, MUSIK, CONTENT CREATOR, PEKERJAAN */}
+      {/* CHAPTERS 141-150 -- SENI DIGITAL, MUSIK, CONTENT CREATOR, PEKERJAAN */}
       <GrupBab14 />
 
-      {/* CHAPTERS 151–160 — KEPEMIMPINAN, GENERASI, FILOSOFI, SEJARAH */}
+      {/* CHAPTERS 151-160 -- KEPEMIMPINAN, GENERASI, FILOSOFI, SEJARAH */}
       <GrupBab15 />
 
-      {/* CHAPTERS 161–170 — GRAND FINALE, PROYEK IMPIAN, SALAM PERPISAHAN */}
+      {/* CHAPTERS 161-170 -- GRAND FINALE, PROYEK IMPIAN, SALAM PERPISAHAN */}
       <GrupBab16 />
 
-      {/* CHAPTERS 171–180 — ANIMASI, MICRO-INTERACTION, PERFORMA, KEAMANAN, KARIR */}
+      {/* CHAPTERS 171-180 -- ANIMASI, MICRO-INTERACTION, PERFORMA, KEAMANAN, KARIR */}
       <GrupBab17 />
 
-      {/* 200 INOVASI — BAB 1: EDUKASI DIGITAL (inovasi 1-25) */}
+      {/* 200 INOVASI -- BAB 1: EDUKASI DIGITAL (inovasi 1-25) */}
       <GrupBab18 />
 
-      {/* 200 INOVASI — BAB 2: PLATFORM & PRODUK (inovasi 26-50) */}
+      {/* 200 INOVASI -- BAB 2: PLATFORM & PRODUK (inovasi 26-50) */}
       <GrupBab19 />
 
-      {/* 200 INOVASI — BAB 3: IoT (51-75) + BAB 4: AI/ML (76-100) */}
+      {/* 200 INOVASI -- BAB 3: IoT (51-75) + BAB 4: AI/ML (76-100) */}
       <GrupBab20 />
 
-      {/* 200 INOVASI — BAB 5: FINTECH (101-125) + BAB 6: KESEHATAN/LINGKUNGAN (126-150) */}
+      {/* 200 INOVASI -- BAB 5: FINTECH (101-125) + BAB 6: KESEHATAN/LINGKUNGAN (126-150) */}
       <GrupBab21 />
 
-      {/* 200 INOVASI — BAB 7: DEVELOPER TOOLS (151-175) + BAB 8: KREATIF/SENI (176-200) */}
+      {/* 200 INOVASI -- BAB 7: DEVELOPER TOOLS (151-175) + BAB 8: KREATIF/SENI (176-200) */}
       <GrupBab22 />
 
-      {/* 200 INOVASI — REKAP STATISTIK + DAMPAK */}
+      {/* 200 INOVASI -- REKAP STATISTIK + DAMPAK */}
       <GrupBab23 />
 
-      {/* 200 INOVASI — ROADMAP EKSEKUSI + KOLABORASI */}
+      {/* 200 INOVASI -- ROADMAP EKSEKUSI + KOLABORASI */}
       <GrupBab24 />
 
-      {/* 200 INOVASI — FILOSOFI + TANTANGAN + GRAND FINALE */}
+      {/* 200 INOVASI -- FILOSOFI + TANTANGAN + GRAND FINALE */}
       <GrupBab25 />
 
-      {/* CHAPTERS 261–270 — PRODUKTIVITAS & KEHIDUPAN DEVELOPER */}
+      {/* CHAPTERS 261-270 -- PRODUKTIVITAS & KEHIDUPAN DEVELOPER */}
       <GrupBab26 />
 
-      {/* CHAPTERS 271–280 — OPEN SOURCE, KOMUNITAS, NETWORKING */}
+      {/* CHAPTERS 271-280 -- OPEN SOURCE, KOMUNITAS, NETWORKING */}
       <GrupBab27 />
 
-      {/* CHAPTERS 281–290 — STARTUP, BISNIS, REVENUE MODEL */}
+      {/* CHAPTERS 281-290 -- STARTUP, BISNIS, REVENUE MODEL */}
       <GrupBab28 />
 
-      {/* CHAPTERS 291–300 — WEB3, AR/VR, QUANTUM, AGI, PREDIKSI */}
+      {/* CHAPTERS 291-300 -- WEB3, AR/VR, QUANTUM, AGI, PREDIKSI */}
       <GrupBab29 />
 
-      {/* CHAPTERS 301–310 — PERSONAL BRANDING, KARIR, IMPIAN BESAR */}
+      {/* CHAPTERS 301-310 -- PERSONAL BRANDING, KARIR, IMPIAN BESAR */}
       <GrupBab30 />
 
       <div className="comic-divider" />

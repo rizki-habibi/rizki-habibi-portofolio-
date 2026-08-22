@@ -19,7 +19,7 @@ function PanelBab({ id, num, judul, warna, bg, gelap = false, children }: {
   )
 }
 
-/* ─── Ch191: ROADMAP EKSEKUSI — KAPAN & BAGAIMANA ─── */
+/* --- Ch191: ROADMAP EKSEKUSI -- KAPAN & BAGAIMANA --- */
 function Ch191() {
   const fase = [
     {
@@ -49,7 +49,7 @@ function Ch191() {
   ]
 
   return (
-    <PanelBab id="ch191" num="191" judul="ROADMAP EKSEKUSI — KAPAN & BAGAIMANA MULAI" warna="#22c55e" bg="#f0fdf4">
+    <PanelBab id="ch191" num="191" judul="ROADMAP EKSEKUSI -- KAPAN & BAGAIMANA MULAI" warna="#22c55e" bg="#f0fdf4">
       <div className="speech-bubble inline-block text-sm mb-6">
         🗺️ 200 inovasi tidak dibangun sekaligus. Ini adalah roadmap realistis dalam 4 fase selama 4 tahun ke depan!
       </div>
@@ -97,12 +97,12 @@ function Ch191() {
   )
 }
 
-/* ─── Ch192: KOLABORASI YANG DIBUTUHKAN ─── */
+/* --- Ch192: KOLABORASI YANG DIBUTUHKAN --- */
 function Ch192() {
   const [aktif, setAktif] = useState<number | null>(null)
   const kolaborator = [
     {
-      tipe: 'Co-Founder Teknis', icon: '👨‍💻', warna: '#1a5cff',
+      tipe: 'Co-Founder Teknis', icon: '👨💻', warna: '#1a5cff',
       kriteria: 'Full-stack developer atau engineer dengan pengalaman 3+ tahun, passion untuk dampak sosial, dan mau kerja lean startup',
       kontribusi: 'Bantu build MVP lebih cepat, bagi tanggung jawab teknis, dan jadi sparring partner dalam keputusan arsitektur',
     },
@@ -112,14 +112,14 @@ function Ch192() {
       kontribusi: 'Validasi bisnis, cari customer pertama, kelola partnership, dan bantu pitch ke investor',
     },
     {
-      tipe: 'Mentor Senior Dev', icon: '🧙‍♂️', warna: '#8b5cf6',
+      tipe: 'Mentor Senior Dev', icon: '🧙♂️', warna: '#8b5cf6',
       kriteria: 'Senior developer atau tech lead dengan 8+ tahun pengalaman, terutama di scaling produk dan arsitektur sistem',
       kontribusi: 'Code review, arsitektur advice, koneksi ke network developer senior, dan guidance hindari jebakan umum',
     },
     {
       tipe: 'Investor / Sponsor', icon: '💰', warna: '#f59e0b',
       kriteria: 'Angel investor atau perusahaan yang align dengan visi teknologi untuk dampak sosial Indonesia',
-      kontribusi: 'Modal untuk hire developer pertama, server cost, dan operasional. Tidak hanya uang — network dan credibility',
+      kontribusi: 'Modal untuk hire developer pertama, server cost, dan operasional. Tidak hanya uang -- network dan credibility',
     },
     {
       tipe: 'Partner Pemerintah', icon: '🏛️', warna: '#e63329',
@@ -176,7 +176,7 @@ function Ch192() {
         viewport={{ once: true }}
         className="mt-8 p-5 text-center comic-panel">
         <div className="font-comic text-xl text-[#0a0a0a] mb-2">📩 TERTARIK BERKOLABORASI?</div>
-        <p className="text-sm font-bold text-[#0a0a0a]/70 mb-4">Reach out lewat channel yang tersedia. Semua jenis kolaborasi disambut — dari feedback sederhana sampai co-found penuh!</p>
+        <p className="text-sm font-bold text-[#0a0a0a]/70 mb-4">Reach out lewat channel yang tersedia. Semua jenis kolaborasi disambut -- dari feedback sederhana sampai co-found penuh!</p>
         <a href="#contact" className="btn-comic">HUBUNGI SEKARANG →</a>
       </motion.div>
     </PanelBab>

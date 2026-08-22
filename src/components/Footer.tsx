@@ -92,7 +92,7 @@ export default function Footer() {
                 className="font-comic text-xs px-3 py-1 text-white/60 hover:text-comic-yellow transition-colors"
               >
                 {n.label}
-                {i < tautanNav.length - 1 && <span className="ml-1 text-white/20">•</span>}
+                {i < tautanNav.length - 1 && <span className="ml-1 text-white/20"></span>}
               </a>
             ))}
           </motion.div>
@@ -108,8 +108,8 @@ export default function Footer() {
                 viewport={{ once: true }}
                 className="text-center md:text-left"
               >
-                <div className="font-comic text-comic-yellow text-sm">© 2026 RIZKI HABIBI</div>
-                <div className="text-white/40 text-xs mt-0.5">Built with Next.js • Tailwind CSS • Framer Motion</div>
+                <div className="font-comic text-comic-yellow text-sm"> 2026 RIZKI HABIBI</div>
+                <div className="text-white/40 text-xs mt-0.5">Built with Next.js  Tailwind CSS  Framer Motion</div>
               </motion.div>
 
               {/* THE STORY CONTINUES */}

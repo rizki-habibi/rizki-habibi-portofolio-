@@ -19,7 +19,7 @@ function PanelBab({ id, num, judul, warna, bg, gelap = false, children }: {
   )
 }
 
-/* Ch271 — DUNIA OPEN SOURCE */
+/* Ch271 -- DUNIA OPEN SOURCE */
 function Ch271() {
   const langkah = [
     { no: 1, langkah: 'Temukan repo yang kamu gunakan sendiri', detail: 'Mulai dari tools yang kamu pakai sehari-hari. Passion untuk produk = motivasi untuk kontribusi.', icon: '🔍' },
@@ -27,13 +27,13 @@ function Ch271() {
     { no: 3, langkah: 'Mulai dari issue berlabel "good first issue"', detail: 'Label ini sengaja dibuat untuk newcomer. Jangan langsung ambil feature besar di PR pertama.', icon: '🏷️' },
     { no: 4, langkah: 'Fork, buat branch, dan kerjakan perubahanmu', detail: 'Nama branch yang deskriptif: `fix/login-redirect-bug`, bukan `my-changes`.', icon: '🍴' },
     { no: 5, langkah: 'Tulis PR description yang jelas dan detail', detail: 'Jelaskan masalah yang diselesaikan, bagaimana solusinya, dan screenshot jika ada perubahan UI.', icon: '📝' },
-    { no: 6, langkah: 'Respond review dengan cepat dan terbuka', detail: 'Maintainer volunteer. Hargai waktu mereka. Feedback bukan serangan pribadi — ini adalah mentoring gratis.', icon: '💬' },
+    { no: 6, langkah: 'Respond review dengan cepat dan terbuka', detail: 'Maintainer volunteer. Hargai waktu mereka. Feedback bukan serangan pribadi -- ini adalah mentoring gratis.', icon: '💬' },
     { no: 7, langkah: 'Kontribusi non-kode juga sama berharganya', detail: 'Perbaiki dokumentasi, translate, report bug dengan detail, atau jawab pertanyaan di Discussions.', icon: '🤝' },
   ]
   return (
-    <PanelBab id="ch271" num="271" judul="OPEN SOURCE — CARA TERBAIK BELAJAR DAN BERKONTRIBUSI" warna="#22c55e" bg="#f0fdf4">
+    <PanelBab id="ch271" num="271" judul="OPEN SOURCE -- CARA TERBAIK BELAJAR DAN BERKONTRIBUSI" warna="#22c55e" bg="#f0fdf4">
       <div className="speech-bubble inline-block text-sm mb-6">
-        🔓 Kontribusi open source adalah portofolio yang tidak bisa dipalsukan — kodenya ada, reviewnya ada, dan siapapun bisa lihat kualitas kerjamu!
+        🔓 Kontribusi open source adalah portofolio yang tidak bisa dipalsukan -- kodenya ada, reviewnya ada, dan siapapun bisa lihat kualitas kerjamu!
       </div>
       <div className="space-y-3 mb-8">
         {langkah.map((l, i) => (
@@ -79,7 +79,7 @@ function Ch271() {
   )
 }
 
-/* Ch272 — KOMUNITAS DEVELOPER INDONESIA */
+/* Ch272 -- KOMUNITAS DEVELOPER INDONESIA */
 function Ch272() {
   const komunitas = [
     { nama: 'PHP Indonesia', platform: 'Facebook Group', anggota: '45K+', topik: 'PHP, Laravel, web backend', warna: '#8892BF', icon: '🐘' },
@@ -92,7 +92,7 @@ function Ch272() {
     { nama: 'Dicoding Community', platform: 'Forum + Discord', anggota: '600K+', topik: 'Learning path, certification', warna: '#0891b2', icon: '🏫' },
   ]
   return (
-    <PanelBab id="ch272" num="272" judul="KOMUNITAS DEVELOPER INDONESIA — PETA EKOSISTEM" warna="#1a5cff" bg="#e8f0ff">
+    <PanelBab id="ch272" num="272" judul="KOMUNITAS DEVELOPER INDONESIA -- PETA EKOSISTEM" warna="#1a5cff" bg="#e8f0ff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
         🌐 Ekosistem komunitas developer Indonesia semakin kuat. Bergabung ke minimal satu komunitas aktif adalah game-changer untuk karir!
       </div>
@@ -144,12 +144,12 @@ function Ch272() {
   )
 }
 
-/* Ch273 — MEMBANGUN NETWORKING YANG AUTENTIK */
+/* Ch273 -- MEMBANGUN NETWORKING YANG AUTENTIK */
 function Ch273() {
   return (
-    <PanelBab id="ch273" num="273" judul="NETWORKING AUTENTIK — BUKAN SEKEDAR COLLECT KONTAK" warna="#8b5cf6" bg="#f5f0ff">
+    <PanelBab id="ch273" num="273" judul="NETWORKING AUTENTIK -- BUKAN SEKEDAR COLLECT KONTAK" warna="#8b5cf6" bg="#f5f0ff">
       <div className="speech-bubble inline-block text-sm mb-6">
-        🤝 Networking terbaik bukan dari kartu nama yang dibagi-bagi — tapi dari nilai yang kamu berikan kepada orang lain terlebih dahulu!
+        🤝 Networking terbaik bukan dari kartu nama yang dibagi-bagi -- tapi dari nilai yang kamu berikan kepada orang lain terlebih dahulu!
       </div>
       <div className="grid lg:grid-cols-2 gap-8">
         <div>
@@ -179,10 +179,10 @@ function Ch273() {
           <div className="font-comic text-lg text-[#22c55e] mb-4">✅ NETWORKING YANG BENAR</div>
           <div className="space-y-3">
             {[
-              'Bantu orang lain dulu — jawab pertanyaan, share resources',
+              'Bantu orang lain dulu -- jawab pertanyaan, share resources',
               'Koneksi LinkedIn dengan pesan personal kenapa ingin terhubung',
               'Follow up setelah event dengan sesuatu yang spesifik dan bermakna',
-              'Konsisten memberikan nilai — artikel, tutorial, tools gratis',
+              'Konsisten memberikan nilai -- artikel, tutorial, tools gratis',
               'Celebrate pencapaian orang lain dengan tulus tanpa mengharap balasan',
             ].map((b, i) => (
               <motion.div key={i}
@@ -203,7 +203,7 @@ function Ch273() {
   )
 }
 
-/* Ch274 — MENULIS SEBAGAI DEVELOPER */
+/* Ch274 -- MENULIS SEBAGAI DEVELOPER */
 function Ch274() {
   const format = [
     { format: 'Blog Post Tutorial', platform: 'Dev.to / Medium / Personal Blog', manfaat: 'Memperdalam pemahaman sendiri, visible di Google, dapat followers organik', icon: '📝', warna: '#1a5cff' },
@@ -214,9 +214,9 @@ function Ch274() {
     { format: 'LinkedIn Article', platform: 'LinkedIn', manfaat: 'Professional audience, boost credibility, potential recruiter visibility', icon: '💼', warna: '#0077b5' },
   ]
   return (
-    <PanelBab id="ch274" num="274" judul="MENULIS SEBAGAI DEVELOPER — AMPLIFIER KARIR" warna="#f59e0b" bg="#fffbeb">
+    <PanelBab id="ch274" num="274" judul="MENULIS SEBAGAI DEVELOPER -- AMPLIFIER KARIR" warna="#f59e0b" bg="#fffbeb">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        ✍️ Developer yang bisa menulis dengan baik tidak hanya punya skill coding — mereka punya leverage. Tulisan bekerja saat kamu tidur!
+        ✍️ Developer yang bisa menulis dengan baik tidak hanya punya skill coding -- mereka punya leverage. Tulisan bekerja saat kamu tidur!
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
         {format.map((f, i) => (
@@ -247,7 +247,7 @@ function Ch274() {
             { bagian: 'Hook (1 paragraf)', desc: 'Masalah atau momen relatable yang langsung dirasakan pembaca' },
             { bagian: 'Konteks (2-3 paragraf)', desc: 'Mengapa masalah ini penting dan apa yang sudah dicoba sebelumnya' },
             { bagian: 'Solusi (inti artikel)', desc: 'Step-by-step dengan kode, screenshot, atau diagram yang jelas' },
-            { bagian: 'Pitfall & Gotchas', desc: 'Hal-hal yang bisa salah — ini yang membuat artikel kamu unik dan jujur' },
+            { bagian: 'Pitfall & Gotchas', desc: 'Hal-hal yang bisa salah -- ini yang membuat artikel kamu unik dan jujur' },
             { bagian: 'Takeaway (1 paragraf)', desc: 'Satu kalimat yang bisa diambil pembaca setelah selesai baca' },
           ].map((b, i) => (
             <div key={b.bagian} className="flex gap-3 items-start">
@@ -275,7 +275,7 @@ function Ch275to280() {
     { tahun: '2026', event: 'Build komunitas sendiri via KVT.kom', dampak: 'Dari yang belajar dari komunitas, kini membangun komunitas sendiri untuk orang lain', icon: '🚀', warna: '#0891b2' },
   ]
   return (
-    <PanelBab id="ch275" num="275-280" judul="PERJALANAN DI KOMUNITAS — DARI LURKER KE BUILDER" warna="#0891b2" bg="#ecfeff" gelap>
+    <PanelBab id="ch275" num="275-280" judul="PERJALANAN DI KOMUNITAS -- DARI LURKER KE BUILDER" warna="#0891b2" bg="#ecfeff" gelap>
       <div className="speech-bubble inline-block text-sm mb-8 text-[#0a0a0a]">
         📅 Setiap developer punya perjalanannya sendiri di komunitas. Ini perjalanan dari lurker yang hanya baca, menjadi builder yang menciptakan komunitas baru!
       </div>

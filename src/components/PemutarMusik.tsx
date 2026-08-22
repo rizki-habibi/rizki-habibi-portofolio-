@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-// Widget "Now Playing" mini — expandable, pojok kiri bawah
+// Widget "Now Playing" mini -- expandable, pojok kiri bawah
 // Hanya dekoratif (simulasi, tidak memutar audio sungguhan)
 
 const tracklist = [
@@ -80,7 +80,7 @@ export default function ComicNowPlaying() {
           overflow: 'hidden',
         }}
       >
-        {/* Header — selalu tampil */}
+        {/* Header -- selalu tampil */}
         <button
           onClick={() => setExpanded(v => !v)}
           className="flex items-center gap-2 w-full px-2 py-2 hover:bg-white/5 transition-colors"
@@ -101,7 +101,7 @@ export default function ComicNowPlaying() {
           </AnimatePresence>
         </button>
 
-        {/* Body — hanya saat expanded */}
+        {/* Body -- hanya saat expanded */}
         <AnimatePresence>
           {expanded && (
             <motion.div

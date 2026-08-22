@@ -6,7 +6,7 @@ import { FiX, FiChevronLeft, FiChevronRight, FiBookOpen } from 'react-icons/fi'
 import { HiSparkles } from 'react-icons/hi'
 import Image from 'next/image'
 
-// ─── Data Halaman Buku ─────────────────────────────────────────
+// --- Data Halaman Buku -----------------------------------------
 const halaman = [
   {
     id: 0,
@@ -29,10 +29,10 @@ const halaman = [
     warna: '#ffd700',
     bg: '#fffbeb',
     emoji: '💻',
-    isi: 'Segalanya dimulai dari rasa penasaran — membuka Notepad dan mengetik <html> pertama kali. Tidak ada tutorial, tidak ada mentor. Hanya coba-coba dan rasa ingin tahu.',
+    isi: 'Segalanya dimulai dari rasa penasaran -- membuka Notepad dan mengetik <html> pertama kali. Tidak ada tutorial, tidak ada mentor. Hanya coba-coba dan rasa ingin tahu.',
     panels: [
       { icon: '📝', teks: 'Menulis HTML pertama di Notepad tanpa framework apapun', warna: '#ffd700', bg: '#fffbeb' },
-      { icon: '🤯', teks: 'Pertama kali browser menampilkan halaman yang dibuat sendiri — rasanya luar biasa!', warna: '#1a5cff', bg: '#e8f0ff' },
+      { icon: '🤯', teks: 'Pertama kali browser menampilkan halaman yang dibuat sendiri -- rasanya luar biasa!', warna: '#1a5cff', bg: '#e8f0ff' },
       { icon: '🚀', teks: 'Dari situ, tidak ada jalan kembali. Coding menjadi passion nyata.', warna: '#22c55e', bg: '#f0fdf4' },
     ],
     quote: '"Setiap programmer hebat pernah bingung melihat error pertama mereka."',
@@ -46,13 +46,13 @@ const halaman = [
     warna: '#8b5cf6',
     bg: '#f5f0ff',
     emoji: '🎓',
-    isi: 'Melanjutkan ke perguruan tinggi bukan sekadar mencari ijazah. Di sini saya menemukan fondasi ilmu yang sesungguhnya — algoritma, database, sistem jaringan, dan cara berpikir sebagai engineer.',
+    isi: 'Melanjutkan ke perguruan tinggi bukan sekadar mencari ijazah. Di sini saya menemukan fondasi ilmu yang sesungguhnya -- algoritma, database, sistem jaringan, dan cara berpikir sebagai engineer.',
     panels: [
-      { icon: '🏫', teks: 'S1 Sistem & Teknologi Informasi — fondasi ilmu yang sesungguhnya', warna: '#8b5cf6', bg: '#f5f0ff' },
+      { icon: '🏫', teks: 'S1 Sistem & Teknologi Informasi -- fondasi ilmu yang sesungguhnya', warna: '#8b5cf6', bg: '#f5f0ff' },
       { icon: '🧩', teks: 'Belajar algoritma, struktur data, dan cara berpikir seperti engineer sejati', warna: '#e63329', bg: '#fef2f2' },
       { icon: '👥', teks: 'Bergabung komunitas, ikut seminar, dan mulai membangun jaringan profesional', warna: '#f59e0b', bg: '#fffbeb' },
     ],
-    quote: '"Kuliah adalah lab eksperimen — tempat ide gila menjadi kenyataan."',
+    quote: '"Kuliah adalah lab eksperimen -- tempat ide gila menjadi kenyataan."',
   },
   {
     id: 3,
@@ -63,13 +63,13 @@ const halaman = [
     warna: '#FF2D20',
     bg: '#fff5f5',
     emoji: '⚡',
-    isi: 'Laravel bukan hanya framework — ini adalah cara berpikir dalam membangun aplikasi web yang bersih, terstruktur, dan scalable. Saya jatuh cinta pada elegannya.',
+    isi: 'Laravel bukan hanya framework -- ini adalah cara berpikir dalam membangun aplikasi web yang bersih, terstruktur, dan scalable. Saya jatuh cinta pada elegannya.',
     panels: [
-      { icon: '🔥', teks: 'Menguasai Laravel hingga level 90% — MVC, Eloquent, Artisan, Queue', warna: '#FF2D20', bg: '#fff5f5' },
+      { icon: '🔥', teks: 'Menguasai Laravel hingga level 90% -- MVC, Eloquent, Artisan, Queue', warna: '#FF2D20', bg: '#fff5f5' },
       { icon: '🗄️', teks: 'MySQL, migrasi database, relasi tabel yang kompleks jadi mudah dikelola', warna: '#4479A1', bg: '#eff6ff' },
-      { icon: '🎨', teks: 'Tailwind CSS + Blade — membangun UI yang cantik dan responsif', warna: '#06B6D4', bg: '#ecfeff' },
+      { icon: '🎨', teks: 'Tailwind CSS + Blade -- membangun UI yang cantik dan responsif', warna: '#06B6D4', bg: '#ecfeff' },
     ],
-    quote: '"Clean code bukan tentang kesempurnaan — tentang keterbacaan dan niat."',
+    quote: '"Clean code bukan tentang kesempurnaan -- tentang keterbacaan dan niat."',
   },
   {
     id: 4,
@@ -80,11 +80,11 @@ const halaman = [
     warna: '#22c55e',
     bg: '#f0fdf4',
     emoji: '🔧',
-    isi: 'Coding saja tidak cukup. Saya mulai merakit sensor, mengintegrasikan hardware dengan software — monitoring lingkungan dari bahan bekas yang hasilnya nyata.',
+    isi: 'Coding saja tidak cukup. Saya mulai merakit sensor, mengintegrasikan hardware dengan software -- monitoring lingkungan dari bahan bekas yang hasilnya nyata.',
     panels: [
-      { icon: '🌡️', teks: 'Alat monitoring suhu & kelembaban dari komponen bekas — IoT nyata bukan teori', warna: '#22c55e', bg: '#f0fdf4' },
+      { icon: '🌡️', teks: 'Alat monitoring suhu & kelembaban dari komponen bekas -- IoT nyata bukan teori', warna: '#22c55e', bg: '#f0fdf4' },
       { icon: '📡', teks: 'Integrasi ESP32, sensor DHT, dan dashboard web real-time berbasis Laravel', warna: '#0ea5e9', bg: '#f0f9ff' },
-      { icon: '♻️', teks: 'Inovasi dari keterbatasan — membuktikan bahwa solusi tidak butuh modal besar', warna: '#f59e0b', bg: '#fffbeb' },
+      { icon: '♻️', teks: 'Inovasi dari keterbatasan -- membuktikan bahwa solusi tidak butuh modal besar', warna: '#f59e0b', bg: '#fffbeb' },
     ],
     quote: '"Inovasi sejati lahir dari keberanian berpikir berbeda dengan sumber daya minimal."',
   },
@@ -97,13 +97,13 @@ const halaman = [
     warna: '#f59e0b',
     bg: '#fffbeb',
     emoji: '🏆',
-    isi: 'Setelah latihan keras dan belajar intensif, akhirnya mendapatkan sertifikasi BNSP Junior Web Developer — bukti kompetensi yang diakui secara nasional.',
+    isi: 'Setelah latihan keras dan belajar intensif, akhirnya mendapatkan sertifikasi BNSP Junior Web Developer -- bukti kompetensi yang diakui secara nasional.',
     panels: [
-      { icon: '📜', teks: 'Sertifikasi BNSP Junior Web Developer — kompetensi diakui secara nasional', warna: '#f59e0b', bg: '#fffbeb' },
+      { icon: '📜', teks: 'Sertifikasi BNSP Junior Web Developer -- kompetensi diakui secara nasional', warna: '#f59e0b', bg: '#fffbeb' },
       { icon: '📚', teks: '75+ sertifikat digital dari berbagai platform: Kominfo, Dicoding, dan lainnya', warna: '#8b5cf6', bg: '#f5f0ff' },
       { icon: '🎯', teks: 'Setiap sertifikat adalah bukti nyata komitmen belajar tanpa henti', warna: '#1a5cff', bg: '#e8f0ff' },
     ],
-    quote: '"Belajar tidak pernah berhenti — setiap hari ada hal baru yang menunggu."',
+    quote: '"Belajar tidak pernah berhenti -- setiap hari ada hal baru yang menunggu."',
   },
   {
     id: 6,
@@ -114,13 +114,13 @@ const halaman = [
     warna: '#8b5cf6',
     bg: '#f5f0ff',
     emoji: '🌐',
-    isi: 'KVT.kom — Kampus Virtual Teknologi. Ekosistem digital pertama yang memadukan pendidikan, komunitas kreator, dan platform ekonomi kreatif dalam satu platform.',
+    isi: 'KVT.kom -- Kampus Virtual Teknologi. Ekosistem digital pertama yang memadukan pendidikan, komunitas kreator, dan platform ekonomi kreatif dalam satu platform.',
     panels: [
-      { icon: '🏛️', teks: 'Kampus Virtual Teknologi — ekosistem pendidikan & kreator digital pertama', warna: '#8b5cf6', bg: '#f5f0ff' },
+      { icon: '🏛️', teks: 'Kampus Virtual Teknologi -- ekosistem pendidikan & kreator digital pertama', warna: '#8b5cf6', bg: '#f5f0ff' },
       { icon: '💰', teks: 'Membuka lapangan kerja digital bagi puluhan kreator dan developer Indonesia', warna: '#22c55e', bg: '#f0fdf4' },
-      { icon: '🚀', teks: 'Saat ini dalam pengembangan aktif — setiap commit adalah langkah menuju mimpi', warna: '#1a5cff', bg: '#e8f0ff' },
+      { icon: '🚀', teks: 'Saat ini dalam pengembangan aktif -- setiap commit adalah langkah menuju mimpi', warna: '#1a5cff', bg: '#e8f0ff' },
     ],
-    quote: '"Satu website bisa mengubah hidup banyak orang — asal dibangun dengan niat yang benar."',
+    quote: '"Satu website bisa mengubah hidup banyak orang -- asal dibangun dengan niat yang benar."',
   },
   {
     id: 7,
@@ -131,11 +131,11 @@ const halaman = [
     warna: '#0a0a0a',
     bg: '#f5f5f0',
     emoji: '⚛️',
-    isi: 'Laravel tidak cukup — saya melompat ke ekosistem modern. Next.js, TypeScript, Tailwind, Framer Motion. Portofolio ini adalah bukti nyata dari stack tersebut.',
+    isi: 'Laravel tidak cukup -- saya melompat ke ekosistem modern. Next.js, TypeScript, Tailwind, Framer Motion. Portofolio ini adalah bukti nyata dari stack tersebut.',
     panels: [
-      { icon: '⚛️', teks: 'Next.js 14 + TypeScript — SSR, SSG, App Router yang powerful', warna: '#0a0a0a', bg: '#f5f5f0' },
-      { icon: '✨', teks: 'Framer Motion — animasi yang membuat website hidup dan berkarakter', warna: '#e63329', bg: '#fef2f2' },
-      { icon: '🎨', teks: 'Design system komik yang konsisten — setiap piksel dirancang dengan tujuan', warna: '#ffd700', bg: '#fffbeb' },
+      { icon: '⚛️', teks: 'Next.js 14 + TypeScript -- SSR, SSG, App Router yang powerful', warna: '#0a0a0a', bg: '#f5f5f0' },
+      { icon: '✨', teks: 'Framer Motion -- animasi yang membuat website hidup dan berkarakter', warna: '#e63329', bg: '#fef2f2' },
+      { icon: '🎨', teks: 'Design system komik yang konsisten -- setiap piksel dirancang dengan tujuan', warna: '#ffd700', bg: '#fffbeb' },
     ],
     quote: '"Website terbaik adalah yang membuat pengunjung tersenyum dan betah berlama-lama."',
   },
@@ -148,20 +148,20 @@ const halaman = [
     warna: '#1a5cff',
     bg: '#e8f0ff',
     emoji: '🌟',
-    isi: 'Ini baru permulaan. Masih banyak chapter yang belum ditulis — skripsi, wisuda, karir impian, dan proyek-proyek besar yang sedang direncanakan.',
+    isi: 'Ini baru permulaan. Masih banyak chapter yang belum ditulis -- skripsi, wisuda, karir impian, dan proyek-proyek besar yang sedang direncanakan.',
     panels: [
-      { icon: '📝', teks: 'Skripsi yang sedang dikerjakan — penelitian IoT untuk masa depan', warna: '#1a5cff', bg: '#e8f0ff' },
+      { icon: '📝', teks: 'Skripsi yang sedang dikerjakan -- penelitian IoT untuk masa depan', warna: '#1a5cff', bg: '#e8f0ff' },
       { icon: '💼', teks: 'Karir sebagai Full Stack Developer & Tech Entrepreneur yang terus dikejar', warna: '#22c55e', bg: '#f0fdf4' },
-      { icon: '🌍', teks: 'Dampak nyata bagi masyarakat melalui teknologi — itu tujuan utamanya', warna: '#ffd700', bg: '#fffbeb' },
+      { icon: '🌍', teks: 'Dampak nyata bagi masyarakat melalui teknologi -- itu tujuan utamanya', warna: '#ffd700', bg: '#fffbeb' },
     ],
     quote: '"The best is yet to come. Teruslah menulis ceritamu sendiri."',
   },
 ]
 
-// ─── Efek komiK ───────────────────────────────────
+// --- Efek komiK -----------------------------------
 const efekKomik = ['ZAP!', 'POW!', 'WOW!', 'NICE!', 'FLIP!', 'EPIC!']
 
-// ─── Komponen Panel Mini ──────────────────────────
+// --- Komponen Panel Mini --------------------------
 function PanelMini({ icon, teks, warna, bg, delay }: { icon: string; teks: string; warna: string; bg: string; delay: number }) {
   return (
     <motion.div
@@ -177,7 +177,7 @@ function PanelMini({ icon, teks, warna, bg, delay }: { icon: string; teks: strin
   )
 }
 
-// ─── Halaman Cover ────────────────────────────────
+// --- Halaman Cover --------------------------------
 function HalamanCover({ data }: { data: typeof halaman[0] }) {
   return (
     <div className="h-full flex flex-col items-center justify-center text-center p-6 relative overflow-hidden"
@@ -235,13 +235,13 @@ function HalamanCover({ data }: { data: typeof halaman[0] }) {
       {/* Total halaman */}
       <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}
         className="absolute bottom-4 font-comic text-[10px] text-white/40 tracking-widest">
-        {halaman.length} HALAMAN • KLIK PANAH UNTUK MULAI
+        {halaman.length} HALAMAN  KLIK PANAH UNTUK MULAI
       </motion.p>
     </div>
   )
 }
 
-// ─── Halaman Chapter ─────────────────────────────
+// --- Halaman Chapter -----------------------------
 function HalamanChapter({ data, arah }: { data: typeof halaman[0]; arah: number }) {
   return (
     <div className="h-full overflow-y-auto p-5 sm:p-6" style={{ background: data.bg }}>
@@ -301,7 +301,7 @@ function HalamanChapter({ data, arah }: { data: typeof halaman[0]; arah: number 
   )
 }
 
-// ─── Halaman Penutup ──────────────────────────────
+// --- Halaman Penutup ------------------------------
 function HalamanPenutup({ data }: { data: typeof halaman[0] }) {
   return (
     <div className="h-full overflow-y-auto p-5 sm:p-6 relative" style={{ background: '#0a0a0a' }}>
@@ -362,7 +362,7 @@ function HalamanPenutup({ data }: { data: typeof halaman[0] }) {
         {/* CTA */}
         <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}
           className="text-center space-y-3">
-          <div className="font-comic text-white/30 text-xs tracking-widest mb-3">— BACA LEBIH LENGKAP DI —</div>
+          <div className="font-comic text-white/30 text-xs tracking-widest mb-3">-- BACA LEBIH LENGKAP DI --</div>
           <a href="#about" className="inline-block font-comic text-sm text-[#0a0a0a] px-6 py-3"
             style={{ background: '#ffd700', border: '3px solid #ffd700', boxShadow: '4px 4px 0 rgba(255,215,0,0.4)' }}>
             📖 BACA FULL PORTOFOLIO
@@ -373,7 +373,7 @@ function HalamanPenutup({ data }: { data: typeof halaman[0] }) {
   )
 }
 
-// ─── Komponen Utama ───────────────────────────────
+// --- Komponen Utama -------------------------------
 export default function StoryBook({ onTutup }: { onTutup: () => void }) {
   const [idx, setIdx] = useState(0)
   const [arah, setArah] = useState(1) // 1 = maju, -1 = mundur
@@ -549,16 +549,16 @@ export default function StoryBook({ onTutup }: { onTutup: () => void }) {
         </div>
       </motion.div>
 
-      {/* Petunjuk keyboard — hanya desktop */}
+      {/* Petunjuk keyboard -- hanya desktop */}
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}
         className="hidden sm:block absolute bottom-6 left-1/2 -translate-x-1/2 font-mono text-white/25 text-[10px] tracking-widest">
-        ← → untuk navigasi • ESC untuk tutup
+        ← → untuk navigasi  ESC untuk tutup
       </motion.div>
     </motion.div>
   )
 }
 
-// ─── Tombol Pembuka (diekspos untuk dipakai di tempat lain) ────
+// --- Tombol Pembuka (diekspos untuk dipakai di tempat lain) ----
 export function TombolStoryBook() {
   const [buka, setBuka] = useState(false)
 

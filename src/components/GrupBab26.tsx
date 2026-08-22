@@ -47,22 +47,22 @@ function KartuFlip({ judul, depan, belakang, warna, icon }: {
   )
 }
 
-/* Ch261 — RUTINITAS PAGI DEVELOPER */
+/* Ch261 -- RUTINITAS PAGI DEVELOPER */
 function Ch261() {
   const rutinitas = [
-    { jam: '05:30', aktivitas: 'Bangun & Sholat Subuh', ikon: '🌅', warna: '#f59e0b', detail: 'Mulai hari dengan ketenangan. Tidak ada notifikasi, tidak ada email — hanya doa dan syukur.' },
+    { jam: '05:30', aktivitas: 'Bangun & Sholat Subuh', ikon: '🌅', warna: '#f59e0b', detail: 'Mulai hari dengan ketenangan. Tidak ada notifikasi, tidak ada email -- hanya doa dan syukur.' },
     { jam: '06:00', aktivitas: 'Olahraga 20 Menit', ikon: '🏃', warna: '#22c55e', detail: 'Push-up, jalan pagi, atau stretching. Tubuh yang bergerak = otak yang lebih tajam saat coding.' },
-    { jam: '06:30', aktivitas: 'Sarapan + Review Goals', ikon: '☕', warna: '#8b5cf6', detail: 'Makan sambil review 3 prioritas hari ini. Tidak lebih dari 3 — fokus adalah kunci produktivitas.' },
+    { jam: '06:30', aktivitas: 'Sarapan + Review Goals', ikon: '☕', warna: '#8b5cf6', detail: 'Makan sambil review 3 prioritas hari ini. Tidak lebih dari 3 -- fokus adalah kunci produktivitas.' },
     { jam: '07:00', aktivitas: 'Deep Work Block #1', ikon: '💻', warna: '#1a5cff', detail: '2 jam tanpa gangguan untuk task terpenting. Phone silent, tab browser tutup, timer Pomodoro on.' },
-    { jam: '09:00', aktivitas: 'Review & Komunikasi', ikon: '💬', warna: '#0891b2', detail: 'Cek email, pesan, dan notifikasi sekaligus. Bukan terus-menerus — ini membunuh fokus.' },
+    { jam: '09:00', aktivitas: 'Review & Komunikasi', ikon: '💬', warna: '#0891b2', detail: 'Cek email, pesan, dan notifikasi sekaligus. Bukan terus-menerus -- ini membunuh fokus.' },
     { jam: '09:30', aktivitas: 'Deep Work Block #2', ikon: '⚡', warna: '#e63329', detail: 'Sesi coding kedua. Biasanya untuk feature baru, bug fix, atau code review.' },
     { jam: '12:00', aktivitas: 'Istirahat & Makan Siang', ikon: '🍜', warna: '#f59e0b', detail: 'Benar-benar istirahat. Tidak coding sambil makan. Recharge untuk sesi siang yang produktif.' },
     { jam: '13:00', aktivitas: 'Learning & Research', ikon: '📚', warna: '#22c55e', detail: 'Baca dokumentasi, tonton tutorial, atau explorasi teknologi baru. Investasi jangka panjang.' },
   ]
   return (
-    <PanelBab id="ch261" num="261" judul="RUTINITAS PAGI DEVELOPER — FORMULA PRODUKTIVITAS" warna="#f59e0b" bg="#fffbeb">
+    <PanelBab id="ch261" num="261" judul="RUTINITAS PAGI DEVELOPER -- FORMULA PRODUKTIVITAS" warna="#f59e0b" bg="#fffbeb">
       <div className="speech-bubble inline-block text-sm mb-6">
-        ⏰ Pagi yang baik menentukan produktivitas sepanjang hari. Ini bukan soal jam berapa bangun — tapi apa yang dilakukan!
+        ⏰ Pagi yang baik menentukan produktivitas sepanjang hari. Ini bukan soal jam berapa bangun -- tapi apa yang dilakukan!
       </div>
       <div className="space-y-2 mb-6">
         {rutinitas.map((r, i) => (
@@ -88,7 +88,7 @@ function Ch261() {
       <div className="comic-panel p-4">
         <div className="font-comic text-base text-[#0a0a0a] mb-2">💡 INSIGHT TENTANG RUTINITAS</div>
         <p className="text-sm font-bold text-[#0a0a0a]/70 leading-relaxed">
-          Rutinitas yang baik bukan tentang disiplin besi — tapi tentang menghilangkan keputusan kecil
+          Rutinitas yang baik bukan tentang disiplin besi -- tapi tentang menghilangkan keputusan kecil
           sehingga energi mental bisa dipakai untuk hal yang penting. Developer terbaik bukan yang
           coding paling lama, tapi yang bisa masuk <span className="text-[#1a5cff]">flow state</span> paling konsisten.
         </p>
@@ -97,20 +97,20 @@ function Ch261() {
   )
 }
 
-/* Ch262 — SETUP WORKSTATION IDEAL */
+/* Ch262 -- SETUP WORKSTATION IDEAL */
 function Ch262() {
   const setup = [
     { kategori: 'Monitor', rekomendasi: '27" IPS 1440p, 75Hz+', alasan: 'Lebar layar = lebih banyak konteks kode terlihat sekaligus. QHD untuk teks yang tajam', icon: '🖥️', warna: '#1a5cff' },
-    { kategori: 'Keyboard', rekomendasi: 'Mechanical, tactile switch', alasan: 'Ribuan baris kode per hari — keyboard yang nyaman adalah investasi, bukan kemewahan', icon: '⌨️', warna: '#22c55e' },
+    { kategori: 'Keyboard', rekomendasi: 'Mechanical, tactile switch', alasan: 'Ribuan baris kode per hari -- keyboard yang nyaman adalah investasi, bukan kemewahan', icon: '⌨️', warna: '#22c55e' },
     { kategori: 'Kursi', rekomendasi: 'Ergonomis, lumbar support', alasan: 'Punggung bawah adalah korban utama developer. Kursi buruk = sakit kronis = produktivitas hilang', icon: '🪑', warna: '#8b5cf6' },
     { kategori: 'Pencahayaan', rekomendasi: 'Bias lighting di belakang monitor', alasan: 'Mengurangi kontras ekstrem yang melelahkan mata saat staring ke layar berjam-jam', icon: '💡', warna: '#f59e0b' },
     { kategori: 'Headphone', rekomendasi: 'Over-ear, noise cancelling', alasan: 'Deep work butuh fokus. ANC memblok distraksi lingkungan tanpa harus pindah tempat', icon: '🎧', warna: '#e63329' },
-    { kategori: 'Laptop/PC', rekomendasi: '16GB+ RAM, SSD, 8+ core', alasan: 'Docker, multiple browser tabs, VS Code + extensions — RAM adalah bottleneck paling umum', icon: '💻', warna: '#0891b2' },
+    { kategori: 'Laptop/PC', rekomendasi: '16GB+ RAM, SSD, 8+ core', alasan: 'Docker, multiple browser tabs, VS Code + extensions -- RAM adalah bottleneck paling umum', icon: '💻', warna: '#0891b2' },
   ]
   return (
-    <PanelBab id="ch262" num="262" judul="SETUP WORKSTATION IDEAL — INVESTASI PRODUKTIVITAS" warna="#1a5cff" bg="#e8f0ff">
+    <PanelBab id="ch262" num="262" judul="SETUP WORKSTATION IDEAL -- INVESTASI PRODUKTIVITAS" warna="#1a5cff" bg="#e8f0ff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        🖥️ Workstation bukan soal gaya — ini tentang berapa jam kamu bisa coding tanpa sakit, tanpa lag, tanpa frustrasi!
+        🖥️ Workstation bukan soal gaya -- ini tentang berapa jam kamu bisa coding tanpa sakit, tanpa lag, tanpa frustrasi!
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
         {setup.map((s, i) => (
@@ -140,7 +140,7 @@ function Ch262() {
           {[
             { item: 'Laptop utama', spec: 'Dengan RAM cukup untuk Docker + VS Code + browser', icon: '💻' },
             { item: 'Monitor eksternal', spec: '24" sebagai second screen saat development', icon: '🖥️' },
-            { item: 'Meja berdiri DIY', spec: 'Pakai kardus tebal — low budget, high impact', icon: '📦' },
+            { item: 'Meja berdiri DIY', spec: 'Pakai kardus tebal -- low budget, high impact', icon: '📦' },
             { item: 'Teh manis panas', spec: 'Required. Tidak ada coding session tanpa ini.', icon: '☕' },
           ].map((s, i) => (
             <motion.div key={s.item}
@@ -162,16 +162,16 @@ function Ch262() {
   )
 }
 
-/* Ch263 — MANAJEMEN ENERGI, BUKAN WAKTU */
+/* Ch263 -- MANAJEMEN ENERGI, BUKAN WAKTU */
 function Ch263() {
   const [aktif, setAktif] = useState(0)
   const zona = [
-    { nama: 'Peak Zone', jam: '07:00–11:00', warna: '#22c55e', icon: '⚡', aktivitas: ['Deep work, coding fitur baru', 'Problem solving kompleks', 'Arsitektur dan design'], tips: 'Ini jam emas. Jangan buang untuk meeting atau email.' },
-    { nama: 'Trough Zone', jam: '13:00–15:00', warna: '#e63329', icon: '😴', aktivitas: ['Admin & komunikasi', 'Review PR orang lain', 'Update dokumentasi'], tips: 'Energi rendah, jangan paksa kerja kreatif. Lakukan tugas mekanis.' },
-    { nama: 'Recovery Zone', jam: '15:00–19:00', warna: '#1a5cff', icon: '🔄', aktivitas: ['Belajar hal baru', 'Side project ringan', 'Mentoring atau berbagi'], tips: 'Energi naik lagi setelah trough. Cocok untuk eksperimen dan learning.' },
+    { nama: 'Peak Zone', jam: '07:00-11:00', warna: '#22c55e', icon: '⚡', aktivitas: ['Deep work, coding fitur baru', 'Problem solving kompleks', 'Arsitektur dan design'], tips: 'Ini jam emas. Jangan buang untuk meeting atau email.' },
+    { nama: 'Trough Zone', jam: '13:00-15:00', warna: '#e63329', icon: '😴', aktivitas: ['Admin & komunikasi', 'Review PR orang lain', 'Update dokumentasi'], tips: 'Energi rendah, jangan paksa kerja kreatif. Lakukan tugas mekanis.' },
+    { nama: 'Recovery Zone', jam: '15:00-19:00', warna: '#1a5cff', icon: '🔄', aktivitas: ['Belajar hal baru', 'Side project ringan', 'Mentoring atau berbagi'], tips: 'Energi naik lagi setelah trough. Cocok untuk eksperimen dan learning.' },
   ]
   return (
-    <PanelBab id="ch263" num="263" judul="MANAJEMEN ENERGI — LEBIH PENTING DARI MANAJEMEN WAKTU" warna="#22c55e" bg="#f0fdf4">
+    <PanelBab id="ch263" num="263" judul="MANAJEMEN ENERGI -- LEBIH PENTING DARI MANAJEMEN WAKTU" warna="#22c55e" bg="#f0fdf4">
       <div className="speech-bubble inline-block text-sm mb-6">
         ⚡ 24 jam semua orang sama. Yang berbeda adalah bagaimana menggunakan energi di tiap jam itu!
       </div>
@@ -229,7 +229,7 @@ function Ch263() {
   )
 }
 
-/* Ch264 — BURNOUT: MENGENALI DAN MENCEGAH */
+/* Ch264 -- BURNOUT: MENGENALI DAN MENCEGAH */
 function Ch264() {
   const tanda = [
     { tanda: 'Membuka VS Code tapi tidak bisa mulai nulis satu baris', level: 'AWAL', warna: '#f59e0b' },
@@ -240,9 +240,9 @@ function Ch264() {
     { tanda: 'Isolasi diri dari komunitas dan teman developer', level: 'PARAH', warna: '#7f1d1d' },
   ]
   return (
-    <PanelBab id="ch264" num="264" judul="BURNOUT DEVELOPER — KENALI SEBELUM TERLAMBAT" warna="#e63329" bg="#fef2f2">
+    <PanelBab id="ch264" num="264" judul="BURNOUT DEVELOPER -- KENALI SEBELUM TERLAMBAT" warna="#e63329" bg="#fef2f2">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        🔥 Burnout bukan tanda kelemahan — itu tanda bahwa kamu sudah memberi terlalu banyak tanpa mengisi ulang.
+        🔥 Burnout bukan tanda kelemahan -- itu tanda bahwa kamu sudah memberi terlalu banyak tanpa mengisi ulang.
       </div>
       <div className="grid lg:grid-cols-2 gap-6 mb-8">
         <div>
@@ -265,8 +265,8 @@ function Ch264() {
         <div className="space-y-3">
           <div className="font-comic text-lg text-[#22c55e] mb-3">💊 CARA PULIH DARI BURNOUT</div>
           {[
-            { cara: 'Ambil cuti dari coding selama 3-7 hari', detail: 'Bukan produktif untuk coding lain — benar-benar istirahat dari layar', icon: '🏖️' },
-            { cara: 'Kembalikan ke proyek yang paling fun', detail: 'Side project tanpa deadline, tanpa ekspektasi — coding karena cinta, bukan tuntutan', icon: '🎮' },
+            { cara: 'Ambil cuti dari coding selama 3-7 hari', detail: 'Bukan produktif untuk coding lain -- benar-benar istirahat dari layar', icon: '🏖️' },
+            { cara: 'Kembalikan ke proyek yang paling fun', detail: 'Side project tanpa deadline, tanpa ekspektasi -- coding karena cinta, bukan tuntutan', icon: '🎮' },
             { cara: 'Bicara dengan developer lain yang pernah burnout', detail: 'Tahu bahwa kamu tidak sendirian sudah 50% jalan menuju pemulihan', icon: '🤝' },
             { cara: 'Evaluasi ulang beban kerja dan batasan', detail: 'Burnout sering karena tidak bisa bilang "tidak". Belajar set boundary itu skill', icon: '🛡️' },
             { cara: 'Olahraga dan keluar rumah', detail: 'Tubuh perlu bergerak. Otak developer butuh stimulasi di luar layar', icon: '🌳' },
@@ -291,10 +291,10 @@ function Ch264() {
   )
 }
 
-/* Ch265 — TEKNIK FOKUS DAN DEEP WORK */
+/* Ch265 -- TEKNIK FOKUS DAN DEEP WORK */
 function Ch265() {
   return (
-    <PanelBab id="ch265" num="265" judul="TEKNIK FOKUS — DEEP WORK DI ERA DISTRAKSI" warna="#8b5cf6" bg="#f5f0ff">
+    <PanelBab id="ch265" num="265" judul="TEKNIK FOKUS -- DEEP WORK DI ERA DISTRAKSI" warna="#8b5cf6" bg="#f5f0ff">
       <div className="speech-bubble inline-block text-sm mb-6">
         🧠 Deep work adalah kemampuan paling langka dan paling berharga di era digital. Ini bisa dilatih!
       </div>
@@ -332,19 +332,19 @@ function Ch265() {
 /* Ch266-270: Flip card section */
 function Ch266to270() {
   const kartu = [
-    { judul: 'Work-Life Balance itu Mitos?', depan: 'Ada yang bilang work-life balance itu tidak ada buat founder dan developer passionate...', belakang: 'Yang benar: bukan balance tapi integration. Teknologi boleh jadi passion — tapi keluarga, kesehatan, dan hubungan sosial adalah fondasi yang membuat passion itu sustainable.', warna: '#1a5cff', icon: '⚖️' },
-    { judul: 'Side Project: Berkah atau Kutukan?', depan: 'Side project bisa jadi portofolio terbaik — atau sumber burnout paling dahsyat...', belakang: 'Kunci: side project harus punya batasan waktu yang jelas (max 2 jam/hari), tidak boleh pakai jam kerja utama, dan tidak harus selalu monetizable. Eksplorasi itu valid.', warna: '#22c55e', icon: '🚀' },
-    { judul: 'Remote Work vs Kantor', depan: 'Remote work terasa bebas — tapi ada harga tersembunyi yang jarang dibicarakan...', belakang: 'Isolasi sosial, blur antara kerja dan rumah, kesulitan komunikasi async. Solusi: buat ritual "mulai kerja" dan "selesai kerja", co-working space mingguan, dan investasi pada komunikasi tulisan yang jelas.', warna: '#8b5cf6', icon: '🏠' },
-    { judul: 'Tutorial Hell: Jebakan Terbesar', depan: 'Menyelesaikan 50 tutorial tapi tidak bisa build satu project sendiri — ini familiar?', belakang: 'Tutorial hell terjadi karena comfort zone. Solusi: selesaikan tutorial SETENGAH, lalu build sisanya sendiri tanpa lihat. Frustrasi itu adalah belajar yang sebenarnya.', warna: '#f59e0b', icon: '📚' },
-    { judul: 'Comparing diri ke Developer Lain', depan: 'LinkedIn penuh developer yang hidupnya sempurna, IPK 4.0, startup unicorn...', belakang: 'Social media adalah highlight reel, bukan daily life. Bandingkan diri kamu hari ini dengan diri kamu 6 bulan lalu — itu satu-satunya perbandingan yang relevan.', warna: '#e63329', icon: '🪞' },
+    { judul: 'Work-Life Balance itu Mitos?', depan: 'Ada yang bilang work-life balance itu tidak ada buat founder dan developer passionate...', belakang: 'Yang benar: bukan balance tapi integration. Teknologi boleh jadi passion -- tapi keluarga, kesehatan, dan hubungan sosial adalah fondasi yang membuat passion itu sustainable.', warna: '#1a5cff', icon: '⚖️' },
+    { judul: 'Side Project: Berkah atau Kutukan?', depan: 'Side project bisa jadi portofolio terbaik -- atau sumber burnout paling dahsyat...', belakang: 'Kunci: side project harus punya batasan waktu yang jelas (max 2 jam/hari), tidak boleh pakai jam kerja utama, dan tidak harus selalu monetizable. Eksplorasi itu valid.', warna: '#22c55e', icon: '🚀' },
+    { judul: 'Remote Work vs Kantor', depan: 'Remote work terasa bebas -- tapi ada harga tersembunyi yang jarang dibicarakan...', belakang: 'Isolasi sosial, blur antara kerja dan rumah, kesulitan komunikasi async. Solusi: buat ritual "mulai kerja" dan "selesai kerja", co-working space mingguan, dan investasi pada komunikasi tulisan yang jelas.', warna: '#8b5cf6', icon: '🏠' },
+    { judul: 'Tutorial Hell: Jebakan Terbesar', depan: 'Menyelesaikan 50 tutorial tapi tidak bisa build satu project sendiri -- ini familiar?', belakang: 'Tutorial hell terjadi karena comfort zone. Solusi: selesaikan tutorial SETENGAH, lalu build sisanya sendiri tanpa lihat. Frustrasi itu adalah belajar yang sebenarnya.', warna: '#f59e0b', icon: '📚' },
+    { judul: 'Comparing diri ke Developer Lain', depan: 'LinkedIn penuh developer yang hidupnya sempurna, IPK 4.0, startup unicorn...', belakang: 'Social media adalah highlight reel, bukan daily life. Bandingkan diri kamu hari ini dengan diri kamu 6 bulan lalu -- itu satu-satunya perbandingan yang relevan.', warna: '#e63329', icon: '🪞' },
     { judul: 'Imposter Syndrome Developer', depan: 'Merasa tidak cukup pintar, tidak cukup tahu, tidak layak disebut "developer"?', belakang: 'Semua developer senior pernah (dan sering masih) merasakan ini. Perbedaannya: mereka belajar untuk act despite the feeling. Bukti kompetensi ada di code yang shipped, bukan di kepala.', warna: '#0891b2', icon: '🎭' },
-    { judul: 'Keyboard vs Meeting Culture', depan: 'Meeting 8 jam sehari vs coding 8 jam sehari — mana yang lebih produktif?', belakang: 'Ideally: maximum 2 jam meeting per hari, selalu ada agenda, dan selalu ada action items. Meeting tanpa output = waktu yang dicuri dari developer. Tidak semua meeting perlu kamu hadir.', warna: '#22c55e', icon: '📅' },
-    { judul: 'Belajar Sambil Tidur?', depan: 'Otak memproses dan mengkonsolidasikan memori saat tidur — ini bukan mitos...', belakang: 'Tidur 7-8 jam bukan pemborosan waktu — ini maintenance otak. Developer yang tidur cukup membuat lebih sedikit bug, lebih cepat problem solve, dan lebih kreatif dalam arsitektur.', warna: '#8b5cf6', icon: '😴' },
+    { judul: 'Keyboard vs Meeting Culture', depan: 'Meeting 8 jam sehari vs coding 8 jam sehari -- mana yang lebih produktif?', belakang: 'Ideally: maximum 2 jam meeting per hari, selalu ada agenda, dan selalu ada action items. Meeting tanpa output = waktu yang dicuri dari developer. Tidak semua meeting perlu kamu hadir.', warna: '#22c55e', icon: '📅' },
+    { judul: 'Belajar Sambil Tidur?', depan: 'Otak memproses dan mengkonsolidasikan memori saat tidur -- ini bukan mitos...', belakang: 'Tidur 7-8 jam bukan pemborosan waktu -- ini maintenance otak. Developer yang tidur cukup membuat lebih sedikit bug, lebih cepat problem solve, dan lebih kreatif dalam arsitektur.', warna: '#8b5cf6', icon: '😴' },
     { judul: 'Coding di Cafe vs di Rumah', depan: 'Kenapa banyak developer lebih produktif di cafe daripada di rumah?', belakang: 'Background noise pada level tertentu (coffee shop ambient ~70dB) terbukti meningkatkan kreativitas. Tapi efek utamanya: perubahan lingkungan = mental context switch. Coba sesekali untuk unlock state baru.', warna: '#f59e0b', icon: '☕' },
     { judul: 'Nilai Sesungguhnya Developer', depan: 'Apakah nilai developer diukur dari berapa banyak kode yang ditulis?', belakang: 'Tidak. Nilai developer diukur dari masalah apa yang bisa diselesaikan dan dampak apa yang ditinggalkan. Terkadang satu keputusan arsitektur yang tepat lebih berharga dari 10.000 baris kode yang ditulis dengan terburu-buru.', warna: '#1a5cff', icon: '💎' },
   ]
   return (
-    <PanelBab id="ch266" num="266-270" judul="10 DILEMA KEHIDUPAN DEVELOPER — FLIP CARD EDITION" warna="#8b5cf6" bg="#f5f0ff" gelap>
+    <PanelBab id="ch266" num="266-270" judul="10 DILEMA KEHIDUPAN DEVELOPER -- FLIP CARD EDITION" warna="#8b5cf6" bg="#f5f0ff" gelap>
       <div className="speech-bubble inline-block text-sm mb-6 text-[#0a0a0a]">
         🃏 Klik setiap kartu untuk lihat perspektif yang lebih dalam tentang dilema-dilema yang dirasakan semua developer!
       </div>

@@ -68,7 +68,7 @@ const arcs = [
       {
         icon: '🔧',
         title: 'Inovasi Alat Monitoring IoT',
-        desc: 'Merancang alat monitoring fungsional dari bahan daur ulang — mengintegrasikan sensor ESP32 dengan dashboard web real-time.',
+        desc: 'Merancang alat monitoring fungsional dari bahan daur ulang -- mengintegrasikan sensor ESP32 dengan dashboard web real-time.',
         type: 'project',
       },
     ],
@@ -141,7 +141,7 @@ export default function ExperienceTimeline() {
                       boxShadow: '5px 5px 0 #ffd700',
                     }}
                   >
-                    {arc.year} — {arc.arcTitle}
+                    {arc.year} -- {arc.arcTitle}
                     <div className="text-xs font-bold text-white/60 uppercase tracking-widest mt-0.5 text-center">
                       {arc.arcSub}
                     </div>

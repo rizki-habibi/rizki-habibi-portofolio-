@@ -51,7 +51,7 @@ const badges = [
   {
     id: 5,
     title: 'KVT FOUNDER',
-    sub: 'kvt.kom — In Progress',
+    sub: 'kvt.kom -- In Progress',
     icon: '🌐',
     color: '#8b5cf6',
     bg: '#f5f0ff',
@@ -89,7 +89,7 @@ const badges = [
     color: '#b45309',
     bg: '#fef3c7',
     rarity: 'EPIC',
-    year: '2023–2026',
+    year: '2023-2026',
     desc: 'Menguasai 14+ teknologi secara mandiri melalui praktik, YouTube, dan dokumentasi resmi.',
   },
 ]
@@ -223,10 +223,10 @@ export default function AchievementsComic() {
             style={{ background: 'white', border: '4px solid #0a0a0a', boxShadow: '7px 7px 0 #0a0a0a', borderRadius: 24 }}
           >
             <p className="font-bold text-base text-comic-black leading-relaxed">
-              🎯 Setiap achievement bukan tentang prestasi semata —
+              🎯 Setiap achievement bukan tentang prestasi semata --
               tapi tentang <span className="text-comic-blue font-black">siapa saya setelah melewatinya.</span>
             </p>
-            <p className="text-xs text-comic-black/40 mt-2 font-bold">— Rizki Habibi, 2026</p>
+            <p className="text-xs text-comic-black/40 mt-2 font-bold">-- Rizki Habibi, 2026</p>
           </div>
         </motion.div>
       </div>

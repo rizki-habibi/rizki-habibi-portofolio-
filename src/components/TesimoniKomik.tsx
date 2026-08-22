@@ -10,7 +10,7 @@ const testimoni = [
     nama: 'Dr. Ahmad Fauzi',
     jabatan: 'Dosen Pembimbing Skripsi',
     institusi: 'ITSM Jember',
-    foto: '👨‍🏫',
+    foto: '👨🏫',
     teks: 'Rizki adalah mahasiswa yang sangat aktif dan inovatif. Kemampuannya membangun sistem dari nol dengan pendekatan problem-solving yang matang sangat luar biasa untuk mahasiswa seusianya.',
     bintang: 5,
     warna: '#1a5cff',
@@ -34,7 +34,7 @@ const testimoni = [
     nama: 'Siti Rahmawati',
     jabatan: 'Kepala Bagian IT',
     institusi: 'Pengguna Sistem KVT',
-    foto: '👩‍💻',
+    foto: '👩💻',
     teks: 'Integrasi data yang dibuat Rizki benar-benar menyelesaikan masalah yang sudah lama kami hadapi. Antarmukanya intuitif dan performanya sangat baik.',
     bintang: 5,
     warna: '#8b5cf6',
@@ -46,7 +46,7 @@ const testimoni = [
     nama: 'Reza Firmansyah',
     jabatan: 'Senior Developer',
     institusi: 'Mentor Komunitas',
-    foto: '🧑‍💻',
+    foto: '🧑💻',
     teks: 'Kemampuan belajar mandiri Rizki sangat mengagumkan. Dalam waktu singkat ia bisa menguasai teknologi baru dan langsung mengaplikasikannya di proyek nyata.',
     bintang: 5,
     warna: '#f59e0b',
@@ -180,7 +180,7 @@ export default function TestimonialsComic() {
           ))}
         </div>
 
-        {/* Panel highlight — testimoni aktif diperbesar */}
+        {/* Panel highlight -- testimoni aktif diperbesar */}
         <AnimatePresence mode="wait">
           <motion.div
             key={aktif}
@@ -200,7 +200,7 @@ export default function TestimonialsComic() {
               <div className="flex-1 min-w-0">
                 <div className="font-comic text-xl sm:text-2xl text-white mb-1">{testimoni[aktif].nama}</div>
                 <div className="font-bold text-xs sm:text-sm mb-3" style={{ color: testimoni[aktif].warna }}>
-                  {testimoni[aktif].jabatan} · {testimoni[aktif].institusi}
+                  {testimoni[aktif].jabatan}  {testimoni[aktif].institusi}
                 </div>
                 <BintangRating jumlah={testimoni[aktif].bintang} warna={testimoni[aktif].warna} />
                 <p className="text-white/80 text-sm sm:text-base mt-3 leading-relaxed font-bold italic">

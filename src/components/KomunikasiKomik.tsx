@@ -9,7 +9,7 @@ const networkNodes = [
   {
     label: 'DEVELOPER COMMUNITY',
     desc: 'Tergabung dalam komunitas developer lokal dan online untuk berbagi ilmu dan kolaborasi.',
-    icon: '👨‍💻', color: '#1a5cff', bg: '#e8f0ff', members: '100+',
+    icon: '👨💻', color: '#1a5cff', bg: '#e8f0ff', members: '100+',
   },
   {
     label: 'DIGITAL CREATOR CIRCLE',
@@ -18,7 +18,7 @@ const networkNodes = [
   },
   {
     label: 'KVT COMMUNITY',
-    desc: 'Komunitas yang sedang dibangun bersama platform KVT.kom — kreator digital muda Indonesia.',
+    desc: 'Komunitas yang sedang dibangun bersama platform KVT.kom -- kreator digital muda Indonesia.',
     icon: '🌐', color: '#8b5cf6', bg: '#f5f0ff', members: 'Growing',
   },
   {
@@ -31,7 +31,7 @@ const networkNodes = [
 const collaborationValues = [
   { icon: '🤝', title: 'OPEN COLLABORATION', desc: 'Terbuka untuk proyek kolaborasi dengan developer, desainer, dan kreator lain.' },
   { icon: '💡', title: 'KNOWLEDGE SHARING', desc: 'Senang berbagi ilmu, tutorial, dan pengalaman ke sesama.' },
-  { icon: '🚀', title: 'STARTUP MINDED', desc: 'Berpikir seperti co-founder — solusi nyata untuk masalah nyata.' },
+  { icon: '🚀', title: 'STARTUP MINDED', desc: 'Berpikir seperti co-founder -- solusi nyata untuk masalah nyata.' },
   { icon: '🌱', title: 'GROW TOGETHER', desc: 'Percaya bahwa pertumbuhan bersama lebih bermakna dari sukses sendiri.' },
 ]
 

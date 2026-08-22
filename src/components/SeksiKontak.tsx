@@ -147,6 +147,33 @@ export default function ContactSection() {
             </a>
           </div>
         </motion.div>
+
+        {/* Lokasi — Peta Jember */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7 }}
+          viewport={{ once: true }}
+          className="mt-6"
+          style={{ border: '3px solid #1a5cff', boxShadow: '5px 5px 0 #1a5cff', overflow: 'hidden' }}
+        >
+          {/* Header lokasi */}
+          <div className="px-4 py-2 font-comic text-sm text-white flex items-center gap-2" style={{ background: '#1a5cff' }}>
+            <span>📍</span>
+            <span>Jember, Jawa Timur, Indonesia</span>
+          </div>
+          {/* Embed Google Maps Jember */}
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126058.51820097716!2d113.6183!3d-8.1723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629d6d8a6c7ef%3A0x1459543564bb5fd4!2sJember%2C%20Jember%20Regency%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1698765432100!5m2!1sen!2sid"
+            width="100%"
+            height="260"
+            style={{ border: 0, display: 'block' }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Peta Jember - Lokasi Rizki Habibi"
+          />
+        </motion.div>
       </div>
     </section>
   )

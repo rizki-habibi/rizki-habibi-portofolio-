@@ -4,7 +4,7 @@ import { motion, useInView } from 'framer-motion'
 import { useRef, useState, useEffect } from 'react'
 
 // Tanggal lahir Rizki Habibi
-const TGL_LAHIR = new Date('2003-10-24T00:00:00')
+const TGL_LAHIR = new Date('2005-05-09T00:00:00')
 
 interface UnitWaktu {
   nilai: number
@@ -108,7 +108,7 @@ export default function AgeCounter() {
           <div className="chapter-label mb-3 inline-block">REAL-TIME</div>
           <h2 className="section-title">UMUR SAYA SEKARANG</h2>
           <div className="speech-bubble inline-block text-sm mt-3">
-            ⏱️ Dihitung langsung sejak lahir -- 24 Oktober 2003!
+            ⏱️ Dihitung langsung sejak lahir -- 9 Mei 2005!
           </div>
         </motion.div>
 
@@ -136,7 +136,7 @@ export default function AgeCounter() {
             { label: 'Hari Hidup', nilai: umur.totalHari.toLocaleString('id-ID'), ikon: '📅', warna: '#1a5cff', bg: '#e8f0ff' },
             { label: 'Detik Berlalu', nilai: umur.totalDetik.toLocaleString('id-ID'), ikon: '⚡', warna: '#e63329', bg: '#fef2f2' },
             { label: 'Generasi', nilai: 'Gen Z', ikon: '🌐', warna: '#8b5cf6', bg: '#f5f0ff' },
-            { label: 'Zodiak', nilai: 'Scorpio ♏', ikon: '🦂', warna: '#0a0a0a', bg: '#f5f5f0' },
+            { label: 'Zodiak', nilai: 'Taurus ♉', ikon: '🐂', warna: '#22c55e', bg: '#f0fdf4' },
             { label: 'Tahun Mulai Coding', nilai: '2020', ikon: '💻', warna: '#22c55e', bg: '#f0fdf4' },
             { label: 'Tahun Lulus Target', nilai: '2027', ikon: '🎓', warna: '#f59e0b', bg: '#fffbeb' },
           ].map((item, i) => (

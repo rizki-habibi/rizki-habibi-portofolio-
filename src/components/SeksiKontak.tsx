@@ -23,7 +23,7 @@ export default function ContactSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="text-center mb-12"
         >
           <div className="chapter-label mb-3 inline-block" style={{ color: '#ffd700', borderColor: '#ffd700' }}>
@@ -35,7 +35,7 @@ export default function ContactSection() {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, type: 'spring', stiffness: 120 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="font-comic text-white leading-none mb-4"
             style={{ fontSize: 'clamp(2.5rem,8vw,5rem)', textShadow: '4px 4px 0 #ffd700' }}
           >
@@ -47,7 +47,7 @@ export default function ContactSection() {
             initial={{ opacity: 0, scale: 0, rotate: -5 }}
             whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ delay: 0.35, type: 'spring', stiffness: 200 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="inline-block"
           >
             <div
@@ -67,7 +67,7 @@ export default function ContactSection() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.45 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="text-white/60 font-bold text-sm mt-4"
           >
             Every great project starts with a conversation.
@@ -79,7 +79,7 @@ export default function ContactSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="text-center mb-12"
         >
           <a
@@ -102,7 +102,7 @@ export default function ContactSection() {
               initial={{ opacity: 0, y: 30, rotate: i % 2 === 0 ? -2 : 2 }}
               whileInView={{ opacity: 1, y: 0, rotate: 0 }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               whileHover={{ y: -6, rotate: i % 2 === 0 ? -1 : 1 }}
               className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 relative overflow-hidden"
               style={{
@@ -132,7 +132,7 @@ export default function ContactSection() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="mt-10 p-6 text-center"
           style={{ border: '3px solid #ffd700', background: '#fff8cc', boxShadow: '5px 5px 0 #ffd700' }}
         >

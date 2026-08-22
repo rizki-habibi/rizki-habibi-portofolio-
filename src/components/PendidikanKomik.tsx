@@ -66,7 +66,7 @@ export default function EducationComic() {
                 initial={{ opacity: 0, x: -50, rotate: -1 }}
                 whileInView={{ opacity: 1, x: 0, rotate: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
                 whileHover={{ x: 6 }}
                 className="relative overflow-hidden"
                 style={{ border: `3px solid ${t.color}`, boxShadow: `5px 5px 0 ${t.color}`, background: t.bg }}
@@ -99,7 +99,7 @@ export default function EducationComic() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="mb-10"
         >
           <div className="font-comic text-2xl text-comic-black text-center mb-6">🌐 ONLINE COURSES</div>
@@ -110,7 +110,7 @@ export default function EducationComic() {
                 initial={{ opacity: 0, scale: 0.85 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: i * 0.07 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 whileHover={{ y: -4 }}
                 className="p-4 bg-white"
                 style={{ border: `3px solid ${c.color}`, boxShadow: `4px 4px 0 ${c.color}` }}
@@ -130,7 +130,7 @@ export default function EducationComic() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="comic-panel-dark p-8"
         >
           <div className="font-comic text-2xl text-white text-center mb-6">🏅 SERTIFIKAT UNGGULAN</div>
@@ -141,7 +141,7 @@ export default function EducationComic() {
                 initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.08 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="flex items-start gap-3 p-3 bg-white/10 border border-white/20"
               >
                 <span className="text-xl flex-shrink-0">{c.star ? '⭐' : '🏅'}</span>

@@ -39,7 +39,7 @@ function Ch281() {
             initial={{ opacity: 0, x: i % 2 === 0 ? -25 : 25 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.1, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ x: 5 }}
             style={{ border: `3px solid ${f.warna}`, boxShadow: `5px 5px 0 ${f.warna}`, background: 'white', overflow: 'hidden' }}>
             <div className="flex items-center gap-3 px-4 py-2" style={{ background: f.warna }}>
@@ -158,7 +158,7 @@ function Ch283() {
             initial={{ opacity: 0, y: 20, rotate: i % 2 === 0 ? -1 : 1 }}
             whileInView={{ opacity: 1, y: 0, rotate: 0 }}
             transition={{ delay: i * 0.07, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -4 }}
             style={{ border: `3px solid ${k.warna}`, boxShadow: `4px 4px 0 ${k.warna}`, background: 'white' }}>
             <div className="flex items-center gap-2 px-4 py-2" style={{ background: k.warna }}>
@@ -193,7 +193,7 @@ function Ch284() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: i * 0.1, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             style={{ border: `3px solid ${k.warna}`, boxShadow: `5px 5px 0 ${k.warna}`, background: 'white', overflow: 'hidden' }}>
             <div className="px-4 py-3 flex items-center gap-2" style={{ background: k.warna }}>
               <span className="text-2xl">{k.icon}</span>
@@ -205,7 +205,7 @@ function Ch284() {
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: j * 0.05 }}
-                  viewport={{ once: false }}
+                  viewport={{ once: true }}
                   className="flex gap-2 items-center">
                   <span style={{ color: k.warna }}>▶</span>
                   <span className="text-xs font-bold text-[#0a0a0a]/70">{item}</span>
@@ -244,7 +244,7 @@ function Ch285to290() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.05, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -5, scale: 1.02 }}
             style={{ border: `3px solid ${m.warna}`, boxShadow: `4px 4px 0 ${m.warna}`, background: '#111', overflow: 'hidden' }}>
             <div className="px-3 py-2" style={{ background: m.warna }}>

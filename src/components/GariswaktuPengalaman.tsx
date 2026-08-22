@@ -128,7 +128,7 @@ export default function ExperienceTimeline() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: arcIndex * 0.1 }}
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
               >
                 {/* Year badge di tengah */}
                 <div className="relative flex justify-center mb-8">
@@ -156,7 +156,7 @@ export default function ExperienceTimeline() {
                       initial={{ opacity: 0, x: eventIndex % 2 === 0 ? -40 : 40 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: 0.1 + eventIndex * 0.1 }}
-                      viewport={{ once: false }}
+                      viewport={{ once: true }}
                       whileHover={{ y: -4, rotate: eventIndex % 2 === 0 ? -1 : 1 }}
                       className="relative bg-white overflow-hidden"
                       style={{
@@ -202,7 +202,7 @@ export default function ExperienceTimeline() {
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
           className="text-center mt-16"
         >
           <div

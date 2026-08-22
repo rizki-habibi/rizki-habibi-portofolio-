@@ -79,7 +79,7 @@ export default function QuoteComic() {
               initial={{ opacity: 0, y: 40, rotate: i % 2 === 0 ? -2 : 2 }}
               whileInView={{ opacity: 1, y: 0, rotate: 0 }}
               transition={{ duration: 0.45, delay: i * 0.08, type: 'spring', stiffness: 100 }}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               whileHover={{ y: -6, rotate: i % 2 === 0 ? -1 : 1 }}
               className="relative overflow-hidden"
               style={{ border: `3px solid ${q.color}`, boxShadow: `5px 5px 0 ${q.color}`, background: q.bg }}
@@ -109,14 +109,14 @@ export default function QuoteComic() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="mb-12"
         >
           <motion.div
             initial={{ opacity: 0, y: -15 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="font-comic text-2xl text-white text-center mb-6"
           >
             🧭 4 PILAR FILOSOFI HIDUP
@@ -128,7 +128,7 @@ export default function QuoteComic() {
                 initial={{ opacity: 0, scale: 0.7, rotate: -5 }}
                 whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
                 transition={{ delay: i * 0.1, type: 'spring', stiffness: 150 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 whileHover={{ scale: 1.06, rotate: -2 }}
                 className="text-center p-5 relative overflow-hidden"
                 style={{ border: `3px solid ${f.color}`, boxShadow: `5px 5px 0 ${f.color}`, background: 'white' }}
@@ -152,7 +152,7 @@ export default function QuoteComic() {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="flex flex-col md:flex-row items-center gap-8 p-8"
           style={{ border: '3px solid #ffd700', background: 'white', boxShadow: '6px 6px 0 #ffd700' }}
         >
@@ -169,7 +169,7 @@ export default function QuoteComic() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.05 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="font-comic text-2xl text-comic-black mb-4"
             >
               💭 PESAN VETERAN
@@ -181,7 +181,7 @@ export default function QuoteComic() {
               initial={{ opacity: 0, x: -15 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="text-sm text-comic-black/70 leading-relaxed font-bold"
             >
               Karakter veteran ini melambangkan semangat untuk terus belajar dan berkembang, tidak peduli seberapa jauh perjalanan yang sudah ditempuh. Setiap tantangan adalah pelajaran baru.

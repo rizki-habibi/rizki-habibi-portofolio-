@@ -67,7 +67,7 @@ function Ch189() {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: i * 0.1, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="text-center p-4"
             style={{ border: `3px solid ${s.w}`, boxShadow: `4px 4px 0 ${s.w}`, background: '#111' }}>
             <motion.div className="text-2xl mb-1"
@@ -90,7 +90,7 @@ function Ch189() {
               initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.07, type: 'spring' }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="flex items-center gap-3 p-3"
               style={{ border: `2px solid ${k.warna}55`, background: `${k.warna}15` }}>
               <span className="text-2xl">{k.icon}</span>
@@ -104,7 +104,7 @@ function Ch189() {
                     style={{ background: k.warna }}
                     initial={{ width: 0 }}
                     whileInView={{ width: `${k.pct * 8}%` }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     transition={{ duration: 1.2, ease: 'easeOut', delay: i * 0.08 }} />
                 </div>
               </div>
@@ -122,7 +122,7 @@ function Ch189() {
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.08, type: 'spring' }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="p-3 text-center"
               style={{ border: `2px solid ${s.warna}`, background: `${s.warna}18` }}>
               <div className="font-bold text-xs px-2 py-0.5 mb-2 inline-block text-white"
@@ -162,7 +162,7 @@ function Ch190() {
             initial={{ opacity: 0, rotate: i % 2 === 0 ? -1 : 1, y: 20 }}
             whileInView={{ opacity: 1, rotate: 0, y: 0 }}
             transition={{ delay: i * 0.08, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -4, scale: 1.01 }}
             style={{ border: `3px solid ${d.warna}`, boxShadow: `5px 5px 0 ${d.warna}`, background: 'white', overflow: 'hidden' }}>
             <div className="px-4 py-2 flex items-center justify-between"

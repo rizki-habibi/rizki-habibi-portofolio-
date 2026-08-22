@@ -41,7 +41,7 @@ function Ch271() {
             initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.07, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ x: 4 }}
             className="flex gap-3 p-3"
             style={{ border: `2px solid #22c55e`, boxShadow: `3px 3px 0 #22c55e30`, background: 'white' }}>
@@ -102,7 +102,7 @@ function Ch272() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: i * 0.06, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -5, scale: 1.02 }}
             className="p-3 text-center"
             style={{ border: `3px solid ${k.warna}`, boxShadow: `3px 3px 0 ${k.warna}`, background: 'white' }}>
@@ -131,7 +131,7 @@ function Ch272() {
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.1 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="flex gap-2 items-center p-2"
               style={{ background: `${c.warna}10`, border: `1px solid ${c.warna}30` }}>
               <span className="text-xl">{c.icon}</span>
@@ -166,7 +166,7 @@ function Ch273() {
                 initial={{ opacity: 0, x: -10 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.08 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="flex gap-2 items-start p-2"
                 style={{ background: '#fef2f2', border: '1px solid #e6332930' }}>
                 <span className="text-red-400 flex-shrink-0">✗</span>
@@ -189,7 +189,7 @@ function Ch273() {
                 initial={{ opacity: 0, x: 10 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.08 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="flex gap-2 items-start p-2"
                 style={{ background: '#f0fdf4', border: '1px solid #22c55e30' }}>
                 <span className="text-green-500 flex-shrink-0">✓</span>
@@ -224,7 +224,7 @@ function Ch274() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.07, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -4 }}
             style={{ border: `3px solid ${f.warna}`, boxShadow: `4px 4px 0 ${f.warna}`, background: 'white', overflow: 'hidden' }}>
             <div className="px-4 py-2" style={{ background: f.warna }}>
@@ -288,7 +288,7 @@ function Ch275to280() {
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.12, type: 'spring', stiffness: 120 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="flex gap-5 pl-14 relative">
               <motion.div
                 className="absolute left-3 top-3 w-8 h-8 flex items-center justify-center text-lg"

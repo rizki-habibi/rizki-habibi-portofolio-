@@ -28,7 +28,7 @@ export default function ChapterHeader({
       initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
-      viewport={{ once: false, amount: 0.25 }}
+      viewport={{ once: true, amount: 0.25 }}
       className="text-center mb-10 sm:mb-14"
     >
       {/* Baris kotak nomor + label */}
@@ -70,7 +70,7 @@ export default function ChapterHeader({
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.1, duration: 0.45 }}
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         className="section-title"
         style={{ color: judulWarna, WebkitTextStroke: gelapAktif ? '1px rgba(255,255,255,0.3)' : undefined }}
       >
@@ -82,7 +82,7 @@ export default function ChapterHeader({
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         className="mt-2 mx-auto"
         style={{
           height: 3,
@@ -98,7 +98,7 @@ export default function ChapterHeader({
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.25 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="font-bold text-xs sm:text-sm mt-3"
           style={{ color: subWarna }}
         >

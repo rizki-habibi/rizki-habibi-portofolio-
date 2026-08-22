@@ -30,7 +30,7 @@ function Grid2({ items }: { items: { icon: string; title: string; text: string; 
           initial={{ opacity: 0, scale: 0.85, rotate: i % 2 === 0 ? -2 : 2 }}
           whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ delay: i * 0.08, type: 'spring' }}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.1 }}
           whileHover={{ y: -5, rotate: i % 2 === 0 ? -1 : 1 }}
           className="overflow-hidden" style={{ border: `3px solid ${p.color}`, boxShadow: `4px 4px 0 ${p.color}`, background: p.bg }}>
           <div className="p-4 text-center">
@@ -65,7 +65,7 @@ function Ch46() {
                 initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.1 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 whileHover={{ scale: 1.02, rotate: i % 2 === 0 ? -1 : 1 }}
                 className="p-4 bg-white relative" style={{ border: `3px solid #f59e0b`, boxShadow: `4px 4px 0 #f59e0b` }}>
                 <div className="font-comic text-4xl text-comic-black/10 leading-none select-none -mb-3">&ldquo;</div>
@@ -120,7 +120,7 @@ function Ch47() {
               { fail: 'Estimasi waktu yang salah', lesson: 'Pelajaran tentang cara memberikan buffer waktu yang realistis.', icon: '⏱️', color: '#8b5cf6' },
               { fail: 'Kode yang tidak bisa dimaintain', lesson: 'Pelajaran tentang clean code dan dokumentasi dari awal.', icon: '🔧', color: '#22c55e' },
             ].map((f, i) => (
-              <motion.div key={f.fail} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.09 }} viewport={{ once: false }}
+              <motion.div key={f.fail} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.09 }} viewport={{ once: true }}
                 className="p-4 bg-white" style={{ border: `3px solid ${f.color}`, boxShadow: `4px 4px 0 ${f.color}` }}>
                 <div className="flex gap-3">
                   <span className="text-2xl flex-shrink-0">{f.icon}</span>
@@ -180,7 +180,7 @@ function Ch48() {
               { region: 'GLOBAL', plan: 'Open source template website komunitas yang bisa digunakan oleh NGO dunia.', icon: '🌍', color: '#1a5cff' },
               { region: 'UN SDGs', plan: 'Berkontribusi pada Sustainable Development Goals melalui teknologi inklusif.', icon: '🎯', color: '#22c55e' },
             ].map((r, i) => (
-              <motion.div key={r.region} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: false }}
+              <motion.div key={r.region} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: true }}
                 className="p-4 bg-white" style={{ border: `3px solid ${r.color}`, boxShadow: `4px 4px 0 ${r.color}` }}>
                 <div className="flex items-start gap-3">
                   <span className="text-2xl flex-shrink-0">{r.icon}</span>
@@ -229,7 +229,7 @@ function Ch49() {
               { tech: 'Quantum Computing', outlook: 'Revolusi keamanan siber dan optimasi algoritma yang akan mengubah segalanya.', icon: '⚛️', color: '#f59e0b' },
               { tech: 'AI Agent', outlook: 'Agen AI otonom yang bisa menjalankan task kompleks tanpa intervensi manusia.', icon: '🤖', color: '#e63329' },
             ].map((t, i) => (
-              <motion.div key={t.tech} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.09 }} viewport={{ once: false }}
+              <motion.div key={t.tech} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.09 }} viewport={{ once: true }}
                 className="p-4 bg-white" style={{ border: `3px solid ${t.color}`, boxShadow: `4px 4px 0 ${t.color}` }}>
                 <div className="flex gap-3">
                   <span className="text-2xl flex-shrink-0">{t.icon}</span>
@@ -276,7 +276,7 @@ function Ch50() {
     <PanelBab id="ch50" chNum="CHAPTER 50 — MILESTONE" judul="SETENGAH JALAN — REFLEKSI" warna="#ffd700" latarBelakang="#fffbeb" gelap>
       <div className="grid md:grid-cols-2 gap-8 mb-10">
         <div>
-          <motion.div initial={{ opacity: 0, scale: 0.8, rotate: -3 }} whileInView={{ opacity: 1, scale: 1, rotate: 0 }} transition={{ duration: 0.6, type: 'spring' }} viewport={{ once: false }}>
+          <motion.div initial={{ opacity: 0, scale: 0.8, rotate: -3 }} whileInView={{ opacity: 1, scale: 1, rotate: 0 }} transition={{ duration: 0.6, type: 'spring' }} viewport={{ once: true }}>
             <div className="p-8 text-center" style={{ border: '4px solid #ffd700', boxShadow: '8px 8px 0 #ffd700', background: 'white' }}>
               <div className="font-comic text-6xl text-comic-blue mb-4">50</div>
               <div className="font-comic text-2xl text-comic-black mb-4">CHAPTER DILALUI</div>
@@ -308,7 +308,7 @@ function Ch50() {
               { reflection: 'Terima kasih kepada semua', desc: 'Keluarga, dosen, teman, dan komunitas yang selalu mendukung.', icon: '❤️' },
               { reflection: 'Next arc dimulai sekarang', desc: 'Dengan semua yang sudah dipelajari, chapter berikutnya akan lebih epik!', icon: '🚀' },
             ].map((r, i) => (
-              <motion.div key={r.reflection} initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: false }}
+              <motion.div key={r.reflection} initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: true }}
                 className="flex gap-3 p-4 bg-white" style={{ border: '3px solid #ffd700', boxShadow: '4px 4px 0 #ffd700' }}>
                 <span className="text-2xl flex-shrink-0">{r.icon}</span>
                 <div>
@@ -340,7 +340,7 @@ function Ch51() {
               { thanks: 'Pengguna & Klien', desc: 'Mereka yang mempercayakan proyek dan memberikan feedback nyata.', icon: '⭐', color: '#f59e0b' },
               { thanks: 'Tuhan YME', desc: 'Atas segala karunia kesehatan, kemampuan, dan kesempatan untuk berkarya.', icon: '🌟', color: '#22c55e' },
             ].map((t, i) => (
-              <motion.div key={t.thanks} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.09 }} viewport={{ once: false }}
+              <motion.div key={t.thanks} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.09 }} viewport={{ once: true }}
                 className="flex gap-3 p-3 bg-white" style={{ border: `2px solid ${t.color}`, boxShadow: `3px 3px 0 ${t.color}` }}>
                 <span className="text-2xl flex-shrink-0">{t.icon}</span>
                 <div>
@@ -444,7 +444,7 @@ function Ch53() {
               { aspect: 'E-Government', desc: 'Semua layanan pemerintah bisa diakses online tanpa antrian panjang.', icon: '🏛️', color: '#1a5cff' },
               { aspect: 'Smart Health', desc: 'Jaringan klinik dan rumah sakit yang terhubung untuk data kesehatan terpadu.', icon: '🏥', color: '#e63329' },
             ].map((s, i) => (
-              <motion.div key={s.aspect} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.09 }} viewport={{ once: false }}
+              <motion.div key={s.aspect} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.09 }} viewport={{ once: true }}
                 className="flex gap-3 p-3 bg-white" style={{ border: `2px solid ${s.color}`, boxShadow: `3px 3px 0 ${s.color}` }}>
                 <span className="text-2xl flex-shrink-0">{s.icon}</span>
                 <div>
@@ -554,7 +554,7 @@ function Ch55() {
               { trait: 'MBTI', value: 'INTJ — The Architect', icon: '🧠', color: '#0891b2' },
               { trait: 'Motto', value: '"Code with purpose, build with heart."', icon: '💡', color: '#8b5cf6' },
             ].map((t, i) => (
-              <motion.div key={t.trait} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.08 }} viewport={{ once: false }}
+              <motion.div key={t.trait} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.08 }} viewport={{ once: true }}
                 className="flex items-center gap-3 p-3 bg-white" style={{ border: `2px solid ${t.color}`, boxShadow: `3px 3px 0 ${t.color}` }}>
                 <span className="text-xl flex-shrink-0">{t.icon}</span>
                 <div className="flex-1 flex items-center justify-between gap-2">

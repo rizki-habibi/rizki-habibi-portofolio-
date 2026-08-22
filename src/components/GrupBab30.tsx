@@ -40,7 +40,7 @@ function Ch301() {
             initial={{ opacity: 0, y: 20, rotate: i % 2 === 0 ? -1 : 1 }}
             whileInView={{ opacity: 1, y: 0, rotate: 0 }}
             transition={{ delay: i * 0.08, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -5 }}
             className="p-4"
             style={{ border: `3px solid ${p.warna}`, boxShadow: `4px 4px 0 ${p.warna}`, background: 'white' }}>
@@ -163,7 +163,7 @@ function Ch303() {
           ].map((s, i) => (
             <motion.div key={s.sumber}
               initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: i * 0.09, type: 'spring' }} viewport={{ once: false }}
+              transition={{ delay: i * 0.09, type: 'spring' }} viewport={{ once: true }}
               className="flex gap-3 p-3"
               style={{ border: '2px solid #f59e0b', background: 'white', boxShadow: '2px 2px 0 #f59e0b40' }}>
               <span className="text-yellow-500 flex-shrink-0 font-bold">{i + 1}.</span>
@@ -195,7 +195,7 @@ function Ch303() {
           ].map((s, i) => (
             <motion.div key={s.situasi}
               initial={{ opacity: 0, x: 15 }} whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: i * 0.1, type: 'spring' }} viewport={{ once: false }}
+              transition={{ delay: i * 0.1, type: 'spring' }} viewport={{ once: true }}
               style={{ border: `2px solid ${s.warna}`, background: 'white', overflow: 'hidden' }}>
               <div className="px-3 py-1.5 font-bold text-[9px] text-white uppercase tracking-wide" style={{ background: s.warna }}>{s.situasi}</div>
               <p className="p-3 text-xs font-bold text-[#0a0a0a]/70 italic leading-relaxed">{s.script}</p>
@@ -224,7 +224,7 @@ function Ch304() {
         {fase.map((f, i) => (
           <motion.div key={f.fase}
             initial={{ opacity: 0, x: i % 2 === 0 ? -25 : 25 }} whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: i * 0.1, type: 'spring' }} viewport={{ once: false }}
+            transition={{ delay: i * 0.1, type: 'spring' }} viewport={{ once: true }}
             whileHover={{ x: 5 }}
             style={{ border: `3px solid ${f.warna}`, boxShadow: `5px 5px 0 ${f.warna}`, background: 'white', overflow: 'hidden' }}>
             <div className="flex items-center justify-between px-4 py-2" style={{ background: f.warna }}>
@@ -266,7 +266,7 @@ function Ch305() {
         {sertifikasi.map((s, i) => (
           <motion.div key={s.nama}
             initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: i * 0.06, type: 'spring' }} viewport={{ once: false }}
+            transition={{ delay: i * 0.06, type: 'spring' }} viewport={{ once: true }}
             whileHover={{ y: -5, scale: 1.02 }}
             style={{ border: `3px solid ${s.warna}`, boxShadow: `3px 3px 0 ${s.warna}`, background: 'white', overflow: 'hidden' }}>
             <div className="px-3 py-2" style={{ background: s.warna }}>
@@ -312,7 +312,7 @@ function Ch306to310() {
             initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.06, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ x: 5 }}
             className="flex gap-3 items-center p-3"
             style={{ border: `2px solid ${imp.warna}30`, background: `${imp.warna}12` }}>
@@ -334,7 +334,7 @@ function Ch306to310() {
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ type: 'spring', stiffness: 100 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="mb-6">
           <motion.div className="text-7xl mb-3"
             animate={{ scale: [1, 1.1, 1], rotate: [-5, 5, -5] }}
@@ -351,7 +351,7 @@ function Ch306to310() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="p-6 mb-6"
           style={{ border: '4px solid #ffd700', boxShadow: '8px 8px 0 #ffd70055', background: '#111', borderRadius: 16 }}>
           <div className="font-comic text-xl text-yellow-400 mb-3">📖 TENTANG PORTFOLIO INI</div>

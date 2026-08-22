@@ -31,7 +31,7 @@ function PanelGrid({ items, cols = 3 }: { items: { icon: string; title: string; 
           initial={{ opacity: 0, y: 20, scale: 0.9 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ delay: i * 0.07, type: 'spring', stiffness: 120 }}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.1 }}
           whileHover={{ y: -5, rotate: i % 2 === 0 ? -1 : 1 }}
           className="overflow-hidden"
           style={{ border: `3px solid ${item.color}`, boxShadow: `4px 4px 0 ${item.color}`, background: item.bg }}>
@@ -63,7 +63,7 @@ function Ch26() {
                 { use: 'DeepSeek', desc: 'Eksplorasi model AI alternatif untuk riset dan eksperimen', icon: '🔍', color: '#22c55e' },
                 { use: 'AI Image Tools', desc: 'Generate visual untuk konten digital dan presentasi', icon: '🎨', color: '#e63329' },
               ].map((u, i) => (
-                <motion.div key={u.use} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: false }}
+                <motion.div key={u.use} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: true }}
                   className="flex gap-3 items-start p-3 bg-white" style={{ border: `2px solid ${u.color}`, boxShadow: `3px 3px 0 ${u.color}` }}>
                   <span className="text-2xl">{u.icon}</span>
                   <div>
@@ -110,7 +110,7 @@ function Ch27() {
           <div className="speech-bubble-right inline-block text-sm mb-4">💻 Setiap teknologi adalah tool — pilih yang tepat!</div>
           <div className="space-y-3">
             {techStack.map((t, i) => (
-              <motion.div key={t.name} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.07 }} viewport={{ once: false }}>
+              <motion.div key={t.name} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.07 }} viewport={{ once: true }}>
                 <div className="flex justify-between text-xs font-bold text-comic-black mb-1">
                   <span>{t.name} <span className="text-comic-black/40">— {t.role}</span></span>
                   <span style={{ color: t.color }}>{t.pct}%</span>
@@ -118,7 +118,7 @@ function Ch27() {
                 <div className="comic-progress">
                   <motion.div className="comic-progress-bar h-full"
                     initial={{ width: 0 }} whileInView={{ width: `${t.pct}%` }}
-                    transition={{ duration: 1, delay: 0.2 + i * 0.08 }} viewport={{ once: false }}
+                    transition={{ duration: 1, delay: 0.2 + i * 0.08 }} viewport={{ once: true }}
                     style={{ background: `repeating-linear-gradient(-45deg,${t.color} 0px,${t.color} 6px,${t.color}88 6px,${t.color}88 12px)` }} />
                 </div>
               </motion.div>
@@ -227,7 +227,7 @@ function Ch29() {
                 { topic: 'Authentication Security', desc: 'Implementasi auth yang aman dengan JWT dan hash yang kuat', icon: '🔑', color: '#f59e0b' },
                 { topic: 'Network Security', desc: 'Pemahaman dasar tentang firewall, VPN, dan protokol aman', icon: '📡', color: '#8b5cf6' },
               ].map((t, i) => (
-                <motion.div key={t.topic} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.09 }} viewport={{ once: false }}
+                <motion.div key={t.topic} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.09 }} viewport={{ once: true }}
                   className="flex gap-3 p-3 bg-white" style={{ border: `2px solid ${t.color}`, boxShadow: `3px 3px 0 ${t.color}` }}>
                   <span className="text-xl">{t.icon}</span>
                   <div>
@@ -270,7 +270,7 @@ function Ch30() {
               { svc: 'Laragon', use: 'Local development server yang efisien', icon: '🐘', color: '#f59e0b' },
               { svc: 'Firebase', use: 'Real-time database dan hosting untuk proyek kecil', icon: '🔥', color: '#e63329' },
             ].map((s, i) => (
-              <motion.div key={s.svc} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: false }}
+              <motion.div key={s.svc} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: true }}
                 className="flex items-center gap-4 p-4 bg-white" style={{ border: `3px solid ${s.color}`, boxShadow: `4px 4px 0 ${s.color}` }}>
                 <div className="w-10 h-10 flex items-center justify-center font-bold text-xl flex-shrink-0" style={{ background: s.color, color: 'white' }}>{s.icon}</div>
                 <div>
@@ -333,7 +333,7 @@ function Ch31() {
                   </div>
                   <div className="comic-progress">
                     <motion.div className="h-full" initial={{ width: 0 }} whileInView={{ width: `${d.pct}%` }}
-                      transition={{ duration: 1, delay: i * 0.1 }} viewport={{ once: false }}
+                      transition={{ duration: 1, delay: i * 0.1 }} viewport={{ once: true }}
                       style={{ background: d.color }} />
                   </div>
                 </div>
@@ -377,7 +377,7 @@ function Ch32() {
               { principle: 'Responsive Design', desc: 'Tampilan sempurna di semua ukuran layar — dari HP hingga monitor besar.', icon: '📱', color: '#1a5cff' },
               { principle: 'Consistent System', desc: 'Design system yang konsisten mempercepat pengembangan dan meningkatkan UX.', icon: '🔗', color: '#f59e0b' },
             ].map((p, i) => (
-              <motion.div key={p.principle} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.09 }} viewport={{ once: false }}
+              <motion.div key={p.principle} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.09 }} viewport={{ once: true }}
                 whileHover={{ x: 5 }}
                 className="flex gap-3 p-3 bg-white" style={{ border: `2px solid ${p.color}`, boxShadow: `3px 3px 0 ${p.color}` }}>
                 <span className="text-2xl flex-shrink-0">{p.icon}</span>
@@ -512,7 +512,7 @@ function Ch35() {
               { skill: 'Copywriting AI', desc: 'Menulis konten persuasif dengan bantuan AI tools', icon: '✍️', color: '#f59e0b' },
               { skill: 'Visual Branding', desc: 'Desain identitas visual yang konsisten dan memorable', icon: '🎨', color: '#8b5cf6' },
             ].map((s, i) => (
-              <motion.div key={s.skill} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.09 }} viewport={{ once: false }}
+              <motion.div key={s.skill} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.09 }} viewport={{ once: true }}
                 className="flex gap-3 p-3 bg-white" style={{ border: `2px solid ${s.color}`, boxShadow: `3px 3px 0 ${s.color}` }}>
                 <span className="text-2xl">{s.icon}</span>
                 <div>

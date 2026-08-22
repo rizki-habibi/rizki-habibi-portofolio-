@@ -91,7 +91,7 @@ function Bar({ label, pct, warna }: { label: string; pct: number; warna: string 
         <motion.div className="h-full" style={{ background: warna }}
           initial={{ width: 0 }}
           whileInView={{ width: `${pct}%` }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           transition={{ duration: 1.2, ease: 'easeOut', delay: 0.1 }}
         />
       </div>
@@ -558,7 +558,7 @@ const KontenP09 = () => (
           initial={{ opacity: 0, x: -15 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ delay: i * 0.12, type: 'spring' }}
-          viewport={{ once: false }}>
+          viewport={{ once: true }}>
           <motion.div
             className="absolute left-2 w-2.5 h-2.5 rounded-full"
             style={{ background: item.w, border: '2px solid #0a0a0a' }}
@@ -670,7 +670,7 @@ const KontenP12 = () => (
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ delay: i * 0.1, type: 'spring' }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           whileHover={{ x: 3 }}>
           <div>
             <div className="font-comic text-[9px]" style={{ color: p.w }}>{p.nm}</div>
@@ -851,7 +851,7 @@ function PanelTunggal({ panel, onKlik }: { panel: DataPanel; onKlik: () => void 
       }}
       initial={{ opacity: 0, y: 30, rotate: -1 }}
       whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-      viewport={{ once: false, amount: 0.15 }}
+      viewport={{ once: true, amount: 0.15 }}
       transition={{ type: 'spring', stiffness: 180, delay: 0.05 }}
       whileHover={{ scale: 1.015, rotate: 0.3 }}
       onHoverStart={() => setHover(true)}
@@ -913,7 +913,7 @@ export default function PanelKomik() {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="text-center mb-8">
           <div className="font-comic text-4xl sm:text-5xl text-[#0a0a0a] mb-2"
             style={{ WebkitTextStroke: '2px #0a0a0a' }}>

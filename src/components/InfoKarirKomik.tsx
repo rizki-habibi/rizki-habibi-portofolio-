@@ -58,7 +58,7 @@ function KartuLowongan({ item, i }: { item: typeof lowongan[0]; i: number }) {
       initial={{ opacity: 0, y: 25, rotate: i % 2 === 0 ? -1 : 1 }}
       whileInView={{ opacity: 1, y: 0, rotate: 0 }}
       transition={{ delay: i * 0.05, type: 'spring', stiffness: 180 }}
-      viewport={{ once: false, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.1 }}
       whileHover={{ y: -4 }}
       onClick={() => setBuka(!buka)}
       className="cursor-pointer overflow-hidden"

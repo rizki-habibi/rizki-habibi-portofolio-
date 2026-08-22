@@ -88,7 +88,7 @@ export default function VisiKVT() {
           initial={{ opacity: 0, y: 40, rotate: -1 }}
           whileInView={{ opacity: 1, y: 0, rotate: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="mb-12 comic-panel overflow-hidden"
         >
           {/* Header panel */}
@@ -96,7 +96,7 @@ export default function VisiKVT() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="px-6 py-3 flex items-center gap-3"
             style={{ background: '#1a5cff', borderBottom: '3px solid #0a0a0a' }}
           >
@@ -111,7 +111,7 @@ export default function VisiKVT() {
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.1 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="speech-bubble text-sm inline-block mb-2"
               >
                 💡 &quot;Ketika lulus nanti, saya sudah punya gambaran...&quot;
@@ -121,7 +121,7 @@ export default function VisiKVT() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.15 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="text-sm text-comic-black leading-relaxed font-medium"
               >
                 Saya bermimpi untuk membangun <strong>kampus digital pertama berbasis Vtuber</strong> di Indonesia —
@@ -134,7 +134,7 @@ export default function VisiKVT() {
                   initial={{ opacity: 0, y: -10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 }}
-                  viewport={{ once: false }}
+                  viewport={{ once: true }}
                   className="font-comic text-comic-blue text-lg mb-2"
                 >
                   🎯 KONSEP UTAMA
@@ -151,7 +151,7 @@ export default function VisiKVT() {
                     initial={{ opacity: 0, x: -15 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1 + i * 0.07 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     className="text-xs font-bold text-comic-black flex items-start gap-2"
                   >
                     <span>{item}</span>
@@ -163,7 +163,7 @@ export default function VisiKVT() {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="p-3 font-bold text-xs text-comic-black"
                 style={{ background: '#fff8cc', border: '2px solid #f59e0b', boxShadow: '3px 3px 0 #f59e0b' }}
               >
@@ -177,7 +177,7 @@ export default function VisiKVT() {
                 initial={{ opacity: 0, y: -10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="font-comic text-lg text-comic-black mb-4"
               >
                 🌐 EKOSISTEM DOMAIN KVT
@@ -188,7 +188,7 @@ export default function VisiKVT() {
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.1 + i * 0.08 }}
-                  viewport={{ once: false }}
+                  viewport={{ once: true }}
                   whileHover={{ x: -4 }}
                   className="flex items-center gap-3 p-3 relative overflow-hidden"
                   style={{ background: d.bg, border: `3px solid ${d.color}`, boxShadow: `4px 4px 0 ${d.color}` }}
@@ -226,7 +226,7 @@ export default function VisiKVT() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="mb-12"
         >
           <div className="text-center mb-6">
@@ -234,7 +234,7 @@ export default function VisiKVT() {
               initial={{ opacity: 0, y: -20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.3 }}
               className="font-comic text-2xl text-comic-black"
             >
               🎓 SISTEM GELAR — MANDALA INSTITUTE × KVT
@@ -243,7 +243,7 @@ export default function VisiKVT() {
               initial={{ opacity: 0, x: -15 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.15 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="text-xs text-comic-black/60 font-bold mt-1"
             >
               Gelar ID unik yang saya ciptakan sendiri sebagai identitas pendidikan digital
@@ -256,7 +256,7 @@ export default function VisiKVT() {
                 initial={{ opacity: 0, y: 30, rotate: i % 2 === 0 ? -2 : 2 }}
                 whileInView={{ opacity: 1, y: 0, rotate: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 whileHover={{ y: -8, rotate: i % 2 === 0 ? -1 : 1 }}
                 className="comic-panel overflow-hidden text-center"
               >
@@ -286,14 +286,14 @@ export default function VisiKVT() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="comic-panel-dark p-8 text-center"
         >
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="font-comic text-4xl text-comic-yellow mb-4"
           >
             🚀
@@ -302,7 +302,7 @@ export default function VisiKVT() {
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="font-comic text-white text-xl md:text-2xl leading-snug mb-4"
             style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.5)' }}
           >
@@ -313,7 +313,7 @@ export default function VisiKVT() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="text-white/50 font-bold text-sm"
           >
             — Rizki Habibi, Pendiri KVT.kom (In Progress)

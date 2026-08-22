@@ -28,7 +28,7 @@ function PanelGrid({ items, cols = 3 }: { items: { icon: string; judul: string; 
           initial={{ opacity: 0, y: 25, rotate: i % 2 === 0 ? -1.5 : 1.5 }}
           whileInView={{ opacity: 1, y: 0, rotate: 0 }}
           transition={{ delay: i * 0.07, type: 'spring', stiffness: 140 }}
-          viewport={{ once: false, amount: 0.15 }}
+          viewport={{ once: true, amount: 0.15 }}
           whileHover={{ y: -5, rotate: i % 2 === 0 ? -1 : 1 }}
           className="p-4"
           style={{ border: `3px solid ${butir.warna}`, boxShadow: `4px 4px 0 ${butir.warna}`, background: butir.bg }}>
@@ -63,7 +63,7 @@ function Ch81() {
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.1 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="flex gap-3 p-3"
                 style={{ border: `3px solid ${tahap.warna}`, boxShadow: `4px 4px 0 ${tahap.warna}`, background: 'white' }}>
                 <div className="w-10 h-10 flex items-center justify-center text-2xl flex-shrink-0"
@@ -164,7 +164,7 @@ function Ch83() {
                 initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.1 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="p-3"
                 style={{ border: `2px solid ${item.warna}`, boxShadow: `3px 3px 0 ${item.warna}`, background: 'white' }}>
                 <div className="text-[10px] font-bold text-[#0a0a0a]/40 mb-0.5">❌ MASALAH</div>
@@ -230,7 +230,7 @@ function Ch84() {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.1 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="flex items-center gap-3 p-3"
                 style={{ border: `2px solid ${t.warna}`, boxShadow: `3px 3px 0 ${t.warna}`, background: 'white' }}>
                 <span className="text-2xl flex-shrink-0">{t.icon}</span>
@@ -308,7 +308,7 @@ function Ch86() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: i * 0.06, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -4 }}
             className="p-3"
             style={{ border: `2px solid ${t.warna}`, boxShadow: `3px 3px 0 ${t.warna}`, background: t.bg }}>
@@ -360,7 +360,7 @@ function Ch87() {
             initial={{ opacity: 0, x: i % 2 === 0 ? -40 : 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.12, type: 'spring', stiffness: 130 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="flex gap-4 p-4"
             style={{ border: `3px solid ${o.warna}`, boxShadow: `5px 5px 0 ${o.warna}`, background: 'white' }}>
             <div className="w-12 h-12 flex items-center justify-center text-2xl flex-shrink-0"
@@ -410,7 +410,7 @@ function Ch88() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.1, type: 'spring' }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="relative">
               <div className="absolute -left-10 sm:-left-12 top-2 w-8 h-8 flex items-center justify-center font-comic text-xs text-white"
                 style={{ background: m.warna, border: '2px solid #0a0a0a', boxShadow: '2px 2px 0 #0a0a0a' }}>
@@ -448,7 +448,7 @@ function Ch89() {
         initial={{ opacity: 0, x: 40 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ type: 'spring', stiffness: 150 }}
-        viewport={{ once: false, amount: 0.3 }}>
+        viewport={{ once: true, amount: 0.3 }}>
         🌟 Tidak harus kenal langsung untuk terinspirasi — karya mereka adalah guru terbaik!
       </motion.div>
       <div className="space-y-4">
@@ -457,7 +457,7 @@ function Ch89() {
             initial={{ opacity: 0, x: i % 2 === 0 ? -60 : 60, y: 20 }}
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             transition={{ delay: i * 0.12, type: 'spring', stiffness: 120, damping: 14 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             whileHover={{ x: 8, scale: 1.02 }}
             className="flex gap-4 p-4"
             style={{ border: `3px solid ${m.warna}`, boxShadow: `5px 5px 0 ${m.warna}`, background: 'white' }}>
@@ -500,7 +500,7 @@ function Ch90() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="flex gap-3 p-3"
                 style={{ border: `2px solid ${k.warna}`, boxShadow: `3px 3px 0 ${k.warna}`, background: '#1a1a1a' }}>
                 <span className="text-2xl flex-shrink-0">{k.icon}</span>
@@ -517,7 +517,7 @@ function Ch90() {
             initial={{ opacity: 0, scale: 0.85, rotate: -3 }}
             whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ type: 'spring', stiffness: 120 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="p-6 text-center"
             style={{ border: '4px solid #ffd700', boxShadow: '8px 8px 0 #ffd700', background: '#111', borderRadius: 16 }}>
             <div className="text-5xl mb-4">💛</div>

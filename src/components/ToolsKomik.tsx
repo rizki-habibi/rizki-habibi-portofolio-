@@ -83,7 +83,7 @@ export default function ToolsComic() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="flex flex-wrap justify-center gap-3 mb-10"
         >
           {Object.entries(levelColor).map(([level, color]) => (
@@ -102,7 +102,7 @@ export default function ToolsComic() {
               initial={{ opacity: 0, y: 40, rotate: catIdx % 2 === 0 ? -1 : 1 }}
               whileInView={{ opacity: 1, y: 0, rotate: 0 }}
               transition={{ duration: 0.5, delay: catIdx * 0.1 }}
-              viewport={{ once: false, amount: 0.15 }}
+              viewport={{ once: true, amount: 0.15 }}
               className="overflow-hidden"
               style={{ border: `3px solid ${cat.color}`, boxShadow: `5px 5px 0 ${cat.color}`, background: 'white' }}
             >
@@ -120,7 +120,7 @@ export default function ToolsComic() {
                     initial={{ opacity: 0, scale: 0.7 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: catIdx * 0.05 + ti * 0.04 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     whileHover={{ y: -3, scale: 1.05 }}
                     className="flex items-center gap-2 px-3 py-2 bg-white"
                     style={{ border: `2px solid ${levelColor[tool.level]}`, boxShadow: `3px 3px 0 ${levelColor[tool.level]}` }}
@@ -142,14 +142,14 @@ export default function ToolsComic() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="mt-8 comic-panel-yellow p-6"
         >
           <motion.div
             initial={{ opacity: 0, y: -15 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="font-comic text-xl text-comic-black mb-4 text-center"
           >
             📖 MEDIA BELAJAR
@@ -161,7 +161,7 @@ export default function ToolsComic() {
                 initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.07 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 whileHover={{ y: -3 }}
                 className="font-bold text-xs text-comic-black px-4 py-2 bg-white"
                 style={{ border: '2px solid #f59e0b', boxShadow: '3px 3px 0 #f59e0b' }}

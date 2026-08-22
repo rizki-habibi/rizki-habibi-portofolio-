@@ -25,7 +25,7 @@ function GridTiga({ items }: { items: { icon: string; judul: string; teks: strin
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: i * 0.07, type: 'spring' }}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.1 }}
           whileHover={{ y: -5 }}
           className="p-4"
           style={{ border: `3px solid ${butir.warna}`, boxShadow: `4px 4px 0 ${butir.warna}`, background: butir.bg }}>
@@ -54,7 +54,7 @@ function Ch151() {
             initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.1, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             style={{ border: `3px solid ${t.warna}`, boxShadow: `4px 4px 0 ${t.warna}`, background: 'white', overflow: 'hidden' }}>
             <div className="flex items-center gap-2 px-4 py-2" style={{ background: t.warna, borderBottom: '2px solid #0a0a0a' }}>
               <span className="font-comic text-sm text-white">{t.tipe}</span>
@@ -115,7 +115,7 @@ function Ch153() {
             initial={{ opacity: 0, scale: 0.9, rotate: i % 2 === 0 ? -1.5 : 1.5 }}
             whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ delay: i * 0.09, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -5 }}
             style={{ border: `3px solid ${f.warna}`, boxShadow: `4px 4px 0 ${f.warna}`, background: 'white', overflow: 'hidden' }}>
             <div className="flex items-center gap-2 px-3 py-2" style={{ background: f.warna, borderBottom: '2px solid #0a0a0a' }}>
@@ -165,7 +165,7 @@ function Ch155() {
               initial={{ opacity: 0, x: -25 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.1 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="flex gap-3 p-3"
               style={{ border: `2px solid ${a.warna}`, boxShadow: `3px 3px 0 ${a.warna}`, background: 'white' }}>
               <span className="text-2xl flex-shrink-0">{a.icon}</span>
@@ -294,7 +294,7 @@ function Ch160() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.08, type: 'spring' }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="relative">
               <div className="absolute -left-10 sm:-left-12 top-2 w-8 h-8 flex items-center justify-center text-base"
                 style={{ background: t.warna, border: '2px solid #0a0a0a', boxShadow: '1px 1px 0 #0a0a0a' }}>{t.icon}</div>

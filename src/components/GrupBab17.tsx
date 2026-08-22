@@ -99,7 +99,7 @@ function BarProgress({ label, pct, warna }: { label: string; pct: number; warna:
           style={{ background: `linear-gradient(90deg, ${warna}, ${warna}bb)` }}
           initial={{ width: 0 }}
           whileInView={{ width: `${pct}%` }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           transition={{ duration: 1.4, ease: 'easeOut', delay: 0.15 }} />
       </div>
     </div>
@@ -137,7 +137,7 @@ function GridTiga({ items }: { items: { icon: string; judul: string; teks: strin
           initial={{ opacity: 0, y: 22 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: i * 0.07, type: 'spring' }}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.1 }}
           whileHover={{ y: -5 }}
           className="p-4"
           style={{ border: `3px solid ${butir.warna}`, boxShadow: `4px 4px 0 ${butir.warna}`, background: butir.bg }}>
@@ -186,7 +186,7 @@ function Ch171() {
               initial={{ opacity: 0, x: -15 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.1, type: 'spring' }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="mb-3">
               <div className="font-comic text-sm text-[#8b5cf6]">{p.prinsip}</div>
               <p className="text-xs font-bold text-[#0a0a0a]/60 leading-relaxed">{p.desc}</p>
@@ -211,7 +211,7 @@ function Ch171() {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.08, type: 'spring' }}
-                viewport={{ once: false }}>
+                viewport={{ once: true }}>
                 <span className="text-xs font-bold text-white/70">{f.fitur}</span>
                 <span className="font-mono text-[9px] px-1.5 py-0.5" style={{ background: `${f.w}30`, color: f.w, border: `1px solid ${f.w}50` }}>{f.tech}</span>
               </motion.div>
@@ -329,7 +329,7 @@ function Ch172() {
             <motion.div key={c.item}
               className="flex items-center gap-2"
               initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
-              transition={{ delay: i * 0.06 }} viewport={{ once: false }}>
+              transition={{ delay: i * 0.06 }} viewport={{ once: true }}>
               <motion.span
                 style={{ color: c.status ? '#4ade80' : '#6b7280' }}
                 animate={c.status ? { scale: [1, 1.2, 1] } : {}}
@@ -410,7 +410,7 @@ function Ch173() {
               initial={{ opacity: 0, x: -15 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.08, type: 'spring' }}
-              viewport={{ once: false }}>
+              viewport={{ once: true }}>
               <motion.div
                 className="w-8 h-8 flex-shrink-0"
                 style={{ background: w.hex, border: '2px solid #0a0a0a' }}
@@ -453,7 +453,7 @@ function Ch174() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: i * 0.12, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -5 }}
             className="p-4 text-center"
             style={{ border: `3px solid ${m.warna}`, boxShadow: `5px 5px 0 ${m.warna}`, background: 'white' }}>
@@ -509,7 +509,7 @@ function Ch174() {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.07, type: 'spring' }}
-                viewport={{ once: false }}>
+                viewport={{ once: true }}>
                 <motion.span className="text-green-400 flex-shrink-0 text-sm"
                   animate={{ opacity: [0.6, 1, 0.6] }}
                   transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.25 }}>▶</motion.span>
@@ -631,7 +631,7 @@ function Ch176() {
             initial={{ opacity: 0, rotate: i % 2 === 0 ? -1.5 : 1.5, y: 20 }}
             whileInView={{ opacity: 1, rotate: 0, y: 0 }}
             transition={{ delay: i * 0.07, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -4, scale: 1.01 }}
             className="flex gap-3 p-4"
             style={{ border: `3px solid ${t.warna}`, boxShadow: `4px 4px 0 ${t.warna}`, background: 'white' }}>
@@ -692,7 +692,7 @@ function Ch177() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.1, type: 'spring' }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="p-3"
               style={{ border: `2px solid ${db.warna}`, background: `${db.warna}15` }}>
               <div className="flex items-center justify-between mb-0.5">
@@ -720,7 +720,7 @@ function Ch177() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.08, type: 'spring' }}
-              viewport={{ once: false }}>
+              viewport={{ once: true }}>
               <span className="font-comic text-[9px] px-1 flex-shrink-0 mt-0.5"
                 style={{ background: `${t.w}30`, color: t.w, border: `1px solid ${t.w}50` }}>
                 {t.level}
@@ -758,7 +758,7 @@ function Ch178() {
             initial={{ opacity: 0, x: i % 2 === 0 ? -25 : 25 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.09, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ x: 4 }}
             className="flex gap-3 p-3"
             style={{ border: `3px solid ${a.w}`, boxShadow: `4px 4px 0 ${a.w}`, background: 'white' }}>
@@ -797,7 +797,7 @@ function Ch178() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: i * 0.06 }}
-              viewport={{ once: false }}>
+              viewport={{ once: true }}>
               <motion.span className="text-green-400 flex-shrink-0"
                 animate={{ opacity: [0.5, 1, 0.5] }}
                 transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}>✓</motion.span>
@@ -851,7 +851,7 @@ function Ch179() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.12, type: 'spring' }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="flex gap-4 pl-14 relative">
               {/* Node titik */}
               <motion.div
@@ -895,7 +895,7 @@ function Ch179() {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: i * 0.1 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="p-3"
               style={{ background: '#f8f8f5', border: '2px dashed #0a0a0a30' }}>
               <p className="text-xs font-bold text-[#0a0a0a]/65 italic leading-relaxed">{q}</p>
@@ -926,7 +926,7 @@ function Ch180() {
           initial={{ opacity: 0, scale: 0.7 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ type: 'spring', stiffness: 120 }}
-          viewport={{ once: false }}>
+          viewport={{ once: true }}>
           <motion.div
             className="font-mono text-6xl sm:text-8xl text-yellow-400 mb-2 tabular-nums"
             style={{ textShadow: '4px 4px 0 rgba(255,215,0,0.3)' }}
@@ -949,7 +949,7 @@ function Ch180() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.12, type: 'spring' }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="text-center p-4"
               style={{ border: `3px solid ${s.w}`, boxShadow: `4px 4px 0 ${s.w}`, background: '#111' }}>
               <motion.div className="text-2xl mb-1"
@@ -972,7 +972,7 @@ function Ch180() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          viewport={{ once: false }}>
+          viewport={{ once: true }}>
           <div className="font-comic text-xl text-yellow-400 mb-3">✍️ TENTANG PERJALANAN INI</div>
           <p className="text-sm font-bold text-white/75 leading-relaxed">
             180 chapter bukan angka yang direncanakan dari awal. Ini adalah bukti bahwa ketika kamu mulai mendokumentasikan
@@ -989,7 +989,7 @@ function Ch180() {
         <div className="grid sm:grid-cols-2 gap-4">
           <motion.div
             initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="p-4 text-center"
             style={{ border: '3px solid #22c55e', boxShadow: '4px 4px 0 #22c55e', background: '#111' }}>
             <div className="font-comic text-base text-green-400 mb-2">🤝 KOLABORASI?</div>
@@ -998,7 +998,7 @@ function Ch180() {
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="p-4 text-center"
             style={{ border: '3px solid #1a5cff', boxShadow: '4px 4px 0 #1a5cff', background: '#111' }}>
             <div className="font-comic text-base text-blue-400 mb-2">📄 LIHAT CV</div>
@@ -1010,7 +1010,7 @@ function Ch180() {
         <motion.div
           className="mt-8 text-center"
           initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.5 }} viewport={{ once: false }}>
+          transition={{ delay: 0.5 }} viewport={{ once: true }}>
           <div className="font-comic text-lg text-yellow-400 mb-1">⚡ TO BE CONTINUED...</div>
           <div className="font-comic text-xs text-white/20 tracking-widest">
             --- RIZKI HABIBI · JEMBER · 2026 · CHAPTER 181 COMING SOON ---

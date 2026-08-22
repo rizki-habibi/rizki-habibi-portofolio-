@@ -90,7 +90,7 @@ export default function Innovation() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="flex flex-wrap justify-center gap-3 mb-14"
         >
           {keunggulan.map((item, i) => (
@@ -99,7 +99,7 @@ export default function Innovation() {
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: i * 0.07 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               whileHover={{ scale: 1.05, y: -2 }}
               className="flex items-center gap-2 px-4 py-2 bg-white font-bold text-sm text-comic-black cursor-default"
               style={{ border: '2px solid #22c55e', boxShadow: '3px 3px 0 #22c55e' }}
@@ -117,7 +117,7 @@ export default function Innovation() {
               initial={{ opacity: 0, y: 40, rotate: index % 2 === 0 ? -1 : 1 }}
               whileInView={{ opacity: 1, y: 0, rotate: 0 }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
-              viewport={{ once: false, amount: 0.15 }}
+              viewport={{ once: true, amount: 0.15 }}
               whileHover={{ y: -6, rotate: index % 2 === 0 ? -1 : 1 }}
               className="overflow-hidden"
               style={{
@@ -139,7 +139,7 @@ export default function Innovation() {
                     initial={{ opacity: 0, x: -15 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1 + index * 0.05 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     className="text-sm text-comic-black leading-relaxed"
                   >
                     {item.deskripsi}
@@ -153,7 +153,7 @@ export default function Innovation() {
                       initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.15 + i * 0.07 }}
-                      viewport={{ once: false }}
+                      viewport={{ once: true }}
                       className="flex items-start gap-2 text-xs font-bold text-comic-black/70"
                     >
                       <FiArrowRight className="w-3 h-3 mt-0.5 flex-shrink-0" style={{ color: item.color }} />
@@ -171,14 +171,14 @@ export default function Innovation() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="comic-panel-dark p-8 md:p-10 text-center"
         >
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="text-4xl mb-4"
           >
             ♻️
@@ -187,7 +187,7 @@ export default function Innovation() {
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="font-bold text-white text-base md:text-lg max-w-3xl mx-auto leading-relaxed mb-4"
           >
             &quot;Inovasi sejati bukan hanya soal menulis kode — tapi tentang{' '}
@@ -198,7 +198,7 @@ export default function Innovation() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="text-white/50 text-sm font-bold"
           >
             — Rizki Habibi, Web Developer &amp; Innovator
@@ -214,7 +214,7 @@ export default function Innovation() {
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.25 + i * 0.07, type: 'spring', stiffness: 150 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="flex flex-col items-center gap-1"
               >
                 <span className="font-comic text-2xl" style={{ color: s.color }}>{s.num}</span>

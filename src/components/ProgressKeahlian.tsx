@@ -66,7 +66,7 @@ function BarSkill({ skill, index }: {
       initial={{ opacity: 0, x: -40 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5, delay: index * 0.07 }}
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
       onHoverStart={() => setHover(true)}
       onHoverEnd={() => setHover(false)}
       className="relative group"
@@ -127,7 +127,7 @@ function BarSkill({ skill, index }: {
           initial={{ width: 0 }}
           whileInView={{ width: `${skill.level}%` }}
           transition={{ duration: 1.2, delay: index * 0.07 + 0.3, ease: [0.34, 1.56, 0.64, 1] }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="h-full relative overflow-hidden"
           style={{
             background: `repeating-linear-gradient(-45deg, ${skill.warna} 0px, ${skill.warna} 8px, ${skill.warna}88 8px, ${skill.warna}88 16px)`,

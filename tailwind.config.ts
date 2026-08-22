@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        comic: ['Bangers', 'Impact', 'Arial Black', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        comic: ['var(--font-bangers)', 'Bangers', 'Impact', 'Arial Black', 'sans-serif'],
+        body: ['var(--font-inter)', 'Inter', 'sans-serif'],
       },
       colors: {
         'comic-black': '#0a0a0a',

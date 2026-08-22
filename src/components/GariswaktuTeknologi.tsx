@@ -118,7 +118,7 @@ const perjalanan = [
 
 function KartuTimeline({ item, index }: { item: typeof perjalanan[0]; index: number }) {
   const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: false, amount: 0.3 })
+  const inView = useInView(ref, { once: true, amount: 0.3 })
   const kiri = item.sisi === 'kiri'
 
   return (
@@ -193,7 +193,7 @@ export default function TechTimeline() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="text-center mb-14"
         >
           <div className="chapter-label mb-3">TECH JOURNEY</div>
@@ -222,7 +222,7 @@ export default function TechTimeline() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           transition={{ delay: 0.3 }}
           className="text-center mt-12"
         >

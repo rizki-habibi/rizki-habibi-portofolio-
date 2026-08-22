@@ -70,7 +70,7 @@ function Ch261() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.06, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ x: 4 }}
             className="flex gap-3 items-start p-3"
             style={{ border: `2px solid ${r.warna}`, boxShadow: `3px 3px 0 ${r.warna}`, background: 'white' }}>
@@ -118,7 +118,7 @@ function Ch262() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.08, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -5 }}
             style={{ border: `3px solid ${s.warna}`, boxShadow: `4px 4px 0 ${s.warna}`, background: 'white', overflow: 'hidden' }}>
             <div className="px-4 py-2" style={{ background: s.warna }}>
@@ -147,7 +147,7 @@ function Ch262() {
               initial={{ opacity: 0, x: 15 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.1, type: 'spring' }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="flex gap-2 items-start">
               <span className="text-xl flex-shrink-0">{s.icon}</span>
               <div>
@@ -253,7 +253,7 @@ function Ch264() {
                 initial={{ opacity: 0, x: -15 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.08, type: 'spring' }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="flex items-center gap-2 p-2"
                 style={{ border: `2px solid ${t.warna}`, background: `${t.warna}10` }}>
                 <span className="font-bold text-[8px] text-white px-1.5 py-0.5 flex-shrink-0" style={{ background: t.warna }}>{t.level}</span>
@@ -275,7 +275,7 @@ function Ch264() {
               initial={{ opacity: 0, x: 15 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.1, type: 'spring' }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="flex gap-3 p-3"
               style={{ border: '2px solid #22c55e', background: '#f0fdf4' }}>
               <span className="text-xl flex-shrink-0">{c.icon}</span>
@@ -311,7 +311,7 @@ function Ch265() {
             initial={{ opacity: 0, y: 20, rotate: i % 2 === 0 ? -1 : 1 }}
             whileInView={{ opacity: 1, y: 0, rotate: 0 }}
             transition={{ delay: i * 0.07, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -5 }}
             style={{ border: `3px solid ${t.warna}`, boxShadow: `4px 4px 0 ${t.warna}`, background: 'white' }}
             className="p-4">
@@ -354,7 +354,7 @@ function Ch266to270() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: i * 0.05, type: 'spring' }}
-            viewport={{ once: false }}>
+            viewport={{ once: true }}>
             <KartuFlip {...k} />
           </motion.div>
         ))}

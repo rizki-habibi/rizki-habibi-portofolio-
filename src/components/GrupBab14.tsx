@@ -26,7 +26,7 @@ function GridTiga({ items }: { items: { icon: string; judul: string; teks: strin
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: i * 0.07, type: 'spring' }}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.1 }}
           whileHover={{ y: -5 }}
           className="p-4"
           style={{ border: `3px solid ${butir.warna}`, boxShadow: `4px 4px 0 ${butir.warna}`, background: butir.bg }}>
@@ -56,7 +56,7 @@ function Ch141() {
             initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.1, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ x: 5 }}
             style={{ border: `3px solid ${k.warna}`, boxShadow: `4px 4px 0 ${k.warna}`, background: 'white', overflow: 'hidden' }}>
             <div className="flex items-center gap-2 px-4 py-2" style={{ background: k.warna, borderBottom: '2px solid #0a0a0a' }}>
@@ -119,7 +119,7 @@ function Ch143() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: i * 0.07, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -4 }}
             className="p-3"
             style={{ border: `2px solid ${s.warna}`, boxShadow: `3px 3px 0 ${s.warna}`, background: 'white' }}>
@@ -298,7 +298,7 @@ function Ch150() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.08 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -4 }}
             className="flex gap-3 p-3"
             style={{ border: `2px solid ${p.warna}`, boxShadow: `3px 3px 0 ${p.warna}`, background: '#111' }}>
@@ -320,7 +320,7 @@ function Ch150() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         className="p-5 text-center"
         style={{ border: '3px solid #ffd700', boxShadow: '5px 5px 0 #ffd700', background: '#111', borderRadius: 12 }}>
         <div className="font-comic text-xl text-yellow-400 mb-2">🚀 SATU SKILL YANG PASTI RELEVAN</div>

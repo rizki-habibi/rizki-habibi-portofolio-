@@ -205,7 +205,7 @@ function Ch63() {
                 initial={{ opacity: 0, rotateY: -90 }}
                 whileInView={{ opacity: 1, rotateY: 0 }}
                 transition={{ delay: i * 0.1, duration: 0.5 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 whileHover={{ y: -8, rotateZ: 2 }}
                 className="relative overflow-hidden cursor-default"
                 style={{ border: `3px solid ${k.warna}`, boxShadow: `4px 4px 0 ${k.warna}`, background: '#111', minHeight: 110 }}>
@@ -249,7 +249,7 @@ function Ch64() {
             initial={{ opacity: 0, y: 30, rotate: i % 2 === 0 ? -2 : 2 }}
             whileInView={{ opacity: 1, y: 0, rotate: 0 }}
             transition={{ delay: i * 0.08 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -6, rotate: i % 2 === 0 ? -1 : 1 }}
             className="relative overflow-hidden"
             style={{ border: `3px solid ${g.warna}`, boxShadow: `5px 5px 0 ${g.warna}`, background: 'white' }}>
@@ -309,7 +309,7 @@ function Ch65() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.12 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="overflow-hidden"
               style={{ border: `3px solid ${k.warna}`, boxShadow: `4px 4px 0 ${k.warna}`, background: 'white' }}>
               <div className="flex items-center gap-2 px-4 py-2" style={{ background: k.warna, borderBottom: '2px solid #0a0a0a' }}>
@@ -348,7 +348,7 @@ function Ch66() {
             initial={{ opacity: 0, scale: 0.9, rotate: i % 2 === 0 ? -2 : 2 }}
             whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ delay: i * 0.1, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -5 }}
             className="overflow-hidden"
             style={{ border: `3px solid ${p.warna}`, boxShadow: `5px 5px 0 ${p.warna}`, background: p.bg }}>
@@ -414,7 +414,7 @@ function Ch67() {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.1 }}
-                  viewport={{ once: false }}
+                  viewport={{ once: true }}
                   className="flex items-center gap-3">
                   <span className="text-xl flex-shrink-0">{b.icon}</span>
                   <div className="flex-1 min-w-0">
@@ -482,7 +482,7 @@ function Ch68() {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.1 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="flex gap-3 p-3"
                 style={{ border: `2px solid ${h.warna}`, boxShadow: `3px 3px 0 ${h.warna}`, background: 'white' }}>
                 <div className="font-comic text-lg flex-shrink-0" style={{ color: h.warna }}>{i + 1}</div>
@@ -520,7 +520,7 @@ function Ch69() {
             initial={{ opacity: 0, scale: 0.85 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: i * 0.08, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -5, rotate: 1 }}
             className="p-4 relative overflow-hidden"
             style={{ border: `3px solid ${k.warna}`, boxShadow: `4px 4px 0 ${k.warna}`, background: 'white' }}>
@@ -566,7 +566,7 @@ function Ch70() {
             initial={{ opacity: 0, x: i % 2 === 0 ? -40 : 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.1, type: 'spring', stiffness: 150 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ x: 6 }}
             className="flex items-center gap-4 p-4"
             style={{ border: `3px solid ${w.warna}`, boxShadow: `5px 5px 0 ${w.warna}`, background: 'white' }}>
@@ -586,7 +586,7 @@ function Ch70() {
         initial={{ opacity: 0, rotate: -3 }}
         whileInView={{ opacity: 1, rotate: 0 }}
         transition={{ duration: 0.5, delay: 0.3, type: 'spring' }}
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         className="mt-8 p-6 text-center"
         style={{ background: 'white', border: '4px solid #0a0a0a', boxShadow: '7px 7px 0 #f59e0b' }}>
         <div className="font-comic text-2xl text-[#0a0a0a] mb-2">🎮 DEVELOPER + GAMER = SAYA</div>

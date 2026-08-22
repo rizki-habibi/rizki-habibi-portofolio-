@@ -123,7 +123,7 @@ export default function Projects() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-10"
         >
           {kategoriList.map((kat) => (
@@ -161,7 +161,7 @@ export default function Projects() {
                 initial={{ opacity: 0, y: 40, rotate: indeks % 2 === 0 ? -1 : 1 }}
                 whileInView={{ opacity: 1, y: 0, rotate: 0 }}
                 transition={{ duration: 0.5, delay: indeks * 0.08 }}
-                viewport={{ once: false, amount: 0.15 }}
+                viewport={{ once: true, amount: 0.15 }}
                 whileHover={{ y: -8, rotate: indeks % 2 === 0 ? -1 : 1, transition: { duration: 0.2 } }}
                 onClick={() => setDipilih(proyek)}
                 className="comic-panel cursor-pointer overflow-hidden group"
@@ -240,7 +240,7 @@ export default function Projects() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="text-center mt-8 sm:mt-10"
         >
           <a

@@ -25,7 +25,7 @@ function GridTiga({ items }: { items: { icon: string; judul: string; teks: strin
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: i * 0.07, type: 'spring' }}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.1 }}
           whileHover={{ y: -5 }}
           className="p-4"
           style={{ border: `3px solid ${butir.warna}`, boxShadow: `4px 4px 0 ${butir.warna}`, background: butir.bg }}>
@@ -57,7 +57,7 @@ function Ch161() {
             initial={{ opacity: 0, x: i % 2 === 0 ? -25 : 25 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.09, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="flex gap-3 p-3"
             style={{ border: `3px solid ${t.warna}`, boxShadow: `4px 4px 0 ${t.warna}`, background: 'white' }}>
             <div className="flex-shrink-0 text-center" style={{ minWidth: 60 }}>
@@ -92,7 +92,7 @@ function Ch162() {
             initial={{ opacity: 0, y: 20, rotate: i % 2 === 0 ? -1 : 1 }}
             whileInView={{ opacity: 1, y: 0, rotate: 0 }}
             transition={{ delay: i * 0.1, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ x: 5 }}
             style={{ border: `3px solid ${p.warna}`, boxShadow: `5px 5px 0 ${p.warna}`, background: 'white', overflow: 'hidden' }}>
             <div className="flex items-center justify-between px-4 py-2" style={{ background: p.warna, borderBottom: '2px solid #0a0a0a' }}>
@@ -179,7 +179,7 @@ function Ch164() {
             initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30, rotate: i % 2 === 0 ? -1 : 1 }}
             whileInView={{ opacity: 1, x: 0, rotate: 0 }}
             transition={{ delay: i * 0.1, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="p-4"
             style={{ border: `3px solid ${p.warna}`, boxShadow: `5px 5px 0 ${p.warna}`, background: '#111' }}>
             <div className="flex items-center gap-2 mb-2">
@@ -235,7 +235,7 @@ function Ch166() {
             initial={{ opacity: 0, rotate: i % 2 === 0 ? -2 : 2, y: 20 }}
             whileInView={{ opacity: 1, rotate: 0, y: 0 }}
             transition={{ delay: i * 0.08, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -4 }}
             className="flex gap-3 p-4"
             style={{ border: `3px solid ${p.warna}`, boxShadow: `4px 4px 0 ${p.warna}`, background: 'white' }}>
@@ -314,7 +314,7 @@ function Ch168() {
             initial={{ opacity: 0, scale: 0.95, rotate: i % 2 === 0 ? -1 : 1 }}
             whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ delay: i * 0.12, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="p-5"
             style={{ border: '2px solid #ffd700', boxShadow: '4px 4px 0 #ffd70044', background: '#111', borderRadius: 8 }}>
             <p className="text-sm font-bold text-white/80 leading-relaxed italic mb-2">&ldquo;{q.quote}&rdquo;</p>
@@ -344,7 +344,7 @@ function Ch169() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: i * 0.1, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -5 }}
             style={{ border: `3px solid ${a.warna}`, boxShadow: `5px 5px 0 ${a.warna}`, background: 'white', overflow: 'hidden' }}>
             <div className="flex items-center gap-2 px-4 py-2" style={{ background: a.warna, borderBottom: '2px solid #0a0a0a' }}>
@@ -368,7 +368,7 @@ function Ch170() {
           initial={{ opacity: 0, scale: 0.6, rotate: -10 }}
           whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ type: 'spring', stiffness: 100 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="mb-8">
           <div className="text-7xl sm:text-9xl mb-4">🚀</div>
           <div className="font-comic text-5xl sm:text-7xl text-yellow-400 mb-2" style={{ textShadow: '5px 5px 0 rgba(255,215,0,0.3)' }}>
@@ -387,7 +387,7 @@ function Ch170() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ type: 'spring' }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="text-center p-5"
               style={{ border: `3px solid ${s.warna}`, boxShadow: `5px 5px 0 ${s.warna}`, background: '#111' }}>
               <div className="text-4xl mb-2">{s.icon}</div>
@@ -401,7 +401,7 @@ function Ch170() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="p-6 mb-8"
           style={{ border: '4px solid #ffd700', boxShadow: '8px 8px 0 #ffd700', background: '#111', borderRadius: 20 }}>
           <div className="font-comic text-2xl text-yellow-400 mb-3">📖 TENTANG PORTFOLIO INI</div>
@@ -423,7 +423,7 @@ function Ch170() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="p-4 text-center"
             style={{ border: '3px solid #22c55e', boxShadow: '4px 4px 0 #22c55e', background: '#111' }}>
             <div className="font-comic text-base text-green-400 mb-2">🤝 KERJA SAMA?</div>
@@ -433,7 +433,7 @@ function Ch170() {
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="p-4 text-center"
             style={{ border: '3px solid #1a5cff', boxShadow: '4px 4px 0 #1a5cff', background: '#111' }}>
             <div className="font-comic text-base text-blue-400 mb-2">📄 LIHAT CV LENGKAP</div>
@@ -446,7 +446,7 @@ function Ch170() {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5 }}
-          viewport={{ once: false }}>
+          viewport={{ once: true }}>
           <div className="font-comic text-2xl text-yellow-400 mb-2">⚡ SAMPAI BERJUMPA DI CHAPTER 171!</div>
           <div className="font-comic text-sm text-white/30 tracking-widest">
             --- RIZKI HABIBI PORTFOLIO · JEMBER · 2026 ---

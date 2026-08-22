@@ -60,7 +60,7 @@ export default function KomunikasiComic() {
               initial={{ opacity: 0, y: 30, rotate: i % 2 === 0 ? -1 : 1 }}
               whileInView={{ opacity: 1, y: 0, rotate: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               whileHover={{ y: -5, rotate: i % 2 === 0 ? -1 : 1 }}
               className="overflow-hidden"
               style={{ border: `3px solid ${node.color}`, boxShadow: `5px 5px 0 ${node.color}`, background: 'white' }}
@@ -85,14 +85,14 @@ export default function KomunikasiComic() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="mb-12 comic-panel-dark p-8"
         >
           <motion.div
             initial={{ opacity: 0, y: -15 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="font-comic text-2xl text-white text-center mb-8"
           >
             💫 NILAI KOLABORASI
@@ -104,7 +104,7 @@ export default function KomunikasiComic() {
                 initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
                 whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
                 transition={{ delay: i * 0.1, type: 'spring', stiffness: 150 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 whileHover={{ scale: 1.05, rotate: 2 }}
                 className="p-4 text-center bg-white"
                 style={{ border: '2px solid #ffd700', boxShadow: '4px 4px 0 #ffd700' }}
@@ -122,13 +122,13 @@ export default function KomunikasiComic() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           <motion.div
             initial={{ opacity: 0, y: -15 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="font-comic text-2xl text-comic-black text-center mb-6"
           >
             📡 TEMUKAN SAYA DI
@@ -143,7 +143,7 @@ export default function KomunikasiComic() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 whileHover={{ y: -5, scale: 1.05 }}
                 className="flex flex-col items-center gap-2 p-4 bg-white text-center"
                 style={{ border: `3px solid ${s.color}`, boxShadow: `4px 4px 0 ${s.color}`, textDecoration: 'none' }}

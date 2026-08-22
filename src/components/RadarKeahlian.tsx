@@ -143,7 +143,7 @@ function RadarChart({ data }: { data: typeof dimensi }) {
 // ─── Bar Skill ────────────────────────────────────
 function BarSkill({ nama, persen, warna, delay }: { nama: string; persen: number; warna: string; delay: number }) {
   const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: false })
+  const inView = useInView(ref, { once: true })
 
   return (
     <div ref={ref} className="mb-2">
@@ -173,7 +173,7 @@ function BarSkill({ nama, persen, warna, delay }: { nama: string; persen: number
 export default function SkillRadar() {
   const [aktifTab, setAktifTab] = useState(0)
   const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: false, amount: 0.2 })
+  const inView = useInView(ref, { once: true, amount: 0.2 })
   const tab = kelompok[aktifTab]
 
   return (
@@ -185,7 +185,7 @@ export default function SkillRadar() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="text-center mb-12"
         >
           <div className="chapter-label mb-3">SKILL ANALYSIS</div>
@@ -201,7 +201,7 @@ export default function SkillRadar() {
           <motion.div
             initial={{ opacity: 0, scale: 0.85 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             transition={{ type: 'spring', stiffness: 100 }}
             className="p-6"
             style={{ background: '#fff', border: '3px solid #0a0a0a', boxShadow: '6px 6px 0 #0a0a0a' }}
@@ -224,7 +224,7 @@ export default function SkillRadar() {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             transition={{ delay: 0.15 }}
           >
             {/* Tab pemilih kategori */}

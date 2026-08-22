@@ -61,7 +61,7 @@ function Ch191() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.12, type: 'spring' }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="flex gap-4 pl-14 sm:pl-16 relative">
               <motion.div
                 className="absolute left-3 sm:left-5 top-4 w-7 h-7 flex items-center justify-center text-base"
@@ -143,7 +143,7 @@ function Ch192() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: i * 0.08, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             onClick={() => setAktif(aktif === i ? null : i)}
             className="cursor-pointer"
             style={{ border: `3px solid ${k.warna}`, boxShadow: `4px 4px 0 ${k.warna}`, background: aktif === i ? k.warna : 'white', overflow: 'hidden' }}>
@@ -173,7 +173,7 @@ function Ch192() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         className="mt-8 p-5 text-center comic-panel">
         <div className="font-comic text-xl text-[#0a0a0a] mb-2">📩 TERTARIK BERKOLABORASI?</div>
         <p className="text-sm font-bold text-[#0a0a0a]/70 mb-4">Reach out lewat channel yang tersedia. Semua jenis kolaborasi disambut — dari feedback sederhana sampai co-found penuh!</p>

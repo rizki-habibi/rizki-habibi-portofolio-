@@ -36,7 +36,7 @@ export default function Footer() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="text-center mb-8"
           >
             <div
@@ -57,7 +57,7 @@ export default function Footer() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="flex justify-center gap-3 mb-8 flex-wrap"
           >
             {links.map((l, i) => (
@@ -82,7 +82,7 @@ export default function Footer() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="flex flex-wrap justify-center gap-1 mb-8"
           >
             {tautanNav.map((n, i) => (
@@ -105,7 +105,7 @@ export default function Footer() {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="text-center md:text-left"
               >
                 <div className="font-comic text-comic-yellow text-sm">© 2026 RIZKI HABIBI</div>
@@ -117,7 +117,7 @@ export default function Footer() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.45, type: 'spring' }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="font-comic text-sm text-white/50 tracking-widest text-center"
               >
                 THE STORY CONTINUES...

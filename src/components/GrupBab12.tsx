@@ -30,7 +30,7 @@ function PanelGrid({ items, cols = 3 }: {
           initial={{ opacity: 0, y: 22, rotate: i % 2 === 0 ? -1.5 : 1.5 }}
           whileInView={{ opacity: 1, y: 0, rotate: 0 }}
           transition={{ delay: i * 0.07, type: 'spring', stiffness: 140 }}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.1 }}
           whileHover={{ y: -5 }}
           className="p-4 relative overflow-hidden"
           style={{ border: `3px solid ${it.warna}`, boxShadow: `4px 4px 0 ${it.warna}`, background: it.bg }}>
@@ -99,7 +99,7 @@ function Ch122() {
             initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.1, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -5 }}
             style={{ border: `3px solid ${p.warna}`, boxShadow: `5px 5px 0 ${p.warna}`, background: 'white', overflow: 'hidden' }}>
             <div className="flex items-center gap-2 px-4 py-2" style={{ background: p.warna, borderBottom: '2px solid #0a0a0a' }}>
@@ -176,7 +176,7 @@ function Ch124() {
               initial={{ opacity: 0, x: -25 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.1 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="flex gap-3 p-3"
               style={{ border: `2px solid ${k.warna}`, boxShadow: `3px 3px 0 ${k.warna}`, background: 'white' }}>
               <div className="w-9 h-9 flex items-center justify-center text-xl flex-shrink-0"
@@ -303,7 +303,7 @@ function Ch128() {
             initial={{ opacity: 0, y: 22 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.07, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -5 }}
             style={{ border: `3px solid ${inn.warna}`, boxShadow: `4px 4px 0 ${inn.warna}`, background: 'white', overflow: 'hidden' }}>
             <div className="flex items-center gap-2 px-3 py-2" style={{ background: inn.warna, borderBottom: '2px solid #0a0a0a' }}>
@@ -362,7 +362,7 @@ function Ch130() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.09 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="flex gap-3 p-3"
               style={{ border: `2px solid ${a.warna}`, boxShadow: `3px 3px 0 ${a.warna}`, background: 'white' }}>
               <span className="text-2xl flex-shrink-0">{a.icon}</span>

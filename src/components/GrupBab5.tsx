@@ -29,7 +29,7 @@ function Box({ icon, title, text, color, bg, wide }: { icon: string; title: stri
       initial={{ opacity: 0, scale: 0.88, rotate: Math.random() > 0.5 ? -2 : 2 }}
       whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
       transition={{ type: 'spring', stiffness: 100 }}
-      viewport={{ once: false, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.1 }}
       whileHover={{ y: -5, scale: 1.03 }}
       className={`overflow-hidden ${wide ? 'col-span-2' : ''}`}
       style={{ border: `3px solid ${color}`, boxShadow: `5px 5px 0 ${color}`, background: bg }}
@@ -67,7 +67,7 @@ function Ch56() {
             {legacies.map((l, i) => (
               <motion.div key={l.title}
                 initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.08 }} viewport={{ once: false }}
+                transition={{ delay: i * 0.08 }} viewport={{ once: true }}
                 whileHover={{ x: 6 }}
                 className="overflow-hidden" style={{ border: `3px solid ${l.color}`, boxShadow: `5px 5px 0 ${l.color}`, background: 'white' }}
               >
@@ -150,7 +150,7 @@ function Ch57() {
             initial={{ opacity: 0, y: 40, rotate: i % 2 === 0 ? -2 : 2 }}
             whileInView={{ opacity: 1, y: 0, rotate: 0 }}
             transition={{ duration: 0.45, delay: i * 0.08, type: 'spring' }}
-            viewport={{ once: false, amount: 0.15 }}
+            viewport={{ once: true, amount: 0.15 }}
             whileHover={{ y: -6, scale: 1.02 }}
             className="overflow-hidden bg-white"
             style={{ border: `3px solid ${inv.color}`, boxShadow: `5px 5px 0 ${inv.color}` }}
@@ -205,7 +205,7 @@ function Ch58() {
             ].map((c, i) => (
               <motion.div key={c.char}
                 initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.12 }} viewport={{ once: false }}
+                transition={{ delay: i * 0.12 }} viewport={{ once: true }}
                 whileHover={{ x: 8 }}
                 className="flex items-center gap-4 p-4 bg-white"
                 style={{ border: `3px solid ${c.color}`, boxShadow: `5px 5px 0 ${c.color}` }}
@@ -222,7 +222,7 @@ function Ch58() {
             ))}
             <motion.div
               initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.35 }} viewport={{ once: false }}
+              transition={{ delay: 0.35 }} viewport={{ once: true }}
               className="flex items-center gap-4 p-4 bg-white"
               style={{ border: '3px solid #e63329', boxShadow: '5px 5px 0 #e63329' }}
             >
@@ -296,7 +296,7 @@ function Ch59() {
             ].map((m, i) => (
               <motion.div key={m.no}
                 initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.09 }} viewport={{ once: false }}
+                transition={{ delay: i * 0.09 }} viewport={{ once: true }}
                 className="flex gap-4 items-start p-4 bg-white"
                 style={{ border: `3px solid ${m.color}`, boxShadow: `4px 4px 0 ${m.color}` }}
               >
@@ -359,7 +359,7 @@ function Ch60() {
     <PanelBab id="ch60" chNum="CHAPTER 60" judul="INDONESIA DIGITAL FUTURE" warna="#e63329" latarBelakang="#fef2f2" gelap>
       <div className="grid md:grid-cols-2 gap-8 mb-10">
         <div>
-          <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }} viewport={{ once: false }}>
+          <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
             <div className="p-6 mb-6" style={{ border: '3px solid #ffd700', boxShadow: '6px 6px 0 #ffd700', background: 'white' }}>
               <div className="font-comic text-2xl text-comic-black mb-4">🇮🇩 VISI INDONESIA DIGITAL 2045</div>
               <p className="text-sm text-comic-black leading-relaxed mb-4">
@@ -420,7 +420,7 @@ function Ch60() {
             initial={{ opacity: 0, rotate: -2, scale: 0.9 }}
             whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
             transition={{ duration: 0.6, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="p-6 text-center"
             style={{ border: '4px solid #ffd700', boxShadow: '8px 8px 0 #ffd700', background: 'white' }}
           >
@@ -449,7 +449,7 @@ function Ch61() {
           initial={{ opacity: 0, scale: 0.85, rotate: -2 }}
           whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 0.7, type: 'spring', stiffness: 80 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="mb-10"
         >
           <div className="p-10 text-center" style={{ border: '5px solid #ffd700', boxShadow: '10px 10px 0 #ffd700', background: 'white' }}>
@@ -491,7 +491,7 @@ function Ch61() {
               initial={{ opacity: 0, y: 30, rotate: i % 2 === 0 ? -2 : 2 }}
               whileInView={{ opacity: 1, y: 0, rotate: 0 }}
               transition={{ delay: i * 0.1, type: 'spring' }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               whileHover={{ y: -6 }}
               className="overflow-hidden" style={{ border: `3px solid ${p.color}`, boxShadow: `5px 5px 0 ${p.color}`, background: p.bg }}
             >
@@ -510,7 +510,7 @@ function Ch61() {
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="flex justify-center"
           >
             <div className="relative">
@@ -539,7 +539,7 @@ function Ch61() {
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
           >
             <div className="p-8" style={{ border: '4px solid #ffd700', boxShadow: '8px 8px 0 rgba(255,215,0,0.5)', background: 'white' }}>
               <div className="font-comic text-3xl text-comic-black mb-4">⏭️ SELANJUTNYA...</div>
@@ -587,7 +587,7 @@ function FinalChapter() {
       <div className="max-w-5xl mx-auto relative z-10 text-center">
         {/* Label */}
         <motion.div initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.1, type: 'spring', stiffness: 150 }} viewport={{ once: false }}
+          transition={{ delay: 0.1, type: 'spring', stiffness: 150 }} viewport={{ once: true }}
           className="chapter-label mb-6 inline-block text-lg tracking-widest"
           style={{ color: '#ffd700', borderColor: '#ffd700', padding: '8px 24px' }}>
           ✦ FINAL CHAPTER ✦
@@ -598,7 +598,7 @@ function FinalChapter() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="font-comic text-white mb-6 leading-none"
           style={{ fontSize: 'clamp(3rem,10vw,7rem)', textShadow: '5px 5px 0 #ffd700' }}
         >
@@ -608,7 +608,7 @@ function FinalChapter() {
 
         {/* Speech bubble besar */}
         <motion.div initial={{ opacity: 0, scale: 0, rotate: -5 }} whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ delay: 0.35, type: 'spring', stiffness: 150 }} viewport={{ once: false }}
+          transition={{ delay: 0.35, type: 'spring', stiffness: 150 }} viewport={{ once: true }}
           className="inline-block mb-10">
           <div className="font-bold text-comic-black text-sm px-8 py-4"
             style={{ background: 'white', border: '4px solid #ffd700', boxShadow: '6px 6px 0 #ffd700', borderRadius: 20, maxWidth: 500 }}>
@@ -627,7 +627,7 @@ function FinalChapter() {
               initial={{ opacity: 0, y: 50, rotate: i === 1 ? 0 : i === 0 ? -3 : 3 }}
               whileInView={{ opacity: 1, y: 0, rotate: 0 }}
               transition={{ delay: i * 0.15, type: 'spring', stiffness: 100 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               whileHover={{ y: -10, rotate: i === 1 ? 0 : i === 0 ? -2 : 2 }}
               className="overflow-hidden"
               style={{ border: `4px solid ${p.color}`, boxShadow: `8px 8px 0 ${p.color}`, background: 'white' }}
@@ -650,7 +650,7 @@ function FinalChapter() {
           initial={{ opacity: 0, scale: 0.85, rotate: -1 }}
           whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 0.7, type: 'spring' }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="p-10 mb-10"
           style={{ border: '5px solid #ffd700', boxShadow: '10px 10px 0 rgba(255,215,0,0.3)', background: 'white' }}
         >
@@ -683,7 +683,7 @@ function FinalChapter() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="flex flex-wrap justify-center gap-4 mb-10"
         >
           <a href="#contact" className="btn-comic text-lg px-8 py-4">MULAI BERKOLABORASI →</a>
@@ -696,7 +696,7 @@ function FinalChapter() {
           initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
           whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 0.6, delay: 0.5, type: 'spring' }}
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <div className="font-comic text-4xl md:text-5xl text-comic-black px-10 py-5 inline-block"
             style={{ background: '#ffd700', border: '4px solid #ffd700', boxShadow: '8px 8px 0 rgba(255,215,0,0.4)', transform: 'rotate(-1deg)' }}>

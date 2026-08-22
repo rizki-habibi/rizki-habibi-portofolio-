@@ -157,7 +157,7 @@ export default function Certificates() {
           initial={{ opacity: 0, y: 30, rotate: -1 }}
           whileInView={{ opacity: 1, y: 0, rotate: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="mb-12"
         >
           <div
@@ -215,7 +215,7 @@ export default function Certificates() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="flex flex-wrap justify-center gap-2 mb-8"
         >
           {categories.map(cat => (
@@ -247,7 +247,7 @@ export default function Certificates() {
                 initial={{ opacity: 0, y: 20, scale: 0.9 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.3, delay: i * 0.03 }}
-                viewport={{ once: false, amount: 0.1 }}
+                viewport={{ once: true, amount: 0.1 }}
                 whileHover={{ y: -5, rotate: i % 2 === 0 ? -1 : 1 }}
                 onClick={() => setDipilih(cert)}
                 className="cursor-pointer overflow-hidden"
@@ -275,7 +275,7 @@ export default function Certificates() {
 
         {/* Load more */}
         {visibleCount < filtered.length && (
-          <motion.div className="text-center" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: false }}>
+          <motion.div className="text-center" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
             <button
               onClick={() => setVisibleCount(v => v + 12)}
               className="btn-comic"

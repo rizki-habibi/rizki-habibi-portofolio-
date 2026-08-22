@@ -128,7 +128,7 @@ export default function GitHubHeatmap() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="glass-card p-6 md:p-8 mb-6"
         >
           <div className="flex flex-col md:flex-row items-start md:items-center gap-6 mb-8">
@@ -284,7 +284,7 @@ export default function GitHubHeatmap() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-4"
         >
           {[
@@ -298,7 +298,7 @@ export default function GitHubHeatmap() {
               initial={{ opacity: 0, y: 30, scale: 0.9 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.3 }}
               whileHover={{ scale: 1.05, y: -5 }}
               className="glass-card p-5 text-center group cursor-default"
             >

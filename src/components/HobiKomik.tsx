@@ -61,7 +61,7 @@ export default function HobbiesComic() {
               initial={{ opacity: 0, y: 40, scale: 0.9, rotate: i % 2 === 0 ? -2 : 2 }}
               whileInView={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
               transition={{ duration: 0.45, delay: i * 0.08 }}
-              viewport={{ once: false, amount: 0.15 }}
+              viewport={{ once: true, amount: 0.15 }}
               whileHover={{ y: -6, rotate: i % 2 === 0 ? -1 : 1 }}
               className="overflow-hidden"
               style={{ border: `3px solid ${h.color}`, boxShadow: `5px 5px 0 ${h.color}`, background: 'white' }}
@@ -81,7 +81,7 @@ export default function HobbiesComic() {
                       initial={{ width: 0 }}
                       whileInView={{ width: `${h.power}%` }}
                       transition={{ duration: 1, delay: 0.3 + i * 0.05 }}
-                      viewport={{ once: false }}
+                      viewport={{ once: true }}
                       style={{ background: `repeating-linear-gradient(-45deg,${h.color} 0px,${h.color} 5px,${h.color}99 5px,${h.color}99 10px)` }}
                     />
                   </div>
@@ -99,7 +99,7 @@ export default function HobbiesComic() {
             initial={{ opacity: 0, x: -40, rotate: -3 }}
             whileInView={{ opacity: 1, x: 0, rotate: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             className="flex flex-col items-center"
           >
             <div className="relative overflow-hidden"
@@ -120,14 +120,14 @@ export default function HobbiesComic() {
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             className="space-y-4"
           >
             <motion.div
               initial={{ opacity: 0, y: -15 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.05 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="font-comic text-2xl text-comic-black mb-4"
             >
               🧠 CHARACTER TRAITS
@@ -138,7 +138,7 @@ export default function HobbiesComic() {
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.1 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 whileHover={{ x: 6 }}
                 className="flex items-start gap-4 p-4 bg-white"
                 style={{ border: '3px solid #0a0a0a', boxShadow: '4px 4px 0 #0a0a0a' }}
@@ -158,14 +158,14 @@ export default function HobbiesComic() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="comic-panel-yellow p-6"
         >
           <motion.div
             initial={{ opacity: 0, y: -15 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="font-comic text-xl text-comic-black text-center mb-4"
           >
             ⚡ FUN FACTS
@@ -184,7 +184,7 @@ export default function HobbiesComic() {
                 initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.07, type: 'spring', stiffness: 120 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 whileHover={{ scale: 1.03 }}
                 className="flex items-start gap-2 text-xs font-bold text-comic-black p-2 bg-white"
                 style={{ border: '2px solid #f59e0b' }}

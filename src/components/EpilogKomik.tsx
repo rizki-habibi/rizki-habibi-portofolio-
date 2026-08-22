@@ -38,7 +38,7 @@ export default function EpilogComic() {
               initial={{ opacity: 0, y: 40, rotate: i % 2 === 0 ? -2 : 2 }}
               whileInView={{ opacity: 1, y: 0, rotate: 0 }}
               transition={{ duration: 0.45, delay: i * 0.08, type: 'spring' }}
-              viewport={{ once: false, amount: 0.15 }}
+              viewport={{ once: true, amount: 0.15 }}
               whileHover={{ y: -6, rotate: i % 2 === 0 ? -1 : 1 }}
               className="relative overflow-hidden"
               style={{ border: `3px solid ${nc.color}`, boxShadow: `5px 5px 0 ${nc.color}`, background: 'white' }}
@@ -66,14 +66,14 @@ export default function EpilogComic() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="comic-panel-dark p-8 mb-12"
         >
           <motion.div
             initial={{ opacity: 0, y: -15 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="font-comic text-2xl text-white text-center mb-8"
           >
             📅 ROADMAP 2026–FUTURE
@@ -90,7 +90,7 @@ export default function EpilogComic() {
                 initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.1, type: 'spring', stiffness: 120 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="flex gap-4 items-start"
               >
                 <div className="flex-shrink-0 font-comic text-xs px-3 py-2 text-comic-black whitespace-nowrap"
@@ -112,7 +112,7 @@ export default function EpilogComic() {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="grid md:grid-cols-3 gap-6 items-center"
         >
           {/* Foto komik profil */}
@@ -133,7 +133,7 @@ export default function EpilogComic() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.3 }}
               className="p-8 relative"
               style={{ border: '4px solid #0a0a0a', background: 'white', boxShadow: '8px 8px 0 #0a0a0a', borderRadius: 24 }}
             >
@@ -142,7 +142,7 @@ export default function EpilogComic() {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="font-bold text-lg text-comic-black leading-relaxed mb-4 relative z-10"
               >
                 Cerita ini belum selesai — dan justru itulah yang membuat setiap harinya{' '}
@@ -153,7 +153,7 @@ export default function EpilogComic() {
                 initial={{ opacity: 0, x: -15 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="flex items-center gap-3"
               >
                 <div className="w-10 h-10 font-comic text-sm text-white flex items-center justify-center"
@@ -172,7 +172,7 @@ export default function EpilogComic() {
           initial={{ opacity: 0, y: 20, rotate: -3 }}
           whileInView={{ opacity: 1, y: 0, rotate: 0 }}
           transition={{ duration: 0.6, delay: 0.4, type: 'spring' }}
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
           className="text-center mt-16"
         >
           <div

@@ -74,7 +74,7 @@ function Ch193() {
             initial={{ opacity: 0, y: 25, rotate: i % 2 === 0 ? -1 : 1 }}
             whileInView={{ opacity: 1, y: 0, rotate: 0 }}
             transition={{ delay: i * 0.1, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -5 }}
             style={{ border: `3px solid ${p.warna}`, boxShadow: `5px 5px 0 ${p.warna}`, background: '#111' }}>
             <div className="px-4 py-2 flex items-center gap-2" style={{ background: p.warna }}>
@@ -138,7 +138,7 @@ function Ch194() {
             initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.09, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ x: 4 }}
             className="grid sm:grid-cols-2 gap-0"
             style={{ border: `3px solid ${t.warna}`, boxShadow: `4px 4px 0 ${t.warna}`, overflow: 'hidden' }}>
@@ -192,7 +192,7 @@ function Ch195() {
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ type: 'spring', stiffness: 100 }}
-          viewport={{ once: false }}>
+          viewport={{ once: true }}>
           <motion.div
             className="font-mono text-7xl sm:text-9xl text-yellow-400 mb-2 tabular-nums"
             style={{ textShadow: '5px 5px 0 rgba(255,215,0,0.3)' }}
@@ -230,7 +230,7 @@ function Ch195() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, type: 'spring' }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="p-3 text-center"
               style={{ border: `3px solid ${s.w}`, boxShadow: `4px 4px 0 ${s.w}`, background: '#111' }}>
               <motion.div className="text-xl mb-1"
@@ -251,7 +251,7 @@ function Ch195() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          viewport={{ once: false }}>
+          viewport={{ once: true }}>
           <div className="font-comic text-2xl text-yellow-400 mb-4">💌 SURAT UNTUK DIRI SENDIRI</div>
           <p className="text-sm font-bold text-white/75 leading-loose text-left">
             Rizki,<br /><br />
@@ -268,21 +268,21 @@ function Ch195() {
 
         {/* CTA */}
         <div className="grid sm:grid-cols-3 gap-3 mb-8">
-          <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false }}
+          <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             transition={{ delay: 0.1 }} className="p-4 text-center"
             style={{ border: '3px solid #22c55e', boxShadow: '4px 4px 0 #22c55e', background: '#111' }}>
             <div className="font-comic text-sm text-green-400 mb-2">🤝 KOLABORASI</div>
             <p className="text-[9px] text-white/50 font-bold mb-3 leading-relaxed">Punya skill yang relevan? Mari bangun bersama!</p>
             <a href="#contact" className="btn-comic text-xs">HUBUNGI →</a>
           </motion.div>
-          <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false }}
+          <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             transition={{ delay: 0.2 }} className="p-4 text-center"
             style={{ border: '3px solid #1a5cff', boxShadow: '4px 4px 0 #1a5cff', background: '#111' }}>
             <div className="font-comic text-sm text-blue-400 mb-2">📄 CV LENGKAP</div>
             <p className="text-[9px] text-white/50 font-bold mb-3 leading-relaxed">Semua pengalaman dan skill yang mendukung inovasi ini</p>
             <a href="#cv" className="btn-comic-blue text-xs">LIHAT CV →</a>
           </motion.div>
-          <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false }}
+          <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             transition={{ delay: 0.3 }} className="p-4 text-center"
             style={{ border: '3px solid #ffd700', boxShadow: '4px 4px 0 #ffd700', background: '#111' }}>
             <div className="font-comic text-sm text-yellow-400 mb-2">🌐 KVT.KOM</div>
@@ -296,7 +296,7 @@ function Ch195() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          viewport={{ once: false }}>
+          viewport={{ once: true }}>
           <motion.div
             className="font-comic text-3xl text-yellow-400 mb-2"
             animate={{ scale: [1, 1.05, 1] }}

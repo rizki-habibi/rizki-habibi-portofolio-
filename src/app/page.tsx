@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic'
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import PanelKomik from '@/components/PanelKomik'
@@ -19,58 +20,62 @@ import InfoKarirKomik from '@/components/InfoKarirKomik'
 import HobiKomik from '@/components/HobiKomik'
 import KomunikasiKomik from '@/components/KomunikasiKomik'
 import EpilogKomik from '@/components/EpilogKomik'
-import GrupBab1 from '@/components/GrupBab1'
-import GrupBab2 from '@/components/GrupBab2'
-import GrupBab3 from '@/components/GrupBab3'
-import GrupBab4 from '@/components/GrupBab4'
-import GrupBab5 from '@/components/GrupBab5'
-import GrupBab6 from '@/components/GrupBab6'
-import GrupBab7 from '@/components/GrupBab7'
-import GrupBab8 from '@/components/GrupBab8'
-import GrupBab9 from '@/components/GrupBab9'
-import GrupBab10 from '@/components/GrupBab10'
-import GrupBab11 from '@/components/GrupBab11'
-import GrupBab12 from '@/components/GrupBab12'
-import GrupBab13 from '@/components/GrupBab13'
-import GrupBab14 from '@/components/GrupBab14'
-import GrupBab15 from '@/components/GrupBab15'
-import GrupBab16 from '@/components/GrupBab16'
-import GrupBab17 from '@/components/GrupBab17'
-import GrupBab18 from '@/components/GrupBab18'
-import GrupBab19 from '@/components/GrupBab19'
-import GrupBab20 from '@/components/GrupBab20'
-import GrupBab21 from '@/components/GrupBab21'
-import GrupBab22 from '@/components/GrupBab22'
-import GrupBab23 from '@/components/GrupBab23'
-import GrupBab24 from '@/components/GrupBab24'
-import GrupBab25 from '@/components/GrupBab25'
-import GrupBab26 from '@/components/GrupBab26'
-import GrupBab27 from '@/components/GrupBab27'
-import GrupBab28 from '@/components/GrupBab28'
-import GrupBab29 from '@/components/GrupBab29'
-import GrupBab30 from '@/components/GrupBab30'
 import CV from '@/components/CV'
 import SeksiKontak from '@/components/SeksiKontak'
 import Footer from '@/components/Footer'
 import ProgressScroll from '@/components/ProgressScroll'
 import KembaliKeAtas from '@/components/KembaliKeAtas'
 import LayarMemuat from '@/components/LayarMemuat'
-import ModeRahasia from '@/components/ModeRahasia'
 import EfekKlikMouse from '@/components/EfekKlikMouse'
-import PaletPerintah from '@/components/PaletPerintah'
-import PesanSelamatDatang from '@/components/PesanSelamatDatang'
 import TautanSosialMelayang from '@/components/TautanSosialMelayang'
 import MarqueTeknologi from '@/components/MarqueTeknologi'
 import PenghitungPengunjung from '@/components/PenghitungPengunjung'
 import HeatmapGitHub from '@/components/HeatmapGitHub'
 import JejakKursor from '@/components/JejakKursor'
-import PemutarMusik from '@/components/PemutarMusik'
 import PenghitungUmur from '@/components/PenghitungUmur'
 import RadarKeahlian from '@/components/RadarKeahlian'
 import GariswaktuTeknologi from '@/components/GariswaktuTeknologi'
 import TesimoniKomik from '@/components/TesimoniKomik'
 import FaqKomik from '@/components/FaqKomik'
 import ProgressKeahlian from '@/components/ProgressKeahlian'
+
+// ── Komponen floating client-only — dimuat setelah halaman selesai render ──
+const ModeRahasia = dynamic(() => import('@/components/ModeRahasia'), { ssr: false })
+const PaletPerintah = dynamic(() => import('@/components/PaletPerintah'), { ssr: false })
+const PesanSelamatDatang = dynamic(() => import('@/components/PesanSelamatDatang'), { ssr: false })
+const PemutarMusik = dynamic(() => import('@/components/PemutarMusik'), { ssr: false })
+
+// ── GrupBab: dimuat lazy saat mendekati viewport (di bawah fold jauh) ──
+const GrupBab1 = dynamic(() => import('@/components/GrupBab1'), { ssr: false })
+const GrupBab2 = dynamic(() => import('@/components/GrupBab2'), { ssr: false })
+const GrupBab3 = dynamic(() => import('@/components/GrupBab3'), { ssr: false })
+const GrupBab4 = dynamic(() => import('@/components/GrupBab4'), { ssr: false })
+const GrupBab5 = dynamic(() => import('@/components/GrupBab5'), { ssr: false })
+const GrupBab6 = dynamic(() => import('@/components/GrupBab6'), { ssr: false })
+const GrupBab7 = dynamic(() => import('@/components/GrupBab7'), { ssr: false })
+const GrupBab8 = dynamic(() => import('@/components/GrupBab8'), { ssr: false })
+const GrupBab9 = dynamic(() => import('@/components/GrupBab9'), { ssr: false })
+const GrupBab10 = dynamic(() => import('@/components/GrupBab10'), { ssr: false })
+const GrupBab11 = dynamic(() => import('@/components/GrupBab11'), { ssr: false })
+const GrupBab12 = dynamic(() => import('@/components/GrupBab12'), { ssr: false })
+const GrupBab13 = dynamic(() => import('@/components/GrupBab13'), { ssr: false })
+const GrupBab14 = dynamic(() => import('@/components/GrupBab14'), { ssr: false })
+const GrupBab15 = dynamic(() => import('@/components/GrupBab15'), { ssr: false })
+const GrupBab16 = dynamic(() => import('@/components/GrupBab16'), { ssr: false })
+const GrupBab17 = dynamic(() => import('@/components/GrupBab17'), { ssr: false })
+const GrupBab18 = dynamic(() => import('@/components/GrupBab18'), { ssr: false })
+const GrupBab19 = dynamic(() => import('@/components/GrupBab19'), { ssr: false })
+const GrupBab20 = dynamic(() => import('@/components/GrupBab20'), { ssr: false })
+const GrupBab21 = dynamic(() => import('@/components/GrupBab21'), { ssr: false })
+const GrupBab22 = dynamic(() => import('@/components/GrupBab22'), { ssr: false })
+const GrupBab23 = dynamic(() => import('@/components/GrupBab23'), { ssr: false })
+const GrupBab24 = dynamic(() => import('@/components/GrupBab24'), { ssr: false })
+const GrupBab25 = dynamic(() => import('@/components/GrupBab25'), { ssr: false })
+const GrupBab26 = dynamic(() => import('@/components/GrupBab26'), { ssr: false })
+const GrupBab27 = dynamic(() => import('@/components/GrupBab27'), { ssr: false })
+const GrupBab28 = dynamic(() => import('@/components/GrupBab28'), { ssr: false })
+const GrupBab29 = dynamic(() => import('@/components/GrupBab29'), { ssr: false })
+const GrupBab30 = dynamic(() => import('@/components/GrupBab30'), { ssr: false })
 
 export default function Home() {
   return (
@@ -83,7 +88,6 @@ export default function Home() {
       <TautanSosialMelayang />
       <JejakKursor />
       <PemutarMusik />
-      {/* SideNavDots dan DarkModeToggle floating dihapus — sudah ada di Navbar */}
 
       <LayarMemuat />
       <ProgressScroll />

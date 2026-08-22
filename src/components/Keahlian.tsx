@@ -53,7 +53,7 @@ export default function Skills() {
               initial={{ opacity: 0, y: 30, scale: 0.85 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.35, delay: i * 0.04 }}
-              viewport={{ once: false, amount: 0.1 }}
+              viewport={{ once: true, amount: 0.1 }}
               whileHover={{ y: -6, rotate: -1 }}
               className="skill-card bg-white p-2 sm:p-3 flex flex-col items-center gap-1.5 sm:gap-2 cursor-default"
             >
@@ -76,7 +76,7 @@ export default function Skills() {
                   initial={{ width: 0 }}
                   whileInView={{ width: `${keahlian.level}%` }}
                   transition={{ duration: 1, delay: 0.3 + i * 0.04, ease: 'easeOut' }}
-                  viewport={{ once: false }}
+                  viewport={{ once: true }}
                   style={{
                     background: `repeating-linear-gradient(-45deg, ${keahlian.color} 0px, ${keahlian.color} 6px, ${keahlian.color}99 6px, ${keahlian.color}99 12px)`,
                   }}
@@ -92,7 +92,7 @@ export default function Skills() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="comic-panel-dark p-8"
         >
           <div className="text-center mb-8">
@@ -105,7 +105,7 @@ export default function Skills() {
                 initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="bg-white/10 border border-white/20 p-4"
               >
                 <div className="flex items-center gap-3 mb-3">
@@ -122,7 +122,7 @@ export default function Skills() {
                     initial={{ width: 0 }}
                     whileInView={{ width: `${keahlian.level}%` }}
                     transition={{ duration: 1.2, delay: 0.2 + i * 0.1, ease: 'easeOut' }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     style={{
                       background: 'repeating-linear-gradient(-45deg, #ffd700 0px, #ffd700 6px, #e6b800 6px, #e6b800 12px)',
                     }}
@@ -138,7 +138,7 @@ export default function Skills() {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="mt-10 comic-panel-yellow p-6 text-center"
         >
           <div className="font-comic text-2xl text-comic-black mb-2">🏆 SERTIFIKASI PROFESIONAL</div>

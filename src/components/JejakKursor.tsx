@@ -158,11 +158,22 @@ export default function CursorTrail() {
     }
     gambar()
 
+    // Pause loop saat tab di-background, resume saat aktif kembali
+    const onVisibilityChange = () => {
+      if (document.hidden) {
+        cancelAnimationFrame(animRef.current)
+      } else {
+        gambar()
+      }
+    }
+    document.addEventListener('visibilitychange', onVisibilityChange)
+
     return () => {
       document.body.style.cursor = ''
       window.removeEventListener('mousemove', onMove)
       window.removeEventListener('click', onKlik)
       window.removeEventListener('resize', resize)
+      document.removeEventListener('visibilitychange', onVisibilityChange)
       cancelAnimationFrame(animRef.current)
     }
   }, [])

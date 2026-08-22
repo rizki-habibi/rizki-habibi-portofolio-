@@ -32,7 +32,7 @@ function KartuInovasi({ no, judul, tag, deskripsi, status, warna, icon }: {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: (no % 10) * 0.04, type: 'spring' }}
-      viewport={{ once: false, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.1 }}
       whileHover={{ y: -4 }}
       onClick={() => setBuka(!buka)}
       className="cursor-pointer p-4"

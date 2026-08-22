@@ -50,7 +50,7 @@ export default function CV() {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="lg:col-span-1"
           >
             <div className="sticky top-24 space-y-4">
@@ -109,7 +109,7 @@ export default function CV() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            viewport={{ once: false, amount: 0.1 }}
+            viewport={{ once: true, amount: 0.1 }}
             className="lg:col-span-2 space-y-6"
           >
             {/* Profil Singkat */}
@@ -174,7 +174,7 @@ export default function CV() {
                     initial={{ opacity: 0, x: -15 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.08 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     className="flex gap-4"
                   >
                     <div className="flex flex-col items-center">
@@ -208,7 +208,7 @@ export default function CV() {
                     initial={{ opacity: 0, x: -15 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.08 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     className="flex gap-4"
                   >
                     <div className="flex flex-col items-center">

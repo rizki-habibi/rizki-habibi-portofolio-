@@ -15,7 +15,7 @@ const stats = [
 
 function CountUp({ target, suffix }: { target: number; suffix: string }) {
   const ref = useRef<HTMLSpanElement>(null)
-  const inView = useInView(ref, { once: false, margin: '-50px' })
+  const inView = useInView(ref, { once: true, margin: '-50px' })
   const motionVal = useMotionValue(0)
   const spring = useSpring(motionVal, { stiffness: 60, damping: 20 })
 
@@ -51,7 +51,7 @@ export default function StatsComic() {
               initial={{ opacity: 0, y: 40, scale: 0.85, rotate: i % 2 === 0 ? -3 : 3 }}
               whileInView={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
               transition={{ duration: 0.5, delay: i * 0.08, type: 'spring', stiffness: 120 }}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               whileHover={{ y: -8, rotate: i % 2 === 0 ? -2 : 2, scale: 1.04 }}
               className="relative overflow-hidden cursor-default"
               style={{ border: `4px solid ${stat.color}`, boxShadow: `6px 6px 0 ${stat.color}`, background: stat.bg }}
@@ -79,7 +79,7 @@ export default function StatsComic() {
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 + i * 0.05 }}
-                  viewport={{ once: false }}
+                  viewport={{ once: true }}
                   className="font-comic text-sm text-comic-black tracking-wide"
                 >
                   {stat.label}
@@ -88,7 +88,7 @@ export default function StatsComic() {
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.25 + i * 0.05 }}
-                  viewport={{ once: false }}
+                  viewport={{ once: true }}
                   className="text-[11px] font-bold text-comic-black/50 mt-1"
                 >
                   {stat.desc}
@@ -110,7 +110,7 @@ export default function StatsComic() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="text-center mt-12"
         >
           <div

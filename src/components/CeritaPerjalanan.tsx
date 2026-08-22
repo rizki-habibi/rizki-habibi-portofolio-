@@ -83,7 +83,7 @@ export default function CeritaPerjalanan() {
               initial={{ opacity: 0, y: 40, rotate: i % 2 === 0 ? -1 : 1 }}
               whileInView={{ opacity: 1, y: 0, rotate: 0 }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              viewport={{ once: false, amount: 0.15 }}
+              viewport={{ once: true, amount: 0.15 }}
               whileHover={{ y: -6, rotate: i % 2 === 0 ? -1 : 1 }}
               className="overflow-hidden"
               style={{
@@ -113,7 +113,7 @@ export default function CeritaPerjalanan() {
                       initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.1 + j * 0.07 }}
-                      viewport={{ once: false }}
+                      viewport={{ once: true }}
                       className="text-sm text-comic-black leading-relaxed"
                     >
                       {kalimat}
@@ -140,7 +140,7 @@ export default function CeritaPerjalanan() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="comic-panel-dark p-8"
         >
           <div className="font-comic text-2xl text-white text-center mb-8">
@@ -159,7 +159,7 @@ export default function CeritaPerjalanan() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1, type: 'spring', stiffness: 120 }}
-                  viewport={{ once: false }}
+                  viewport={{ once: true }}
                   className="flex flex-col items-center text-center gap-2"
                 >
                   {/* Dot */}
@@ -182,7 +182,7 @@ export default function CeritaPerjalanan() {
           initial={{ opacity: 0, scale: 0.8, rotate: -3 }}
           whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 0.5, delay: 0.3, type: 'spring' }}
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
           className="text-center mt-12"
         >
           <div

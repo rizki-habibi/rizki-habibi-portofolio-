@@ -34,7 +34,7 @@ function ComicGrid({ panels }: { panels: { text: string; icon: string; title: st
           initial={{ opacity: 0, scale: 0.85, rotate: i % 3 === 0 ? -2 : i % 3 === 1 ? 0 : 2 }}
           whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ delay: i * 0.07, type: 'spring', stiffness: 120 }}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.1 }}
           whileHover={{ scale: 1.04, rotate: i % 2 === 0 ? -1 : 1, zIndex: 10 }}
           className={`relative overflow-hidden ${p.size === 'lg' ? 'md:col-span-2' : ''}`}
           style={{ border: `3px solid ${p.color}`, boxShadow: `5px 5px 0 ${p.color}`, background: p.bg, minHeight: 120 }}>
@@ -59,7 +59,7 @@ function Ch16() {
     <PanelKomik id="ch16" chNum="CHAPTER 16" judul="WEBSITE DESA DIGITAL" warna="#22c55e" latarBelakang="#f0fdf4">
       <div className="grid md:grid-cols-2 gap-8 items-start mb-10">
         <div>
-          <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: false }}>
+          <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
             <div className="speech-bubble inline-block text-sm mb-4">🏘️ Membangun jembatan digital untuk desa!</div>
             <div className="comic-panel-blue p-5 mb-4">
               <div className="font-comic text-xl text-comic-black mb-3">🌾 MISI: DIGITALISASI DESA</div>
@@ -137,7 +137,7 @@ function Ch17() {
           <div className="grid grid-cols-3 gap-3">
             {stepsQris.map((s, i) => (
               <motion.div key={s.step} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }} viewport={{ once: false }}
+                transition={{ delay: i * 0.1 }} viewport={{ once: true }}
                 whileHover={{ y: -4 }}
                 className="p-3 bg-white text-center"
                 style={{ border: `3px solid ${s.color}`, boxShadow: `4px 4px 0 ${s.color}` }}>
@@ -166,7 +166,7 @@ function Ch17() {
                 <div className="comic-progress">
                   <motion.div className="comic-progress-bar h-full"
                     initial={{ width: 0 }} whileInView={{ width: `${t.pct}%` }}
-                    transition={{ duration: 1, delay: i * 0.1 }} viewport={{ once: false }}
+                    transition={{ duration: 1, delay: i * 0.1 }} viewport={{ once: true }}
                     style={{ background: `repeating-linear-gradient(-45deg,${t.color} 0px,${t.color} 5px,${t.color}88 5px,${t.color}88 10px)` }} />
                 </div>
               </div>
@@ -190,7 +190,7 @@ function Ch18() {
   return (
     <PanelKomik id="ch18" chNum="CHAPTER 18" judul="WEBSITE GLOBAL MAP" warna="#0891b2" latarBelakang="#ecfeff">
       <div className="grid md:grid-cols-2 gap-8 mb-10">
-        <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: false }}>
+        <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
           <div className="speech-bubble inline-block text-sm mb-4">🌏 Peta digital yang menghubungkan semua!</div>
           <p className="text-sm text-comic-black font-bold leading-relaxed mb-4">
             Website Global Map adalah platform peta interaktif yang menghubungkan informasi geografis dengan data sosial-ekonomi,
@@ -203,7 +203,7 @@ function Ch18() {
             { icon: '📊', title: 'Analitik Wilayah', text: 'Dashboard statistik per wilayah untuk pengambilan keputusan berbasis data.', color: '#8b5cf6', bg: '#f5f0ff' },
           ]} />
         </motion.div>
-        <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: false }}>
+        <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
           <div className="comic-panel-dark p-6 mb-4">
             <div className="font-comic text-xl text-white mb-4">🌐 USE CASES</div>
             <div className="space-y-3">
@@ -215,7 +215,7 @@ function Ch18() {
                 { case: 'Visualisasi data kependudukan', icon: '👥', color: '#8b5cf6' },
                 { case: 'Monitoring lingkungan hidup', icon: '🌱', color: '#0891b2' },
               ].map((u, i) => (
-                <motion.div key={u.case} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.08 }} viewport={{ once: false }}
+                <motion.div key={u.case} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.08 }} viewport={{ once: true }}
                   className="flex items-center gap-3 p-2 bg-white/10 border border-white/20">
                   <span className="text-xl">{u.icon}</span>
                   <span className="text-xs text-white font-bold">{u.case}</span>
@@ -254,7 +254,7 @@ function Ch19() {
           <div className="speech-bubble inline-block text-sm mb-6">💼 Perjalanan karir bukan sprint — ini marathon!</div>
           <div className="space-y-4">
             {careerPaths.map((c, i) => (
-              <motion.div key={c.role} initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: false }}
+              <motion.div key={c.role} initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: true }}
                 className="relative overflow-hidden" style={{ border: `3px solid ${c.color}`, boxShadow: `5px 5px 0 ${c.color}`, background: 'white' }}>
                 <div className="flex items-center justify-between px-4 py-2" style={{ background: c.color, borderBottom: '2px solid #0a0a0a' }}>
                   <span className="font-comic text-white text-sm">{c.role}</span>
@@ -303,7 +303,7 @@ function Ch20() {
           { cat: 'Sistem Informasi', icon: '⚙️', items: ['CRUD lengkap', 'Role management', 'Laporan otomatis', 'Dashboard analitik', 'API integration'], color: '#22c55e' },
         ].map((cat, i) => (
           <motion.div key={cat.cat} initial={{ opacity: 0, y: 30, rotate: i % 2 === 0 ? -2 : 2 }}
-            whileInView={{ opacity: 1, y: 0, rotate: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: false }}
+            whileInView={{ opacity: 1, y: 0, rotate: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: true }}
             className="overflow-hidden" style={{ border: `3px solid ${cat.color}`, boxShadow: `5px 5px 0 ${cat.color}`, background: 'white' }}>
             <div className="flex items-center gap-2 px-4 py-3" style={{ background: cat.color, borderBottom: '2px solid #0a0a0a' }}>
               <span className="text-2xl">{cat.icon}</span>
@@ -311,7 +311,7 @@ function Ch20() {
             </div>
             <div className="p-4">
               {cat.items.map((item, j) => (
-                <motion.div key={item} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 + j * 0.06 }} viewport={{ once: false }}
+                <motion.div key={item} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 + j * 0.06 }} viewport={{ once: true }}
                   className="flex items-center gap-2 py-1.5 border-b border-comic-black/10 last:border-0">
                   <div className="w-2 h-2 flex-shrink-0" style={{ background: cat.color }} />
                   <span className="text-xs font-bold text-comic-black">{item}</span>
@@ -358,7 +358,7 @@ function Ch21() {
               { sys: 'E-Musyawarah Desa', desc: 'Platform rapat dan pengambilan keputusan desa secara digital.', icon: '🤝', color: '#22c55e' },
               { sys: 'Sistem Pengaduan Warga', desc: 'Kanal resmi pengaduan dan aspirasi warga berbasis web dan WhatsApp.', icon: '📢', color: '#f59e0b' },
             ].map((s, i) => (
-              <motion.div key={s.sys} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: false }}
+              <motion.div key={s.sys} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: true }}
                 whileHover={{ x: 5 }}
                 className="overflow-hidden" style={{ border: `3px solid ${s.color}`, boxShadow: `4px 4px 0 ${s.color}`, background: 'white' }}>
                 <div className="flex gap-3 p-4">
@@ -452,7 +452,7 @@ function Ch23() {
               { phase: 'LAUNCHING', year: '2026', desc: 'Rilis produk pertama: KVT.kom dan sistem QRIS donasi.', icon: '🚀', color: '#22c55e', done: false },
               { phase: 'SCALING', year: '2027', desc: 'Ekspansi ke lebih banyak kota dan tambah fitur berdasarkan feedback.', icon: '📈', color: '#e63329', done: false },
             ].map((p, i) => (
-              <motion.div key={p.phase} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: false }}
+              <motion.div key={p.phase} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: true }}
                 className="flex gap-4 items-start">
                 <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center font-comic text-white text-sm"
                   style={{ background: p.done ? p.color : '#ccc', border: '2px solid #0a0a0a', boxShadow: '3px 3px 0 #0a0a0a' }}>
@@ -544,7 +544,7 @@ function Ch25() {
               { field: 'Developer + NGO', result: 'Dampak sosial yang terukur dan scalable', icon: '🌱' },
               { field: 'Developer + Komunitas', result: 'Teknologi yang benar-benar dibutuhkan dan diadopsi', icon: '👥' },
             ].map((c, i) => (
-              <motion.div key={c.field} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.08 }} viewport={{ once: false }}
+              <motion.div key={c.field} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.08 }} viewport={{ once: true }}
                 className="flex gap-3 p-3 bg-white" style={{ border: '2px solid #0891b2', boxShadow: '3px 3px 0 #0891b2' }}>
                 <span className="text-2xl flex-shrink-0">{c.icon}</span>
                 <div>

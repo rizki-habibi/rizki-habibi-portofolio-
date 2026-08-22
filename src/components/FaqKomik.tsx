@@ -102,7 +102,7 @@ export default function FaqComic() {
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="flex flex-wrap justify-center gap-1.5 sm:gap-2 mb-8"
         >
           {kategoriList.map((kat) => (
@@ -130,7 +130,7 @@ export default function FaqComic() {
               initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4, delay: i * 0.06 }}
-              viewport={{ once: false, amount: 0.1 }}
+              viewport={{ once: true, amount: 0.1 }}
               className="overflow-hidden"
               style={{
                 border: `3px solid ${terbuka === faq.id ? faq.warna : '#0a0a0a'}`,
@@ -230,7 +230,7 @@ export default function FaqComic() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="mt-10 comic-panel-yellow p-4 sm:p-6 text-center"
         >
           <div className="font-comic text-lg sm:text-xl text-comic-black mb-2">

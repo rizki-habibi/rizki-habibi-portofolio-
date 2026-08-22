@@ -71,7 +71,7 @@ function DigitFlip({ nilai, label, warna, bg }: { nilai: number; label: string; 
 
 export default function AgeCounter() {
   const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: false })
+  const inView = useInView(ref, { once: true })
   const [umur, setUmur] = useState(hitungUmur)
   const [aktif, setAktif] = useState(false)
 
@@ -104,7 +104,7 @@ export default function AgeCounter() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="text-center mb-10"
         >
           <div className="chapter-label mb-3 inline-block">REAL-TIME</div>
@@ -118,7 +118,7 @@ export default function AgeCounter() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-10"
         >
           {unitUtama.map((u) => (
@@ -130,7 +130,7 @@ export default function AgeCounter() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           transition={{ delay: 0.2 }}
           className="grid grid-cols-2 sm:grid-cols-3 gap-3"
         >
@@ -147,7 +147,7 @@ export default function AgeCounter() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.06 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               whileHover={{ y: -3 }}
               className="p-3 text-center"
               style={{ background: item.bg, border: `2px solid ${item.warna}`, boxShadow: `3px 3px 0 ${item.warna}` }}
@@ -163,7 +163,7 @@ export default function AgeCounter() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           transition={{ delay: 0.4 }}
           className="text-center mt-8"
         >

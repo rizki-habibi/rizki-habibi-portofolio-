@@ -56,7 +56,7 @@ function Ch291() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.07, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -5 }}
             style={{ border: `3px solid ${k.warna}`, boxShadow: `4px 4px 0 ${k.warna}`, background: 'white', overflow: 'hidden' }}>
             <div className="px-4 py-2 flex items-center gap-2" style={{ background: k.warna }}>
@@ -119,7 +119,7 @@ function Ch292() {
             initial={{ opacity: 0, scale: 0.9, rotate: i % 2 === 0 ? -1 : 1 }}
             whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ delay: i * 0.07, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ y: -5 }}
             className="p-4"
             style={{ border: `3px solid ${a.warna}`, boxShadow: `4px 4px 0 ${a.warna}`, background: 'white' }}>
@@ -198,7 +198,7 @@ function Ch293() {
                 initial={{ opacity: 0, x: 15 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.08 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="flex gap-2 items-start p-2"
                 style={{ border: '1px solid #22d3ee30', background: '#22d3ee10' }}>
                 <span className="text-lg flex-shrink-0">{a.icon}</span>
@@ -233,7 +233,7 @@ function Ch294() {
             initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.12, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             whileHover={{ x: 5 }}
             style={{ border: `3px solid ${l.warna}`, boxShadow: `5px 5px 0 ${l.warna}`, background: 'white', overflow: 'hidden' }}>
             <div className="flex items-center justify-between px-4 py-2" style={{ background: l.warna }}>
@@ -267,7 +267,7 @@ function Ch294() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: i * 0.1 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="flex gap-2 p-2"
               style={{ background: '#f5f0ff', border: '1px solid #8b5cf650' }}>
               <span className="text-[#8b5cf6] flex-shrink-0">?</span>
@@ -305,7 +305,7 @@ function Ch295to300() {
             initial={{ opacity: 0, x: -25 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.06, type: 'spring' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="flex gap-3 items-center"
             style={{ border: `2px solid ${p.warna}30`, background: `${p.warna}10`, padding: '12px' }}>
             <motion.span className="text-2xl flex-shrink-0"
@@ -323,7 +323,7 @@ function Ch295to300() {
                   <motion.div className="h-full" style={{ background: p.warna }}
                     initial={{ width: 0 }}
                     whileInView={{ width: `${p.probabilitas}%` }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     transition={{ duration: 1.2, ease: 'easeOut', delay: i * 0.06 + 0.3 }} />
                 </div>
                 <span className="font-mono text-[9px] flex-shrink-0" style={{ color: p.warna }}>{p.probabilitas}%</span>

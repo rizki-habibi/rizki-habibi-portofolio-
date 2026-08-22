@@ -134,7 +134,7 @@ function BarisMK({ mk, i }: { mk: MataKuliah; i: number }) {
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ delay: i * 0.04, type: 'spring', stiffness: 200 }}
-      viewport={{ once: false, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.1 }}
       className="border-b border-black/10 hover:bg-black/5 transition-colors">
       <td className="py-1.5 px-2 font-mono text-[8px] text-[#0a0a0a]/40">{mk.kode}</td>
       <td className="py-1.5 px-2 text-xs font-bold text-[#0a0a0a]/80">{mk.nama}</td>
@@ -174,7 +174,7 @@ function PanelSemester({ sem, aktif, onToggle }: { sem: Semester; aktif: boolean
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ type: 'spring', stiffness: 150, delay: sem.nomor * 0.05 }}
-      viewport={{ once: false, amount: 0.1 }}>
+      viewport={{ once: true, amount: 0.1 }}>
       {/* Header semester */}
       <motion.button
         className="w-full text-left overflow-hidden mb-1"
@@ -254,7 +254,7 @@ export default function AkademikKomik() {
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ type: 'spring', stiffness: 150 }}
-          viewport={{ once: false }}>
+          viewport={{ once: true }}>
           <div className="font-comic text-4xl sm:text-5xl text-[#0a0a0a] mb-2"
             style={{ WebkitTextStroke: '2px #0a0a0a' }}>
             📚 REKAP AKADEMIK
@@ -276,7 +276,7 @@ export default function AkademikKomik() {
               initial={{ opacity: 0, scale: 0.85, y: 20 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ delay: i * 0.08, type: 'spring', stiffness: 200 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               whileHover={{ y: -4 }}
               className="text-center p-4"
               style={{ border: `3px solid ${s.w}`, boxShadow: `4px 4px 0 ${s.w}`, background: 'white' }}>
@@ -296,7 +296,7 @@ export default function AkademikKomik() {
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ type: 'spring', stiffness: 130 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           style={{ border: '3px solid #0a0a0a', boxShadow: '5px 5px 0 #0a0a0a', background: 'white' }}>
           <div className="font-comic text-base text-[#0a0a0a] mb-4">📈 GRAFIK IPS PER SEMESTER</div>
           <div className="flex items-end gap-2 h-24">
@@ -310,7 +310,7 @@ export default function AkademikKomik() {
                     initial={{ scaleY: 0, originY: 1 }}
                     whileInView={{ scaleY: 1 }}
                     transition={{ delay: i * 0.1, duration: 0.6, ease: 'easeOut' }}
-                    viewport={{ once: false }}>
+                    viewport={{ once: true }}>
                     <div className="absolute -top-5 left-1/2 -translate-x-1/2 font-comic text-[9px] whitespace-nowrap" style={{ color: s.warna }}>
                       {s.ips?.toFixed(2) ?? '—'}
                     </div>
@@ -330,7 +330,7 @@ export default function AkademikKomik() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ type: 'spring', stiffness: 130 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           style={{ border: '4px solid #ffd700', boxShadow: '6px 6px 0 #ffd700', background: '#0a0a0a' }}>
           <div className="px-4 py-2 flex items-center gap-2" style={{ background: '#ffd700', borderBottom: '2px solid #0a0a0a' }}>
             <span className="text-2xl">🎓</span>
@@ -349,7 +349,7 @@ export default function AkademikKomik() {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.08, type: 'spring' }}
-                  viewport={{ once: false }}
+                  viewport={{ once: true }}
                   className="flex gap-2 items-start">
                   <span className="text-lg flex-shrink-0">{item.icon}</span>
                   <div>
@@ -392,7 +392,7 @@ export default function AkademikKomik() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ type: 'spring', stiffness: 130 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           style={{ border: '3px solid #1a5cff', boxShadow: '5px 5px 0 #1a5cff', background: 'white' }}>
           <div className="font-comic text-base text-[#1a5cff] mb-3">💡 INSIGHT & SARAN AKADEMIK</div>
           <div className="grid sm:grid-cols-2 gap-4">
@@ -422,7 +422,7 @@ export default function AkademikKomik() {
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08, type: 'spring' }}
-                viewport={{ once: false }}>
+                viewport={{ once: true }}>
                 <div className="font-comic text-sm mb-2" style={{ color: item.w }}>{item.judul}</div>
                 {item.poin.map((p, j) => (
                   <div key={j} className="flex gap-2 mb-1">

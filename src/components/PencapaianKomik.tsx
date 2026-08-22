@@ -130,7 +130,7 @@ export default function AchievementsComic() {
                 initial={{ opacity: 0, y: 40, scale: 0.85, rotate: i % 3 === 0 ? -2 : i % 3 === 1 ? 0 : 2 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
                 transition={{ duration: 0.45, delay: i * 0.07, type: 'spring', stiffness: 120 }}
-                viewport={{ once: false, amount: 0.15 }}
+                viewport={{ once: true, amount: 0.15 }}
                 whileHover={{ y: -8, scale: 1.03, rotate: i % 2 === 0 ? -1 : 1 }}
                 className="relative overflow-hidden cursor-default"
                 style={{ border: `3px solid ${badge.color}`, boxShadow: `5px 5px 0 ${badge.color}`, background: badge.bg }}
@@ -172,14 +172,14 @@ export default function AchievementsComic() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="comic-panel-dark p-8"
         >
           <motion.div
             initial={{ opacity: 0, y: -15 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="font-comic text-2xl text-white text-center mb-8"
           >
             🗺️ PETA PERJALANAN
@@ -191,7 +191,7 @@ export default function AchievementsComic() {
                 initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.1 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 whileHover={{ scale: 1.03 }}
                 className="flex items-start gap-3 p-4 bg-white/10 border border-white/20"
               >
@@ -215,7 +215,7 @@ export default function AchievementsComic() {
           initial={{ opacity: 0, scale: 0.85, rotate: -2 }}
           whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 0.5, delay: 0.3, type: 'spring' }}
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
           className="text-center mt-12"
         >
           <div

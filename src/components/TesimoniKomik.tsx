@@ -88,7 +88,7 @@ function BintangRating({ jumlah, warna }: { jumlah: number; warna: string }) {
           initial={{ scale: 0, rotate: -30 }}
           whileInView={{ scale: 1, rotate: 0 }}
           transition={{ delay: i * 0.06, type: 'spring', stiffness: 200 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="text-sm sm:text-base"
           style={{ color: i < jumlah ? warna : '#d1d5db' }}
         >
@@ -118,7 +118,7 @@ export default function TestimonialsComic() {
               initial={{ opacity: 0, y: 40, rotate: i % 3 === 0 ? -2 : i % 3 === 1 ? 0 : 2 }}
               whileInView={{ opacity: 1, y: 0, rotate: 0 }}
               transition={{ duration: 0.45, delay: i * 0.08 }}
-              viewport={{ once: false, amount: 0.15 }}
+              viewport={{ once: true, amount: 0.15 }}
               whileHover={{ y: -6, scale: 1.02 }}
               onClick={() => setAktif(i)}
               className="cursor-pointer relative overflow-hidden"
@@ -220,7 +220,7 @@ export default function TestimonialsComic() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.05, type: 'spring', stiffness: 200 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               whileHover={{ scale: 1.3 }}
               className="w-3 h-3 transition-all"
               style={{

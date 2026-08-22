@@ -2,7 +2,8 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FiGithub, FiMenu, FiX, FiBookOpen, FiSearch, FiMusic, FiList, FiChevronDown, FiMoon, FiSun, FiCommand } from 'react-icons/fi'
+import { FiGithub, FiMenu, FiX, FiBookOpen, FiSearch, FiMusic, FiList, FiChevronDown, FiMoon, FiSun, FiCommand, FiMail } from 'react-icons/fi'
+import { SiInstagram, SiLinkedin, SiWhatsapp } from 'react-icons/si'
 import BukuCerita from '@/components/BukuCerita'
 
 const tautanNav = [
@@ -661,6 +662,29 @@ export default function Navbar() {
                   <FiGithub className="w-4 h-4" />
                   <span>@rizki-habibi</span>
                 </a>
+
+                {/* Sosial media di mobile menu */}
+                <div className="grid grid-cols-4 gap-1 pt-1">
+                  {[
+                    { Icon: SiInstagram, href: 'https://instagram.com/rizkihabibi', label: 'Instagram', bg: '#e1306c' },
+                    { Icon: SiLinkedin, href: 'https://linkedin.com/in/rizki-habibi', label: 'LinkedIn', bg: '#0a66c2' },
+                    { Icon: SiWhatsapp, href: 'https://wa.me/62882009725053', label: 'WhatsApp', bg: '#25d366' },
+                    { Icon: FiMail, href: 'mailto:rizkihub7@gmail.com', label: 'Email', bg: '#1a5cff' },
+                  ].map(({ Icon, href, label, bg }) => (
+                    <a
+                      key={label}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setIsMobileOpen(false)}
+                      title={label}
+                      className="flex items-center justify-center py-2.5 text-white"
+                      style={{ background: bg, border: '2px solid #0a0a0a', boxShadow: '2px 2px 0 #0a0a0a' }}
+                    >
+                      <Icon className="w-4 h-4" />
+                    </a>
+                  ))}
+                </div>
               </div>
             </motion.div>
           )}

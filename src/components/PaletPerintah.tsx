@@ -424,7 +424,7 @@ export default function PaletPerintah() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 2.5 }}
         onClick={() => { setTerbuka(true); setCari('') }}
-        className="fixed bottom-4 right-4 z-40 flex items-center gap-2 font-comic text-[#0a0a0a] text-xs px-3 py-2"
+        className="fixed bottom-4 right-4 z-40 hidden md:flex items-center gap-2 font-comic text-[#0a0a0a] text-xs px-3 py-2"
         style={{ background: '#fff', border: '2px solid #0a0a0a', boxShadow: '3px 3px 0 #0a0a0a' }}
         title="Command Palette â€” Cari Chapter (Ctrl+K)">
         <span className="font-bold">âŒ˜</span>

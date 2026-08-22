@@ -113,7 +113,7 @@ export default function SecretMode() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 20 }}
-            className="fixed bottom-36 right-4 z-40"
+            className="fixed bottom-36 right-4 z-40 hidden lg:block"
           >
             <div
               className="px-3 py-2 font-comic text-[10px] text-[#0a0a0a]/60"

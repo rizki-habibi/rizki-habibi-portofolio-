@@ -22,7 +22,7 @@ export default function BackToTop() {
           whileHover={{ scale: 1.1, y: -3 }}
           whileTap={{ scale: 0.92 }}
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-6 left-6 z-50 w-11 h-11 flex items-center justify-center font-comic text-comic-black"
+          className="fixed bottom-6 right-6 z-50 w-11 h-11 flex items-center justify-center font-comic text-comic-black"
           style={{ background: '#ffd700', border: '3px solid #0a0a0a', boxShadow: '4px 4px 0 #0a0a0a' }}
           title="Kembali ke atas"
         >

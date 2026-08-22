@@ -49,7 +49,7 @@ function TombolKuesioner({ onClick }: { onClick: () => void }) {
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ y: -4, scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="fixed bottom-24 left-4 z-40 flex items-center gap-2 font-comic text-xs px-4 py-3"
+      className="fixed bottom-24 left-4 z-40 hidden lg:flex items-center gap-2 font-comic text-xs px-4 py-3"
       style={{
         background: '#8d55e8',
         border: '3px solid #0a0a0a',

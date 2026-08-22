@@ -1,4 +1,3 @@
-import dynamic from 'next/dynamic'
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import PanelKomik from '@/components/PanelKomik'
@@ -39,24 +38,16 @@ import TesimoniKomik from '@/components/TesimoniKomik'
 import FaqKomik from '@/components/FaqKomik'
 import ProgressKeahlian from '@/components/ProgressKeahlian'
 import ChapterBrowser from '@/components/ChapterBrowser'
-
-// -- Komponen floating client-only --
-const ModeRahasia = dynamic(() => import('@/components/ModeRahasia'), { ssr: false })
-const PaletPerintah = dynamic(() => import('@/components/PaletPerintah'), { ssr: false })
-const PesanSelamatDatang = dynamic(() => import('@/components/PesanSelamatDatang'), { ssr: false })
-const PemutarMusik = dynamic(() => import('@/components/PemutarMusik'), { ssr: false })
+import LayerGlobal from '@/components/LayerGlobal'
 
 export default function Home() {
   return (
     <main style={{ background: '#fafaf7', color: '#0a0a0a' }}>
-      {/* -- LAYER GLOBAL -- */}
-      <ModeRahasia />
+      {/* Layer floating client-only (ssr:false aman karena Client Component) */}
+      <LayerGlobal />
       <EfekKlikMouse />
-      <PaletPerintah />
-      <PesanSelamatDatang />
       <TautanSosialMelayang />
       <JejakKursor />
-      <PemutarMusik />
 
       <LayarMemuat />
       <ProgressScroll />
@@ -163,7 +154,7 @@ export default function Home() {
       <EpilogKomik />
       <div className="comic-divider" />
 
-      {/* CHAPTER BROWSER -- semua 310 chapter ada di sini, klik untuk baca */}
+      {/* CHAPTER BROWSER -- 191 chapter, klik untuk buka halaman tersendiri */}
       <ChapterBrowser />
 
       {/* CV */}

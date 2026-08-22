@@ -42,16 +42,16 @@ function GridTiga({ items }: { items: { icon: string; judul: string; teks: strin
 function Ch101() {
   const aiTools = [
     { nama: 'ChatGPT / GPT-4o', kegunaan: 'Debug, explain code, generate boilerplate, draft artikel teknis dan dokumentasi', icon: '??', warna: '#10a37f' },
-    { nama: 'GitHub Copilot', kegunaan: 'Autocomplete kode cerdas — seperti pair programmer yang tidak pernah lelah dan selalu tersedia', icon: '??', warna: '#0a0a0a' },
+    { nama: 'GitHub Copilot', kegunaan: 'Autocomplete kode cerdas  seperti pair programmer yang tidak pernah lelah dan selalu tersedia', icon: '??', warna: '#0a0a0a' },
     { nama: 'Claude (Anthropic)', kegunaan: 'Analisis kode kompleks, refactoring, dan diskusi arsitektur sistem yang mendalam', icon: '??', warna: '#e8623a' },
     { nama: 'Gemini AI', kegunaan: 'Research, summarize dokumen panjang, dan bantu membuat konten teknis yang terstruktur', icon: '?', warna: '#4285f4' },
     { nama: 'Midjourney / DALL-E', kegunaan: 'Generate ilustrasi untuk presentasi, blog post, dan konten visual proyek', icon: '??', warna: '#8b5cf6' },
     { nama: 'Whisper / ElevenLabs', kegunaan: 'Transkripsi audio & text-to-speech untuk aksesibilitas di platform KVT.kom', icon: '???', warna: '#f59e0b' },
   ]
   return (
-    <PanelBab id="ch101" chNum="CHAPTER 101" judul="AI TOOLS — SENJATA DEVELOPER MODERN" warna="#10a37f" latarBelakang="#edfaf5">
+    <PanelBab id="ch101" chNum="CHAPTER 101" judul="AI TOOLS  SENJATA DEVELOPER MODERN" warna="#10a37f" latarBelakang="#edfaf5">
       <div className="speech-bubble inline-block text-sm mb-6">
-        ?? AI bukan pengganti developer — AI adalah power-up yang membuat developer 10x lebih produktif!
+        ?? AI bukan pengganti developer  AI adalah power-up yang membuat developer 10x lebih produktif!
       </div>
       <div className="grid sm:grid-cols-2 gap-4 mb-8">
         {aiTools.map((t, i) => (
@@ -73,7 +73,7 @@ function Ch101() {
         ))}
       </div>
       <div className="comic-panel-dark p-5">
-        <div className="font-comic text-xl text-white mb-3">?? AI ETHICS — PAKAI DENGAN BIJAK</div>
+        <div className="font-comic text-xl text-white mb-3">?? AI ETHICS  PAKAI DENGAN BIJAK</div>
         <div className="grid sm:grid-cols-3 gap-3">
           {[
             { rule: 'Verifikasi Output AI', desc: 'AI bisa salah. Selalu review dan test kode yang dihasilkan AI sebelum digunakan di produksi', icon: '??' },
@@ -95,16 +95,16 @@ function Ch101() {
 // -- Ch102 ---------------------------------------------------------------------
 function Ch102() {
   const daftarKeahlian = [
-    { skill: 'Supervised Learning', deskripsi: 'Regresi linear, klasifikasi, dan decision tree — fondasi ML yang wajib dipahami setiap developer AI', level: 65, warna: '#1a5cff' },
+    { skill: 'Supervised Learning', deskripsi: 'Regresi linear, klasifikasi, dan decision tree  fondasi ML yang wajib dipahami setiap developer AI', level: 65, warna: '#1a5cff' },
     { skill: 'Neural Networks Dasar', deskripsi: 'Feedforward network, backpropagation, dan activation functions dengan Python & TensorFlow', level: 55, warna: '#8b5cf6' },
     { skill: 'NLP (Text Processing)', deskripsi: 'Tokenisasi, sentiment analysis, dan text classification untuk fitur AI di KVT.kom', level: 60, warna: '#22c55e' },
-    { skill: 'Data Preprocessing', deskripsi: 'Cleaning data, feature engineering, dan normalisasi — 80% waktu ML ada di sini!', level: 70, warna: '#f59e0b' },
+    { skill: 'Data Preprocessing', deskripsi: 'Cleaning data, feature engineering, dan normalisasi  80% waktu ML ada di sini!', level: 70, warna: '#f59e0b' },
     { skill: 'Model Deployment', deskripsi: 'Integrasi model ML ke REST API dengan Flask/FastAPI dan deploy ke cloud server', level: 58, warna: '#e63329' },
   ]
   return (
-    <PanelBab id="ch102" chNum="CHAPTER 102" judul="MACHINE LEARNING — BELAJAR DARI DATA" warna="#8b5cf6" latarBelakang="#f5f0ff">
+    <PanelBab id="ch102" chNum="CHAPTER 102" judul="MACHINE LEARNING  BELAJAR DARI DATA" warna="#8b5cf6" latarBelakang="#f5f0ff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        ?? ML bukan sihir — ini statistik yang bekerja sangat keras!
+        ?? ML bukan sihir  ini statistik yang bekerja sangat keras!
       </div>
       <div className="grid lg:grid-cols-2 gap-8">
         <div className="space-y-3">
@@ -172,13 +172,13 @@ function Ch102() {
 // -- Ch103 ---------------------------------------------------------------------
 function Ch103() {
   return (
-    <PanelBab id="ch103" chNum="CHAPTER 103" judul="CLOUD COMPUTING — SKALAKAN SEGALANYA" warna="#0891b2" latarBelakang="#ecfeff">
+    <PanelBab id="ch103" chNum="CHAPTER 103" judul="CLOUD COMPUTING  SKALAKAN SEGALANYA" warna="#0891b2" latarBelakang="#ecfeff">
       <div className="speech-bubble inline-block text-sm mb-6">
-        ?? Cloud bukan masa depan — cloud adalah sekarang. Developer yang tidak pakai cloud ketinggalan!
+        ?? Cloud bukan masa depan  cloud adalah sekarang. Developer yang tidak pakai cloud ketinggalan!
       </div>
       <div className="grid lg:grid-cols-2 gap-8">
         <GridTiga items={[
-          { icon: '??', judul: 'Vercel (Favorit!)', teks: 'Deploy Next.js dalam hitungan detik. Auto-SSL, CDN global, dan preview URL setiap PR — gratis!', warna: '#0a0a0a', bg: '#f0f0eb' },
+          { icon: '??', judul: 'Vercel (Favorit!)', teks: 'Deploy Next.js dalam hitungan detik. Auto-SSL, CDN global, dan preview URL setiap PR  gratis!', warna: '#0a0a0a', bg: '#f0f0eb' },
           { icon: '??', judul: 'Firebase', teks: 'Realtime database, authentication, dan hosting. Sempurna untuk prototype cepat dan MVP', warna: '#f59e0b', bg: '#fffbeb' },
           { icon: '??', judul: 'DigitalOcean', teks: 'VPS terjangkau untuk hosting Laravel. Droplet $6/bulan sudah cukup untuk project skala kecil-menengah', warna: '#0080ff', bg: '#e8f4ff' },
           { icon: '??', judul: 'AWS S3', teks: 'Object storage untuk file upload, backup, dan static assets. Pay-as-you-go yang sangat hemat biaya', warna: '#ff9900', bg: '#fff8ee' },
@@ -222,9 +222,9 @@ function Ch104() {
     { nama: 'Exposed Credentials', pencegahan: 'Gunakan .env file dan secret manager. JANGAN commit API key atau password ke repository!', icon: '???', warna: '#22c55e', level: 'KRITIS' },
   ]
   return (
-    <PanelBab id="ch104" chNum="CHAPTER 104" judul="CYBER SECURITY — KODE YANG AMAN" warna="#e63329" latarBelakang="#fef2f2">
+    <PanelBab id="ch104" chNum="CHAPTER 104" judul="CYBER SECURITY  KODE YANG AMAN" warna="#e63329" latarBelakang="#fef2f2">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        ?? Keamanan bukan fitur tambahan — ini fondasi dari setiap baris kode yang ditulis!
+        ?? Keamanan bukan fitur tambahan  ini fondasi dari setiap baris kode yang ditulis!
       </div>
       <div className="space-y-3 mb-8">
         {ancaman.map((a, i) => (
@@ -262,7 +262,7 @@ function Ch104() {
 // -- Ch105 ---------------------------------------------------------------------
 function Ch105() {
   return (
-    <PanelBab id="ch105" chNum="CHAPTER 105" judul="DATABASE MASTERY — SENI MENGELOLA DATA" warna="#4479A1" latarBelakang="#eef4fb">
+    <PanelBab id="ch105" chNum="CHAPTER 105" judul="DATABASE MASTERY  SENI MENGELOLA DATA" warna="#4479A1" latarBelakang="#eef4fb">
       <div className="speech-bubble inline-block text-sm mb-6">
         ??? Database yang buruk bisa menghancurkan aplikasi yang sempurna. Design it right!
       </div>
@@ -274,7 +274,7 @@ function Ch105() {
             { icon: '??', judul: 'MongoDB', teks: 'Document database untuk data tidak terstruktur. Fleksibel tapi butuh discipline yang kuat', warna: '#22c55e', bg: '#f0fdf4' },
             { icon: '?', judul: 'Redis', teks: 'In-memory cache yang bikin aplikasi 100x lebih cepat. Queue, session, dan rate limiting', warna: '#e63329', bg: '#fef2f2' },
             { icon: '??', judul: 'Firebase Firestore', teks: 'Realtime database untuk prototype cepat dan aplikasi yang butuh sync data live', warna: '#f59e0b', bg: '#fffbeb' },
-            { icon: '??', judul: 'Query Optimization', teks: 'EXPLAIN query, proper indexing, dan avoid N+1 problem — ilmu yang membedakan junior dari senior', warna: '#8b5cf6', bg: '#f5f0ff' },
+            { icon: '??', judul: 'Query Optimization', teks: 'EXPLAIN query, proper indexing, dan avoid N+1 problem  ilmu yang membedakan junior dari senior', warna: '#8b5cf6', bg: '#f5f0ff' },
           ]} />
         </div>
         <div className="space-y-4">
@@ -285,7 +285,7 @@ function Ch105() {
               { tip: 'Index foreign key dan kolom yang sering di-WHERE atau ORDER BY', icon: '??' },
               { tip: 'Gunakan soft delete (deleted_at) daripada hard delete untuk audit trail', icon: '???' },
               { tip: 'Pisahkan database read dan write untuk aplikasi traffic tinggi', icon: '??' },
-              { tip: 'Gunakan migration untuk semua perubahan schema — jangan edit manual!', icon: '??' },
+              { tip: 'Gunakan migration untuk semua perubahan schema  jangan edit manual!', icon: '??' },
             ].map(t => (
               <div key={t.tip} className="flex items-start gap-2 mb-2">
                 <span className="text-base flex-shrink-0">{t.icon}</span>
@@ -308,17 +308,17 @@ function Ch105() {
 // -- Ch106 ---------------------------------------------------------------------
 function Ch106() {
   const prinsip = [
-    { nama: 'Single Responsibility', singkat: 'SRP', desc: 'Satu class/function hanya punya satu tanggung jawab. Jika ada "dan" dalam deskripsinya — pisahkan!', warna: '#1a5cff', icon: '??' },
+    { nama: 'Single Responsibility', singkat: 'SRP', desc: 'Satu class/function hanya punya satu tanggung jawab. Jika ada "dan" dalam deskripsinya  pisahkan!', warna: '#1a5cff', icon: '??' },
     { nama: 'Open/Closed', singkat: 'OCP', desc: 'Terbuka untuk extension, tertutup untuk modification. Tambah fitur tanpa ubah kode yang sudah ada', warna: '#22c55e', icon: '??' },
     { nama: "Don't Repeat Yourself", singkat: 'DRY', desc: 'Setiap pengetahuan harus punya satu representasi. Duplikasi kode = technical debt yang terus membengkak', warna: '#e63329', icon: '??' },
     { nama: 'KISS (Keep It Simple)', singkat: 'KISS', desc: 'Simple solution yang bekerja > complex solution yang brilliant. Kode dibaca lebih sering dari ditulis!', warna: '#f59e0b', icon: '??' },
-    { nama: 'YAGNI', singkat: 'YAGNI', desc: "You Aren't Gonna Need It — jangan implement fitur yang belum dibutuhkan sekarang. Build for today!", warna: '#8b5cf6', icon: '??' },
+    { nama: 'YAGNI', singkat: 'YAGNI', desc: "You Aren't Gonna Need It  jangan implement fitur yang belum dibutuhkan sekarang. Build for today!", warna: '#8b5cf6', icon: '??' },
     { nama: 'Separation of Concerns', singkat: 'SoC', desc: 'Logic bisnis terpisah dari presentation layer. MVC pattern adalah implementasi dari prinsip ini', warna: '#0891b2', icon: '???' },
   ]
   return (
-    <PanelBab id="ch106" chNum="CHAPTER 106" judul="CLEAN CODE — SENI MENULIS KODE YANG INDAH" warna="#22c55e" latarBelakang="#f0fdf4">
+    <PanelBab id="ch106" chNum="CHAPTER 106" judul="CLEAN CODE  SENI MENULIS KODE YANG INDAH" warna="#22c55e" latarBelakang="#f0fdf4">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        ? Clean code bukan tentang perfeksionisme — ini tentang komunikasi antar developer!
+        ? Clean code bukan tentang perfeksionisme  ini tentang komunikasi antar developer!
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
         {prinsip.map((p, i) => (
@@ -364,9 +364,9 @@ function Ch106() {
 // -- Ch107 ---------------------------------------------------------------------
 function Ch107() {
   return (
-    <PanelBab id="ch107" chNum="CHAPTER 107" judul="API DESIGN — BAHASA ANTAR SISTEM" warna="#f59e0b" latarBelakang="#fffbeb">
+    <PanelBab id="ch107" chNum="CHAPTER 107" judul="API DESIGN  BAHASA ANTAR SISTEM" warna="#f59e0b" latarBelakang="#fffbeb">
       <div className="speech-bubble inline-block text-sm mb-6">
-        ?? API yang baik adalah produk tersendiri — developer yang menggunakannya adalah pelanggannya!
+        ?? API yang baik adalah produk tersendiri  developer yang menggunakannya adalah pelanggannya!
       </div>
       <div className="grid lg:grid-cols-2 gap-8">
         <div className="space-y-4">
@@ -394,13 +394,13 @@ function Ch107() {
               <div>
                 <div className="font-comic text-xs text-[#1a5cff] mb-1">REST API</div>
                 {['Multiple endpoints', 'Fixed response shape', 'Mudah dipahami', 'Laravel built-in support'].map(r => (
-                  <div key={r} className="text-[10px] font-bold text-[#0a0a0a]/70">• {r}</div>
+                  <div key={r} className="text-[10px] font-bold text-[#0a0a0a]/70"> {r}</div>
                 ))}
               </div>
               <div>
                 <div className="font-comic text-xs text-[#e63329] mb-1">GraphQL</div>
                 {['Single endpoint', 'Flexible queries', 'Butuh setup lebih', 'Cocok untuk complex apps'].map(r => (
-                  <div key={r} className="text-[10px] font-bold text-[#0a0a0a]/70">• {r}</div>
+                  <div key={r} className="text-[10px] font-bold text-[#0a0a0a]/70"> {r}</div>
                 ))}
               </div>
             </div>
@@ -427,14 +427,14 @@ function Ch107() {
 // -- Ch108 ---------------------------------------------------------------------
 function Ch108() {
   return (
-    <PanelBab id="ch108" chNum="CHAPTER 108" judul="OPEN SOURCE — KODE UNTUK DUNIA" warna="#22c55e" latarBelakang="#f0fdf4">
+    <PanelBab id="ch108" chNum="CHAPTER 108" judul="OPEN SOURCE  KODE UNTUK DUNIA" warna="#22c55e" latarBelakang="#f0fdf4">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        ?? Open source adalah fondasi internet modern. Kita semua adalah penerima manfaatnya — waktunya berkontribusi!
+        ?? Open source adalah fondasi internet modern. Kita semua adalah penerima manfaatnya  waktunya berkontribusi!
       </div>
       <GridTiga items={[
         { icon: '??', judul: 'GitHub Contribution', teks: 'Aktif di GitHub: buka issue, submit PR kecil, review kode. Mulai dari proyek yang kamu gunakan sehari-hari', warna: '#0a0a0a', bg: '#f0f0eb' },
         { icon: '??', judul: 'Laravel Ecosystem', teks: 'Kontribusi ke Laravel dan package ekosistemnya. Bug fix kecil pun sangat dihargai komunitas', warna: '#FF2D20', bg: '#fef2f2' },
-        { icon: '??', judul: 'Dokumentasi', teks: 'Improve dokumentasi proyek open source. Terjemahkan ke Bahasa Indonesia — berkontribusi nyata!', warna: '#1a5cff', bg: '#e8f0ff' },
+        { icon: '??', judul: 'Dokumentasi', teks: 'Improve dokumentasi proyek open source. Terjemahkan ke Bahasa Indonesia  berkontribusi nyata!', warna: '#1a5cff', bg: '#e8f0ff' },
         { icon: '??', judul: 'Bug Reporting', teks: 'Report bug dengan detail yang jelas: steps to reproduce, expected vs actual. Sangat membantu maintainer!', warna: '#f59e0b', bg: '#fffbeb' },
         { icon: '??', judul: 'Buat & Share', teks: 'Publish package/library sendiri di npm atau Packagist. Solusi yang kamu buat mungkin dibutuhkan ribuan developer lain', warna: '#8b5cf6', bg: '#f5f0ff' },
         { icon: '??', judul: 'Support Project', teks: 'Star, sponsor, atau donasi ke project yang kamu gunakan. Maintainer butuh dukungan untuk terus berkarya', warna: '#e63329', bg: '#fef2f2' },
@@ -442,7 +442,7 @@ function Ch108() {
       <div className="mt-6 comic-panel-dark p-5 text-center">
         <div className="font-comic text-xl text-white mb-2">?? FILOSOFI OPEN SOURCE</div>
         <p className="text-sm font-bold text-white/70 max-w-2xl mx-auto">
-          &ldquo;Standing on the shoulders of giants.&rdquo; — Semua yang kita build sekarang berdiri di atas ribuan kontribusi
+          &ldquo;Standing on the shoulders of giants.&rdquo;  Semua yang kita build sekarang berdiri di atas ribuan kontribusi
           open source dari developer di seluruh dunia. Kita berkewajiban untuk menambahkan bahu kita juga ke tumpukan itu.
         </p>
       </div>
@@ -453,7 +453,7 @@ function Ch108() {
 // -- Ch109 ---------------------------------------------------------------------
 function Ch109() {
   return (
-    <PanelBab id="ch109" chNum="CHAPTER 109" judul="UI/UX — DESAIN YANG MANUSIAWI" warna="#e1306c" latarBelakang="#fff0f5">
+    <PanelBab id="ch109" chNum="CHAPTER 109" judul="UI/UX  DESAIN YANG MANUSIAWI" warna="#e1306c" latarBelakang="#fff0f5">
       <div className="speech-bubble inline-block text-sm mb-6">
         ?? Code yang bagus tanpa UI yang baik = mobil mewah tanpa setir!
       </div>
@@ -462,10 +462,10 @@ function Ch109() {
           <GridTiga items={[
             { icon: '???', judul: 'Visual Hierarchy', teks: 'Atur elemen berdasarkan kepentingan. Mata pengguna harus tahu harus ke mana pertama!', warna: '#e1306c', bg: '#fff0f5' },
             { icon: '??', judul: 'Color System', teks: 'Pilih maksimal 3 warna utama. Konsistensi lebih penting dari keindahan yang beragam', warna: '#8b5cf6', bg: '#f5f0ff' },
-            { icon: '??', judul: 'Spacing & Grid', teks: '8px grid system untuk konsistensi. Whitespace adalah desain — jangan takut ruang kosong!', warna: '#1a5cff', bg: '#e8f0ff' },
+            { icon: '??', judul: 'Spacing & Grid', teks: '8px grid system untuk konsistensi. Whitespace adalah desain  jangan takut ruang kosong!', warna: '#1a5cff', bg: '#e8f0ff' },
             { icon: '??', judul: 'Mobile First', teks: 'Desain untuk layar kecil dulu, lalu scale up. 70%+ traffic sekarang datang dari mobile!', warna: '#22c55e', bg: '#f0fdf4' },
             { icon: '?', judul: 'Aksesibilitas', teks: 'Alt text, keyboard navigation, dan kontras warna yang cukup. Desain untuk semua orang!', warna: '#f59e0b', bg: '#fffbeb' },
-            { icon: '??', judul: 'Iterasi Terus', teks: 'Desain pertama tidak akan sempurna — dan tidak perlu sempurna. Test dengan user nyata dan iterate!', warna: '#0891b2', bg: '#ecfeff' },
+            { icon: '??', judul: 'Iterasi Terus', teks: 'Desain pertama tidak akan sempurna  dan tidak perlu sempurna. Test dengan user nyata dan iterate!', warna: '#0891b2', bg: '#ecfeff' },
           ]} />
         </div>
         <div className="space-y-4">
@@ -502,17 +502,17 @@ function Ch109() {
 // -- Ch110 ---------------------------------------------------------------------
 function Ch110() {
   return (
-    <PanelBab id="ch110" chNum="CHAPTER 110" judul="WEB3 & BLOCKCHAIN — MASA DEPAN INTERNET" warna="#f59e0b" latarBelakang="#fffbeb">
+    <PanelBab id="ch110" chNum="CHAPTER 110" judul="WEB3 & BLOCKCHAIN  MASA DEPAN INTERNET" warna="#f59e0b" latarBelakang="#fffbeb">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        ?? Web3 bukan hype kosong — tapi juga bukan solusi untuk semua masalah. Pahami dulu sebelum adopt!
+        ?? Web3 bukan hype kosong  tapi juga bukan solusi untuk semua masalah. Pahami dulu sebelum adopt!
       </div>
       <GridTiga items={[
         { icon: '??', judul: 'Blockchain Basics', teks: 'Distributed ledger yang immutable dan transparan. Cocok untuk use case yang butuh trust tanpa pihak ketiga', warna: '#f59e0b', bg: '#fffbeb' },
-        { icon: '??', judul: 'Smart Contract', teks: 'Kode yang berjalan otomatis di blockchain saat kondisi terpenuhi. Ethereum, Solidity — fondasi DeFi', warna: '#1a5cff', bg: '#e8f0ff' },
+        { icon: '??', judul: 'Smart Contract', teks: 'Kode yang berjalan otomatis di blockchain saat kondisi terpenuhi. Ethereum, Solidity  fondasi DeFi', warna: '#1a5cff', bg: '#e8f0ff' },
         { icon: '??', judul: 'NFT & Digital Assets', teks: 'Kepemilikan digital yang verifiable. Potensi untuk sertifikat akademik KVT.kom yang tidak bisa dipalsukan!', warna: '#8b5cf6', bg: '#f5f0ff' },
         { icon: '??', judul: 'DeFi', teks: 'Layanan keuangan tanpa bank. QRIS donasi masa depan bisa pakai blockchain untuk transparansi total!', warna: '#22c55e', bg: '#f0fdf4' },
         { icon: '??', judul: 'Decentralized Apps', teks: 'dApps berjalan tanpa server terpusat. Tahan sensor dan lebih demokratis dari web tradisional', warna: '#0891b2', bg: '#ecfeff' },
-        { icon: '?', judul: 'Layer 2 Solutions', teks: 'Solana, Polygon, Lightning Network — solusi untuk masalah skalabilitas blockchain generasi pertama', warna: '#e63329', bg: '#fef2f2' },
+        { icon: '?', judul: 'Layer 2 Solutions', teks: 'Solana, Polygon, Lightning Network  solusi untuk masalah skalabilitas blockchain generasi pertama', warna: '#e63329', bg: '#fef2f2' },
       ]} />
       <div className="mt-6 comic-panel-dark p-5">
         <div className="font-comic text-xl text-white mb-3">?? KAPAN PAKAI BLOCKCHAIN?</div>
@@ -520,13 +520,13 @@ function Ch110() {
           <div>
             <div className="font-comic text-sm text-green-400 mb-2">? COCOK UNTUK</div>
             {['Sertifikat digital yang tidak bisa dipalsukan', 'Sistem donasi transparan tanpa perantara', 'Supply chain tracking dari produsen ke konsumen', 'Voting system yang audit-proof'].map(c => (
-              <div key={c} className="text-xs text-white/70 font-bold mb-1">• {c}</div>
+              <div key={c} className="text-xs text-white/70 font-bold mb-1"> {c}</div>
             ))}
           </div>
           <div>
             <div className="font-comic text-sm text-red-400 mb-2">? TIDAK COCOK UNTUK</div>
             {['Aplikasi yang butuh update data sangat cepat', 'Data yang bersifat privat dan sensitif', 'Sistem yang butuh rollback/undo data', 'Proyek dengan budget dan tim kecil'].map(c => (
-              <div key={c} className="text-xs text-white/70 font-bold mb-1">• {c}</div>
+              <div key={c} className="text-xs text-white/70 font-bold mb-1"> {c}</div>
             ))}
           </div>
         </div>

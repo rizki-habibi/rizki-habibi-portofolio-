@@ -65,7 +65,7 @@ function StoryPanel({ panels }: { panels: { title: string; text: string; icon: s
   )
 }
 
-// Ch36 — Kesehatan Digital
+// Ch36  Kesehatan Digital
 function Ch36() {
   return (
     <PanelBab id="ch36" chNum="CHAPTER 36" judul="KESEHATAN DIGITAL" warna="#22c55e" latarBelakang="#f0fdf4">
@@ -112,7 +112,7 @@ function Ch36() {
   )
 }
 
-// Ch37 — Lingkungan Hidup
+// Ch37  Lingkungan Hidup
 function Ch37() {
   return (
     <PanelBab id="ch37" chNum="CHAPTER 37" judul="TEKNOLOGI UNTUK LINGKUNGAN" warna="#16a34a" latarBelakang="#f0fdf4">
@@ -132,7 +132,7 @@ function Ch37() {
             <div className="font-comic text-lg text-comic-black mb-3">?? FILOSOFI TECH FOR EARTH</div>
             <p className="text-sm text-comic-black leading-relaxed">
               Inovasi terbaik bukan yang paling canggih, tapi yang paling berkelanjutan. Setiap proyek yang saya bangun
-              harus mempertimbangkan dampak lingkungan — mulai dari efisiensi server, hingga mendorong gaya hidup berkelanjutan.
+              harus mempertimbangkan dampak lingkungan  mulai dari efisiensi server, hingga mendorong gaya hidup berkelanjutan.
             </p>
           </div>
           <GridTiga items={[
@@ -147,7 +147,7 @@ function Ch37() {
   )
 }
 
-// Ch38 — Dampak Sosial
+// Ch38  Dampak Sosial
 function Ch38() {
   return (
     <PanelBab id="ch38" chNum="CHAPTER 38" judul="DAMPAK SOSIAL TEKNOLOGI" warna="#1a5cff" latarBelakang="#e8f0ff">
@@ -202,10 +202,10 @@ function Ch38() {
   )
 }
 
-// Ch39 — Personal Growth
+// Ch39  Personal Growth
 function Ch39() {
   return (
-    <PanelBab id="ch39" chNum="CHAPTER 39" judul="PERSONAL GROWTH — BERTUMBUH SETIAP HARI" warna="#f59e0b" latarBelakang="#fffbeb">
+    <PanelBab id="ch39" chNum="CHAPTER 39" judul="PERSONAL GROWTH  BERTUMBUH SETIAP HARI" warna="#f59e0b" latarBelakang="#fffbeb">
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
           <div className="speech-bubble inline-block text-sm mb-4">?? Versi terbaik diri sendiri dimulai dari hari ini!</div>
@@ -231,7 +231,7 @@ function Ch39() {
         </div>
         <div>
           <StoryPanel panels={[
-            { icon: '??', title: 'Mindset Bertumbuh', text: 'Gagal bukan akhir — itu feedback dari alam semesta untuk mencoba lagi.', color: '#f59e0b', wide: true },
+            { icon: '??', title: 'Mindset Bertumbuh', text: 'Gagal bukan akhir  itu feedback dari alam semesta untuk mencoba lagi.', color: '#f59e0b', wide: true },
             { icon: '??', title: 'Focus & Deep Work', text: 'Satu tugas selesai sempurna lebih baik dari sepuluh setengah jalan.', color: '#1a5cff' },
             { icon: '??', title: 'Konsistensi', text: 'Bukan tentang motivasi, tapi tentang disiplin harian.', color: '#22c55e' },
             { icon: '??', title: 'Humble & Grateful', text: 'Selalu bersyukur atas setiap pencapaian kecil.', color: '#e63329' },
@@ -243,7 +243,7 @@ function Ch39() {
   )
 }
 
-// Ch40 — Leadership
+// Ch40  Leadership
 function Ch40() {
   return (
     <PanelBab id="ch40" chNum="CHAPTER 40" judul="LEADERSHIP & TEAM MANAGEMENT" warna="#e63329" latarBelakang="#fef2f2">
@@ -253,7 +253,7 @@ function Ch40() {
           <div className="comic-panel p-5 mb-4">
             <div className="font-comic text-lg text-comic-black mb-3">?? GAYA KEPEMIMPINAN SAYA</div>
             <p className="text-sm text-comic-black leading-relaxed mb-3">
-              Saya percaya pada kepemimpinan yang <strong>servant first</strong> — memimpin dengan membantu tim berkembang,
+              Saya percaya pada kepemimpinan yang <strong>servant first</strong>  memimpin dengan membantu tim berkembang,
               bukan hanya mendelegasikan tugas. Setiap anggota tim adalah aset yang harus diasah.
             </p>
             <div className="space-y-2">
@@ -287,7 +287,7 @@ function Ch40() {
   )
 }
 
-// Ch41 — Problem Solving
+// Ch41  Problem Solving
 function Ch41() {
   return (
     <PanelBab id="ch41" chNum="CHAPTER 41" judul="PROBLEM SOLVING MINDSET" warna="#8b5cf6" latarBelakang="#f5f0ff">
@@ -296,12 +296,12 @@ function Ch41() {
           <div className="speech-bubble inline-block text-sm mb-4">?? Setiap masalah adalah puzzle yang menunggu dipecahkan!</div>
           <div className="space-y-3">
             {[
-              { step: '01. DEFINE', desc: 'Pahami masalah dengan benar — masalah yang salah didefinisikan akan menghasilkan solusi yang salah.', icon: '??', color: '#8b5cf6' },
+              { step: '01. DEFINE', desc: 'Pahami masalah dengan benar  masalah yang salah didefinisikan akan menghasilkan solusi yang salah.', icon: '??', color: '#8b5cf6' },
               { step: '02. ANALYZE', desc: 'Pecah masalah menjadi bagian-bagian kecil yang bisa diselesaikan satu per satu.', icon: '??', color: '#1a5cff' },
-              { step: '03. BRAINSTORM', desc: 'Generate semua kemungkinan solusi tanpa menghakimi — kuantitas dulu, kualitas kemudian.', icon: '??', color: '#22c55e' },
-              { step: '04. PROTOTYPE', desc: 'Buat solusi minimum yang bisa diuji — jangan tunggu sempurna.', icon: '??', color: '#f59e0b' },
+              { step: '03. BRAINSTORM', desc: 'Generate semua kemungkinan solusi tanpa menghakimi  kuantitas dulu, kualitas kemudian.', icon: '??', color: '#22c55e' },
+              { step: '04. PROTOTYPE', desc: 'Buat solusi minimum yang bisa diuji  jangan tunggu sempurna.', icon: '??', color: '#f59e0b' },
               { step: '05. TEST', desc: 'Uji solusi dengan kasus nyata dan edge cases yang mungkin terjadi.', icon: '??', color: '#e63329' },
-              { step: '06. ITERATE', desc: 'Perbaiki berdasarkan hasil uji — terus berulang sampai masalah benar-benar selesai.', icon: '??', color: '#0891b2' },
+              { step: '06. ITERATE', desc: 'Perbaiki berdasarkan hasil uji  terus berulang sampai masalah benar-benar selesai.', icon: '??', color: '#0891b2' },
             ].map((s, i) => (
               <motion.div key={s.step} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.09 }} viewport={{ once: true }}
                 className="flex gap-3 p-3 bg-white" style={{ border: `2px solid ${s.color}`, boxShadow: `3px 3px 0 ${s.color}` }}>
@@ -317,7 +317,7 @@ function Ch41() {
             { icon: '??', title: 'Data-Driven', text: 'Keputusan berdasarkan data dan fakta, bukan asumsi.', color: '#1a5cff' },
             { icon: '??', title: 'Creative Thinking', text: 'Solusi terbaik kadang datang dari analogi dan perspektif yang tidak terduga.', color: '#22c55e' },
             { icon: '??', title: 'Time-boxing', text: 'Tetapkan batas waktu untuk mencegah overthinking.', color: '#f59e0b' },
-            { icon: '??', title: 'Rubber Ducking', text: 'Jelaskan masalah ke orang lain (atau bebek karet) — sering menemukan solusi sendiri!', color: '#e63329', wide: true },
+            { icon: '??', title: 'Rubber Ducking', text: 'Jelaskan masalah ke orang lain (atau bebek karet)  sering menemukan solusi sendiri!', color: '#e63329', wide: true },
           ]} />
         </div>
       </div>
@@ -325,10 +325,10 @@ function Ch41() {
   )
 }
 
-// Ch42 — Soft Skills
+// Ch42  Soft Skills
 function Ch42() {
   return (
-    <PanelBab id="ch42" chNum="CHAPTER 42" judul="SOFT SKILLS — KEKUATAN TERSEMBUNYI" warna="#0891b2" latarBelakang="#ecfeff">
+    <PanelBab id="ch42" chNum="CHAPTER 42" judul="SOFT SKILLS  KEKUATAN TERSEMBUNYI" warna="#0891b2" latarBelakang="#ecfeff">
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
           <div className="speech-bubble inline-block text-sm mb-4">?? Hard skill mengantarkanmu ke pintu, soft skill membukanya!</div>
@@ -336,7 +336,7 @@ function Ch42() {
             { icon: '???', title: 'Public Speaking', text: 'Presentasi teknis kepada klien, dosen, dan komunitas tanpa rasa takut.', color: '#0891b2', bg: '#ecfeff' },
             { icon: '??', title: 'Technical Writing', text: 'Dokumentasi yang jelas, dokumentasi yang menyelamatkan tim di masa depan.', color: '#1a5cff', bg: '#e8f0ff' },
             { icon: '??', title: 'Empathy', text: 'Memahami kebutuhan pengguna dan rekan kerja dari sudut pandang mereka.', color: '#22c55e', bg: '#f0fdf4' },
-            { icon: '?', title: 'Adaptability', text: 'Teknologi berubah cepat — kemampuan beradaptasi lebih berharga dari hafalan.', color: '#f59e0b', bg: '#fffbeb' },
+            { icon: '?', title: 'Adaptability', text: 'Teknologi berubah cepat  kemampuan beradaptasi lebih berharga dari hafalan.', color: '#f59e0b', bg: '#fffbeb' },
             { icon: '??', title: 'Time Management', text: 'Prioritaskan yang penting, delegasikan yang bisa didelegasikan.', color: '#e63329', bg: '#fef2f2' },
             { icon: '??', title: 'Negotiation', text: 'Menegosiasikan scope proyek, deadline, dan ekspektasi dengan klien.', color: '#8b5cf6', bg: '#f5f0ff' },
             { icon: '??', title: 'Passion', text: 'Semangat yang tulus terasa oleh siapapun yang bekerja bersamamu.', color: '#0891b2', bg: '#ecfeff' },
@@ -352,8 +352,8 @@ function Ch42() {
                 'Komunikasi Krisis Untuk ASN',
                 'Komunikasi Strategis Untuk ASN',
                 'Menjadi Pengguna Media Sosial yang Bijak',
-                'Digital Wellness — Keseimbangan Hidup Digital',
-                'Mindset Digital — Growth Mindset',
+                'Digital Wellness  Keseimbangan Hidup Digital',
+                'Mindset Digital  Growth Mindset',
                 'Character Building Tangkal Judi Online',
                 'What is Business Pitching',
                 'Pengantar Mindset Digital',
@@ -370,7 +370,7 @@ function Ch42() {
   )
 }
 
-// Ch43 — Matematika & Logika
+// Ch43  Matematika & Logika
 function Ch43() {
   return (
     <PanelBab id="ch43" chNum="CHAPTER 43" judul="LOGIKA & COMPUTATIONAL THINKING" warna="#f59e0b" latarBelakang="#fffbeb">
@@ -379,10 +379,10 @@ function Ch43() {
           <div className="speech-bubble inline-block text-sm mb-4">?? Coding adalah matematika yang bisa bicara!</div>
           <StoryPanel panels={[
             { icon: '??', title: 'Algoritma', text: 'Memahami dan mengimplementasikan algoritma sorting, searching, dan graph.', color: '#f59e0b', wide: true },
-            { icon: '??', title: 'Data Structure', text: 'Array, linked list, tree, hash map — memilih struktur data yang tepat.', color: '#1a5cff' },
+            { icon: '??', title: 'Data Structure', text: 'Array, linked list, tree, hash map  memilih struktur data yang tepat.', color: '#1a5cff' },
             { icon: '??', title: 'Rekursi', text: 'Memecahkan masalah kompleks dengan pendekatan rekursif yang elegan.', color: '#22c55e' },
             { icon: '??', title: 'Big O Notation', text: 'Menganalisis efisiensi kode agar performa tetap baik di skala besar.', color: '#e63329' },
-            { icon: '??', title: 'Design Patterns', text: 'MVC, Singleton, Observer — pola solusi untuk masalah yang berulang.', color: '#8b5cf6', wide: true },
+            { icon: '??', title: 'Design Patterns', text: 'MVC, Singleton, Observer  pola solusi untuk masalah yang berulang.', color: '#8b5cf6', wide: true },
           ]} />
         </div>
         <div>
@@ -403,7 +403,7 @@ function Ch43() {
               </div>
             ))}
             <div className="mt-4 text-center">
-              <div className="font-comic text-sm text-white/50">Sertifikat Computational Thinking (SD, SMP, SMA) — DTS 2025</div>
+              <div className="font-comic text-sm text-white/50">Sertifikat Computational Thinking (SD, SMP, SMA)  DTS 2025</div>
             </div>
           </div>
         </div>
@@ -412,13 +412,13 @@ function Ch43() {
   )
 }
 
-// Ch44 — Creativity
+// Ch44  Creativity
 function Ch44() {
   return (
     <PanelBab id="ch44" chNum="CHAPTER 44" judul="KREATIVITAS TANPA BATAS" warna="#ec4899" latarBelakang="#fdf2f8">
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
-          <div className="speech-bubble inline-block text-sm mb-4">?? Kreativitas adalah otot — semakin dilatih semakin kuat!</div>
+          <div className="speech-bubble inline-block text-sm mb-4">?? Kreativitas adalah otot  semakin dilatih semakin kuat!</div>
           <div className="space-y-3">
             {[
               { area: 'Desain Grafis', tools: ['Canva', 'CorelDraw', 'Affinity'], icon: '??', color: '#ec4899' },
@@ -445,7 +445,7 @@ function Ch44() {
             { icon: '??', title: 'Color Psychology', text: 'Warna memengaruhi emosi dan keputusan pengguna secara langsung.', color: '#ec4899', wide: true },
             { icon: '??', title: 'Storytelling', text: 'Setiap produk adalah sebuah cerita yang harus memikat dari awal.', color: '#8b5cf6' },
             { icon: '??', title: 'Ritme Desain', text: 'Pengulangan, variasi, dan emphasis menciptakan desain yang bernyawa.', color: '#1a5cff' },
-            { icon: '??', title: 'Ide Tanpa Batas', text: 'Tidak ada ide yang terlalu gila — hanya ide yang belum dieksekusi.', color: '#22c55e' },
+            { icon: '??', title: 'Ide Tanpa Batas', text: 'Tidak ada ide yang terlalu gila  hanya ide yang belum dieksekusi.', color: '#22c55e' },
             { icon: '??', title: 'Remix Culture', text: 'Kreativitas adalah tentang menggabungkan hal-hal yang sudah ada dengan cara baru.', color: '#f59e0b', wide: true },
           ]} />
         </div>
@@ -454,10 +454,10 @@ function Ch44() {
   )
 }
 
-// Ch45 — Mimpi dan Visi
+// Ch45  Mimpi dan Visi
 function Ch45() {
   return (
-    <PanelBab id="ch45" chNum="CHAPTER 45" judul="DREAM BIG — VISI JANGKA PANJANG" warna="#8b5cf6" latarBelakang="#f5f0ff">
+    <PanelBab id="ch45" chNum="CHAPTER 45" judul="DREAM BIG  VISI JANGKA PANJANG" warna="#8b5cf6" latarBelakang="#f5f0ff">
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
           <div className="speech-bubble inline-block text-sm mb-4">?? Bermimpilah sebesar langit, lalu bangun tangganya satu per satu!</div>
@@ -485,10 +485,10 @@ function Ch45() {
             <div className="text-center space-y-4">
               <div className="text-5xl">??</div>
               <p className="font-bold text-white leading-relaxed">
-                Membangun ekosistem digital Indonesia yang inklusif — di mana setiap warga negara, dari desa terpencil
+                Membangun ekosistem digital Indonesia yang inklusif  di mana setiap warga negara, dari desa terpencil
                 hingga kota besar, memiliki akses yang sama terhadap pendidikan, ekonomi, dan layanan digital berkualitas.
               </p>
-              <div className="font-comic text-comic-yellow text-sm">— Rizki Habibi, 2026</div>
+              <div className="font-comic text-comic-yellow text-sm"> Rizki Habibi, 2026</div>
             </div>
           </div>
           <GridTiga items={[

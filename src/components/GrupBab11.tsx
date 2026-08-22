@@ -41,7 +41,7 @@ function GridTiga({ items }: { items: { icon: string; judul: string; teks: strin
 // -- Ch111 ---------------------------------------------------------------------
 function Ch111() {
   return (
-    <PanelBab id="ch111" chNum="CHAPTER 111" judul="WARISAN DIGITAL — APA YANG KUTINGGALKAN" warna="#8b5cf6" latarBelakang="#f5f0ff">
+    <PanelBab id="ch111" chNum="CHAPTER 111" judul="WARISAN DIGITAL  APA YANG KUTINGGALKAN" warna="#8b5cf6" latarBelakang="#f5f0ff">
       <div className="speech-bubble inline-block text-sm mb-6">
         ?? Apa yang akan diingat orang dari kode yang kamu tulis? Dari platform yang kamu bangun?
       </div>
@@ -52,7 +52,7 @@ function Ch111() {
             { warisan: 'Website Desa Digital', dampak: 'Puluhan desa yang kini punya kehadiran digital dan bisa bersaing di era modern', icon: '???', warna: '#22c55e' },
             { warisan: 'Open Source Contributions', dampak: 'Kode yang dipakai developer lain di seluruh Indonesia dan mungkin dunia', icon: '??', warna: '#0a0a0a' },
             { warisan: 'Mentor & Inspirasi', dampak: 'Mahasiswa yang terinsipirasi mulai coding karena melihat perjalanan saya', icon: '??', warna: '#f59e0b' },
-            { warisan: 'Inovasi IoT Daur Ulang', dampak: 'Membuktikan bahwa inovasi tidak butuh modal besar — kreativitas adalah modal utama', icon: '??', warna: '#e63329' },
+            { warisan: 'Inovasi IoT Daur Ulang', dampak: 'Membuktikan bahwa inovasi tidak butuh modal besar  kreativitas adalah modal utama', icon: '??', warna: '#e63329' },
           ].map((w, i) => (
             <motion.div key={w.warisan}
               initial={{ opacity: 0, x: -25 }}
@@ -101,7 +101,7 @@ function Ch112() {
   return (
     <PanelBab id="ch112" chNum="CHAPTER 112" judul="SOSIAL & DAMPAK NYATA TEKNOLOGI" warna="#22c55e" latarBelakang="#f0fdf4">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        ?? Teknologi terbaik bukan yang paling canggih — tapi yang paling banyak membantu manusia!
+        ?? Teknologi terbaik bukan yang paling canggih  tapi yang paling banyak membantu manusia!
       </div>
       <GridTiga items={[
         { icon: '???', judul: 'Digitalisasi Desa', teks: '75.000+ desa Indonesia belum punya website layak. Satu developer bisa bantu 100 desa!', warna: '#22c55e', bg: '#f0fdf4' },
@@ -160,9 +160,9 @@ function Ch114() {
     { kepada: 'Open Source Community', pesan: 'Terima kasih atas semua alat, library, dan framework yang membuat pekerjaan saya jauh lebih mudah. Saya berjanji untuk berkontribusi balik.', icon: '??', warna: '#f59e0b' },
   ]
   return (
-    <PanelBab id="ch114" chNum="CHAPTER 114" judul="SURAT — PESAN UNTUK MEREKA" warna="#8b5cf6" latarBelakang="#f5f0ff">
+    <PanelBab id="ch114" chNum="CHAPTER 114" judul="SURAT  PESAN UNTUK MEREKA" warna="#8b5cf6" latarBelakang="#f5f0ff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        ?? Ada beberapa hal yang perlu disampaikan — kepada mereka yang ada dalam perjalanan ini
+        ?? Ada beberapa hal yang perlu disampaikan  kepada mereka yang ada dalam perjalanan ini
       </div>
       <div className="space-y-4">
         {pesan.map((p, i) => (
@@ -191,7 +191,7 @@ function Ch114() {
 // -- Ch115 ---------------------------------------------------------------------
 function Ch115() {
   return (
-    <PanelBab id="ch115" chNum="CHAPTER 115" judul="MIMPI YANG BELUM TERWUJUD — BUCKET LIST" warna="#f59e0b" latarBelakang="#fffbeb">
+    <PanelBab id="ch115" chNum="CHAPTER 115" judul="MIMPI YANG BELUM TERWUJUD  BUCKET LIST" warna="#f59e0b" latarBelakang="#fffbeb">
       <div className="speech-bubble inline-block text-sm mb-6">
         ?? Mimpi yang ditulis adalah mimpi yang memiliki kesempatan untuk menjadi nyata!
       </div>
@@ -235,9 +235,9 @@ function Ch115() {
 // -- Ch116 ---------------------------------------------------------------------
 function Ch116() {
   return (
-    <PanelBab id="ch116" chNum="CHAPTER 116" judul="REFLEKSI — CERMIN PERJALANAN INI" warna="#0891b2" latarBelakang="#ecfeff">
+    <PanelBab id="ch116" chNum="CHAPTER 116" judul="REFLEKSI  CERMIN PERJALANAN INI" warna="#0891b2" latarBelakang="#ecfeff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        ?? Sesekali berhenti dan lihat ke belakang — bukan untuk menyesal, tapi untuk bersyukur sudah sejauh ini!
+        ?? Sesekali berhenti dan lihat ke belakang  bukan untuk menyesal, tapi untuk bersyukur sudah sejauh ini!
       </div>
       <div className="grid lg:grid-cols-2 gap-8">
         <div className="space-y-4">
@@ -298,15 +298,15 @@ function Ch116() {
 // -- Ch117 ---------------------------------------------------------------------
 function Ch117() {
   return (
-    <PanelBab id="ch117" chNum="CHAPTER 117" judul="INDONESIA DIGITAL — PERAN KITA" warna="#e63329" latarBelakang="#fef2f2">
+    <PanelBab id="ch117" chNum="CHAPTER 117" judul="INDONESIA DIGITAL  PERAN KITA" warna="#e63329" latarBelakang="#fef2f2">
       <div className="speech-bubble inline-block text-sm mb-6">
-        ???? Indonesia punya 270 juta manusia berbakat — kita hanya perlu infrastruktur digital yang merata!
+        ???? Indonesia punya 270 juta manusia berbakat  kita hanya perlu infrastruktur digital yang merata!
       </div>
       <GridTiga items={[
-        { icon: '??', judul: 'Ekonomi Digital 2030', teks: 'Indonesia ditargetkan jadi ekonomi digital terbesar di Asia Tenggara — Rp 4.500 triliun market size!', warna: '#e63329', bg: '#fef2f2' },
+        { icon: '??', judul: 'Ekonomi Digital 2030', teks: 'Indonesia ditargetkan jadi ekonomi digital terbesar di Asia Tenggara  Rp 4.500 triliun market size!', warna: '#e63329', bg: '#fef2f2' },
         { icon: '??', judul: 'Agritech Lokal', teks: 'Petani Indonesia butuh teknologi. Smart farming, marketplace hasil pertanian, dan supply chain digital', warna: '#22c55e', bg: '#f0fdf4' },
         { icon: '??', judul: 'Healthtech Indonesia', teks: 'Telemedicine dan rekam medis digital bisa menyelamatkan nyawa di daerah terpencil tanpa dokter', warna: '#1a5cff', bg: '#e8f0ff' },
-        { icon: '??', judul: 'Edtech Nusantara', teks: 'Platform pendidikan yang memahami konteks budaya dan bahasa daerah Indonesia — bukan copy paste barat', warna: '#f59e0b', bg: '#fffbeb' },
+        { icon: '??', judul: 'Edtech Nusantara', teks: 'Platform pendidikan yang memahami konteks budaya dan bahasa daerah Indonesia  bukan copy paste barat', warna: '#f59e0b', bg: '#fffbeb' },
         { icon: '??', judul: 'Fintech Inklusif', teks: 'QRIS telah merevolusi pembayaran. Berikutnya: akses kredit dan investasi untuk UMKM di seluruh Indonesia', warna: '#8b5cf6', bg: '#f5f0ff' },
         { icon: '??', judul: 'Startup Lokal', teks: 'Gojek, Tokopedia, Traveloka lahir dari Indonesia. Siapa startup unicorn Indonesia berikutnya?', warna: '#0891b2', bg: '#ecfeff' },
       ]} />
@@ -324,9 +324,9 @@ function Ch118() {
     { tahun: '2030', aksi: 'KVT.kom 100.000 pengguna + Series A + Go International', icon: '??', warna: '#e63329' },
   ]
   return (
-    <PanelBab id="ch118" chNum="CHAPTER 118" judul="ROADMAP 2026-2030 — PETA JALAN BESAR" warna="#1a5cff" latarBelakang="#e8f0ff">
+    <PanelBab id="ch118" chNum="CHAPTER 118" judul="ROADMAP 2026-2030  PETA JALAN BESAR" warna="#1a5cff" latarBelakang="#e8f0ff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        ??? Tanpa peta, semua jalan terasa sama. Ini peta perjalanan saya — dan saya siap jalan!
+        ??? Tanpa peta, semua jalan terasa sama. Ini peta perjalanan saya  dan saya siap jalan!
       </div>
       <div className="relative mb-8">
         <div className="absolute left-5 sm:left-6 top-0 bottom-0 w-0.5"
@@ -343,7 +343,7 @@ function Ch118() {
                 style={{ background: r.warna, border: '2px solid #0a0a0a', boxShadow: '2px 2px 0 #0a0a0a' }}>{r.icon}</div>
               <div className="p-4"
                 style={{ border: `3px solid ${r.warna}`, boxShadow: `4px 4px 0 ${r.warna}`, background: 'white' }}>
-                <span className="font-comic text-base" style={{ color: r.warna }}>{r.tahun} — </span>
+                <span className="font-comic text-base" style={{ color: r.warna }}>{r.tahun}  </span>
                 <span className="font-bold text-sm text-[#0a0a0a]">{r.aksi}</span>
               </div>
             </motion.div>
@@ -364,7 +364,7 @@ function Ch118() {
 // -- Ch119 ---------------------------------------------------------------------
 function Ch119() {
   return (
-    <PanelBab id="ch119" chNum="CHAPTER 119" judul="EPILOG AGUNG — SEBELUM CHAPTER TERAKHIR" warna="#ffd700" latarBelakang="#fffbeb" gelap>
+    <PanelBab id="ch119" chNum="CHAPTER 119" judul="EPILOG AGUNG  SEBELUM CHAPTER TERAKHIR" warna="#ffd700" latarBelakang="#fffbeb" gelap>
       <div className="max-w-3xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -404,7 +404,7 @@ function Ch119() {
           style={{ border: '3px solid #ffd700', boxShadow: '5px 5px 0 #ffd700', background: '#111', borderRadius: 12 }}>
           <p className="text-sm font-bold text-white/80 leading-relaxed">
             Portofolio ini bukan resume biasa. Ini adalah perjalanan seorang developer muda yang percaya bahwa
-            kode bukan sekadar pekerjaan — ini adalah cara untuk <span className="text-yellow-400">mengubah dunia, satu baris kode dalam satu waktu.</span>
+            kode bukan sekadar pekerjaan  ini adalah cara untuk <span className="text-yellow-400">mengubah dunia, satu baris kode dalam satu waktu.</span>
           </p>
         </motion.div>
       </div>
@@ -415,7 +415,7 @@ function Ch119() {
 // -- Ch120 FINAL ---------------------------------------------------------------
 function Ch120() {
   return (
-    <PanelBab id="ch120" chNum="CHAPTER 120" judul="BERSAMBUNG... — THE END IS THE BEGINNING" warna="#ffd700" latarBelakang="#fffbeb" gelap>
+    <PanelBab id="ch120" chNum="CHAPTER 120" judul="BERSAMBUNG...  THE END IS THE BEGINNING" warna="#ffd700" latarBelakang="#fffbeb" gelap>
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.7, rotate: -5 }}
@@ -460,7 +460,7 @@ function Ch120() {
           <div className="font-comic text-2xl text-yellow-400 mb-3">?? PESAN TERAKHIR</div>
           <p className="text-sm font-bold text-white/80 leading-relaxed max-w-2xl mx-auto">
             Kamu sudah membaca 120 chapter tentang seorang developer muda dari Jember yang bermimpi besar.
-            Cerita ini belum berakhir — ini baru babak pertama dari perjalanan panjang yang akan terus berlanjut.
+            Cerita ini belum berakhir  ini baru babak pertama dari perjalanan panjang yang akan terus berlanjut.
             <br /><br />
             Jika ada satu hal yang ingin saya sampaikan setelah 120 chapter ini:
             <br />
@@ -468,7 +468,7 @@ function Ch120() {
               &ldquo;Mulailah dari sekarang. Persis di sini, persis seperti ini, dengan apa yang kamu punya sekarang.&rdquo;
             </span>
             <br /><br />
-            <span className="text-white/50">— Rizki Habibi, Jember, 2026</span>
+            <span className="text-white/50"> Rizki Habibi, Jember, 2026</span>
           </p>
         </motion.div>
 
@@ -503,7 +503,7 @@ function Ch120() {
           className="text-center">
           <div className="font-comic text-xl text-yellow-400 mb-2">? THE STORY CONTINUES...</div>
           <div className="font-comic text-sm text-white/40 tracking-widest">
-            --- RIZKI HABIBI PORTFOLIO · 2026 ---
+            --- RIZKI HABIBI PORTFOLIO  2026 ---
           </div>
         </motion.div>
       </div>

@@ -452,10 +452,10 @@ export default function HalamanRahasia() {
               </p>
               <div className="mt-4 pt-4 border-t border-green-500/10">
                 <a
-                  href="mailto:rizkihabibi2432@gmail.com"
+                  href="mailto:rizkihub7@gmail.com"
                   className="font-mono text-xs text-green-400 hover:text-green-300 transition-colors"
                 >
-                  📧 rizkihabibi2432@gmail.com
+                  📧 rizkihub7@gmail.com
                 </a>
               </div>
             </motion.div>

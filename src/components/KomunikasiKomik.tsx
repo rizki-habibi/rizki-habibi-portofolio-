@@ -40,7 +40,7 @@ const socialLinks = [
   { icon: SiLinkedin, label: 'LinkedIn', val: 'Rizki Habibi', href: 'https://linkedin.com/in/rizki-habibi', color: '#0a66c2' },
   { icon: SiInstagram, label: 'Instagram', val: '@rizkihabibi', href: 'https://instagram.com/rizkihabibi', color: '#e1306c' },
   { icon: SiWhatsapp, label: 'WhatsApp', val: '+62 882-009-725-053', href: 'https://wa.me/62882009725053', color: '#25d366' },
-  { icon: FiMail, label: 'Email', val: 'rizkihabibi2432@gmail.com', href: 'mailto:rizkihabibi2432@gmail.com', color: '#1a5cff' },
+  { icon: FiMail, label: 'Email', val: 'rizkihub7@gmail.com', href: 'mailto:rizkihub7@gmail.com', color: '#1a5cff' },
 ]
 
 export default function KomunikasiComic() {

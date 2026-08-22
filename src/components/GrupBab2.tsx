@@ -213,7 +213,7 @@ function Ch28() {
 // Ch29
 function Ch29() {
   return (
-    <PanelKomik id="ch29" chNum="CHAPTER 29" judul="KEAMANAN SIBER — ETIKA HACKER" warna="#e63329" latarBelakang="#fef2f2">
+    <PanelKomik id="ch29" chNum="CHAPTER 29" judul="KEAMANAN SIBER — BELAJAR ETIKA & PERTAHANAN" warna="#e63329" latarBelakang="#fef2f2">
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
           <div className="speech-bubble inline-block text-sm mb-4">🛡️ Keamanan digital adalah hak setiap orang!</div>
@@ -313,7 +313,7 @@ function Ch30() {
 // Ch31
 function Ch31() {
   return (
-    <PanelKomik id="ch31" chNum="CHAPTER 31" judul="DATABASE & DATA ENGINEERING" warna="#4479a1" latarBelakang="#eff6ff">
+    <PanelKomik id="ch31" chNum="CHAPTER 31" judul="DATABASE — SKILL & TOOLS YANG SAYA KUASAI" warna="#4479a1" latarBelakang="#eff6ff">
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
           <div className="speech-bubble inline-block text-sm mb-4">🗄️ Data adalah aset terbesar era digital!</div>

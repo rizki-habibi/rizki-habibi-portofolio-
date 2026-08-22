@@ -201,7 +201,7 @@ export default function Hero() {
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.54 }} className="flex flex-col xs:flex-row flex-wrap gap-1.5 sm:gap-3 text-[10px] sm:text-xs font-bold text-comic-black">
               <a href="tel:+62882009725053" className="flex items-center gap-1 hover:text-comic-blue transition-colors">📞 +62 882-009-725-053</a>
               <span className="text-comic-black/30 hidden xs:block">|</span>
-              <a href="mailto:rizkihabibi2432@gmail.com" className="flex items-center gap-1 hover:text-comic-blue transition-colors truncate-responsive">✉️ rizkihabibi2432@gmail.com</a>
+              <a href="mailto:rizkihub7@gmail.com" className="flex items-center gap-1 hover:text-comic-blue transition-colors truncate-responsive">✉️ rizkihub7@gmail.com</a>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.56 }} className="flex flex-wrap gap-1.5 sm:gap-2">

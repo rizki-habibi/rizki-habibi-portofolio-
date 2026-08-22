@@ -163,7 +163,7 @@ function Ch47() {
 // Ch48 — Kolaborasi Global
 function Ch48() {
   return (
-    <PanelBab id="ch48" chNum="CHAPTER 48" judul="KOLABORASI GLOBAL" warna="#0891b2" latarBelakang="#ecfeff">
+    <PanelBab id="ch48" chNum="CHAPTER 48" judul="KOLABORASI GLOBAL — EKSPANSI PROYEK KE DUNIA" warna="#0891b2" latarBelakang="#ecfeff">
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
           <div className="speech-bubble inline-block text-sm mb-4">🌐 Internet menghapus batas — dunia adalah canvas kita!</div>
@@ -327,7 +327,7 @@ function Ch50() {
 // Ch51 — Bersyukur
 function Ch51() {
   return (
-    <PanelBab id="ch51" chNum="CHAPTER 51" judul="RASA SYUKUR — GRATITUDE" warna="#22c55e" latarBelakang="#f0fdf4">
+    <PanelBab id="ch51" chNum="CHAPTER 51" judul="RASA SYUKUR — TERIMA KASIH KEPADA MEREKA" warna="#22c55e" latarBelakang="#f0fdf4">
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
           <div className="speech-bubble inline-block text-sm mb-4">🙏 Gratitude is the foundation of abundance!</div>
@@ -432,7 +432,7 @@ function Ch52() {
 // Ch53 — Smart City
 function Ch53() {
   return (
-    <PanelBab id="ch53" chNum="CHAPTER 53" judul="SMART CITY — KOTA CERDAS" warna="#0891b2" latarBelakang="#ecfeff">
+    <PanelBab id="ch53" chNum="CHAPTER 53" judul="SMART CITY — KONTRIBUSI NYATA UNTUK JEMBER" warna="#0891b2" latarBelakang="#ecfeff">
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
           <div className="speech-bubble inline-block text-sm mb-4">🏙️ Kota yang cerdas dimulai dari warga yang sadar teknologi!</div>

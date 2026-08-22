@@ -427,7 +427,7 @@ const KontenP05 = () => (
     {[
       { icon: <FiGithub />, label: 'github.com/rizkihabibi', warna: '#0a0a0a', bg: 'white' },
       { icon: <FiLinkedin />, label: 'linkedin/rizki-habibi', warna: 'white', bg: '#0077b5' },
-      { icon: <FiMail />, label: 'rizkihabibi@email.com', warna: 'white', bg: '#e63329' },
+      { icon: <FiMail />, label: 'rizkihub7@gmail.com', warna: 'white', bg: '#e63329' },
       { icon: <FiPhone />, label: '+62 xxx-xxxx-xxxx', warna: 'white', bg: '#22c55e' },
     ].map((item, i) => (
       <motion.div key={i}

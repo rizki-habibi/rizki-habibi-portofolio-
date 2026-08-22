@@ -9,7 +9,7 @@ const links = [
   { icon: SiLinkedin, href: 'https://linkedin.com/in/rizki-habibi', label: 'LinkedIn' },
   { icon: SiInstagram, href: 'https://instagram.com/rizkihabibi', label: 'Instagram' },
   { icon: SiWhatsapp, href: 'https://wa.me/62882009725053', label: 'WhatsApp' },
-  { icon: FiMail, href: 'mailto:rizkihabibi2432@gmail.com', label: 'Email' },
+  { icon: FiMail, href: 'mailto:rizkihub7@gmail.com', label: 'Email' },
 ]
 
 const tautanNav = [

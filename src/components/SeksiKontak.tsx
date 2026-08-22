@@ -9,7 +9,7 @@ const socials = [
   { icon: SiLinkedin, label: 'LinkedIn', value: 'Rizki Habibi', href: 'https://linkedin.com/in/rizki-habibi', color: '#0a66c2', bg: '#e8f2ff' },
   { icon: SiInstagram, label: 'Instagram', value: '@rizkihabibi', href: 'https://instagram.com/rizkihabibi', color: '#e1306c', bg: '#fff0f5' },
   { icon: SiWhatsapp, label: 'WhatsApp', value: '+62 882-009-725-053', href: 'https://wa.me/62882009725053', color: '#25d366', bg: '#f0fff4' },
-  { icon: FiMail, label: 'Email', value: 'rizkihabibi2432@gmail.com', href: 'mailto:rizkihabibi2432@gmail.com', color: '#1a5cff', bg: '#e8f0ff' },
+  { icon: FiMail, label: 'Email', value: 'rizkihub7@gmail.com', href: 'mailto:rizkihub7@gmail.com', color: '#1a5cff', bg: '#e8f0ff' },
 ]
 
 export default function ContactSection() {
@@ -83,7 +83,7 @@ export default function ContactSection() {
           className="text-center mb-12"
         >
           <a
-            href="mailto:rizkihabibi2432@gmail.com"
+            href="mailto:rizkihub7@gmail.com"
             className="btn-comic inline-flex items-center gap-3 text-lg"
           >
             <FiSend className="w-5 h-5" />
@@ -142,8 +142,8 @@ export default function ContactSection() {
               <FiPhone className="w-4 h-4" /> +62 882-009-725-053
             </a>
             <span className="text-comic-black/30 hidden sm:block">|</span>
-            <a href="mailto:rizkihabibi2432@gmail.com" className="flex items-center gap-2 font-bold text-sm text-comic-black hover:text-comic-blue transition-colors">
-              <FiMail className="w-4 h-4" /> rizkihabibi2432@gmail.com
+            <a href="mailto:rizkihub7@gmail.com" className="flex items-center gap-2 font-bold text-sm text-comic-black hover:text-comic-blue transition-colors">
+              <FiMail className="w-4 h-4" /> rizkihub7@gmail.com
             </a>
           </div>
         </motion.div>

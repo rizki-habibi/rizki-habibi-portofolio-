@@ -71,7 +71,7 @@ export default function CV() {
               <div className="comic-panel p-4 space-y-3">
                 <div className="font-comic text-sm text-comic-black mb-2">📬 KONTAK</div>
                 {[
-                  { icon: FiMail, val: 'rizkihabibi2432@gmail.com' },
+                  { icon: FiMail, val: 'rizkihub7@gmail.com' },
                   { icon: FiPhone, val: '+62 882-009-725-053' },
                   { icon: FiMapPin, val: 'Jember, Indonesia' },
                 ].map(({ icon: Icon, val }) => (

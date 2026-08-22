@@ -266,7 +266,7 @@ function Ch58() {
               Jika kamu memiliki passion di bidang teknologi, desain, atau konten kreatif dan ingin berkontribusi
               pada ekosistem KVT — pintu selalu terbuka!
             </p>
-            <a href="mailto:rizkihabibi2432@gmail.com" className="btn-comic-blue inline-block mt-3 text-sm">HUBUNGI SAYA</a>
+            <a href="mailto:rizkihub7@gmail.com" className="btn-comic-blue inline-block mt-3 text-sm">HUBUNGI SAYA</a>
           </div>
         </div>
       </div>

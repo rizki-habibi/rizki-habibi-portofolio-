@@ -53,7 +53,7 @@ const faqData = [
   {
     id: 6,
     pertanyaan: 'Bagaimana cara menghubungi kamu untuk proyek?',
-    jawaban: 'Cara tercepat: WhatsApp ke +62 882-009-725-053. Bisa juga via email rizkihabibi2432@gmail.com. Biasanya saya merespon dalam 1–3 jam di hari kerja. Untuk proyek, kita mulai dengan konsultasi singkat gratis untuk memahami kebutuhan.',
+    jawaban: 'Cara tercepat: WhatsApp ke +62 882-009-725-053. Bisa juga via email rizkihub7@gmail.com. Biasanya saya merespon dalam 1–3 jam di hari kerja. Untuk proyek, kita mulai dengan konsultasi singkat gratis untuk memahami kebutuhan.',
     icon: '📞',
     warna: '#e63329',
     bg: '#fef2f2',
@@ -210,7 +210,7 @@ export default function FaqComic() {
                             💬 WHATSAPP SEKARANG
                           </a>
                           <a
-                            href="mailto:rizkihabibi2432@gmail.com"
+                            href="mailto:rizkihub7@gmail.com"
                             className="btn-comic-outline text-[10px] sm:text-xs py-1.5 px-3 sm:px-4"
                           >
                             ✉️ KIRIM EMAIL

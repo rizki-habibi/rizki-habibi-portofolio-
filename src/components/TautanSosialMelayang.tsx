@@ -10,7 +10,7 @@ const socials = [
   { Icon: SiInstagram, href: 'https://instagram.com/rizkihabibi',       label: 'Instagram', warna: '#e1306c', bg: '#fff0f5' },
   { Icon: SiLinkedin,  href: 'https://linkedin.com/in/rizki-habibi',    label: 'LinkedIn',  warna: '#0a66c2', bg: '#e8f2ff' },
   { Icon: SiWhatsapp,  href: 'https://wa.me/62882009725053',            label: 'WhatsApp',  warna: '#25d366', bg: '#f0fff4' },
-  { Icon: FiMail,      href: 'mailto:rizkihabibi2432@gmail.com',        label: 'Email',     warna: '#1a5cff', bg: '#e8f0ff' },
+  { Icon: FiMail,      href: 'mailto:rizkihub7@gmail.com',        label: 'Email',     warna: '#1a5cff', bg: '#e8f0ff' },
 ]
 
 export default function SocialFloat() {

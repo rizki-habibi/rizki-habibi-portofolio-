@@ -40,6 +40,7 @@ import ProgressKeahlian from '@/components/ProgressKeahlian'
 import ChapterBrowser from '@/components/ChapterBrowser'
 import LayerGlobal from '@/components/LayerGlobal'
 import JasaGratis from '@/components/JasaGratis'
+import KepribadianKomik from '@/components/KepribadianKomik'
 
 export default function Home() {
   return (
@@ -68,6 +69,10 @@ export default function Home() {
 
       {/* CHAPTER 02 — MY POWERS */}
       <Keahlian />
+      <div className="comic-divider" />
+
+      {/* KEPRIBADIAN — kemampuan unik, minat, kekurangan */}
+      <KepribadianKomik />
       <div className="comic-divider" />
 
       {/* SKILL PROGRESS BARS */}

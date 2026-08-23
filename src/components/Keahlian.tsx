@@ -24,11 +24,17 @@ const daftarKeahlian = [
 
 const keahlianLunak = [
   { emoji: '🧩', name: 'Problem Solving', level: 88, desc: 'Analisis & solusi tepat' },
-  { emoji: '👥', name: 'Leadership', level: 85, desc: 'Memimpin tim dengan baik' },
-  { emoji: '💬', name: 'Communication', level: 82, desc: 'Komunikasi efektif' },
-  { emoji: '🤝', name: 'Team Work', level: 90, desc: 'Kolaborasi solid' },
+  { emoji: '👑', name: 'Leadership', level: 85, desc: 'Memimpin tim dengan arah jelas' },
+  { emoji: '💬', name: 'Komunikasi Strategis', level: 87, desc: 'Bicara jelas di momen yang tepat' },
+  { emoji: '🤝', name: 'Team Work', level: 90, desc: 'Kolaborasi solid & adaptif' },
   { emoji: '⏰', name: 'Time Management', level: 78, desc: 'Tepat waktu & terorganisir' },
-  { emoji: '🎯', name: 'Critical Thinking', level: 80, desc: 'Berpikir kritis & logis' },
+  { emoji: '🎯', name: 'Critical Thinking', level: 82, desc: 'Berpikir kritis & logis mendalam' },
+  { emoji: '🔮', name: 'Prediksi & Analisis Tren', level: 80, desc: 'Membaca pola & memprediksikan arah' },
+  { emoji: '⚖️', name: 'Hukum & Etika Digital', level: 72, desc: 'Memahami regulasi HAKI, privasi data' },
+  { emoji: '🌌', name: 'Filsafat & Astronomi', level: 70, desc: 'Minat mendalam pada kosmologi & logika' },
+  { emoji: '🛡️', name: 'Tahan Tekanan', level: 83, desc: 'Tetap fokus dalam kondisi krisis' },
+  { emoji: '🗺️', name: 'Visi Jangka Panjang', level: 85, desc: 'Melihat gambaran besar & roadmap' },
+  { emoji: '🧘', name: 'Adaptabilitas', level: 80, desc: 'Fleksibel di lingkungan yang berubah' },
 ]
 
 const warnaLabel: Record<string, string> = {

@@ -566,6 +566,19 @@ export default function Navbar() {
                 <FiGithub className="w-4 h-4 text-white" />
               </motion.a>
 
+              {/* 7. GAME — tombol main */}
+              <Link href="/game">
+                <motion.div
+                  whileHover={{ y: -2, scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="hidden md:flex items-center gap-1.5 px-3 py-2 font-comic text-[11px] text-[#0a0a0a] cursor-pointer"
+                  style={{ background: '#ffd700', border: '2px solid #0a0a0a', boxShadow: '2px 2px 0 #0a0a0a' }}
+                  title="Mainkan Game Portofolio 3D"
+                >
+                  🎮 MAIN
+                </motion.div>
+              </Link>
+
               {/* 7. HAMBURGER mobile */}
               <motion.button
                 onClick={() => setIsMobileOpen(v => !v)}

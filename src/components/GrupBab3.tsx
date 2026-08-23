@@ -160,7 +160,7 @@ function Ch38() {
               { area: 'Akses Pendidikan', impact: 'Platform edukasi digital menjangkau daerah terpencil tanpa infrastruktur mahal', icon: '??', color: '#22c55e' },
               { area: 'Transparansi Dana Publik', impact: 'Website desa dengan laporan anggaran transparan meningkatkan kepercayaan warga', icon: '??', color: '#f59e0b' },
               { area: 'Bantuan Sosial', impact: 'QRIS donasi memotong rantai distribusi bantuan agar tepat sasaran', icon: '??', color: '#e63329' },
-              { area: 'Lapangan Kerja Digital', impact: 'KVT.kom menciptakan ekosistem pekerjaan baru di sektor digital kreatif', icon: '??', color: '#8b5cf6' },
+              { area: 'Lapangan Kerja Digital', impact: 'Gelar.id menciptakan ekosistem pekerjaan baru di sektor digital kreatif', icon: '??', color: '#8b5cf6' },
             ].map((s, i) => (
               <motion.div key={s.area} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: true }}
                 className="p-4 bg-white" style={{ border: `3px solid ${s.color}`, boxShadow: `4px 4px 0 ${s.color}` }}>
@@ -463,7 +463,7 @@ function Ch45() {
           <div className="speech-bubble inline-block text-sm mb-4">?? Bermimpilah sebesar langit, lalu bangun tangganya satu per satu!</div>
           <div className="space-y-4">
             {[
-              { dream: '5 Tahun', vision: 'KVT.kom aktif dengan 10.000+ pengguna dan 50+ kreator digital.', icon: '??', color: '#8b5cf6' },
+              { dream: '5 Tahun', vision: 'Gelar.id aktif dengan 10.000+ pengguna dan 50+ kreator digital.', icon: '??', color: '#8b5cf6' },
               { dream: '10 Tahun', vision: 'QRIS Donasi menjangkau 1 juta penerima manfaat di seluruh Indonesia.', icon: '??', color: '#1a5cff' },
               { dream: '15 Tahun', vision: 'Website Desa Digital aktif di 10.000+ desa Indonesia.', icon: '??', color: '#22c55e' },
               { dream: '20 Tahun', vision: 'KVT Institute menjadi lembaga pendidikan digital yang diakui secara nasional.', icon: '??', color: '#f59e0b' },

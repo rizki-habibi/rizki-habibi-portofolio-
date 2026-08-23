@@ -29,7 +29,7 @@ function HitungNaik({ target, sufiks = '', warna = '#ffd700' }: { target: number
   return <span style={{ color: warna }} className="font-comic">{val.toLocaleString()}{sufiks}</span>
 }
 
-/* --- Ch189: REKAP 200 INOVASI -- STATISTIK & VISUALISASI --- */
+/* --- Ch189: REKAP 200 INOVASI — STATISTIK & VISUALISASI --- */
 function Ch189() {
   const kategori = [
     { nama: 'Edukasi Digital',        jumlah: 25, warna: '#1a5cff', icon: '🎓', pct: 12.5 },
@@ -50,9 +50,9 @@ function Ch189() {
     { status: 'MIMPI', jumlah: 6,  warna: '#e63329', desc: 'Visi jangka panjang yang ambisius' },
   ]
   return (
-    <PanelBab id="ch189" num="189" judul="REKAP 200 INOVASI -- PETA & STATISTIK" warna="#ffd700" bg="#fffbeb" gelap>
+    <PanelBab id="ch189" num="189" judul="REKAP 200 INOVASI — PETA & STATISTIK" warna="#ffd700" bg="#fffbeb" gelap>
       <div className="speech-bubble inline-block text-sm mb-8 text-[#0a0a0a]">
-        📊 200 inovasi, 8 kategori, satu visi -- menjadi developer yang meninggalkan dampak nyata untuk Indonesia!
+        📊 200 inovasi, 8 kategori, satu visi — menjadi developer yang meninggalkan dampak nyata untuk Indonesia!
       </div>
 
       {/* Counter besar */}
@@ -152,9 +152,9 @@ function Ch190() {
     { area: 'Ekonomi Daerah', target: 'Rp 50 miliar ekonomi digital tercipta di kota-kota kecil lewat ekosistem yang dibangun', icon: '💰', warna: '#ffd700', tahun: '2030' },
   ]
   return (
-    <PanelBab id="ch190" num="190" judul="DAMPAK YANG DIHARAPKAN -- BILA SEMUA TERWUJUD" warna="#ffd700" bg="#fffbeb">
+    <PanelBab id="ch190" num="190" judul="DAMPAK YANG DIHARAPKAN — BILA SEMUA TERWUJUD" warna="#ffd700" bg="#fffbeb">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        🌟 Bukan soal berapa banyak inovasi yang dibuat -- tapi berapa banyak hidup yang berubah karenanya!
+        🌟 Bukan soal berapa banyak inovasi yang dibuat — tapi berapa banyak hidup yang berubah karenanya!
       </div>
       <div className="grid sm:grid-cols-2 gap-4 mb-8">
         {dampak.map((d, i) => (
@@ -186,7 +186,7 @@ function Ch190() {
         <motion.p className="text-lg font-bold text-[#0a0a0a]/80 italic leading-relaxed max-w-2xl mx-auto"
           animate={{ opacity: [0.7, 1, 0.7] }}
           transition={{ duration: 3, repeat: Infinity }}>
-          &ldquo;Membangun 200 inovasi bukan berarti selesai 200 -- tapi berarti ada 200 peluang untuk membuat satu orang tersenyum, satu masalah terpecahkan, satu komunitas yang lebih baik.&rdquo;
+          &ldquo;Membangun 200 inovasi bukan berarti selesai 200 — tapi berarti ada 200 peluang untuk membuat satu orang tersenyum, satu masalah terpecahkan, satu komunitas yang lebih baik.&rdquo;
         </motion.p>
         <div className="font-comic text-sm text-[#1a5cff] mt-3">-- Rizki Habibi, Jember 2026</div>
       </div>

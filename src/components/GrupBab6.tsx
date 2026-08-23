@@ -114,18 +114,18 @@ function SlideKomik({ slides }: {
 // --- CHAPTER 62: POKEMON GO -------------------------------------------------
 function Ch62() {
   const slides = [
-    { icon: '🎮', judul: 'Awal Petualangan', teks: 'Pertama kali install Pokemon GO -- langsung ketagihan jalan-jalan sambil nangkep Pikachu di sekitar kampus. GPS tracker terbaik untuk pemalas bergerak!', warna: '#22c55e', bg: '#f0fdf4', badge: 'CHAPTER START' },
+    { icon: '🎮', judul: 'Awal Petualangan', teks: 'Pertama kali install Pokemon GO — langsung ketagihan jalan-jalan sambil nangkep Pikachu di sekitar kampus. GPS tracker terbaik untuk pemalas bergerak!', warna: '#22c55e', bg: '#f0fdf4', badge: 'CHAPTER START' },
     { icon: '🗺️', judul: 'Eksplorasi Kota', teks: 'Jalan-jalan ke tempat baru hanya demi PokeStop. Tanpa sadar udah keliling 5 km. Pokemon GO versi gym = jalan kaki gratis!', warna: '#1a5cff', bg: '#e8f0ff' },
-    { icon: '⚔️', judul: 'Gym Battle', teks: 'Perang antar tim di Gym -- Team Mystic, Valor, Instinct. Pernah kalah berkali-kali di satu gym, tapi tidak menyerah sampai menang!', warna: '#e63329', bg: '#fef2f2', badge: '⚔️ BATTLE' },
+    { icon: '⚔️', judul: 'Gym Battle', teks: 'Perang antar tim di Gym — Team Mystic, Valor, Instinct. Pernah kalah berkali-kali di satu gym, tapi tidak menyerah sampai menang!', warna: '#e63329', bg: '#fef2f2', badge: '⚔️ BATTLE' },
     { icon: '🥚', judul: 'Telur & Buddy', teks: 'Menetas telur 10 km dengan jalan kaki sungguhan. Buddy system bikin makin sayang sama Pokemon favorit. Effort nyata untuk hadiah digital!', warna: '#f59e0b', bg: '#fffbeb' },
-    { icon: '🌟', judul: 'Pelajaran dari Game', teks: 'Pokemon GO mengajarkan: jangan hanya duduk diam, jelajahi dunia! Sama seperti coding -- kamu harus keluar dari comfort zone untuk berkembang.', warna: '#8b5cf6', bg: '#f5f0ff', badge: 'MORAL CERITA' },
+    { icon: '🌟', judul: 'Pelajaran dari Game', teks: 'Pokemon GO mengajarkan: jangan hanya duduk diam, jelajahi dunia! Sama seperti coding — kamu harus keluar dari comfort zone untuk berkembang.', warna: '#8b5cf6', bg: '#f5f0ff', badge: 'MORAL CERITA' },
   ]
   return (
     <PanelBab id="ch62" chNum="CHAPTER 62" judul="GAME LIFE: POKEMON GO!" warna="#22c55e" latarBelakang="#f0fdf4">
       <div className="grid lg:grid-cols-2 gap-8 items-start">
         <div>
           <div className="speech-bubble inline-block text-sm mb-4">
-            🎮 &quot;Gotta Catch &apos;Em All!&quot; -- prinsip hidup sesungguhnya!
+            🎮 &quot;Gotta Catch &apos;Em All!&quot; — prinsip hidup sesungguhnya!
           </div>
           <SlideKomik slides={slides} />
         </div>
@@ -179,7 +179,7 @@ function Ch63() {
           <div className="comic-panel-dark p-5 mb-4">
             <div className="font-comic text-xl text-white mb-3">⚔️ CERITA DUEL</div>
             <p className="text-sm text-white/80 font-bold leading-relaxed mb-3">
-              Yugioh bukan sekadar game kartu -- ini adalah simulasi strategi tingkat tinggi.
+              Yugioh bukan sekadar game kartu — ini adalah simulasi strategi tingkat tinggi.
               Setiap duel mengajarkan: <span className="text-yellow-400">baca situasi, rencanakan beberapa langkah ke depan, dan jangan panik saat terdesak.</span>
             </p>
             <p className="text-sm text-white/60 font-bold leading-relaxed">
@@ -234,9 +234,9 @@ function Ch64() {
     { nama: 'Clash of Clans', icon: '🏰', deskripsi: 'Bangun desa, latih pasukan, serang! Base farming level max.', tag: 'STRATEGI', warna: '#f59e0b' },
     { nama: 'Clash Royale', icon: '👑', deskripsi: 'Battle real-time 1v1 dengan kartu. Timing adalah segalanya.', tag: 'TAKTIK', warna: '#8b5cf6' },
     { nama: 'Rise of Kingdoms', icon: '⚔️', deskripsi: 'Strategi global, alliance, dan perebutan kota raya.', tag: 'STRATEGI', warna: '#e63329' },
-    { nama: 'Mobile Legends', icon: '🗡️', deskripsi: 'MOBA taktis -- teamwork, rotasi, dan shot-calling.', tag: 'MOBA', warna: '#1a5cff' },
-    { nama: 'Chess Online', icon: '♟️', deskripsi: 'Catur digital -- melatih berpikir beberapa langkah ke depan.', tag: 'LOGIKA', warna: '#0a0a0a' },
-    { nama: 'Tower Defense', icon: '🗼', deskripsi: 'Pertahanan menara -- penempatan optimal untuk hasil maksimal.', tag: 'DEFENSE', warna: '#22c55e' },
+    { nama: 'Mobile Legends', icon: '🗡️', deskripsi: 'MOBA taktis — teamwork, rotasi, dan shot-calling.', tag: 'MOBA', warna: '#1a5cff' },
+    { nama: 'Chess Online', icon: '♟️', deskripsi: 'Catur digital — melatih berpikir beberapa langkah ke depan.', tag: 'LOGIKA', warna: '#0a0a0a' },
+    { nama: 'Tower Defense', icon: '🗼', deskripsi: 'Pertahanan menara — penempatan optimal untuk hasil maksimal.', tag: 'DEFENSE', warna: '#22c55e' },
   ]
   return (
     <PanelBab id="ch64" chNum="CHAPTER 64" judul="MASTER STRATEGI & TAKTIK" warna="#e63329" latarBelakang="#fef2f2">
@@ -293,13 +293,13 @@ function Ch65() {
     { nama: 'Dream Kingdom', level: 'In Progress', icon: '👑', populasi: 'TBD', pasukan: 'Developer Army', warna: '#8b5cf6' },
   ]
   const slides = [
-    { icon: '🏰', judul: 'Membangun Kerajaan Digital', teks: 'Game kerajaan mengajarkan manajemen sumber daya: kayak startup -- mulai dari nol, upgrade bertahap, dan expand perlahan tapi pasti.', warna: '#f59e0b', bg: '#fffbeb', badge: 'STRATEGI' },
+    { icon: '🏰', judul: 'Membangun Kerajaan Digital', teks: 'Game kerajaan mengajarkan manajemen sumber daya: kayak startup — mulai dari nol, upgrade bertahap, dan expand perlahan tapi pasti.', warna: '#f59e0b', bg: '#fffbeb', badge: 'STRATEGI' },
     { icon: '⚔️', judul: 'Perang & Aliansi', teks: 'Bergabung alliance yang kuat = networking. Serangan bersama = kolaborasi tim. Musuh terkuat justru jadi pelajaran terbaik.', warna: '#e63329', bg: '#fef2f2' },
     { icon: '🌱', judul: 'Farming & Resource', teks: 'Sabar farming resources sebelum serang = coding: setup environment & refactor dulu sebelum develop fitur baru. Prosesnya penting!', warna: '#22c55e', bg: '#f0fdf4', badge: '💡 INSIGHT' },
     { icon: '🎖️', judul: 'Jadi Pemimpin', teks: 'Jadi leader alliance: koordinasi 50+ member, strategi war, dan buat keputusan cepat. Sama persis dengan jadi tech lead di tim nyata.', warna: '#8b5cf6', bg: '#f5f0ff' },
   ]
   return (
-    <PanelBab id="ch65" chNum="CHAPTER 65" judul="KINGDOM BUILDER -- RAJA VIRTUAL" warna="#f59e0b" latarBelakang="#fffbeb">
+    <PanelBab id="ch65" chNum="CHAPTER 65" judul="KINGDOM BUILDER — RAJA VIRTUAL" warna="#f59e0b" latarBelakang="#fffbeb">
       <div className="grid lg:grid-cols-2 gap-8">
         <SlideKomik slides={slides} />
         <div className="space-y-4">
@@ -371,7 +371,7 @@ function Ch66() {
           {[
             { icon: '🐲', teks: 'Dragon mati 100x = belajar 100 cara yang salah. Sama seperti debug code.' },
             { icon: '🗺️', teks: 'Dunia open world = internet. Jelajahi sendiri, temukan Easter egg tersembunyi!' },
-            { icon: '⚡', teks: 'Level up butuh grind. Tidak ada shortcut -- baik di game maupun di kehidupan nyata.' },
+            { icon: '⚡', teks: 'Level up butuh grind. Tidak ada shortcut — baik di game maupun di kehidupan nyata.' },
           ].map(f => (
             <div key={f.icon} className="text-center p-3 bg-white/10 border border-white/20">
               <div className="text-3xl mb-2">{f.icon}</div>
@@ -397,7 +397,7 @@ function Ch67() {
       <div className="grid lg:grid-cols-2 gap-8">
         <div>
           <div className="speech-bubble inline-block text-sm mb-4">
-            🧱 Minecraft adalah coding pertama saya -- membangun dunia piksel per piksel!
+            🧱 Minecraft adalah coding pertama saya — membangun dunia piksel per piksel!
           </div>
           <div className="comic-panel-blue p-5 mb-4">
             <div className="font-comic text-lg text-[#0a0a0a] mb-2">🎯 KENAPA MINECRAFT?</div>
@@ -430,7 +430,7 @@ function Ch67() {
         <div className="comic-panel-dark p-5">
           <div className="font-comic text-xl text-white mb-4">🧠 REDSTONE LOGIC</div>
           <p className="text-sm text-white/70 font-bold leading-relaxed mb-4">
-            Redstone di Minecraft adalah gerbang logika pertama saya: AND, OR, NOT gates -- semua bisa dibuat dari batu merah!
+            Redstone di Minecraft adalah gerbang logika pertama saya: AND, OR, NOT gates — semua bisa dibuat dari batu merah!
             Ini yang membuat saya tertarik pada logika komputasi.
           </p>
           <div className="grid grid-cols-2 gap-3">
@@ -455,13 +455,13 @@ function Ch67() {
 // --- CHAPTER 68: OFFLINE GAMES ------------------------------------------------
 function Ch68() {
   const slides = [
-    { icon: '🎴', judul: 'Kartu Fisik', teks: 'Main kartu fisik Yugioh bareng teman -- lebih seru dari digital. Shuffle deck, tahan nafas, taruh kartu di meja... momen epik yang tidak bisa diganti.', warna: '#f59e0b', bg: '#fffbeb', badge: 'NOSTALGIA' },
-    { icon: '🎲', judul: 'Board Game', teks: 'Monopoly, Catur, Ular Tangga -- board game klasik yang mengajarkan strategi jangka panjang dan kesabaran menunggu giliran.', warna: '#22c55e', bg: '#f0fdf4' },
-    { icon: '🕹️', judul: 'Console Classic', teks: 'GBA, PSP, PS2 -- generasi emas gaming. Harvest Moon, Naruto, DBZ... nostalgia yang membentuk karakter dan kecintaan pada cerita.', warna: '#8b5cf6', bg: '#f5f0ff', badge: 'LEGEND' },
-    { icon: '📱', judul: 'Indie Mobile', teks: 'Alto\'s Odyssey, Monument Valley, Mini Metro -- game indie yang fokus pada experience dan cerita, bukan grafis semata.', warna: '#0891b2', bg: '#ecfeff' },
+    { icon: '🎴', judul: 'Kartu Fisik', teks: 'Main kartu fisik Yugioh bareng teman — lebih seru dari digital. Shuffle deck, tahan nafas, taruh kartu di meja... momen epik yang tidak bisa diganti.', warna: '#f59e0b', bg: '#fffbeb', badge: 'NOSTALGIA' },
+    { icon: '🎲', judul: 'Board Game', teks: 'Monopoly, Catur, Ular Tangga — board game klasik yang mengajarkan strategi jangka panjang dan kesabaran menunggu giliran.', warna: '#22c55e', bg: '#f0fdf4' },
+    { icon: '🕹️', judul: 'Console Classic', teks: 'GBA, PSP, PS2 — generasi emas gaming. Harvest Moon, Naruto, DBZ... nostalgia yang membentuk karakter dan kecintaan pada cerita.', warna: '#8b5cf6', bg: '#f5f0ff', badge: 'LEGEND' },
+    { icon: '📱', judul: 'Indie Mobile', teks: 'Alto\'s Odyssey, Monument Valley, Mini Metro — game indie yang fokus pada experience dan cerita, bukan grafis semata.', warna: '#0891b2', bg: '#ecfeff' },
   ]
   return (
-    <PanelBab id="ch68" chNum="CHAPTER 68" judul="OFFLINE ADVENTURES -- DUNIA TANPA INTERNET" warna="#8b5cf6" latarBelakang="#f5f0ff">
+    <PanelBab id="ch68" chNum="CHAPTER 68" judul="OFFLINE ADVENTURES — DUNIA TANPA INTERNET" warna="#8b5cf6" latarBelakang="#f5f0ff">
       <div className="grid lg:grid-cols-2 gap-8">
         <div>
           <div className="speech-bubble inline-block text-sm mb-4">
@@ -473,10 +473,10 @@ function Ch68() {
           <div className="font-comic text-lg text-[#0a0a0a] mb-4">🏆 HALL OF FAME</div>
           <div className="space-y-3">
             {[
-              { game: 'Harvest Moon', platform: 'GBA', kenangan: 'Tanam padi, jaga ternak -- simfoni kehidupan sederhana', warna: '#22c55e' },
+              { game: 'Harvest Moon', platform: 'GBA', kenangan: 'Tanam padi, jaga ternak — simfoni kehidupan sederhana', warna: '#22c55e' },
               { game: 'Naruto Ultimate Ninja', platform: 'PS2', kenangan: 'Semua jutsu dihapalkan. Rasengan = serangan andalan!', warna: '#f59e0b' },
               { game: 'Yu-Gi-Oh! Forbidden Memories', platform: 'PS1', kenangan: 'Grind kartu ratusan jam. Dedikasi yang tidak masuk akal tapi seru!', warna: '#8b5cf6' },
-              { game: 'Dino Crisis', platform: 'PS1', kenangan: 'Horror pertama -- lampu padam, bunyi dinosaurus... trauma baik!', warna: '#e63329' },
+              { game: 'Dino Crisis', platform: 'PS1', kenangan: 'Horror pertama — lampu padam, bunyi dinosaurus... trauma baik!', warna: '#e63329' },
             ].map((h, i) => (
               <motion.div key={h.game}
                 initial={{ opacity: 0, x: 20 }}
@@ -549,16 +549,16 @@ function Ch69() {
 // --- CHAPTER 70: GAME WISHLIST & MASA DEPAN ----------------------------------
 function Ch70() {
   const wishlist = [
-    { nama: 'Elden Ring', icon: '⚔️', alasan: 'Open world dengan lore terdalam -- tantangan boss yang bikin frustasi sekaligus puas', warna: '#f59e0b', status: 'WISHLIST' },
-    { nama: 'Baldur\'s Gate 3', icon: '🎲', alasan: 'RPG terbaik dekade ini -- pilihan moral yang benar-benar berpengaruh', warna: '#8b5cf6', status: 'WISHLIST' },
-    { nama: 'Hollow Knight: Silksong', icon: '🦋', alasan: 'Sequel yang paling dinantikan -- Metroidvania masterclass', warna: '#1a5cff', status: 'SOON™' },
-    { nama: 'Pokemon Z-A', icon: '⚡', alasan: 'Kembali ke Lumiose City -- nostalgia X/Y dalam grafis modern!', warna: '#22c55e', status: 'ANNOUNCED' },
+    { nama: 'Elden Ring', icon: '⚔️', alasan: 'Open world dengan lore terdalam — tantangan boss yang bikin frustasi sekaligus puas', warna: '#f59e0b', status: 'WISHLIST' },
+    { nama: 'Baldur\'s Gate 3', icon: '🎲', alasan: 'RPG terbaik dekade ini — pilihan moral yang benar-benar berpengaruh', warna: '#8b5cf6', status: 'WISHLIST' },
+    { nama: 'Hollow Knight: Silksong', icon: '🦋', alasan: 'Sequel yang paling dinantikan — Metroidvania masterclass', warna: '#1a5cff', status: 'SOON™' },
+    { nama: 'Pokemon Z-A', icon: '⚡', alasan: 'Kembali ke Lumiose City — nostalgia X/Y dalam grafis modern!', warna: '#22c55e', status: 'ANNOUNCED' },
     { nama: 'My Own Game', icon: '🎮', alasan: 'Suatu hari: buat game sendiri dengan engine pilihan. Developer yang juga game creator!', warna: '#e63329', status: 'DREAM' },
   ]
   return (
     <PanelBab id="ch70" chNum="CHAPTER 70" judul="WISHLIST & IMPIAN GAMER" warna="#f59e0b" latarBelakang="#fffbeb">
       <div className="speech-bubble inline-block text-sm mb-6">
-        🌟 Game impian yang belum sempat dimainkan -- tapi masuk daftar wajib!
+        🌟 Game impian yang belum sempat dimainkan — tapi masuk daftar wajib!
       </div>
       <div className="space-y-3">
         {wishlist.map((w, i) => (
@@ -591,7 +591,7 @@ function Ch70() {
         style={{ background: 'white', border: '4px solid #0a0a0a', boxShadow: '7px 7px 0 #f59e0b' }}>
         <div className="font-comic text-2xl text-[#0a0a0a] mb-2">🎮 DEVELOPER + GAMER = SAYA</div>
         <p className="text-sm font-bold text-[#0a0a0a]/70">
-          Game bukan sekadar hiburan -- ini adalah <span className="text-[#f59e0b]">sumber inspirasi</span>,
+          Game bukan sekadar hiburan — ini adalah <span className="text-[#f59e0b]">sumber inspirasi</span>,
           <span className="text-[#1a5cff]"> latihan logika</span>, dan <span className="text-[#22c55e]">pengisi semangat</span>
           saat coding terasa berat. Play hard, code harder! 🚀
         </p>

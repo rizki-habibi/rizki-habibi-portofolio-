@@ -71,7 +71,7 @@ function RadarChart({ data }: { data: typeof dimensi }) {
     }
   })
 
-  // Garis kisi (web/jaring) -- 5 level
+  // Garis kisi (web/jaring) — 5 level
   const kisi = [20, 40, 60, 80, 100].map(pct => {
     const rk = (pct / 100) * r
     return data.map((_, i) => ({
@@ -100,7 +100,7 @@ function RadarChart({ data }: { data: typeof dimensi }) {
           stroke="#0a0a0a" strokeWidth="0.8" strokeOpacity={0.15} />
       ))}
 
-      {/* Area skill -- fill */}
+      {/* Area skill — fill */}
       <motion.path
         d={toPath(titikNilai)}
         fill="#1a5cff"
@@ -197,7 +197,7 @@ export default function SkillRadar() {
 
         <div className="grid md:grid-cols-2 gap-8 items-start">
 
-          {/* Kiri -- Radar Chart */}
+          {/* Kiri — Radar Chart */}
           <motion.div
             initial={{ opacity: 0, scale: 0.85 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -220,7 +220,7 @@ export default function SkillRadar() {
             </div>
           </motion.div>
 
-          {/* Kanan -- Bar chart per kategori */}
+          {/* Kanan — Bar chart per kategori */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}

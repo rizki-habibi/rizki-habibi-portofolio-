@@ -48,25 +48,24 @@ export default function Home() {
       <EfekKlikMouse />
       <TautanSosialMelayang />
       <JejakKursor />
-
       <LayarMemuat />
       <ProgressScroll />
       <KembaliKeAtas />
       <KuesionerKerjasama />
       <Navbar />
 
-      {/* CHAPTER 00 -- THE ORIGIN */}
+      {/* CHAPTER 00 — THE ORIGIN */}
       <Hero />
       <div className="comic-divider" />
 
       {/* TECH MARQUEE */}
       <MarqueTeknologi />
 
-      {/* CHAPTER 01 -- MY STORY */}
+      {/* CHAPTER 01 — MY STORY */}
       <CeritaPerjalanan />
       <div className="comic-divider" />
 
-      {/* CHAPTER 02 -- MY POWERS */}
+      {/* CHAPTER 02 — MY POWERS */}
       <Keahlian />
       <div className="comic-divider" />
 
@@ -78,7 +77,7 @@ export default function Home() {
       <RadarKeahlian />
       <div className="comic-divider" />
 
-      {/* CHAPTER 03 -- THE MISSIONS */}
+      {/* CHAPTER 03 — THE MISSIONS */}
       <Proyek />
       <div className="comic-divider" />
 
@@ -86,7 +85,7 @@ export default function Home() {
       <PanelKomik />
       <div className="comic-divider" />
 
-      {/* CHAPTER 04 -- MY JOURNEY */}
+      {/* CHAPTER 04 — MY JOURNEY */}
       <GariswaktuPengalaman />
       <div className="comic-divider" />
 
@@ -94,19 +93,19 @@ export default function Home() {
       <GariswaktuTeknologi />
       <div className="comic-divider" />
 
-      {/* CHAPTER 05 -- POWER CARDS */}
+      {/* CHAPTER 05 — POWER CARDS */}
       <Sertifikat />
       <div className="comic-divider" />
 
-      {/* CHAPTER 06 -- THE BIG DREAM */}
+      {/* CHAPTER 06 — THE BIG DREAM */}
       <VisiKVT />
       <div className="comic-divider" />
 
-      {/* CHAPTER 07 -- REKAYASA & INOVASI */}
+      {/* CHAPTER 07 — REKAYASA & INOVASI */}
       <Inovasi />
       <div className="comic-divider" />
 
-      {/* CHAPTER 08 -- BY THE NUMBERS */}
+      {/* CHAPTER 08 — BY THE NUMBERS */}
       <StatistikKomik />
       <div className="comic-divider" />
 
@@ -114,11 +113,11 @@ export default function Home() {
       <PenghitungUmur />
       <div className="comic-divider" />
 
-      {/* CHAPTER 09 -- MY ARSENAL */}
+      {/* CHAPTER 09 — MY ARSENAL */}
       <ToolsKomik />
       <div className="comic-divider" />
 
-      {/* CHAPTER 10 -- ACHIEVEMENT UNLOCKED */}
+      {/* CHAPTER 10 — ACHIEVEMENT UNLOCKED */}
       <PencapaianKomik />
       <div className="comic-divider" />
 
@@ -126,11 +125,11 @@ export default function Home() {
       <TesimoniKomik />
       <div className="comic-divider" />
 
-      {/* CHAPTER 11 -- WORDS OF POWER */}
+      {/* CHAPTER 11 — WORDS OF POWER */}
       <KutipanKomik />
       <div className="comic-divider" />
 
-      {/* CHAPTER 12 -- TRAINING ARC */}
+      {/* CHAPTER 12 — TRAINING ARC */}
       <PendidikanKomik />
       <div className="comic-divider" />
 
@@ -142,19 +141,19 @@ export default function Home() {
       <InfoKarirKomik />
       <div className="comic-divider" />
 
-      {/* CHAPTER 13 -- OFF-DUTY LIFE */}
+      {/* CHAPTER 13 — OFF-DUTY LIFE */}
       <HobiKomik />
       <div className="comic-divider" />
 
-      {/* CHAPTER 14 -- NETWORK & COMMUNITY */}
+      {/* CHAPTER 14 — NETWORK & COMMUNITY */}
       <KomunikasiKomik />
       <div className="comic-divider" />
 
-      {/* CHAPTER 15 -- WHAT COMES NEXT */}
+      {/* CHAPTER 15 — WHAT COMES NEXT */}
       <EpilogKomik />
       <div className="comic-divider" />
 
-      {/* CHAPTER BROWSER -- 191 chapter, klik untuk buka halaman tersendiri */}
+      {/* CHAPTER BROWSER — 191 chapter, klik untuk buka halaman tersendiri */}
       <ChapterBrowser />
 
       {/* CV */}

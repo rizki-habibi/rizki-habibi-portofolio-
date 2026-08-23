@@ -5,10 +5,10 @@ import Image from 'next/image'
 import HeaderBab from '@/components/HeaderBab'
 
 const nextChapters = [
-  { icon: '📝', title: 'Selesaikan Skripsi', desc: 'Penelitian akademik yang sedang berjalan -- fondasi ilmiah untuk proyek nyata.', color: '#1a5cff', status: 'IN PROGRESS' },
-  { icon: '🌐', title: 'Publish KVT.kom', desc: 'Platform kampus digital Vtuber pertama di Indonesia -- saat ini dalam pengembangan.', color: '#8b5cf6', status: 'COMING SOON' },
+  { icon: '📝', title: 'Selesaikan Skripsi', desc: 'Penelitian akademik yang sedang berjalan — fondasi ilmiah untuk proyek nyata.', color: '#1a5cff', status: 'IN PROGRESS' },
+  { icon: '🌐', title: 'Publish Gelar.id', desc: 'Platform kampus digital Vtuber pertama di Indonesia — saat ini dalam pengembangan.', color: '#8b5cf6', status: 'COMING SOON' },
   { icon: '💼', title: 'Berkarir Profesional', desc: 'Masuk dunia kerja sebagai Web Developer atau System Analyst full-time.', color: '#22c55e', status: 'PLANNED' },
-  { icon: '🏫', title: 'Bangun Ekosistem KVT', desc: 'Mengembangkan KVT.kom menjadi ekosistem pendidikan digital yang membuka lapangan kerja.', color: '#f59e0b', status: 'VISION' },
+  { icon: '🏫', title: 'Bangun Ekosistem KVT', desc: 'Mengembangkan Gelar.id menjadi ekosistem pendidikan digital yang membuka lapangan kerja.', color: '#f59e0b', status: 'VISION' },
   { icon: '👥', title: 'Perluas Komunitas', desc: 'Membangun komunitas kreator digital Indonesia yang solid dan berdampak luas.', color: '#e63329', status: 'VISION' },
   { icon: '🎓', title: 'S2 → S3 KVT', desc: 'Mengembangkan sistem pendidikan KVT dari gelar S1 hingga S3 dengan domain kvt1-3.kom.', color: '#0891b2', status: 'FUTURE' },
 ]
@@ -28,7 +28,7 @@ export default function EpilogComic() {
       <div className="max-w-6xl mx-auto relative z-10">
 
         {/* Header */}
-        <HeaderBab nomor="15" judul="WHAT COMES NEXT?" warna="#e63329" subtitle="🚀 Cerita belum berakhir -- ini baru awal!" />
+        <HeaderBab nomor="15" judul="WHAT COMES NEXT?" warna="#e63329" subtitle="🚀 Cerita belum berakhir — ini baru awal!" />
 
         {/* Next chapters */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-14">
@@ -80,10 +80,10 @@ export default function EpilogComic() {
           </motion.div>
           <div className="space-y-4">
             {[
-              { period: '2026 -- Semester Akhir', events: ['Sidang Skripsi', 'Lulus S1 STI', 'Kembangkan KVT.kom'], color: '#1a5cff' },
-              { period: '2026-2027 -- Karir Awal', events: ['Web Developer Profesional', 'Rilis KVT.kom Beta', 'Bangun Tim KVT'], color: '#22c55e' },
-              { period: '2027-2028 -- Level Up', events: ['KVT.kom Live dengan user aktif', 'Buka program S1 KVT', 'Lapangan Kerja Digital'], color: '#f59e0b' },
-              { period: '2028+ -- The Big Dream', events: ['S2 dan S3 KVT online', 'Komunitas 1000+ kreator', 'Ekosistem digital mandiri'], color: '#e63329' },
+              { period: '2026 — Semester Akhir', events: ['Sidang Skripsi', 'Lulus S1 STI', 'Kembangkan Gelar.id'], color: '#1a5cff' },
+              { period: '2026-2027 — Karir Awal', events: ['Web Developer Profesional', 'Rilis Gelar.id Beta', 'Bangun Tim KVT'], color: '#22c55e' },
+              { period: '2027-2028 — Level Up', events: ['Gelar.id Live dengan user aktif', 'Buka program S1 KVT', 'Lapangan Kerja Digital'], color: '#f59e0b' },
+              { period: '2028+ — The Big Dream', events: ['S2 dan S3 KVT online', 'Komunitas 1000+ kreator', 'Ekosistem digital mandiri'], color: '#e63329' },
             ].map((row, i) => (
               <motion.div
                 key={row.period}
@@ -145,7 +145,7 @@ export default function EpilogComic() {
                 viewport={{ once: true }}
                 className="font-bold text-lg text-comic-black leading-relaxed mb-4 relative z-10"
               >
-                Cerita ini belum selesai -- dan justru itulah yang membuat setiap harinya{' '}
+                Cerita ini belum selesai — dan justru itulah yang membuat setiap harinya{' '}
                 <span className="text-comic-blue">layak untuk dijalani.</span>{' '}
                 Selama masih ada masalah yang bisa dipecahkan, selama itu pula ada alasan untuk terus berkarya.
               </motion.p>
@@ -160,7 +160,7 @@ export default function EpilogComic() {
                   style={{ background: '#1a5cff', border: '3px solid #0a0a0a', boxShadow: '3px 3px 0 #0a0a0a' }}>RH</div>
                 <div>
                   <div className="font-comic text-base text-comic-black">Rizki Habibi</div>
-                  <div className="text-xs text-comic-black/50 font-bold">Web Developer  Inovator  Founder KVT.kom</div>
+                  <div className="text-xs text-comic-black/50 font-bold">Web Developer  Inovator  Founder Gelar.id</div>
                 </div>
               </motion.div>
             </motion.div>

@@ -37,7 +37,7 @@ const perjalanan = [
   {
     tahun: '2022',
     judul: 'Laravel Framework',
-    teks: 'Beralih ke Laravel -- MVC, Eloquent ORM, Blade, Artisan. Game changer.',
+    teks: 'Beralih ke Laravel — MVC, Eloquent ORM, Blade, Artisan. Game changer.',
     badge: 'Laravel  Blade',
     warna: '#FF2D20',
     bg: '#fff5f5',
@@ -67,7 +67,7 @@ const perjalanan = [
   {
     tahun: '2023',
     judul: 'Sertifikasi BNSP',
-    teks: 'Lulus uji kompetensi Junior Web Developer BNSP -- pengakuan kompetensi nasional.',
+    teks: 'Lulus uji kompetensi Junior Web Developer BNSP — pengakuan kompetensi nasional.',
     badge: 'BNSP Certified',
     warna: '#f59e0b',
     bg: '#fffbeb',
@@ -96,7 +96,7 @@ const perjalanan = [
   },
   {
     tahun: '2025',
-    judul: 'KVT.kom -- Dimulai',
+    judul: 'Gelar.id — Dimulai',
     teks: 'Mulai membangun ekosistem Kampus Virtual Teknologi. Satu commit demi satu commit.',
     badge: 'KVT  Full Stack',
     warna: '#1a5cff',
@@ -199,7 +199,7 @@ export default function TechTimeline() {
           <div className="chapter-label mb-3">TECH JOURNEY</div>
           <h2 className="section-title">PERJALANAN TEKNOLOGI</h2>
           <div className="speech-bubble inline-block text-sm mt-4">
-            🕰️ Dari Notepad ke Next.js -- 6 tahun perjalanan yang tidak pernah berhenti!
+            🕰️ Dari Notepad ke Next.js — 6 tahun perjalanan yang tidak pernah berhenti!
           </div>
         </motion.div>
 

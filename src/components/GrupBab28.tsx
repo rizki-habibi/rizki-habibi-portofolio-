@@ -19,17 +19,17 @@ function PanelBab({ id, num, judul, warna, bg, gelap = false, children }: {
   )
 }
 
-/* Ch281 -- ANATOMI STARTUP INDONESIA */
+/* Ch281 — ANATOMI STARTUP INDONESIA */
 function Ch281() {
   const fase = [
     { fase: 'Pre-seed', deskripsi: 'Ide masih di kepala atau paper. Validasi problem, cari co-founder, bangun MVP dalam 30-90 hari.', modal: 'Bootstrap atau FFF (Friends, Family, Fools)', penting: 'Validasi, bukan build!', warna: '#22c55e', icon: '🌱' },
     { fase: 'Seed', deskripsi: 'MVP ada, beberapa pengguna awal, traction mulai kelihatan. Cari seed investor untuk grow lebih cepat.', modal: 'Angel investor, pre-seed VC, Rp 500JT-5M', penting: 'Product-market fit', warna: '#1a5cff', icon: '🌿' },
     { fase: 'Series A', deskripsi: 'Revenue ada, model bisnis terbukti, team solid. Scale dengan investor institusional.', modal: 'VC regional, $1M-10M', penting: 'Unit economics sehat', warna: '#8b5cf6', icon: '🌳' },
     { fase: 'Series B+', deskripsi: 'Market leader atau challenger di vertikal tertentu. Ekspansi ke kota/negara baru.', modal: '$10M+, SoftBank, Sequoia regional', penting: 'Dominant market position', warna: '#f59e0b', icon: '🏢' },
-    { fase: 'Exit/IPO', deskripsi: 'Akuisisi oleh player besar atau IPO di bursa. Fase yang paling dituju -- tapi bukan satu-satunya definisi sukses.', modal: 'Pasar modal atau M&A', penting: 'Nilai yang diciptakan', warna: '#e63329', icon: '🚀' },
+    { fase: 'Exit/IPO', deskripsi: 'Akuisisi oleh player besar atau IPO di bursa. Fase yang paling dituju — tapi bukan satu-satunya definisi sukses.', modal: 'Pasar modal atau M&A', penting: 'Nilai yang diciptakan', warna: '#e63329', icon: '🚀' },
   ]
   return (
-    <PanelBab id="ch281" num="281" judul="ANATOMI STARTUP -- DARI IDE KE UNICORN" warna="#22c55e" bg="#f0fdf4">
+    <PanelBab id="ch281" num="281" judul="ANATOMI STARTUP — DARI IDE KE UNICORN" warna="#22c55e" bg="#f0fdf4">
       <div className="speech-bubble inline-block text-sm mb-6">
         🦄 Indonesia sudah punya 10+ unicorn. Semuanya dimulai dari garasi, kos-kosan, atau kedai kopi dengan satu laptop dan satu masalah yang ingin dipecahkan!
       </div>
@@ -61,7 +61,7 @@ function Ch281() {
   )
 }
 
-/* Ch282 -- TECH STACK UNTUK STARTUP */
+/* Ch282 — TECH STACK UNTUK STARTUP */
 function Ch282() {
   const [tab, setTab] = useState(0)
   const stacks = [
@@ -82,9 +82,9 @@ function Ch282() {
     },
   ]
   return (
-    <PanelBab id="ch282" num="282" judul="TECH STACK STARTUP -- PILIH YANG TEPAT PER FASE" warna="#1a5cff" bg="#e8f0ff">
+    <PanelBab id="ch282" num="282" judul="TECH STACK STARTUP — PILIH YANG TEPAT PER FASE" warna="#1a5cff" bg="#e8f0ff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        🔧 Stack yang bagus bukan yang paling canggih -- tapi yang paling sesuai dengan fase dan tim yang ada sekarang!
+        🔧 Stack yang bagus bukan yang paling canggih — tapi yang paling sesuai dengan fase dan tim yang ada sekarang!
       </div>
       <div className="flex gap-2 mb-6">
         {stacks.map((s, i) => (
@@ -135,7 +135,7 @@ function Ch282() {
   )
 }
 
-/* Ch283 -- KESALAHAN UMUM FOUNDER TEKNIS */
+/* Ch283 — KESALAHAN UMUM FOUNDER TEKNIS */
 function Ch283() {
   const kesalahan = [
     { no: 1, kesalahan: 'Over-engineering dari hari pertama', solusi: 'Build untuk 100 user, bukan 1 juta user. Premature optimization adalah akar dari segala kejahatan.', icon: '⚙️', warna: '#e63329' },
@@ -148,7 +148,7 @@ function Ch283() {
     { no: 8, kesalahan: 'Underpricing karena takut ditolak', solusi: 'Charge lebih dari yang kamu kira pantas. User yang mau bayar mahal adalah user yang paling serius.', icon: '💰', warna: '#f59e0b' },
   ]
   return (
-    <PanelBab id="ch283" num="283" judul="8 KESALAHAN FATAL FOUNDER TEKNIS -- DAN CARA HINDARINYA" warna="#e63329" bg="#fef2f2">
+    <PanelBab id="ch283" num="283" judul="8 KESALAHAN FATAL FOUNDER TEKNIS — DAN CARA HINDARINYA" warna="#e63329" bg="#fef2f2">
       <div className="speech-bubble inline-block text-sm mb-6">
         ⚠️ Kesalahan ini sudah dibayar mahal oleh ribuan founder sebelummu. Belajar dari mereka jauh lebih murah dari mengulang sendiri!
       </div>
@@ -176,12 +176,12 @@ function Ch283() {
   )
 }
 
-/* Ch284 -- EKOSISTEM STARTUP INDONESIA */
+/* Ch284 — EKOSISTEM STARTUP INDONESIA */
 function Ch284() {
   return (
-    <PanelBab id="ch284" num="284" judul="EKOSISTEM STARTUP INDONESIA -- PETA LENGKAP" warna="#8b5cf6" bg="#f5f0ff">
+    <PanelBab id="ch284" num="284" judul="EKOSISTEM STARTUP INDONESIA — PETA LENGKAP" warna="#8b5cf6" bg="#f5f0ff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        🗺️ Indonesia bukan hanya Jakarta. Ekosistem startup tumbuh di 10+ kota -- termasuk Jember dan kota-kota tier 2 lainnya!
+        🗺️ Indonesia bukan hanya Jakarta. Ekosistem startup tumbuh di 10+ kota — termasuk Jember dan kota-kota tier 2 lainnya!
       </div>
       <div className="grid lg:grid-cols-3 gap-6">
         {[
@@ -222,19 +222,19 @@ function Ch284() {
 /* Ch285-290: Revenue Model Starter */
 function Ch285to290() {
   const model = [
-    { nama: 'SaaS Subscription', contoh: 'KVT.kom Premium Plan', biaya: 'Rp 99K-499K/bulan', kelebihan: 'Recurring revenue, predictable, scalable', icon: '♻️', warna: '#1a5cff' },
+    { nama: 'SaaS Subscription', contoh: 'Gelar.id Premium Plan', biaya: 'Rp 99K-499K/bulan', kelebihan: 'Recurring revenue, predictable, scalable', icon: '♻️', warna: '#1a5cff' },
     { nama: 'Marketplace Fee', contoh: 'Komisi transaksi platform', biaya: '5-20% per transaksi', kelebihan: 'Revenue sesuai volume, align dengan user success', icon: '🏪', warna: '#22c55e' },
     { nama: 'Freemium', contoh: 'Free basic, premium features', biaya: 'Free + Rp X/bulan upgrade', kelebihan: 'Mudah acquire user, konversi dari value terasa', icon: '🎁', warna: '#8b5cf6' },
     { nama: 'B2B Enterprise', contoh: 'Sistem untuk institusi/perusahaan', biaya: 'Rp 5-50JT/tahun per klien', kelebihan: 'Kontrak panjang, high LTV, referral dari jaringan', icon: '🏢', warna: '#f59e0b' },
     { nama: 'Usage-based', contoh: 'Bayar per API call/per user', biaya: 'Proporsional dengan pemakaian', kelebihan: 'Barrier masuk rendah, grow seiring user growth', icon: '📊', warna: '#e63329' },
     { nama: 'White Label', contoh: 'Jual produk untuk di-rebrand', biaya: 'Rp 10-100JT lisensi', kelebihan: 'No marketing cost, partner jadi sales force', icon: '🏷️', warna: '#0891b2' },
     { nama: 'Training & Consulting', contoh: 'Bootcamp, workshop, konsultasi', biaya: 'Rp 500K-10JT per person/project', kelebihan: 'High margin, build authority, gerbang ke produk', icon: '🎓', warna: '#22c55e' },
-    { nama: 'Advertising', contoh: 'Iklan di platform dengan traffic tinggi', biaya: 'CPM atau CPC based', kelebihan: 'Passive, scalable -- tapi butuh traffic besar dulu', icon: '📢', warna: '#8b5cf6' },
+    { nama: 'Advertising', contoh: 'Iklan di platform dengan traffic tinggi', biaya: 'CPM atau CPC based', kelebihan: 'Passive, scalable — tapi butuh traffic besar dulu', icon: '📢', warna: '#8b5cf6' },
     { nama: 'Data & Analytics', contoh: 'Jual insight aggregate ke partner', biaya: 'Rp 10-50JT per report/API', kelebihan: 'High margin, leverage dari data yang sudah ada', icon: '📈', warna: '#f59e0b' },
-    { nama: 'Hybrid Model', contoh: 'KVT.kom: Freemium + B2B + Training', biaya: 'Multiple stream', kelebihan: 'Resilient, diversified, adaptif ke market condition', icon: '⚡', warna: '#e63329' },
+    { nama: 'Hybrid Model', contoh: 'Gelar.id: Freemium + B2B + Training', biaya: 'Multiple stream', kelebihan: 'Resilient, diversified, adaptif ke market condition', icon: '⚡', warna: '#e63329' },
   ]
   return (
-    <PanelBab id="ch285" num="285-290" judul="10 MODEL REVENUE STARTUP -- MANA YANG COCOK?" warna="#f59e0b" bg="#fffbeb" gelap>
+    <PanelBab id="ch285" num="285-290" judul="10 MODEL REVENUE STARTUP — MANA YANG COCOK?" warna="#f59e0b" bg="#fffbeb" gelap>
       <div className="speech-bubble inline-block text-sm mb-6 text-[#0a0a0a]">
         💰 Revenue model yang salah bisa membunuh startup yang produknya bagus. Pilih yang align dengan value yang kamu deliver!
       </div>

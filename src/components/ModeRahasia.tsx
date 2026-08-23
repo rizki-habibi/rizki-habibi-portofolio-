@@ -14,7 +14,7 @@ const secretFacts = [
   '🎵 Selalu coding dengan musik lofi hip hop',
   '🐛 Bug terpanjang yang pernah saya debug: 12 jam untuk 1 titik koma',
   '📚 Membaca dokumentasi adalah hobi tersembunyi saya',
-  '🌙 Night owl -- productivity peak jam 11 malam - 3 pagi',
+  '🌙 Night owl — productivity peak jam 11 malam - 3 pagi',
   '🎯 Target: menjadi Full Stack Developer sebelum lulus',
   '💡 Proyek pertama: website HTML sederhana di Notepad',
   '🚀 Sudah menulis 10,000+ baris kode Laravel',
@@ -106,24 +106,8 @@ export default function SecretMode() {
 
   return (
     <>
-      {/* Subtle hint */}
-      <AnimatePresence>
-        {showHint && !isActive && (
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="fixed bottom-36 right-4 z-40 hidden lg:block"
-          >
-            <div
-              className="px-3 py-2 font-comic text-[10px] text-[#0a0a0a]/60"
-              style={{ background: '#fafaf7', border: '2px solid #0a0a0a', boxShadow: '2px 2px 0 #0a0a0a' }}
-            >
-              ↑↑↓↓←→←→BA
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Hint Konami Code — dihapus, tersembunyi */}
+      {/* showHint tetap berfungsi via keyboard shortcut ↑↑↓↓←→←→BA */}
 
       {/* Secret Mode Overlay */}
       <AnimatePresence>

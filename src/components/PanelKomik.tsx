@@ -42,7 +42,7 @@ function Halftone() {
 }
 
 /* ---------------------------------------------
-   PANEL 01 -- HERO PROFILE (satu-satunya panel)
+   PANEL 01 — HERO PROFILE (satu-satunya panel)
 --------------------------------------------- */
 const KontenP01 = () => (
   <div className="absolute inset-0 flex overflow-hidden" style={{ background: '#1769ff' }}>
@@ -85,7 +85,7 @@ const KontenP01 = () => (
 )
 
 /* ---------------------------------------------
-   DATA -- hanya panel 01
+   DATA — hanya panel 01
 --------------------------------------------- */
 const dataPanels: DataPanel[] = [
   {

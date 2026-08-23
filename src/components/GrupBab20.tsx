@@ -78,9 +78,9 @@ function Ch183() {
     { no:75,  judul:'Alat Bantu Difabel IoT',    tag:'AssistiveTech  IoT',status:'RISET',     warna:'#f59e0b', icon:'♿', deskripsi:'Tongkat pintar untuk tunanetra dengan sensor ultrasound untuk deteksi rintangan, GPS untuk navigasi, dan tombol darurat kirim lokasi ke keluarga.' },
   ]
   return (
-    <PanelBab id="ch183" num="183" judul="200 INOVASI -- BAB 3: IoT & TEKNOLOGI CERDAS" warna="#22c55e" bg="#f0fdf4">
+    <PanelBab id="ch183" num="183" judul="200 INOVASI — BAB 3: IoT & TEKNOLOGI CERDAS" warna="#22c55e" bg="#f0fdf4">
       <div className="speech-bubble inline-block text-sm mb-6">
-        🔌 25 inovasi IoT yang menghubungkan dunia fisik dengan digital -- dari sawah hingga kota!
+        🔌 25 inovasi IoT yang menghubungkan dunia fisik dengan digital — dari sawah hingga kota!
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {inovasi.map(item => <KartuInovasi key={item.no} {...item} />)}
@@ -107,7 +107,7 @@ function Ch184() {
     { no:88,  judul:'Analitik Sentimen Pasar Lokal',tag:'BizTech  NLP',  status:'RISET',     warna:'#22c55e', icon:'💬', deskripsi:'Analisis sentimen dari review Google Maps dan media sosial untuk UMKM lokal. Dashboard insight tentang apa yang disukai dan tidak oleh pelanggan.' },
     { no:89,  judul:'OCR KTP dan Dokumen',        tag:'GovTech  CV',     status:'AKTIF',     warna:'#f59e0b', icon:'🪪', deskripsi:'Ekstrak data KTP, ijazah, dan dokumen resmi secara otomatis. Integrasi ke form pendaftaran untuk mengurangi input manual dan human error.' },
     { no:90,  judul:'Rekognisi Wajah Absensi',    tag:'SecTech  CV',     status:'PROTOTYPE', warna:'#1a5cff', icon:'😀', deskripsi:'Sistem absensi face recognition yang berjalan di edge device tanpa internet. Akurat dalam kondisi pencahayaan berbeda dan wajah bermasker.' },
-    { no:91,  judul:'AI Penyuluh Pertanian',       tag:'AgriTech  AI',   status:'KONSEP',    warna:'#e63329', icon:'👨🌾', deskripsi:'Chatbot AI sebagai penyuluh pertanian digital. Tanya soal hama, pupuk, jadwal tanam -- dapat jawaban instan dalam bahasa yang mudah dipahami petani.' },
+    { no:91,  judul:'AI Penyuluh Pertanian',       tag:'AgriTech  AI',   status:'KONSEP',    warna:'#e63329', icon:'👨🌾', deskripsi:'Chatbot AI sebagai penyuluh pertanian digital. Tanya soal hama, pupuk, jadwal tanam — dapat jawaban instan dalam bahasa yang mudah dipahami petani.' },
     { no:92,  judul:'Prediksi Dropout Siswa',      tag:'EdTech  ML',     status:'RISET',     warna:'#8b5cf6', icon:'🎓', deskripsi:'Model prediksi siswa yang berisiko dropout berdasarkan pola absensi, nilai, dan aktivitas. Intervensi dini dari guru BK sebelum terlambat.' },
     { no:93,  judul:'AI Desain Logo UMKM',         tag:'DesignTech  AI', status:'KONSEP',    warna:'#0891b2', icon:'🎨', deskripsi:'Generate logo profesional untuk UMKM dari input nama dan jenis usaha. 10 pilihan desain instan, edit online, download gratis dalam format SVG/PNG.' },
     { no:94,  judul:'Rekomendasi Obat Herbal',     tag:'HealthTech  AI', status:'RISET',     warna:'#22c55e', icon:'🌿', deskripsi:'AI yang merekomendasikan tanaman obat tradisional berdasarkan keluhan. Divalidasi apoteker, dilengkapi cara pengolahan dan peringatan interaksi.' },
@@ -119,9 +119,9 @@ function Ch184() {
     { no:100, judul:'Diagnosis Kerusakan Motor AI',tag:'AutoTech  AI',   status:'RISET',     warna:'#22c55e', icon:'🏍️', deskripsi:'Analisis suara mesin kendaraan bermotor menggunakan ML. Deteksi awal 20+ jenis kerusakan sebelum menjadi masalah besar dan mahal.' },
   ]
   return (
-    <PanelBab id="ch184" num="184" judul="200 INOVASI -- BAB 4: AI & MACHINE LEARNING" warna="#8b5cf6" bg="#f5f0ff">
+    <PanelBab id="ch184" num="184" judul="200 INOVASI — BAB 4: AI & MACHINE LEARNING" warna="#8b5cf6" bg="#f5f0ff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        🤖 25 inovasi AI/ML yang bisa langsung berdampak untuk masyarakat Indonesia -- dari sawah sampai kota!
+        🤖 25 inovasi AI/ML yang bisa langsung berdampak untuk masyarakat Indonesia — dari sawah sampai kota!
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {inovasi.map(item => <KartuInovasi key={item.no} {...item} />)}

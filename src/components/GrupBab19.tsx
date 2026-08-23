@@ -71,7 +71,7 @@ function Ch182() {
     { no:36, judul:'Marketplace Produk Petani',  tag:'AgriTech  Commerce',status:'AKTIF',  warna:'#1a5cff', icon:'🥬', deskripsi:'Petani langsung jual ke konsumen tanpa tengkulak. Sistem prediksi harga, jadwal panen, dan logistik terintegrasi untuk pengiriman segar.' },
     { no:37, judul:'Platform Beasiswa Digital',  tag:'EdTech  Sosial',   status:'ROADMAP', warna:'#0891b2', icon:'🎓', deskripsi:'Satu portal untuk semua beasiswa Indonesia: cari, daftar, track status, dan komunitas penerima beasiswa untuk sharing tips dan pengalaman.' },
     { no:38, judul:'Sistem PKL/Magang Online',   tag:'EdTech  Karir',    status:'KONSEP',  warna:'#22c55e', icon:'💼', deskripsi:'Platform menghubungkan siswa SMK/mahasiswa dengan perusahaan untuk PKL. Proses dari seleksi, MOU digital, hingga penilaian akhir online.' },
-    { no:39, judul:'Arsip Digital Kebudayaan',   tag:'CulturalTech',      status:'RISET',   warna:'#f59e0b', icon:'🎭', deskripsi:'Digitalisasi dan arsip warisan budaya lokal: tari tradisional, lagu daerah, resep makanan khas, bahasa daerah -- tersimpan dan bisa diakses publik.' },
+    { no:39, judul:'Arsip Digital Kebudayaan',   tag:'CulturalTech',      status:'RISET',   warna:'#f59e0b', icon:'🎭', deskripsi:'Digitalisasi dan arsip warisan budaya lokal: tari tradisional, lagu daerah, resep makanan khas, bahasa daerah — tersimpan dan bisa diakses publik.' },
     { no:40, judul:'Platform Freelance Lokal',   tag:'WorkTech  Lokal',  status:'KONSEP',  warna:'#8b5cf6', icon:'💻', deskripsi:'Freelance platform fokus menghubungkan UMKM lokal dengan talent digital di kota yang sama. Bayar lokal, bangun ekosistem ekonomi digital daerah.' },
     { no:41, judul:'Sistem E-Perpustakaan Sekolah',tag:'EdTech  Library',status:'PROTOTYPE',warna:'#e63329',icon:'📚',deskripsi:'Digitalisasi perpustakaan sekolah: katalog digital, peminjaman online, reminder kembali buku, dan rekomendasi buku berdasarkan riwayat baca siswa.' },
     { no:42, judul:'Koperasi Digital',           tag:'FinTech  Koperasi',status:'RISET',   warna:'#1a5cff', icon:'🤝', deskripsi:'Platform koperasi modern: simpan pinjam digital, voting anggota online, laporan keuangan transparan, dan integrasi dengan OJK untuk kepatuhan regulasi.' },
@@ -85,7 +85,7 @@ function Ch182() {
     { no:50, judul:'Platform Lelang Online Lokal',tag:'Commerce  Lokal',status:'KONSEP',  warna:'#22c55e', icon:'🔨', deskripsi:'Lelang online terpercaya untuk barang second berkualitas. Verifikasi kondisi barang oleh kurator, escrow pembayaran, dan jaminan keaslian.' },
   ]
   return (
-    <PanelBab id="ch182" num="182" judul="200 INOVASI -- BAB 2: PLATFORM & PRODUK DIGITAL" warna="#22c55e" bg="#f0fdf4">
+    <PanelBab id="ch182" num="182" judul="200 INOVASI — BAB 2: PLATFORM & PRODUK DIGITAL" warna="#22c55e" bg="#f0fdf4">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
         🚀 25 inovasi produk dan platform digital yang bisa mengubah cara masyarakat Indonesia bekerja dan berinteraksi!
       </div>

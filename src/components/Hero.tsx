@@ -73,7 +73,7 @@ const efekKomik = ['ZAP!', 'POW!', 'WOW!', 'NICE!', 'COOL!', 'EPIC!']
 
 const statistikMini = [
   { icon: '🏆', label: 'BNSP', sub: 'Certified', color: '#f59e0b' },
-  { icon: '🌐', label: 'KVT.kom', sub: 'In Progress', color: '#8b5cf6' },
+  { icon: '🌐', label: 'Gelar.id', sub: 'In Progress', color: '#8b5cf6' },
   { icon: '♻️', label: 'IoT', sub: 'Inovator', color: '#22c55e' },
 ]
 
@@ -124,7 +124,7 @@ export default function Hero() {
             </motion.div>
 
             <div>
-              {/* HALO! -- stamp reveal */}
+              {/* HALO! — stamp reveal */}
               <motion.div
                 initial={{ scale: 3, opacity: 0, rotate: -8 }}
                 animate={{ scale: 1, opacity: 1, rotate: 0 }}
@@ -135,7 +135,7 @@ export default function Hero() {
                 HALO!
               </motion.div>
               <div className="font-comic leading-none">
-                {/* SAYA -- slide in dari kiri */}
+                {/* SAYA — slide in dari kiri */}
                 <motion.span
                   className="block text-4xl sm:text-5xl md:text-7xl"
                   style={{ color: '#0a0a0a' }}
@@ -145,7 +145,7 @@ export default function Hero() {
                 >
                   SAYA
                 </motion.span>
-                {/* RIZKI HABIBI -- per karakter muncul satu per satu dengan efek glitch warna */}
+                {/* RIZKI HABIBI — per karakter muncul satu per satu dengan efek glitch warna */}
                 <span className="block text-4xl sm:text-5xl md:text-7xl" style={{ color: '#1a5cff', WebkitTextStroke: '2px #0a0a0a', textShadow: '4px 4px 0 #0a0a0a' }}>
                   {'RIZKI HABIBI'.split('').map((huruf, i) => (
                     <motion.span
@@ -176,7 +176,7 @@ export default function Hero() {
               <p className="text-comic-black text-xs sm:text-sm leading-relaxed font-medium">
                 Mahasiswa <strong>Sistem &amp; Teknologi Informasi</strong> di Institut Teknologi dan Sains Mandala.
                 Passion di web programming, inovasi IoT, dan membangun ekosistem digital.
-                Sedang menjalani penelitian skripsi sambil mengembangkan platform <strong>KVT.kom</strong>.
+                Sedang menjalani penelitian skripsi sambil mengembangkan platform <strong>Gelar.id</strong>.
               </p>
             </motion.div>
 
@@ -245,7 +245,7 @@ export default function Hero() {
               style={{ background: '#f5f0ff', border: '2px solid #8b5cf6', boxShadow: '4px 4px 0 #8b5cf6' }}>
               <span className="text-xl sm:text-2xl flex-shrink-0">🌐</span>
               <div className="min-w-0">
-                <div className="font-comic text-xs sm:text-sm text-comic-black">KVT.KOM -- <span style={{ color: '#8b5cf6' }}>IN PROGRESS</span></div>
+                <div className="font-comic text-xs sm:text-sm text-comic-black">KVT.KOM — <span style={{ color: '#8b5cf6' }}>IN PROGRESS</span></div>
                 <div className="text-[9px] sm:text-[10px] font-bold text-comic-black/50">Kampus Digital Vtuber Pertama</div>
               </div>
             </motion.div>

@@ -180,7 +180,7 @@ export default function TestimonialsComic() {
           ))}
         </div>
 
-        {/* Panel highlight -- testimoni aktif diperbesar */}
+        {/* Panel highlight — testimoni aktif diperbesar */}
         <AnimatePresence mode="wait">
           <motion.div
             key={aktif}

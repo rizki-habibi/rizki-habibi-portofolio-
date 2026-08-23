@@ -64,7 +64,7 @@ function KartuInovasi({ no, judul, tag, deskripsi, status, warna, icon }: {
 /* --- Ch181: INOVASI EDUKASI (1-25) --- */
 function Ch181() {
   const inovasi = [
-    { no:1,  judul:'KVT.kom AI Tutor',       tag:'EdTech  AI',      status:'AKTIF',    warna:'#1a5cff', icon:'🤖', deskripsi:'AI tutor personal yang bisa menjawab pertanyaan coding kapan saja, adaptif terhadap level pemahaman siswa, dan memberikan feedback real-time saat latihan kode.' },
+    { no:1,  judul:'Gelar.id AI Tutor',       tag:'EdTech  AI',      status:'AKTIF',    warna:'#1a5cff', icon:'🤖', deskripsi:'AI tutor personal yang bisa menjawab pertanyaan coding kapan saja, adaptif terhadap level pemahaman siswa, dan memberikan feedback real-time saat latihan kode.' },
     { no:2,  judul:'Kelas Coding Offline-First', tag:'EdTech  PWA', status:'PROTOTYPE', warna:'#22c55e', icon:'📡', deskripsi:'Platform belajar coding yang bisa diakses tanpa internet sepenuhnya. Materi ter-cache di device, progress sync saat koneksi tersedia. Untuk daerah 3T.' },
     { no:3,  judul:'Gamifikasi Belajar Coding', tag:'EdTech  Game',  status:'RISET',    warna:'#f59e0b', icon:'🎮', deskripsi:'Sistem XP, level, badge, dan leaderboard untuk belajar coding. Setiap modul selesai = item unlock. Quest harian yang memaksa konsistensi belajar.' },
     { no:4,  judul:'Peer Code Review Platform',tag:'EdTech  Social', status:'KONSEP',   warna:'#8b5cf6', icon:'👥', deskripsi:'Siswa saling review kode satu sama lain dengan panduan terstruktur. Membangun kemampuan critical thinking dan komunikasi teknis sejak dini.' },
@@ -91,7 +91,7 @@ function Ch181() {
     { no:25, judul:'Tech Talk Recording Library',tag:'EdTech  Konten',status:'ROADMAP', warna:'#22c55e', icon:'🎬', deskripsi:'Library rekaman tech talk dari developer Indonesia. Topik dari: best practices, cerita gagal, insight industri, sampai review teknologi terbaru.' },
   ]
   return (
-    <PanelBab id="ch181" num="181" judul="200 INOVASI -- BAB 1: REVOLUSI EDUKASI DIGITAL" warna="#1a5cff" bg="#e8f0ff">
+    <PanelBab id="ch181" num="181" judul="200 INOVASI — BAB 1: REVOLUSI EDUKASI DIGITAL" warna="#1a5cff" bg="#e8f0ff">
       <div className="speech-bubble inline-block text-sm mb-6">
         💡 25 inovasi di bidang edukasi teknologi yang sedang atau akan dibangun. Klik setiap kartu untuk baca detail!
       </div>

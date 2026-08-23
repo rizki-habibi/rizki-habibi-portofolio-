@@ -87,7 +87,7 @@ export const daftarChapter: InfoChapter[] = [
   { nomor: 80,  slug: '80',  judul: 'Terima Kasih Telah Membaca',       subjudul: 'Apresiasi untuk pembaca setia portofolio',                  warna: '#ffd700', grupBab: 7,  kategori: 'Refleksi',           emoji: '💛' },
   // ── GrupBab8: Ch81-90 ─────────────────────────────────────
   { nomor: 81,  slug: '81',  judul: 'Skripsi & Penelitian',             subjudul: 'Perjalanan penelitian dan pengerjaan tugas akhir',          warna: '#1a5cff', grupBab: 8,  kategori: 'Akademik',           emoji: '📝' },
-  { nomor: 82,  slug: '82',  judul: 'KVT.kom Platform',                 subjudul: 'Mimpi besar platform KVT dan ekosistem digitalnya',         warna: '#8b5cf6', grupBab: 8,  kategori: 'Proyek',             emoji: '🌐' },
+  { nomor: 82,  slug: '82',  judul: 'Gelar.id Platform',                 subjudul: 'Mimpi besar platform KVT dan ekosistem digitalnya',         warna: '#8b5cf6', grupBab: 8,  kategori: 'Proyek',             emoji: '🌐' },
   { nomor: 83,  slug: '83',  judul: 'Visi Pendidikan Digital',          subjudul: 'Platform edukasi untuk semua lapisan masyarakat',           warna: '#22c55e', grupBab: 8,  kategori: 'Edukasi',            emoji: '🏫' },
   { nomor: 84,  slug: '84',  judul: 'Penelitian & Akademik',            subjudul: 'Paper, jurnal, riset yang relevan dengan industri',         warna: '#0891b2', grupBab: 8,  kategori: 'Akademik',           emoji: '🔬' },
   { nomor: 85,  slug: '85',  judul: 'Keuangan Mahasiswa',               subjudul: 'Manajemen keuangan cerdas untuk mahasiswa developer',       warna: '#f59e0b', grupBab: 8,  kategori: 'Keuangan',           emoji: '💰' },
@@ -175,7 +175,7 @@ export const daftarChapter: InfoChapter[] = [
   { nomor: 160, slug: '160', judul: 'Masa Depan Pekerjaan',             subjudul: 'Bagaimana AI dan otomasi mengubah dunia kerja',             warna: '#1a5cff', grupBab: 15, kategori: 'Karir',              emoji: '🔮' },
   // ── GrupBab16: Ch161-170 ──────────────────────────────────
   { nomor: 161, slug: '161', judul: 'Grand Finale Arc Pertama',         subjudul: 'Penutup arc pertama yang epik',                             warna: '#ffd700', grupBab: 16, kategori: 'Milestone',          emoji: '🎆' },
-  { nomor: 162, slug: '162', judul: 'Proyek Impian: KVT 2.0',          subjudul: 'Visi KVT.kom versi 2.0 yang lebih ambisius',                warna: '#e63329', grupBab: 16, kategori: 'Proyek',             emoji: '🌟' },
+  { nomor: 162, slug: '162', judul: 'Proyek Impian: KVT 2.0',          subjudul: 'Visi Gelar.id versi 2.0 yang lebih ambisius',                warna: '#e63329', grupBab: 16, kategori: 'Proyek',             emoji: '🌟' },
   { nomor: 163, slug: '163', judul: 'Salam Perpisahan & Terima Kasih',  subjudul: 'Ucapan terima kasih kepada semua yang mendukung',          warna: '#22c55e', grupBab: 16, kategori: 'Penutup',            emoji: '👋' },
   { nomor: 164, slug: '164', judul: 'Babak Baru Dimulai',               subjudul: 'Awal dari perjalanan baru yang lebih besar',                warna: '#1a5cff', grupBab: 16, kategori: 'Milestone',          emoji: '🌅' },
   { nomor: 165, slug: '165', judul: 'Legacy & Impact',                  subjudul: 'Dampak yang ingin ditinggalkan untuk dunia',                warna: '#8b5cf6', grupBab: 16, kategori: 'Warisan',            emoji: '💎' },

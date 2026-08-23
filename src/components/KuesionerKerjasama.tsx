@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, AnimatePresence } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { FiX, FiSend, FiCheckCircle, FiUsers, FiMail, FiBriefcase, FiMessageSquare } from 'react-icons/fi'
 
 // ============================================================
@@ -32,14 +32,14 @@ const pilihanKetertarikan = [
   { label: 'UI/UX Design', emoji: '🎨' },
   { label: 'IoT & Hardware', emoji: '🔌' },
   { label: 'AI / Machine Learning', emoji: '🤖' },
-  { label: 'KVT.kom Platform', emoji: '🌐' },
+  { label: 'Gelar.id Platform', emoji: '🌐' },
   { label: 'Penelitian / Skripsi', emoji: '📚' },
   { label: 'Mobile Development', emoji: '📱' },
   { label: 'Cloud & DevOps', emoji: '☁️' },
 ]
 
 // ============================================================
-// TOMBOL PEMICU -- tombol mengambang
+// TOMBOL PEMICU — tombol mengambang
 // ============================================================
 function TombolKuesioner({ onClick }: { onClick: () => void }) {
   return (
@@ -49,7 +49,7 @@ function TombolKuesioner({ onClick }: { onClick: () => void }) {
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ y: -4, scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="fixed bottom-24 left-4 z-40 hidden lg:flex items-center gap-2 font-comic text-xs px-4 py-3"
+      className="fixed bottom-24 left-4 z-40 hidden items-center gap-2 font-comic text-xs px-4 py-3"
       style={{
         background: '#8d55e8',
         border: '3px solid #0a0a0a',
@@ -75,8 +75,15 @@ function TombolKuesioner({ onClick }: { onClick: () => void }) {
 export default function KuesionerKerjasama() {
   const [terbuka, setTerbuka] = useState(false)
   const [terkirim, setTerkirim] = useState(false)
-  const [langkah, setLangkah] = useState(1) // 1=info, 2=bidang, 3=pesan
+  const [langkah, setLangkah] = useState(1)
   const [loading, setLoading] = useState(false)
+
+  // Listen event dari tombol kerjasama di SeksiKontak
+  useEffect(() => {
+    const handler = () => setTerbuka(true)
+    window.addEventListener('buka-kerjasama', handler)
+    return () => window.removeEventListener('buka-kerjasama', handler)
+  }, [])
   const [form, setForm] = useState<DataKuesioner>({
     nama: '',
     email: '',
@@ -129,7 +136,7 @@ export default function KuesionerKerjasama() {
 
   return (
     <>
-      <TombolKuesioner onClick={() => setTerbuka(true)} />
+      {/* Tombol dipindah ke SeksiKontak via custom event 'buka-kerjasama' */}
 
       <AnimatePresence>
         {terbuka && (
@@ -202,7 +209,7 @@ export default function KuesionerKerjasama() {
               <div className="p-5 overflow-y-auto" style={{ maxHeight: '60vh' }}>
                 {!terkirim ? (
                   <AnimatePresence mode="wait">
-                    {/* -- LANGKAH 1: INFO DIRI -- */}
+                    {/* — LANGKAH 1: INFO DIRI — */}
                     {langkah === 1 && (
                       <motion.div
                         key="langkah1"
@@ -240,7 +247,7 @@ export default function KuesionerKerjasama() {
                       </motion.div>
                     )}
 
-                    {/* -- LANGKAH 2: BIDANG KERJASAMA -- */}
+                    {/* — LANGKAH 2: BIDANG KERJASAMA — */}
                     {langkah === 2 && (
                       <motion.div
                         key="langkah2"
@@ -316,7 +323,7 @@ export default function KuesionerKerjasama() {
                       </motion.div>
                     )}
 
-                    {/* -- LANGKAH 3: PESAN -- */}
+                    {/* — LANGKAH 3: PESAN — */}
                     {langkah === 3 && (
                       <motion.div
                         key="langkah3"
@@ -354,7 +361,7 @@ export default function KuesionerKerjasama() {
                         {/* Ringkasan */}
                         <div className="p-3 text-xs space-y-1" style={{ background: '#f0f0eb', border: '2px solid #0a0a0a' }}>
                           <div className="font-comic text-[10px] text-[#0a0a0a]/50 mb-2 tracking-wider">RINGKASAN KUESIONER</div>
-                          <div className="font-bold text-[#0a0a0a]">👤 {form.nama} -- {form.email}</div>
+                          <div className="font-bold text-[#0a0a0a]">👤 {form.nama} — {form.email}</div>
                           {form.instansi && <div className="text-[#0a0a0a]/60">🏢 {form.instansi}</div>}
                           <div className="text-[#8d55e8] font-bold">🤝 {form.jenisKerjasama}</div>
                           {form.ketertarikan.length > 0 && (
@@ -371,7 +378,7 @@ export default function KuesionerKerjasama() {
                     )}
                   </AnimatePresence>
                 ) : (
-                  // -- SUKSES --
+                  // — SUKSES --
                   <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
@@ -476,7 +483,7 @@ export default function KuesionerKerjasama() {
   )
 }
 
-// -- Helper komponen input --
+// — Helper komponen input --
 function BidangInput({
   icon,
   label,

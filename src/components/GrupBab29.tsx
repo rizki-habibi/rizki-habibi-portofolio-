@@ -35,18 +35,18 @@ function PartikelMelayang({ warna = '#ffd700' }: { warna?: string }) {
   )
 }
 
-/* Ch291 -- WEB3 DAN MASA DEPAN INTERNET */
+/* Ch291 — WEB3 DAN MASA DEPAN INTERNET */
 function Ch291() {
   const konsep = [
     { konsep: 'Blockchain', apa: 'Database yang tersebar di ribuan node, tidak ada satu pihak yang kontrol', untuk: 'Transparansi, immutability, trustless transaction', icon: '⛓️', warna: '#f59e0b' },
     { konsep: 'Smart Contract', apa: 'Kode yang berjalan otomatis saat kondisi terpenuhi, tanpa intermediary', untuk: 'DeFi, NFT, DAO, automated agreement', icon: '📋', warna: '#8b5cf6' },
-    { konsep: 'DeFi', apa: 'Decentralized Finance -- layanan keuangan tanpa bank tradisional', untuk: 'Lending, swap, yield farming, derivatives', icon: '💱', warna: '#22c55e' },
-    { konsep: 'NFT', apa: 'Non-Fungible Token -- bukti kepemilikan digital yang unik dan verifiable', untuk: 'Digital art, gaming items, real estate tokenization', icon: '🖼️', warna: '#1a5cff' },
-    { konsep: 'DAO', apa: 'Decentralized Autonomous Organization -- organisasi yang dikelola via vote token', untuk: 'Protocol governance, komunitas berbasis kepemilikan', icon: '🏛️', warna: '#e63329' },
-    { konsep: 'Layer 2', apa: 'Chain yang beroperasi di atas blockchain utama untuk skalabilitas dan biaya murah', untuk: 'Arbitrum, Optimism, Polygon -- Ethereum lebih murah', icon: '⚡', warna: '#0891b2' },
+    { konsep: 'DeFi', apa: 'Decentralized Finance — layanan keuangan tanpa bank tradisional', untuk: 'Lending, swap, yield farming, derivatives', icon: '💱', warna: '#22c55e' },
+    { konsep: 'NFT', apa: 'Non-Fungible Token — bukti kepemilikan digital yang unik dan verifiable', untuk: 'Digital art, gaming items, real estate tokenization', icon: '🖼️', warna: '#1a5cff' },
+    { konsep: 'DAO', apa: 'Decentralized Autonomous Organization — organisasi yang dikelola via vote token', untuk: 'Protocol governance, komunitas berbasis kepemilikan', icon: '🏛️', warna: '#e63329' },
+    { konsep: 'Layer 2', apa: 'Chain yang beroperasi di atas blockchain utama untuk skalabilitas dan biaya murah', untuk: 'Arbitrum, Optimism, Polygon — Ethereum lebih murah', icon: '⚡', warna: '#0891b2' },
   ]
   return (
-    <PanelBab id="ch291" num="291" judul="WEB3 -- MEMAHAMI INTERNET GENERASI BERIKUTNYA" warna="#f59e0b" bg="#fffbeb">
+    <PanelBab id="ch291" num="291" judul="WEB3 — MEMAHAMI INTERNET GENERASI BERIKUTNYA" warna="#f59e0b" bg="#fffbeb">
       <div className="speech-bubble inline-block text-sm mb-6">
         🌐 Web1 = baca. Web2 = baca+tulis. Web3 = baca+tulis+<strong>miliki</strong>. Paradigma shift terbesar dalam sejarah internet!
       </div>
@@ -98,20 +98,20 @@ function Ch291() {
   )
 }
 
-/* Ch292 -- AUGMENTED REALITY & VIRTUAL REALITY */
+/* Ch292 — AUGMENTED REALITY & VIRTUAL REALITY */
 function Ch292() {
   const aplikasi = [
     { bidang: 'Pendidikan AR', deskripsi: 'Siswa melihat sel darah merah dalam 3D di atas buku pelajaran. Atau belajar sejarah dengan VR tour ke candi Borobudur di era kejayaannya.', icon: '🎓', warna: '#1a5cff' },
     { bidang: 'Kesehatan VR', deskripsi: 'Dokter latihan operasi di simulasi VR sebelum prosedur nyata. Pasien dengan fobia bisa terapi eksposur dalam lingkungan aman yang terkontrol.', icon: '🏥', warna: '#e63329' },
-    { bidang: 'Retail AR', deskripsi: 'Lihat bagaimana sofa akan terlihat di ruang tamumu sebelum beli. IKEA, Amazon sudah terapkan ini -- konversi naik 40%.', icon: '🛋️', warna: '#22c55e' },
+    { bidang: 'Retail AR', deskripsi: 'Lihat bagaimana sofa akan terlihat di ruang tamumu sebelum beli. IKEA, Amazon sudah terapkan ini — konversi naik 40%.', icon: '🛋️', warna: '#22c55e' },
     { bidang: 'Training Industri', deskripsi: 'Teknisi bisa latihan perbaiki mesin pabrik dalam VR tanpa risiko kerusakan nyata. Boeing hemat $2M setahun dari training VR vs konvensional.', icon: '🔧', warna: '#8b5cf6' },
-    { bidang: 'Real Estate Virtual', deskripsi: 'Virtual property tour -- beli rumah setelah jalan-jalan VR tanpa harus ke lokasi. Sangat relevan untuk pembelian cross-kota.', icon: '🏠', warna: '#f59e0b' },
+    { bidang: 'Real Estate Virtual', deskripsi: 'Virtual property tour — beli rumah setelah jalan-jalan VR tanpa harus ke lokasi. Sangat relevan untuk pembelian cross-kota.', icon: '🏠', warna: '#f59e0b' },
     { bidang: 'Social VR', deskripsi: 'Meeting dalam virtual office, konser virtual, atau sekadar nongkrong dengan teman yang jauh. Meta Horizon Worlds adalah versi awalnya.', icon: '👥', warna: '#0891b2' },
   ]
   return (
-    <PanelBab id="ch292" num="292" judul="AR & VR -- MENGABURKAN BATAS REALITA DAN DIGITAL" warna="#8b5cf6" bg="#f5f0ff">
+    <PanelBab id="ch292" num="292" judul="AR & VR — MENGABURKAN BATAS REALITA DAN DIGITAL" warna="#8b5cf6" bg="#f5f0ff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        🥽 AR/VR bukan hanya gaming. Ini adalah antarmuka komputasi generasi berikutnya -- sama seperti touchscreen menggantikan keyboard fisik!
+        🥽 AR/VR bukan hanya gaming. Ini adalah antarmuka komputasi generasi berikutnya — sama seperti touchscreen menggantikan keyboard fisik!
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
         {aplikasi.map((a, i) => (
@@ -137,7 +137,7 @@ function Ch292() {
   )
 }
 
-/* Ch293 -- QUANTUM COMPUTING */
+/* Ch293 — QUANTUM COMPUTING */
 function Ch293() {
   const [qubit, setQubit] = useState(0)
   useEffect(() => {
@@ -145,9 +145,9 @@ function Ch293() {
     return () => clearInterval(t)
   }, [])
   return (
-    <PanelBab id="ch293" num="293" judul="QUANTUM COMPUTING -- KOMPUTASI MELAMPAUI BATAS FISIKA" warna="#0891b2" bg="#ecfeff" gelap>
+    <PanelBab id="ch293" num="293" judul="QUANTUM COMPUTING — KOMPUTASI MELAMPAUI BATAS FISIKA" warna="#0891b2" bg="#ecfeff" gelap>
       <div className="speech-bubble inline-block text-sm mb-6 text-[#0a0a0a]">
-        ⚛️ Quantum computing bukan hanya komputer yang lebih cepat -- ini adalah paradigma komputasi yang sama sekali berbeda secara fundamental!
+        ⚛️ Quantum computing bukan hanya komputer yang lebih cepat — ini adalah paradigma komputasi yang sama sekali berbeda secara fundamental!
       </div>
       {/* Animasi qubit */}
       <div className="flex items-center justify-center mb-8">
@@ -189,7 +189,7 @@ function Ch293() {
           <div className="space-y-2">
             {[
               { app: 'Drug Discovery', detail: 'Simulasi molekul obat yang tidak mungkin di komputer klasik', icon: '💊' },
-              { app: 'Kriptografi Baru', detail: 'Quantum akan memecahkan enkripsi saat ini -- dan menciptakan yang baru', icon: '🔐' },
+              { app: 'Kriptografi Baru', detail: 'Quantum akan memecahkan enkripsi saat ini — dan menciptakan yang baru', icon: '🔐' },
               { app: 'Optimasi Logistik', detail: 'Route planning untuk jutaan variabel secara simultan', icon: '📦' },
               { app: 'Climate Modeling', detail: 'Simulasi iklim yang jauh lebih presisi untuk prediksi cuaca', icon: '🌡️' },
               { app: 'Financial Modeling', detail: 'Portfolio optimization dengan ribuan variabel real-time', icon: '📈' },
@@ -215,7 +215,7 @@ function Ch293() {
   )
 }
 
-/* Ch294 -- ARTIFICIAL GENERAL INTELLIGENCE */
+/* Ch294 — ARTIFICIAL GENERAL INTELLIGENCE */
 function Ch294() {
   const level = [
     { level: 'ANI', nama: 'Artificial Narrow Intelligence', status: 'SEKARANG', deskripsi: 'AI yang ahli dalam satu tugas spesifik: Chess AI, voice assistant, recommendation engine, image classifier. Sudah melampaui manusia di bidangnya.', warna: '#22c55e', icon: '🤖' },
@@ -223,9 +223,9 @@ function Ch294() {
     { level: 'ASI', nama: 'Artificial Super Intelligence', status: 'MASA DEPAN', deskripsi: 'AI yang melampaui kapasitas kognitif manusia di segala bidang. Skenario ini adalah topik paling kontroversial di antara researcher AI dunia.', warna: '#e63329', icon: '⚡' },
   ]
   return (
-    <PanelBab id="ch294" num="294" judul="AGI -- TITIK SINGULARITAS YANG SEMAKIN DEKAT" warna="#f59e0b" bg="#fffbeb">
+    <PanelBab id="ch294" num="294" judul="AGI — TITIK SINGULARITAS YANG SEMAKIN DEKAT" warna="#f59e0b" bg="#fffbeb">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        🤖 AGI bukan lagi fiksi ilmiah -- ini adalah pertanyaan kapan, bukan apakah. Dan developer hari ini yang membangun fondasinya!
+        🤖 AGI bukan lagi fiksi ilmiah — ini adalah pertanyaan kapan, bukan apakah. Dan developer hari ini yang membangun fondasinya!
       </div>
       <div className="space-y-6 mb-8">
         {level.map((l, i) => (
@@ -284,7 +284,7 @@ function Ch294() {
 function Ch295to300() {
   const prediksi = [
     { tahun: '2026', prediksi: 'AI coding assistant yang bisa generate production-ready app dari deskripsi natural language', probabilitas: 85, icon: '🤖', warna: '#22c55e' },
-    { tahun: '2027', prediksi: 'AR glasses mainstream -- menggantikan sebagian fungsi smartphone dalam aktivitas sehari-hari', probabilitas: 40, icon: '🥽', warna: '#1a5cff' },
+    { tahun: '2027', prediksi: 'AR glasses mainstream — menggantikan sebagian fungsi smartphone dalam aktivitas sehari-hari', probabilitas: 40, icon: '🥽', warna: '#1a5cff' },
     { tahun: '2027', prediksi: 'Mobil otonom level 4 tersedia secara komersial di kota-kota besar Asia Tenggara', probabilitas: 50, icon: '🚗', warna: '#8b5cf6' },
     { tahun: '2028', prediksi: 'Quantum computer pertama yang bisa memecahkan RSA-2048 encryption dalam hitungan jam', probabilitas: 30, icon: '⚛️', warna: '#f59e0b' },
     { tahun: '2029', prediksi: 'Brain-computer interface non-invasive yang cukup akurat untuk menggantikan keyboard', probabilitas: 20, icon: '🧠', warna: '#e63329' },
@@ -292,12 +292,12 @@ function Ch295to300() {
     { tahun: '2030', prediksi: 'Platform pendidikan AI yang personal memungkinkan setara dengan private tutor untuk semua orang', probabilitas: 75, icon: '🎓', warna: '#22c55e' },
     { tahun: '2030', prediksi: 'Lebih dari 50% kode production ditulis atau di-assist oleh AI, bukan manusia', probabilitas: 80, icon: '💻', warna: '#1a5cff' },
     { tahun: '2030', prediksi: 'Smart city penuh di 5+ kota Indonesia dengan layanan digital terintegrasi citizen-first', probabilitas: 60, icon: '🏙️', warna: '#8b5cf6' },
-    { tahun: '2030', prediksi: 'Teknologi fusion energy komersial pertama mulai beroperasi -- menggantikan batubara secara global', probabilitas: 25, icon: '☀️', warna: '#f59e0b' },
+    { tahun: '2030', prediksi: 'Teknologi fusion energy komersial pertama mulai beroperasi — menggantikan batubara secara global', probabilitas: 25, icon: '☀️', warna: '#f59e0b' },
   ]
   return (
     <PanelBab id="ch295" num="295-300" judul="10 PREDIKSI TEKNOLOGI 2026-2030" warna="#0891b2" bg="#ecfeff" gelap>
       <div className="speech-bubble inline-block text-sm mb-8 text-[#0a0a0a]">
-        🔮 Prediksi ini berdasarkan tren penelitian, investasi, dan pola adopsi teknologi. Probabilitas adalah estimasi subjektif -- masa depan selalu lebih aneh dari yang diprediksi!
+        🔮 Prediksi ini berdasarkan tren penelitian, investasi, dan pola adopsi teknologi. Probabilitas adalah estimasi subjektif — masa depan selalu lebih aneh dari yang diprediksi!
       </div>
       <div className="space-y-4">
         {prediksi.map((p, i) => (

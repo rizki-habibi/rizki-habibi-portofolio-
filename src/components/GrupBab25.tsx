@@ -44,12 +44,12 @@ function Ch193() {
     },
     {
       no: '03', judul: 'Mulai Kecil, Dampak Nyata',
-      isi: 'Satu RT yang terbantu lebih berharga dari demo yang impressive tapi tidak ada yang pakai. MVP bukan versi jelek dari produk -- ini adalah cara tercepat menemukan apa yang benar-benar dibutuhkan. Ship, learn, iterate. Terus.',
+      isi: 'Satu RT yang terbantu lebih berharga dari demo yang impressive tapi tidak ada yang pakai. MVP bukan versi jelek dari produk — ini adalah cara tercepat menemukan apa yang benar-benar dibutuhkan. Ship, learn, iterate. Terus.',
       warna: '#f59e0b', icon: '⚡',
     },
     {
       no: '04', judul: 'Open Source sebagai Warisan',
-      isi: 'Setiap baris kode yang saya tulis untuk kepentingan publik -- toolkit NLP, library UI, atau framework desa -- harus menjadi commons yang bisa digunakan siapapun setelah saya tidak ada. Kode yang baik adalah surat cinta untuk developer masa depan.',
+      isi: 'Setiap baris kode yang saya tulis untuk kepentingan publik — toolkit NLP, library UI, atau framework desa — harus menjadi commons yang bisa digunakan siapapun setelah saya tidak ada. Kode yang baik adalah surat cinta untuk developer masa depan.',
       warna: '#8b5cf6', icon: '🔓',
     },
     {
@@ -59,12 +59,12 @@ function Ch193() {
     },
     {
       no: '06', judul: 'Keberlanjutan adalah Strategi',
-      isi: 'Inovasi gratis tidak sustainable. Model bisnis yang jelas -- freemium, subsidi silang, B2G, atau hybrid -- adalah bagian dari desain produk sejak awal, bukan afterthought. Karena inovasi yang mati tidak berdampak apa-apa.',
+      isi: 'Inovasi gratis tidak sustainable. Model bisnis yang jelas — freemium, subsidi silang, B2G, atau hybrid — adalah bagian dari desain produk sejak awal, bukan afterthought. Karena inovasi yang mati tidak berdampak apa-apa.',
       warna: '#0891b2', icon: '♻️',
     },
   ]
   return (
-    <PanelBab id="ch193" num="193" judul="FILOSOFI INOVASI -- MENGAPA 200 & KENAPA INI PENTING" warna="#ffd700" bg="#fffbeb" gelap>
+    <PanelBab id="ch193" num="193" judul="FILOSOFI INOVASI — MENGAPA 200 & KENAPA INI PENTING" warna="#ffd700" bg="#fffbeb" gelap>
       <div className="speech-bubble inline-block text-sm mb-8 text-[#0a0a0a]">
         💭 Di balik setiap angka dan deskripsi inovasi, ada filosofi yang mendasari semuanya. Ini bukan sekedar daftar ide.
       </div>
@@ -83,7 +83,7 @@ function Ch193() {
                 transition={{ duration: 3, repeat: Infinity, delay: i * 0.5 }}>
                 {p.icon}
               </motion.span>
-              <span className="font-comic text-[10px] text-white">{p.no} -- {p.judul}</span>
+              <span className="font-comic text-[10px] text-white">{p.no} — {p.judul}</span>
             </div>
             <p className="p-4 text-xs text-white/70 font-bold leading-relaxed">{p.isi}</p>
           </motion.div>
@@ -97,7 +97,7 @@ function Ch193() {
 function Ch194() {
   const tantangan = [
     {
-      masalah: 'Resource terbatas -- satu developer, satu laptop',
+      masalah: 'Resource terbatas — satu developer, satu laptop',
       solusi: 'Prioritas keras: 1 inovasi pada satu waktu. Open source untuk cari kontributor. Partner untuk bagi beban.',
       warna: '#e63329', icon: '⚡',
     },
@@ -164,7 +164,7 @@ function Ch194() {
   )
 }
 
-/* --- Ch195: GRAND FINALE -- 200 INOVASI, SATU DEVELOPER, SATU JEMBER --- */
+/* --- Ch195: GRAND FINALE — 200 INOVASI, SATU DEVELOPER, SATU JEMBER --- */
 function Ch195() {
   const [angka, setAngka] = useState(0)
   const [teksIdx, setTeksIdx] = useState(0)
@@ -184,7 +184,7 @@ function Ch195() {
   }, [teksInspirasi.length])
 
   return (
-    <PanelBab id="ch195" num="195" judul="GRAND FINALE -- 200 INOVASI, 1 DEVELOPER, 1 VISI" warna="#ffd700" bg="#fffbeb" gelap>
+    <PanelBab id="ch195" num="195" judul="GRAND FINALE — 200 INOVASI, 1 DEVELOPER, 1 VISI" warna="#ffd700" bg="#fffbeb" gelap>
       <div className="max-w-3xl mx-auto text-center">
         {/* Animasi angka gila */}
         <motion.div
@@ -260,7 +260,7 @@ function Ch195() {
             Tidak semua akan terwujud persis seperti yang ditulis. Beberapa akan lebih besar. Beberapa akan berubah bentuk.
             Beberapa mungkin tidak pernah jadi. Dan itu <span className="text-yellow-400">normal</span>.<br /><br />
             Yang penting: kamu sudah mulai memikirkannya. Kamu sudah berani bermimpi dengan spesifik.
-            Dan dari 200 ini, cukup satu yang benar-benar mengubah satu hidup orang lain -- itu sudah cukup.<br /><br />
+            Dan dari 200 ini, cukup satu yang benar-benar mengubah satu hidup orang lain — itu sudah cukup.<br /><br />
             <span className="text-yellow-400">Sekarang tutup dokumen ini dan pergi code sesuatu.</span>
           </p>
           <div className="font-comic text-sm text-yellow-400 text-right mt-4">-- Dirimu, dari masa depan</div>
@@ -304,7 +304,7 @@ function Ch195() {
             ⚡ 200 DONE. 201 COMING SOON ⚡
           </motion.div>
           <div className="font-comic text-xs text-white/20 tracking-widest">
-            -- RIZKI HABIBI  JEMBER  2026  CHAPTER 260 REACHED --
+            — RIZKI HABIBI  JEMBER  2026  CHAPTER 260 REACHED --
           </div>
           <div className="font-comic text-[10px] text-white/15 mt-1">
             Built with ❤️  Next.js  Tailwind CSS  Framer Motion  200 Inovasi untuk Indonesia

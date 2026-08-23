@@ -11,7 +11,7 @@ const panels = [
     color: '#1a5cff',
     bg: '#e8f0ff',
     isi: [
-      'Bukan sekadar mencari ijazah -- saya kuliah karena ingin memahami fondasi teknologi secara mendalam.',
+      'Bukan sekadar mencari ijazah — saya kuliah karena ingin memahami fondasi teknologi secara mendalam.',
       'Di Institut Teknologi dan Sains Mandala, saya menemukan bahwa ilmu Sistem & Teknologi Informasi adalah kunci untuk membangun solusi nyata yang berdampak.',
       'Kuliah bagi saya adalah laboratorium eksperimen: tempat mengasah logika, mencoba ide gila, dan bertemu orang-orang yang berpikiran sama.',
     ],
@@ -24,11 +24,11 @@ const panels = [
     color: '#22c55e',
     bg: '#f0fdf4',
     isi: [
-      'Saya percaya bahwa generasi muda Indonesia tidak harus selalu melamar kerja -- kita bisa menciptakan pekerjaan sendiri secara digital.',
-      'Melalui proyek-proyek web, sistem IoT, dan platform KVT.kom yang sedang saya bangun, saya ingin membuka peluang kerja bagi kreator, developer, dan pengajar digital.',
+      'Saya percaya bahwa generasi muda Indonesia tidak harus selalu melamar kerja — kita bisa menciptakan pekerjaan sendiri secara digital.',
+      'Melalui proyek-proyek web, sistem IoT, dan platform Gelar.id yang sedang saya bangun, saya ingin membuka peluang kerja bagi kreator, developer, dan pengajar digital.',
       'Target saya: setelah lulus, platform KVT bisa menjadi ekosistem yang menghasilkan lapangan kerja bagi puluhan hingga ratusan orang berbasis digital.',
     ],
-    quote: '"Satu website bisa mengubah hidup banyak orang -- asal dibangun dengan niat yang benar."',
+    quote: '"Satu website bisa mengubah hidup banyak orang — asal dibangun dengan niat yang benar."',
   },
   {
     num: '03',
@@ -37,9 +37,9 @@ const panels = [
     color: '#f59e0b',
     bg: '#fffbeb',
     isi: [
-      'Ekosistem digital tidak bisa berdiri sendiri -- butuh komunitas yang saling mendukung, berbagi, dan bertumbuh bersama.',
+      'Ekosistem digital tidak bisa berdiri sendiri — butuh komunitas yang saling mendukung, berbagi, dan bertumbuh bersama.',
       'Saya aktif mengikuti seminar, webinar, dan pelatihan bukan hanya untuk diri sendiri, tapi untuk menyerap pengetahuan yang bisa saya bagikan ke komunitas.',
-      'KVT bukan sekadar website -- ini adalah komunitas kreator digital yang akan saya bangun step by step, mulai dari sesama mahasiswa hingga profesional muda Indonesia.',
+      'KVT bukan sekadar website — ini adalah komunitas kreator digital yang akan saya bangun step by step, mulai dari sesama mahasiswa hingga profesional muda Indonesia.',
     ],
     quote: '"Komunitas yang kuat adalah fondasi dari ekosistem digital yang berkelanjutan."',
   },
@@ -50,8 +50,8 @@ const panels = [
     color: '#e63329',
     bg: '#fef2f2',
     isi: [
-      'Saya tumbuh memahami bahwa keterbatasan bukan hambatan -- justru keterbatasan melahirkan kreativitas.',
-      'Kemampuan merakit alat monitoring dari bahan bekas bukan sekadar hobi -- itu bukti bahwa inovasi bisa lahir dari mana saja, termasuk dari limbah yang dianggap tidak berguna.',
+      'Saya tumbuh memahami bahwa keterbatasan bukan hambatan — justru keterbatasan melahirkan kreativitas.',
+      'Kemampuan merakit alat monitoring dari bahan bekas bukan sekadar hobi — itu bukti bahwa inovasi bisa lahir dari mana saja, termasuk dari limbah yang dianggap tidak berguna.',
       'Prinsip ini yang saya bawa ke dunia digital: membangun solusi impactful dengan sumber daya minimal, tapi dampak maksimal.',
     ],
     quote: '"Inovasi sejati lahir bukan dari kemewahan, tapi dari keberanian berpikir berbeda."',
@@ -62,7 +62,7 @@ const milestones = [
   { tahun: '2023', label: 'Mulai Kuliah STI', icon: '🎓', color: '#1a5cff' },
   { tahun: '2024', label: 'Bangun Proyek Nyata', icon: '💻', color: '#22c55e' },
   { tahun: '2025', label: 'Sertifikasi BNSP + 75 Sertifikat', icon: '🏆', color: '#f59e0b' },
-  { tahun: '2026', label: 'Skripsi + Kembangkan KVT.kom', icon: '🚀', color: '#e63329' },
+  { tahun: '2026', label: 'Skripsi + Kembangkan Gelar.id', icon: '🚀', color: '#e63329' },
   { tahun: 'FUTURE', label: 'Publish KVT & Buka Lapangan Kerja', icon: '🌟', color: '#8b5cf6' },
 ]
 
@@ -73,7 +73,7 @@ export default function CeritaPerjalanan() {
       <div className="max-w-6xl mx-auto relative z-10">
 
         {/* Chapter Header */}
-        <HeaderBab nomor="01" judul="ORIGIN STORY" warna="#1a5cff" subtitle="📖 Dari nol hingga di sini -- ini cerita saya!" />
+        <HeaderBab nomor="01" judul="ORIGIN STORY" warna="#1a5cff" subtitle="📖 Dari nol hingga di sini — ini cerita saya!" />
 
         {/* Story panels grid */}
         <div className="grid md:grid-cols-2 gap-6 mb-16">

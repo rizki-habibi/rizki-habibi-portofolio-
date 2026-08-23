@@ -38,7 +38,7 @@ function GridTiga({ items }: { items: { icon: string; judul: string; teks: strin
   )
 }
 
-// -- Ch101 ---------------------------------------------------------------------
+// — Ch101 ---------------------------------------------------------------------
 function Ch101() {
   const aiTools = [
     { nama: 'ChatGPT / GPT-4o', kegunaan: 'Debug, explain code, generate boilerplate, draft artikel teknis dan dokumentasi', icon: '??', warna: '#10a37f' },
@@ -46,7 +46,7 @@ function Ch101() {
     { nama: 'Claude (Anthropic)', kegunaan: 'Analisis kode kompleks, refactoring, dan diskusi arsitektur sistem yang mendalam', icon: '??', warna: '#e8623a' },
     { nama: 'Gemini AI', kegunaan: 'Research, summarize dokumen panjang, dan bantu membuat konten teknis yang terstruktur', icon: '?', warna: '#4285f4' },
     { nama: 'Midjourney / DALL-E', kegunaan: 'Generate ilustrasi untuk presentasi, blog post, dan konten visual proyek', icon: '??', warna: '#8b5cf6' },
-    { nama: 'Whisper / ElevenLabs', kegunaan: 'Transkripsi audio & text-to-speech untuk aksesibilitas di platform KVT.kom', icon: '???', warna: '#f59e0b' },
+    { nama: 'Whisper / ElevenLabs', kegunaan: 'Transkripsi audio & text-to-speech untuk aksesibilitas di platform Gelar.id', icon: '???', warna: '#f59e0b' },
   ]
   return (
     <PanelBab id="ch101" chNum="CHAPTER 101" judul="AI TOOLS  SENJATA DEVELOPER MODERN" warna="#10a37f" latarBelakang="#edfaf5">
@@ -92,12 +92,12 @@ function Ch101() {
   )
 }
 
-// -- Ch102 ---------------------------------------------------------------------
+// — Ch102 ---------------------------------------------------------------------
 function Ch102() {
   const daftarKeahlian = [
     { skill: 'Supervised Learning', deskripsi: 'Regresi linear, klasifikasi, dan decision tree  fondasi ML yang wajib dipahami setiap developer AI', level: 65, warna: '#1a5cff' },
     { skill: 'Neural Networks Dasar', deskripsi: 'Feedforward network, backpropagation, dan activation functions dengan Python & TensorFlow', level: 55, warna: '#8b5cf6' },
-    { skill: 'NLP (Text Processing)', deskripsi: 'Tokenisasi, sentiment analysis, dan text classification untuk fitur AI di KVT.kom', level: 60, warna: '#22c55e' },
+    { skill: 'NLP (Text Processing)', deskripsi: 'Tokenisasi, sentiment analysis, dan text classification untuk fitur AI di Gelar.id', level: 60, warna: '#22c55e' },
     { skill: 'Data Preprocessing', deskripsi: 'Cleaning data, feature engineering, dan normalisasi  80% waktu ML ada di sini!', level: 70, warna: '#f59e0b' },
     { skill: 'Model Deployment', deskripsi: 'Integrasi model ML ke REST API dengan Flask/FastAPI dan deploy ke cloud server', level: 58, warna: '#e63329' },
   ]
@@ -169,7 +169,7 @@ function Ch102() {
   )
 }
 
-// -- Ch103 ---------------------------------------------------------------------
+// — Ch103 ---------------------------------------------------------------------
 function Ch103() {
   return (
     <PanelBab id="ch103" chNum="CHAPTER 103" judul="CLOUD COMPUTING  SKALAKAN SEGALANYA" warna="#0891b2" latarBelakang="#ecfeff">
@@ -212,7 +212,7 @@ function Ch103() {
   )
 }
 
-// -- Ch104 ---------------------------------------------------------------------
+// — Ch104 ---------------------------------------------------------------------
 function Ch104() {
   const ancaman = [
     { nama: 'SQL Injection', pencegahan: 'Gunakan Eloquent ORM atau prepared statements. JANGAN concatenate user input ke query SQL langsung!', icon: '??', warna: '#e63329', level: 'KRITIS' },
@@ -259,7 +259,7 @@ function Ch104() {
   )
 }
 
-// -- Ch105 ---------------------------------------------------------------------
+// — Ch105 ---------------------------------------------------------------------
 function Ch105() {
   return (
     <PanelBab id="ch105" chNum="CHAPTER 105" judul="DATABASE MASTERY  SENI MENGELOLA DATA" warna="#4479A1" latarBelakang="#eef4fb">
@@ -305,7 +305,7 @@ function Ch105() {
   )
 }
 
-// -- Ch106 ---------------------------------------------------------------------
+// — Ch106 ---------------------------------------------------------------------
 function Ch106() {
   const prinsip = [
     { nama: 'Single Responsibility', singkat: 'SRP', desc: 'Satu class/function hanya punya satu tanggung jawab. Jika ada "dan" dalam deskripsinya  pisahkan!', warna: '#1a5cff', icon: '??' },
@@ -361,7 +361,7 @@ function Ch106() {
   )
 }
 
-// -- Ch107 ---------------------------------------------------------------------
+// — Ch107 ---------------------------------------------------------------------
 function Ch107() {
   return (
     <PanelBab id="ch107" chNum="CHAPTER 107" judul="API DESIGN  BAHASA ANTAR SISTEM" warna="#f59e0b" latarBelakang="#fffbeb">
@@ -424,7 +424,7 @@ function Ch107() {
   )
 }
 
-// -- Ch108 ---------------------------------------------------------------------
+// — Ch108 ---------------------------------------------------------------------
 function Ch108() {
   return (
     <PanelBab id="ch108" chNum="CHAPTER 108" judul="OPEN SOURCE  KODE UNTUK DUNIA" warna="#22c55e" latarBelakang="#f0fdf4">
@@ -450,7 +450,7 @@ function Ch108() {
   )
 }
 
-// -- Ch109 ---------------------------------------------------------------------
+// — Ch109 ---------------------------------------------------------------------
 function Ch109() {
   return (
     <PanelBab id="ch109" chNum="CHAPTER 109" judul="UI/UX  DESAIN YANG MANUSIAWI" warna="#e1306c" latarBelakang="#fff0f5">
@@ -499,7 +499,7 @@ function Ch109() {
   )
 }
 
-// -- Ch110 ---------------------------------------------------------------------
+// — Ch110 ---------------------------------------------------------------------
 function Ch110() {
   return (
     <PanelBab id="ch110" chNum="CHAPTER 110" judul="WEB3 & BLOCKCHAIN  MASA DEPAN INTERNET" warna="#f59e0b" latarBelakang="#fffbeb">
@@ -509,7 +509,7 @@ function Ch110() {
       <GridTiga items={[
         { icon: '??', judul: 'Blockchain Basics', teks: 'Distributed ledger yang immutable dan transparan. Cocok untuk use case yang butuh trust tanpa pihak ketiga', warna: '#f59e0b', bg: '#fffbeb' },
         { icon: '??', judul: 'Smart Contract', teks: 'Kode yang berjalan otomatis di blockchain saat kondisi terpenuhi. Ethereum, Solidity  fondasi DeFi', warna: '#1a5cff', bg: '#e8f0ff' },
-        { icon: '??', judul: 'NFT & Digital Assets', teks: 'Kepemilikan digital yang verifiable. Potensi untuk sertifikat akademik KVT.kom yang tidak bisa dipalsukan!', warna: '#8b5cf6', bg: '#f5f0ff' },
+        { icon: '??', judul: 'NFT & Digital Assets', teks: 'Kepemilikan digital yang verifiable. Potensi untuk sertifikat akademik Gelar.id yang tidak bisa dipalsukan!', warna: '#8b5cf6', bg: '#f5f0ff' },
         { icon: '??', judul: 'DeFi', teks: 'Layanan keuangan tanpa bank. QRIS donasi masa depan bisa pakai blockchain untuk transparansi total!', warna: '#22c55e', bg: '#f0fdf4' },
         { icon: '??', judul: 'Decentralized Apps', teks: 'dApps berjalan tanpa server terpusat. Tahan sensor dan lebih demokratis dari web tradisional', warna: '#0891b2', bg: '#ecfeff' },
         { icon: '?', judul: 'Layer 2 Solutions', teks: 'Solana, Polygon, Lightning Network  solusi untuk masalah skalabilitas blockchain generasi pertama', warna: '#e63329', bg: '#fef2f2' },

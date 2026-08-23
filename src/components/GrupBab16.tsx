@@ -38,19 +38,19 @@ function GridTiga({ items }: { items: { icon: string; judul: string; teks: strin
   )
 }
 
-// -- Ch161: 100 HARI PRODUKTIF -------------------------------------------------
+// — Ch161: 100 HARI PRODUKTIF -------------------------------------------------
 function Ch161() {
   const target = [
     { hari: '1-10', fokus: 'Foundation', target: 'Setup workspace sempurna + habit tracking + clear goals 2026', warna: '#1a5cff' },
-    { hari: '11-30', fokus: 'Deep Work', target: 'Selesaikan BAB IV-V skripsi + launch KVT.kom landing page', warna: '#22c55e' },
-    { hari: '31-50', fokus: 'Launch', target: 'KVT.kom beta launch + onboard 100 user pertama + validasi konsep', warna: '#f59e0b' },
+    { hari: '11-30', fokus: 'Deep Work', target: 'Selesaikan BAB IV-V skripsi + launch Gelar.id landing page', warna: '#22c55e' },
+    { hari: '31-50', fokus: 'Launch', target: 'Gelar.id beta launch + onboard 100 user pertama + validasi konsep', warna: '#f59e0b' },
     { hari: '51-70', fokus: 'Growth', target: 'Iterasi berdasar feedback + tambah 3 kursus baru + reach 500 user', warna: '#8b5cf6' },
     { hari: '71-90', fokus: 'Expand', target: 'Cari co-founder + pitch ke seed investor + partnership dengan kampus', warna: '#e63329' },
     { hari: '91-100', fokus: 'Reflect', target: 'Review semua pencapaian + set target 100 hari berikutnya', warna: '#0891b2' },
   ]
   return (
-    <PanelBab id="ch161" num="161" judul="100 HARI PRODUKTIF -- CHALLENGE HIDUP" warna="#1a5cff" latarBelakang="#e8f0ff">
-      <div className="speech-bubble inline-block text-sm mb-6">⚡ 100 hari adalah waktu yang cukup untuk mengubah hidup secara signifikan -- jika dijalani dengan intention!</div>
+    <PanelBab id="ch161" num="161" judul="100 HARI PRODUKTIF — CHALLENGE HIDUP" warna="#1a5cff" latarBelakang="#e8f0ff">
+      <div className="speech-bubble inline-block text-sm mb-6">⚡ 100 hari adalah waktu yang cukup untuk mengubah hidup secara signifikan — jika dijalani dengan intention!</div>
       <div className="space-y-3">
         {target.map((t, i) => (
           <motion.div key={t.hari}
@@ -72,17 +72,17 @@ function Ch161() {
   )
 }
 
-// -- Ch162: PROYEK IMPIAN 2027 -------------------------------------------------
+// — Ch162: PROYEK IMPIAN 2027 -------------------------------------------------
 function Ch162() {
   const proyek = [
-    { nama: 'KVT.kom v2.0', desc: 'Platform edukasi full-featured: live coding, AI tutor, job board, dan komunitas aktif 10.000+ member', status: 'AKTIF DEVELOP', icon: '🚀', warna: '#8b5cf6' },
+    { nama: 'Gelar.id v2.0', desc: 'Platform edukasi full-featured: live coding, AI tutor, job board, dan komunitas aktif 10.000+ member', status: 'AKTIF DEVELOP', icon: '🚀', warna: '#8b5cf6' },
     { nama: 'Sistem Donasi Transparan', desc: 'QRIS-based donation platform dengan blockchain transparency. Setiap rupiah bisa dilacak penggunaannya', status: 'PLANNING', icon: '💰', warna: '#e63329' },
     { nama: 'Website Desa Platform', desc: 'SaaS khusus untuk website desa: template, CMS mudah, hosting murah, training untuk operator desa', status: 'PLANNING', icon: '🏘️', warna: '#22c55e' },
     { nama: 'Developer Portfolio AI', desc: 'AI yang membantu developer junior membuat portfolio yang menarik dan ATS-friendly secara otomatis', status: 'IDEA', icon: '🤖', warna: '#1a5cff' },
     { nama: 'Smart Farming App', desc: 'App untuk petani lokal: harga pasar, cuaca, tips budidaya, dan marketplace langsung ke konsumen', status: 'IDEA', icon: '🌾', warna: '#f59e0b' },
   ]
   return (
-    <PanelBab id="ch162" num="162" judul="PROYEK IMPIAN 2027 -- VISI YANG MENANTI" warna="#8b5cf6" latarBelakang="#f5f0ff">
+    <PanelBab id="ch162" num="162" judul="PROYEK IMPIAN 2027 — VISI YANG MENANTI" warna="#8b5cf6" latarBelakang="#f5f0ff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
         💡 Setiap proyek besar bermula dari satu baris kode dan satu keyakinan: &ldquo;ini bisa dilakukan!&rdquo;
       </div>
@@ -110,11 +110,11 @@ function Ch162() {
   )
 }
 
-// -- Ch163: SATU TAHUN KVT.KOM -------------------------------------------------
+// — Ch163: SATU TAHUN KVT.KOM -------------------------------------------------
 function Ch163() {
   return (
-    <PanelBab id="ch163" num="163" judul="SATU TAHUN KVT.KOM -- PROYEKSI & HARAPAN" warna="#22c55e" latarBelakang="#f0fdf4">
-      <div className="speech-bubble inline-block text-sm mb-6">🎯 Apa yang diharapkan setelah satu tahun KVT.kom berjalan?</div>
+    <PanelBab id="ch163" num="163" judul="SATU TAHUN KVT.KOM — PROYEKSI & HARAPAN" warna="#22c55e" latarBelakang="#f0fdf4">
+      <div className="speech-bubble inline-block text-sm mb-6">🎯 Apa yang diharapkan setelah satu tahun Gelar.id berjalan?</div>
       <div className="grid lg:grid-cols-2 gap-8">
         <div className="space-y-4">
           {[
@@ -142,10 +142,10 @@ function Ch163() {
           </p>
           <div className="space-y-3">
             {[
-              'Satu anak dari pelosok yang bisa belajar coding gratis via KVT.kom',
-              'Satu UMKM yang websitenya dibuat oleh alumni KVT.kom',
-              'Satu developer yang dapat kerja pertamanya karena portfolio dari KVT.kom',
-              'Satu desa yang punya website berkat program website desa KVT.kom',
+              'Satu anak dari pelosok yang bisa belajar coding gratis via Gelar.id',
+              'Satu UMKM yang websitenya dibuat oleh alumni Gelar.id',
+              'Satu developer yang dapat kerja pertamanya karena portfolio dari Gelar.id',
+              'Satu desa yang punya website berkat program website desa Gelar.id',
             ].map((h, i) => (
               <div key={i} className="flex items-start gap-2">
                 <span className="text-yellow-400 flex-shrink-0">⭐</span>
@@ -159,7 +159,7 @@ function Ch163() {
   )
 }
 
-// -- Ch164: PESAN UNTUK GENERASI BERIKUTNYA ------------------------------------
+// — Ch164: PESAN UNTUK GENERASI BERIKUTNYA ------------------------------------
 function Ch164() {
   const pesan = [
     { kepada: 'Developer 2030', teks: 'Teknologi yang kalian pakai sekarang dibangun oleh developer seperti kami yang percaya bahwa kode bisa mengubah dunia. Jaga kepercayaan itu!', icon: '💻', warna: '#1a5cff' },
@@ -195,12 +195,12 @@ function Ch164() {
   )
 }
 
-// -- Ch165: GRATITUDE & SYUKUR -------------------------------------------------
+// — Ch165: GRATITUDE & SYUKUR -------------------------------------------------
 function Ch165() {
   return (
-    <PanelBab id="ch165" num="165" judul="SYUKUR -- BERSYUKUR ATAS SETIAP PERJALANAN" warna="#f59e0b" latarBelakang="#fffbeb">
+    <PanelBab id="ch165" num="165" judul="SYUKUR — BERSYUKUR ATAS SETIAP PERJALANAN" warna="#f59e0b" latarBelakang="#fffbeb">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        🙏 Gratitude is the foundation of abundance -- mulai setiap hari dengan syukur!
+        🙏 Gratitude is the foundation of abundance — mulai setiap hari dengan syukur!
       </div>
       <GridTiga items={[
         { icon: '🌐', judul: 'Syukur: Internet Gratis', teks: 'Bisa belajar coding dari YouTube, dokumentasi, dan blog gratis. Generasi sebelumnya tidak punya privilege ini!', warna: '#1a5cff', bg: '#e8f0ff' },
@@ -208,18 +208,18 @@ function Ch165() {
         { icon: '📖', judul: 'Syukur: Kesempatan Belajar', teks: 'Digital Talent Scholarship dan program beasiswa lainnya yang membuka akses pendidikan berkualitas secara luas', warna: '#8b5cf6', bg: '#f5f0ff' },
         { icon: '❤️', judul: 'Syukur: Keluarga', teks: 'Orang tua yang mendukung tanpa bertanya "kapan kerja" saat kita masih belajar dan membangun sesuatu', warna: '#f59e0b', bg: '#fffbeb' },
         { icon: '🏆', judul: 'Syukur: Sertifikasi', teks: 'BNSP dan 75+ pelatihan yang membuka mata tentang luasnya dunia teknologi dan betapa banyak yang masih bisa dipelajari', warna: '#e63329', bg: '#fef2f2' },
-        { icon: '🐛', judul: 'Syukur: Setiap Error', teks: 'Setiap bug yang bikin frustasi, setiap error yang tidak ketemu solusinya berjam-jam -- itulah yang membuat kita tumbuh!', warna: '#0891b2', bg: '#ecfeff' },
+        { icon: '🐛', judul: 'Syukur: Setiap Error', teks: 'Setiap bug yang bikin frustasi, setiap error yang tidak ketemu solusinya berjam-jam — itulah yang membuat kita tumbuh!', warna: '#0891b2', bg: '#ecfeff' },
       ]} />
     </PanelBab>
   )
 }
 
-// -- Ch166: PELAJARAN TERBESAR HIDUP ------------------------------------------
+// — Ch166: PELAJARAN TERBESAR HIDUP ------------------------------------------
 function Ch166() {
   const pelajaran = [
     { no: 1, pelajaran: 'Konsistensi mengalahkan intensitas. 30 menit sehari selama setahun > marathon coding 24 jam lalu berhenti sebulan', warna: '#1a5cff' },
     { no: 2, pelajaran: 'Pilih proyek yang memecahkan masalah nyata yang kamu alami sendiri. Itu passion yang tidak mudah padam', warna: '#22c55e' },
-    { no: 3, pelajaran: 'Komunitas bukan optional -- ini multiplier. Satu koneksi yang tepat bisa mengubah segalanya dalam semalam', warna: '#8b5cf6' },
+    { no: 3, pelajaran: 'Komunitas bukan optional — ini multiplier. Satu koneksi yang tepat bisa mengubah segalanya dalam semalam', warna: '#8b5cf6' },
     { no: 4, pelajaran: 'Belajar cara belajar lebih penting dari menghafal syntax. Teknologi berubah, kemampuan adaptasi abadi', warna: '#f59e0b' },
     { no: 5, pelajaran: 'Done adalah lebih baik dari perfect. Ship produk yang 70% selesai dan improve berdasar feedback nyata', warna: '#e63329' },
     { no: 6, pelajaran: 'Kesehatan fisik dan mental adalah prerequisite untuk produktivitas. Jaga tubuh dan pikiran sama seperti menjaga server', warna: '#0891b2' },
@@ -228,7 +228,7 @@ function Ch166() {
   ]
   return (
     <PanelBab id="ch166" num="166" judul="8 PELAJARAN TERBESAR HIDUP" warna="#e63329" latarBelakang="#fef2f2">
-      <div className="speech-bubble inline-block text-sm mb-6">💡 Tidak perlu bayar mahal untuk dapat wisdom ini -- biarkan pengalaman orang lain jadi pelajaran gratis kamu!</div>
+      <div className="speech-bubble inline-block text-sm mb-6">💡 Tidak perlu bayar mahal untuk dapat wisdom ini — biarkan pengalaman orang lain jadi pelajaran gratis kamu!</div>
       <div className="grid sm:grid-cols-2 gap-4">
         {pelajaran.map((p, i) => (
           <motion.div key={p.no}
@@ -248,10 +248,10 @@ function Ch166() {
   )
 }
 
-// -- Ch167: SALAM DARI JEMBER --------------------------------------------------
+// — Ch167: SALAM DARI JEMBER --------------------------------------------------
 function Ch167() {
   return (
-    <PanelBab id="ch167" num="167" judul="SALAM DARI JEMBER -- KOTA YANG MEMBESARKAN" warna="#22c55e" latarBelakang="#f0fdf4">
+    <PanelBab id="ch167" num="167" judul="SALAM DARI JEMBER — KOTA YANG MEMBESARKAN" warna="#22c55e" latarBelakang="#f0fdf4">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
         🌴 Jember bukan kota besar, tapi melahirkan mimpi-mimpi yang tidak kalah besar!
       </div>
@@ -261,8 +261,8 @@ function Ch167() {
             <div className="font-comic text-lg text-[#0a0a0a] mb-3">🗺️ JEMBER YANG KAMI KENAL</div>
             {[
               { aspek: 'Kota Tembakau', desc: 'Jember terkenal sebagai produsen tembakau berkualitas tinggi dan sentra industri kreatif Jember Fashion Carnival' },
-              { aspek: 'Kampus Berkualitas', desc: 'UNEJ, ITSM, STIKI -- ekosistem akademik yang semakin berkembang dengan mahasiswa dari berbagai daerah' },
-              { aspek: 'Kuliner Unik', desc: 'Suwar-suwir, tape bondowoso, bakso legendaris -- cita rasa Jember yang tidak akan ketemu di kota lain' },
+              { aspek: 'Kampus Berkualitas', desc: 'UNEJ, ITSM, STIKI — ekosistem akademik yang semakin berkembang dengan mahasiswa dari berbagai daerah' },
+              { aspek: 'Kuliner Unik', desc: 'Suwar-suwir, tape bondowoso, bakso legendaris — cita rasa Jember yang tidak akan ketemu di kota lain' },
               { aspek: 'Digital Potential', desc: 'Banyak talenta digital muda yang belum tersalurkan ke ekosistem yang mendukung mereka berkembang' },
             ].map(j => (
               <div key={j.aspek} className="mb-3">
@@ -280,7 +280,7 @@ function Ch167() {
               'Jember punya WiFi yang cukup untuk build startup berkelas nasional',
               'Cost of living rendah = runway startup lebih panjang dengan budget sama',
               'Komunitas lokal yang solid dan saling support tanpa persaingan toxic',
-              'Dari Jember untuk Indonesia -- dan suatu hari, untuk dunia',
+              'Dari Jember untuk Indonesia — dan suatu hari, untuk dunia',
             ].map((alasan, i) => (
               <div key={i} className="flex items-start gap-2">
                 <span className="text-green-400 flex-shrink-0">✅</span>
@@ -294,17 +294,17 @@ function Ch167() {
   )
 }
 
-// -- Ch168: KATA-KATA PAMUNGKAS ------------------------------------------------
+// — Ch168: KATA-KATA PAMUNGKAS ------------------------------------------------
 function Ch168() {
   const quotes = [
-    { quote: 'Kode adalah bahasa yang paling demokratis -- siapapun bisa belajar dan siapapun bisa build sesuatu yang mengubah dunia.', nama: 'Rizki Habibi' },
+    { quote: 'Kode adalah bahasa yang paling demokratis — siapapun bisa belajar dan siapapun bisa build sesuatu yang mengubah dunia.', nama: 'Rizki Habibi' },
     { quote: 'The best time to start was yesterday. The second best time is now.', nama: 'Unknown Developer' },
     { quote: 'Setiap expert pernah menjadi beginner. Setiap pro pernah menjadi pemula yang bingung dengan Hello World.', nama: 'Dari komunitas developer' },
     { quote: 'Build something people want. Ship early. Learn fast. Repeat.', nama: 'Prinsip Lean Startup' },
-    { quote: 'Jangan takut gagal -- takutlah tidak pernah mencoba.', nama: 'Keluarga & Mentor' },
+    { quote: 'Jangan takut gagal — takutlah tidak pernah mencoba.', nama: 'Keluarga & Mentor' },
   ]
   return (
-    <PanelBab id="ch168" num="168" judul="KATA-KATA PAMUNGKAS -- SEBELUM EPILOG" warna="#ffd700" latarBelakang="#fffbeb" gelap>
+    <PanelBab id="ch168" num="168" judul="KATA-KATA PAMUNGKAS — SEBELUM EPILOG" warna="#ffd700" latarBelakang="#fffbeb" gelap>
       <div className="speech-bubble inline-block text-sm mb-6 text-[#0a0a0a]">
         ✨ Kata-kata yang menemani perjalanan ini dari awal hingga akhir...
       </div>
@@ -326,10 +326,10 @@ function Ch168() {
   )
 }
 
-// -- Ch169: APRESIASI MENDALAM -------------------------------------------------
+// — Ch169: APRESIASI MENDALAM -------------------------------------------------
 function Ch169() {
   return (
-    <PanelBab id="ch169" num="169" judul="APRESIASI -- TERIMA KASIH YANG TULUS" warna="#f59e0b" latarBelakang="#fffbeb">
+    <PanelBab id="ch169" num="169" judul="APRESIASI — TERIMA KASIH YANG TULUS" warna="#f59e0b" latarBelakang="#fffbeb">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
         🙏 Ada banyak sekali yang harus disyukuri dan banyak orang yang harus diapresiasi dalam perjalanan ini!
       </div>
@@ -359,10 +359,10 @@ function Ch169() {
   )
 }
 
-// -- Ch170: THE GRAND FINALE ---------------------------------------------------
+// — Ch170: THE GRAND FINALE ---------------------------------------------------
 function Ch170() {
   return (
-    <PanelBab id="ch170" num="170" judul="THE GRAND FINALE -- SAMPAI BERJUMPA LAGI!" warna="#ffd700" latarBelakang="#fffbeb" gelap>
+    <PanelBab id="ch170" num="170" judul="THE GRAND FINALE — SAMPAI BERJUMPA LAGI!" warna="#ffd700" latarBelakang="#fffbeb" gelap>
       <div className="max-w-3xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.6, rotate: -10 }}
@@ -409,7 +409,7 @@ function Ch170() {
             Portfolio ini lahir dari keyakinan bahwa perjalanan seorang developer bukan hanya soal skill teknis --
             tapi tentang karakter, filosofi, passion, dan dampak yang ditinggalkan.
             <br /><br />
-            170 chapter bukan tentang pamer -- ini adalah undangan untuk <span className="text-yellow-400">mengenal siapa Rizki Habibi</span>
+            170 chapter bukan tentang pamer — ini adalah undangan untuk <span className="text-yellow-400">mengenal siapa Rizki Habibi</span>
             sesungguhnya, bukan hanya list teknologi dan proyek.
             <br /><br />
             <span className="text-yellow-400">Jika ada satu hal yang ingin diingat setelah membaca ini:</span>

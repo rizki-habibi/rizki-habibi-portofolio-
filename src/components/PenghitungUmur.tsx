@@ -71,7 +71,7 @@ function DigitFlip({ nilai, label, warna, bg }: { nilai: number; label: string; 
 
 export default function AgeCounter() {
   const ref = useRef<HTMLDivElement>(null)
-  // once:false -- interval pause saat keluar viewport, aktif lagi saat masuk
+  // once:false — interval pause saat keluar viewport, aktif lagi saat masuk
   const inView = useInView(ref, { once: false, margin: '0px 0px -100px 0px' })
   const [umur, setUmur] = useState(hitungUmur)
 
@@ -108,7 +108,7 @@ export default function AgeCounter() {
           <div className="chapter-label mb-3 inline-block">REAL-TIME</div>
           <h2 className="section-title">UMUR SAYA SEKARANG</h2>
           <div className="speech-bubble inline-block text-sm mt-3">
-            ⏱️ Dihitung langsung sejak lahir -- 9 Mei 2005!
+            ⏱️ Dihitung langsung sejak lahir — 9 Mei 2005!
           </div>
         </motion.div>
 

@@ -155,7 +155,7 @@ function GridTiga({ items }: { items: { icon: string; judul: string; teks: strin
 }
 
 /* ----------------------------------------------
-   Ch171 -- ANIMASI & GERAK: JIWA DARI WEB MODERN
+   Ch171 — ANIMASI & GERAK: JIWA DARI WEB MODERN
 ---------------------------------------------- */
 function Ch171() {
   const teknik = [
@@ -168,17 +168,17 @@ function Ch171() {
   ]
 
   return (
-    <PanelBab id="ch171" num="171" judul="ANIMASI & GERAK -- JIWA DARI WEB MODERN" warna="#8b5cf6" latarBelakang="#f5f0ff">
+    <PanelBab id="ch171" num="171" judul="ANIMASI & GERAK — JIWA DARI WEB MODERN" warna="#8b5cf6" latarBelakang="#f5f0ff">
       <div className="speech-bubble inline-block text-sm mb-6">
-        🎬 Web tanpa animasi seperti komik tanpa panel -- ada, tapi kurang hidup! Gerak adalah bahasa emosi antara UI dan pengguna.
+        🎬 Web tanpa animasi seperti komik tanpa panel — ada, tapi kurang hidup! Gerak adalah bahasa emosi antara UI dan pengguna.
       </div>
       <GridTiga items={teknik} />
       <div className="mt-8 grid lg:grid-cols-2 gap-6">
         <div className="comic-panel p-5">
           <div className="font-comic text-lg text-[#0a0a0a] mb-3">⚡ PRINSIP ANIMASI WEB</div>
           {[
-            { prinsip: 'Purpose over decoration', desc: 'Animasi harus punya fungsi -- guide user, beri feedback, atau sampaikan hierarki informasi' },
-            { prinsip: 'Performance first', desc: 'Gunakan transform & opacity saja untuk animasi -- 60fps adalah standar minimum yang harus dijaga' },
+            { prinsip: 'Purpose over decoration', desc: 'Animasi harus punya fungsi — guide user, beri feedback, atau sampaikan hierarki informasi' },
+            { prinsip: 'Performance first', desc: 'Gunakan transform & opacity saja untuk animasi — 60fps adalah standar minimum yang harus dijaga' },
             { prinsip: 'Respect user settings', desc: 'Selalu check prefers-reduced-motion. Tidak semua orang nyaman dengan gerakan berlebihan' },
             { prinsip: 'Timing is everything', desc: 'Ease-out untuk item masuk, ease-in untuk item keluar. Spring physics untuk feel natural' },
           ].map((p, i) => (
@@ -224,7 +224,7 @@ function Ch171() {
 }
 
 /* ----------------------------------------------
-   Ch172 -- MICRO-INTERACTIONS: DETAIL YANG BICARA
+   Ch172 — MICRO-INTERACTIONS: DETAIL YANG BICARA
 ---------------------------------------------- */
 function Ch172() {
   const [likedCount, setLikedCount] = useState(42)
@@ -238,9 +238,9 @@ function Ch172() {
   }, [])
 
   return (
-    <PanelBab id="ch172" num="172" judul="MICRO-INTERACTIONS -- DETAIL YANG BICARA" warna="#1a5cff" latarBelakang="#e8f0ff">
+    <PanelBab id="ch172" num="172" judul="MICRO-INTERACTIONS — DETAIL YANG BICARA" warna="#1a5cff" latarBelakang="#e8f0ff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        💬 Micro-interactions adalah ciuman kecil dari UI ke pengguna -- terasa kecil tapi hilangnya terasa besar!
+        💬 Micro-interactions adalah ciuman kecil dari UI ke pengguna — terasa kecil tapi hilangnya terasa besar!
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         {/* Demo Like Button */}
@@ -346,14 +346,14 @@ function Ch172() {
 }
 
 /* ----------------------------------------------
-   Ch173 -- DARK MODE & TEMA: ESTETIKA YANG INKLUSIF
+   Ch173 — DARK MODE & TEMA: ESTETIKA YANG INKLUSIF
 ---------------------------------------------- */
 function Ch173() {
   const [isDark, setIsDark] = useState(false)
   return (
-    <PanelBab id="ch173" num="173" judul="DARK MODE & TEMA -- ESTETIKA YANG INKLUSIF" warna="#0891b2" latarBelakang="#ecfeff">
+    <PanelBab id="ch173" num="173" judul="DARK MODE & TEMA — ESTETIKA YANG INKLUSIF" warna="#0891b2" latarBelakang="#ecfeff">
       <div className="speech-bubble inline-block text-sm mb-6">
-        🌙 Dark mode bukan sekadar tren -- ini adalah kebutuhan aksesibilitas. 82% developer lebih suka dark mode saat coding malam!
+        🌙 Dark mode bukan sekadar tren — ini adalah kebutuhan aksesibilitas. 82% developer lebih suka dark mode saat coding malam!
       </div>
       <div className="grid lg:grid-cols-2 gap-8 mb-8">
         {/* Demo toggle dark/light */}
@@ -435,19 +435,19 @@ function Ch173() {
 }
 
 /* ----------------------------------------------
-   Ch174 -- PERFORMA WEB: DARI LAMBAT KE KILAT
+   Ch174 — PERFORMA WEB: DARI LAMBAT KE KILAT
 ---------------------------------------------- */
 function Ch174() {
   return (
-    <PanelBab id="ch174" num="174" judul="PERFORMA WEB -- DARI LAMBAT KE KILAT ⚡" warna="#22c55e" latarBelakang="#f0fdf4">
+    <PanelBab id="ch174" num="174" judul="PERFORMA WEB — DARI LAMBAT KE KILAT ⚡" warna="#22c55e" latarBelakang="#f0fdf4">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        ⚡ 100ms delay = 1% conversion drop. Performa bukan luxury -- ini survival untuk bisnis online!
+        ⚡ 100ms delay = 1% conversion drop. Performa bukan luxury — ini survival untuk bisnis online!
       </div>
       <div className="grid lg:grid-cols-3 gap-4 mb-8">
         {[
-          { label: 'LCP Target', val: '&lt; 2.5s', desc: 'Largest Contentful Paint -- kapan konten utama muncul', warna: '#22c55e', icon: '🖼️' },
-          { label: 'FID Target', val: '&lt; 100ms', desc: 'First Input Delay -- seberapa cepat halaman merespons klik pertama', warna: '#1a5cff', icon: '👆' },
-          { label: 'CLS Target', val: '&lt; 0.1', desc: 'Cumulative Layout Shift -- konten tidak lompat-lompat saat loading', warna: '#f59e0b', icon: '📐' },
+          { label: 'LCP Target', val: '&lt; 2.5s', desc: 'Largest Contentful Paint — kapan konten utama muncul', warna: '#22c55e', icon: '🖼️' },
+          { label: 'FID Target', val: '&lt; 100ms', desc: 'First Input Delay — seberapa cepat halaman merespons klik pertama', warna: '#1a5cff', icon: '👆' },
+          { label: 'CLS Target', val: '&lt; 0.1', desc: 'Cumulative Layout Shift — konten tidak lompat-lompat saat loading', warna: '#f59e0b', icon: '📐' },
         ].map((m, i) => (
           <motion.div key={m.label}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -527,7 +527,7 @@ function Ch174() {
 }
 
 /* ----------------------------------------------
-   Ch175 -- API & INTEGRASI: JEMBATAN ANTAR SISTEM
+   Ch175 — API & INTEGRASI: JEMBATAN ANTAR SISTEM
 ---------------------------------------------- */
 function Ch175() {
   const [activeTab, setActiveTab] = useState(0)
@@ -546,13 +546,13 @@ function Ch175() {
       kode: 'socket.on("notif", (data) => {\n  updateUI(data)\n  playSound()\n})',
     },
     {
-      teks: 'Webhook: sistem eksternal notify sistem kita saat event terjadi. Payment gateway, GitHub Actions, Stripe -- semua pakai pola ini.',
+      teks: 'Webhook: sistem eksternal notify sistem kita saat event terjadi. Payment gateway, GitHub Actions, Stripe — semua pakai pola ini.',
       kode: 'POST /webhook/payment\nX-Signature: sha256=...\n→ Verifikasi → Proses → 200',
     },
   ]
 
   return (
-    <PanelBab id="ch175" num="175" judul="API & INTEGRASI -- JEMBATAN ANTAR SISTEM" warna="#f59e0b" latarBelakang="#fffbeb">
+    <PanelBab id="ch175" num="175" judul="API & INTEGRASI — JEMBATAN ANTAR SISTEM" warna="#f59e0b" latarBelakang="#fffbeb">
       <div className="speech-bubble inline-block text-sm mb-6">
         🔌 Tidak ada aplikasi yang berdiri sendiri. Semakin banyak integrasi yang bisa kamu bangun, semakin bernilai kamu sebagai developer!
       </div>
@@ -606,24 +606,24 @@ function Ch175() {
 }
 
 /* ----------------------------------------------
-   Ch176 -- TIPS MENJADI DEVELOPER PRODUKTIF
+   Ch176 — TIPS MENJADI DEVELOPER PRODUKTIF
 ---------------------------------------------- */
 function Ch176() {
   const tips = [
-    { no: '01', tip: 'Deep Work 90 menit tanpa distraksi', detail: 'Matikan notifikasi. Gunakan Pomodoro atau time-blocking. Otak butuh 20 menit untuk masuk flow state -- jangan rusak itu!', icon: '🧠', warna: '#1a5cff' },
-    { no: '02', tip: 'Baca error message sampai habis', detail: 'Stack trace adalah peta menuju solusi. 90% developer skip bagian tengah -- padahal di sana root cause-nya ada', icon: '🔍', warna: '#e63329' },
+    { no: '01', tip: 'Deep Work 90 menit tanpa distraksi', detail: 'Matikan notifikasi. Gunakan Pomodoro atau time-blocking. Otak butuh 20 menit untuk masuk flow state — jangan rusak itu!', icon: '🧠', warna: '#1a5cff' },
+    { no: '02', tip: 'Baca error message sampai habis', detail: 'Stack trace adalah peta menuju solusi. 90% developer skip bagian tengah — padahal di sana root cause-nya ada', icon: '🔍', warna: '#e63329' },
     { no: '03', tip: 'Commit kecil, commit sering', detail: '"git commit -m fix" bukan commit yang baik. Tulis pesan yang menjelaskan WHY, bukan WHAT. Future self akan berterima kasih', icon: '📝', warna: '#22c55e' },
     { no: '04', tip: 'Rubber duck debugging', detail: 'Jelaskan masalahmu ke bebek karet (atau kolega, atau Kiro). Proses verbalisasi memaksa otak melihat angle berbeda', icon: '🦆', warna: '#f59e0b' },
     { no: '05', tip: 'Build, don\'t just watch tutorials', detail: 'Tutorial completion rate ≠ learning. Hands-on adalah satu-satunya cara ilmu menjadi otot. Build something, break it, fix it', icon: '⚒️', warna: '#8b5cf6' },
-    { no: '06', tip: 'Review kode orang lain aktif', detail: 'Open source contribution adalah gym untuk coding skill. Baca kode Laravel, Next.js internals -- itu masterclass gratis', icon: '👀', warna: '#0891b2' },
-    { no: '07', tip: 'Dokumentasikan saat fresh', detail: 'Tulis README, inline comment, dan changelog SEKARANG. Besok sudah lupa -- dan documentation debt jauh lebih mahal', icon: '📚', warna: '#e63329' },
+    { no: '06', tip: 'Review kode orang lain aktif', detail: 'Open source contribution adalah gym untuk coding skill. Baca kode Laravel, Next.js internals — itu masterclass gratis', icon: '👀', warna: '#0891b2' },
+    { no: '07', tip: 'Dokumentasikan saat fresh', detail: 'Tulis README, inline comment, dan changelog SEKARANG. Besok sudah lupa — dan documentation debt jauh lebih mahal', icon: '📚', warna: '#e63329' },
     { no: '08', tip: 'Rest adalah bagian dari kerja', detail: 'Burnout = productivity minus. Schedule istirahat seperti schedule meeting. Otak yang segar lebih produktif dari yang dipaksa', icon: '😴', warna: '#22c55e' },
   ]
 
   return (
-    <PanelBab id="ch176" num="176" judul="8 TIPS DEVELOPER PRODUKTIF -- DARI PENGALAMAN NYATA" warna="#1a5cff" latarBelakang="#e8f0ff">
+    <PanelBab id="ch176" num="176" judul="8 TIPS DEVELOPER PRODUKTIF — DARI PENGALAMAN NYATA" warna="#1a5cff" latarBelakang="#e8f0ff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        💡 Tips ini bukan dari buku teori -- ini dari jam-jam debug tengah malam, deadline mepet, dan proyek yang akhirnya selesai!
+        💡 Tips ini bukan dari buku teori — ini dari jam-jam debug tengah malam, deadline mepet, dan proyek yang akhirnya selesai!
       </div>
       <div className="grid sm:grid-cols-2 gap-4">
         {tips.map((t, i) => (
@@ -655,13 +655,13 @@ function Ch176() {
 }
 
 /* ----------------------------------------------
-   Ch177 -- DATABASE: FONDASI YANG SERING DIREMEHKAN
+   Ch177 — DATABASE: FONDASI YANG SERING DIREMEHKAN
 ---------------------------------------------- */
 function Ch177() {
   return (
-    <PanelBab id="ch177" num="177" judul="DATABASE -- FONDASI YANG SERING DIREMEHKAN" warna="#e63329" latarBelakang="#fef2f2" gelap>
+    <PanelBab id="ch177" num="177" judul="DATABASE — FONDASI YANG SERING DIREMEHKAN" warna="#e63329" latarBelakang="#fef2f2" gelap>
       <div className="speech-bubble inline-block text-sm mb-6 text-[#0a0a0a]">
-        🗄️ Aplikasi boleh error -- data tidak boleh hilang. Database adalah jantung sistem, dan schema yang baik adalah segalanya!
+        🗄️ Aplikasi boleh error — data tidak boleh hilang. Database adalah jantung sistem, dan schema yang baik adalah segalanya!
       </div>
       <div className="grid lg:grid-cols-2 gap-8 mb-8">
         <div className="space-y-4">
@@ -709,11 +709,11 @@ function Ch177() {
           {[
             { tip: 'Gunakan index pada kolom yang sering di-WHERE/JOIN', level: 'WAJIB', w: '#4ade80' },
             { tip: 'EXPLAIN ANALYZE sebelum deploy query baru ke production', level: 'WAJIB', w: '#4ade80' },
-            { tip: 'Hindari N+1 query -- gunakan eager loading (with()) di Laravel', level: 'KRITIS', w: '#f87171' },
+            { tip: 'Hindari N+1 query — gunakan eager loading (with()) di Laravel', level: 'KRITIS', w: '#f87171' },
             { tip: 'Pagination untuk semua endpoint yang return list data', level: 'WAJIB', w: '#4ade80' },
-            { tip: 'Jangan SELECT * -- pilih kolom yang dibutuhkan saja', level: 'BEST PRACTICE', w: '#fbbf24' },
-            { tip: 'Migration versioning -- jangan edit migration yang sudah jalan', level: 'KRITIS', w: '#f87171' },
-            { tip: 'Backup otomatis terjadwal -- tested restore procedure', level: 'SURVIVAL', w: '#f43f5e' },
+            { tip: 'Jangan SELECT * — pilih kolom yang dibutuhkan saja', level: 'BEST PRACTICE', w: '#fbbf24' },
+            { tip: 'Migration versioning — jangan edit migration yang sudah jalan', level: 'KRITIS', w: '#f87171' },
+            { tip: 'Backup otomatis terjadwal — tested restore procedure', level: 'SURVIVAL', w: '#f43f5e' },
           ].map((t, i) => (
             <motion.div key={i}
               className="flex gap-2 items-start"
@@ -735,7 +735,7 @@ function Ch177() {
 }
 
 /* ----------------------------------------------
-   Ch178 -- KEAMANAN APLIKASI WEB: JANGAN DIANGGAP REMEH
+   Ch178 — KEAMANAN APLIKASI WEB: JANGAN DIANGGAP REMEH
 ---------------------------------------------- */
 function Ch178() {
   const ancaman = [
@@ -748,9 +748,9 @@ function Ch178() {
   ]
 
   return (
-    <PanelBab id="ch178" num="178" judul="KEAMANAN APLIKASI WEB -- JANGAN PERNAH KOMPROMI" warna="#f43f5e" latarBelakang="#fff1f2">
+    <PanelBab id="ch178" num="178" judul="KEAMANAN APLIKASI WEB — JANGAN PERNAH KOMPROMI" warna="#f43f5e" latarBelakang="#fff1f2">
       <div className="speech-bubble inline-block text-sm mb-6">
-        🛡️ Security bukan fitur tambahan -- ini adalah layer yang harus ada di setiap baris kode dari hari pertama. Satu celah bisa meruntuhkan kepercayaan yang dibangun bertahun-tahun.
+        🛡️ Security bukan fitur tambahan — ini adalah layer yang harus ada di setiap baris kode dari hari pertama. Satu celah bisa meruntuhkan kepercayaan yang dibangun bertahun-tahun.
       </div>
       <div className="space-y-3 mb-8">
         {ancaman.map((a, i) => (
@@ -811,7 +811,7 @@ function Ch178() {
 }
 
 /* ----------------------------------------------
-   Ch179 -- KARIR DEVELOPER: ROADMAP MENUJU EXPERT
+   Ch179 — KARIR DEVELOPER: ROADMAP MENUJU EXPERT
 ---------------------------------------------- */
 function Ch179() {
   const fase = [
@@ -838,7 +838,7 @@ function Ch179() {
   ]
 
   return (
-    <PanelBab id="ch179" num="179" judul="KARIR DEVELOPER -- ROADMAP MENUJU EXPERT" warna="#8b5cf6" latarBelakang="#f5f0ff">
+    <PanelBab id="ch179" num="179" judul="KARIR DEVELOPER — ROADMAP MENUJU EXPERT" warna="#8b5cf6" latarBelakang="#f5f0ff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
         🗺️ Tidak ada satu jalur karir yang benar. Tapi ada level kompetensi yang bisa dijadikan peta perjalanan!
       </div>
@@ -887,8 +887,8 @@ function Ch179() {
         <div className="grid sm:grid-cols-2 gap-3">
           {[
             '"Technical skill yang bagus membawamu ke pintu. Soft skill yang menentukan kamu masuk atau tidak"',
-            '"Gaji developer Indonesia terus naik -- tapi skill gap-nya juga makin lebar. Pilih berada di sisi yang benar"',
-            '"Specialization pays better than generalization -- tapi generalization lebih mudah pivot saat industri berubah"',
+            '"Gaji developer Indonesia terus naik — tapi skill gap-nya juga makin lebar. Pilih berada di sisi yang benar"',
+            '"Specialization pays better than generalization — tapi generalization lebih mudah pivot saat industri berubah"',
             '"Contribution ke open source adalah portfolio yang tidak bisa dipalsukan"',
           ].map((q, i) => (
             <motion.div key={i}
@@ -908,7 +908,7 @@ function Ch179() {
 }
 
 /* ----------------------------------------------
-   Ch180 -- BERSAMBUNG: CHAPTER TERAKHIR? BELUM!
+   Ch180 — BERSAMBUNG: CHAPTER TERAKHIR? BELUM!
 ---------------------------------------------- */
 function Ch180() {
   const [angka, setAngka] = useState(0)
@@ -918,7 +918,7 @@ function Ch180() {
   }, [])
 
   return (
-    <PanelBab id="ch180" num="180" judul="BERSAMBUNG -- MASIH BANYAK CERITA MENANTI" warna="#ffd700" latarBelakang="#fffbeb" gelap>
+    <PanelBab id="ch180" num="180" judul="BERSAMBUNG — MASIH BANYAK CERITA MENANTI" warna="#ffd700" latarBelakang="#fffbeb" gelap>
       <div className="max-w-3xl mx-auto">
         {/* Animasi counter utama */}
         <motion.div

@@ -51,13 +51,13 @@ const badges = [
   {
     id: 5,
     title: 'KVT FOUNDER',
-    sub: 'kvt.kom -- In Progress',
+    sub: 'gelar.id — In Progress',
     icon: '🌐',
     color: '#8b5cf6',
     bg: '#f5f0ff',
     rarity: 'EPIC',
     year: '2026',
-    desc: 'Membangun ekosistem kampus digital Vtuber dan platform KVT.kom secara mandiri.',
+    desc: 'Membangun ekosistem kampus digital Vtuber dan platform Gelar.id secara mandiri.',
   },
   {
     id: 6,
@@ -107,8 +107,8 @@ const milestones = [
   { year: '2024', event: 'Bangun Sistem KVT & K-Amu All in One', icon: '⚙️' },
   { year: '2025', event: 'Sertifikasi BNSP + 75 sertifikat digital', icon: '🏆' },
   { year: '2025', event: 'Inovasi alat monitoring IoT daur ulang', icon: '🔧' },
-  { year: '2026', event: 'Penelitian Skripsi + Kembangkan KVT.kom', icon: '🚀' },
-  { year: 'SOON', event: 'Publish KVT.kom & Buka Lapangan Kerja', icon: '🌟' },
+  { year: '2026', event: 'Penelitian Skripsi + Kembangkan Gelar.id', icon: '🚀' },
+  { year: 'SOON', event: 'Publish Gelar.id & Buka Lapangan Kerja', icon: '🌟' },
 ]
 
 export default function AchievementsComic() {

@@ -54,7 +54,7 @@ function Ch185() {
     { no:101, judul:'Dompet Digital Warung',      tag:'FinTech  MSME',    status:'KONSEP',    warna:'#f59e0b', icon:'👛', deskripsi:'Aplikasi dompet digital khusus warung dan toko kecil: terima QRIS, pisah keuangan pribadi-bisnis otomatis, dan laporan arus kas harian sederhana.' },
     { no:102, judul:'Tabungan Otomatis Petani',   tag:'FinTech  Agri',    status:'RISET',     warna:'#22c55e', icon:'🌾', deskripsi:'Fitur tabungan yang otomatis menyisihkan persentase dari setiap penjualan hasil panen. Dengan target terkunci untuk pembelian bibit musim berikutnya.' },
     { no:103, judul:'Pinjaman Mikro Berbasis Data',tag:'FinTech  Credit',  status:'RISET',     warna:'#1a5cff', icon:'💳', deskripsi:'Scoring kredit alternatif menggunakan data perilaku digital: konsistensi penjualan, riwayat pembayaran utilitas, aktivitas platform. Tanpa jaminan fisik.' },
-    { no:104, judul:'Asuransi Mikro Panen',       tag:'InsurTech  Agri',  status:'KONSEP',    warna:'#e63329', icon:'🛡️', deskripsi:'Asuransi gagal panen berbasis data cuaca dan satelit. Klaim otomatis tanpa perlu survei lapangan -- jika curah hujan di bawah threshold, klaim langsung cair.' },
+    { no:104, judul:'Asuransi Mikro Panen',       tag:'InsurTech  Agri',  status:'KONSEP',    warna:'#e63329', icon:'🛡️', deskripsi:'Asuransi gagal panen berbasis data cuaca dan satelit. Klaim otomatis tanpa perlu survei lapangan — jika curah hujan di bawah threshold, klaim langsung cair.' },
     { no:105, judul:'Investasi Reksa Dana Mini',  tag:'FinTech  Invest',  status:'AKTIF',     warna:'#8b5cf6', icon:'📈', deskripsi:'Mulai investasi reksa dana dari Rp 10.000 dengan antarmuka yang menjelaskan risiko dalam bahasa sederhana. Cocok untuk pertama kali investasi.' },
     { no:106, judul:'Sistem Bagi Hasil Digital',  tag:'FinTech  Syariah', status:'KONSEP',    warna:'#0891b2', icon:'🤝', deskripsi:'Platform bagi hasil usaha kecil yang sesuai prinsip syariah. Investor kecil bisa ikut modal usaha lokal dengan akad yang jelas dan transparan.' },
     { no:107, judul:'Pembayaran Kolektif Arisan',  tag:'FinTech  Social',  status:'PROTOTYPE', warna:'#f59e0b', icon:'💰', deskripsi:'Digitalisasi arisan: kelola anggota, jadwal putaran, pembayaran digital, dan rekap otomatis. Notifikasi pengingat bayar dan pengumuman pemenang.' },
@@ -78,7 +78,7 @@ function Ch185() {
     { no:125, judul:'Tokenisasi Aset UMKM',       tag:'Web3  FinTech',    status:'MIMPI',     warna:'#f59e0b', icon:'🪙', deskripsi:'UMKM menerbitkan token aset untuk menarik investasi kecil-kecilan dari komunitas lokal. Transparansi via smart contract, dividen otomatis.' },
   ]
   return (
-    <PanelBab id="ch185" num="185" judul="200 INOVASI -- BAB 5: FINTECH & EKONOMI DIGITAL" warna="#f59e0b" bg="#fffbeb">
+    <PanelBab id="ch185" num="185" judul="200 INOVASI — BAB 5: FINTECH & EKONOMI DIGITAL" warna="#f59e0b" bg="#fffbeb">
       <div className="speech-bubble inline-block text-sm mb-6">
         💸 25 inovasi keuangan digital yang bikin dompet rakyat lebih tebal dan aman!
       </div>
@@ -119,7 +119,7 @@ function Ch186() {
     { no:150, judul:'Daur Ulang Plastik Komunitas',tag:'EnviroTech  Community',status:'PROTOTYPE',warna:'#8b5cf6',icon:'🧴',deskripsi:'Platform untuk koordinasi pengumpulan dan penjualan plastik bekas ke pengepul. Komunitas dapat penghasilan tambahan, sampah plastik berkurang.' },
   ]
   return (
-    <PanelBab id="ch186" num="186" judul="200 INOVASI -- BAB 6: KESEHATAN & LINGKUNGAN" warna="#e63329" bg="#fef2f2" gelap>
+    <PanelBab id="ch186" num="186" judul="200 INOVASI — BAB 6: KESEHATAN & LINGKUNGAN" warna="#e63329" bg="#fef2f2" gelap>
       <div className="speech-bubble inline-block text-sm mb-6 text-[#0a0a0a]">
         🌿 25 inovasi untuk bumi yang lebih sehat dan masyarakat yang lebih sejahtera!
       </div>

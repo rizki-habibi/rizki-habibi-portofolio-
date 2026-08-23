@@ -45,7 +45,7 @@ export default function Skills() {
         {/* Chapter Header */}
         <HeaderBab nomor="02" judul="MY POWERS" warna="#1a5cff" subtitle="⚡ Setiap skill adalah kekuatan unik yang saya kuasai!" />
 
-        {/* Tech Skills -- Ability Cards */}
+        {/* Tech Skills — Ability Cards */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-3 sm:gap-4 mb-14">
           {daftarKeahlian.map((keahlian, i) => (
             <motion.div
@@ -96,7 +96,7 @@ export default function Skills() {
           className="comic-panel-dark p-8"
         >
           <div className="text-center mb-8">
-            <h3 className="font-comic text-2xl text-white tracking-wide">SOFT SKILLS -- CHARACTER STATS</h3>
+            <h3 className="font-comic text-2xl text-white tracking-wide">SOFT SKILLS — CHARACTER STATS</h3>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {keahlianLunak.map((keahlian, i) => (
@@ -145,7 +145,7 @@ export default function Skills() {
           <div className="inline-block px-6 py-3 bg-comic-yellow font-comic text-xl text-comic-black mb-2"
             style={{ border: '3px solid #0a0a0a', boxShadow: '4px 4px 0 #0a0a0a' }}
           >
-            BNSP -- JUNIOR WEB DEVELOPER
+            BNSP — JUNIOR WEB DEVELOPER
           </div>
           <p className="text-sm font-bold text-comic-black/70">
             Lembaga Sertifikasi Profesi Teknologi Digital  Yogyakarta, 2025

@@ -52,7 +52,7 @@ function ComicGrid({ panels }: { panels: { text: string; icon: string; title: st
 }
 
 /* ---------------------------------------------------
-   CHAPTER 16 -- PROYEK WEBSITE DESA
+   CHAPTER 16 — PROYEK WEBSITE DESA
 --------------------------------------------------- */
 function Ch16() {
   return (
@@ -68,7 +68,7 @@ function Ch16() {
                 Saya melihat ini bukan sebagai masalah, tapi sebagai peluang besar yang menunggu untuk dipecahkan.
               </p>
               <p className="text-sm text-comic-black leading-relaxed">
-                Website desa bukan sekadar halaman profil -- ini adalah pintu gerbang ekonomi, transparansi pemerintahan,
+                Website desa bukan sekadar halaman profil — ini adalah pintu gerbang ekonomi, transparansi pemerintahan,
                 dan pemberdayaan masyarakat berbasis teknologi.
               </p>
             </div>
@@ -102,7 +102,7 @@ function Ch16() {
 }
 
 /* ---------------------------------------------------
-   CHAPTER 17 -- QRIS BERBASIS DONASI
+   CHAPTER 17 — QRIS BERBASIS DONASI
 --------------------------------------------------- */
 function Ch17() {
   const stepsQris = [
@@ -117,7 +117,7 @@ function Ch17() {
     <PanelKomik id="ch17" chNum="CHAPTER 17" judul="QRIS DONASI UNTUK SEMUA" warna="#1a5cff" latarBelakang="#e8f0ff">
       <div className="grid md:grid-cols-3 gap-6 mb-10">
         <div className="md:col-span-2">
-          <div className="speech-bubble-right inline-block text-sm mb-6">💳 Inovasi utama selanjutnya -- donasi semudah bayar kopi!</div>
+          <div className="speech-bubble-right inline-block text-sm mb-6">💳 Inovasi utama selanjutnya — donasi semudah bayar kopi!</div>
           <div className="comic-panel-dark p-6 mb-6">
             <div className="font-comic text-2xl text-white mb-3">🎯 MASALAH YANG DIPECAHKAN</div>
             <div className="grid sm:grid-cols-2 gap-3">
@@ -184,7 +184,7 @@ function Ch17() {
 }
 
 /* ---------------------------------------------------
-   CHAPTER 18 -- WEBSITE GLOBAL MAP
+   CHAPTER 18 — WEBSITE GLOBAL MAP
 --------------------------------------------------- */
 function Ch18() {
   return (
@@ -238,20 +238,20 @@ function Ch18() {
 }
 
 /* ---------------------------------------------------
-   CHAPTER 19 -- KARIR & PENGEMBANGAN PROFESIONAL
+   CHAPTER 19 — KARIR & PENGEMBANGAN PROFESIONAL
 --------------------------------------------------- */
 function Ch19() {
   const careerPaths = [
     { role: 'Junior Web Developer', period: '2023-2024', status: 'DONE', color: '#22c55e', skills: ['Laravel', 'PHP', 'MySQL', 'HTML/CSS'] },
     { role: 'Full Stack Developer', period: '2024-2025', status: 'DONE', color: '#1a5cff', skills: ['Next.js', 'REST API', 'Tailwind', 'TypeScript'] },
     { role: 'Senior Web Developer', period: '2026-2027', status: 'TARGET', color: '#f59e0b', skills: ['System Design', 'Team Lead', 'Architecture'] },
-    { role: 'Tech Lead / CTO', period: '2027-2028', status: 'VISION', color: '#e63329', skills: ['KVT.kom', 'Product Management', 'Scaling'] },
+    { role: 'Tech Lead / CTO', period: '2027-2028', status: 'VISION', color: '#e63329', skills: ['Gelar.id', 'Product Management', 'Scaling'] },
   ]
   return (
     <PanelKomik id="ch19" chNum="CHAPTER 19" judul="KARIR & PROFESIONAL" warna="#f59e0b" latarBelakang="#fffbeb">
       <div className="grid md:grid-cols-2 gap-8 mb-10">
         <div>
-          <div className="speech-bubble inline-block text-sm mb-6">💼 Perjalanan karir bukan sprint -- ini marathon!</div>
+          <div className="speech-bubble inline-block text-sm mb-6">💼 Perjalanan karir bukan sprint — ini marathon!</div>
           <div className="space-y-4">
             {careerPaths.map((c, i) => (
               <motion.div key={c.role} initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: true }}
@@ -280,7 +280,7 @@ function Ch19() {
           <div className="comic-panel p-4 text-center">
             <div className="font-comic text-lg text-comic-black">🏆 NILAI YANG SAYA BAWA</div>
             <p className="text-xs text-comic-black/70 mt-2 leading-relaxed">
-              Saya bukan hanya coder -- saya adalah problem solver yang memahami konteks sosial,
+              Saya bukan hanya coder — saya adalah problem solver yang memahami konteks sosial,
               dapat berkomunikasi dengan client, dan berorientasi pada dampak jangka panjang.
             </p>
           </div>
@@ -291,7 +291,7 @@ function Ch19() {
 }
 
 /* ---------------------------------------------------
-   CHAPTER 20 -- PENGEMBANGAN WEBSITE KOMERSIAL
+   CHAPTER 20 — PENGEMBANGAN WEBSITE KOMERSIAL
 --------------------------------------------------- */
 function Ch20() {
   return (
@@ -343,7 +343,7 @@ function Ch20() {
 }
 
 /* ---------------------------------------------------
-   CHAPTER 21 -- SISTEM INFORMASI PEMERINTAHAN
+   CHAPTER 21 — SISTEM INFORMASI PEMERINTAHAN
 --------------------------------------------------- */
 function Ch21() {
   return (
@@ -391,7 +391,7 @@ function Ch21() {
 }
 
 /* ---------------------------------------------------
-   CHAPTER 22 -- PLATFORM EDUKASI DIGITAL
+   CHAPTER 22 — PLATFORM EDUKASI DIGITAL
 --------------------------------------------------- */
 function Ch22() {
   return (
@@ -437,7 +437,7 @@ function Ch22() {
 }
 
 /* ---------------------------------------------------
-   CHAPTER 23 -- STARTUP DIGITAL INDONESIA
+   CHAPTER 23 — STARTUP DIGITAL INDONESIA
 --------------------------------------------------- */
 function Ch23() {
   return (
@@ -449,7 +449,7 @@ function Ch23() {
             {[
               { phase: 'IDEATION', year: '2024', desc: 'Identifikasi masalah nyata di masyarakat dan brainstorm solusi teknologi.', icon: '💡', color: '#f59e0b', done: true },
               { phase: 'PROTOTYPING', year: '2025', desc: 'Bangun MVP (Minimum Viable Product) dan validasi dengan calon pengguna.', icon: '🔧', color: '#1a5cff', done: true },
-              { phase: 'LAUNCHING', year: '2026', desc: 'Rilis produk pertama: KVT.kom dan sistem QRIS donasi.', icon: '🚀', color: '#22c55e', done: false },
+              { phase: 'LAUNCHING', year: '2026', desc: 'Rilis produk pertama: Gelar.id dan sistem QRIS donasi.', icon: '🚀', color: '#22c55e', done: false },
               { phase: 'SCALING', year: '2027', desc: 'Ekspansi ke lebih banyak kota dan tambah fitur berdasarkan feedback.', icon: '📈', color: '#e63329', done: false },
             ].map((p, i) => (
               <motion.div key={p.phase} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: true }}
@@ -471,8 +471,8 @@ function Ch23() {
           <ComicGrid panels={[
             { icon: '🎯', title: 'Problem-First', text: 'Selalu mulai dari masalah nyata, bukan teknologi yang keren.', color: '#f59e0b', bg: '#fffbeb' },
             { icon: '💰', title: 'Bootstrap First', text: 'Bangun dengan sumber daya minimal sebelum cari investasi.', color: '#22c55e', bg: '#f0fdf4' },
-            { icon: '👥', title: 'User-Centric', text: 'Pengguna adalah raja -- setiap fitur harus meningkatkan hidup mereka.', color: '#1a5cff', bg: '#e8f0ff' },
-            { icon: '🔄', title: 'Iterate Fast', text: 'Bangun, ukur, pelajari, ulangi -- sampai dapat product-market fit.', color: '#e63329', bg: '#fef2f2' },
+            { icon: '👥', title: 'User-Centric', text: 'Pengguna adalah raja — setiap fitur harus meningkatkan hidup mereka.', color: '#1a5cff', bg: '#e8f0ff' },
+            { icon: '🔄', title: 'Iterate Fast', text: 'Bangun, ukur, pelajari, ulangi — sampai dapat product-market fit.', color: '#e63329', bg: '#fef2f2' },
           ]} />
         </div>
       </div>
@@ -481,7 +481,7 @@ function Ch23() {
 }
 
 /* ---------------------------------------------------
-   CHAPTER 24 -- TEKNOLOGI UNTUK KEADILAN SOSIAL
+   CHAPTER 24 — TEKNOLOGI UNTUK KEADILAN SOSIAL
 --------------------------------------------------- */
 function Ch24() {
   return (
@@ -490,10 +490,10 @@ function Ch24() {
         <div>
           <div className="speech-bubble inline-block text-sm mb-4">⚖️ Teknologi harus merangkul semua kalangan!</div>
           <div className="comic-panel p-5 mb-4">
-            <div className="font-comic text-xl text-comic-black mb-3">🌍 DIGITAL DIVIDE -- MASALAH NYATA</div>
+            <div className="font-comic text-xl text-comic-black mb-3">🌍 DIGITAL DIVIDE — MASALAH NYATA</div>
             <p className="text-sm text-comic-black leading-relaxed mb-4">
               Masih ada kesenjangan besar antara mereka yang melek teknologi dan yang tidak.
-              Tugas kita sebagai developer adalah mempersempit gap ini -- bukan memperlebarnya.
+              Tugas kita sebagai developer adalah mempersempit gap ini — bukan memperlebarnya.
             </p>
             {[
               { stat: '73 Juta', label: 'Orang Indonesia belum akses internet layak', icon: '📡' },
@@ -527,7 +527,7 @@ function Ch24() {
 }
 
 /* ---------------------------------------------------
-   CHAPTER 25 -- KOLABORASI LINTAS BIDANG
+   CHAPTER 25 — KOLABORASI LINTAS BIDANG
 --------------------------------------------------- */
 function Ch25() {
   return (

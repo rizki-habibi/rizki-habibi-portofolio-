@@ -38,7 +38,7 @@ function GridTiga({ items }: { items: { icon: string; judul: string; teks: strin
   )
 }
 
-// -- Ch111 ---------------------------------------------------------------------
+// — Ch111 ---------------------------------------------------------------------
 function Ch111() {
   return (
     <PanelBab id="ch111" chNum="CHAPTER 111" judul="WARISAN DIGITAL  APA YANG KUTINGGALKAN" warna="#8b5cf6" latarBelakang="#f5f0ff">
@@ -48,7 +48,7 @@ function Ch111() {
       <div className="grid lg:grid-cols-2 gap-8">
         <div className="space-y-4">
           {[
-            { warisan: 'KVT.kom Platform', dampak: 'Ribuan developer yang belajar dan mendapat pekerjaan lewat platform ini', icon: '??', warna: '#8b5cf6' },
+            { warisan: 'Gelar.id Platform', dampak: 'Ribuan developer yang belajar dan mendapat pekerjaan lewat platform ini', icon: '??', warna: '#8b5cf6' },
             { warisan: 'Website Desa Digital', dampak: 'Puluhan desa yang kini punya kehadiran digital dan bisa bersaing di era modern', icon: '???', warna: '#22c55e' },
             { warisan: 'Open Source Contributions', dampak: 'Kode yang dipakai developer lain di seluruh Indonesia dan mungkin dunia', icon: '??', warna: '#0a0a0a' },
             { warisan: 'Mentor & Inspirasi', dampak: 'Mahasiswa yang terinsipirasi mulai coding karena melihat perjalanan saya', icon: '??', warna: '#f59e0b' },
@@ -96,7 +96,7 @@ function Ch111() {
   )
 }
 
-// -- Ch112 ---------------------------------------------------------------------
+// — Ch112 ---------------------------------------------------------------------
 function Ch112() {
   return (
     <PanelBab id="ch112" chNum="CHAPTER 112" judul="SOSIAL & DAMPAK NYATA TEKNOLOGI" warna="#22c55e" latarBelakang="#f0fdf4">
@@ -115,7 +115,7 @@ function Ch112() {
   )
 }
 
-// -- Ch113 ---------------------------------------------------------------------
+// — Ch113 ---------------------------------------------------------------------
 function Ch113() {
   const nilai = [
     { nilai: 'KEJUJURAN', desc: 'Jujur dalam estimasi waktu, jujur tentang kemampuan, jujur saat ada bug di production. Trust adalah modal utama!', icon: '??', warna: '#1a5cff' },
@@ -150,7 +150,7 @@ function Ch113() {
   )
 }
 
-// -- Ch114 ---------------------------------------------------------------------
+// — Ch114 ---------------------------------------------------------------------
 function Ch114() {
   const pesan = [
     { kepada: 'Diri Sendiri di Masa Depan', pesan: 'Semoga semua yang diperjuangkan sekarang terbayar. Jangan lupa dari mana asalmu, dan selalu bantu yang membutuhkan.', icon: '??', warna: '#8b5cf6' },
@@ -188,7 +188,7 @@ function Ch114() {
   )
 }
 
-// -- Ch115 ---------------------------------------------------------------------
+// — Ch115 ---------------------------------------------------------------------
 function Ch115() {
   return (
     <PanelBab id="ch115" chNum="CHAPTER 115" judul="MIMPI YANG BELUM TERWUJUD  BUCKET LIST" warna="#f59e0b" latarBelakang="#fffbeb">
@@ -200,7 +200,7 @@ function Ch115() {
           { mimpi: 'Berbicara di Konferensi Tech Nasional', status: 'TARGET 2027', icon: '??', warna: '#1a5cff', tipe: 'KARIR' },
           { mimpi: 'Publikasi Buku Tech Bahasa Indonesia', status: 'SOMEDAY', icon: '??', warna: '#22c55e', tipe: 'KREASI' },
           { mimpi: 'Kunjungi Silicon Valley & Tokyo', status: 'DREAM', icon: '??', warna: '#8b5cf6', tipe: 'PERJALANAN' },
-          { mimpi: 'KVT.kom Go International', status: '2030+', icon: '??', warna: '#f59e0b', tipe: 'BISNIS' },
+          { mimpi: 'Gelar.id Go International', status: '2030+', icon: '??', warna: '#f59e0b', tipe: 'BISNIS' },
           { mimpi: 'Buat Aplikasi yang Dipakai 1 Juta Orang', status: 'TARGET', icon: '??', warna: '#e63329', tipe: 'PRODUK' },
           { mimpi: 'Bantu 1000 Developer Lokal Dapat Kerja', status: 'DALAM PROSES', icon: '??', warna: '#0891b2', tipe: 'DAMPAK' },
           { mimpi: 'Hidup Nyaman dari Passion Teknologi', status: 'IN PROGRESS', icon: '??', warna: '#22c55e', tipe: 'HIDUP' },
@@ -232,7 +232,7 @@ function Ch115() {
   )
 }
 
-// -- Ch116 ---------------------------------------------------------------------
+// — Ch116 ---------------------------------------------------------------------
 function Ch116() {
   return (
     <PanelBab id="ch116" chNum="CHAPTER 116" judul="REFLEKSI  CERMIN PERJALANAN INI" warna="#0891b2" latarBelakang="#ecfeff">
@@ -270,7 +270,7 @@ function Ch116() {
             { tahun: '2023', highlight: 'Mulai coding serius + project pertama + masuk ITSM', level: 20, warna: '#22c55e' },
             { tahun: '2024', highlight: 'Laravel master + 2 sistem selesai + kenalan Next.js', level: 45, warna: '#1a5cff' },
             { tahun: '2025', highlight: 'BNSP certified + 75 sertifikat + IoT innovation', level: 70, warna: '#f59e0b' },
-            { tahun: '2026', highlight: 'Skripsi + KVT.kom beta + portfolio epic ini!', level: 85, warna: '#8b5cf6' },
+            { tahun: '2026', highlight: 'Skripsi + Gelar.id beta + portfolio epic ini!', level: 85, warna: '#8b5cf6' },
           ].map((p, i) => (
             <div key={p.tahun} className="mb-3">
               <div className="flex items-center justify-between mb-1">
@@ -295,7 +295,7 @@ function Ch116() {
   )
 }
 
-// -- Ch117 ---------------------------------------------------------------------
+// — Ch117 ---------------------------------------------------------------------
 function Ch117() {
   return (
     <PanelBab id="ch117" chNum="CHAPTER 117" judul="INDONESIA DIGITAL  PERAN KITA" warna="#e63329" latarBelakang="#fef2f2">
@@ -314,14 +314,14 @@ function Ch117() {
   )
 }
 
-// -- Ch118 ---------------------------------------------------------------------
+// — Ch118 ---------------------------------------------------------------------
 function Ch118() {
   const quote2030 = [
-    { tahun: '2026', aksi: 'Lulus S.Kom. + Launch KVT.kom v1.0', icon: '??', warna: '#1a5cff' },
-    { tahun: '2027', aksi: 'KVT.kom 1.000 pengguna aktif + Tim pertama terbentuk', icon: '??', warna: '#22c55e' },
+    { tahun: '2026', aksi: 'Lulus S.Kom. + Launch Gelar.id v1.0', icon: '??', warna: '#1a5cff' },
+    { tahun: '2027', aksi: 'Gelar.id 1.000 pengguna aktif + Tim pertama terbentuk', icon: '??', warna: '#22c55e' },
     { tahun: '2028', aksi: 'Expand ke 5 kota + Dapat pendanaan seed', icon: '??', warna: '#f59e0b' },
-    { tahun: '2029', aksi: 'KVT.kom 10.000 pengguna + Kelas offline pertama', icon: '??', warna: '#8b5cf6' },
-    { tahun: '2030', aksi: 'KVT.kom 100.000 pengguna + Series A + Go International', icon: '??', warna: '#e63329' },
+    { tahun: '2029', aksi: 'Gelar.id 10.000 pengguna + Kelas offline pertama', icon: '??', warna: '#8b5cf6' },
+    { tahun: '2030', aksi: 'Gelar.id 100.000 pengguna + Series A + Go International', icon: '??', warna: '#e63329' },
   ]
   return (
     <PanelBab id="ch118" chNum="CHAPTER 118" judul="ROADMAP 2026-2030  PETA JALAN BESAR" warna="#1a5cff" latarBelakang="#e8f0ff">
@@ -354,14 +354,14 @@ function Ch118() {
         <div className="font-comic text-xl text-[#0a0a0a] mb-2">?? NORTH STAR METRIC</div>
         <div className="font-comic text-3xl sm:text-4xl text-[#1a5cff] mb-2">1.000.000</div>
         <p className="text-sm font-bold text-[#0a0a0a]/70">
-          Developer dan pelajar Indonesia yang terbantu oleh KVT.kom dan ekosistem yang saya bangun hingga 2035
+          Developer dan pelajar Indonesia yang terbantu oleh Gelar.id dan ekosistem yang saya bangun hingga 2035
         </p>
       </div>
     </PanelBab>
   )
 }
 
-// -- Ch119 ---------------------------------------------------------------------
+// — Ch119 ---------------------------------------------------------------------
 function Ch119() {
   return (
     <PanelBab id="ch119" chNum="CHAPTER 119" judul="EPILOG AGUNG  SEBELUM CHAPTER TERAKHIR" warna="#ffd700" latarBelakang="#fffbeb" gelap>
@@ -374,7 +374,7 @@ function Ch119() {
           <div className="font-comic text-4xl sm:text-5xl text-yellow-400 mb-4">SATU HALAMAN LAGI...</div>
           <p className="text-sm font-bold text-white/70 leading-relaxed mb-8">
             Kita sudah melewati 119 chapter bersama. Mulai dari cover komik Hero Section,
-            perjalanan belajar coding, game-game favori, visi KVT.kom, refleksi hidup, dan mimpi besar.
+            perjalanan belajar coding, game-game favori, visi Gelar.id, refleksi hidup, dan mimpi besar.
             <br /><br />
             Sebelum chapter terakhir, saya ingin berhenti sejenak dan berkata:
             <span className="text-yellow-400"> terima kasih sudah membaca sampai sejauh ini.</span>
@@ -412,7 +412,7 @@ function Ch119() {
   )
 }
 
-// -- Ch120 FINAL ---------------------------------------------------------------
+// — Ch120 FINAL ---------------------------------------------------------------
 function Ch120() {
   return (
     <PanelBab id="ch120" chNum="CHAPTER 120" judul="BERSAMBUNG...  THE END IS THE BEGINNING" warna="#ffd700" latarBelakang="#fffbeb" gelap>

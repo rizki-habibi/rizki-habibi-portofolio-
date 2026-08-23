@@ -15,8 +15,8 @@ const certificates = [
   { id: 105, title: 'Sertifikat Seminar / Pelatihan 5', issuer: 'Penyelenggara Seminar', year: '2025', category: 'Seminar', file: '/sertifikat/image5.png', isImage: true },
   { id: 106, title: 'Sertifikat Seminar / Pelatihan 6', issuer: 'Penyelenggara Seminar', year: '2025', category: 'Seminar', file: '/sertifikat/image6.png', isImage: true },
   { id: 107, title: 'Sertifikat Seminar / Pelatihan 7', issuer: 'Penyelenggara Seminar', year: '2025', category: 'Seminar', file: '/sertifikat/image7.png', isImage: true },
-  { id: 108, title: 'Sertifikat Workshop (6 Nov 2025) -- Halaman 1', issuer: 'Penyelenggara Kegiatan', year: '2025', category: 'Seminar', file: '/sertifikat/img20251106_12115057.jpg', isImage: true },
-  { id: 109, title: 'Sertifikat Workshop (6 Nov 2025) -- Halaman 2', issuer: 'Penyelenggara Kegiatan', year: '2025', category: 'Seminar', file: '/sertifikat/img20251106_12115057_0001.jpg', isImage: true },
+  { id: 108, title: 'Sertifikat Workshop (6 Nov 2025) — Halaman 1', issuer: 'Penyelenggara Kegiatan', year: '2025', category: 'Seminar', file: '/sertifikat/img20251106_12115057.jpg', isImage: true },
+  { id: 109, title: 'Sertifikat Workshop (6 Nov 2025) — Halaman 2', issuer: 'Penyelenggara Kegiatan', year: '2025', category: 'Seminar', file: '/sertifikat/img20251106_12115057_0001.jpg', isImage: true },
   // PDF Digital Talent & lainnya
   { id: 1, title: 'AI Engineer For Milenial', issuer: 'Digital Talent Scholarship', year: '2025', category: 'AI & Data', file: '/sertifikat/Sertifikat_RIZKI HABIBI_AI Engineer For Milenial.pdf' },
   { id: 2, title: 'Junior Web Developer', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Web Development', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Junior Web Developer.pdf' },
@@ -24,12 +24,12 @@ const certificates = [
   { id: 4, title: 'Introduction To Cloud Computing', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Cloud', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Introduction To Cloud Computing.pdf' },
   { id: 5, title: 'Ethical Hacker For Dummies', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Cyber Security', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Ethical Hacker For Dummies.pdf' },
   { id: 6, title: 'Dasar-Dasar Implementasi Kecerdasan Artifisial', issuer: 'Digital Talent Scholarship', year: '2025', category: 'AI & Data', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Dasar-Dasar Implementasi Kecerdasan Artifisial.pdf' },
-  { id: 7, title: 'Digital Marketing -- Membangun Strategi untuk Kesuksesan Bisnis Online', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Digital Marketing', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Digital Marketing _ Membangun Strategi untuk Kesuksesan Bisnis Online.pdf' },
+  { id: 7, title: 'Digital Marketing — Membangun Strategi untuk Kesuksesan Bisnis Online', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Digital Marketing', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Digital Marketing _ Membangun Strategi untuk Kesuksesan Bisnis Online.pdf' },
   { id: 8, title: 'Generative AI untuk Pendidikan', issuer: 'Digital Talent Scholarship', year: '2025', category: 'AI & Data', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Generative AI untuk Pendidikan.pdf' },
   { id: 9, title: 'Pengenalan Data Science dan Pemanfaatannya di Berbagai Sektor', issuer: 'Digital Talent Scholarship', year: '2025', category: 'AI & Data', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Pengenalan Data Science dan Pemanfaatannya di Berbagai Sektor.pdf' },
-  { id: 10, title: 'Pengenalan Internet of Things -- Konsep, Teknologi, dan Aplikasinya', issuer: 'Digital Talent Scholarship', year: '2025', category: 'IoT', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Pengenalan Internet of Things_ Konsep, Teknologi, dan Aplikasinya.pdf' },
+  { id: 10, title: 'Pengenalan Internet of Things — Konsep, Teknologi, dan Aplikasinya', issuer: 'Digital Talent Scholarship', year: '2025', category: 'IoT', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Pengenalan Internet of Things_ Konsep, Teknologi, dan Aplikasinya.pdf' },
   { id: 11, title: 'Konsep Pemrograman', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Programming', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Konsep Pemrograman.pdf' },
-  { id: 12, title: 'Computational Thinking -- Cara Berpikir Logis (Jenjang SMA)', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Programming', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Computational Thinking _ Cara Berpikir Logis untuk Mengatasi Masalah (Jenjang SMA).pdf' },
+  { id: 12, title: 'Computational Thinking — Cara Berpikir Logis (Jenjang SMA)', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Programming', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Computational Thinking _ Cara Berpikir Logis untuk Mengatasi Masalah (Jenjang SMA).pdf' },
   { id: 13, title: 'Membangun Lab Virtual & Dasar Linux', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Cyber Security', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Membangun Lab Virtual & Dasar Linux.pdf' },
   { id: 14, title: 'Menerapkan Rekayasa Prompt dengan Azure OpenAI Service', issuer: 'Microsoft Learn', year: '2025', category: 'AI & Data', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Menerapkan rekayasa prompt dengan Azure OpenAI Service.pdf' },
   { id: 15, title: 'Social Media Management untuk Brand Digital', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Digital Marketing', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Social Media Management untuk Brand Digital.pdf' },
@@ -44,14 +44,14 @@ const certificates = [
   { id: 24, title: 'Branding Institusi Untuk Instansi Pemerintah', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Digital Marketing', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Branding Institusi Untuk Instansi Pemerintah.pdf' },
   { id: 25, title: 'Cara Mudah Menggunakan Aplikasi Perkantoran Online', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Soft Skills', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Cara Mudah Menggunakan Aplikasi Perkantoran Online.pdf' },
   { id: 26, title: 'Character Building Tangkal Bahaya Judi Online', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Soft Skills', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Character Building Tangkal Bahaya Judi Online.pdf' },
-  { id: 27, title: 'Computational Thinking -- Cara Berpikir Logis (Jenjang SD)', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Programming', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Computational Thinking _ Cara Berpikir Logis untuk Mengatasi Masalah (Jenjang SD).pdf' },
-  { id: 28, title: 'Computational Thinking -- Cara Berpikir Logis (Jenjang SMP)', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Programming', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Computational Thinking _ Cara Berpikir Logis untuk Mengatasi Masalah (Jenjang SMP).pdf' },
+  { id: 27, title: 'Computational Thinking — Cara Berpikir Logis (Jenjang SD)', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Programming', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Computational Thinking _ Cara Berpikir Logis untuk Mengatasi Masalah (Jenjang SD).pdf' },
+  { id: 28, title: 'Computational Thinking — Cara Berpikir Logis (Jenjang SMP)', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Programming', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Computational Thinking _ Cara Berpikir Logis untuk Mengatasi Masalah (Jenjang SMP).pdf' },
   { id: 29, title: 'Dampak Negatif Judi Online Bagi Masyarakat', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Soft Skills', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Dampak Negatif Judi Online Bagi Masyarakat.pdf' },
   { id: 30, title: 'Dampak Teknologi Digital bagi UMKM', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Digital Marketing', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Dampak Teknologi Digital bagi UMKM.pdf' },
-  { id: 31, title: 'Digital Wellness -- Mencapai Keseimbangan Hidup di Era Teknologi', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Soft Skills', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Digital Wellness _ Mencapai keseimbangan hidup di era teknologi yang terus berkembang.pdf' },
+  { id: 31, title: 'Digital Wellness — Mencapai Keseimbangan Hidup di Era Teknologi', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Soft Skills', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Digital Wellness _ Mencapai keseimbangan hidup di era teknologi yang terus berkembang.pdf' },
   { id: 32, title: 'Etis Bermedia Sosial Berbasis Nilai Lokal', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Soft Skills', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Etis Bermedia Sosial Berbasis Nilai Lokal.pdf' },
   { id: 33, title: 'Fondasi Penulisan Berita', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Soft Skills', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Fondasi Penulisan Berita.pdf' },
-  { id: 34, title: 'Jejak Digital -- Warisan yang Anda Tinggalkan di Dunia Maya', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Cyber Security', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Jejak Digital_ Warisan yang Anda Tinggalkan di Dunia Maya.pdf' },
+  { id: 34, title: 'Jejak Digital — Warisan yang Anda Tinggalkan di Dunia Maya', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Cyber Security', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Jejak Digital_ Warisan yang Anda Tinggalkan di Dunia Maya.pdf' },
   { id: 35, title: 'Kenali Tanda-Tandanya dan Lindungi Data Pribadi', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Cyber Security', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Kenali Tanda-Tandanya dan Lindungi Data Pribadi (1).pdf' },
   { id: 36, title: 'Komunikasi Krisis Untuk ASN', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Soft Skills', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Komunikasi Krisis Untuk ASN.pdf' },
   { id: 37, title: 'Komunikasi Strategis Untuk ASN', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Soft Skills', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Komunikasi Strategis Untuk ASN.pdf' },
@@ -60,12 +60,12 @@ const certificates = [
   { id: 40, title: 'Membangun Personal Branding di Media Sosial', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Digital Marketing', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Membangun Personal Branding di Media Sosial.pdf' },
   { id: 41, title: 'Mengamankan Diri dari Kejahatan Siber', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Cyber Security', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Mengamankan Diri dari Kejahatan Siber.pdf' },
   { id: 42, title: 'Menjadi Pengguna Media Sosial yang Bijak dan Kritis', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Soft Skills', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Menjadi Pengguna Media Sosial yang Bijak dan Kritis.pdf' },
-  { id: 43, title: 'Mindset Digital -- Pola Pikir Bertumbuh (Growth Mindset)', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Soft Skills', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Mindset Digital 1_ Pola Pikir Bertumbuh (Growth Mindset).pdf' },
+  { id: 43, title: 'Mindset Digital — Pola Pikir Bertumbuh (Growth Mindset)', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Soft Skills', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Mindset Digital 1_ Pola Pikir Bertumbuh (Growth Mindset).pdf' },
   { id: 44, title: 'Optimasi Instagram dengan Insight', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Digital Marketing', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Optimasi Instagram dengan Insight.pdf' },
   { id: 45, title: "Parent's Guide for Internet Safety", issuer: 'Digital Talent Scholarship', year: '2025', category: 'Cyber Security', file: "/sertifikat/Sertifikat_RIZKI HABIBI_Parent's Guide for Internet Safety.pdf" },
   { id: 46, title: 'Pemanfaatan Aplikasi Chat Bagi Wirausahawan Pemula', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Digital Marketing', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Pemanfaatan Aplikasi Chat Bagi Wirausahawan Pemula.pdf' },
   { id: 47, title: 'Pemanfaatan Aplikasi Editing Video untuk Konten Produk', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Digital Marketing', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Pemanfaatan Aplikasi Editing Video untuk Konten Produk.pdf' },
-  { id: 48, title: 'Pengantar Mindset Digital -- Mengubah Masa Depan Dengan Pola Pikir Digital', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Soft Skills', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Pengantar Mindset Digital 1 _ Mengubah Masa Depan Anda Dengan Pola Pikir Digital.pdf' },
+  { id: 48, title: 'Pengantar Mindset Digital — Mengubah Masa Depan Dengan Pola Pikir Digital', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Soft Skills', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Pengantar Mindset Digital 1 _ Mengubah Masa Depan Anda Dengan Pola Pikir Digital.pdf' },
   { id: 49, title: 'Pengantar Sistem Pemerintahan Berbasis Elektronik (SPBE)', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Soft Skills', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Pengantar Sistem Pemerintahan Berbasis Elektronik (SPBE).pdf' },
   { id: 50, title: 'Pengenalan Hak Atas Kekayaan Intelektual (HAKI)', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Soft Skills', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Pengenalan Hak Atas Kekayaan Intelektual (HAKI) Dalam Perlindungan Karya dan Inovasi Digital.pdf' },
   { id: 51, title: 'Pengenalan Koding Visual untuk Anak', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Programming', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Pengenalan Koding Visual untuk Anak.pdf' },
@@ -80,7 +80,7 @@ const certificates = [
   { id: 60, title: 'Seberapa Aman Informasi Anda dari Ancaman Digital', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Cyber Security', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Seberapa Aman Informasi Anda dari Ancaman Digital.pdf' },
   { id: 61, title: 'Seberapa Penting Menjaga Data Pribadi dan Pelindungannya', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Cyber Security', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Seberapa Penting Menjaga Data Pribadi dan Pelindungannya.pdf' },
   { id: 62, title: 'Seni Public Speaking Untuk Pemimpin Muda Berkarakter', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Soft Skills', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Seni Public Speaking Untuk Pemimpin Muda Berkarakter.pdf' },
-  { id: 63, title: 'Smart Village -- Panduan Membangun Ekonomi Kreatif Desa', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Soft Skills', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Smart Village_ Panduan Membangun Ekonomi Kreatif Desa.pdf' },
+  { id: 63, title: 'Smart Village — Panduan Membangun Ekonomi Kreatif Desa', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Soft Skills', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Smart Village_ Panduan Membangun Ekonomi Kreatif Desa.pdf' },
   { id: 64, title: 'Strategi Penggunaan CRM untuk UMKM', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Digital Marketing', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Strategi Penggunaan Customer Relationship Management untuk UMKM.pdf' },
   { id: 65, title: 'Tips Melindungi Diri Dari Ancaman Phising dan Malware', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Cyber Security', file: '/sertifikat/Sertifikat_RIZKI HABIBI_Tips Melindungi Diri Dari Ancaman Phising dan Malware di Era Digital.pdf' },
   { id: 66, title: 'What is Business Pitching', issuer: 'Digital Talent Scholarship', year: '2025', category: 'Soft Skills', file: '/sertifikat/Sertifikat_RIZKI HABIBI_What is Business Pitching.pdf' },
@@ -110,7 +110,7 @@ const catIcon: Record<string, string> = {
 const bnspData = {
   certNumber: '62090 2513 3 0156814 2025',
   regNumber: 'TIK 1565 41503 2025',
-  title: 'Pengembang Web Pratama -- Junior Web Developer',
+  title: 'Pengembang Web Pratama — Junior Web Developer',
   issuer: 'Badan Nasional Sertifikasi Profesi (BNSP)',
   lsp: 'LSP Teknologi Digital',
   date: '03 November 2025',
@@ -368,7 +368,7 @@ export default function Certificates() {
               <div className="p-6 space-y-5">
                 <div>
                   <h3 className="font-comic text-2xl text-comic-black mb-1">{bnspData.title}</h3>
-                  <p className="text-sm text-comic-black/60 font-bold">{bnspData.issuer} -- {bnspData.lsp}</p>
+                  <p className="text-sm text-comic-black/60 font-bold">{bnspData.issuer} — {bnspData.lsp}</p>
                 </div>
                 <div className="grid grid-cols-2 gap-3">
                   {[

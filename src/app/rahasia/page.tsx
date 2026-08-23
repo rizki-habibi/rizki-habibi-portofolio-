@@ -8,14 +8,14 @@ import Link from 'next/link'
 // --- Easter Egg Facts -----------------------------
 const faktaRahasia = [
   { id: '01', emoji: '🌙', teks: 'Jam produktif terbaik: 11 malam - 3 pagi. Dunia sunyi, kode mengalir.' },
-  { id: '02', emoji: '☕', teks: 'Minum kopi hitam tanpa gula -- setiap sesi debugging berat selalu ditemani kopi.' },
+  { id: '02', emoji: '☕', teks: 'Minum kopi hitam tanpa gula — setiap sesi debugging berat selalu ditemani kopi.' },
   { id: '03', emoji: '🐛', teks: 'Bug terpanjang yang pernah di-debug: 12 jam hanya karena 1 titik koma yang hilang.' },
   { id: '04', emoji: '🎮', teks: 'Di balik semua kode serius, masih suka main game strategi untuk melatih logika.' },
   { id: '05', emoji: '💡', teks: 'Proyek pertama: website HTML + CSS di Notepad tanpa VS Code, tanpa framework.' },
-  { id: '06', emoji: '🚀', teks: 'Sudah menulis lebih dari 10.000 baris kode Laravel -- dan masih terus bertambah.' },
+  { id: '06', emoji: '🚀', teks: 'Sudah menulis lebih dari 10.000 baris kode Laravel — dan masih terus bertambah.' },
   { id: '07', emoji: '📚', teks: 'Membaca dokumentasi resmi adalah hobi tersembunyi. Serius.' },
   { id: '08', emoji: '🎵', teks: 'Playlist lofi hip-hop sudah diputar ratusan jam selama coding marathon.' },
-  { id: '09', emoji: '🌐', teks: 'KVT.kom bukan cuma proyek -- ini adalah mimpi besar yang dibangun satu commit demi satu commit.' },
+  { id: '09', emoji: '🌐', teks: 'Gelar.id bukan cuma proyek — ini adalah mimpi besar yang dibangun satu commit demi satu commit.' },
   { id: '10', emoji: '🏆', teks: 'Kamu sudah menemukan halaman ini. Achievement unlocked: Penjelajah Rahasia!' },
 ]
 
@@ -118,7 +118,7 @@ function KartuFakta({ fakta, terbuka, onClick }: {
           ) : (
             <p className="text-green-500/30 text-sm font-mono flex items-center gap-2">
               <FiLock className="w-3 h-3 shrink-0" />
-              <span>[ TERENKRIPSI -- klik untuk membuka ]</span>
+              <span>[ TERENKRIPSI — klik untuk membuka ]</span>
             </p>
           )}
         </div>
@@ -334,7 +334,7 @@ export default function HalamanRahasia() {
         >
           <div className="flex items-center gap-3 mb-4">
             <FiTerminal className="w-5 h-5 text-green-400" />
-            <div className="font-mono text-green-400 text-xs tracking-widest">ARSIP RAHASIA -- RIZKI HABIBI</div>
+            <div className="font-mono text-green-400 text-xs tracking-widest">ARSIP RAHASIA — RIZKI HABIBI</div>
           </div>
 
           <pre className="text-green-500/40 text-[8px] sm:text-[9px] font-mono leading-tight mb-4 overflow-x-hidden">
@@ -378,7 +378,7 @@ export default function HalamanRahasia() {
               animate={{ opacity: 1, y: 0 }}
               className="font-mono text-green-400 text-xs mt-2 text-center"
             >
-              🎉 SEMUA RAHASIA TERBUKA -- ACHIEVEMENT UNLOCKED!
+              🎉 SEMUA RAHASIA TERBUKA — ACHIEVEMENT UNLOCKED!
             </motion.div>
           )}
         </motion.div>
@@ -421,7 +421,7 @@ export default function HalamanRahasia() {
           </motion.div>
         )}
 
-        {/* Easter egg final -- muncul kalau semua terbuka */}
+        {/* Easter egg final — muncul kalau semua terbuka */}
         <AnimatePresence>
           {semuaTerbuka && (
             <motion.div

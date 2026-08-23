@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 
 // ============================================================
-// API ROUTE -- PENGHITUNG PENGUNJUNG REAL-TIME
+// API ROUTE — PENGHITUNG PENGUNJUNG REAL-TIME
 //
 // Strategi penyimpanan (tanpa database eksternal):
 //   - Vercel Edge Config / Vercel KV jika tersedia
@@ -25,7 +25,7 @@ const inMemory: {
   mulaiDari: new Date().toISOString(),
 }
 
-// GET -- ambil statistik saat ini
+// GET — ambil statistik saat ini
 export async function GET() {
   return NextResponse.json({
     pageViews: inMemory.pageViews,
@@ -35,7 +35,7 @@ export async function GET() {
   })
 }
 
-// POST -- catat kunjungan baru
+// POST — catat kunjungan baru
 export async function POST(request: Request) {
   try {
     const body = await request.json().catch(() => ({}))
@@ -60,7 +60,7 @@ export async function POST(request: Request) {
   }
 }
 
-// PATCH -- tombol like
+// PATCH — tombol like
 export async function PATCH() {
   inMemory.likes += 1
   return NextResponse.json({ likes: inMemory.likes })

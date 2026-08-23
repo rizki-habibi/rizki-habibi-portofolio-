@@ -361,7 +361,7 @@ h6 {
   border: 2px solid var(--comic-black);
 }
 
-/* Chapter label -- kotak bernomor solid komik */
+/* Chapter label — kotak bernomor solid komik */
 .chapter-label {
   font-family: 'Bangers', 'Impact', sans-serif;
   font-size: 0.7rem;
@@ -400,7 +400,7 @@ h6 {
   align-items: center;
 }
 
-/* Versi standalone (backward compat) -- masih bisa dipakai sendiri */
+/* Versi standalone (backward compat) — masih bisa dipakai sendiri */
 .chapter-label-solo {
   font-family: 'Bangers', 'Impact', sans-serif;
   font-size: 0.75rem;
@@ -796,7 +796,7 @@ h6 {
 }
 
 /* ============================================
-   DARK MODE -- Comic Dark Theme
+   DARK MODE — Comic Dark Theme
    ============================================ */
 .dark-mode {
   --comic-black: #fafaf7;
@@ -901,7 +901,7 @@ h6 {
 }
 
 /* ============================================
-   RESPONSIVE -- perbaikan menyeluruh
+   RESPONSIVE — perbaikan menyeluruh
    ============================================ */
 
 /* Mencegah semua overflow horizontal */
@@ -1017,7 +1017,7 @@ img {
 }
 
 /* ============================================
-   PANEL KOMIK -- hero overlay & popup
+   PANEL KOMIK — hero overlay & popup
    ============================================ */
 @keyframes panelZoomIn {
   from { transform: scale(0.85) rotate(-2deg); opacity: 0; }

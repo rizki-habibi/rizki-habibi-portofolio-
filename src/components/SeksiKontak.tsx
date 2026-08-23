@@ -91,6 +91,30 @@ export default function ContactSection() {
           </a>
         </motion.div>
 
+        {/* Tombol Kerjasama — inline, bukan floating */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-6 flex justify-center"
+        >
+          <button
+            onClick={() => {
+              // trigger kuesioner kerjasama — dispatch custom event
+              window.dispatchEvent(new CustomEvent('buka-kerjasama'))
+            }}
+            className="flex items-center gap-2 font-comic text-sm px-6 py-3 text-white transition-all hover:scale-105"
+            style={{
+              background: '#8d55e8',
+              border: '3px solid #0a0a0a',
+              boxShadow: '5px 5px 0 #0a0a0a',
+            }}
+          >
+            👥 <span>TERTARIK KERJASAMA?</span>
+            <span className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse" />
+          </button>
+        </motion.div>
+
         {/* Contact cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           {socials.map((s, i) => (

@@ -53,7 +53,7 @@ export default function EducationComic() {
         {/* Header */}
         <HeaderBab nomor="12" judul="TRAINING ARC" warna="#1a5cff" subtitle="🎓 Setiap ilmu adalah senjata yang tak bisa dicuri" />
 
-        {/* Pendidikan formal -- comic panels vertikal */}
+        {/* Pendidikan formal — comic panels vertikal */}
         <div className="relative mb-16">
           {/* Garis vertikal */}
           <div className="absolute left-6 top-0 bottom-0 w-1 hidden md:block"

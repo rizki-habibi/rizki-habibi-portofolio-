@@ -12,11 +12,11 @@ const daftarProyek = [
     num: '01',
     title: 'KVT & Gelar.id',
     tagline: 'Platform ekosistem digital pendidikan',
-    description: 'KVT & Gelar.id adalah platform ekosistem digital yang menghubungkan dunia pendidikan dengan teknologi -- mengelola data akademik, sertifikasi kompetensi, dan portofolio digital dalam satu ekosistem terintegrasi.',
+    description: 'KVT & Gelar.id adalah platform ekosistem digital yang menghubungkan dunia pendidikan dengan teknologi — mengelola data akademik, sertifikasi kompetensi, dan portofolio digital dalam satu ekosistem terintegrasi.',
     image: '/project/sistem integrasi KVT.png',
     tech: ['Laravel', 'Next.js', 'MySQL', 'Tailwind CSS'],
-    github: '#',
-    demo: 'https://kvt.id',
+    github: 'https://github.com/kuro-myths',
+    demo: 'https://gelar.id',
     year: '2024',
     color: '#1a5cff',
     bgColor: '#e8f0ff',
@@ -28,9 +28,9 @@ const daftarProyek = [
   {
     id: 2,
     num: '02',
-    title: 'SIMPEG Smart -- SMAN 2 Jember',
+    title: 'SIMPEG Smart — SMAN 2 Jember',
     tagline: 'Sistem informasi manajemen kepegawaian sekolah',
-    description: 'Sistem Informasi Manajemen Pegawai (SIMPEG) untuk SMAN 2 Jember berbasis web -- mengelola data kepegawaian, absensi, dan administrasi guru/staf secara digital. Proyek ini merupakan pengembangan untuk instansi SMAN 2 Jember dan masih dalam tahap perbaikan aktif.',
+    description: 'Sistem Informasi Manajemen Pegawai (SIMPEG) untuk SMAN 2 Jember berbasis web — mengelola data kepegawaian, absensi, dan administrasi guru/staf secara digital. Proyek ini merupakan pengembangan untuk instansi SMAN 2 Jember dan masih dalam tahap perbaikan aktif.',
     image: '/project/sistem k-amu berbasi laravel all in one .png',
     tech: ['Laravel', 'MySQL', 'Tailwind CSS', 'PHP'],
     github: '#',
@@ -48,8 +48,8 @@ const daftarProyek = [
     id: 3,
     num: '03',
     title: 'Rancangan Alat Monitoring IoT',
-    tagline: 'Konsep sensor dari bahan daur ulang -- desain & rancangan',
-    description: 'Merancang konsep alat monitoring IoT menggunakan komponen bekas dan daur ulang -- mengintegrasikan sensor dengan microcontroller ESP32 dalam desain dashboard web real-time. Proyek ini masih tahap rancangan karena keterbatasan modal dan bahan komponen.',
+    tagline: 'Konsep sensor dari bahan daur ulang — desain & rancangan',
+    description: 'Merancang konsep alat monitoring IoT menggunakan komponen bekas dan daur ulang — mengintegrasikan sensor dengan microcontroller ESP32 dalam desain dashboard web real-time. Proyek ini masih tahap rancangan karena keterbatasan modal dan bahan komponen.',
     image: null,
     tech: ['IoT', 'ESP32', 'Arduino', 'Sensor', 'Web Dashboard'],
     github: '#',
@@ -60,7 +60,7 @@ const daftarProyek = [
     badge: '💡 RANCANGAN',
     kategori: 'IoT',
     problem: 'Kebutuhan alat monitoring dengan budget terbatas, namun pengembangan hardware terkendala modal dan komponen.',
-    solution: 'Merancang desain sistem IoT berbasis ESP32 dengan komponen daur ulang -- konsep siap, menunggu realisasi.',
+    solution: 'Merancang desain sistem IoT berbasis ESP32 dengan komponen daur ulang — konsep siap, menunggu realisasi.',
     result: 'Rancangan dan desain sistem selesai. Pengembangan hardware menunggu ketersediaan modal dan komponen.',
   },
   {
@@ -99,9 +99,66 @@ const daftarProyek = [
     solution: 'Membangun REST API dengan JWT authentication dan dokumentasi Swagger interaktif.',
     result: 'API siap digunakan oleh multiple client (web dan mobile) dengan dokumentasi lengkap.',
   },
+  {
+    id: 6,
+    num: '06',
+    title: 'Penelitian SINTAS 2',
+    tagline: 'Dinamika ruang publik Alun-Alun Jember',
+    description: 'Penelitian SINTAS 2: "Dinamika Ruang Publik pada Hari Minggu dan Periode Tahun Baru — Analisis Aktivitas Pengunjung, Pola Kunjungan, dan Ekonomi Mikro di Alun-Alun Jember." Studi observasional perilaku pengunjung + UMKM + QRIS.',
+    image: null,
+    tech: ['Observasi', 'Analisis Data', 'SPSS', 'Mixed Method', 'QRIS Research'],
+    github: '#',
+    demo: '#',
+    year: '2026',
+    color: '#0891b2',
+    bgColor: '#ecfeff',
+    badge: '📊 RISET',
+    kategori: 'Riset',
+    problem: 'Belum ada penelitian komprehensif tentang pola aktivitas pengunjung + dampak ekonomi UMKM di Alun-Alun Jember.',
+    solution: 'Penelitian observasional dengan metode mixed-method: observasi lapangan, wawancara, dan analisis statistik deskriptif.',
+    result: 'Dalam perencanaan — rancangan penelitian selesai, pengumpulan data lapangan akan segera dilakukan.',
+  },
+  {
+    id: 7,
+    num: '07',
+    title: 'AI Alliance — VTA/VTI/VTU/VTE/VTO',
+    tagline: 'Ekosistem AI sosial multi-platform',
+    description: 'Konsep ekosistem AI sosial yang terintegrasi di WhatsApp, Telegram, dan Discord. Setiap karakter AI (VTA, VTI, VTU, VTE, VTO) memiliki kecerdasan & kepribadian tersendiri, saling berinteraksi, dan aktif merespons komunitas bahkan saat developer tidak online.',
+    image: null,
+    tech: ['AI', 'WhatsApp API', 'Telegram Bot', 'Discord Bot', 'NLP', 'Multi-Agent'],
+    github: 'https://github.com/kuro-myths',
+    demo: '#',
+    year: '2026',
+    color: '#8b5cf6',
+    bgColor: '#f5f0ff',
+    badge: '🤖 RENCANA',
+    kategori: 'AI',
+    problem: 'Komunitas digital butuh AI yang terasa "hidup" dan bisa berinteraksi natural di berbagai platform.',
+    solution: 'Membangun multi-agent AI dengan karakter unik yang terintegrasi di WA/Telegram/Discord via Gelar.id ekosistem.',
+    result: 'Tahap perencanaan — arsitektur sistem sedang dirancang di repositori kuro-myths.',
+  },
+  {
+    id: 8,
+    num: '08',
+    title: 'Platform Konten AI — Recycle Content',
+    tagline: 'AI yang otomatis buat dan publish konten berulang',
+    description: 'Platform media sosial berbasis AI yang bisa membuat ide konten, mengolah ulang (recycle) konten lama menjadi format baru, lalu auto-publish ke YouTube, Instagram, dan TikTok. Semua dikelola AI sebagai content manager, profit sharing dari hasil konten.',
+    image: null,
+    tech: ['AI', 'YouTube API', 'Instagram API', 'TikTok API', 'Content AI', 'Next.js'],
+    github: 'https://github.com/rizki-habibi',
+    demo: '#',
+    year: '2027',
+    color: '#e63329',
+    bgColor: '#fef2f2',
+    badge: '🎬 RENCANA',
+    kategori: 'AI',
+    problem: 'Membuat konten konsisten di banyak platform sangat menyita waktu dan tenaga.',
+    solution: 'AI content manager yang otomatis generate ide, produksi ulang konten, jadwalkan, dan publish multi-platform.',
+    result: 'Tahap konsep — roadmap dan arsitektur sistem sedang disusun.',
+  },
 ]
 
-const kategoriList = ['SEMUA', 'Web', 'IoT', 'API']
+const kategoriList = ['SEMUA', 'Web', 'IoT', 'API', 'Riset', 'AI']
 
 export default function Projects() {
   const [dipilih, setDipilih] = useState<typeof daftarProyek[0] | null>(null)
@@ -278,7 +335,7 @@ export default function Projects() {
                 className="flex items-center justify-between px-4 sm:px-6 py-3 border-b-3 border-comic-black sticky top-0 z-10"
                 style={{ background: dipilih.color, borderBottom: '3px solid #0a0a0a' }}
               >
-                <span className="font-comic text-white text-base sm:text-xl">PROJECT #{dipilih.num} -- CASE FILE</span>
+                <span className="font-comic text-white text-base sm:text-xl">PROJECT #{dipilih.num} — CASE FILE</span>
                 <button onClick={() => setDipilih(null)} className="text-white hover:text-comic-yellow transition-colors p-1">
                   <FiX className="w-5 h-5 sm:w-6 sm:h-6" />
                 </button>

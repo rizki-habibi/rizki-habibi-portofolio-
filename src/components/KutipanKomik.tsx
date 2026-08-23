@@ -14,7 +14,7 @@ const quotes = [
     icon: '💻',
   },
   {
-    text: 'Keterbatasan bukan hambatan -- justru keterbatasan melahirkan kreativitas terbesar.',
+    text: 'Keterbatasan bukan hambatan — justru keterbatasan melahirkan kreativitas terbesar.',
     author: 'Rizki Habibi',
     context: 'Tentang Inovasi',
     color: '#22c55e',
@@ -22,9 +22,9 @@ const quotes = [
     icon: '🔧',
   },
   {
-    text: 'Saya tidak hanya ingin lulus -- saya ingin menciptakan tempat belajar yang belum pernah ada di Indonesia.',
+    text: 'Saya tidak hanya ingin lulus — saya ingin menciptakan tempat belajar yang belum pernah ada di Indonesia.',
     author: 'Rizki Habibi',
-    context: 'Tentang KVT.kom',
+    context: 'Tentang Gelar.id',
     color: '#8b5cf6',
     bg: '#f5f0ff',
     icon: '🌐',
@@ -46,7 +46,7 @@ const quotes = [
     icon: '🎓',
   },
   {
-    text: 'Satu website bisa mengubah hidup banyak orang -- asal dibangun dengan niat yang benar.',
+    text: 'Satu website bisa mengubah hidup banyak orang — asal dibangun dengan niat yang benar.',
     author: 'Rizki Habibi',
     context: 'Tentang Dampak',
     color: '#0891b2',
@@ -175,7 +175,7 @@ export default function QuoteComic() {
               💭 PESAN VETERAN
             </motion.div>
             <div className="speech-bubble inline-block text-sm mb-4 text-comic-black">
-              &ldquo;Pengalaman bukan tentang lamanya waktu -- tapi seberapa dalam kamu menyelami setiap prosesnya.&rdquo;
+              &ldquo;Pengalaman bukan tentang lamanya waktu — tapi seberapa dalam kamu menyelami setiap prosesnya.&rdquo;
             </div>
             <motion.p
               initial={{ opacity: 0, x: -15 }}

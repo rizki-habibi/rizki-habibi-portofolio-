@@ -19,20 +19,20 @@ function PanelBab({ id, num, judul, warna, bg, gelap = false, children }: {
   )
 }
 
-/* Ch301 -- PERSONAL BRANDING DEVELOPER */
+/* Ch301 — PERSONAL BRANDING DEVELOPER */
 function Ch301() {
   const pilar = [
-    { pilar: 'GitHub Activity', detail: 'Contribution graph yang hijau konsisten lebih bicara dari 1000 kata di CV. Commit setiap hari -- sekecil apapun.', icon: '🐙', warna: '#333' },
-    { pilar: 'Blog & Tulisan', detail: 'Artikel teknis yang datang dari pengalaman nyata membuktikan kamu bisa berpikir dan berkomunikasi -- bukan hanya coding.', icon: '📝', warna: '#1a5cff' },
+    { pilar: 'GitHub Activity', detail: 'Contribution graph yang hijau konsisten lebih bicara dari 1000 kata di CV. Commit setiap hari — sekecil apapun.', icon: '🐙', warna: '#333' },
+    { pilar: 'Blog & Tulisan', detail: 'Artikel teknis yang datang dari pengalaman nyata membuktikan kamu bisa berpikir dan berkomunikasi — bukan hanya coding.', icon: '📝', warna: '#1a5cff' },
     { pilar: 'Portofolio Web', detail: 'Satu website yang menunjukkan skill, proyek, dan kepribadian kamu. Ini adalah kartu nama digital yang bekerja 24/7.', icon: '🌐', warna: '#22c55e' },
     { pilar: 'LinkedIn Aktif', detail: 'Update milestone, share pembelajaran, engage dengan komunitas. Recruiter aktif mencari di sini setiap hari.', icon: '💼', warna: '#0077b5' },
     { pilar: 'Talk & Sharing', detail: 'Presentasi di meetup, webinar, atau bahkan YouTube channel. Suara publik membangun authority yang tidak bisa dibeli.', icon: '🎤', warna: '#8b5cf6' },
     { pilar: 'Open Source', detail: 'Kontribusi ke proyek open source = endorsement dari komunitas global. Ini CV yang tidak bisa dipalsukan.', icon: '🔓', warna: '#f59e0b' },
   ]
   return (
-    <PanelBab id="ch301" num="301" judul="PERSONAL BRANDING DEVELOPER -- BANGUN NAMA SEBELUM BUTUH" warna="#1a5cff" bg="#e8f0ff">
+    <PanelBab id="ch301" num="301" judul="PERSONAL BRANDING DEVELOPER — BANGUN NAMA SEBELUM BUTUH" warna="#1a5cff" bg="#e8f0ff">
       <div className="speech-bubble inline-block text-sm mb-6">
-        🏷️ Personal brand bukan tentang pamer -- ini tentang menjadi mudah ditemukan oleh orang yang tepat di waktu yang tepat!
+        🏷️ Personal brand bukan tentang pamer — ini tentang menjadi mudah ditemukan oleh orang yang tepat di waktu yang tepat!
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
         {pilar.map((p, i) => (
@@ -56,7 +56,7 @@ function Ch301() {
           {[
             { label: 'Niche yang Jelas', desc: 'Full-stack + IoT + Social Impact. Spesifik lebih mudah diingat dari "bisa semua"', icon: '🎯' },
             { label: 'Konsistensi Output', desc: 'Satu artikel per 2 minggu + daily GitHub commit + weekly LinkedIn post', icon: '📅' },
-            { label: 'Nilai yang Dibawa', desc: 'Developer yang membangun untuk dampak nyata -- bukan hanya untuk uang', icon: '💎' },
+            { label: 'Nilai yang Dibawa', desc: 'Developer yang membangun untuk dampak nyata — bukan hanya untuk uang', icon: '💎' },
           ].map((f, i) => (
             <div key={f.label} className="text-center p-3" style={{ background: '#f8f8f5', border: '2px dashed #0a0a0a30' }}>
               <div className="text-2xl mb-1">{f.icon}</div>
@@ -70,7 +70,7 @@ function Ch301() {
   )
 }
 
-/* Ch302 -- WAWANCARA KERJA DEVELOPER */
+/* Ch302 — WAWANCARA KERJA DEVELOPER */
 function Ch302() {
   const [aktif, setAktif] = useState(0)
   const tipe = [
@@ -92,11 +92,11 @@ function Ch302() {
     {
       tipe: 'Culture Fit', icon: '🤝', warna: '#f59e0b',
       pertanyaan: ['Ceritakan konflik dengan rekan kerja dan cara mengatasinya', 'Bagaimana kamu belajar teknologi baru?', 'Apa yang kamu cari dari perusahaan ini?', 'Bagaimana kamu handle feedback negatif?'],
-      tips: 'Autentik adalah kunci. Jika culture tidak cocok, itu bukan kegagalan -- itu informasi berharga tentang tempat yang bukan untukmu.'
+      tips: 'Autentik adalah kunci. Jika culture tidak cocok, itu bukan kegagalan — itu informasi berharga tentang tempat yang bukan untukmu.'
     },
   ]
   return (
-    <PanelBab id="ch302" num="302" judul="WAWANCARA KERJA -- PANDUAN LENGKAP DEVELOPER" warna="#22c55e" bg="#f0fdf4">
+    <PanelBab id="ch302" num="302" judul="WAWANCARA KERJA — PANDUAN LENGKAP DEVELOPER" warna="#22c55e" bg="#f0fdf4">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
         🎯 Interview adalah conversation, bukan interrogasi. Kamu juga sedang menilai apakah perusahaan ini cocok untukmu!
       </div>
@@ -145,12 +145,12 @@ function Ch302() {
   )
 }
 
-/* Ch303 -- NEGOSIASI GAJI DEVELOPER */
+/* Ch303 — NEGOSIASI GAJI DEVELOPER */
 function Ch303() {
   return (
-    <PanelBab id="ch303" num="303" judul="NEGOSIASI GAJI -- SENI YANG WAJIB DIKUASAI DEVELOPER" warna="#f59e0b" bg="#fffbeb">
+    <PanelBab id="ch303" num="303" judul="NEGOSIASI GAJI — SENI YANG WAJIB DIKUASAI DEVELOPER" warna="#f59e0b" bg="#fffbeb">
       <div className="speech-bubble inline-block text-sm mb-6">
-        💰 Negosiasi gaji yang baik bukan tentang rakus -- ini tentang tahu nilai dirimu dan berani memintanya dengan data!
+        💰 Negosiasi gaji yang baik bukan tentang rakus — ini tentang tahu nilai dirimu dan berani memintanya dengan data!
       </div>
       <div className="grid lg:grid-cols-2 gap-8">
         <div className="space-y-4">
@@ -158,7 +158,7 @@ function Ch303() {
           {[
             { sumber: 'Glassdoor & LinkedIn Salary', desc: 'Data rata-rata gaji posisi serupa di kota yang sama. Filter berdasar pengalaman dan stack teknologi.' },
             { sumber: 'ITSalary.id & Gaji.info', desc: 'Data lokal Indonesia yang lebih relevan dengan kondisi pasar teknologi domestik.' },
-            { sumber: 'Network Teman Developer', desc: 'Tanya langsung di komunitas -- ini sumber paling akurat dan kontekstual yang bisa kamu dapat.' },
+            { sumber: 'Network Teman Developer', desc: 'Tanya langsung di komunitas — ini sumber paling akurat dan kontekstual yang bisa kamu dapat.' },
             { sumber: 'Job Posting Pesaing', desc: 'Perusahaan kompetitor yang post range gaji di iklan = benchmark yang sangat berguna.' },
           ].map((s, i) => (
             <motion.div key={s.sumber}
@@ -207,7 +207,7 @@ function Ch303() {
   )
 }
 
-/* Ch304 -- FREELANCE DEVELOPER: DARI SAMPINGAN KE FULL-TIME */
+/* Ch304 — FREELANCE DEVELOPER: DARI SAMPINGAN KE FULL-TIME */
 function Ch304() {
   const fase = [
     { fase: 'Moonlighting', deskripsi: 'Mulai freelance sambil masih kerja tetap. 1-2 klien kecil per bulan. Bangun portofolio dan testimoni nyata.', pendapatan: 'Rp 1-5JT/bulan', resiko: 'Rendah', icon: '🌙', warna: '#1a5cff' },
@@ -216,9 +216,9 @@ function Ch304() {
     { fase: 'Boutique Agency', deskripsi: 'Punya tim kecil 2-4 orang. Ambil proyek lebih besar, delegasi pekerjaan, fokus pada sales dan delivery.', pendapatan: 'Rp 50-200JT/bulan', resiko: 'Sangat Tinggi', icon: '🏢', warna: '#8b5cf6' },
   ]
   return (
-    <PanelBab id="ch304" num="304" judul="FREELANCE DEVELOPER -- ROADMAP DARI SAMPINGAN KE EMPIRE" warna="#8b5cf6" bg="#f5f0ff">
+    <PanelBab id="ch304" num="304" judul="FREELANCE DEVELOPER — ROADMAP DARI SAMPINGAN KE EMPIRE" warna="#8b5cf6" bg="#f5f0ff">
       <div className="speech-bubble-right inline-block text-sm mb-6 text-[#0a0a0a]">
-        💼 Freelance bukan hanya soal kebebasan waktu -- ini tentang kebebasan memilih masalah apa yang mau kamu selesaikan!
+        💼 Freelance bukan hanya soal kebebasan waktu — ini tentang kebebasan memilih masalah apa yang mau kamu selesaikan!
       </div>
       <div className="space-y-4 mb-8">
         {fase.map((f, i) => (
@@ -245,7 +245,7 @@ function Ch304() {
   )
 }
 
-/* Ch305 -- SERTIFIKASI YANG WORTH IT */
+/* Ch305 — SERTIFIKASI YANG WORTH IT */
 function Ch305() {
   const sertifikasi = [
     { nama: 'BNSP Teknisi Komputer', provider: 'BNSP Indonesia', nilai: 'Diakui pemerintah RI', level: 'NASIONAL', icon: '🏛️', warna: '#e63329' },
@@ -258,9 +258,9 @@ function Ch305() {
     { nama: 'Digital Talent Scholarship', provider: 'Kominfo RI', nilai: 'Gratis dan diakui pemerintah Indonesia', level: 'NASIONAL', icon: '🎓', warna: '#8b5cf6' },
   ]
   return (
-    <PanelBab id="ch305" num="305" judul="SERTIFIKASI YANG WORTH IT -- MANA YANG DIPILIH?" warna="#e63329" bg="#fef2f2">
+    <PanelBab id="ch305" num="305" judul="SERTIFIKASI YANG WORTH IT — MANA YANG DIPILIH?" warna="#e63329" bg="#fef2f2">
       <div className="speech-bubble inline-block text-sm mb-6">
-        🏆 Sertifikasi bukan pengganti pengalaman -- tapi bisa jadi tanda baca yang mempercepat kepercayaan recruiter dan klien!
+        🏆 Sertifikasi bukan pengganti pengalaman — tapi bisa jadi tanda baca yang mempercepat kepercayaan recruiter dan klien!
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
         {sertifikasi.map((s, i) => (
@@ -287,24 +287,24 @@ function Ch305() {
   )
 }
 
-/* Ch306-310 -- IMPIAN, WARISAN & SALAM AKHIR */
+/* Ch306-310 — IMPIAN, WARISAN & SALAM AKHIR */
 function Ch306to310() {
   const impian = [
     { impian: 'Membangun startup yang IPO di Bursa Efek Indonesia pada 2035', timeline: '2035', icon: '🚀', warna: '#ffd700' },
     { impian: 'Menulis buku "Developer Indonesia untuk Dunia" yang dicetak 100.000 eksemplar', timeline: '2030', icon: '📚', warna: '#1a5cff' },
-    { impian: 'KVT.kom menjadi platform edukasi teknologi terbesar di Asia Tenggara', timeline: '2030', icon: '🌏', warna: '#22c55e' },
+    { impian: 'Gelar.id menjadi platform edukasi teknologi terbesar di Asia Tenggara', timeline: '2030', icon: '🌏', warna: '#22c55e' },
     { impian: 'Membangun 100 website desa gratis untuk desa-desa terpencil di Indonesia', timeline: '2028', icon: '🏘️', warna: '#e63329' },
     { impian: 'Berbicara di TEDx tentang "Teknologi untuk Keadilan Sosial Indonesia"', timeline: '2027', icon: '🎤', warna: '#8b5cf6' },
     { impian: 'Menciptakan beasiswa coding untuk 1.000 anak tidak mampu dari Jember dan sekitarnya', timeline: '2029', icon: '🎓', warna: '#f59e0b' },
-    { impian: 'Memiliki kantor KVT.kom di Jember yang jadi hub teknologi untuk Jawa Timur', timeline: '2028', icon: '🏢', warna: '#0891b2' },
+    { impian: 'Memiliki kantor Gelar.id di Jember yang jadi hub teknologi untuk Jawa Timur', timeline: '2028', icon: '🏢', warna: '#0891b2' },
     { impian: 'Merilis 10 package open source yang dipakai 10.000+ developer Indonesia', timeline: '2027', icon: '📦', warna: '#22c55e' },
     { impian: 'Mewakili Indonesia dalam forum teknologi internasional sebagai Developer Ambassador', timeline: '2029', icon: '🌍', warna: '#1a5cff' },
-    { impian: 'Pensiun muda di usia 40, tapi tetap coding karena cinta -- bukan karena terpaksa', timeline: '2040', icon: '💎', warna: '#ffd700' },
+    { impian: 'Pensiun muda di usia 40, tapi tetap coding karena cinta — bukan karena terpaksa', timeline: '2040', icon: '💎', warna: '#ffd700' },
   ]
   return (
-    <PanelBab id="ch306" num="306-310" judul="10 IMPIAN BESAR -- DAFTAR YANG BELUM SELESAI" warna="#ffd700" bg="#fffbeb" gelap>
+    <PanelBab id="ch306" num="306-310" judul="10 IMPIAN BESAR — DAFTAR YANG BELUM SELESAI" warna="#ffd700" bg="#fffbeb" gelap>
       <div className="speech-bubble inline-block text-sm mb-6 text-[#0a0a0a]">
-        ✨ Impian yang dituliskan adalah impian yang sudah setengah jadi. Ini bukan bucket list -- ini komitmen publik!
+        ✨ Impian yang dituliskan adalah impian yang sudah setengah jadi. Ini bukan bucket list — ini komitmen publik!
       </div>
       <div className="space-y-3 mb-10">
         {impian.map((imp, i) => (
@@ -356,13 +356,13 @@ function Ch306to310() {
           style={{ border: '4px solid #ffd700', boxShadow: '8px 8px 0 #ffd70055', background: '#111', borderRadius: 16 }}>
           <div className="font-comic text-xl text-yellow-400 mb-3">📖 TENTANG PORTFOLIO INI</div>
           <p className="text-sm font-bold text-white/75 leading-loose">
-            310 chapter ini bukan angka yang direncanakan -- ini adalah hasil dari menulis jujur
+            310 chapter ini bukan angka yang direncanakan — ini adalah hasil dari menulis jujur
             tentang perjalanan seorang developer dari Jember yang percaya bahwa kode bisa mengubah dunia.
           </p>
           <p className="text-sm font-bold text-white/75 leading-loose mt-3">
             Setiap chapter adalah undangan untuk mengenal{' '}
             <span className="text-yellow-400">siapa Rizki Habibi sesungguhnya</span>{' '}
-            -- bukan hanya list skill dan sertifikat.
+            — bukan hanya list skill dan sertifikat.
           </p>
           <div className="mt-4 font-comic text-sm text-yellow-400">-- Rizki Habibi, Jember, 2026</div>
         </motion.div>

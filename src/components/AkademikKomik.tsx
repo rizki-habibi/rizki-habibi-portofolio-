@@ -260,7 +260,7 @@ export default function AkademikKomik() {
             📚 REKAP AKADEMIK
           </div>
           <div className="speech-bubble inline-block text-sm">
-            S1 Sistem & Teknologi Informasi -- STIKI Malang / ITSM Jember
+            S1 Sistem & Teknologi Informasi — STIKI Malang / ITSM Jember
           </div>
         </motion.div>
 
@@ -321,7 +321,7 @@ export default function AkademikKomik() {
             })}
           </div>
           <div className="mt-2 text-[9px] font-bold text-[#0a0a0a]/40 text-center">
-            IPK Kumulatif: <span className="text-[#22c55e] font-comic text-sm">3.81</span> / 4.00 -- Sangat Memuaskan ⭐
+            IPK Kumulatif: <span className="text-[#22c55e] font-comic text-sm">3.81</span> / 4.00 — Sangat Memuaskan ⭐
           </div>
         </motion.div>
 
@@ -334,7 +334,7 @@ export default function AkademikKomik() {
           style={{ border: '4px solid #ffd700', boxShadow: '6px 6px 0 #ffd700', background: '#0a0a0a' }}>
           <div className="px-4 py-2 flex items-center gap-2" style={{ background: '#ffd700', borderBottom: '2px solid #0a0a0a' }}>
             <span className="text-2xl">🎓</span>
-            <span className="font-comic text-base text-[#0a0a0a]">SKRIPSI -- TUGAS AKHIR S1</span>
+            <span className="font-comic text-base text-[#0a0a0a]">SKRIPSI — TUGAS AKHIR S1</span>
             <span className="ml-auto font-bold text-[9px] bg-black/20 text-[#0a0a0a] px-2 py-0.5">6 SKS</span>
           </div>
           <div className="p-5 grid sm:grid-cols-2 gap-4">
@@ -342,8 +342,8 @@ export default function AkademikKomik() {
               {[
                 { label: 'Judul', val: 'Sistem Informasi Kepegawaian Berbasis Web dengan Metode Hybrid', icon: '📝' },
                 { label: 'Framework', val: 'Laravel (PHP) + MySQL + Bootstrap / Tailwind CSS', icon: '⚡' },
-                { label: 'Metode', val: 'Hybrid Method -- kombinasi waterfall + agile iteratif', icon: '🔄' },
-                { label: 'Status', val: 'Aktif dikerjakan -- Semester 7 (2026)', icon: '🟡' },
+                { label: 'Metode', val: 'Hybrid Method — kombinasi waterfall + agile iteratif', icon: '🔄' },
+                { label: 'Status', val: 'Aktif dikerjakan — Semester 7 (2026)', icon: '🟡' },
               ].map((item, i) => (
                 <motion.div key={item.label}
                   initial={{ opacity: 0, x: -20 }}
@@ -399,7 +399,7 @@ export default function AkademikKomik() {
             {[
               {
                 judul: '🏆 Kekuatan Akademik',
-                poin: ['IPK 3.81 -- konsisten di atas 3.75 setiap semester', 'Semester 3 terbaik: IPS 3.93 (7 dari 8 mata kuliah nilai A)', 'Tidak ada nilai di bawah B+ dalam 6 semester', 'Penguasaan teknis kuat: Web, DB, OOP, Keamanan TI'],
+                poin: ['IPK 3.81 — konsisten di atas 3.75 setiap semester', 'Semester 3 terbaik: IPS 3.93 (7 dari 8 mata kuliah nilai A)', 'Tidak ada nilai di bawah B+ dalam 6 semester', 'Penguasaan teknis kuat: Web, DB, OOP, Keamanan TI'],
                 w: '#22c55e',
               },
               {
@@ -409,12 +409,12 @@ export default function AkademikKomik() {
               },
               {
                 judul: '⚡ Saran untuk Skripsi',
-                poin: ['Dokumentasikan setiap sprint/iterasi hybrid method dengan baik', 'Buat demo video fitur untuk presentasi sidang yang impresif', 'Deploy ke server nyata -- nilai tambah besar di mata penguji', 'Link GitHub skripsi ke portfolio sebagai bukti kompetensi'],
+                poin: ['Dokumentasikan setiap sprint/iterasi hybrid method dengan baik', 'Buat demo video fitur untuk presentasi sidang yang impresif', 'Deploy ke server nyata — nilai tambah besar di mata penguji', 'Link GitHub skripsi ke portfolio sebagai bukti kompetensi'],
                 w: '#8b5cf6',
               },
               {
                 judul: '🚀 Setelah Wisuda',
-                poin: ['IPK 3.81 cukup kuat untuk melamar fresh grad posisi junior-mid', 'Kombinasikan dengan BNSP + 75 sertifikat = profil yang sangat kompetitif', 'Pertimbangkan S2 tech/bisnis jika ingin masuk academia atau research', 'Atau langsung bangun KVT.kom dan jadikan sebagai "perusahaan pertama"'],
+                poin: ['IPK 3.81 cukup kuat untuk melamar fresh grad posisi junior-mid', 'Kombinasikan dengan BNSP + 75 sertifikat = profil yang sangat kompetitif', 'Pertimbangkan S2 tech/bisnis jika ingin masuk academia atau research', 'Atau langsung bangun Gelar.id dan jadikan sebagai "perusahaan pertama"'],
                 w: '#f59e0b',
               },
             ].map((item, i) => (

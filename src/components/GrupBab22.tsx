@@ -78,7 +78,7 @@ function Ch187() {
     { no:175, judul:'Cron Job Monitor & Manager',  tag:'DevTool  Ops',      status:'PROTOTYPE', warna:'#1a5cff', icon:'⏰', deskripsi:'Dashboard untuk pantau semua scheduled task. Alert jika job gagal atau terlalu lama. History eksekusi, manual trigger, dan delay monitoring.' },
   ]
   return (
-    <PanelBab id="ch187" num="187" judul="200 INOVASI -- BAB 7: DEVELOPER TOOLS & INFRASTRUKTUR" warna="#1a5cff" bg="#e8f0ff" gelap>
+    <PanelBab id="ch187" num="187" judul="200 INOVASI — BAB 7: DEVELOPER TOOLS & INFRASTRUKTUR" warna="#1a5cff" bg="#e8f0ff" gelap>
       <div className="speech-bubble inline-block text-sm mb-6 text-[#0a0a0a]">
         🔧 25 tools dan infrastruktur yang bikin developer Indonesia makin produktif dan powerful!
       </div>
@@ -116,12 +116,12 @@ function Ch188() {
     { no:197, judul:'Karaoke Online Platform Lokal',tag:'EntertainTech',     status:'KONSEP',   warna:'#0891b2', icon:'🎤', deskripsi:'Platform karaoke online dengan lirik real-time, scoring suara, dan duet mode. Library lagu Indonesia dan daerah terlengkap. Bisa host karaoke party virtual.' },
     { no:198, judul:'3D Scan Artefak Budaya',      tag:'CulturalTech  3D', status:'RISET',    warna:'#22c55e', icon:'🏺', deskripsi:'Layanan scan 3D artefak museum dan situs bersejarah Indonesia. Model 3D bisa diakses publik, diunduh untuk pendidikan, dan dicetak dengan 3D printer.' },
     { no:199, judul:'Platform Mentoring Seniman Muda',tag:'CreativeTech  Community',status:'KONSEP',warna:'#1a5cff',icon:'🎭',deskripsi:'Matching seniman muda dengan seniman senior Indonesia untuk program mentoring 3 bulan. Sesi virtual, project kolaborasi, dan showcase hasil mentoring.' },
-    { no:200, judul:'KVT.kom -- Inovasi #200',      tag:'EdTech  Vision',    status:'AKTIF',    warna:'#ffd700', icon:'🌟', deskripsi:'Inovasi ke-200 adalah KVT.kom itu sendiri -- platform yang menjadi wadah semua inovasi di atas. Tempat belajar, berkolaborasi, dan mewujudkan semua ide menjadi nyata untuk Indonesia.' },
+    { no:200, judul:'Gelar.id — Inovasi #200',      tag:'EdTech  Vision',    status:'AKTIF',    warna:'#ffd700', icon:'🌟', deskripsi:'Inovasi ke-200 adalah Gelar.id itu sendiri — platform yang menjadi wadah semua inovasi di atas. Tempat belajar, berkolaborasi, dan mewujudkan semua ide menjadi nyata untuk Indonesia.' },
   ]
   return (
-    <PanelBab id="ch188" num="188" judul="200 INOVASI -- BAB 8: KREATIF, SENI & KONTEN" warna="#e63329" bg="#fef2f2">
+    <PanelBab id="ch188" num="188" judul="200 INOVASI — BAB 8: KREATIF, SENI & KONTEN" warna="#e63329" bg="#fef2f2">
       <div className="speech-bubble inline-block text-sm mb-6">
-        🎨 25 inovasi di bidang kreatif, seni, dan konten -- termasuk inovasi spesial #200!
+        🎨 25 inovasi di bidang kreatif, seni, dan konten — termasuk inovasi spesial #200!
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {inovasi.map(item => <KartuInovasi key={item.no} {...item} />)}

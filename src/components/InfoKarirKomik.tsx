@@ -18,7 +18,7 @@ const lowongan = [
   { no:12, perusahaan:'PT Reka Cipta Solusi',   posisi:'Freelance Full Stack Developer',    gaji:'Rp 5-8 jt',  tipe:'Freelance',kota:'Bandung',   platform:'Glints',           link:'https://glints.com/id',                         warna:'#f59e0b', cocok:4 },
   { no:13, perusahaan:'REVIFY SDN BHD',         posisi:'Laravel Programmer',                gaji:'Rp 6-10 jt', tipe:'Remote',  kota:'Remote',     platform:'Indeed',           link:'https://id.indeed.com',                         warna:'#8b5cf6', cocok:5 },
   { no:14, perusahaan:'Magnus Digital',         posisi:'Full Stack Engineer',               gaji:'Rp 5-7 jt',  tipe:'Hybrid',  kota:'Nasional',   platform:'Glints',           link:'https://glints.com/id',                         warna:'#0891b2', cocok:4 },
-  { no:15, perusahaan:'KVT.kom (Self)',         posisi:'Founder / CTO',                     gaji:'Equity',     tipe:'Remote',  kota:'Jember',     platform:'Self',             link:'#ch82',                                         warna:'#ffd700', cocok:5 },
+  { no:15, perusahaan:'Gelar.id (Self)',         posisi:'Founder / CTO',                     gaji:'Equity',     tipe:'Remote',  kota:'Jember',     platform:'Self',             link:'#ch82',                                         warna:'#ffd700', cocok:5 },
 ]
 
 const platform = [
@@ -36,7 +36,7 @@ const skillDicari = [
   { skill:'TypeScript', level:88, ket:'Makin wajib di perusahaan tech berkualitas', w:'#3178c6' },
   { skill:'Docker + CI/CD', level:85, ket:'DevOps dasar sudah jadi requirement mid-level', w:'#2496ed' },
   { skill:'AI/LLM Integration', level:90, ket:'Demand naik 148% 2023-2025. Sangat diferensiasi.', w:'#22c55e' },
-  { skill:'IoT + Web Dashboard', level:80, ket:'Langka di market -- kombinasimu sangat bernilai!', w:'#f59e0b' },
+  { skill:'IoT + Web Dashboard', level:80, ket:'Langka di market — kombinasimu sangat bernilai!', w:'#f59e0b' },
   { skill:'PostgreSQL/MySQL', level:88, ket:'Wajib, pastikan kuasai query optimization', w:'#336791' },
   { skill:'Cloud Basics (AWS/GCP)', level:75, ket:'Satu cloud platform sudah cukup untuk entry-level', w:'#f59e0b' },
 ]
@@ -44,7 +44,7 @@ const skillDicari = [
 const tipsCocok = [
   { ikon:'🏆', judul:'Tonjolkan Trifecta Langka', detail:'Laravel + Next.js + IoT adalah kombinasi yang sangat jarang dimiliki fresh grad. Posisikan dirimu sebagai "Full-Stack + IoT Developer", bukan sekadar web developer biasa.' },
   { ikon:'🎖️', judul:'BNSP + IPK 3.81 = Bukti Ganda', detail:'Sertifikasi BNSP memberikan validasi kompetensi dari pemerintah RI. Cantumkan di paling atas CV. IPK 3.81 melampaui threshold kebanyakan perusahaan (min 3.5).' },
-  { ikon:'📦', judul:'3 Proyek Live = Portofolio Kuat', detail:'Deploy minimal 3 proyek ke URL nyata (Vercel/Railway). Satu IoT dashboard, satu full-stack Laravel+Next.js, satu dengan AI integration -- README profesional di tiap repo.' },
+  { ikon:'📦', judul:'3 Proyek Live = Portofolio Kuat', detail:'Deploy minimal 3 proyek ke URL nyata (Vercel/Railway). Satu IoT dashboard, satu full-stack Laravel+Next.js, satu dengan AI integration — README profesional di tiap repo.' },
   { ikon:'🎯', judul:'Target Perusahaan Agritech Jatim', detail:'Jember adalah kota pertanian terbesar Jawa Timur. Skill IoT + Laravel sangat relevan untuk perusahaan agritech lokal yang butuh sistem monitoring lahan/ternak.' },
   { ikon:'🌐', judul:'Remote = Gaji Setara Kota Besar', detail:'Dengan koneksi internet yang ada di Jember, kamu bisa bekerja remote untuk perusahaan Jakarta atau Singapura dengan gaji 2-3x lebih tinggi dari pasar lokal.' },
   { ikon:'✍️', judul:'Cover Letter yang Spesifik', detail:'Jangan pakai template. Tulis: "Saya membangun sistem IoT monitoring menggunakan Arduino + Laravel yang relevan langsung dengan kebutuhan [perusahaan X] dalam hal [Y]."' },
@@ -133,7 +133,7 @@ export default function InfoKarirKomik() {
             🚀 INFO KARIR & PELUANG KERJA
           </div>
           <div className="speech-bubble inline-block text-sm text-[#0a0a0a]">
-            Berdasarkan profil skill dan IPK 3.81 -- rekomendasi nyata dari pasar kerja Indonesia 2025-2026!
+            Berdasarkan profil skill dan IPK 3.81 — rekomendasi nyata dari pasar kerja Indonesia 2025-2026!
           </div>
         </motion.div>
 

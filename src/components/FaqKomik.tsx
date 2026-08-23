@@ -43,8 +43,8 @@ const faqData = [
   },
   {
     id: 5,
-    pertanyaan: 'Apa itu KVT.kom yang sering disebut?',
-    jawaban: 'KVT.kom (Kampus Virtual Tuber) adalah platform edukasi digital yang sedang saya bangun -- menggabungkan konsep Vtuber dengan sistem pembelajaran online. Targetnya menjadi ekosistem kampus digital pertama di Indonesia dengan sertifikasi berbasis kompetensi.',
+    pertanyaan: 'Apa itu Gelar.id yang sering disebut?',
+    jawaban: 'Gelar.id (Kampus Virtual Tuber) adalah platform edukasi digital yang sedang saya bangun — menggabungkan konsep Vtuber dengan sistem pembelajaran online. Targetnya menjadi ekosistem kampus digital pertama di Indonesia dengan sertifikasi berbasis kompetensi.',
     icon: '🌐',
     warna: '#8b5cf6',
     bg: '#f5f0ff',
@@ -95,7 +95,7 @@ export default function FaqComic() {
       <div className="max-w-4xl mx-auto relative z-10">
 
         {/* Header */}
-        <HeaderBab nomor="?" judul="FAQ -- PERTANYAAN UMUM" warna="#f59e0b" subtitle="🤔 Semua pertanyaan umum terjawab di sini!" />
+        <HeaderBab nomor="?" judul="FAQ — PERTANYAAN UMUM" warna="#f59e0b" subtitle="🤔 Semua pertanyaan umum terjawab di sini!" />
 
         {/* Filter kategori */}
         <motion.div
@@ -237,7 +237,7 @@ export default function FaqComic() {
             ❓ Pertanyaanmu belum terjawab?
           </div>
           <p className="text-xs sm:text-sm text-comic-black/70 mb-4 font-bold">
-            Langsung hubungi saya -- saya akan dengan senang hati membantu!
+            Langsung hubungi saya — saya akan dengan senang hati membantu!
           </p>
           <a
             href="#contact"

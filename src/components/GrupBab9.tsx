@@ -39,7 +39,7 @@ function GridTiga({ items, cols = 3 }: { items: { icon: string; judul: string; t
   )
 }
 
-// -- Ch91 ----------------------------------------------------------------------
+// — Ch91 ----------------------------------------------------------------------
 function Ch91() {
   return (
     <PanelBab id="ch91" chNum="CHAPTER 91" judul="KEHIDUPAN KAMPUS  ANTARA TUGAS DAN MIMPI" warna="#22c55e" latarBelakang="#f0fdf4">
@@ -78,7 +78,7 @@ function Ch91() {
   )
 }
 
-// -- Ch92 ----------------------------------------------------------------------
+// — Ch92 ----------------------------------------------------------------------
 function Ch92() {
   const kota = [
     { nama: 'Jember', desc: 'Kota kelahiran dan kampus. Kota tembakau yang penuh kenangan dan potensi digital yang belum tergali', icon: '???', warna: '#22c55e' },
@@ -119,7 +119,7 @@ function Ch92() {
   )
 }
 
-// -- Ch93 ----------------------------------------------------------------------
+// — Ch93 ----------------------------------------------------------------------
 function Ch93() {
   const budaya = [
     { icon: '??', judul: 'TikTok Generation', teks: 'Konten pendek, informasi cepat. Tantangan: filter informasi hoaks vs fakta. Skill critical thinking makin penting!', warna: '#1a5cff', bg: '#e8f0ff' },
@@ -139,7 +139,7 @@ function Ch93() {
   )
 }
 
-// -- Ch94 ----------------------------------------------------------------------
+// — Ch94 ----------------------------------------------------------------------
 function Ch94() {
   const tips = [
     { icon: '??', judul: 'Kenali Gejalanya', teks: 'Hilang motivasi, susah fokus, merasa semua sia-sia  itu sinyal burnout. Jangan diabaikan!', warna: '#e63329', bg: '#fef2f2' },
@@ -166,7 +166,7 @@ function Ch94() {
   )
 }
 
-// -- Ch95 ----------------------------------------------------------------------
+// — Ch95 ----------------------------------------------------------------------
 function Ch95() {
   const makanan = [
     { nama: 'Indomie Goreng', waktu: '2am coding session', alasan: 'Ritual wajib developer  mudah, cepat, murah, dan somehow selalu enak di tengah malam', icon: '??', warna: '#f59e0b' },
@@ -208,7 +208,7 @@ function Ch95() {
   )
 }
 
-// -- Ch96 ----------------------------------------------------------------------
+// — Ch96 ----------------------------------------------------------------------
 function Ch96() {
   const media = [
     { platform: 'GitHub', konten: 'Repository proyek, open source contributions, dan portfolio kode publik', followers: ' (Growing)', warna: '#0a0a0a', icon: '??' },
@@ -250,7 +250,7 @@ function Ch96() {
   )
 }
 
-// -- Ch97 ----------------------------------------------------------------------
+// — Ch97 ----------------------------------------------------------------------
 function Ch97() {
   const film = [
     { judul: 'The Social Network', pelajaran: 'Startup bisa lahir dari kamar kos. Tapi etika dan friendship harus dijaga  jangan sampai sukses mengorbankan hubungan', genre: 'Drama/Tech', warna: '#1a5cff', icon: '??' },
@@ -291,13 +291,13 @@ function Ch97() {
   )
 }
 
-// -- Ch98 ----------------------------------------------------------------------
+// — Ch98 ----------------------------------------------------------------------
 function Ch98() {
   const anime = [
-    { judul: 'Sword Art Online', relevan: 'Virtual reality yang immersive  inspirasi untuk membangun KVT.kom sebagai "kampus virtual" yang engaging', icon: '??', warna: '#1a5cff' },
+    { judul: 'Sword Art Online', relevan: 'Virtual reality yang immersive  inspirasi untuk membangun Gelar.id sebagai "kampus virtual" yang engaging', icon: '??', warna: '#1a5cff' },
     { judul: 'My Hero Academia', relevan: 'Semua orang punya kekuatan unik. Developer dengan skill masing-masing bisa jadi hero di bidangnya sendiri', icon: '??', warna: '#22c55e' },
     { judul: 'Steins;Gate', relevan: 'Time manipulation & butterfly effect dalam coding: satu perubahan kecil di kode bisa berdampak besar ke seluruh sistem', icon: '?', warna: '#e63329' },
-    { judul: 'Overlord', relevan: 'Strategi dan guild management  menginspirasi cara membangun dan mengelola komunitas KVT.kom', icon: '??', warna: '#8b5cf6' },
+    { judul: 'Overlord', relevan: 'Strategi dan guild management  menginspirasi cara membangun dan mengelola komunitas Gelar.id', icon: '??', warna: '#8b5cf6' },
     { judul: 'No Game No Life', relevan: 'Setiap masalah adalah permainan yang bisa dipecahkan dengan logika yang tepat  mindset yang sempurna untuk developer!', icon: '??', warna: '#f59e0b' },
     { judul: 'Dr. Stone', relevan: 'Membangun kembali peradaban dengan sains dan teknologi dari nol. Inspirasi untuk inovasi IoT dari bahan bekas!', icon: '??', warna: '#0891b2' },
   ]
@@ -327,7 +327,7 @@ function Ch98() {
   )
 }
 
-// -- Ch99 ----------------------------------------------------------------------
+// — Ch99 ----------------------------------------------------------------------
 function Ch99() {
   const fail = [
     { kejadian: 'Deploy ke Production Tanpa Testing', dampak: 'Website client down 2 jam. Pelanggan komplain, reputasi taruhan!', pelajaran: 'Selalu test di staging dulu. CI/CD pipeline itu bukan opsional  wajib!', warna: '#e63329' },
@@ -370,7 +370,7 @@ function Ch99() {
   )
 }
 
-// -- Ch100 ---------------------------------------------------------------------
+// — Ch100 ---------------------------------------------------------------------
 function Ch100() {
   return (
     <PanelBab id="ch100" chNum="CHAPTER 100" judul="MILESTONE 100  CHAPTER SPESIAL!" warna="#ffd700" latarBelakang="#fffbeb" gelap>

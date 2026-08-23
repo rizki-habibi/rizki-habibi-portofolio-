@@ -63,7 +63,7 @@ export default function WelcomeToast() {
               </div>
               <div>
                 <div className="font-comic text-sm text-[#0a0a0a] font-bold leading-none">Selamat Datang!</div>
-                <div className="text-[10px] text-[#0a0a0a]/50 font-bold tracking-wider mt-0.5">RIZKI HABIBI -- PORTFOLIO</div>
+                <div className="text-[10px] text-[#0a0a0a]/50 font-bold tracking-wider mt-0.5">RIZKI HABIBI — PORTFOLIO</div>
               </div>
             </div>
 

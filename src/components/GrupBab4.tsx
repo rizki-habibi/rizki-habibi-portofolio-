@@ -44,7 +44,7 @@ function Grid2({ items }: { items: { icon: string; title: string; text: string; 
   )
 }
 
-// Ch46 -- Motivasi Harian
+// Ch46 — Motivasi Harian
 function Ch46() {
   const quotes = [
     { q: '"Jika kamu tidak mencoba, kamu sudah gagal."', src: 'Rizki Habibi' },
@@ -52,13 +52,13 @@ function Ch46() {
     { q: '"Setiap expert adalah pemula yang tidak menyerah."', src: 'Unknown' },
     { q: '"The best time to start was yesterday. The next best time is now."', src: 'Proverb' },
     { q: '"Consistency beats talent every single time."', src: 'Coaching Wisdom' },
-    { q: '"Don\'t wait for perfect conditions -- start now, optimize later."', src: 'Startup Mindset' },
+    { q: '"Don\'t wait for perfect conditions — start now, optimize later."', src: 'Startup Mindset' },
   ]
   return (
     <PanelBab id="ch46" chNum="CHAPTER 46" judul="MOTIVASI HARIAN" warna="#f59e0b" latarBelakang="#fffbeb">
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
-          <div className="speech-bubble inline-block text-sm mb-4">⚡ Motivasi adalah bahan bakar -- isi setiap hari!</div>
+          <div className="speech-bubble inline-block text-sm mb-4">⚡ Motivasi adalah bahan bakar — isi setiap hari!</div>
           <div className="space-y-4">
             {quotes.map((q, i) => (
               <motion.div key={i}
@@ -105,7 +105,7 @@ function Ch46() {
   )
 }
 
-// Ch47 -- Keberhasilan dari Kegagalan
+// Ch47 — Keberhasilan dari Kegagalan
 function Ch47() {
   return (
     <PanelBab id="ch47" chNum="CHAPTER 47" judul="BELAJAR DARI KEGAGALAN" warna="#e63329" latarBelakang="#fef2f2">
@@ -138,10 +138,10 @@ function Ch47() {
             <div className="font-comic text-lg text-comic-black mb-3">🧠 CARA SAYA MENGHADAPI KEGAGALAN</div>
             <div className="space-y-3">
               {[
-                { step: '1. Akui', desc: 'Jangan denial -- akui bahwa sesuatu tidak berjalan sesuai rencana.' },
+                { step: '1. Akui', desc: 'Jangan denial — akui bahwa sesuatu tidak berjalan sesuai rencana.' },
                 { step: '2. Analisis', desc: 'Cari tahu apa yang salah tanpa menyalahkan diri berlebihan.' },
                 { step: '3. Dokumentasi', desc: 'Catat pelajaran yang didapat agar tidak mengulangi kesalahan yang sama.' },
-                { step: '4. Restart', desc: 'Bangkit lebih cepat dari sebelumnya -- dengan bekal pelajaran baru.' },
+                { step: '4. Restart', desc: 'Bangkit lebih cepat dari sebelumnya — dengan bekal pelajaran baru.' },
               ].map((s, i) => (
                 <div key={s.step} className="flex gap-3 p-2 border-l-4" style={{ borderColor: '#e63329' }}>
                   <div className="font-comic text-sm" style={{ color: '#e63329' }}>{s.step}</div>
@@ -160,13 +160,13 @@ function Ch47() {
   )
 }
 
-// Ch48 -- Kolaborasi Global
+// Ch48 — Kolaborasi Global
 function Ch48() {
   return (
-    <PanelBab id="ch48" chNum="CHAPTER 48" judul="KOLABORASI GLOBAL -- EKSPANSI PROYEK KE DUNIA" warna="#0891b2" latarBelakang="#ecfeff">
+    <PanelBab id="ch48" chNum="CHAPTER 48" judul="KOLABORASI GLOBAL — EKSPANSI PROYEK KE DUNIA" warna="#0891b2" latarBelakang="#ecfeff">
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
-          <div className="speech-bubble inline-block text-sm mb-4">🌐 Internet menghapus batas -- dunia adalah canvas kita!</div>
+          <div className="speech-bubble inline-block text-sm mb-4">🌐 Internet menghapus batas — dunia adalah canvas kita!</div>
           <div className="comic-panel p-5 mb-4">
             <div className="font-comic text-lg text-comic-black mb-3">🗺️ MIMPI KOLABORASI GLOBAL</div>
             <p className="text-sm text-comic-black leading-relaxed mb-3">
@@ -214,7 +214,7 @@ function Ch48() {
   )
 }
 
-// Ch49 -- Masa Depan Teknologi
+// Ch49 — Masa Depan Teknologi
 function Ch49() {
   return (
     <PanelBab id="ch49" chNum="CHAPTER 49" judul="MASA DEPAN TEKNOLOGI" warna="#8b5cf6" latarBelakang="#f5f0ff">
@@ -223,8 +223,8 @@ function Ch49() {
           <div className="speech-bubble inline-block text-sm mb-4">🔮 Hari ini sci-fi, besok kenyataan!</div>
           <div className="space-y-3">
             {[
-              { tech: 'Web3 & Blockchain', outlook: 'Transparansi dan desentralisasi sistem digital -- relevan untuk QRIS donasi yang anti-fraud.', icon: '⛓️', color: '#8b5cf6' },
-              { tech: 'Edge Computing', outlook: 'Komputasi di perangkat akhir -- kunci untuk IoT di daerah dengan internet terbatas.', icon: '📡', color: '#1a5cff' },
+              { tech: 'Web3 & Blockchain', outlook: 'Transparansi dan desentralisasi sistem digital — relevan untuk QRIS donasi yang anti-fraud.', icon: '⛓️', color: '#8b5cf6' },
+              { tech: 'Edge Computing', outlook: 'Komputasi di perangkat akhir — kunci untuk IoT di daerah dengan internet terbatas.', icon: '📡', color: '#1a5cff' },
               { tech: 'Augmented Reality', outlook: 'AR bisa mengubah cara orang berinteraksi dengan peta digital dan website desa.', icon: '🥽', color: '#22c55e' },
               { tech: 'Quantum Computing', outlook: 'Revolusi keamanan siber dan optimasi algoritma yang akan mengubah segalanya.', icon: '⚛️', color: '#f59e0b' },
               { tech: 'AI Agent', outlook: 'Agen AI otonom yang bisa menjalankan task kompleks tanpa intervensi manusia.', icon: '🤖', color: '#e63329' },
@@ -270,10 +270,10 @@ function Ch49() {
   )
 }
 
-// Ch50 -- Milestone 50
+// Ch50 — Milestone 50
 function Ch50() {
   return (
-    <PanelBab id="ch50" chNum="CHAPTER 50 -- MILESTONE" judul="SETENGAH JALAN -- REFLEKSI" warna="#ffd700" latarBelakang="#fffbeb" gelap>
+    <PanelBab id="ch50" chNum="CHAPTER 50 — MILESTONE" judul="SETENGAH JALAN — REFLEKSI" warna="#ffd700" latarBelakang="#fffbeb" gelap>
       <div className="grid md:grid-cols-2 gap-8 mb-10">
         <div>
           <motion.div initial={{ opacity: 0, scale: 0.8, rotate: -3 }} whileInView={{ opacity: 1, scale: 1, rotate: 0 }} transition={{ duration: 0.6, type: 'spring' }} viewport={{ once: true }}>
@@ -281,7 +281,7 @@ function Ch50() {
               <div className="font-comic text-6xl text-comic-blue mb-4">50</div>
               <div className="font-comic text-2xl text-comic-black mb-4">CHAPTER DILALUI</div>
               <p className="text-sm text-comic-black/70 leading-relaxed mb-4">
-                Dari Chapter 00 hingga sini, ini bukan sekadar kumpulan halaman -- ini adalah cerita nyata tentang
+                Dari Chapter 00 hingga sini, ini bukan sekadar kumpulan halaman — ini adalah cerita nyata tentang
                 seorang developer muda dari Jember yang bermimpi membangun ekosistem digital Indonesia.
               </p>
               <div className="grid grid-cols-3 gap-3 text-center">
@@ -302,7 +302,7 @@ function Ch50() {
         <div>
           <div className="space-y-3">
             {[
-              { reflection: 'Perjalanan ini baru dimulai', desc: '50 chapter hanya pembuka -- cerita terbaik belum ditulis.', icon: '🌅' },
+              { reflection: 'Perjalanan ini baru dimulai', desc: '50 chapter hanya pembuka — cerita terbaik belum ditulis.', icon: '🌅' },
               { reflection: 'Setiap bab membentuk karakter', desc: 'Baik senang maupun susah, semua membentuk siapa aku sekarang.', icon: '💪' },
               { reflection: 'Konsistensi adalah segalanya', desc: 'Bukan bakat, tapi kedisiplinan harian yang membawa sampai sini.', icon: '🔄' },
               { reflection: 'Terima kasih kepada semua', desc: 'Keluarga, dosen, teman, dan komunitas yang selalu mendukung.', icon: '❤️' },
@@ -324,10 +324,10 @@ function Ch50() {
   )
 }
 
-// Ch51 -- Bersyukur
+// Ch51 — Bersyukur
 function Ch51() {
   return (
-    <PanelBab id="ch51" chNum="CHAPTER 51" judul="RASA SYUKUR -- TERIMA KASIH KEPADA MEREKA" warna="#22c55e" latarBelakang="#f0fdf4">
+    <PanelBab id="ch51" chNum="CHAPTER 51" judul="RASA SYUKUR — TERIMA KASIH KEPADA MEREKA" warna="#22c55e" latarBelakang="#f0fdf4">
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
           <div className="speech-bubble inline-block text-sm mb-4">🙏 Gratitude is the foundation of abundance!</div>
@@ -335,7 +335,7 @@ function Ch51() {
             {[
               { thanks: 'Orang Tua & Keluarga', desc: 'Yang mendukung perjalanan pendidikan dan mimpi-mimpi besar tanpa syarat.', icon: '❤️', color: '#e63329' },
               { thanks: 'Dosen & Institusi', desc: 'Institut Teknologi dan Sains Mandala yang memberi ruang untuk berkembang.', icon: '🎓', color: '#8b5cf6' },
-              { thanks: 'Teman & Rekan', desc: 'Mereka yang ada di sisi baik maupun saat sulit -- support sistem terbaik.', icon: '🤝', color: '#1a5cff' },
+              { thanks: 'Teman & Rekan', desc: 'Mereka yang ada di sisi baik maupun saat sulit — support sistem terbaik.', icon: '🤝', color: '#1a5cff' },
               { thanks: 'Komunitas Digital', desc: 'Developer, kreator, dan inovator yang menginspirasi setiap harinya.', icon: '🌐', color: '#0891b2' },
               { thanks: 'Pengguna & Klien', desc: 'Mereka yang mempercayakan proyek dan memberikan feedback nyata.', icon: '⭐', color: '#f59e0b' },
               { thanks: 'Tuhan YME', desc: 'Atas segala karunia kesehatan, kemampuan, dan kesempatan untuk berkarya.', icon: '🌟', color: '#22c55e' },
@@ -360,7 +360,7 @@ function Ch51() {
                 'Setiap baris yang kamu baca adalah kepercayaan yang saya hargai.',
                 'Semoga perjalanan saya bisa menginspirasi perjalananmu sendiri.',
                 'Kita semua punya cerita unik yang layak untuk diceritakan.',
-                'Dan yang terpenting -- mulailah menulis chapter-mu sendiri hari ini.',
+                'Dan yang terpenting — mulailah menulis chapter-mu sendiri hari ini.',
               ].map((msg, i) => (
                 <div key={i} className="flex items-start gap-2 text-sm text-white font-bold">
                   <span className="text-comic-yellow flex-shrink-0">{i + 1}.</span>{msg}
@@ -378,7 +378,7 @@ function Ch51() {
   )
 }
 
-// Ch52 -- UMKM Digital
+// Ch52 — UMKM Digital
 function Ch52() {
   return (
     <PanelBab id="ch52" chNum="CHAPTER 52" judul="UMKM GOES DIGITAL" warna="#f59e0b" latarBelakang="#fffbeb">
@@ -429,10 +429,10 @@ function Ch52() {
   )
 }
 
-// Ch53 -- Smart City
+// Ch53 — Smart City
 function Ch53() {
   return (
-    <PanelBab id="ch53" chNum="CHAPTER 53" judul="SMART CITY -- KONTRIBUSI NYATA UNTUK JEMBER" warna="#0891b2" latarBelakang="#ecfeff">
+    <PanelBab id="ch53" chNum="CHAPTER 53" judul="SMART CITY — KONTRIBUSI NYATA UNTUK JEMBER" warna="#0891b2" latarBelakang="#ecfeff">
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
           <div className="speech-bubble inline-block text-sm mb-4">🏙️ Kota yang cerdas dimulai dari warga yang sadar teknologi!</div>
@@ -486,17 +486,17 @@ function Ch53() {
   )
 }
 
-// Ch54 -- Keluarga & Inspirasi
+// Ch54 — Keluarga & Inspirasi
 function Ch54() {
   return (
-    <PanelBab id="ch54" chNum="CHAPTER 54" judul="KELUARGA -- FONDASI SEGALANYA" warna="#e63329" latarBelakang="#fef2f2">
+    <PanelBab id="ch54" chNum="CHAPTER 54" judul="KELUARGA — FONDASI SEGALANYA" warna="#e63329" latarBelakang="#fef2f2">
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
           <div className="speech-bubble inline-block text-sm mb-4">❤️ Di balik setiap developer hebat, ada keluarga yang mendukung!</div>
           <div className="comic-panel p-5 mb-4">
             <div className="font-comic text-lg text-comic-black mb-3">🏠 INSPIRASI TERBESAR</div>
             <p className="text-sm text-comic-black leading-relaxed mb-3">
-              Keluarga bukan hanya tempat pulang -- mereka adalah alasan mengapa saya bangun setiap pagi dengan
+              Keluarga bukan hanya tempat pulang — mereka adalah alasan mengapa saya bangun setiap pagi dengan
               semangat. Setiap baris kode yang saya tulis adalah investasi untuk masa depan keluarga.
             </p>
             <div className="space-y-2">
@@ -529,7 +529,7 @@ function Ch54() {
           <div className="comic-panel-dark p-5 mt-4 text-center">
             <div className="text-4xl mb-3">❤️</div>
             <div className="font-comic text-xl text-white mb-2">UNTUK KELUARGAKU</div>
-            <p className="text-sm text-white/70 italic">&ldquo;Semua ini untuk kalian -- yang percaya bahkan sebelum saya percaya pada diri sendiri.&rdquo;</p>
+            <p className="text-sm text-white/70 italic">&ldquo;Semua ini untuk kalian — yang percaya bahkan sebelum saya percaya pada diri sendiri.&rdquo;</p>
           </div>
         </div>
       </div>
@@ -537,10 +537,10 @@ function Ch54() {
   )
 }
 
-// Ch55 -- Refleksi & Identitas
+// Ch55 — Refleksi & Identitas
 function Ch55() {
   return (
-    <PanelBab id="ch55" chNum="CHAPTER 55" judul="IDENTITAS -- SIAPA RIZKI HABIBI?" warna="#8b5cf6" latarBelakang="#f5f0ff">
+    <PanelBab id="ch55" chNum="CHAPTER 55" judul="IDENTITAS — SIAPA RIZKI HABIBI?" warna="#8b5cf6" latarBelakang="#f5f0ff">
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div>
           <div className="speech-bubble inline-block text-sm mb-4">🪞 Mengenal diri sendiri adalah perjalanan seumur hidup!</div>
@@ -551,7 +551,7 @@ function Ch55() {
               { trait: 'Prodi', value: 'Sistem dan Teknologi Informasi', icon: '💻', color: '#22c55e' },
               { trait: 'Passion', value: 'Web Dev, IoT, Digital Innovation', icon: '❤️', color: '#e63329' },
               { trait: 'Visi', value: 'Membangun ekosistem digital inklusif Indonesia', icon: '🌟', color: '#f59e0b' },
-              { trait: 'MBTI', value: 'INTJ -- The Architect', icon: '🧠', color: '#0891b2' },
+              { trait: 'MBTI', value: 'INTJ — The Architect', icon: '🧠', color: '#0891b2' },
               { trait: 'Motto', value: '"Code with purpose, build with heart."', icon: '💡', color: '#8b5cf6' },
             ].map((t, i) => (
               <motion.div key={t.trait} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.08 }} viewport={{ once: true }}
@@ -585,8 +585,8 @@ function Ch55() {
           <div className="comic-panel-dark p-5 text-center">
             <div className="font-comic text-2xl text-comic-yellow mb-2">🎭 THE FINAL IDENTITY</div>
             <p className="font-bold text-white leading-relaxed">
-              Saya adalah <span className="text-comic-yellow">Rizki Habibi</span> -- web developer, innovator,
-              calon founder KVT.kom, dan seseorang yang percaya bahwa{' '}
+              Saya adalah <span className="text-comic-yellow">Rizki Habibi</span> — web developer, innovator,
+              calon founder Gelar.id, dan seseorang yang percaya bahwa{' '}
               <span className="text-comic-yellow">teknologi + empati = perubahan nyata</span>.
             </p>
           </div>

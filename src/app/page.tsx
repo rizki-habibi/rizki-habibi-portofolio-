@@ -41,6 +41,7 @@ import ChapterBrowser from '@/components/ChapterBrowser'
 import LayerGlobal from '@/components/LayerGlobal'
 import JasaGratis from '@/components/JasaGratis'
 import KepribadianKomik from '@/components/KepribadianKomik'
+import SertifikatDigital from '@/components/SertifikatDigital'
 
 export default function Home() {
   return (
@@ -161,6 +162,10 @@ export default function Home() {
 
       {/* JASA GRATIS — curhat, website vtuber/instansi, kerjasama komunitas */}
       <JasaGratis />
+      <div className="comic-divider" />
+
+      {/* SERTIFIKAT DIGITAL — ambil sertifikat gratis, data terkirim ke Gmail */}
+      <SertifikatDigital />
       <div className="comic-divider" />
 
       {/* CHAPTER BROWSER — 191 chapter, klik untuk buka halaman tersendiri */}

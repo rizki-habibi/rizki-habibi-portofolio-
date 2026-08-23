@@ -41,3 +41,7 @@ build_output.txt
 build_result.txt
 src/scripts/
 *.py
+
+# Environment variables
+.env.local
+.env*.local

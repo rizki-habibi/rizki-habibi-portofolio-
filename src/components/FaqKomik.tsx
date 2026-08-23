@@ -77,6 +77,33 @@ const faqData = [
     bg: '#ecfeff',
     kategori: 'PROYEK',
   },
+  {
+    id: 9,
+    pertanyaan: 'Ada jasa gratis apa saja yang kamu tawarkan?',
+    jawaban: 'Saya membuka 3 jasa gratis: (1) Curhat & Konsultasi — chat bebas topik via WA/Discord/Telegram. (2) Website Gratis untuk Vtuber & Instansi Berdampak — personal Vtuber, komunitas, LSM, atau sekolah bisa dapat website gratis termasuk subdomain gelar.id. (3) Kerjasama Antar Komunitas — kolaborasi event, proyek digital, atau diskusi grup bersama. Syaratnya cuma satu: bagikan portofolio ini ke minimal 3 teman!',
+    icon: '🎁',
+    warna: '#8b5cf6',
+    bg: '#f5f0ff',
+    kategori: 'LAYANAN',
+  },
+  {
+    id: 10,
+    pertanyaan: 'Aku Vtuber, bisa dapat website gratis?',
+    jawaban: 'Bisa banget! Saya terbuka untuk membantu Vtuber (baik yang sudah debut maupun yang mau debut) memiliki website personal — portfolio, bio, sosial media link, jadwal stream, dan galeri. Desain bisa disesuaikan dengan karakter Vtubermu. Bisa juga dapat subdomain gelar.id secara gratis. Syaratnya: bagikan portofolio ini ke teman-temanmu, lalu hubungi saya.',
+    icon: '🎭',
+    warna: '#e1306c',
+    bg: '#fff0f5',
+    kategori: 'LAYANAN',
+  },
+  {
+    id: 11,
+    pertanyaan: 'Di mana saya bisa lihat semua link / kontak Rizki?',
+    jawaban: 'Semua link lengkap ada di berbagi-tautan-rizki.vercel.app — mirip seperti Linktree. Di sana ada GitHub, Instagram, LinkedIn, WhatsApp, Email, dan link-link lainnya dalam satu halaman yang rapi.',
+    icon: '🔗',
+    warna: '#f59e0b',
+    bg: '#fffbeb',
+    kategori: 'KONTAK',
+  },
 ]
 
 const kategoriList = ['SEMUA', 'LAYANAN', 'PROYEK', 'SKILL', 'KOLABORASI', 'KVT', 'KONTAK', 'SERTIFIKASI']
@@ -95,7 +122,7 @@ export default function FaqComic() {
       <div className="max-w-4xl mx-auto relative z-10">
 
         {/* Header */}
-        <HeaderBab nomor="?" judul="FAQ — PERTANYAAN UMUM" warna="#f59e0b" subtitle="🤔 Semua pertanyaan umum terjawab di sini!" />
+        <HeaderBab nomor="FAQ" judul="FAQ — PERTANYAAN UMUM" warna="#f59e0b" subtitle="🤔 Semua pertanyaan umum terjawab di sini!" />
 
         {/* Filter kategori */}
         <motion.div

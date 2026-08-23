@@ -45,7 +45,7 @@ export default function ChapterHeader({
             letterSpacing: '0.05em',
           }}
         >
-          {nomor.padStart(2, '0')}
+          {isNaN(Number(nomor)) ? nomor : nomor.padStart(2, '0')}
         </div>
 
         {/* Label CHAPTER XX */}
@@ -61,7 +61,7 @@ export default function ChapterHeader({
             textTransform: 'uppercase',
           }}
         >
-          CHAPTER {nomor.padStart(2, '0')}
+          CHAPTER {isNaN(Number(nomor)) ? nomor : nomor.padStart(2, '0')}
         </div>
       </div>
 

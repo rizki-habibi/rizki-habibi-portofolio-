@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FiMail, FiPhone, FiGithub, FiSend } from 'react-icons/fi'
+import { FiMail, FiPhone, FiGithub, FiSend, FiLink } from 'react-icons/fi'
 import { SiInstagram, SiLinkedin, SiWhatsapp } from 'react-icons/si'
 
 const socials = [
@@ -10,6 +10,7 @@ const socials = [
   { icon: SiInstagram, label: 'Instagram', value: '@rizkihabibi', href: 'https://instagram.com/rizkihabibi', color: '#e1306c', bg: '#fff0f5' },
   { icon: SiWhatsapp, label: 'WhatsApp', value: '+62 882-009-725-053', href: 'https://wa.me/62882009725053', color: '#25d366', bg: '#f0fff4' },
   { icon: FiMail, label: 'Email', value: 'rizkihub7@gmail.com', href: 'mailto:rizkihub7@gmail.com', color: '#1a5cff', bg: '#e8f0ff' },
+  { icon: FiLink, label: 'Semua Link', value: 'berbagi-tautan-rizki.vercel.app', href: 'https://berbagi-tautan-rizki.vercel.app', color: '#f59e0b', bg: '#fffbeb' },
 ]
 
 export default function ContactSection() {

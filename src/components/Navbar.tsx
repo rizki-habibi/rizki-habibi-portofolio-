@@ -247,6 +247,7 @@ export default function Navbar() {
   const [storyOpen, setStoryOpen] = useState(false)
   const [chapterDropOpen, setChapterDropOpen] = useState(false)
   const [darkMode, setDarkMode] = useState(false)
+  const [lang, setLang] = useState<'id' | 'en'>('id')
   const [musicAktif, setMusicAktif] = useState(false)
   const [laguIdx, setLaguIdx] = useState(0)
   const [cariChapter, setCariChapter] = useState('')
@@ -266,6 +267,9 @@ export default function Navbar() {
       document.documentElement.classList.add('dark-mode')
       document.body.classList.add('dark-mode')
     }
+    // Bahasa persistence
+    const savedLang = localStorage.getItem('lang') as 'id' | 'en' | null
+    if (savedLang) setLang(savedLang)
   }, [])
 
   // Tutup dropdown saat klik luar
@@ -303,6 +307,14 @@ export default function Navbar() {
       document.documentElement.classList.remove('dark-mode')
       document.body.classList.remove('dark-mode')
     }
+  }
+
+  const toggleLang = () => {
+    const next: 'id' | 'en' = lang === 'id' ? 'en' : 'id'
+    setLang(next)
+    localStorage.setItem('lang', next)
+    // Broadcast ke seluruh komponen yang listen
+    window.dispatchEvent(new CustomEvent('lang-change', { detail: next }))
   }
 
   const chapterTersaring = semuaChapter.filter(c =>
@@ -496,6 +508,24 @@ export default function Navbar() {
                 <kbd className="font-mono text-[9px] text-[#0a0a0a]/50 hidden lg:block">⌘K</kbd>
               </motion.button>
 
+              {/* TOGGLE BAHASA ID/EN */}
+              <motion.button
+                onClick={toggleLang}
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="hidden md:flex items-center justify-center px-2 py-2 font-comic text-xs"
+                style={{
+                  background: lang === 'en' ? '#1a5cff' : '#f0f0eb',
+                  color: lang === 'en' ? 'white' : '#0a0a0a',
+                  border: '2px solid #0a0a0a',
+                  boxShadow: '2px 2px 0 #0a0a0a',
+                  minWidth: 36,
+                }}
+                title={lang === 'id' ? 'Switch to English' : 'Ganti ke Indonesia'}
+              >
+                {lang === 'id' ? 'ID' : 'EN'}
+              </motion.button>
+
               {/* 5. DARK MODE */}
               <motion.button
                 onClick={toggleDark}
@@ -623,6 +653,19 @@ export default function Navbar() {
                   >
                     {darkMode ? <FiSun className="w-3.5 h-3.5" /> : <FiMoon className="w-3.5 h-3.5" />}
                     {darkMode ? 'TERANG' : 'GELAP'}
+                  </button>
+                  {/* Toggle bahasa di mobile */}
+                  <button
+                    onClick={toggleLang}
+                    className="flex items-center justify-center gap-1.5 py-2 font-comic text-xs col-span-2"
+                    style={{
+                      background: lang === 'en' ? '#1a5cff' : '#f0f0eb',
+                      color: lang === 'en' ? 'white' : '#0a0a0a',
+                      border: '2px solid #0a0a0a',
+                      boxShadow: '2px 2px 0 #0a0a0a',
+                    }}
+                  >
+                    🌐 {lang === 'id' ? 'SWITCH TO ENGLISH' : 'GANTI KE INDONESIA'}
                   </button>
                 </div>
 

@@ -42,6 +42,7 @@ import LayerGlobal from '@/components/LayerGlobal'
 import JasaGratis from '@/components/JasaGratis'
 import KepribadianKomik from '@/components/KepribadianKomik'
 import SertifikatDigital from '@/components/SertifikatDigital'
+import BannerGame from '@/components/BannerGame'
 
 export default function Home() {
   return (
@@ -59,6 +60,10 @@ export default function Home() {
 
       {/* CHAPTER 00 — THE ORIGIN */}
       <Hero />
+      <div className="comic-divider" />
+
+      {/* BANNER GAME 3D — klik untuk masuk game */}
+      <BannerGame />
       <div className="comic-divider" />
 
       {/* TECH MARQUEE */}

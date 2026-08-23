@@ -9,16 +9,16 @@ const domainKVT = [
   {
     domain: 'gelar.id',
     level: 'Portal Utama',
-    desc: 'Domain induk ekosistem KVT — pusat seluruh platform digital KVT.',
+    desc: 'Domain induk ekosistem Gelar.id — pusat seluruh platform digital KVT.',
     color: '#1a5cff',
     bg: '#e8f0ff',
     icon: '🌐',
     status: 'Belum Dipublish',
   },
   {
-    domain: 'kvt1.kom',
+    domain: 'gelar.id/s1',
     level: 'S1 — Sarjana KVT',
-    desc: 'Program Studi S1 Teknologi & Inovasi Digital KVT. Gelar: S.KVT (Sarjana KVT).',
+    desc: 'Program Studi S1 Teknologi & Inovasi Digital. Gelar: S.KVT (Sarjana KVT).',
     color: '#22c55e',
     bg: '#f0fdf4',
     icon: '🎓',
@@ -26,9 +26,9 @@ const domainKVT = [
     gelar: 'S.KVT',
   },
   {
-    domain: 'kvt2.kom',
+    domain: 'gelar.id/s2',
     level: 'S2 — Magister KVT',
-    desc: 'Program Magister bidang Teknologi Digital & Inovasi KVT. Gelar: M.KVT (Magister KVT).',
+    desc: 'Program Magister bidang Teknologi Digital & Inovasi. Gelar: M.KVT (Magister KVT).',
     color: '#f59e0b',
     bg: '#fffbeb',
     icon: '📚',
@@ -36,9 +36,9 @@ const domainKVT = [
     gelar: 'M.KVT',
   },
   {
-    domain: 'kvt3.kom',
+    domain: 'gelar.id/s3',
     level: 'S3 — Doktor KVT',
-    desc: 'Program Doktoral riset & pengembangan teknologi KVT. Gelar: Dr.KVT (Doktor KVT).',
+    desc: 'Program Doktoral riset & pengembangan teknologi. Gelar: Dr.KVT (Doktor KVT).',
     color: '#e63329',
     bg: '#fef2f2',
     icon: '🔬',
@@ -124,7 +124,7 @@ export default function VisiKVT() {
                 viewport={{ once: true }}
                 className="text-sm text-comic-black leading-relaxed font-medium"
               >
-                Saya bermimpi untuk membangun <strong>kampus digital pertama berbasis Vtuber</strong> di Indonesia --
+                Saya bermimpi untuk membangun <strong>kampus digital pertama berbasis Vtuber</strong> di Indonesia —
                 sebuah platform pendidikan yang menggabungkan teknologi virtual, konten kreatif, dan komunitas digital
                 dalam satu ekosistem pembelajaran yang menarik dan inovatif.
               </motion.p>
@@ -180,7 +180,7 @@ export default function VisiKVT() {
                 viewport={{ once: true }}
                 className="font-comic text-lg text-comic-black mb-4"
               >
-                🌐 EKOSISTEM DOMAIN KVT
+                🌐 EKOSISTEM DOMAIN GELAR.ID
               </motion.div>
               {domainKVT.map((d, i) => (
                 <motion.div
@@ -237,7 +237,7 @@ export default function VisiKVT() {
               viewport={{ once: true, amount: 0.3 }}
               className="font-comic text-2xl text-comic-black"
             >
-              🎓 SISTEM GELAR — MANDALA INSTITUTE  KVT
+              🎓 SISTEM GELAR — MANDALA INSTITUTE GELAR.ID
             </motion.div>
             <motion.p
               initial={{ opacity: 0, x: -15 }}

@@ -54,7 +54,7 @@ function Ch56() {
     { title: 'Website Desa Digital', desc: 'Template open source gratis untuk 75.000+ desa Indonesia agar punya kehadiran digital layak.', icon: '🏘️', color: '#22c55e', year: '2027+' },
     { title: 'Global Map Platform', desc: 'Peta interaktif yang menghubungkan data sosial-ekonomi wilayah untuk pengambilan keputusan.', icon: '🗺️', color: '#0891b2', year: '2028' },
     { title: 'Open Source Library', desc: 'Kumpulan komponen dan starter kit Laravel/Next.js yang bisa digunakan komunitas developer Indonesia.', icon: '📦', color: '#f59e0b', year: 'Ongoing' },
-    { title: 'KVT Institute S1-S3', desc: 'Lembaga pendidikan digital formal dengan domain kvt1.kom, kvt2.kom, kvt3.kom untuk gelar S.KVT, M.KVT, Dr.KVT.', icon: '🎓', color: '#e63329', year: '2030+' },
+    { title: 'Gelar.id Institute S1–S3', desc: 'Lembaga pendidikan digital formal dengan program S1, S2, S3 untuk gelar S.KVT, M.KVT, Dr.KVT di bawah ekosistem Gelar.id.', icon: '🎓', color: '#e63329', year: '2030+' },
   ]
   return (
     <PanelBab id="ch56" chNum="CHAPTER 56" judul="WARISAN DIGITAL UNTUK GENERASI MENDATANG" warna="#8b5cf6" latarBelakang="#f5f0ff">

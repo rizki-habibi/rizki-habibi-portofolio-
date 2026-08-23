@@ -10,7 +10,7 @@ const nextChapters = [
   { icon: '💼', title: 'Berkarir Profesional', desc: 'Masuk dunia kerja sebagai Web Developer atau System Analyst full-time.', color: '#22c55e', status: 'PLANNED' },
   { icon: '🏫', title: 'Bangun Ekosistem KVT', desc: 'Mengembangkan Gelar.id menjadi ekosistem pendidikan digital yang membuka lapangan kerja.', color: '#f59e0b', status: 'VISION' },
   { icon: '👥', title: 'Perluas Komunitas', desc: 'Membangun komunitas kreator digital Indonesia yang solid dan berdampak luas.', color: '#e63329', status: 'VISION' },
-  { icon: '🎓', title: 'S2 → S3 KVT', desc: 'Mengembangkan sistem pendidikan KVT dari gelar S1 hingga S3 dengan domain kvt1-3.kom.', color: '#0891b2', status: 'FUTURE' },
+  { icon: '🎓', title: 'S2 → S3 via Gelar.id', desc: 'Mengembangkan sistem pendidikan Gelar.id dari program S1 hingga S3 dalam ekosistem digital.', color: '#0891b2', status: 'FUTURE' },
 ]
 
 const statusColor: Record<string, string> = {

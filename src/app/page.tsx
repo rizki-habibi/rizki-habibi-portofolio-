@@ -39,6 +39,7 @@ import FaqKomik from '@/components/FaqKomik'
 import ProgressKeahlian from '@/components/ProgressKeahlian'
 import ChapterBrowser from '@/components/ChapterBrowser'
 import LayerGlobal from '@/components/LayerGlobal'
+import JasaGratis from '@/components/JasaGratis'
 
 export default function Home() {
   return (
@@ -151,6 +152,10 @@ export default function Home() {
 
       {/* CHAPTER 15 — WHAT COMES NEXT */}
       <EpilogKomik />
+      <div className="comic-divider" />
+
+      {/* JASA GRATIS — curhat, website vtuber/instansi, kerjasama komunitas */}
+      <JasaGratis />
       <div className="comic-divider" />
 
       {/* CHAPTER BROWSER — 191 chapter, klik untuk buka halaman tersendiri */}

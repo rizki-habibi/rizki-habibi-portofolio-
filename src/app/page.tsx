@@ -41,8 +41,11 @@ import ChapterBrowser from '@/components/ChapterBrowser'
 import LayerGlobal from '@/components/LayerGlobal'
 import JasaGratis from '@/components/JasaGratis'
 import KepribadianKomik from '@/components/KepribadianKomik'
-import SertifikatDigital from '@/components/SertifikatDigital'
 import BannerGame from '@/components/BannerGame'
+import dynamic from 'next/dynamic'
+
+// SertifikatDigital pakai Canvas API — harus client-only
+const SertifikatDigital = dynamic(() => import('@/components/SertifikatDigital'), { ssr: false })
 
 export default function Home() {
   return (

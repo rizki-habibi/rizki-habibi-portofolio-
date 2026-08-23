@@ -336,9 +336,13 @@ export default function JasaGratis() {
               <SiInstagram className="w-3.5 h-3.5" /> Share IG
             </a>
             <button
-              onClick={() => {
-                navigator.clipboard.writeText('https://rizki-habibi-portofolio.vercel.app')
-                alert(lang === 'id' ? 'Link disalin! 📋' : 'Link copied! 📋')
+              onClick={async () => {
+                try {
+                  await navigator.clipboard.writeText('https://rizki-habibi-portofolio.vercel.app')
+                  alert(lang === 'id' ? 'Link disalin! 📋' : 'Link copied! 📋')
+                } catch {
+                  alert('https://rizki-habibi-portofolio.vercel.app')
+                }
               }}
               className="flex items-center gap-1.5 font-bold text-xs px-3 py-2 text-[#0a0a0a] transition-opacity hover:opacity-80"
               style={{ background: '#ffd700', border: '2px solid #0a0a0a', boxShadow: '2px 2px 0 #0a0a0a' }}

@@ -5,15 +5,15 @@ import dynamic from 'next/dynamic'
 // Semua GrupBab di-dynamic import di sini (Client Component)
 // sehingga ssr:false tidak melanggar aturan Server Component
 const grupBabMap: Record<number, React.ComponentType> = {
-  1:  dynamic(() => import('@/components/GrupBab1'),  { ssr: false }),
-  2:  dynamic(() => import('@/components/GrupBab2'),  { ssr: false }),
-  3:  dynamic(() => import('@/components/GrupBab3'),  { ssr: false }),
-  4:  dynamic(() => import('@/components/GrupBab4'),  { ssr: false }),
-  5:  dynamic(() => import('@/components/GrupBab5'),  { ssr: false }),
-  6:  dynamic(() => import('@/components/GrupBab6'),  { ssr: false }),
-  7:  dynamic(() => import('@/components/GrupBab7'),  { ssr: false }),
-  8:  dynamic(() => import('@/components/GrupBab8'),  { ssr: false }),
-  9:  dynamic(() => import('@/components/GrupBab9'),  { ssr: false }),
+  1: dynamic(() => import('@/components/GrupBab1'), { ssr: false }),
+  2: dynamic(() => import('@/components/GrupBab2'), { ssr: false }),
+  3: dynamic(() => import('@/components/GrupBab3'), { ssr: false }),
+  4: dynamic(() => import('@/components/GrupBab4'), { ssr: false }),
+  5: dynamic(() => import('@/components/GrupBab5'), { ssr: false }),
+  6: dynamic(() => import('@/components/GrupBab6'), { ssr: false }),
+  7: dynamic(() => import('@/components/GrupBab7'), { ssr: false }),
+  8: dynamic(() => import('@/components/GrupBab8'), { ssr: false }),
+  9: dynamic(() => import('@/components/GrupBab9'), { ssr: false }),
   10: dynamic(() => import('@/components/GrupBab10'), { ssr: false }),
   11: dynamic(() => import('@/components/GrupBab11'), { ssr: false }),
   12: dynamic(() => import('@/components/GrupBab12'), { ssr: false }),
@@ -35,6 +35,7 @@ const grupBabMap: Record<number, React.ComponentType> = {
   28: dynamic(() => import('@/components/GrupBab28'), { ssr: false }),
   29: dynamic(() => import('@/components/GrupBab29'), { ssr: false }),
   30: dynamic(() => import('@/components/GrupBab30'), { ssr: false }),
+  31: dynamic(() => import('@/components/GrupBab31'), { ssr: false }),
 }
 
 export default function ChapterRenderer({ grupBab }: { grupBab: number }) {

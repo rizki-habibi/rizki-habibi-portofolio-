@@ -42,6 +42,8 @@ import LayerGlobal from '@/components/LayerGlobal'
 import JasaGratis from '@/components/JasaGratis'
 import KepribadianKomik from '@/components/KepribadianKomik'
 import BannerGame from '@/components/BannerGame'
+import Prediksi2030 from '@/components/Prediksi2030'
+import TawaranLowongan from '@/components/TawaranLowongan'
 import dynamic from 'next/dynamic'
 
 // SertifikatDigital pakai Canvas API — harus client-only
@@ -168,15 +170,23 @@ export default function Home() {
       <EpilogKomik />
       <div className="comic-divider" />
 
-      {/* JASA GRATIS — curhat, website vtuber/instansi, kerjasama komunitas */}
+      {/* JASA GRATIS */}
       <JasaGratis />
       <div className="comic-divider" />
 
-      {/* SERTIFIKAT DIGITAL — ambil sertifikat gratis, data terkirim ke Gmail */}
+      {/* TAWARAN LOWONGAN — kuliah gratis, kerja, kolaborasi */}
+      <TawaranLowongan />
+      <div className="comic-divider" />
+
+      {/* PREDIKSI 2030 */}
+      <Prediksi2030 />
+      <div className="comic-divider" />
+
+      {/* SERTIFIKAT DIGITAL */}
       <SertifikatDigital />
       <div className="comic-divider" />
 
-      {/* CHAPTER BROWSER — 191 chapter, klik untuk buka halaman tersendiri */}
+      {/* CHAPTER BROWSER — 320 chapter */}
       <ChapterBrowser />
 
       {/* CV */}

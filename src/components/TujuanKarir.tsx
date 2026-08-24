@@ -88,7 +88,7 @@ export default function TujuanKarir() {
   const pesanWA = `Halo Rizki! Saya ingin menawarkan kesempatan [kerja/kuliah] untuk kamu.\n\nDetail:\n- Nama: ...\n- Institusi/Perusahaan: ...\n- Tawaran: ...\n- Kontak lanjut: ...`
 
   return (
-    <section id="tujuan-karir" className="py-16 px-3 sm:px-4 relative overflow-hidden" style={{ background: '#0a0a0a' }}>
+    <section id="tujuan-detail" className="py-16 px-3 sm:px-4 relative overflow-hidden" style={{ background: '#0a0a0a' }}>
       {/* Halftone */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.04]"
         style={{ backgroundImage: 'radial-gradient(circle,#fff 1.5px,transparent 1.5px)', backgroundSize: '14px 14px' }} />

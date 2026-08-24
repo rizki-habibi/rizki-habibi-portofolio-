@@ -42,6 +42,7 @@ import LayerGlobal from '@/components/LayerGlobal'
 import JasaGratis from '@/components/JasaGratis'
 import KepribadianKomik from '@/components/KepribadianKomik'
 import TujuanKarir from '@/components/TujuanKarir'
+import BannerTujuan from '@/components/BannerTujuan'
 import Prediksi2030 from '@/components/Prediksi2030'
 import TawaranLowongan from '@/components/TawaranLowongan'
 import dynamic from 'next/dynamic'
@@ -67,7 +68,11 @@ export default function Home() {
       <Hero />
       <div className="comic-divider" />
 
-      {/* TUJUAN KARIR — kerja remote & kuliah gratis */}
+      {/* BANNER TUJUAN — kerja remote & kuliah gratis — terlihat jelas */}
+      <BannerTujuan />
+      <div className="comic-divider" />
+
+      {/* TUJUAN KARIR — detail lengkap */}
       <TujuanKarir />
       <div className="comic-divider" />
 

@@ -38,7 +38,7 @@ import TesimoniKomik from '@/components/TesimoniKomik'
 import FaqKomik from '@/components/FaqKomik'
 import ProgressKeahlian from '@/components/ProgressKeahlian'
 import ChapterBrowser from '@/components/ChapterBrowser'
-import LayerGlobal from '@/components/LayerGlobal'
+import LayerGlobal, { SertifikatDigital } from '@/components/LayerGlobal'
 import JasaGratis from '@/components/JasaGratis'
 import KepribadianKomik from '@/components/KepribadianKomik'
 import TujuanKarir from '@/components/TujuanKarir'
@@ -46,10 +46,8 @@ import BannerTujuan from '@/components/BannerTujuan'
 import Prediksi2030 from '@/components/Prediksi2030'
 import TawaranLowongan from '@/components/TawaranLowongan'
 import PanelFitur from '@/components/PanelFitur'
-import dynamic from 'next/dynamic'
 
-// SertifikatDigital pakai Canvas API — harus client-only
-const SertifikatDigital = dynamic(() => import('@/components/SertifikatDigital'), { ssr: false })
+
 
 export default function Home() {
   return (

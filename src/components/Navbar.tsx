@@ -6,15 +6,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { FiGithub, FiMenu, FiX, FiBookOpen, FiSearch, FiMusic, FiList, FiChevronDown, FiMoon, FiSun, FiCommand, FiMail } from 'react-icons/fi'
 import { SiInstagram, SiLinkedin, SiWhatsapp } from 'react-icons/si'
 import BukuCerita from '@/components/BukuCerita'
+import { useLang, namaLang, type Lang } from '@/context/LangContext'
 
-const tautanNav = [
-  { name: 'BERANDA', href: '#home' },
-  { name: 'TENTANG', href: '#cerita' },
-  { name: 'KEAHLIAN', href: '#skills' },
-  { name: 'PROYEK', href: '#projects' },
-  { name: 'PERJALANAN', href: '#timeline' },
-  { name: 'KONTAK', href: '#contact' },
-]
+// Nav links diambil dari context lang — lihat fungsi getNavLinks() di dalam komponen
+const NAV_HREFS = ['#home', '#cerita', '#skills', '#projects', '#timeline', '#contact']
 
 // Semua chapter untuk dropdown navigasi (00 - 120)
 const semuaChapter = [
@@ -247,11 +242,13 @@ export default function Navbar() {
   const [storyOpen, setStoryOpen] = useState(false)
   const [chapterDropOpen, setChapterDropOpen] = useState(false)
   const [darkMode, setDarkMode] = useState(false)
-  const [lang, setLang] = useState<'id' | 'en'>('id')
+  const [langDropOpen, setLangDropOpen] = useState(false)
+  const { lang, setLang, t } = useLang()
   const [musicAktif, setMusicAktif] = useState(false)
   const [laguIdx, setLaguIdx] = useState(0)
   const [cariChapter, setCariChapter] = useState('')
   const dropRef = useRef<HTMLDivElement>(null)
+  const langRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const h = () => setIsScrolled(window.scrollY > 40)
@@ -268,8 +265,8 @@ export default function Navbar() {
       document.body.classList.add('dark-mode')
     }
     // Bahasa persistence
-    const savedLang = localStorage.getItem('lang') as 'id' | 'en' | null
-    if (savedLang) setLang(savedLang)
+    const savedLang = localStorage.getItem('lang') as Lang | null
+    if (savedLang) { /* handled by context */ }
   }, [])
 
   // Tutup dropdown saat klik luar
@@ -309,13 +306,17 @@ export default function Navbar() {
     }
   }
 
-  const toggleLang = () => {
-    const next: 'id' | 'en' = lang === 'id' ? 'en' : 'id'
-    setLang(next)
-    localStorage.setItem('lang', next)
-    // Broadcast ke seluruh komponen yang listen
-    window.dispatchEvent(new CustomEvent('lang-change', { detail: next }))
-  }
+  const toggleLang = () => setLangDropOpen(v => !v)
+
+  // Nav links dari terjemahan
+  const tautanNav = [
+    { name: t.beranda.toUpperCase(), href: '#home' },
+    { name: t.tentang.toUpperCase(), href: '#cerita' },
+    { name: t.keahlian.toUpperCase(), href: '#skills' },
+    { name: t.proyek.toUpperCase(), href: '#projects' },
+    { name: t.perjalanan.toUpperCase(), href: '#timeline' },
+    { name: t.kontak.toUpperCase(), href: '#contact' },
+  ]
 
   const chapterTersaring = semuaChapter.filter(c =>
     cariChapter === '' ||
@@ -508,23 +509,48 @@ export default function Navbar() {
                 <kbd className="font-mono text-[9px] text-[#0a0a0a]/50 hidden lg:block">⌘K</kbd>
               </motion.button>
 
-              {/* TOGGLE BAHASA ID/EN */}
-              <motion.button
-                onClick={toggleLang}
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="hidden md:flex items-center justify-center px-2 py-2 font-comic text-xs"
-                style={{
-                  background: lang === 'en' ? '#1a5cff' : '#f0f0eb',
-                  color: lang === 'en' ? 'white' : '#0a0a0a',
-                  border: '2px solid #0a0a0a',
-                  boxShadow: '2px 2px 0 #0a0a0a',
-                  minWidth: 36,
-                }}
-                title={lang === 'id' ? 'Switch to English' : 'Ganti ke Indonesia'}
-              >
-                {lang === 'id' ? 'ID' : 'EN'}
-              </motion.button>
+              {/* TOGGLE BAHASA — Dropdown semua bahasa */}
+              <div ref={langRef} className="relative hidden md:block">
+                <motion.button
+                  onClick={toggleLang}
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="flex items-center justify-center px-2 py-2 font-comic text-xs"
+                  style={{
+                    background: lang !== 'id' ? '#1a5cff' : '#f0f0eb',
+                    color: lang !== 'id' ? 'white' : '#0a0a0a',
+                    border: '2px solid #0a0a0a',
+                    boxShadow: '2px 2px 0 #0a0a0a',
+                    minWidth: 44,
+                  }}
+                  title="Ganti Bahasa"
+                >
+                  {namaLang[lang]}
+                </motion.button>
+                <AnimatePresence>
+                  {langDropOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -6, scaleY: 0.8 }}
+                      animate={{ opacity: 1, y: 0, scaleY: 1 }}
+                      exit={{ opacity: 0, y: -6, scaleY: 0.8 }}
+                      transition={{ duration: 0.15 }}
+                      className="absolute right-0 top-full mt-1 z-50"
+                      style={{ background: '#fafaf7', border: '2px solid #0a0a0a', boxShadow: '4px 4px 0 #0a0a0a', minWidth: 100 }}
+                    >
+                      {(Object.keys(namaLang) as Lang[]).map(l => (
+                        <button
+                          key={l}
+                          onClick={() => { setLang(l); setLangDropOpen(false) }}
+                          className="w-full font-comic text-xs px-3 py-2 text-left hover:bg-[#ffd700] transition-colors"
+                          style={{ fontWeight: l === lang ? 700 : 400, background: l === lang ? '#ffd70033' : 'transparent' }}
+                        >
+                          {namaLang[l]}
+                        </button>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
 
               {/* 5. DARK MODE */}
               <motion.button
@@ -667,19 +693,24 @@ export default function Navbar() {
                     {darkMode ? <FiSun className="w-3.5 h-3.5" /> : <FiMoon className="w-3.5 h-3.5" />}
                     {darkMode ? 'TERANG' : 'GELAP'}
                   </button>
-                  {/* Toggle bahasa di mobile */}
-                  <button
-                    onClick={toggleLang}
-                    className="flex items-center justify-center gap-1.5 py-2 font-comic text-xs col-span-2"
-                    style={{
-                      background: lang === 'en' ? '#1a5cff' : '#f0f0eb',
-                      color: lang === 'en' ? 'white' : '#0a0a0a',
-                      border: '2px solid #0a0a0a',
-                      boxShadow: '2px 2px 0 #0a0a0a',
-                    }}
-                  >
-                    🌐 {lang === 'id' ? 'SWITCH TO ENGLISH' : 'GANTI KE INDONESIA'}
-                  </button>
+                  {/* Toggle bahasa di mobile — semua bahasa */}
+                  <div className="col-span-2 grid grid-cols-5 gap-1">
+                    {(Object.keys(namaLang) as Lang[]).map(l => (
+                      <button
+                        key={l}
+                        onClick={() => { setLang(l); setIsMobileOpen(false) }}
+                        className="font-comic text-[10px] py-2 text-center"
+                        style={{
+                          background: l === lang ? '#1a5cff' : '#f0f0eb',
+                          color: l === lang ? 'white' : '#0a0a0a',
+                          border: `2px solid ${l === lang ? '#1a5cff' : '#0a0a0a'}`,
+                          fontWeight: l === lang ? 700 : 400,
+                        }}
+                      >
+                        {namaLang[l]}
+                      </button>
+                    ))}
+                  </div>
                 </div>
 
                 {/* Chapter navigation mobile */}

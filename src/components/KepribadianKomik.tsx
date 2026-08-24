@@ -69,6 +69,14 @@ const kemampuanUnik = [
     bg: '#e8f0ff',
     tag: 'ASTRONOMI',
   },
+  {
+    icon: '🎯',
+    judul: 'Fokus Tanpa Distraksi',
+    desc: 'Kalau sudah masuk zona, sulit diinterupsi — dan itu bagus untuk produktivitas. Satu proyek selesai lebih baik dari sepuluh yang setengah jalan. "Done is better than perfect" adalah prinsip kerja sehari-hari.',
+    warna: '#ffd700',
+    bg: '#fffbeb',
+    tag: 'PRODUKTIVITAS',
+  },
 ]
 
 // Kekurangan — jujur & santai

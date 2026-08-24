@@ -280,12 +280,14 @@ export default function Projects() {
                       VIEW CASE
                     </button>
                     <a
-                      href={proyek.demo}
-                      onClick={(e) => e.stopPropagation()}
+                      href={proyek.demo !== '#' ? proyek.demo : undefined}
+                      target={proyek.demo !== '#' ? '_blank' : undefined}
+                      rel={proyek.demo !== '#' ? 'noopener noreferrer' : undefined}
+                      onClick={(e) => { e.stopPropagation(); if (proyek.demo === '#') e.preventDefault() }}
                       className="btn-comic-outline py-1.5 sm:py-2 px-3 sm:px-4"
-                      style={{ fontSize: '0.7rem' }}
+                      style={{ fontSize: '0.7rem', opacity: proyek.demo === '#' ? 0.5 : 1, cursor: proyek.demo === '#' ? 'not-allowed' : 'pointer' }}
                     >
-                      OPEN →
+                      {proyek.demo !== '#' ? 'OPEN →' : 'SOON'}
                     </a>
                   </div>
                 </div>
@@ -374,10 +376,20 @@ export default function Projects() {
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-3 pt-2">
-                  <a href={dipilih.demo} className="btn-comic text-xs sm:text-sm py-2 px-4 sm:px-5">OPEN PROJECT →</a>
-                  <a href={dipilih.github} className="btn-comic-outline text-xs sm:text-sm py-2 px-4 sm:px-5 flex items-center gap-2">
-                    <FiGithub className="w-4 h-4" /> GITHUB
-                  </a>
+                  {dipilih.demo !== '#' ? (
+                    <a href={dipilih.demo} target="_blank" rel="noopener noreferrer" className="btn-comic text-xs sm:text-sm py-2 px-4 sm:px-5">OPEN PROJECT →</a>
+                  ) : (
+                    <span className="btn-comic text-xs sm:text-sm py-2 px-4 sm:px-5 opacity-40 cursor-not-allowed">COMING SOON</span>
+                  )}
+                  {dipilih.github !== '#' ? (
+                    <a href={dipilih.github} target="_blank" rel="noopener noreferrer" className="btn-comic-outline text-xs sm:text-sm py-2 px-4 sm:px-5 flex items-center gap-2">
+                      <FiGithub className="w-4 h-4" /> GITHUB
+                    </a>
+                  ) : (
+                    <span className="btn-comic-outline text-xs sm:text-sm py-2 px-4 sm:px-5 flex items-center gap-2 opacity-40">
+                      <FiGithub className="w-4 h-4" /> PRIVATE
+                    </span>
+                  )}
                 </div>
               </div>
             </motion.div>

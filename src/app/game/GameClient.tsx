@@ -10,7 +10,7 @@ const GameWorld = dynamic(() => import('./GameWorld'), {
     <div className="fixed inset-0 bg-[#0a1628] flex flex-col items-center justify-center gap-4">
       <div className="font-comic text-4xl text-[#ffd700] animate-pulse">MEMUAT DUNIA...</div>
       <div className="w-48 h-2 bg-white/10 rounded overflow-hidden">
-        <div className="h-full bg-[#ffd700] animate-[loading_1.5s_ease-in-out_infinite]" style={{ width: '60%' }} />
+        <div className="h-full bg-[#ffd700] w-1/2" />
       </div>
       <div className="text-white/40 text-xs font-bold">Menyiapkan peta Indonesia virtual</div>
     </div>

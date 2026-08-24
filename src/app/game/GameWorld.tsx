@@ -1,33 +1,24 @@
 'use client'
 
-import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { Sky, Stars, Text, Billboard } from '@react-three/drei'
-import { Suspense, useRef, useEffect, useState, useCallback } from 'react'
-import * as THREE from 'three'
+import { useEffect, useRef, useState, useCallback } from 'react'
 import Link from 'next/link'
 
 // ─── Tipe ────────────────────────────────────────────────────────────
-interface Achievement {
-  id: string; judul: string; deskripsi: string; icon: string; unlocked: boolean
-}
-interface KotaData {
-  nama: string; pos: [number, number, number]; warna: string
-  info: string; achievement: string; emoji: string
-}
-type TipeKendaraan = 'mobil' | 'sepeda' | 'pesawat'
-interface InputState { maju: boolean; mundur: boolean; kiri: boolean; kanan: boolean; naik: boolean }
+interface Achievement { id: string; judul: string; deskripsi: string; icon: string; unlocked: boolean }
+interface Kota { nama: string; x: number; y: number; warna: string; info: string; achievement: string; emoji: string; r: number }
+type Kendaraan = 'mobil' | 'sepeda' | 'pesawat'
 
-// ─── Data kota Indonesia ──────────────────────────────────────────────
-const KOTA: KotaData[] = [
-  { nama: 'JEMBER', pos: [0, 0, 0], warna: '#ffd700', info: 'Kota asal Rizki — tempat semua dimulai', achievement: 'asal', emoji: '🏠' },
-  { nama: 'SURABAYA', pos: [18, 0, -12], warna: '#1a5cff', info: 'Kota Pahlawan — pusat bisnis Jawa Timur', achievement: 'surabaya', emoji: '🦈' },
-  { nama: 'JAKARTA', pos: [-32, 0, -42], warna: '#e63329', info: 'Ibukota — pusat startup & tech hub Indonesia', achievement: 'jakarta', emoji: '🏙️' },
-  { nama: 'BANDUNG', pos: [-38, 0, -26], warna: '#22c55e', info: 'Kota Kembang — surganya developer & kreatif', achievement: 'bandung', emoji: '🌸' },
-  { nama: 'YOGYAKARTA', pos: [-12, 0, -22], warna: '#8b5cf6', info: 'Kota Budaya — pusat pendidikan & seni', achievement: 'jogja', emoji: '🎭' },
-  { nama: 'BALI', pos: [6, 0, 26], warna: '#f59e0b', info: 'Pulau Dewata — inspirasi & keindahan alam', achievement: 'bali', emoji: '🌺' },
-  { nama: 'MAKASSAR', pos: [52, 0, 18], warna: '#0891b2', info: 'Kota Angin — gerbang Indonesia Timur', achievement: 'makassar', emoji: '⛵' },
-  { nama: 'MEDAN', pos: [-62, 0, -62], warna: '#ec4899', info: 'Kota Beringin — kota terbesar Sumatera', achievement: 'medan', emoji: '🌴' },
-  { nama: 'GELAR.ID', pos: [0, 10, -18], warna: '#ffd700', info: 'Platform mimpi Rizki — Kampus Virtual Teknologi', achievement: 'gelarid', emoji: '🚀' },
+// ─── Data Kota Indonesia ──────────────────────────────────────────────
+const KOTA: Kota[] = [
+  { nama: 'JEMBER', x: 500, y: 380, warna: '#ffd700', info: 'Kota asal Rizki — tempat semua dimulai!', achievement: 'asal', emoji: '🏠', r: 55 },
+  { nama: 'SURABAYA', x: 580, y: 300, warna: '#1a5cff', info: 'Kota Pahlawan — pusat bisnis Jawa Timur', achievement: 'surabaya', emoji: '🦈', r: 65 },
+  { nama: 'JAKARTA', x: 220, y: 340, warna: '#e63329', info: 'Ibukota Indonesia — pusat startup & tech hub', achievement: 'jakarta', emoji: '🏙️', r: 70 },
+  { nama: 'BANDUNG', x: 260, y: 390, warna: '#22c55e', info: 'Kota Kembang — surganya developer & kreatif', achievement: 'bandung', emoji: '🌸', r: 55 },
+  { nama: 'YOGYAKARTA', x: 420, y: 360, warna: '#8b5cf6', info: 'Kota Budaya — pusat pendidikan & seni', achievement: 'jogja', emoji: '🎭', r: 55 },
+  { nama: 'BALI', x: 640, y: 410, warna: '#f59e0b', info: 'Pulau Dewata — inspirasi & keindahan alam', achievement: 'bali', emoji: '🌺', r: 50 },
+  { nama: 'MAKASSAR', x: 780, y: 330, warna: '#0891b2', info: 'Kota Angin — gerbang Indonesia Timur', achievement: 'makassar', emoji: '⛵', r: 55 },
+  { nama: 'MEDAN', x: 160, y: 160, warna: '#ec4899', info: 'Kota Beringin — kota terbesar Sumatera', achievement: 'medan', emoji: '🌴', r: 60 },
+  { nama: 'GELAR.ID', x: 500, y: 180, warna: '#ffd700', info: 'Platform mimpi Rizki — Kampus Virtual Teknologi 🚀', achievement: 'gelarid', emoji: '🚀', r: 50 },
 ]
 
 const ACHIEVEMENTS_DEF: Achievement[] = [
@@ -40,256 +31,99 @@ const ACHIEVEMENTS_DEF: Achievement[] = [
   { id: 'bali', judul: 'Pulau Dewata', deskripsi: 'Tiba di Bali', icon: '🌺', unlocked: false },
   { id: 'makassar', judul: 'Timur Indonesia', deskripsi: 'Jelajahi Makassar', icon: '⛵', unlocked: false },
   { id: 'medan', judul: 'Sumatera Utara', deskripsi: 'Tiba di Medan', icon: '🌴', unlocked: false },
-  { id: 'gelarid', judul: 'Mimpi Terbesar', deskripsi: 'Temukan Gelar.id di langit', icon: '🚀', unlocked: false },
+  { id: 'gelarid', judul: 'Mimpi Terbesar', deskripsi: 'Temukan Gelar.id — platform mimpi', icon: '🚀', unlocked: false },
   { id: 'explorer', judul: 'Penjelajah Sejati', deskripsi: 'Kunjungi 5 kota berbeda', icon: '🗺️', unlocked: false },
   { id: 'speed', judul: 'Need for Speed', deskripsi: 'Kendarai pesawat!', icon: '✈️', unlocked: false },
 ]
 
-// ─── Tanah ────────────────────────────────────────────────────────────
-function Tanah() {
-  return (
-    <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.5, 0]} receiveShadow>
-      <planeGeometry args={[400, 400]} />
-      <meshLambertMaterial color="#2d5016" />
-    </mesh>
-  )
+// ─── Konversi emoji ke text untuk canvas ────────────────────────────
+const EMOJI_MAP: Record<string, string> = {
+  '🏠': '⌂', '🦈': '~', '🏙️': '◼', '🌸': '*', '🎭': '♠', '🌺': '✿',
+  '⛵': '▲', '🌴': '♣', '🚀': '◆', '🗺️': '◉', '✈️': '↗', '🎮': '▣',
 }
 
-// ─── Jalan ────────────────────────────────────────────────────────────
-function Jalan({ dari, ke }: { dari: [number, number]; ke: [number, number] }) {
-  const dx = ke[0] - dari[0], dz = ke[1] - dari[1]
-  const len = Math.sqrt(dx * dx + dz * dz)
-  return (
-    <mesh
-      position={[(dari[0] + ke[0]) / 2, -0.45, (dari[1] + ke[1]) / 2]}
-      rotation={[-Math.PI / 2, 0, Math.atan2(dz, dx)]}
-    >
-      <planeGeometry args={[len, 3]} />
-      <meshLambertMaterial color="#555" />
-    </mesh>
-  )
+const toText = (emoji: string) => EMOJI_MAP[emoji] || '●'
+
+// ─── State kendaraan ──────────────────────────────────────────────────
+interface PlayerState {
+  x: number; y: number; angle: number
+  vx: number; vy: number
+  tipe: Kendaraan
 }
 
-// ─── Kota ─────────────────────────────────────────────────────────────
-function KotaBlok({ kota, onMasuk }: { kota: KotaData; onMasuk: (id: string) => void }) {
-  const groupRef = useRef<THREE.Group>(null!)
-  const { camera } = useThree()
-  const terdeteksi = useRef(false)
-  const gedung = [
-    { x: -2.5, z: -2.5, h: 10, w: 2 }, { x: 0, z: -3, h: 14, w: 2.5 },
-    { x: 2.5, z: -2.5, h: 8, w: 2 }, { x: -2.5, z: 2.5, h: 7, w: 2 },
-    { x: 2.5, z: 2.5, h: 11, w: 2 },
-  ]
-
-  useFrame(() => {
-    if (!groupRef.current) return
-    groupRef.current.rotation.y += 0.005
-    const dist = camera.position.distanceTo(new THREE.Vector3(...kota.pos))
-    if (dist < 14 && !terdeteksi.current) { terdeteksi.current = true; onMasuk(kota.achievement) }
-    else if (dist > 16) terdeteksi.current = false
-  })
-
-  return (
-    <group ref={groupRef} position={kota.pos}>
-      <mesh position={[0, -0.3, 0]}>
-        <cylinderGeometry args={[6, 6, 0.4, 8]} />
-        <meshLambertMaterial color={kota.warna + '44'} />
-      </mesh>
-      {gedung.map((g, i) => (
-        <mesh key={i} position={[g.x, g.h / 2 - 0.3, g.z]} castShadow>
-          <boxGeometry args={[g.w, g.h, g.w]} />
-          <meshLambertMaterial color={kota.warna + 'bb'} />
-        </mesh>
-      ))}
-      <Billboard position={[0, 15, 0]}>
-        <Text fontSize={1.8} color={kota.warna} anchorX="center" outlineWidth={0.08} outlineColor="#000">
-          {kota.emoji} {kota.nama}
-        </Text>
-      </Billboard>
-      <pointLight position={[0, 8, 0]} color={kota.warna} intensity={25} distance={18} />
-    </group>
-  )
-}
-
-// ─── Kendaraan (movement manual tanpa physics library) ────────────────
-function Kendaraan({ tipe, inputRef, onPosisi }: {
-  tipe: TipeKendaraan
-  inputRef: React.MutableRefObject<InputState>
-  onPosisi: (p: THREE.Vector3) => void
-}) {
-  const meshRef = useRef<THREE.Group>(null!)
-  const vel = useRef(new THREE.Vector3())
-  const rot = useRef(0) // Y rotation
-  const speed = tipe === 'pesawat' ? 0.35 : tipe === 'sepeda' ? 0.12 : 0.22
-  const warna = tipe === 'pesawat' ? '#c0c0c0' : tipe === 'sepeda' ? '#e63329' : '#ffd700'
-
-  useFrame((_, delta) => {
-    if (!meshRef.current) return
-    const inp = inputRef.current
-    const dt = Math.min(delta, 0.05)
-
-    if (inp.kiri) rot.current += 1.8 * dt
-    if (inp.kanan) rot.current -= 1.8 * dt
-
-    const dir = new THREE.Vector3(-Math.sin(rot.current), 0, -Math.cos(rot.current))
-    if (inp.maju) vel.current.addScaledVector(dir, speed)
-    if (inp.mundur) vel.current.addScaledVector(dir, -speed * 0.6)
-
-    // Pesawat terbang
-    if (tipe === 'pesawat') {
-      if (inp.naik) vel.current.y += 0.3 * dt * 10
-      else vel.current.y -= 0.15 * dt * 10
-    }
-
-    // Damping
-    vel.current.multiplyScalar(0.82)
-    meshRef.current.position.add(vel.current)
-    meshRef.current.rotation.y = rot.current
-
-    // Batas ketinggian
-    if (tipe !== 'pesawat' && meshRef.current.position.y < 0) meshRef.current.position.y = 0
-    if (tipe === 'pesawat' && meshRef.current.position.y < 0.5) meshRef.current.position.y = 0.5
-    if (meshRef.current.position.y > 80) meshRef.current.position.y = 80
-
-    onPosisi(meshRef.current.position.clone())
-  })
-
-  return (
-    <group ref={meshRef} position={[0, 1, 0]}>
-      {/* Badan */}
-      <mesh castShadow>
-        <boxGeometry args={tipe === 'pesawat' ? [4, 0.8, 8] : tipe === 'sepeda' ? [0.5, 1.2, 2.2] : [2.5, 1, 4.5]} />
-        <meshLambertMaterial color={warna} />
-      </mesh>
-      {/* Detail */}
-      {tipe === 'mobil' && (
-        <mesh position={[0, 0.8, -0.3]}>
-          <boxGeometry args={[2.2, 0.7, 2.2]} />
-          <meshLambertMaterial color="#88ccff" transparent opacity={0.7} />
-        </mesh>
-      )}
-      {tipe === 'pesawat' && (
-        <mesh position={[0, 0, 0]}>
-          <boxGeometry args={[14, 0.25, 2.5]} />
-          <meshLambertMaterial color="#ddd" />
-        </mesh>
-      )}
-    </group>
-  )
-}
-
-// ─── Kamera ───────────────────────────────────────────────────────────
-function IkutKamera({ targetRef, view }: {
-  targetRef: React.MutableRefObject<THREE.Vector3>
-  view: 'third' | 'top'
-}) {
-  const { camera } = useThree()
-  useFrame(() => {
-    const t = targetRef.current
-    const offset = view === 'top' ? new THREE.Vector3(0, 50, 0) : new THREE.Vector3(0, 9, 22)
-    camera.position.lerp(t.clone().add(offset), 0.09)
-    camera.lookAt(t.clone().add(new THREE.Vector3(0, 2, 0)))
-  })
-  return null
-}
-
-// ─── Pohon ────────────────────────────────────────────────────────────
-function Pohon({ pos }: { pos: [number, number, number] }) {
-  return (
-    <group position={pos}>
-      <mesh position={[0, 2, 0]}>
-        <cylinderGeometry args={[0.2, 0.3, 4, 5]} />
-        <meshLambertMaterial color="#6b4226" />
-      </mesh>
-      <mesh position={[0, 5.5, 0]} castShadow>
-        <coneGeometry args={[2.5, 6, 6]} />
-        <meshLambertMaterial color="#1a5c1a" />
-      </mesh>
-    </group>
-  )
-}
-
-// ─── Joystick (mobile) ────────────────────────────────────────────────
-function Joystick({ onInput }: { onInput: (dx: number, dy: number) => void }) {
+// ─── Joystick Hook ───────────────────────────────────────────────────
+function useJoystick(onInput: (dx: number, dy: number) => void) {
+  const baseRef = useRef<HTMLDivElement>(null)
   const knobRef = useRef<HTMLDivElement>(null)
   const active = useRef(false)
-  const startPos = useRef({ x: 0, y: 0 })
+  const origin = useRef({ x: 0, y: 0 })
   const MAX = 36
 
-  const move = (cx: number, cy: number) => {
-    const dx = Math.max(-MAX, Math.min(MAX, cx - startPos.current.x))
-    const dy = Math.max(-MAX, Math.min(MAX, cy - startPos.current.y))
+  const move = useCallback((cx: number, cy: number) => {
+    const dx = Math.max(-MAX, Math.min(MAX, cx - origin.current.x))
+    const dy = Math.max(-MAX, Math.min(MAX, cy - origin.current.y))
     if (knobRef.current) knobRef.current.style.transform = `translate(${dx}px,${dy}px)`
     onInput(dx / MAX, dy / MAX)
-  }
+  }, [onInput])
 
-  return (
-    <div
-      className="relative flex items-center justify-center rounded-full select-none touch-none"
-      style={{ width: 88, height: 88, background: 'rgba(255,255,255,0.1)', border: '2px solid rgba(255,255,255,0.3)' }}
-      onTouchStart={e => { e.preventDefault(); active.current = true; const t = e.touches[0]; startPos.current = { x: t.clientX, y: t.clientY } }}
-      onTouchMove={e => { e.preventDefault(); if (active.current) move(e.touches[0].clientX, e.touches[0].clientY) }}
-      onTouchEnd={() => { active.current = false; if (knobRef.current) knobRef.current.style.transform = 'translate(0,0)'; onInput(0, 0) }}
-    >
-      <div ref={knobRef} className="absolute rounded-full pointer-events-none"
-        style={{ width: 36, height: 36, background: 'rgba(255,215,0,0.8)', border: '2px solid #ffd700', transition: 'transform 0.1s' }} />
-    </div>
-  )
-}
+  const end = useCallback(() => {
+    active.current = false
+    if (knobRef.current) knobRef.current.style.transform = 'translate(0,0)'
+    onInput(0, 0)
+  }, [onInput])
 
-// ─── Tombol touch ─────────────────────────────────────────────────────
-function TBtn({ label, color = '#ffd700', onP, onR }: {
-  label: string; color?: string; onP: () => void; onR: () => void
-}) {
-  return (
-    <button
-      className="flex items-center justify-center font-bold text-xl select-none touch-none rounded"
-      style={{ width: 52, height: 52, background: 'rgba(10,10,10,0.7)', border: `2px solid ${color}`, color }}
-      onTouchStart={e => { e.preventDefault(); onP() }}
-      onTouchEnd={e => { e.preventDefault(); onR() }}
-      onMouseDown={onP} onMouseUp={onR} onMouseLeave={onR}
-    >{label}</button>
-  )
+  useEffect(() => {
+    const el = baseRef.current
+    if (!el) return
+    const ts = (e: TouchEvent) => {
+      e.preventDefault()
+      active.current = true
+      const t = e.touches[0]
+      origin.current = { x: t.clientX, y: t.clientY }
+    }
+    const tm = (e: TouchEvent) => {
+      e.preventDefault()
+      if (active.current) move(e.touches[0].clientX, e.touches[0].clientY)
+    }
+    const te = (e: TouchEvent) => { e.preventDefault(); end() }
+    el.addEventListener('touchstart', ts, { passive: false })
+    el.addEventListener('touchmove', tm, { passive: false })
+    el.addEventListener('touchend', te, { passive: false })
+    return () => {
+      el.removeEventListener('touchstart', ts)
+      el.removeEventListener('touchmove', tm)
+      el.removeEventListener('touchend', te)
+    }
+  }, [move, end])
+
+  return { baseRef, knobRef }
 }
 
 // ─── Komponen utama ───────────────────────────────────────────────────
 export default function GameWorld({ kualitas }: { kualitas: 'low' | 'medium' | 'high' }) {
+  const canvasRef = useRef<HTMLCanvasElement>(null)
   const [achievements, setAchievements] = useState<Achievement[]>(ACHIEVEMENTS_DEF)
   const [notif, setNotif] = useState<Achievement | null>(null)
-  const [tipe, setTipe] = useState<TipeKendaraan>('mobil')
-  const [view, setView] = useState<'third' | 'top'>('third')
-  const [infoKota, setInfoKota] = useState<KotaData | null>(null)
+  const [infoKota, setInfoKota] = useState<Kota | null>(null)
   const [menu, setMenu] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
 
-  const inputRef = useRef<InputState>({ maju: false, mundur: false, kiri: false, kanan: false, naik: false })
-  const [inputVis, setInputVis] = useState<InputState>({ maju: false, mundur: false, kiri: false, kanan: false, naik: false })
-  const posRef = useRef(new THREE.Vector3())
+  // State game — pakai ref agar tidak trigger re-render di gameloop
+  const player = useRef<PlayerState>({ x: 500, y: 380, angle: 0, vx: 0, vy: 0, tipe: 'mobil' })
+  const tipe = useRef<Kendaraan>('mobil')
+  const [tipeState, setTipeState] = useState<Kendaraan>('mobil')
+  const keys = useRef({ up: false, down: false, left: false, right: false, space: false })
+  const joyInput = useRef({ dx: 0, dy: 0 })
+  const animRef = useRef(0)
+  const visitedKota = useRef(new Set<string>())
+  const cameraRef = useRef({ x: 500, y: 380 })
+  const notifTimeout = useRef<ReturnType<typeof setTimeout>>()
+  const infoTimeout = useRef<ReturnType<typeof setTimeout>>()
+  const [unlocked, setUnlocked] = useState(0)
 
   useEffect(() => {
     setIsMobile(window.matchMedia('(pointer: coarse)').matches || window.innerWidth < 768)
-    unlockAch('start')
-
-    const set = (k: string, v: boolean) => {
-      const n = { ...inputRef.current }
-      if (['w', 'W', 'ArrowUp'].includes(k)) n.maju = v
-      if (['s', 'S', 'ArrowDown'].includes(k)) n.mundur = v
-      if (['a', 'A', 'ArrowLeft'].includes(k)) n.kiri = v
-      if (['d', 'D', 'ArrowRight'].includes(k)) n.kanan = v
-      if (k === ' ') n.naik = v
-      inputRef.current = n
-      setInputVis({ ...n })
-    }
-    const kd = (e: KeyboardEvent) => {
-      if (e.key === 'v' || e.key === 'V') setView(v => v === 'third' ? 'top' : 'third')
-      if (e.key === 'Escape') setMenu(m => !m)
-      set(e.key, true)
-    }
-    const ku = (e: KeyboardEvent) => set(e.key, false)
-    window.addEventListener('keydown', kd)
-    window.addEventListener('keyup', ku)
-    return () => { window.removeEventListener('keydown', kd); window.removeEventListener('keyup', ku) }
-  }, []) // eslint-disable-line
+  }, [])
 
   const unlockAch = useCallback((id: string) => {
     setAchievements(prev => {
@@ -297,82 +131,290 @@ export default function GameWorld({ kualitas }: { kualitas: 'low' | 'medium' | '
       if (!a || a.unlocked) return prev
       const upd = prev.map(x => x.id === id ? { ...x, unlocked: true } : x)
       setNotif({ ...a, unlocked: true })
-      setTimeout(() => setNotif(null), 3000)
+      clearTimeout(notifTimeout.current)
+      notifTimeout.current = setTimeout(() => setNotif(null), 3000)
+      setUnlocked(upd.filter(x => x.unlocked).length)
       const n = upd.filter(x => ['asal', 'surabaya', 'jakarta', 'bandung', 'jogja', 'bali', 'makassar', 'medan'].includes(x.id) && x.unlocked).length
-      if (n >= 5) setTimeout(() => unlockAch('explorer'), 300)
+      if (n >= 5) setTimeout(() => unlockAch('explorer'), 400)
       return upd
     })
   }, [])
 
-  const handleKota = useCallback((id: string) => {
-    unlockAch(id)
-    const k = KOTA.find(x => x.achievement === id)
-    if (k) { setInfoKota(k); setTimeout(() => setInfoKota(null), 4000) }
+  // Keyboard
+  useEffect(() => {
+    unlockAch('start')
+    const kd = (e: KeyboardEvent) => {
+      if (['w', 'W', 'ArrowUp'].includes(e.key)) keys.current.up = true
+      if (['s', 'S', 'ArrowDown'].includes(e.key)) keys.current.down = true
+      if (['a', 'A', 'ArrowLeft'].includes(e.key)) keys.current.left = true
+      if (['d', 'D', 'ArrowRight'].includes(e.key)) keys.current.right = true
+      if (e.key === ' ') keys.current.space = true
+      if (e.key === 'Escape') setMenu(m => !m)
+    }
+    const ku = (e: KeyboardEvent) => {
+      if (['w', 'W', 'ArrowUp'].includes(e.key)) keys.current.up = false
+      if (['s', 'S', 'ArrowDown'].includes(e.key)) keys.current.down = false
+      if (['a', 'A', 'ArrowLeft'].includes(e.key)) keys.current.left = false
+      if (['d', 'D', 'ArrowRight'].includes(e.key)) keys.current.right = false
+      if (e.key === ' ') keys.current.space = false
+    }
+    window.addEventListener('keydown', kd)
+    window.addEventListener('keyup', ku)
+    return () => { window.removeEventListener('keydown', kd); window.removeEventListener('keyup', ku) }
   }, [unlockAch])
 
-  const handleJoystick = useCallback((dx: number, dy: number) => {
-    const n: InputState = { ...inputRef.current, maju: dy < -0.3, mundur: dy > 0.3, kiri: dx < -0.3, kanan: dx > 0.3 }
-    inputRef.current = n
-    setInputVis({ ...n })
-  }, [])
-
-  const gantiTipe = (t: TipeKendaraan) => {
-    setTipe(t)
+  const gantiTipe = useCallback((t: Kendaraan) => {
+    tipe.current = t
+    player.current.tipe = t
+    player.current.vx = 0
+    player.current.vy = 0
+    setTipeState(t)
     if (t === 'pesawat') unlockAch('speed')
-  }
+  }, [unlockAch])
 
-  const unlocked = achievements.filter(a => a.unlocked).length
+  // Joystick
+  const handleJoy = useCallback((dx: number, dy: number) => {
+    joyInput.current = { dx, dy }
+  }, [])
+  const { baseRef: joyBase, knobRef: joyKnob } = useJoystick(handleJoy)
 
-  const POHON_POS: [number, number, number][] = [
-    [-20, -0.5, 10], [20, -0.5, 10], [-15, -0.5, 30], [25, -0.5, -15],
-    [-25, -0.5, -20], [35, -0.5, 5], [10, -0.5, 40], [-10, -0.5, -35],
-  ]
+  // Game loop
+  useEffect(() => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+
+    const resize = () => {
+      canvas.width = window.innerWidth
+      canvas.height = window.innerHeight
+    }
+    resize()
+    window.addEventListener('resize', resize)
+
+    const W = () => canvas.width
+    const H = () => canvas.height
+
+    // Jalan antar kota
+    const JALAN = [
+      [500, 380, 580, 300], [500, 380, 420, 360], [500, 380, 640, 410],
+      [580, 300, 220, 340], [420, 360, 220, 340], [220, 340, 260, 390],
+      [500, 380, 160, 160], [580, 300, 780, 330], [500, 380, 500, 180],
+    ]
+
+    let last = 0
+    const loop = (ts: number) => {
+      const dt = Math.min((ts - last) / 16, 3)
+      last = ts
+      const p = player.current
+      const k = keys.current
+      const j = joyInput.current
+      const spd = p.tipe === 'pesawat' ? 4.5 : p.tipe === 'sepeda' ? 1.8 : 3.2
+
+      // Input
+      const maju = k.up || j.dy < -0.3
+      const mundur = k.down || j.dy > 0.3
+      const kiri = k.left || j.dx < -0.3
+      const kanan = k.right || j.dx > 0.3
+
+      if (kiri) p.angle -= 0.05 * dt
+      if (kanan) p.angle += 0.05 * dt
+      if (maju) { p.vx += Math.sin(p.angle) * spd * 0.15 * dt; p.vy -= Math.cos(p.angle) * spd * 0.15 * dt }
+      if (mundur) { p.vx -= Math.sin(p.angle) * spd * 0.09 * dt; p.vy += Math.cos(p.angle) * spd * 0.09 * dt }
+
+      const damp = 0.88
+      p.vx *= damp; p.vy *= damp
+      p.x += p.vx; p.y += p.vy
+
+      // Batas peta
+      p.x = Math.max(20, Math.min(980, p.x))
+      p.y = Math.max(20, Math.min(580, p.y))
+
+      // Kamera smooth
+      const cam = cameraRef.current
+      cam.x += (p.x - cam.x) * 0.1
+      cam.y += (p.y - cam.y) * 0.1
+
+      // Cek kota
+      KOTA.forEach(k => {
+        const dx = p.x - k.x, dy = p.y - k.y
+        const dist = Math.sqrt(dx * dx + dy * dy)
+        if (dist < k.r + 20 && !visitedKota.current.has(k.achievement)) {
+          visitedKota.current.add(k.achievement)
+          unlockAch(k.achievement)
+          setInfoKota(k)
+          clearTimeout(infoTimeout.current)
+          infoTimeout.current = setTimeout(() => setInfoKota(null), 3500)
+        }
+      })
+
+      // ─── RENDER ───────────────────────────────────────────────────
+      const cw = W(), ch = H()
+      // Offset kamera — center
+      const ox = cw / 2 - cam.x
+      const oy = ch / 2 - cam.y
+
+      // Background
+      ctx.fillStyle = '#1a3a0a'
+      ctx.fillRect(0, 0, cw, ch)
+
+      // Grid rumput
+      ctx.strokeStyle = 'rgba(255,255,255,0.04)'
+      ctx.lineWidth = 1
+      for (let gx = (ox % 40); gx < cw; gx += 40) { ctx.beginPath(); ctx.moveTo(gx, 0); ctx.lineTo(gx, ch); ctx.stroke() }
+      for (let gy = (oy % 40); gy < ch; gy += 40) { ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(cw, gy); ctx.stroke() }
+
+      // Jalan
+      ctx.strokeStyle = '#666'
+      ctx.lineWidth = 14
+      JALAN.forEach(([x1, y1, x2, y2]) => {
+        ctx.beginPath()
+        ctx.moveTo(x1 + ox, y1 + oy)
+        ctx.lineTo(x2 + ox, y2 + oy)
+        ctx.stroke()
+      })
+      // Garis tengah jalan
+      ctx.strokeStyle = 'rgba(255,255,0,0.3)'
+      ctx.lineWidth = 2
+      ctx.setLineDash([15, 15])
+      JALAN.forEach(([x1, y1, x2, y2]) => {
+        ctx.beginPath(); ctx.moveTo(x1 + ox, y1 + oy); ctx.lineTo(x2 + ox, y2 + oy); ctx.stroke()
+      })
+      ctx.setLineDash([])
+
+      // Kota
+      KOTA.forEach(kota => {
+        const kx = kota.x + ox, ky = kota.y + oy
+        const visited = visitedKota.current.has(kota.achievement)
+
+        // Lingkaran kota
+        ctx.beginPath()
+        ctx.arc(kx, ky, kota.r, 0, Math.PI * 2)
+        ctx.fillStyle = kota.warna + (visited ? '55' : '33')
+        ctx.fill()
+        ctx.strokeStyle = kota.warna
+        ctx.lineWidth = visited ? 3 : 2
+        ctx.stroke()
+
+        // Bangunan-bangunan kecil
+        ctx.fillStyle = kota.warna + 'aa'
+          ;[[-20, -15, 10, 18], [-5, -20, 12, 20], [12, -12, 10, 16], [-18, 5, 8, 12], [8, 8, 10, 14]].forEach(([bx, by, bw, bh]) => {
+            ctx.fillRect(kx + bx, ky + by, bw, bh)
+          })
+
+        // Label
+        ctx.fillStyle = kota.warna
+        ctx.font = `bold ${Math.max(10, 13 - kota.nama.length * 0.3)}px monospace`
+        ctx.textAlign = 'center'
+        ctx.fillText(kota.nama, kx, ky + kota.r + 16)
+
+        // Emoji as text
+        ctx.font = 'bold 18px serif'
+        ctx.fillText(kota.emoji, kx, ky + 7)
+
+        // Tanda dikunjungi
+        if (visited) {
+          ctx.fillStyle = '#22c55e'
+          ctx.beginPath(); ctx.arc(kx + kota.r - 6, ky - kota.r + 6, 8, 0, Math.PI * 2); ctx.fill()
+          ctx.fillStyle = 'white'
+          ctx.font = 'bold 10px sans-serif'
+          ctx.fillText('✓', kx + kota.r - 6, ky - kota.r + 10)
+        }
+      })
+
+      // Kendaraan (player)
+      ctx.save()
+      ctx.translate(p.x + ox, p.y + oy)
+      ctx.rotate(p.angle)
+
+      const warnaKendaraan = p.tipe === 'pesawat' ? '#c0c0c0' : p.tipe === 'sepeda' ? '#e63329' : '#ffd700'
+
+      if (p.tipe === 'pesawat') {
+        // Badan pesawat
+        ctx.fillStyle = '#c0c0c0'
+        ctx.beginPath(); ctx.ellipse(0, 0, 20, 8, 0, 0, Math.PI * 2); ctx.fill()
+        // Sayap
+        ctx.fillStyle = '#999'
+        ctx.fillRect(-18, -2, 36, 4)
+        // Ekor
+        ctx.fillStyle = '#aaa'
+        ctx.fillRect(-20, -5, 6, 4)
+      } else if (p.tipe === 'sepeda') {
+        ctx.fillStyle = '#e63329'
+        // Roda
+        ctx.beginPath(); ctx.arc(-6, 0, 6, 0, Math.PI * 2); ctx.strokeStyle = '#e63329'; ctx.lineWidth = 2; ctx.stroke()
+        ctx.beginPath(); ctx.arc(6, 0, 6, 0, Math.PI * 2); ctx.stroke()
+        // Frame
+        ctx.fillStyle = '#ff6644'; ctx.fillRect(-6, -4, 12, 3)
+      } else {
+        // Mobil
+        ctx.fillStyle = warnaKendaraan
+        ctx.fillRect(-12, -7, 24, 14)
+        ctx.fillStyle = '#88ccff'
+        ctx.fillRect(-8, -6, 10, 5)
+        // Roda
+        ctx.fillStyle = '#222'
+          ;[[-9, -8], [7, -8], [-9, 5], [7, 5]].forEach(([wx, wy]) => {
+            ctx.fillRect(wx, wy, 5, 3)
+          })
+      }
+
+      // Indikator arah
+      ctx.fillStyle = warnaKendaraan
+      ctx.beginPath(); ctx.moveTo(0, -18); ctx.lineTo(-5, -12); ctx.lineTo(5, -12); ctx.closePath(); ctx.fill()
+
+      ctx.restore()
+
+      // Shadow kendaraan
+      ctx.beginPath()
+      ctx.ellipse(p.x + ox, p.y + oy + 2, 14, 5, 0, 0, Math.PI * 2)
+      ctx.fillStyle = 'rgba(0,0,0,0.3)'; ctx.fill()
+
+      // Mini-map
+      if (kualitas !== 'low') {
+        const mm = { x: cw - 130, y: 10, w: 120, h: 90, scale: 0.12 }
+        ctx.fillStyle = 'rgba(0,0,0,0.7)'
+        ctx.fillRect(mm.x, mm.y, mm.w, mm.h)
+        ctx.strokeStyle = '#ffd700'; ctx.lineWidth = 1.5
+        ctx.strokeRect(mm.x, mm.y, mm.w, mm.h)
+        KOTA.forEach(k => {
+          const mx = mm.x + k.x * mm.scale + 2, my = mm.y + k.y * mm.scale + 2
+          ctx.beginPath(); ctx.arc(mx, my, 4, 0, Math.PI * 2)
+          ctx.fillStyle = visitedKota.current.has(k.achievement) ? k.warna : k.warna + '55'; ctx.fill()
+        })
+        // Player di minimap
+        const px = mm.x + p.x * mm.scale + 2, py2 = mm.y + p.y * mm.scale + 2
+        ctx.beginPath(); ctx.arc(px, py2, 3, 0, Math.PI * 2)
+        ctx.fillStyle = '#fff'; ctx.fill()
+        ctx.fillStyle = 'rgba(255,255,255,0.5)'; ctx.font = '8px monospace'; ctx.textAlign = 'left'
+        ctx.fillText('MAP', mm.x + 3, mm.y + mm.h - 3)
+      }
+
+      animRef.current = requestAnimationFrame(loop)
+    }
+
+    animRef.current = requestAnimationFrame(loop)
+    return () => {
+      cancelAnimationFrame(animRef.current)
+      window.removeEventListener('resize', resize)
+    }
+  }, [unlockAch])
+
+  const totalUnlocked = achievements.filter(a => a.unlocked).length
 
   return (
-    <div className="fixed inset-0" style={{ background: '#0a1628', touchAction: 'none' }}>
-      <Canvas
-        camera={{ position: [0, 9, 22], fov: 65 }}
-        gl={{ antialias: kualitas !== 'low', powerPreference: 'high-performance' }}
-        style={{ touchAction: 'none' }}
-      >
-        <Suspense fallback={null}>
-          {kualitas !== 'low' && <Stars radius={200} depth={50} count={kualitas === 'high' ? 1500 : 500} factor={4} />}
-          <Sky sunPosition={[50, 20, 100]} />
-          <ambientLight intensity={0.7} />
-          <directionalLight position={[50, 80, 50]} intensity={1.3} />
-
-          <Tanah />
-          {/* Laut */}
-          <mesh position={[0, -1.5, 90]}>
-            <planeGeometry args={[400, 60]} />
-            <meshLambertMaterial color="#0a66c2" transparent opacity={0.8} />
-          </mesh>
-          {/* Jalan */}
-          <Jalan dari={[0, 0]} ke={[18, -12]} />
-          <Jalan dari={[0, 0]} ke={[-12, -22]} />
-          <Jalan dari={[0, 0]} ke={[6, 26]} />
-          <Jalan dari={[18, -12]} ke={[-32, -42]} />
-          <Jalan dari={[-12, -22]} ke={[-32, -42]} />
-          <Jalan dari={[-32, -42]} ke={[-38, -26]} />
-          {/* Pohon */}
-          {POHON_POS.map((p, i) => <Pohon key={i} pos={p} />)}
-          {/* Kota */}
-          {KOTA.map(k => <KotaBlok key={k.nama} kota={k} onMasuk={handleKota} />)}
-          {/* Kendaraan */}
-          <Kendaraan tipe={tipe} inputRef={inputRef} onPosisi={p => { posRef.current = p }} />
-          {/* Kamera */}
-          <IkutKamera targetRef={posRef} view={view} />
-        </Suspense>
-      </Canvas>
+    <div className="fixed inset-0 overflow-hidden" style={{ background: '#1a3a0a', touchAction: 'none' }}>
+      {/* Canvas */}
+      <canvas ref={canvasRef} className="absolute inset-0" style={{ touchAction: 'none' }} />
 
       {/* ── HUD ── */}
+      {/* Header */}
       <div className="absolute top-0 left-0 right-0 flex items-center justify-between px-3 py-2 pointer-events-none"
-        style={{ background: 'linear-gradient(to bottom,rgba(0,0,0,0.75),transparent)' }}>
-        <div className="font-comic text-[#ffd700] text-base tracking-wide">🎮 RIZKI WORLD</div>
-        <div className="flex gap-3 text-white/60 text-[10px] font-bold">
-          <span>🏆 {unlocked}/{achievements.length}</span>
-          <span className="capitalize">{tipe}</span>
-          <span>{view === 'top' ? 'TOP' : '3RD'}</span>
+        style={{ background: 'linear-gradient(to bottom,rgba(0,0,0,0.8),transparent)' }}>
+        <div className="font-comic text-[#ffd700] text-base">🎮 RIZKI WORLD</div>
+        <div className="flex gap-3 text-white/70 text-[10px] font-bold">
+          <span>🏆 {totalUnlocked}/{achievements.length}</span>
+          <span className="uppercase">{tipeState}</span>
         </div>
       </div>
 
@@ -380,7 +422,7 @@ export default function GameWorld({ kualitas }: { kualitas: 'low' | 'medium' | '
       {notif && (
         <div className="absolute top-14 right-3 font-comic pointer-events-none"
           style={{ background: '#0a0a0a', border: '3px solid #ffd700', boxShadow: '4px 4px 0 #ffd700', padding: '10px 14px', maxWidth: 220, zIndex: 30 }}>
-          <div className="text-[#ffd700] text-[9px] tracking-widest mb-1">🏆 ACHIEVEMENT!</div>
+          <div className="text-[#ffd700] text-[9px] tracking-widest mb-1">🏆 ACHIEVEMENT UNLOCKED!</div>
           <div className="text-xl mb-0.5">{notif.icon}</div>
           <div className="text-white font-bold text-xs">{notif.judul}</div>
           <div className="text-white/50 text-[10px]">{notif.deskripsi}</div>
@@ -390,34 +432,40 @@ export default function GameWorld({ kualitas }: { kualitas: 'low' | 'medium' | '
       {/* Info kota */}
       {infoKota && (
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-comic pointer-events-none"
-          style={{ background: 'rgba(10,10,10,0.92)', border: `3px solid ${infoKota.warna}`, boxShadow: `6px 6px 0 ${infoKota.warna}`, padding: '14px 20px', maxWidth: 280, zIndex: 25 }}>
+          style={{ background: 'rgba(10,10,10,0.93)', border: `3px solid ${infoKota.warna}`, boxShadow: `6px 6px 0 ${infoKota.warna}`, padding: '14px 20px', maxWidth: 280, zIndex: 25 }}>
           <div className="text-3xl mb-1">{infoKota.emoji}</div>
           <div className="text-lg mb-1" style={{ color: infoKota.warna }}>{infoKota.nama}</div>
-          <div className="text-white/70 text-xs">{infoKota.info}</div>
+          <div className="text-white/80 text-xs leading-relaxed">{infoKota.info}</div>
         </div>
       )}
 
       {/* ── MOBILE CONTROLS ── */}
       {isMobile && !menu && (
         <>
-          <div className="absolute pointer-events-auto" style={{ bottom: 20, left: 16 }}>
-            <Joystick onInput={handleJoystick} />
+          {/* Joystick kiri */}
+          <div className="absolute pointer-events-auto" style={{ bottom: 24, left: 16 }}>
+            <div ref={joyBase} className="relative flex items-center justify-center rounded-full"
+              style={{ width: 90, height: 90, background: 'rgba(255,255,255,0.12)', border: '2px solid rgba(255,255,255,0.3)' }}>
+              <div ref={joyKnob} className="absolute rounded-full pointer-events-none"
+                style={{ width: 38, height: 38, background: 'rgba(255,215,0,0.8)', border: '2px solid #ffd700' }} />
+            </div>
           </div>
-          <div className="absolute pointer-events-auto flex flex-col gap-2" style={{ bottom: 20, right: 12 }}>
-            {tipe === 'pesawat' && (
-              <TBtn label="⬆" color="#0891b2"
-                onP={() => { inputRef.current = { ...inputRef.current, naik: true }; setInputVis(v => ({ ...v, naik: true })) }}
-                onR={() => { inputRef.current = { ...inputRef.current, naik: false }; setInputVis(v => ({ ...v, naik: false })) }}
-              />
-            )}
-            <TBtn label="👁" onP={() => setView(v => v === 'third' ? 'top' : 'third')} onR={() => { }} />
-            <TBtn label="☰" onP={() => setMenu(true)} onR={() => { }} />
+
+          {/* Tombol kanan */}
+          <div className="absolute pointer-events-auto flex flex-col gap-2" style={{ bottom: 24, right: 12 }}>
+            <button onClick={() => setMenu(true)}
+              className="font-comic text-lg rounded flex items-center justify-center"
+              style={{ width: 48, height: 48, background: 'rgba(10,10,10,0.8)', border: '1.5px solid rgba(255,255,255,0.3)', color: 'white' }}>
+              ☰
+            </button>
           </div>
-          <div className="absolute pointer-events-auto flex gap-1.5" style={{ bottom: 22, left: '50%', transform: 'translateX(-50%)' }}>
+
+          {/* Pilih kendaraan */}
+          <div className="absolute pointer-events-auto flex gap-2" style={{ bottom: 28, left: '50%', transform: 'translateX(-50%)' }}>
             {(['mobil', 'sepeda', 'pesawat'] as const).map(k => (
-              <button key={k} className="text-2xl rounded flex items-center justify-center"
-                style={{ width: 46, height: 46, background: tipe === k ? '#ffd700' : 'rgba(10,10,10,0.8)', border: `2px solid ${tipe === k ? '#ffd700' : 'rgba(255,255,255,0.2)'}` }}
-                onTouchStart={e => { e.preventDefault(); gantiTipe(k) }}
+              <button key={k}
+                className="text-2xl rounded flex items-center justify-center"
+                style={{ width: 46, height: 46, background: tipeState === k ? '#ffd700' : 'rgba(10,10,10,0.8)', border: `2px solid ${tipeState === k ? '#ffd700' : 'rgba(255,255,255,0.2)'}` }}
                 onClick={() => gantiTipe(k)}>
                 {k === 'mobil' ? '🚗' : k === 'sepeda' ? '🚲' : '✈️'}
               </button>
@@ -429,28 +477,31 @@ export default function GameWorld({ kualitas }: { kualitas: 'low' | 'medium' | '
       {/* ── DESKTOP CONTROLS ── */}
       {!isMobile && (
         <>
-          {/* WASD indicator */}
+          {/* Indikator WASD */}
           <div className="absolute bottom-4 left-4 pointer-events-none"
             style={{ display: 'grid', gridTemplateColumns: 'repeat(3,34px)', gridTemplateRows: 'repeat(2,34px)', gap: 3 }}>
-            {[{ l: '↑', a: inputVis.maju, r: 1, c: 2 }, { l: '←', a: inputVis.kiri, r: 2, c: 1 }, { l: '↓', a: inputVis.mundur, r: 2, c: 2 }, { l: '→', a: inputVis.kanan, r: 2, c: 3 }].map(k => (
+            {[{ l: '↑', r: 1, c: 2 }, { l: '←', r: 2, c: 1 }, { l: '↓', r: 2, c: 2 }, { l: '→', r: 2, c: 3 }].map(k => (
               <div key={k.l} className="flex items-center justify-center font-bold text-sm"
-                style={{ gridRow: k.r, gridColumn: k.c, background: k.a ? '#ffd700' : 'rgba(255,255,255,0.1)', color: k.a ? '#0a0a0a' : 'rgba(255,255,255,0.4)', border: `2px solid ${k.a ? '#ffd700' : 'rgba(255,255,255,0.15)'}`, borderRadius: 4 }}>
+                style={{ gridRow: k.r, gridColumn: k.c, background: 'rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.5)', border: '2px solid rgba(255,255,255,0.2)', borderRadius: 4 }}>
                 {k.l}
               </div>
             ))}
           </div>
-          {/* Kendaraan */}
+
+          {/* Kendaraan desktop */}
           <div className="absolute bottom-4 right-4 flex gap-1.5 pointer-events-auto">
             {(['mobil', 'sepeda', 'pesawat'] as const).map(k => (
-              <button key={k} onClick={() => gantiTipe(k)} className="flex flex-col items-center gap-0.5 px-2.5 py-2 font-bold text-[10px]"
-                style={{ background: tipe === k ? '#ffd700' : 'rgba(10,10,10,0.8)', color: tipe === k ? '#0a0a0a' : 'rgba(255,255,255,0.5)', border: `2px solid ${tipe === k ? '#ffd700' : 'rgba(255,255,255,0.15)'}` }}>
+              <button key={k} onClick={() => gantiTipe(k)}
+                className="flex flex-col items-center gap-0.5 px-2.5 py-2 font-bold text-[10px]"
+                style={{ background: tipeState === k ? '#ffd700' : 'rgba(10,10,10,0.8)', color: tipeState === k ? '#0a0a0a' : 'rgba(255,255,255,0.5)', border: `2px solid ${tipeState === k ? '#ffd700' : 'rgba(255,255,255,0.15)'}` }}>
                 <span className="text-xl">{k === 'mobil' ? '🚗' : k === 'sepeda' ? '🚲' : '✈️'}</span>
                 {k.toUpperCase()}
               </button>
             ))}
           </div>
-          <div className="absolute bottom-20 right-4 text-right pointer-events-none opacity-40">
-            <div className="text-white/50 text-[9px] font-bold leading-loose">WASD Gerak · SPACE Naik · V View · ESC Menu</div>
+
+          <div className="absolute bottom-20 right-4 pointer-events-none text-right opacity-40">
+            <div className="text-white/50 text-[9px] font-bold leading-loose">WASD/↑↓←→ Gerak · ESC Menu</div>
           </div>
         </>
       )}
@@ -459,9 +510,9 @@ export default function GameWorld({ kualitas }: { kualitas: 'low' | 'medium' | '
       <div className="absolute pointer-events-none"
         style={{ bottom: isMobile ? 88 : 16, left: '50%', transform: 'translateX(-50%)' }}>
         <div className="flex gap-1">
-          {achievements.slice(0, 8).map(a => (
-            <div key={a.id} className="flex items-center justify-center text-sm"
-              style={{ width: 28, height: 28, background: a.unlocked ? 'rgba(255,215,0,0.2)' : 'rgba(0,0,0,0.4)', border: `1.5px solid ${a.unlocked ? '#ffd700' : 'rgba(255,255,255,0.1)'}`, opacity: a.unlocked ? 1 : 0.35, filter: a.unlocked ? 'none' : 'grayscale(1)', borderRadius: 4 }}>
+          {achievements.map(a => (
+            <div key={a.id} title={a.judul}
+              style={{ width: 26, height: 26, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, background: a.unlocked ? 'rgba(255,215,0,0.2)' : 'rgba(0,0,0,0.4)', border: `1.5px solid ${a.unlocked ? '#ffd700' : 'rgba(255,255,255,0.1)'}`, opacity: a.unlocked ? 1 : 0.3, filter: a.unlocked ? 'none' : 'grayscale(1)', borderRadius: 4 }}>
               {a.icon}
             </div>
           ))}
@@ -473,7 +524,7 @@ export default function GameWorld({ kualitas }: { kualitas: 'low' | 'medium' | '
         <div className="absolute inset-0 flex items-center justify-center z-50"
           style={{ background: 'rgba(0,0,0,0.85)', backdropFilter: 'blur(4px)' }}
           onClick={() => setMenu(false)}>
-          <div className="text-center" style={{ background: '#0a0a0a', border: '4px solid #ffd700', boxShadow: '8px 8px 0 #ffd700', padding: '28px 40px', minWidth: 260 }}
+          <div className="text-center" style={{ background: '#0a0a0a', border: '4px solid #ffd700', boxShadow: '8px 8px 0 #ffd700', padding: '28px 36px', minWidth: 260 }}
             onClick={e => e.stopPropagation()}>
             <div className="font-comic text-[#ffd700] text-2xl mb-5">⏸ PAUSE</div>
             <div className="space-y-2 mb-5">
@@ -483,13 +534,15 @@ export default function GameWorld({ kualitas }: { kualitas: 'low' | 'medium' | '
                 style={{ border: '2px solid rgba(255,255,255,0.2)' }}>🏠 Kembali ke Portofolio</Link>
             </div>
             <div className="text-left">
-              <div className="font-comic text-white/30 text-[9px] tracking-widest mb-2">ACHIEVEMENT ({unlocked}/{achievements.length})</div>
+              <div className="font-comic text-white/30 text-[9px] tracking-widest mb-2">ACHIEVEMENT ({totalUnlocked}/{achievements.length})</div>
               <div className="space-y-1 max-h-44 overflow-y-auto pr-1">
                 {achievements.map(a => (
                   <div key={a.id} className="flex items-center gap-2 text-[11px]" style={{ opacity: a.unlocked ? 1 : 0.3 }}>
                     <span>{a.icon}</span>
-                    <div><div className={`font-bold ${a.unlocked ? 'text-[#ffd700]' : 'text-white/40'}`}>{a.judul}</div>
-                      <div className="text-white/30 text-[9px]">{a.deskripsi}</div></div>
+                    <div>
+                      <div className={`font-bold ${a.unlocked ? 'text-[#ffd700]' : 'text-white/40'}`}>{a.judul}</div>
+                      <div className="text-white/30 text-[9px]">{a.deskripsi}</div>
+                    </div>
                     {a.unlocked && <span className="ml-auto text-[#22c55e] text-xs">✓</span>}
                   </div>
                 ))}

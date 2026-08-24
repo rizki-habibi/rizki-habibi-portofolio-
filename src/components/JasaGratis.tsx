@@ -57,7 +57,7 @@ const layanan = [
     },
     kontak: [
       { platform: 'WhatsApp', icon: SiWhatsapp, href: 'https://wa.me/62882009725053', warna: '#25d366' },
-      { platform: 'Discord', icon: SiDiscord, href: 'https://discord.com', warna: '#5865f2' },
+      { platform: 'WA Group', icon: SiWhatsapp, href: 'https://wa.me/62882009725053?text=Halo+Rizki+saya+mau+bergabung+komunitas', warna: '#5865f2' },
       { platform: 'Telegram', icon: SiTelegram, href: 'https://t.me/rizkihabibi', warna: '#229ed9' },
     ],
   },
@@ -119,7 +119,7 @@ const layanan = [
       ],
     },
     kontak: [
-      { platform: 'Discord', icon: SiDiscord, href: 'https://discord.com', warna: '#5865f2' },
+      { platform: 'WA Group', icon: SiWhatsapp, href: 'https://wa.me/62882009725053?text=Halo+Rizki+saya+ingin+kerjasama+komunitas', warna: '#5865f2' },
       { platform: 'WhatsApp', icon: SiWhatsapp, href: 'https://wa.me/62882009725053', warna: '#25d366' },
       { platform: 'Telegram', icon: SiTelegram, href: 'https://t.me/rizkihabibi', warna: '#229ed9' },
     ],

@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import { FiGithub, FiMail, FiHeart, FiLink } from 'react-icons/fi'
 import { SiInstagram, SiLinkedin, SiWhatsapp } from 'react-icons/si'
 
@@ -57,25 +56,25 @@ function BottomBarMobile() {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-30 lg:hidden flex items-center justify-center gap-1 px-2 py-2"
       style={{ background: '#0a0a0a', borderTop: '2px solid #222' }}>
-      {items.slice(0, 6).map(({ Icon, href, label, warna, ext }) => (
-        <a
-          key={label}
-          href={href}
-          target={ext ? '_blank' : undefined}
-          rel={ext ? 'noopener noreferrer' : undefined}
-          title={label}
-          className="flex items-center justify-center rounded"
-          style={{ width: 40, height: 40, background: warna + '22', border: `1.5px solid ${warna}44` }}
-        >
-          <Icon className="w-4 h-4" style={{ color: warna }} />
-        </a>
+      {items.slice(0, 6).map(({ Icon, href, label, warna, ext }) => (<a
+        key={label}
+        href={href}
+        target={ext ? '_blank' : undefined}
+        rel={ext ? 'noopener noreferrer' : undefined}
+        title={label}
+        className="flex items-center justify-center rounded"
+        style={{ width: 40, height: 40, background: warna + '22', border: `1.5px solid ${warna}44` }}
+      >
+        <Icon className="w-4 h-4" style={{ color: warna }} />
+      </a>
       ))}
-      {/* Tombol game */}
-      <Link href="/game"
+      {/* Tombol ke tujuan karir */}
+      <a
+        href="#tujuan-karir"
         className="flex items-center justify-center rounded font-bold text-sm"
-        style={{ width: 40, height: 40, background: '#ffd70022', border: '1.5px solid #ffd70044', color: '#ffd700' }}>
-        🎮
-      </Link>
+        style={{ width: 40, height: 40, background: '#1a5cff22', border: '1.5px solid #1a5cff44', color: '#1a5cff' }}>
+        🎯
+      </a>
     </div>
   )
 }

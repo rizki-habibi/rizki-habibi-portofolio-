@@ -41,7 +41,7 @@ import ChapterBrowser from '@/components/ChapterBrowser'
 import LayerGlobal from '@/components/LayerGlobal'
 import JasaGratis from '@/components/JasaGratis'
 import KepribadianKomik from '@/components/KepribadianKomik'
-import BannerGame from '@/components/BannerGame'
+import TujuanKarir from '@/components/TujuanKarir'
 import Prediksi2030 from '@/components/Prediksi2030'
 import TawaranLowongan from '@/components/TawaranLowongan'
 import dynamic from 'next/dynamic'
@@ -67,8 +67,8 @@ export default function Home() {
       <Hero />
       <div className="comic-divider" />
 
-      {/* BANNER GAME 3D — klik untuk masuk game */}
-      <BannerGame />
+      {/* TUJUAN KARIR — kerja remote & kuliah gratis */}
+      <TujuanKarir />
       <div className="comic-divider" />
 
       {/* TECH MARQUEE */}

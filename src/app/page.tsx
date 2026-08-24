@@ -45,6 +45,7 @@ import TujuanKarir from '@/components/TujuanKarir'
 import BannerTujuan from '@/components/BannerTujuan'
 import Prediksi2030 from '@/components/Prediksi2030'
 import TawaranLowongan from '@/components/TawaranLowongan'
+import PanelFitur from '@/components/PanelFitur'
 import dynamic from 'next/dynamic'
 
 // SertifikatDigital pakai Canvas API — harus client-only
@@ -52,12 +53,13 @@ const SertifikatDigital = dynamic(() => import('@/components/SertifikatDigital')
 
 export default function Home() {
   return (
-    <main style={{ background: '#fafaf7', color: '#0a0a0a' }}>
+    <main style={{ background: '#fafaf7', color: '#0a0a0a' }} className="pb-16 lg:pb-0">
       {/* Layer floating client-only (ssr:false aman karena Client Component) */}
       <LayerGlobal />
       <EfekKlikMouse />
       <TautanSosialMelayang />
       <JejakKursor />
+      <PanelFitur />
       <LayarMemuat />
       <ProgressScroll />
       <KembaliKeAtas />

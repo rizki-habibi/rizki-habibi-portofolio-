@@ -308,6 +308,16 @@ export default function Navbar() {
 
   const toggleLang = () => setLangDropOpen(v => !v)
 
+  // Trigger Google Translate ke bahasa tertentu
+  const triggerTranslate = (langCode: string) => {
+    const select = document.querySelector('.goog-te-combo') as HTMLSelectElement | null
+    if (select) {
+      select.value = langCode
+      select.dispatchEvent(new Event('change'))
+    }
+    setLangDropOpen(false)
+  }
+
   // Nav links dari terjemahan
   const tautanNav = [
     { name: t.beranda.toUpperCase(), href: '#home' },
@@ -535,16 +545,26 @@ export default function Navbar() {
                       exit={{ opacity: 0, y: -6, scaleY: 0.8 }}
                       transition={{ duration: 0.15 }}
                       className="absolute right-0 top-full mt-1 z-50"
-                      style={{ background: '#fafaf7', border: '2px solid #0a0a0a', boxShadow: '4px 4px 0 #0a0a0a', minWidth: 100 }}
+                      style={{ background: '#fafaf7', border: '2px solid #0a0a0a', boxShadow: '4px 4px 0 #0a0a0a', minWidth: 140 }}
                     >
-                      {(Object.keys(namaLang) as Lang[]).map(l => (
+                      {/* Google Translate languages */}
+                      {[
+                        { code: 'id', label: '🇮🇩 Indonesia' },
+                        { code: 'en', label: '🇬🇧 English' },
+                        { code: 'ja', label: '🇯🇵 日本語' },
+                        { code: 'ar', label: '🇸🇦 العربية' },
+                        { code: 'zh-CN', label: '🇨🇳 中文' },
+                        { code: 'ko', label: '🇰🇷 한국어' },
+                        { code: 'fr', label: '🇫🇷 Français' },
+                        { code: 'de', label: '🇩🇪 Deutsch' },
+                        { code: 'es', label: '🇪🇸 Español' },
+                      ].map(l => (
                         <button
-                          key={l}
-                          onClick={() => { setLang(l); setLangDropOpen(false) }}
+                          key={l.code}
+                          onClick={() => { triggerTranslate(l.code); setLangDropOpen(false) }}
                           className="w-full font-comic text-xs px-3 py-2 text-left hover:bg-[#ffd700] transition-colors"
-                          style={{ fontWeight: l === lang ? 700 : 400, background: l === lang ? '#ffd70033' : 'transparent' }}
                         >
-                          {namaLang[l]}
+                          {l.label}
                         </button>
                       ))}
                     </motion.div>

@@ -15,10 +15,32 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="id" className={`${inter.variable} ${bangers.variable}`}>
+      <head>
+        {/* Google Translate — aktifkan terjemahan otomatis */}
+        <meta name="google" content="notranslate" />
+      </head>
       <body suppressHydrationWarning>
         <LangProvider>
           {children}
         </LangProvider>
+        {/* Google Translate script */}
+        <div id="google_translate_element" style={{ display: 'none' }} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                  pageLanguage: 'id',
+                  includedLanguages: 'id,en,ja,ar,zh-CN,ko,fr,de,es,pt',
+                  layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                  autoDisplay: false
+                }, 'google_translate_element');
+              }
+              window.googleTranslateInit = googleTranslateElementInit;
+            `
+          }}
+        />
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async />
       </body>
     </html>
   )

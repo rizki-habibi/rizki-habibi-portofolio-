@@ -5,15 +5,17 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 // Lazy load berat game engine
-const GameWorld = dynamic(() => import('./GameWorld'), { ssr: false, loading: () => (
-  <div className="fixed inset-0 bg-[#0a1628] flex flex-col items-center justify-center gap-4">
-    <div className="font-comic text-4xl text-[#ffd700] animate-pulse">MEMUAT DUNIA...</div>
-    <div className="w-48 h-2 bg-white/10 rounded overflow-hidden">
-      <div className="h-full bg-[#ffd700] animate-[loading_1.5s_ease-in-out_infinite]" style={{ width: '60%' }} />
+const GameWorld = dynamic(() => import('./GameWorld'), {
+  ssr: false, loading: () => (
+    <div className="fixed inset-0 bg-[#0a1628] flex flex-col items-center justify-center gap-4">
+      <div className="font-comic text-4xl text-[#ffd700] animate-pulse">MEMUAT DUNIA...</div>
+      <div className="w-48 h-2 bg-white/10 rounded overflow-hidden">
+        <div className="h-full bg-[#ffd700] animate-[loading_1.5s_ease-in-out_infinite]" style={{ width: '60%' }} />
+      </div>
+      <div className="text-white/40 text-xs font-bold">Menyiapkan peta Indonesia virtual</div>
     </div>
-    <div className="text-white/40 text-xs font-bold">Menyiapkan peta Indonesia virtual</div>
-  </div>
-)})
+  )
+})
 
 export default function GameClient() {
   const [mulai, setMulai] = useState(false)
@@ -29,17 +31,18 @@ export default function GameClient() {
         }}
       >
         {/* Bintang dekoratif */}
+        {/* Bintang dekoratif — nilai statis agar tidak hydration mismatch */}
         {[...Array(20)].map((_, i) => (
           <div
             key={i}
             className="absolute rounded-full bg-white animate-pulse"
             style={{
-              width: Math.random() * 3 + 1,
-              height: Math.random() * 3 + 1,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              opacity: Math.random() * 0.6 + 0.2,
+              width: (i % 3) + 1,
+              height: (i % 3) + 1,
+              left: `${(i * 37 + 11) % 98}%`,
+              top: `${(i * 53 + 7) % 91}%`,
+              animationDelay: `${(i * 0.3) % 3}s`,
+              opacity: 0.15 + (i % 5) * 0.1,
             }}
           />
         ))}

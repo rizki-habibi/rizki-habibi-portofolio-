@@ -26,7 +26,7 @@ function PanelBab({ id, chNum, judul, warna, latarBelakang, gelap, children }: {
 function Box({ icon, title, text, color, bg, wide }: { icon: string; title: string; text: string; color: string; bg: string; wide?: boolean }) {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.88, rotate: Math.random() > 0.5 ? -2 : 2 }}
+      initial={{ opacity: 0, scale: 0.88, rotate: -1 }}
       whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
       transition={{ type: 'spring', stiffness: 100 }}
       viewport={{ once: true, amount: 0.1 }}

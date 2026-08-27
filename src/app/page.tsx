@@ -41,6 +41,7 @@ import ChapterBrowser from '@/components/ChapterBrowser'
 import LayerGlobal, { SertifikatDigital } from '@/components/LayerGlobal'
 import JasaGratis from '@/components/JasaGratis'
 import KepribadianKomik from '@/components/KepribadianKomik'
+import KeinginanLanjutan from '@/components/KeinginanLanjutan'
 import TujuanKarir from '@/components/TujuanKarir'
 import BannerTujuan from '@/components/BannerTujuan'
 import Prediksi2030 from '@/components/Prediksi2030'
@@ -89,6 +90,10 @@ export default function Home() {
 
       {/* KEPRIBADIAN — kemampuan unik, minat, kekurangan */}
       <KepribadianKomik />
+      <div className="comic-divider" />
+
+      {/* KEINGINAN LANJUTAN — kepribadian, proyek Camora, komunitas VTuber, harapan */}
+      <KeinginanLanjutan />
       <div className="comic-divider" />
 
       {/* SKILL PROGRESS BARS */}

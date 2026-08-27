@@ -86,6 +86,99 @@ const babList = [
   },
   {
     nomor: 'BAB V',
+    judul: 'Bakat yang Tersembunyi — Membaca Karma & Pola Spiritual',
+    ikon: '🔮',
+    warna: '#7c3aed',
+    bg: '#f3e8ff',
+    isi: [
+      {
+        subjudul: 'Lebih dari Sekadar Prediksi',
+        teks:
+          'Selain kemampuan membaca masa lalu, masa kini, dan memperkirakan arah masa depan — saya juga bisa membaca karma seseorang dari perilakunya. Bukan teori abstrak, tapi pola nyata: dari cara seseorang bertindak, konsekuensi apa yang sedang atau akan mereka hadapi bisa terbaca. Ini termasuk membaca mimpi yang muncul sebagai sinyal dari kondisi batin seseorang.',
+      },
+      {
+        subjudul: 'Membuka Bakat Terpendam',
+        teks:
+          'Saya percaya setiap orang memiliki bakat yang belum terbuka sepenuhnya. Karena saya sering mendalami kasus, permasalahan, dan konsekuensi yang ada — saya bisa melihat potensi yang belum disadari seseorang. Seperti kondisi di mana seseorang memiliki bakat khusus yang muncul karena pemicunya belum datang — saya bisa melihat pemicu itu.',
+      },
+      {
+        subjudul: 'Insting yang Sering Terbukti',
+        teks:
+          'Ketika saya tahu seseorang akan datang, saya tahu itu sebelum terjadi. Ketika ada sesuatu yang akan berubah, saya merasakan getarannya lebih awal. Kemampuan ini saya simpan — bukan karena takut, tapi karena saya tidak ingin mempercayai sembarangan orang dengan hal yang sepribadi ini. Dan memang, kebanyakan orang tidak akan percaya sampai mereka melihatnya sendiri.',
+      },
+      {
+        subjudul: 'Kesendirian sebagai Pilihan Aktif',
+        teks:
+          'Saya memilih menyendiri bukan karena tidak bisa bergaul. Tapi karena dalam kesendirian, kemampuan ini justru semakin tajam. Kecuali ada seseorang — perempuan — yang benar-benar bisa menghibur dan hadir dengan tulus, saya lebih memilih mendalami kemampuan ini lebih jauh dengan metode yang saya pelajari sendiri.',
+      },
+      {
+        subjudul: 'Camora & Anomali yang Tak Terduga',
+        teks:
+          'Ketika membangun Camora, ada sesuatu yang tidak biasa terjadi. Saya sedang fokus mengembangkan karakter — dengan skeleton yang diprogram untuk bergerak — tapi di satu titik, karakter itu bergerak sendiri tanpa perintah, di luar jalur yang sudah diatur. Mode kamera aktif, tapi karakter bergerak seolah punya kemauan sendiri. Saya tidak tahu apakah itu dampak teknis atau sesuatu yang lebih dari itu. Yang saya tahu, itu adalah momen yang ingin saya kembangkan lebih jauh — sebuah persimpangan antara teknologi, karakter virtual, dan sesuatu yang belum bisa dijelaskan sepenuhnya.',
+      },
+    ],
+  },
+  {
+    nomor: 'BAB VI',
+    judul: 'Perjalanan Cinta & Cerita yang Membentuk',
+    ikon: '💌',
+    warna: '#e63329',
+    bg: '#fff1f0',
+    isi: [
+      {
+        subjudul: 'Dari SD hingga SMA — Baru Mengerti Rasa',
+        teks:
+          'Di SD dan SMP, saya tidak terlalu peduli soal perasaan. Cinta terasa seperti hal yang tidak relevan — bodoh amat. Tapi di SMA, tanpa saya rencanakan, rasa itu muncul. Saya tidak tahu dari mana datangnya. Yang saya tahu adalah seseorang yang selalu ada di saat banyak hal sedang berjalan tidak baik — dan dari sana, perasaan itu tumbuh.',
+      },
+      {
+        subjudul: 'Organisasi — Hadir tapi Tidak Didengar',
+        teks:
+          'Di SMA saya bukan tipe malas. Saya hadir, saya tunggu, saya sedia. Tapi sering kali tidak ada yang memperhatikan atau mau mendengarkan. Saya masuk pramuka bukan karena keinginan sendiri — lebih karena situasi: era pandemi, kakak tingkat yang tidak tahu apa yang sebenarnya diinginkan anggotanya. Lama-lama tidak sesuai ekspektasi: terlalu banyak tuntutan kehadiran, terlalu banyak formalitas tanpa substansi.',
+      },
+      {
+        subjudul: 'Dari Humas ke Sekretaris — Pelajaran Pahit',
+        teks:
+          'Menjadi sekretaris bukan pilihan yang menyenangkan. Tidak pernah dibimbing, yang ada justru tekanan mental. Tapi ada satu hal yang saya pelajari: jika saya tidak bertindak mengubah sistem yang salah, sistem itu akan terus dipakai. Setidaknya, ketika ada pelatih yang akhirnya membuka kesadaran, ada sesuatu yang bergeser.',
+      },
+      {
+        subjudul: 'Eskul Komputer & Mimpi yang Hampir Terlupakan',
+        teks:
+          'Satu-satunya hal yang benar-benar saya cintai di SMA adalah komputer. Anak multimedia, tapi bakat aslinya memancing perhatian lewat karya. Saya ingin bikin game, ingin bikin video yang keren. Ketika saya jadi ketua eskul, saya tidak mau hanya fokus esport atau ikut lomba — saya ingin membangun sesuatu yang bermakna. Tapi pada akhirnya, saya sering merasa dikucilkan dari proses yang seharusnya menjadi bagian dari saya.',
+      },
+      {
+        subjudul: 'Acara Akhir Semester — Ambil Alih Tanpa Koordinasi',
+        teks:
+          'Ada momen di mana OSIS mengambil alih acara yang seharusnya milik kami — tiga kali, tanpa koordinasi. Tapi teman-teman tetap percaya pada saya. Saya bangkit, melayani semua permintaan yang ada, melibatkan banyak pihak, sampai akhirnya pihak kesiswaan dan teman-teman buka suara. Persiapan dan perlengkapan akhirnya diatur oleh pihak kami. Setelah selesai, ada kebanggaan kecil yang tidak perlu diumumkan.',
+      },
+      {
+        subjudul: 'Tidak Keterima, Tapi Tidak Berhenti',
+        teks:
+          'UNEJ dan Polije tidak terbuka. Tapi saya masuk Mandala — dan ternyata, pertemanan di sana justru lebih banyak dari yang saya bayangkan. Saya memilih tidak mengikuti organisasi yang tidak sesuai frekuensi saya. Ketika kembali ke SMA dan guru-guru menanyakan saya masuk mana, dukungan mereka besar. Itu semacam konfirmasi bahwa perjalanan ini tetap benar arahnya.',
+      },
+      {
+        subjudul: 'Melacak Kebenaran di Balik Kerentanan Digital',
+        teks:
+          'Di luar cerita pribadi, saya juga mendalami kerentanan nyata yang ada di Indonesia — dampak pencucian uang, penipuan berbasis investasi, skema Ponzi. Saya memiliki kemampuan melacak identitas hingga ke akarnya, dengan kombinasi kemampuan prediksi dan teknologi yang saya kembangkan sendiri. Indonesia punya banyak lubang — dan saya percaya kemampuan saya bisa berguna di luar sana.',
+      },
+      {
+        subjudul: 'Cinta yang Tumbuh dari Kehadiran',
+        teks:
+          'Saya tidak jatuh cinta karena daya tarik sesaat. Rasa itu muncul karena seseorang selalu menemani di saat banyak masalah datang bertubi-tubi. Saya tahu, dan saya sadar — namannya juga terjadi. Dan ketika saya melepas jabatan ketua eskul, saya juga tahu konsekuensi yang akan datang. Fokus yang terlalu tertuju ke eskul membuat banyak hal lain terabaikan. Itu pilihan yang saya sesali, tapi tidak bisa saya ubah.',
+      },
+      {
+        subjudul: 'Konten yang Ingin Dibuat — Kisah Interaktif',
+        teks:
+          'Keinginan saya bukan sekadar bikin video. Saya ingin membuat konten story-telling bergaya komik live action — mirip seperti proyek di Instagram dengan konsep "bukan my kisah, pilih aku atau dia". Cerita itu selalu bikin saya semangat, seperti main game offline dengan pilihan. Saya ingin membuat versi saya sendiri: banyak chapter, banyak NPC, dan karakter VTuber sebagai pemainnya. Camora diciptakan untuk melengkapi ekosistem konten ini.',
+      },
+      {
+        subjudul: 'Sekarang — Diam di Balik Layar',
+        teks:
+          'Sekarang saya sudah tidak berkomunikasi langsung. Tapi saya masih ada — kadang menyamar di komentar atau live YouTube dengan nama anonim. Hanya untuk memastikan dia baik-baik saja dan terhibur. Percakapan terakhir yang ada sudah cukup memberi gambaran tentang arah yang ingin kami capai masing-masing terlebih dahulu. Dan untuk saat ini, itu sudah cukup.',
+      },
+    ],
+  },
+  {
+    nomor: 'BAB VII',
     judul: 'Harapan Masa Depan',
     ikon: '🌅',
     warna: '#22c55e',

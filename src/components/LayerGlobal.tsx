@@ -7,6 +7,7 @@ const ModeRahasia = dynamic(() => import('@/components/ModeRahasia'), { ssr: fal
 const PaletPerintah = dynamic(() => import('@/components/PaletPerintah'), { ssr: false })
 const PesanSelamatDatang = dynamic(() => import('@/components/PesanSelamatDatang'), { ssr: false })
 const SertifikatDigital = dynamic(() => import('@/components/SertifikatDigital'), { ssr: false })
+const PemutarMusik = dynamic(() => import('@/components/PemutarMusik'), { ssr: false })
 
 export { SertifikatDigital }
 
@@ -16,6 +17,7 @@ export default function LayerGlobal() {
       <ModeRahasia />
       <PaletPerintah />
       <PesanSelamatDatang />
+      <PemutarMusik />
     </>
   )
 }

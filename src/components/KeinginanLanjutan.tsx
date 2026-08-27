@@ -163,7 +163,7 @@ const babList = [
       {
         subjudul: 'Cinta yang Tumbuh dari Kehadiran',
         teks:
-          'Saya tidak jatuh cinta karena daya tarik sesaat. Rasa itu muncul karena seseorang selalu menemani di saat banyak masalah datang bertubi-tubi. Saya tahu, dan saya sadar — namannya juga terjadi. Dan ketika saya melepas jabatan ketua eskul, saya juga tahu konsekuensi yang akan datang. Fokus yang terlalu tertuju ke eskul membuat banyak hal lain terabaikan. Itu pilihan yang saya sesali, tapi tidak bisa saya ubah.',
+          'Saya tidak jatuh cinta karena daya tarik sesaat. Rasa itu muncul karena seseorang selalu menemani di saat banyak masalah datang bertubi-tubi. Saya tahu, dan saya sadar — namanya juga terjadi. Dan ketika saya melepas jabatan ketua eskul, saya juga tahu konsekuensi yang akan datang. Fokus yang terlalu tertuju ke eskul membuat banyak hal lain terabaikan. Itu pilihan yang saya sesali, tapi tidak bisa saya ubah.',
       },
       {
         subjudul: 'Konten yang Ingin Dibuat — Kisah Interaktif',
@@ -174,6 +174,30 @@ const babList = [
         subjudul: 'Sekarang — Diam di Balik Layar',
         teks:
           'Sekarang saya sudah tidak berkomunikasi langsung. Tapi saya masih ada — kadang menyamar di komentar atau live YouTube dengan nama anonim. Hanya untuk memastikan dia baik-baik saja dan terhibur. Percakapan terakhir yang ada sudah cukup memberi gambaran tentang arah yang ingin kami capai masing-masing terlebih dahulu. Dan untuk saat ini, itu sudah cukup.',
+      },
+    ],
+  },
+  {
+    nomor: 'BAB VIII',
+    judul: 'Satu Hal yang Saya Minta Setelah Lulus',
+    ikon: '🌸',
+    warna: '#f472b6',
+    bg: '#fdf2f8',
+    isi: [
+      {
+        subjudul: 'Bukan Pasangan, Bukan Sekadar Teman',
+        teks:
+          'Ketika lulus nanti dan sudah punya pekerjaan — keinginan saya hanya satu: bisa bermain bersama seseorang yang saya suka. Tidak harus jadi pasangan dulu, tidak harus dengan label apapun. Cukup ada seseorang yang mau menemani — pergi ke suatu tempat, ngobrol tanpa terganggu waktu, atau sekadar ada di momen yang sama.',
+      },
+      {
+        subjudul: 'Menemani Sampai di Akhir Hayat',
+        teks:
+          'Saya tidak mencari keramaian. Saya mencari kehadiran. Seseorang yang mau bersama dalam jangka panjang — bukan karena terpaksa atau kebiasaan, tapi karena memang memilih untuk ada. Sampai di akhir hayat pun, itu sudah lebih dari cukup bagi saya.',
+      },
+      {
+        subjudul: 'Masalah Diselesaikan di Balik Layar',
+        teks:
+          'Banyak hal yang terjadi, banyak permasalahan yang datang — tapi semuanya sudah saya selesaikan, baik di balik layar maupun di luar layar. Saya tidak membawa beban itu ke hadapan orang lain. Saya selesaikan sendiri, diam-diam, tanpa perlu diketahui. Karena ketika nanti ada waktu untuk bersama, saya ingin hadir sepenuhnya — bukan sebagai seseorang yang masih dikejar masalah.',
       },
     ],
   },
@@ -310,7 +334,7 @@ export default function KeinginanLanjutan() {
                     {/* Tautan jika ada */}
                     {'tautan' in paragraf && paragraf.tautan && (
                       <a
-                        href={paragraf.tautan.url}
+                        href={(paragraf as { teks: string; tautan: { label: string; url: string } }).tautan.url}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 mt-3 ml-3 text-xs font-comic px-3 py-1.5 transition-transform hover:-translate-y-0.5"
@@ -321,7 +345,7 @@ export default function KeinginanLanjutan() {
                           boxShadow: `2px 2px 0 #0a0a0a`,
                         }}
                       >
-                        {paragraf.tautan.label}
+                        {(paragraf as { teks: string; tautan: { label: string; url: string } }).tautan.label}
                       </a>
                     )}
                   </motion.div>

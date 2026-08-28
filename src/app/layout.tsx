@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     apple: '/favicon.svg',
   },
   verification: {
-    google: 'r_NSjJYqY9vqZcpu1CfuvSJhrtSvs2LzieHMZnZbYRY',
+    google: '0ApfiFSdZ6Lp3PW9aA0BxEbaOXt2dqylGf1Kl8Vw4KQ',
   },
 }
 

@@ -6,7 +6,7 @@ import { LangProvider } from '@/context/LangContext'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
 const bangers = Bangers({ subsets: ['latin'], weight: '400', variable: '--font-bangers', display: 'swap' })
 
-const siteUrl = 'https://rizki-habibi-portofolio-git-main.vercel.app'
+const siteUrl = 'https://rizki-habibi-portofolio.vercel.app'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

@@ -86,14 +86,17 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const jsonLd = {
+  // Schema 1 — Person (semua mesin pencari: Google, Bing, Yahoo, DuckDuckGo)
+  const personLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Rizki Habibi',
-    url: 'https://rizki-habibi-portofolio-.vercel.app',
+    url: siteUrl,
+    image: `${siteUrl}/foto/profil.jpeg`,
     jobTitle: 'Web Developer & AI Creator',
     description:
       'Web Developer, AI Creator, dan pengembang proyek Camora (karakter AI interaktif). Tersedia untuk freelance dan kolaborasi digital.',
+    email: 'mailto:rizkihabibi@email.com',
     sameAs: [
       'https://github.com/rizki-habibi',
       'https://github.com/rizki-habibi/VirtualKarakter',
@@ -106,7 +109,38 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       'Next.js',
       'TypeScript',
       'Content Creation',
+      'Freelance',
     ],
+  }
+
+  // Schema 2 — WebSite (supaya kotak pencarian muncul di Google/Bing)
+  const websiteLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Rizki Habibi Portfolio',
+    url: siteUrl,
+    description: 'Portofolio Rizki Habibi — Web Developer, AI Creator, pengembang Camora AI.',
+    inLanguage: 'id-ID',
+    author: {
+      '@type': 'Person',
+      name: 'Rizki Habibi',
+    },
+  }
+
+  // Schema 3 — SoftwareApplication untuk proyek Camora
+  const camoraLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Camora — Virtual AI Character',
+    url: 'https://github.com/rizki-habibi/VirtualKarakter',
+    description:
+      'Karakter AI interaktif yang bisa diajak bicara, dengan kepribadian terdefinisi dan skeleton yang bergerak secara real-time.',
+    applicationCategory: 'ArtificialIntelligenceApplication',
+    operatingSystem: 'Web',
+    author: {
+      '@type': 'Person',
+      name: 'Rizki Habibi',
+    },
   }
 
   return (
@@ -114,10 +148,34 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         {/* Google Translate — aktifkan terjemahan otomatis */}
         <meta name="google" content="notranslate" />
-        {/* JSON-LD Structured Data untuk Google */}
+
+        {/* ── Bing Webmaster Tools ─────────────────────────── */}
+        <meta name="msvalidate.01" content="" />
+
+        {/* ── Pinterest verifikasi ─────────────────────────── */}
+        <meta name="p:domain_verify" content="" />
+
+        {/* ── Extra meta untuk semua mesin pencari ─────────── */}
+        <meta name="author" content="Rizki Habibi" />
+        <meta name="copyright" content="Rizki Habibi" />
+        <meta name="language" content="Indonesian" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="rating" content="general" />
+
+        {/* ── JSON-LD: Person ──────────────────────────────── */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }}
+        />
+        {/* ── JSON-LD: WebSite ─────────────────────────────── */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
+        />
+        {/* ── JSON-LD: SoftwareApplication (Camora) ────────── */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(camoraLd) }}
         />
       </head>
       <body suppressHydrationWarning>

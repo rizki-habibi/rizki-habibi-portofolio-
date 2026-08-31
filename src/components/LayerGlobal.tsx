@@ -9,6 +9,7 @@ const PesanSelamatDatang = dynamic(() => import('@/components/PesanSelamatDatang
 const SertifikatDigital = dynamic(() => import('@/components/SertifikatDigital'), { ssr: false })
 const PemutarMusik = dynamic(() => import('@/components/PemutarMusik'), { ssr: false })
 const StatusSedangAktif = dynamic(() => import('@/components/StatusSedangAktif'), { ssr: false })
+const EfekHujanKode = dynamic(() => import('@/components/EfekHujanKode'), { ssr: false })
 
 export { SertifikatDigital }
 
@@ -20,6 +21,7 @@ export default function LayerGlobal() {
       <PesanSelamatDatang />
       <PemutarMusik />
       <StatusSedangAktif />
+      <EfekHujanKode />
     </>
   )
 }

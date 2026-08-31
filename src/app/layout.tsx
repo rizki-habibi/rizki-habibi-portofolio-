@@ -197,7 +197,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     '@type': 'Person',
     name: 'Rizki Habibi',
     url: siteUrl,
-    image: `${siteUrl}/foto/profil.jpeg`,
+    image: {
+      '@type': 'ImageObject',
+      url: `${siteUrl}/foto/profil.jpeg`,
+      width: 800,
+      height: 800,
+      caption: 'Rizki Habibi — Web Developer & AI Creator',
+    },
     jobTitle: 'Web Developer & AI Creator',
     description:
       'Web Developer, AI Creator, dan pengembang proyek Camora (karakter AI interaktif). Tersedia untuk freelance dan kolaborasi digital.',
@@ -216,6 +222,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       'Content Creation',
       'Freelance',
     ],
+    hasOccupation: {
+      '@type': 'Occupation',
+      name: 'Web Developer',
+      occupationLocation: {
+        '@type': 'Country',
+        name: 'Indonesia',
+      },
+      skills: 'Next.js, React, TypeScript, Laravel, PHP, AI Development',
+    },
   }
 
   // Schema 2 — WebSite (supaya kotak pencarian muncul di Google/Bing)

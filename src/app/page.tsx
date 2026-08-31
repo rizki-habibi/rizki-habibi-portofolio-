@@ -42,6 +42,7 @@ import LayerGlobal, { SertifikatDigital } from '@/components/LayerGlobal'
 import JasaGratis from '@/components/JasaGratis'
 import KepribadianKomik from '@/components/KepribadianKomik'
 import KeinginanLanjutan from '@/components/KeinginanLanjutan'
+import BucketList100 from '@/components/BucketList100'
 import TujuanKarir from '@/components/TujuanKarir'
 import BannerTujuan from '@/components/BannerTujuan'
 import Prediksi2030 from '@/components/Prediksi2030'
@@ -94,6 +95,10 @@ export default function Home() {
 
       {/* KEINGINAN LANJUTAN — kepribadian, proyek Camora, komunitas VTuber, harapan */}
       <KeinginanLanjutan />
+      <div className="comic-divider" />
+
+      {/* 100 BUCKET LIST — keinginan setelah lulus */}
+      <BucketList100 />
       <div className="comic-divider" />
 
       {/* SKILL PROGRESS BARS */}
